@@ -40,5 +40,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Around Hub React Project (Typescript)",
+  "main": "index.js",
+  "author": "kyoungminlee <kyoungminlee32@gmail.com>",
+  "license": "MIT"
 }
