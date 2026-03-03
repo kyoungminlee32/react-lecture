@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
+// import logo from './logo.svg';
 import './App.css';
+import { PropsAndState } from './example/PropsAndState';
+import { StateComponent1 } from './example/StateComponent1';
+import { StateComponent2 } from './example/StateComponent2';
+import { Layout } from './layouts/Layout';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<PropsAndState />} />
+        <Route path="/StateComponent1" element={<StateComponent1 />} />
+        <Route path="/StateComponent2" element={<StateComponent2 />} />
+      </Routes>
+    </Layout>
   );
 }
 

@@ -2,7 +2,13 @@
   "name": "react-lecture",
   "version": "0.1.0",
   "private": true,
+  "description": "Around Hub React Project (Typescript)",
+  "main": "index.js",
+  "author": "kyoungminlee",
+  "license": "MIT",
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
@@ -13,6 +19,7 @@
     "@types/react-dom": "^19.2.3",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "react-router-dom": "6.28.2",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
@@ -21,13 +28,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
+    "format": "prettier --check ./src",
+    "format:fix": "prettier --write ./src"
   },
   "browserslist": {
     "production": [
@@ -41,8 +46,16 @@
       "last 1 safari version"
     ]
   },
-  "description": "Around Hub React Project (Typescript)",
-  "main": "index.js",
-  "author": "kyoungminlee <kyoungminlee32@gmail.com>",
-  "license": "MIT"
+  "resolutions": {
+    "jiti": "^2.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^17.4.0",
+    "jiti": "^2.6.1",
+    "prettier": "^3.8.1",
+    "typescript-eslint": "^8.56.1"
+  }
 }
