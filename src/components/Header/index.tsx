@@ -1,5 +1,5 @@
-import React from 'react';
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 const Container = styled.header`
   background-color: #4285f4;
@@ -11,7 +11,7 @@ const Nav = styled.nav`
   margin-top: 10px;
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   color: #fff;
   text-decoration: none;
   margin-right: 20px;
@@ -29,14 +29,14 @@ const NavLink = styled.a`
 
 export const Header = () => {
   return (
-    <Container>
+    <Container className="header">
       <Nav>
-        <NavLink href='/'>PropsAndState</NavLink>
-        <NavLink href='/StateComponent1'>StateComponent1</NavLink>
-        <NavLink href='/StateComponent2'>StateComponent2</NavLink>
+        <NavLink to='/'>홈</NavLink>
+        <NavLink to='/메뉴1'>메뉴1</NavLink>
+        <NavLink to='/메뉴2'>메뉴2</NavLink>
+        <NavLink to='/메뉴3'>메뉴3</NavLink>
+        <NavLink to='/Worklist'>Worklist</NavLink>
       </Nav>
     </Container>
   );
 }
-
-export default Header;

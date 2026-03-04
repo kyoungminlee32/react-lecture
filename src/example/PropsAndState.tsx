@@ -19,5 +19,3 @@ export const PropsAndState = () => {
         </>
     )
 }
-
-export default PropsAndState;

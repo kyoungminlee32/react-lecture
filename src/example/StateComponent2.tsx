@@ -16,5 +16,3 @@ export const StateComponent2 = () => {
         </div>
     )
 }
-
-export default StateComponent2;

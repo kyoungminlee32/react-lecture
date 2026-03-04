@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 
-const Container = styled.div``;
+const Container = styled.label`
+
+`;
 
 interface Props {
     data : number;

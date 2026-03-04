@@ -13,5 +13,3 @@ export const StateComponent1 = () => {
         </div>
     )
 }
-
-export default StateComponent1;
