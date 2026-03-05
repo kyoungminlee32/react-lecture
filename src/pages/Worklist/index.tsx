@@ -8,8 +8,10 @@ export const Worklist = () => {
         <div className='wh__title'><Link to='/'>NDS</Link></div>
         <div className='wh__nav'>
             <Link to='/'>홈</Link>
-            <Link to='/메뉴1'>Docs</Link>
-            <Link to='/메뉴3'>Components guide</Link>
+            <Link to='/About'>About</Link>
+            <Link to='/메뉴1'>메뉴1</Link>
+            <Link to='/메뉴2'>메뉴2</Link>
+            <Link to='/메뉴3'>메뉴3</Link>
             <Link to='#' className='-active'>Example of use</Link>
         </div>
 

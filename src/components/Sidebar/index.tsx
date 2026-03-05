@@ -55,6 +55,12 @@ export const Sidebar = () => {
            <MenuLink to='/'>홈</MenuLink>
         </MenuItem>
         <MenuItem>
+           <MenuLink to='/About'>About</MenuLink>
+        </MenuItem>
+        <MenuItem>
+           <MenuLink to='/Example1'>Example1</MenuLink>
+        </MenuItem>
+        <MenuItem>
            <MenuLink to='/메뉴1'>메뉴1</MenuLink>
         </MenuItem>
         <MenuItem>

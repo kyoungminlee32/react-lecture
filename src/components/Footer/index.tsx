@@ -1,10 +1,14 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-const Container = styled.header`
-  background-color: #4285f4;
+const Container = styled.footer`
+  background-color: #333;
   color: #fff;
   padding: 20px;
+`;
+
+const Text = styled.p`
+  margin: 0;
 `;
 
 const Nav = styled.nav`
@@ -27,17 +31,15 @@ const NavLink = styled(Link)`
 //   className? : string;
 // }
 
-export const Header = () => {
+export const Footer = () => {
   return (
-    <Container className="header">
+    <Container className="footer">
+      <Text>© 2024 Around Hub Studio. All rights reserved.</Text>
       <Nav>
-        <NavLink to='/'>홈</NavLink>
-        <NavLink to='/About'>About</NavLink>
-        <NavLink to='/Example1'>Example1</NavLink>
-        <NavLink to='/메뉴1'>메뉴1</NavLink>
-        <NavLink to='/메뉴2'>메뉴2</NavLink>
-        <NavLink to='/메뉴3'>메뉴3</NavLink>
-        <NavLink to='/Worklist'>Worklist</NavLink>
+        <NavLink to='#'>Facebook</NavLink>
+        <NavLink to='#'>Twitter</NavLink>
+        <NavLink to='#'>Instagram</NavLink>
+        <NavLink to='#'>LinkedIn</NavLink>
       </Nav>
     </Container>
   );

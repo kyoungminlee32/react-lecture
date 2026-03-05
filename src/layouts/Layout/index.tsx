@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { Header } from '../../components/Header';
 import { Sidebar } from '../../components/Sidebar';
+import { Footer } from '../../components/Footer';
 
 const Container = styled.div`
 display: flex;
@@ -28,6 +29,7 @@ export const Layout = (props: Props) => {
                 <Sidebar />
                 <Main className="content">{props.children}</Main>
             </Content>
+            <Footer />
         </Container>
     );
 };

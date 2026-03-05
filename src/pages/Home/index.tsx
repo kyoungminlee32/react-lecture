@@ -1,4 +1,5 @@
 import style from '@emotion/styled';
+import React, { useState, useEffect } from "react";
 import { CountProvider } from '../../components/ContextExample/Contexts';
 import { CountLabel } from '../../components/ContextExample/Contexts/CountLabel';
 import { PlusButton } from '../../components/ContextExample/Contexts/PlusButton';
@@ -24,6 +25,14 @@ const CounterContainer = style.div`
 
 
 export const Home = () => {
+  const [clickCount, setClickCount] = useState(0);
+  useEffect(() => {
+    document.title = `클릭 횟수: ${clickCount}`;
+  }, [clickCount]);
+  const handleClick2 = () => {
+    setClickCount(clickCount + 1);
+  };
+
   return (
     <div>
       <h1>Welcome to Our Website</h1>
@@ -43,6 +52,8 @@ export const Home = () => {
           <PlusButton />
         </CounterContainer>
       </CountProvider>
+       <h1>클릭 횟수: {clickCount}</h1>
+      <button onClick={handleClick2}>클릭하기</button>
     </div>
   );
 };
