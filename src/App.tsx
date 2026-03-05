@@ -8,6 +8,7 @@ import { Example2 } from './pages/Example2';
 import { PropsAndState } from './example/PropsAndState';
 import { StateComponent1 } from './example/StateComponent1';
 import { StateComponent2 } from './example/StateComponent2';
+import { BlogPosts } from './pages/BlogPosts';
 import { Worklist } from './pages/Worklist';
 import { Layout } from './layouts/Layout';
 
@@ -23,6 +24,7 @@ function App() {
       <Route path="/메뉴1" element={<Layout><PropsAndState /></Layout>} />
       <Route path="/메뉴2" element={<Layout><StateComponent1 /></Layout>} />
       <Route path="/메뉴3" element={<Layout><StateComponent2 /></Layout>} />
+      <Route path="/BlogPosts" element={<Layout><BlogPosts /></Layout>} />
       <Route path="/Worklist" element={<Layout><Worklist /></Layout>} />
       <Route 
         path="*"
