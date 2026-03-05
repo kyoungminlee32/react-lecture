@@ -61,6 +61,9 @@ export const Sidebar = () => {
            <MenuLink to='/Example1'>Example1</MenuLink>
         </MenuItem>
         <MenuItem>
+           <MenuLink to='/Example2'>Example2</MenuLink>
+        </MenuItem>
+        <MenuItem>
            <MenuLink to='/메뉴1'>메뉴1</MenuLink>
         </MenuItem>
         <MenuItem>
@@ -68,6 +71,9 @@ export const Sidebar = () => {
         </MenuItem>
         <MenuItem>
            <MenuLink to='/메뉴3'>메뉴3</MenuLink>
+        </MenuItem>
+        <MenuItem>
+           <MenuLink to='/메뉴4'>메뉴4</MenuLink>
         </MenuItem>
       </Menu>
       <Info>
