@@ -78,6 +78,12 @@ export const Sidebar = () => {
         <MenuItem>
            <MenuLink to='/BlogPosts'>BlogPosts</MenuLink>
         </MenuItem>
+        <MenuItem>
+           <MenuLink to='/Photo'>AppPhoto</MenuLink>
+        </MenuItem>
+        <MenuItem>
+           <MenuLink to='/TodoList'>AppTodoList</MenuLink>
+        </MenuItem>
       </Menu>
       <Info>
         <InfoTitle>Follow Us</InfoTitle>
