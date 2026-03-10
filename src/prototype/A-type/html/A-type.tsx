@@ -1,4 +1,5 @@
 import { CSSProperties, KeyboardEvent, useState } from 'react';
+import { FwHeader } from '../../../components/FwHeader';
 
 type DocMethod = 'email' | 'sms';
 
@@ -42,21 +43,7 @@ export const AType = () => {
   return (
     <div className="page">
       <div className="container">
-        <header className="header">
-            <div className="inner">
-                <div className="funcs">
-                    <button type="button" className="func -back" onClick={goBack}>
-                    <span className="hide">뒤로</span>
-                    </button>
-                </div>
-                <h1 className="title">예금가입</h1>
-                <div className="funcs">
-                    <button type="button" className="func" onClick={onCancel}>
-                    취소
-                    </button>
-                </div>
-            </div>
-        </header>
+      <FwHeader title="예금가입" showBack rightText="취소" onBack={goBack} onAction={onCancel} />
 
         <main className="contents">
           <div className="content progress-layout">
