@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">   
+    <link rel="stylesheet" href="../../assets/css/insurance.css">    
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">보험 설계</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">
+                            보험을 설계해 주세요 <!-- ux 라이팅 수정 --> 
+                        </h2>                        
+                    </div>
+                    <div class="field">
+                        <p class="label">보험 종류</p> <!-- ux 라이팅 수정 --> 
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">선택</button>
+                        </div>
+                    </div>    
+                    <div class="field">
+                        <label for="search" class="label">여행 국가</label> <!-- ux 라이팅 수정 --> 
+                        <div class="mix">
+                            <div class="text">
+                                <input type="text" class="left-side" id="search" value="검색" title="검색하기">
+                            </div>
+            
+                            <div class="space -lined search">
+                                <button type="button" class="icon-button -search"><span class="hide">조회</span></button>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <p class="info -bullet">여러 국가 방문 시 대표 국가 하나만 선택해 주세요.</p> <!-- ux 라이팅 수정 --> 
+                            <p class="info -bullet">제한 국가 방문 시에는 가입 및 보상을 받을 수 없어요.</p> <!-- ux 라이팅 수정 --> 
+                        </div>
+                    </div>   
+                    <div class="field">
+                        <label for="lab" class="label">여행기간</label>
+                        <div class="multi">
+                            <div class="inner6"> <!-- [240104] 클래스 inner6 변경 -->
+                                <div class="field">
+                                    <!-- <label for="datedate" class="label">여행기간</label> -->
+                                    <div class="mix datepicker">
+                                        <div class="text" data-clear="false">
+                                            <input type="text" class="left-side" id="datedate" value="출발일" title="첫번째 날짜선택" aria-haspopup="true" readonly>
+                                        </div>
+                                        <div class="space -lined date">
+                                            <button type="button" class="icon-button -calendar" aria-haspopup="true"><span class="hide">달력 보기</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inner4"> <!-- [240104] 클래스 inner4 변경 -->
+                                <div class="field">
+                                    <!-- <p class="label">레이블</p> -->
+                                    <div class="select">
+                                        <button type="button" aria-haspopup="true">출발 시간</button>  <!-- ux 라이팅 수정 --> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="multi">
+                            <div class="inner6"> <!-- [240104] 클래스 inner6 변경 -->
+                                <div class="field">
+                                    <!-- <label for="datedate" class="label">여행기간</label> -->
+                                    <div class="mix datepicker">
+                                        <div class="text" data-clear="false">
+                                            <input type="text" class="left-side" id="datedate" value="도착일" title="첫번째 날짜선택" aria-haspopup="true" readonly>
+                                        </div>
+                                        <div class="space -lined date">
+                                            <button type="button" class="icon-button -calendar" aria-haspopup="true"><span class="hide">달력 보기</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inner4"> <!-- [240104] 클래스 inner4 변경 -->
+                                <div class="field">
+                                    <!-- <p class="label">레이블</p> -->
+                                    <div class="select">
+                                        <button type="button" aria-haspopup="true">도착 시간</button> <!-- ux 라이팅 수정 --> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="info">여행기간은 2 ~ 90일까지 설정할 수 있어요.</p> <!-- ux 라이팅 수정 --> 
+                    </div>  
+                    <div class="field">
+                        <p class="label">여행 목적</p> <!-- ux 라이팅 수정 --> 
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">선택</button>
+                        </div>
+                    </div>   
+                    <div class="field">
+                        <p class="label">보험 가입 대상자</p> <!-- ux 라이팅 수정 --> 
+                        <dl class="dl -box">
+                            <div>
+                                <dt>본인</dt>
+                                <dd>김농협</dd>
+                            </div>
+                        </dl>   
+                    </div>     
+                    <div class="field">
+                        <!-- <p class="label">미성년 자녀의 정보</p>--> <!-- [231212] label 문구삭제 -->
+                        <div class="selection">
+                            <ul>
+                                <li>
+                                    <div class="info -bordered" >
+                                        <p class="label">자녀 이름</p> <!-- [231212] 문구변경 -->
+                                        <div class="-bordertype">
+                                            <div class="text flex-7" data-clear="false">
+                                                <input type="tel" data-id="phone123" class="left-side" placeholder="자녀 이름 입력">
+                                            </div>
+                                        </div>
+                                        <p class="label">자녀 주민등록번호</p> <!-- [231212] 문구변경 -->
+                                        <div class="mix -bordertype">
+                                            <div class="text flex-7" data-clear="false">
+                                                <input type="tel" data-id="phone123" class="left-side" maxlength="6" onclick="numKey.keyOpen(this)" title="앞 6자리" placeholder="앞 6자리"> <!-- ux 라이팅 수정 --> 
+                                            </div>
+                                            <div class="dash">-</div>
+                                            <div class="text flex-7" data-clear="false">
+                                                <input type="password" data-id="phone123" class="left-side" maxlength="7"  onclick="numKey.keyOpen(this)" title="뒤 6자리" placeholder="뒤 7자리"> <!-- ux 라이팅 수정 --> 
+                                            </div>
+                                            <div class="space -lined right-side">
+                                                <button type="button" class="button -xs -fit">인증</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- [CASE] 자녀(피보험자) 추가 선택시 입력폼 추가 제공 -->
+                                <li>
+                                    <div class="info -bordered -delete" >
+                                        <div class="field">
+                                            <p class="label">자녀 이름</p> <!-- [231212] 문구변경 -->
+                                            <div class="-bordertype">
+                                                <div class="text flex-7" data-clear="false">
+                                                    <input type="tel" data-id="phone123" class="left-side" placeholder="자녀 이름 입력">
+                                                </div>
+                                            </div>
+                                            <p class="label">자녀 주민등록번호</p> <!-- [231212] 문구변경 -->
+                                            <div class="mix -bordertype">
+                                                <div class="text flex-7" data-clear="false">
+                                                    <input type="tel" data-id="phone123" class="left-side" maxlength="6" onclick="numKey.keyOpen(this)" title="앞 6자리" placeholder="앞 6자리"> <!-- ux 라이팅 수정 --> 
+                                                </div>
+                                                <div class="dash">-</div>
+                                                <div class="text flex-7" data-clear="false">
+                                                    <input type="password" data-id="phone123" class="left-side" maxlength="7" onclick="numKey.keyOpen(this)"  title="뒤 7자리" placeholder="뒤 7자리"> <!-- ux 라이팅 수정 --> 
+                                                </div>
+                                                <div class="space -lined right-side">
+                                                    <button type="button" class="button -xs -fit">인증</button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="del-btn"><span class="hide">삭제</span></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- //[CASE] 자녀(피보험자) 추가 선택시 입력폼 추가 제공 -->
+                            </ul>
+                            <div class="info-wrap">
+                                <p class="message">자녀도 NH농협은행 고객이어야만 가입할 수 있어요.</p> <!-- [240202] 문구수정, point클래스 삭제 -->
+                            </div>
+                            <button type="button" class="button -lg">자녀(피보험자) 추가</button> <!-- [CASE] 자녀 입력 영역이 2개 노출 시 “자녀(피보험자) 추가“ 링크 비노출 --> <!-- [240202] 클래스변경(add-button -> button -lg) -->
+                        </div>
+                    </div>
+                </div>
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <li>남북한 왕래, 스키/스노보드, 전문 등반/국토 순례, 스쿠버 다이빙/수상 보트, 행글라이딩/패러글라이딩/글라이더 조정, 자전거 하이킹, 운동 경기 참가, 바다낚시 여행은 가입할 수 없습니다. <!-- ux 라이팅 수정 --> 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary -disabled">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- 숫자 키패드 레이어 -->
+    <div class="custom-key-layer" aria-hidden="true">
+        <div class="amount-btn-wrap">
+            <button type="button" value="100000" class="button numBtn -sm -fit">+10만</button>
+            <button type="button" value="500000" class="button numBtn -sm -fit">+50만</button>
+            <button type="button" value="1000000" class="button numBtn -sm -fit">+100만</button>
+            <button type="button" value="10000000" class="button numBtn -sm -fit">+1,000</button>
+        </div>
+        <div class="custom-key-wrap">
+            <button type="button" class="numBtn" value="1" title="숫자 1 입력">1</button>
+            <button type="button" class="numBtn" value="2" title="숫자 2 입력">2</button>
+            <button type="button" class="numBtn" value="3" title="숫자 3 입력">3</button>
+            <button type="button" class="numBtn" value="4" title="숫자 4 입력">4</button>
+            <button type="button" class="numBtn" value="5" title="숫자 5 입력">5</button>
+            <button type="button" class="numBtn" value="6" title="숫자 6 입력">6</button>
+            <button type="button" class="numBtn" value="7" title="숫자 7 입력">7</button>
+            <button type="button" class="numBtn" value="8" title="숫자 8 입력">8</button>
+            <button type="button" class="numBtn" value="9" title="숫자 9 입력">9</button>
+            <button type="button" class="numBtn btn-temp" disabled  aria-hidden="true">NH</button>
+            <button type="button" class="numBtn btn-amount" value="00" title="숫자 00입력" >00</button>
+            <button type="button" class="numBtn" value="0" title="숫자 0 입력">0</button>
+            <button type="button" class="numBtn btn-del" title="마지막 숫자 삭제">←</button>
+        </div>
+        <div class="buttons">
+            <button type="button" class="button -lg -primary" onclick="numKey.keyClose()">확인</button>
+        </div>
+    </div>
+    <!-- 숫자 키패드 레이어 -->
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+       /* 키패드 키입력 예시 */
+       var numKeyEmt = document.querySelectorAll('.custom-key-wrap button');
+        numKeyEmt.forEach(function(numKeyEmt) {
+            numKeyEmt.addEventListener('click',function () {
+                var $targetInput;
+                var $thisValLayer = numKeyEmt.closest('.custom-key-layer.-active');  //dim 없는 레이어 숫자 키패드
+                var $thisValChoose = numKeyEmt.closest('.choose-account-Wrap');  //bottom sheet 숫자 키패드
+                
+                if ($thisValLayer !== null) {
+                    $targetInput = numKey.numInput;
+                } else if($thisValChoose !== null) {
+                    $targetInput = $thisValChoose.querySelector('.choose-account-input input')
+                    $targetInput.closest('.text').classList.remove('-textless');
+                }
+                var $thisval = numKeyEmt.value;
+
+                if (numKeyEmt.classList.contains('btn-del')) {
+                    if ($targetInput.value.length !== 0) {
+                        $targetInput.value = $targetInput.value.slice(0,-1);
+                        if ($targetInput.value.length == 0) {
+                            setTimeout(function() {
+                                $targetInput.closest('.text').classList.add('-textless');
+                            }, 101);
+                        }
+                    }
+                }else{
+                    $targetInput.value = $targetInput.value + $thisval;
+                }
+            })
+        });
+
+
+        //10만, 50만.... 버튼 클릭시
+        var amountBtn = document.querySelectorAll('.amount-btn-wrap button');
+        amountBtn.forEach(function(amountBtn) {
+            amountBtn.addEventListener('click',function () {
+                var $targetInput;
+                var $thisValLayer = amountBtn.closest('.custom-key-layer.-active');  //dim 없는 레이어 숫자 키패드
+                var $thisValChoose = amountBtn.closest('.choose-account-Wrap');  //bottom sheet 숫자 키패드
+                if ($thisValLayer !== null) {
+                    $targetInput = numKey.numInput;
+                } else if($thisValChoose !== null) {
+                    $targetInput = $thisValChoose.querySelector('.choose-account-input input')
+                }
+                var $thisval = amountBtn.value;
+                $targetInput.value = Number($thisval) + Number($targetInput.value);
+            })
+        });
+        /* //키패드 키입력 예시 */
+    </script>
+</body>
+</html>

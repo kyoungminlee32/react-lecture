@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">금융상품 중요사항 확인</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <!-- [240724] 설명의무 관련 개선 -->
+                    <p class="p"><span class="point">금융소비자보호법 제19조(설명의무) 제1항에서 규정하고 있는 금융상품에 관한 중요한 사항을 안내해 드립니다.</span></p>
+                    <!-- // [240724] 설명의무 관련 개선 -->
+                    <div class="jsImportConfWrap"> 
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="total01">
+                                        <label for="total01">우선 설명사항(이자율)</label>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="panel">
+                                <div class="inner"> 
+                                    <!-- [240206]텍스트 변경, 영역 추가 이동, 마크업 변경 -->
+                                    <div class="sm-title-group">
+                                        <h2 class="h5">기본금리</h2>
+                                        <h3 class="sub-title">정부고시금리</h3>  <!-- [240206]텍스트 변경 -->
+                                        <!-- [240206]추가 -->
+                                        <ul class="ul -bullet">
+                                            <li>정부고시에 의하여 변경될 수 있으며, 변경일로부터 변경 후 금리 적용</li>
+                                            <li>세전, 단리식, 일시지급식</li>
+                                        </ul>
+                                        <!-- //[240206]추가 -->
+                                    
+                                        <div class="mt-16">
+                                            <div class="table mt-0">
+                                                <table>
+                                                    <caption><span class="hide">만기일시지급식</span></caption>
+                                                    <colgroup>
+                                                        <col style="width: 60.0%;">
+                                                        <col style="width: 40.0%;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">가입기간</th>
+                                                            <th scope="col">기본금리(%)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <!-- [240214]텍스트 변경 -->
+                                                        <tr>
+                                                            <td>1개월 이하</td>
+                                                            <td><span class="point">0.00</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1개월 초과 ~ 12개월 미만</td>
+                                                            <td><span class="point">2.00</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>12개월 이상 ~ 24개월 미만</td>
+                                                            <td><span class="point">2.50</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>24개월 이상</td>
+                                                            <td><span class="point">2.80</span></td>
+                                                        </tr>
+                                                        <!-- //[240214]텍스트 변경 -->
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="message">자세한 사항은 상품설명서 또는 특약 참조</div>                                    
+                                    </div>
+        
+                                    <div class="sm-title-group">
+                                        <h2 class="h5">우대금리</h2> 
+                                        <p class="p point">1.7%</p>    
+                                        <ul class="ul -bullet">
+                                            <li>가입기간 2년 이상인 경우에 한하여 (단, 2년 이내 청약당첨 해지 시 포함)</li>
+                                            <li>무주택기간에 한하여 원금 5천만원 한도, 가입 후 최대 10년</li>
+                                            <li>가입기간 중 주택을 취득한 경우, 가입일부터 최조 주택소유 직전년도(최대10년)까지만 우대금리 적용</li>
+                                            <li>전환 신규 시 전환원금은 우대금리 제외</li>
+                                        </ul> 
+                                    </div>
+                                    <!-- [240724] 설명의무 관련 개선 변동금리 삭제 -->
+                                    <!-- <div class="sm-title-group">
+                                        <h2 class="h5">변동금리</h2>     
+                                        <p class="p">금리 변동형 예금상품의 경우 금리상승기에 약정금리 인상 가능성이 큰 반면, 금리 하락기에는 약정금리 인하로 소비자에게 불리할 수 있습니다.</p> 
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">변동금리</span></caption>
+                                                <colgroup>
+                                                    <col style="width:25%">
+                                                    <col style="width:37.5%">
+                                                    <col style="width:37.5%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">구분</th>
+                                                        <th scope="col">고정금리</th>
+                                                        <th scope="col">변동금리</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row">운용형태</td>
+                                                        <td><img src="../../assets/imgs/img/utility/img-FMDC-0402070000F01-P-1.png" alt="고정금리 그래프"></td>
+                                                        <td><img src="../../assets/imgs/img/utility/img-FMDC-0402070000F01-P-2.png" alt="변동금리 그래프"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">특징</td>
+                                                        <td>예금 가입 시 결정된 금리가 예금만기까지 동일하게 유지</td>
+                                                        <td>일정주기(3/6개월 등) 마다 예금기준금리의 변동에 따라 예금금리가 변동</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">장점</td>
+                                                        <td><span class="point">시장금리 하락기</span>에 이자율 하락 없음</td>
+                                                        <td><span class="point">시장금리 상승기</span>에는 이자수익이 증가</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">단점</td>
+                                                        <td><span class="point">시장금리 상승기</span>에 이자율 상승 효과가 없어 변동금리보다 불리</td>
+                                                        <td><span class="point">시장금리 하락기</span>에는 이자수익 하락으로 고정금리보다 불리</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> -->
+                                    <!-- // [240724] 설명의무 관련 개선 변동금리 삭제 -->
+                                    <!-- <div class="sm-title-group">
+                                        <h2 class="h5">만기 후 금리</h2>     
+                                        <p class="p">만기 후 금리를 별도로 정하고 있지 않으며, 가입기간에 해당하는 약정금리를 적용</p>
+                                    </div>  -->
+                                    <!-- //[240206]텍스트 변경, 영역 추가 이동, 마크업 변경 -->
+                                </div>                         
+                            </div> 
+                        </div> 
+                        
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="total02">
+                                        <label for="total02">중도해지에 따른 불이익 사항</label>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="panel">
+                                <div class="inner">
+                                    <div class="sm-title-group">
+                                        <p class="p">중도해지이율을 별도로 정하고 있지 않으며, 가입기간에 해당하는 약정금리를 적용</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="total03">
+                                        <label for="total03">금융소비자의 권리</label>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="panel">
+                                <!-- [240724] 설명의무 관련 개선 -->
+                                <div class="inner">
+                                    <div class="sm-title-group">
+                                        <h2 class="h5">자료열람요구권</h2>
+                                        <ul class="ul -bullet fs-15">
+                                            <li>금융소비자는 <span class="point">분쟁 조정 또는 소송의 수행 등 권리구제를 위한 목적으로 은행이 기록 및 유지 · 관리하는 다음의 자료에 대한 열람(사본 및 청취 포함)을 요구</span>할 수 있습니다.
+                                                <!-- 2024-04-24 수정 -->
+                                                <div>
+                                                    <ul class="ul -dash">
+                                                        <li>계약체결에 관한 자료, 계약의 이행에 관한 자료</li>
+                                                        <li>금융상품 등에 관한 광고 자료</li>
+                                                        <li>금융소비자의 권리행사에 관한 자료</li>
+                                                        <li>내부통제기준의 제정 및 운영 등에 관한 자료</li>
+                                                        <li>업무 위탁에 관한 자료</li>
+                                                    </ul>
+                                                </div>
+                                                <!-- //2024-04-24 수정 -->
+                                                <!-- <ul class="ul -dash pl-12">
+                                                    <li>계약체결에 관한 자료, 계약의 이행에 관한 자료, 금융상품 등에 관한 광고 자료, 금융소비자의 권리행사에 관한 자료, 내부통제기준의 제정 및 운영 등에 관한 자료, 업무 위탁에
+                                                        관한 자료</li>
+                                                </ul> -->
+                                            </li>
+                                            <li>은행은 법령, 제3자의 이익 침해, 영업비밀의 침해 등의 사유가 있는 경우 이를 금융소비자에게 알리고 자료 열람을 제한하거나 거절할 수 있습니다.</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="sm-title-group">
+                                        <h2 class="h5">위법계약해지권</h2>
+                                        <ul class="ul -bullet fs-15">
+                                            <li>금융회사가 금융소비자보호법상 판매원칙 위반 시 일정 기간 이내에 금융소비자가 계약 해지를 요구할 수 있습니다. <span class="point">금융회사는 10일 이내에 수락 여부를 통지</span>해야 하며, 거절 시에는 거절사유와 함께 통지하여야 합니다.</li>
+                                            <li>위법계약해지 요구는 계약서류를 받은 날부터 5년, <span class="point">위법사실을 안 날부터 1년 이내에 가능(계약 종료 시 행사 불가)</span></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="sm-title-group">
+                                        <h2 class="h5">민원처리 및 분쟁조정 절차</h2>
+                                        <p class="p">본 상품에 대한 문의사항 또는 민원 상담이 필요하시면 영업점, <span class="point">고객상담센터(1661-3000, 1522-3000) 또는 인터넷 홈페이지(https://banking.nonghyup.com)를 통해 문의주시기 바랍니다. </span>또한 본 상품에 대하여 당 은행과 분쟁이 있는 경우에는 금융소비자보호법에 따라 금융감독원 민원상담 센터 (국번없이 1332) 또는 e-금융민원센터(https://www.fcsc.kr)에 분쟁조정을 신청할 수 있습니다.</p>
+                                    </div>
+                                    
+                                    <div class="sm-title-group">
+                                        <h2 class="h5">예금자보호 여부</h2>
+                                        <!-- [240425]텍스트 변경 -->
+                                        <!-- 2024-04-24 문구 수정 -->
+                                        <p class="p">이 예금은 예금자보호법에 따라 예금보험공사가 보호하되, 보호한도는 본 은행에 있는 귀하의 모든 예금보호대상<span class="point">금융상품의 원금과 소정의 이자를 합하여 1인당 “최고 5천만원” 이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</span></p>
+                                        <!-- //2024-04-24 문구 수정 -->
+                                        <!-- //[240425]텍스트 변경 -->
+                                        <!-- <p class="p">이 예금은 예금자보호법에 따라 예금보험공사가 보호하되, 보호한도는 NH농협은행에 있는 귀하의 모든 예금보호대상 금융상품의 원금과 이자를 합하여 1인당 “최고 5천만원”입니다. 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</p>                 -->
+                                    </div>
+                                </div>
+                                <!-- // [240724] 설명의무 관련 개선 -->
+                            </div> 
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary" disabled>확인</button>   <!-- [240329] disabled 추가 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+    </script>
+</body>
+</html>

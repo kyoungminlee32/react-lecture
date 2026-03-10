@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>신용보증 유의사항 안내</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">신용보증 유의사항 안내</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h4-groupt pop-tit">
+                        <h3 class="h5">신용보증 신청 전 유의사항</h3>
+                    </div>
+                    <!-- 240318 ux라이팅 전체 수정 -->
+                    <ol class="ol -number">
+                        <!-- 240326 재검토 -->
+                        <li>해당 보증상품은 서류 제출·보증 심사 등 전 과정을 모바일 앱으로 진행하는 비대면 보증으로 보증 대상, 보증심사 방법에 있어서 영업점에서의 대면 보증과 다소 차이가 있습니다.</li>
+                        <li>재단이 보증을 하는 경우에는 보증료를 납부해야 합니다.</li>
+                        <li>해당 보증 지원 요건에 부합하지 않는 경우(보증 거절)에도 대면 보증으로 보증 지원을 할 수 있습니다. 재단 방문 또는 전화로 상담해 주세요.</li>
+                    </ol>
+                    <p class="p bk">다음 중 하나라도 해당하면 보증 신청할 수 없습니다.</p>
+                    <ul class="ul -bullet big">
+                        <li>휴폐업 중인 기업</li>
+                        <li>법인 또는 공동 대표가 등재된 개인기업</li>
+                        <li>연체대출금 보유 또는 국세·지방세 체납 기업</li>
+                        <li>보증 제한 업종을 영위하는 기업 (도박, 유흥, 오락, 점술 등)</li>
+                        <li>그 밖에 신용 상태가 불량하다고 판단되는 기업</li>
+                    </ul>
+                    <div class="h4-groupt pop-tit">
+                        <h3 class="h5">신용보증 신청할 때 유의사항</h3>
+                    </div>
+                    <ol class="ol -number">
+                        <li>신용보증을 신청함에 있어 사실과 다르거나 허위의 자료를 제출할 경우에는 신용보증을 받을 수 없을 뿐만 아니라, 금융거래관련 부당행위자(금융질서문란정보)로 등록되어 금융거래 불이익을 받게 되며, 민형사상의 모든 책임을 질 수도 있습니다.</li>
+                        <li>은행 서류 제출 자동화 서비스로 통해 신용보증재단에 보증 신청에 필요한 서류를 제출합니다.</li>
+                        <li>최종 보증지원 금액은 심사 후 결정됩니다. 심사 과정에서 신청이 거절되거나 감액될 수 있습니다. </li>
+                        <li>해당 신청 건에 대한 신용보증을 신청할 때 필요한 보증료를 신청인이 부담하겠습니다.</li>
+                    </ol>
+                        <!-- 240111 체크박스 코드 변경 -->
+                    <div class="checkbox -sm -case2">                        
+                        <input type="checkbox" id="checkbox-smc">
+                        <label for="checkbox-smc">위 내용을 모두 읽고 동의하며, 모바일 앱으로 신용보증을 신청합니다.</label>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE] 체크박스 체크 후 활성화 -->
+                        <button type="button" class="button -lg -primary" disabled>다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

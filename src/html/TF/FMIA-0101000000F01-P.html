@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/etf.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">투자성향별 가입가능 신탁 안내</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <dl class="dl -bordered">
+                        <div>
+                            <dt>고객성향</dt>
+                            <dd>공격투자형</dd>
+                        </div>
+                        <div>
+                            <dt>분석점수</dt>
+                            <dd>81점 초과</dd>
+                        </div>
+                        <div>
+                            <dt>위험구분/등급</dt>
+                            <dd>ELT, ETF : 매우 높은 위험(1등급)이하, 높은 위험(2등급)이하</dd>
+                        </div>
+                        <div>
+                            <dt>상품예시</dt>
+                            <dd>비보장형 ELT</dd>
+                        </div>
+                    </dl>
+                    
+                    <dl class="dl -bordered">
+                        <div>
+                            <dt>고객성향</dt>
+                            <dd>적극투자형</dd>
+                        </div>
+                        <div>
+                            <dt>분석점수</dt>
+                            <dd>68점 초과 ~ 81점 이하</dd>
+                        </div>
+                        <div>
+                            <dt>위험구분/등급</dt>
+                            <dd>ELT, ETF : 다소 높은 위험(3등급)이하</dd>
+                        </div>
+                        <div>
+                            <dt>상품예시</dt>
+                            <dd>부분보장형 ELT</dd>
+                        </div>
+                    </dl>
+                    
+                    <dl class="dl -bordered">
+                        <div>
+                            <dt>고객성향</dt>
+                            <dd>위험중립형</dd>
+                        </div>
+                        <div>
+                            <dt>분석점수</dt>
+                            <dd>55점 초과 ~ 68점 이하</dd>
+                        </div>
+                        <div>
+                            <dt>위험구분/등급</dt>
+                            <dd>ELT, ETF : 보통위험(4등급)이하</dd>
+                        </div>
+                        <div>
+                            <dt>상품예시</dt>
+                            <dd>(채권A-이상)맞춤형 신탁</dd>
+                        </div>
+                    </dl>
+                    
+                    <dl class="dl -bordered">
+                        <div>
+                            <dt>고객성향</dt>
+                            <dd>안정추구형</dd>
+                        </div>
+                        <div>
+                            <dt>분석점수</dt>
+                            <dd>43점 초과 ~ 55점 이하</dd>
+                        </div>
+                        <div>
+                            <dt>위험구분/등급</dt>
+                            <dd>ELT, ETF : 낮은 위험(5등급)이하</dd>
+                        </div>
+                        <div>
+                            <dt>상품예시</dt>
+                            <dd>(위드밸류/정기예금)맞춤형 신탁 MMT(뉴다만족 Ⅰ · Ⅱ)</dd>
+                        </div>
+                    </dl>
+                    
+                    <dl class="dl -bordered">
+                        <div>
+                            <dt>고객성향</dt>
+                            <dd>안정형</dd>
+                        </div>
+                        <div>
+                            <dt>분석점수</dt>
+                            <dd>43점 이하</dd>
+                        </div>
+                        <div>
+                            <dt>위험구분/등급</dt>
+                            <dd>ELT, ETF : 매우 낮은 위험(6등급)이하</dd>
+                        </div>
+                        <div>
+                            <dt>상품예시</dt>
+                            <dd>MMT(다만족 Ⅲ)</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

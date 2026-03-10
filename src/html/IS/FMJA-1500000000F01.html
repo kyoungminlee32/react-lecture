@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/isa.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">ISA 신규</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:6;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <h2 class="h2">
+                            금융상품 중요사항을 확인해 주세요
+                        </h2>
+                        <p class="desc">금융소비자보호법 제19조(설명의무) 제1항에서 규정하고 있는 금융상품에 관한 중요한 사항을 안내해 드립니다.</p>
+                    </div>
+
+                    <div class="jsImportConfWrap">
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="optional-total01">
+                                        <label for="optional-total01">포트폴리오명</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="inner">
+                                    <h4 class="h5">NH밸런스 저위험형ISA B형</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="optional-total02">
+                                        <label for="optional-total02">투자대상</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="inner">
+                                    <h4 class="h5">투자대상 상품의 유형 및 편입비중</h4>
+                                    <ul class="ul -bullet">
+                                        <li>해외주식형 33%</li>
+                                        <li>국내주식형 22%</li>
+                                        <li>해외주식혼합형 0%</li>
+                                        <li>해외채권혼합형 10%</li>
+                                        <li>국내채권혼합형 10%</li>
+                                        <li>국내채권형 15%</li>
+                                        <li>국내단기채 5%</li>
+                                        <li>MMF 5%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="optional-total03">
+                                        <label for="optional-total03">위험등급</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="inner">
+                                    <h4 class="h5">4.00(고위험형)</h4>
+                                    <div class="table">
+                                        <table>
+                                            <caption><span class="hide">위험등급 안내</span></caption> <!-- 240503 표제목 수정 -->
+                                            <colgroup>
+                                                <col style="width:35%">
+                                                <col style="width:65%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col">위험점수</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>매우낮은위험</td>
+                                                    <td>1.0 이상 ~ 1.3 이하</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>낮은위험</td>
+                                                    <td>1.3 초과 ~ 2.3 이하</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>보통위험</td>
+                                                    <td>2.3 초과 ~ 3.2 이하</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>다소높은위험</td>
+                                                    <td>3.2 초과 ~ 4.1 이하</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>높은위험</td>
+                                                    <td>4.1 초과 ~ 5.0 이하</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>매우높은위험</td>
+                                                    <td>5.0 초과 ~ 6.0 이하</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <p class="message">모델포트폴리오에 편입된 개별금융상품의 위험등급점수를 편입비중으로 가중평균하여 위험점수를 산출한 후 분류</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="optional-total04">
+                                        <label for="optional-total04">투자위험</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="inner">
+                                    <h4 class="h5">1. 원금손실 가능성</h4>
+                                    <ul class="ul -bullet">
+                                        <li>이 투자자산은 원금보장 또는 예금자보호대상 상품이 아니며, 자산가격 변동에 따른 <span class="point">원금의 일부 또는 전부 손실</span>이 발생할 수 있습니다.</li>
+                                        <li>투자금액의 <span class="point">손실 내지 감소의 위험은 전적으로 수익자가 부담</span>하며, 집합투자업자나 판매회사 등 어떤 당사자도 투자손실에 대해 책임지지 않습니다.</li>
+                                    </ul>
+                                    <div class="case-wrap -sm">
+                                        <h4 class="h5">2. 투자대상 집중 위험</h4>
+                                        <p class="p"><span class="point">특정지역 또는 섹터에 집중 투자</span>하는 경우 해당지역 및 섹터 특성에 따른 <span class="point">변동성이 커질 수 있습니다.</span></p>
+                                    </div>
+
+                                    <div class="case-wrap -sm">
+                                        <h4 class="h5">3. 환율변동 위험</h4>
+                                        <p class="p">해외자산에 투자하는 경우 <span class="point">투자하는 국가의 통화가치 변동</span>에 의해 투자자산의 가치가 변동할 수 있습니다.</p>
+                                    </div>
+
+                                    <div class="case-wrap -sm">
+                                        <h4 class="h5">4. 상품 집중 위험</h4>
+                                        <p class="p"><span class="point">특정 종목의 투자증권에 대한 편입 비중이 높은</span> 모델포트폴리오의 경우에는 <span class="point">수익률의 변동성이 커질 수 있습니다.</span></p>
+                                    </div>
+
+                                    <div class="case-wrap -sm">
+                                        <h4 class="h5">5. 성향불일치 위험</h4>
+                                        <ul class="ul -bullet">
+                                            <li>당사 모델포트폴리오의 위험도는 편입 금융상품의 특성, 투자비중 등을 고려하여 가중 평균하는 등의 방식으로 산정한 것으로서 <span class="point">투자자 성향에 비해 위험도가 높거나 낮은 금융상품이 편입될 수 있으며, 실제 편입되는 자산의 경우 세부 자산의 대표위험등급과 차이가 있을 수 있습니다.</span></li>
+                                            <li>당사 모델포트폴리오에 편입되는 금융상품의 내용 및 위험도는 모델포트폴리오 설명서를 참고해 주시기 바랍니다.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="case-wrap -sm">
+                                        <h4 class="h5">6. 만기불일치 위험</h4>
+                                        <p class="p">파생결합증권을 편입하는 모델포트폴리오의 경우, 일임형 종합자산관리 계약의 만기와 파생결합증권의 만기가 일치하지 않을 수 있으며, 이 경우 중도상환 시 중동상환수수료 등에 의해 손실이 발생할 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="optional-total05">
+                                        <label for="optional-total05">보수 및 수수료</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="inner">
+                                    <div class="table -x">
+                                        <table>
+                                            <caption><span class="hide">보수 및 수수료</span></caption> <!-- 240503 표제목 수정 -->
+                                            <colgroup>
+                                                <col style="width:30%">
+                                                <col style="width:70%">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">일임보수</th>
+                                                    <!-- [CASE] 고위험형 -->
+                                                    <td>후취 연 0.5%</td>
+                                                    <!-- // [CASE] 고위험형 -->
+        
+                                                    <!-- [CASE] 중위험형 -->
+                                                    <!-- <td>후취 연 0.4%</td> -->
+                                                    <!-- // [CASE] 중위험형 -->
+        
+                                                    <!-- [CASE] 저위험형 -->
+                                                    <!-- <td>후취 연 0.2%</td> -->
+                                                    <!-- // [CASE] 저위험형 -->
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">비고</th>
+                                                    <td>
+                                                        <ul class="ul -bullet">
+                                                            <li>투자일임재산 평균잔액 기준(후취)</li>
+                                                            <li>분기별(1, 4, 7, 10월)로 첫 영업일에 징수</li>
+                                                            <li>선취판매수수료, 중도해지수수료, 성과보수, 연체료는 징수하지 않음</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+        
+                                    <div class="case-wrap -sm">
+                                        <h4 class="h5">편입된 개별 상품의 보수</h4>
+                                        <p class="p">모델포트폴리오 일임보수와 별도로 개별 상품 내에서 징수</p>
+                                        <ul class="ul -bullet">
+                                            <li>편입 상품은 판매수수료 및 판매보수가 없는 상품을 활용할 예정이며, 그 외 기타 보수는 상품별로 징수</li>
+                                            <li>기타 보수(운용보수, 신탁보수, 사무보수 등)는 연 0.94% 이하 수준이며, 편입 상품 변경 시 변동될 수 있음</li>
+                                            <li>중도해지 및 모델포트폴리오 변경 또는 리밸런싱 시 편입 상품별 환매수수료 발생 가능</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-wrap -sm">
+                            <div class="checkbox -sm">
+                                <input type="checkbox" id="checkbox-sm">
+                                <label for="checkbox-sm">본인은 금융소비자보호법 상 금융상품에 대한 중요사항을 충분히 이해하고 확인합니다.</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 플로팅 버튼 -->
+                    <div class="floating-wrap">
+                        <div class="floating-btn" role="button">
+                            <p>
+                                원금손실<br>
+                                가능상품
+                            </p>
+                        </div>
+                        <a class="floating_close" title="원금 손실가능 상품 플로팅버튼 닫기"></a>
+                    </div>
+                    <!-- // 플로팅 버튼 -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

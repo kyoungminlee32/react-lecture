@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">적금 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>                      
+                    <div class="h2-group">                        
+                        <h2 class="h2">
+                            자동이체를 신청할까요?
+                        </h2>
+                    </div>
+                    <div class="field">
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="period-point-color1-1" checked="">
+                                <label for="period-point-color1-1">신청</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="period-point-color1-2">
+                                <label for="period-point-color1-2">신청 안함</label>
+                            </div>
+                        </div>
+                        <p class="info">자동이체 신청 안내
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">자동이체 신청 안내</span>
+                                    <span class="t-content">
+                                        <span class="dot">자동이체일이 토요일 /공휴일이면 다음 날(영업일 기준)에 출금됩니다.</span>
+                                        <span class="dot">자동이체일이 말일이고, 토요일/공휴일이라 다음 달에 출금되면 그 달의 저축한도에 따라 자동이체가 되지 않을 수 있습니다.</span>
+                                        <!-- <span class="dot">매일 자동이체를 선택하면 영업일에만 이체됩니다. 출금계좌의 잔액이 부족해도 이후 다시 출금되지 않습니다.</span>  -->   <!-- [240125]삭제 -->
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="case-wrap">
+                        <div class="field">
+                            <p class="label">자동이체 은행 선택</p>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color2" id="period-point-color2-1" checked>
+                                    <label for="period-point-color2-1">NH농협</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color2" id="period-point-color2-2">
+                                    <label for="period-point-color2-2">군인중앙공제</label>
+                                </div>
+                            </div>
+                            <!-- [240425]영역 삭제 -->  
+                            <!-- <div class="checkbox -sm mt-12">
+                                <input type="checkbox" id="checkbox-sm-checked02" checked>
+                                <label for="checkbox-sm-checked02">가입금액과 동일한 금액 자동이체</label>
+                            </div> -->
+                            <!-- //[240425]영역 삭제 -->  
+                        </div>
+                        <!-- [240110]영역 추가 -->  
+
+                        <!-- [240327]위치 이동 -->
+                        <div class="field">
+                            <!-- <div class="h2-group">                        
+                                <h2 class="h2">
+                                    자동이체 정보를 확인해 주세요
+                                </h2>
+                            </div> -->
+                            <p class="label">자동이체일</p>
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">다음달 부터 매월 25일</button>  <!-- [240112]문구 변경 -->
+                            </div>
+                        </div>
+                        <!-- //[240327]위치 이동 -->
+                        
+                        <!-- [240124]영역 삭제 및 추가 -->                      
+                        <div class="field">
+                            <label for="text12" class="label">자동이체 금액</label>
+                            <div class="mix">
+                                <div class="text -won">
+                                    <input type="tel" id="text12" class="right num-call" placeholder="1만원 ~ 20만원" aria-haspopup="true" readonly value="100,000">   <!-- [240124]placeholder 변경 -->
+                                    <div class="won">원</div>      
+                                </div>                           
+                                <div class="info-wrap">
+                                    <p class="message">최대 한도 %금액%원</p> 
+                                    <p class="message red">입력 오류 알림 내용 출력</p> 
+                                    <p class="info right point"><span>오십만</span>원</p> 
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="field">
+                            <label for="text1" class="label">자동이체 금액</label>
+                            <div class="mix">
+                                <div class="text -won">
+                                    <input type="tel" id="text1" class="right num-call" placeholder="1만원 ~ 20만원" aria-haspopup="true" readonly value="">    <!-- [240124]placeholder 변경 -->
+                                    <div class="won">원</div>      
+                                </div>                           
+                                <div class="info-wrap">
+                                    <p class="message">최대 한도 %금액%원</p> 
+                                    <p class="message red">입력 오류 알림 내용 출력</p> 
+                                    <p class="info right point"><span>오십만</span>원</p> 
+                                </div>
+                            </div>  
+                        </div>
+                        <!-- //[240110]영역 추가 -->
+                        <!-- //[240124]영역 삭제 및 추가 -->
+                    </div>
+   
+                    <!-- [240126]삭제 -->
+                    <!-- <div class="case-wrap">
+                        <div class="field">
+                            <p class="label">자동이체 은행 선택</p>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color3" id="period-point-color3-1">
+                                    <label for="period-point-color3-1">NH농협</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color3" id="period-point-color3-2" checked>
+                                    <label for="period-point-color3-2">군인중앙공제</label>
+                                </div>
+                            </div>
+                            <div class="checkbox -sm mt-12">
+                                <input type="checkbox" id="checkbox-sm-checked03" checked>
+                                <label for="checkbox-sm-checked03">가입금액과 동일한 금액 자동이체</label>
+                            </div>
+                            <div class="text">
+                                <p class="info -bullet">매월 22일 저녁 8시 (22일이 공휴일인 경우 직전 영업일)까지의 등록은 익월 10일부터 23일 이후 등록은 익익월 10월부터 공제됩니다.</p>
+                                <p class="info -bullet">가입월 및 전역(소집해제)해당월에는 급여에서 중앙공제가 되지 않으므로 반드시 개인이 직접 은행(적금계좌)로 월 적금액을 입금 해야 합니다.</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- //[240126]삭제 -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

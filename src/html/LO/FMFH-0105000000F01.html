@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출신청 계좌선택</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출한도 조회</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <!-- 240313 ux라이팅 수정 -->
+                        <h2 class="h2">대출을 신청할 계좌를 선택해 주세요</h2>
+                        <!-- //240313 ux라이팅 수정 -->
+                    </div>
+                    <div class="accounts-box mt-32">
+                        <!-- ui 변경 240123 (total-count 테그 span -> p)-->
+                        <p class="total-count">예·적금/신탁 <span class="point">3</span>개</p>
+                        <div class="accounts">
+                            <div class="account">
+                                <!-- 240117 button -> div 수정 -->
+                                <div type="button" data-bankcode="011" class="info">
+                                    <span class="name">
+                                        <span>NH직장인월복리적금</span>
+                                    </span>
+                                    <span class="account-number">
+                                        <!-- 240313 은행명 삭제 -->
+                                        <span>111-1234-5678-99</span>
+                                    </span>
+                                </div>
+
+                                <div class="amounts">
+                                    <div class="amount">
+                                        <!-- 240313 ux라이팅 수정 -->
+                                        <div class="key">예금 잔액</div>
+                                        <!-- //240313 ux라이팅 수정 -->
+                                        <div class="value">
+                                            <span>150,000,000</span>원
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fit-buttons -right">
+                                    <!-- 240313 ux라이팅 수정 -->
+                                    <button type="button" class="button -fit -sm -secondary">대출 가능금액 조회/신청</button>
+                                    <!-- //240313 ux라이팅 수정 -->
+                                </div>
+                            </div>
+                            <div class="account">
+                                <!-- 240117 button -> div 수정 -->
+                                <div type="button" data-bankcode="011" class="info">
+                                    <span class="name">
+                                        <span>NH직장인월복리적금</span>
+                                    </span>
+                                    <span class="account-number">
+                                        <!-- 240313 은행명 삭제 -->
+                                        <span>111-1234-5678-99</span>
+                                    </span>
+                                </div>
+
+                                <div class="amounts">
+                                    <div class="amount">
+                                        <!-- 240313 ux라이팅 수정 -->
+                                        <div class="key">예금 잔액</div>
+                                        <!-- //240313 ux라이팅 수정 -->
+                                        <div class="value">
+                                            <span>150,000,000</span>원
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fit-buttons -right">
+                                    <!-- 240313 ux라이팅 수정 -->
+                                    <button type="button" class="button -fit -sm -secondary">대출 가능금액 조회/신청</button>
+                                    <!-- //240313 ux라이팅 수정 -->
+                                </div>
+                            </div>
+                            <div class="account">
+                                <!-- 240117 button -> div 수정 -->
+                                <div type="button" data-bankcode="011" class="info">
+                                    <span class="name">
+                                        <span>NH직장인월복리적금</span>
+                                    </span>
+                                    <span class="account-number">
+                                        <!-- 240313 은행명 삭제 -->
+                                        <span>111-1234-5678-99</span>
+                                    </span>
+                                </div>
+
+                                <div class="amounts">
+                                    <div class="amount">
+                                        <!-- 240313 ux라이팅 수정 -->
+                                        <div class="key">예금 잔액</div>
+                                        <!-- //240313 ux라이팅 수정 -->
+                                        <div class="value">
+                                            <span>15,000</span>원
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box -account-error">
+                                    <p class="p center">
+                                        해당 계좌는 대출을 신청할 수 없습니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accounts-box">
+                        <!-- ui 변경 240123 (total-count 테그 span -> p)-->
+                        <p class="total-count">청약저축<span class="point">1</span>개</p>
+                        <div class="accounts">
+                            <div class="account">
+                                <!-- 240117 button -> div 수정 -->
+                                <div type="button" data-bankcode="011" class="info">
+                                    <span class="name">
+                                        <span>NH직장인월복리적금</span>
+                                    </span>
+                                    <span class="account-number">
+                                        <!-- 240313 은행명 삭제 -->
+                                        <span>111-1234-5678-99</span>
+                                    </span>
+                                </div>
+
+                                <div class="amounts">
+                                    <div class="amount">
+                                        <!-- 240313 ux라이팅 수정 -->
+                                        <div class="key">예금 잔액</div>
+                                        <!-- //240313 ux라이팅 수정 -->
+                                        <div class="value">
+                                            <span>150,000,000</span>원
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fit-buttons -right">
+                                    <!-- 240313 ux라이팅 수정 -->
+                                    <button type="button" class="button -fit -sm -secondary">대출 가능금액 조회/신청</button>
+                                    <!-- //240313 ux라이팅 수정 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                        <!-- 240313 ux라이팅 수정 -->
+                                <li>
+                                    일부 예·적금/신탁은 상품별 특성에 따라 비대면으로 가입한 경우에도 대출을 신청할 수 없습니다.(만기일에 금리가 확정되는 예·적금 등)
+                                </li>
+                                <li>
+                                    예·적금/신탁 담보대출 상품의 유의사항을 확인해 주세요.
+                                </li>
+                        <!-- //240313 ux라이팅 수정 -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

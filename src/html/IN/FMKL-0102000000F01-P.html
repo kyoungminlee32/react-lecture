@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">보장 내용</h1> <!-- ux 라이팅 수정 -->
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <h4 class="h5">보장 내역</h4> <!-- ux 라이팅 수정 -->    
+                    <div class="table">
+                        <table>
+                            <caption><span class="hide">보장 내역</span></caption> <!-- 240503 표제목 수정 -->
+                            <colgroup>
+                                <col style="width:65%">
+                                <col style="width:35%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">보장 내용</th>
+                                    <th scope="col">보장금액</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>레저 활동 중 상해 사망</td> <!-- ux 라이팅 수정 -->
+                                    <td>1,000만원</td>
+                                </tr>
+                                <tr>
+                                    <td>레저 활동 중 상해 후유 장해</td> <!-- ux 라이팅 수정 -->
+                                    <td>1,000만원</td>
+                                </tr>
+                                <tr>
+                                    <td>스크린 골프장 홀인원 비용</td> <!-- ux 라이팅 수정 -->
+                                    <td>20만원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h4 class="h5">스크린 골프장 홀인원 비용(보험기간 중 1회) 보장</h4> <!-- ux 라이팅 수정 -->     
+                    <div class="box">
+                        <p class="p"> <!-- ux 라이팅 수정 -->
+                            스크린 골프장에서 경기 중 홀인원을 하면, 홀인원을 한 날부터 30일 안에 쓴 비용(만찬 비용, 스크린 골프 비용 등)을 보험가입금액 한도로 지급 
+                        </p>
+                    </div>              
+                    <p class="p">단, 아래의 홀인원은 보상하지 않습니다.</p>                    
+                    <ol class="ol -number">
+                        <li>가상 골프장(가상CC), 해외 골프장(해외CC), 포섬 모드(2명 이상의 선수가 한 조를 이루어 하나의 공으로 번갈아 치면서 팀 공통 스코어로 승부를 가리는 경기 방식), 연습 모드, 훈련 모드에서 행한 홀인원</li> <!-- ux 라이팅 수정 -->   
+                        <li>홀스킵(홀넘김)이 2회 이상 발생한 라운드에서 행한 홀인원</li>
+                        <li>멀리건을 사용한 홀 또는 깔때기 홀(그린에 볼을 올리기만 하면 볼이 홀에 들어가도록 설계한 홀)에서 행한 홀인원</li>       
+                        <li>남성이 레이디티에서 행한 홀인원</li>
+                        <li>피보험자가 스크린골프장의 경영자 또는 사용인(임시 고용인을 포함)인 경우 그 피보험자가 경영 또는 이용하고 있는 스크린 골프장에서 행한 홀인원</li> <!-- ux 라이팅 수정 -->                  
+                    </ol>
+                    <div class="field">
+                        <div class="checkbox -sm">
+                            <input type="checkbox" id="checkbox-sm">
+                            <label for="checkbox-sm">스크린 골프장 홀인원 보장 내용을 충분히 읽고 확인했어요.</label> <!-- ux 라이팅 수정 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

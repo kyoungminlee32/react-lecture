@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출신청 완료</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <!-- <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">본인인증</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header> -->
+
+            <main class="contents">
+                <div class="content">
+                    <div class="left">
+                        <img src="/content/assets/imgs/img/utility/ico-resultconfirm.png" style="width:16.8rem" alt="">
+                    </div>                    
+                    <div class="h1-group">
+                        <h2 class="h1">
+                            대출을 신청했어요
+                        </h2>
+                        <!-- 2024-07-30 내용삭제 -->
+                        <!-- 2024-11-05 내용복원 및 문구 수정 -->
+                        <div class="case-wrap -sm">
+                            <h3 class="h5">배우자(결혼예정자)의 개인(신용)정보 수집,이용,조회,제공 동의절차를 진행해주세요.</h3>
+                            <p class="p">배우자(결혼예정자)가 있을 경우 대출 심사를 위해 배우자(결혼예정자)의 개인(신용)정보 수집, 이용, 조회, 제공에 대한 동의가 필요합니다.</p>
+                            <div class="case-wrap -xs">
+                                <button type="button" class="button -lg -w100">배우자(결혼예정자)에게 동의 요청하기</button>
+                            </div>
+                        </div>
+                        <!-- 2024-11-05 내용복원 및 문구 수정 -->
+                        <!-- 2024-07-30 내용삭제 -->
+                    </div>
+                    <div class="dls case-wrap -box" data-role="fold">
+                        <button type="button" class="more" data-role="marker">
+                            <span>더보기</span>
+                        </button>
+                        <!-- [240313]ux 라이팅 수정 시작 -->
+                        <dl class="dl">
+                            <div>
+                                <dt>대출 신청금액</dt>
+                                <dd>560,000,000원</dd>
+                            </div>
+                            <div>
+                                <dt>대출 이자율</dt>
+                                <dd>3.30%</dd>
+                            </div>
+                            <div data-role="hidden">
+                                <dt>이름</dt>
+                                <dd>조하연</dd>
+                            </div>
+                            <div data-role="hidden">
+                                <dt>대출 상품</dt>
+                                <dd>아낌e-보금자리론</dd>
+                            </div>
+                            <div data-role="hidden">
+                                <dt>자금 용도</dt>
+                                <dd>구입</dd>
+                            </div>
+                            <div data-role="hidden">
+                                <dt>대출 상환방법</dt>
+                                <dd>원금균등상환</dd>
+                            </div>
+                            <div data-role="hidden">
+                                <dt>거치기간</dt>
+                                <dd>0 개월</dd>
+                            </div>
+                            <div data-role="hidden">
+                                <dt>대출기간</dt>
+                                <dd>120 개월</dd>
+                            </div>
+                            <div data-role="hidden">
+                                <dt>담보물 주소</dt>
+                                <dd>전라북도 익산시 어양동 652-1번지 부영아파트 106동 508호</dd>
+                            </div>
+                            <div data-role="hidden">
+                                <!-- 240126 ux라이팅 수정 -->
+                                <dt>희망 관리점</dt>
+                                <!-- //240126 ux라이팅 수정 -->
+                                <dd>NH농협은행 익산시지부</dd>
+                            </div>
+                        </dl>
+                        <!-- //[240313]ux 라이팅 수정 끝 -->
+                    </div>
+
+                    <!-- [240605] cms 이벤트 배너 추가, cms 영역 실행함수 : incHtml() -->
+                    <div class="loadArea" data-includ="/content/cms/market/FMFE1020R_ifrme01.html"></div>
+                    <!-- // [240605] cms 이벤트 배너 추가, cms 영역 실행함수 : incHtml() -->
+                    <!-- [240613] cms 아닌 관리자형식으로 배너 개발시 사용할 마크업 -->
+                    <div class="loadArea" data-includ="/content/cms/market/FMDB1001R_ifrme01.html">
+                        <a href="javascript:void(0)" class="cms-banner -imgType">
+                            <img src="../../assets/imgs/ico/banner/event-bn-img.png">
+                        </a>
+                    </div>
+                    <!-- // [240613] cms 아닌 관리자형식으로 배너 개발시 사용할 마크업 -->
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

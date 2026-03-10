@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>아파트 검색</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+</head>
+<body>
+    <div id="layer" class="layer" aria-labelledby="coupon-head" role="region">
+            <!-- 240326 ux라이팅 수정 -->
+            <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">담보 주택의 면적을 선택해 주세요(공급/전용)</h1> <!-- 2024-07-24 문구수정 -->
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="options">
+                        <ul>
+                            <li><button type="button" class="option -active">공급 82.52㎡(전용 59.1㎡ )</button></li>
+                            <li><button type="button" class="option">공급 84.9㎡(전용 61.39㎡)</button></li>
+                            <li><button type="button" class="option">공급 110㎡(전용 86.49㎡)</button></li>
+                            <li><button type="button" class="option">공급 145.2㎡(전용 121.69㎡)</button></li>
+                            <li><button type="button" class="option">공급 146.78㎡(전용 123.27㎡)</button></li>
+                            <li><button type="button" class="option">공급 148.2㎡(전용 124.49㎡)</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //240326 ux라이팅 수정 -->
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Layer.open('layer');
+
+        // 레이어 닫기(마지막 인자 기본값: false)
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // });
+
+        // 레이어 닫기 + DOM 삭제
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

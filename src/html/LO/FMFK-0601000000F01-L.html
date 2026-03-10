@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+</head>
+<body>
+    <div id="layer" class="layer">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">조회기간을 선택해 주세요</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="field">
+                        <p class="label">조회유형</p>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-12" checked>
+                                <label for="box-radio11-12">전체</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-22">
+                                <label for="box-radio11-22">신규</label>
+                            </div>
+                        </div>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-32">
+                                <label for="box-radio11-32">기한연기</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-42">
+                                <!-- 240312 ux라이팅 수정 -->
+                                <label for="box-radio11-42">조건 변경</label>
+                                <!-- //240312 ux라이팅 수정 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <p class="label">조회기간</p>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="radio" name="piod" id="box-radio1-1" checked>
+                                <label for="box-radio1-1">1년</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="piod" id="box-radio1-2">
+                                <label for="box-radio1-2">2년</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="piod" id="box-radio1-3">
+                                <label for="box-radio1-3">3년</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="piod" id="box-radio1-4">
+                                <label for="box-radio1-4">4년</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="piod" id="box-radio1-5">
+                                <label for="box-radio1-5">5년</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons -half">
+                        <button type="button" class="button -lg">초기화</button>
+                        <button type="button" class="button -lg -primary">조회</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Layer.open('layer');
+
+        // 레이어 닫기(마지막 인자 기본값: false)
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // });
+
+        // 레이어 닫기 + DOM 삭제
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

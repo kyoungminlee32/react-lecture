@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>상품상세</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+                    <h1 class="title">상품상세</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                        <button type="button" class="func -menu"><span class="hide">전체메뉴</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner center">
+                    <h1 class="title">적금</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="product-detail-wrap">
+                        <!-- 상품 안내 영역 -->
+                        <div class="procuct-summary">
+                            <div class="info-area">
+                                <div class="title-area">
+                                    <h2>NH장병내일준비적금</h2>
+                                    <div class="hashtag"><span>#군장병</span><span>#목돈모으기</span></div>   <!-- [240416]텍스트 영역 추가 -->
+                                </div><!-- //.title-area -->
+                                
+                                <div class="subtitle-area">
+                                    <div class="product-cost-area">
+                                        <div class="inner">
+                                            <dl>
+                                                <dt>최저 연</dt>
+                                                <dd class="point">5.00%</dd>
+                                            </dl>
+                                            <span class="daesh">~</span>
+                                            <dl>
+                                                <dt>최고 연</dt>
+                                                <dd class="point">5.00%</dd>
+                                            </dl>
+                                        </div>
+                                        <p class="cost-para">(연/세전)2024.08.31 기준</p>
+                                    </div>
+
+                                    <ul class="product-dl-list">
+                                        <li class="range">
+                                            <dl>
+                                                <dt>가입기간</dt>
+                                                <dd>1개월 이상 24개월까지</dd>   <!-- [240531]텍스트 변경 -->
+                                            </dl>
+                                        </li>
+                                        <li class="cost">
+                                            <dl>
+                                                <dt>가입금액</dt>
+                                                <dd>월 20만원 이내</dd>   <!-- [240531]텍스트 변경 -->
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div><!-- //.subtitle-area -->
+
+                                <div class="top-join-btn"><button type="button" class="button -lg -primary">가입하기</button></div>
+                            </div><!-- //.info-area -->
+
+                            <div class="loadArea" data-includ="/content/nhbank/html/dt/dt10000961_de.html"></div>
+                            <hr class="hr -xl">   <!-- [240321]추가 -->
+
+                            <!-- 금리 계산해보기 -->
+                            <div class="interest-calc-wrap">
+                                <div class="accordion -card" data-role="fold">
+                                    <button type="button" class="title -interest" data-role="marker">만기금액 미리 계산해보기</button>   <!-- [240417]텍스트 수정 -->
+                                    <div class="panel" data-role="hidden">
+                                        <div class="interest-calc-cont">
+                                            <!-- 통테 ux-라이팅 반영 -->
+                                            <div class="calc-row">
+                                                <span class="calc-para -front">만기 금액은 실제와 다를 수 있습니다.</span>
+                                            </div>
+                                            <!-- //통테 ux-라이팅 반영 -->
+                                            <div class="calc-row">
+                                                <span class="calc-para -front">매월</span>
+                                                <span class="calc-input">
+                                                    <div class="mix">
+                                                        <div class="text -won" data-clear="false">
+                                                            <input type="tel" id="tt1" class="right num-call" aria-haspopup="true" placeholder="금액을 입력하세요" readonly>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                                <span class="calc-para">원을</span>
+                                            </div>
+                                            <div class="calc-row">
+                                                <span class="calc-input">
+                                                    <div class="mix">
+                                                        <div class="text" data-clear="false">
+                                                            <input type="tel" id="tt2" class="right num-call" aria-haspopup="true" placeholder="개월 입력" readonly>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                                <span class="calc-para">개월 동안 저축한다면?</span>
+                                            </div>
+                                            <div class="calc-btn-wrap"><button type="button" class="button -lg -secondary">계산해보기</button></div>
+                                            <div class="interest-calc-result">
+                                                <dl>
+                                                    <dt>세전</dt>
+                                                    <dd>1,040,500원</dd>
+                                                </dl>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //금리 계산해보기 -->
+                        </div><!-- //.procuct-summary -->
+                        <!-- //상품 안내 영역 -->
+
+                        <!-- 상품 정보 영역 -->
+                        <div class="procuct-info">
+                            <div class="segments -tabstyle">
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div role="tablist" class="list">
+                                            <div class="item -active"><button type="button" role="tab" aria-selected="true" aria-controls="segments-panel01" id="segment01">상품안내</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel02" id="segment02">우대금리</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel03" id="segment03">금리안내</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel04" id="segment04">유의사항</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel05" id="segment05">기타사항</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="segments-panels">
+                                <div role="tabpanel" aria-labelledby="segment01" id="segments-panel01" class="segments-panel -active" tabindex="0">
+                                    <dl class="prodect-info-dl">
+                                        <dt class="h5">상품특징</dt>
+                                        <dd>
+                                            <p class="p">복무기간 동안 목돈마련을 지원하는 병역의무복무자 맞춤형 고금리 상품으로 은행 거래 실적에 따른 추가 우대금리 제공</p>
+                                        </dd>
+
+                                        <dt class="h5">가입대상</dt>
+                                        <dd>
+                                            <p class="p">가입 시점 아래 1,2,3 을 모두 충족하는 의무복무이행자 중 병급여체계 적용 대상 병사 개인 (1인1계좌)</p>   <!-- [240531]텍스트 변경 -->
+                                            <ul class="ul -dash">
+                                                <li>현역병, 상근예비역, 의무경찰, 해양의무경찰, 의무소방원, 사회복무요원, 대체복무요원</li>
+                                            </ul>
+                                            <!-- [240531]텍스트 변경 -->
+                                            <ol class="ol -number">
+                                                <li>이 적금 신규일 기준 남은 의무복무기간 : 1개월 이상</li>   
+                                                <li>가입대상자격확인서류 「장병내일준비적금 가입자격 확인서」 원본 제출
+                                                    <!-- [240603]삭제 -->
+                                                    <!-- <div>
+                                                        <ul class="ul -dash">
+                                                            <li>비대면 신규 시 모바일 “나라사랑 포털 APP”에서 발행한 금융 분산ID 방식 가입자격증명서가 당행 비대면 APP에서 확인된 경우 제출 생략 가능<br>(현역병, 상근예비역 대상)<br>* NH스마트뱅킹
+                                                            </li>
+                                                        </ul>
+                                                    </div> -->
+                                                    <!-- //[240603]삭제 -->
+                                                </li>
+                                                <li>조세특례제한법 제129조의2에 따른 금융소득종합과세 대상자가 아닐 경우
+                                                    <!-- [240603]텍스트, 마크업 변경 -->
+                                                    <div>
+                                                        <ul class="ul">
+                                                            <li class="pl-0">* 현역병사와 동일한 급여체계를 적용 받지 않는 기타 의무복무자(산업기능요원, 전문연구요원, 공중보건의사, 공중방역수의사, 공익법무관, 병역판정검사전담의사, 예술체육요원, 승선근무예비역 등)는 가입대상이 아님</li>
+                                                            <!-- <li>현역병사와 동일한 급여체계를 적용 받지 않는 기타 의무복무자(산업기능요원, 전문연구요원, 공중보건의사, 공중방역수의사, 공익법무관, 병역판정검사전담의사, 예술체육요원, 승선근무예비역 등)는 가입대상이 아님</li> -->
+                                                        </ul>
+                                                    </div>
+                                                    <!-- //[240603]텍스트, 마크업 변경 -->
+                                                </li>
+                                            </ol>
+                                            <!-- //[240531]텍스트 변경 -->
+                                        </dd>
+
+                                        <dt class="h5">가입기간</dt>
+                                        <dd>
+                                            <p class="p">1개월 이상 24개월까지(월, 일 단위)</p>  <!-- [240531]텍스트 변경 -->
+                                            <!-- <div>
+                                                <ul class="ul -bullet">
+                                                    <li>1개월 이상 24개월 이내(월,일 단위)
+                                                        <div>
+                                                            <ul class="ul -dash">
+                                                                <li>적금의 만기일은 고객의 전역예정일(또는 소집해제예정일)이며, 단축·연장 불가</li>
+                                                                <li>가입대상 중 대체복무요원은 복무기간이 36개월이므로 만기일이 소집해제예정일이 아닐 수 있음</li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div> -->
+                                        </dd>
+
+                                        <dt class="h5">가입금액</dt>
+                                        <dd>
+                                            <!-- <p class="p">이 적금의 신규가입 시 입금 최저금액은 10원 이상이며 이후 저축금액은 매회 1만원 이상, 매월(월 초일부터 말일까지) 20만원 이내에서 만기일 전일까지 자유롭게 적립할 수 있습니다.<br>
+                                                                                            단, ‘장병내일준비적금’상품을 판매하는 모든 은행을 합산한 고객의 최대 저축한도는 월 40만원이며, 동 저축한도를 초과하지 않는 범위 내에서 은행별 월20만원까지 저축가능</p> -->
+                                            <div>
+                                                <ul class="ul -bullet">
+                                                    <li>이 적금의 신규가입 시 입금 최저금액은 10원 이상이며 이후 저축금액은 매회 1만원 이상, 매월(월 초일부터 말일까지) 20만원 이내에서 만기일 전일까지 자유롭게 적립할 수 있습니다.</li>
+                                                    <li>단, ‘장병내일준비적금’상품을 판매하는 모든 은행을 합산한 고객의 최대 저축한도는 월 40만원이며, 동 저축한도를 초과하지 않는 범위 내에서 은행별 월20만원까지 저축가능</li>
+                                                </ul>
+                                            </div>
+                                        </dd>
+
+                                        <dt class="h5">예금종류</dt>
+                                        <dd>
+                                            <p class="p">자유로우대적금</p>
+                                        </dd>
+
+                                        <dt class="h5">세제혜택안내</dt>
+                                        <dd>
+                                            <p class="p">조세특례제한법 제91조의19에 따른 비과세 상품</p>
+                                            <ul class="ul -dash">
+                                                <li>상품 계약기간 만료 후 이자는 과세되며, 상품의 약관에도 불구하고 조세특례제한법 및 그 시행령과 시행규칙의 변경 시 해당법령에 따름</li>
+                                            </ul>
+                                        </dd>
+
+                                        <dt class="h5">이자지급 방법</dt>   <!-- [240531]텍스트 변경 -->
+                                        <dd>
+                                            <p class="p">만기일시지급식 : 만기 또는 중도해지 요청 시 이자를 지급</p>
+                                        </dd>
+
+                                        <dt class="h5">가입/해지안내</dt>
+                                        <dd>
+                                            <!-- [240531]텍스트, 마크업 변경 -->
+                                            <!-- <p class="p mb-12">신규 : 영업점, 비대면 채널(NH스마트뱅킹)에서 가능<br>  
+                                                해지 : 영업점에서 가능
+                                            </p>  -->
+                                            <div>
+                                                <ul class="ul -bullet">
+                                                    <li>가입 : 영업점, 비대면 채널</li>
+                                                    <li>해지 : 영업점</li>
+                                                </ul>
+                                            </div>
+                                            <!-- //[240531]텍스트, 마크업 변경 -->
+                                        </dd>
+                                    </dl>
+
+                                </div>
+
+                                <div role="tabpanel" aria-labelledby="segment02" id="segments-panel02" class="segments-panel" tabindex="0">
+                                    <div class="case-wrap -xs">
+                                        <!-- <h3 class="h4">우대금리</h3> -->   <!-- [240315]추가 -->
+                                        <!-- [240531]텍스트, 마크업 변경 -->
+                                        <div class="field">
+                                            <div class="data-box">
+                                                <div class="data-box-title">우대금리</div>
+                                                <div class="data-box-content">최고 0.50%p</div>
+                                            </div>
+                                        </div>
+                                        <p class="p">(우대이자율은 우대조건을 충족하는 경우 만기해지 시에 제공)</p>
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">우대금리</span></caption>
+                                                <colgroup>
+                                                    <col style="width:70%">
+                                                    <col style="width:30%">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>(적금 가입 월 ~ 만기 전전월말) 은행에서 발급한 NH농협 개인신용-체크카드(채움)월평균 10만원 이상 이용실적</td>
+                                                        <td>0.20</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>(적금 가입 월 ~ 만기 전월말) 농협은행 주택청약종합저축(청년 주택드림 청약통장((구)청년우대형주택종합저축) 포함) 가입 및 5회 이상 납입실적과 보유</td>
+                                                        <td>0.30</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>    
+                                        <div>
+                                            <p class="p">* 계약기간이 6개월 이상이고 우대 조건을 충족하는 경우 만기 해지 시 우대이자율 제공<br>
+                                                (예시) 계약기간이 5개월 이하이고 우대 조건을 충족하는 경우 우대이자율 미제공
+                                            </p>
+                                            <p class="p">* 카드 이용실적은 승인실적 기준이며 주택청약종합저축은 기존 가입한 계좌도 인정</p>
+                                            <!-- <ul class="ul">
+                                                <li>* 계약기간이 6개월 이상이고 우대 조건을 충족하는 경우 만기 해지 시 우대이자율 제공<br>
+                                                    (예시) 계약기간이 5개월 이하이고 우대 조건을 충족하는 경우 우대이자율 미제공
+                                                </li>
+                                                <li>* 카드 이용실적은 승인실적 기준이며 주택청약종합저축은 기존 가입한 계좌도 인정</li>
+                                            </ul> -->
+                                        </div>  
+                                        <!-- //[240531]텍스트, 마크업 변경 -->                   
+                                    </div>
+                                </div>
+
+                                <div role="tabpanel" aria-labelledby="segment03" id="segments-panel03" class="segments-panel" tabindex="0">
+                                    <!-- <h3 class="h4">금리안내</h3> -->   <!-- [240315]추가 -->
+                                    <!-- <h4 class="h5">금리안내</h4> -->   <!-- [240315]삭제 -->
+                                    <div class="mix datepicker">
+                                        <div class="text" data-clear="false">
+                                            <input type="text" class="left-side" id="gga" value="2023.08.23" title="날짜선택" aria-haspopup="true" readonly>
+                                        </div>
+                                        <div class="space -lined date">
+                                            <button type="button" class="icon-button -calendar" aria-haspopup="true"><span class="hide">달력 보기</span></button>
+                                        </div>
+                                    </div>
+                                    <div class="button-box-wrap12">
+                                        <button type="button" class="button -lg">조회</button>
+                                    </div>
+                                    <div class="case-wrap -xs">
+                                        <h5 class="h6">만기지급금리</h5>
+                                        <p class="p">만기일시지급식</p>
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">만기일시지급식 금리</span></caption>
+                                                <colgroup>
+                                                    <col style="width:55%">
+                                                    <col style="width:45%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">가입기간</th>
+                                                        <th scope="col">기본금리(연%, 세전)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>6개월 이상 ~ 12개월 미만</td>
+                                                        <td><span class="point">3.00</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12개월 이상 ~ 15개월 미만</td>
+                                                        <td><span class="point">4.00</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15개월 이상</td>
+                                                        <td><span class="point">5.00</span></td>
+                                                    </tr>
+                                                    <!-- [240531]삭제 -->
+                                                    <!-- <tr>
+                                                        <td>36개월 이상</td>
+                                                        <td><span class="point">3.40</span></td>
+                                                    </tr> -->
+                                                    <!-- //[240531]삭제 -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="notewrap">
+                                            <p class="p">자세한 사항은 상품설명서 및 특약 참조</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div role="tabpanel" aria-labelledby="segment04" id="segments-panel04" class="segments-panel" tabindex="0">
+                                    <!-- <div class="loadArea" data-includ="ex3.html"></div> -->
+                                    <!-- <h3 class="h4">유의사항</h3> -->   <!-- [240315]추가 -->
+                                    <!-- [240531]텍스트 변경 -->
+                                    <div class="case-wrap -xs">
+                                        <ul class="ul -dash">
+                                            <li>만기 전 해지할 경우 계약한 이율보다 낮은 중도해지이율이 적용됩니다.</li>
+                                            <li>자동이체 신청 시 월 한도 제한상품으로 월말 자동이체 설정 시 말일이 휴일일 경우 익일 처리됨에 따라 다음달 첫 영업일자로 처리되어 해당 월 입금한도분이 누락되는 상황이 발생하니 말일 자동이체는 지양해 주시기 바랍니다.</li>
+                                            <li>이 적금은 ‘NH농협은행’과 ‘국방부(병무청)’간 업무협약에 의해 운용되는 상품으로 향후 업무협약 및 관련법 변경에 따라 상품 내용이 달라질 수 있습니다.</li>
+                                            <li>이 적금의 해지 시 보험계약도 자동 해지됩니다.</li>
+                                            <li>보험 무료가입 서비스에 대한 자세한 내용은 NH손해보험 약관의 정한 바를 따르며, 농협은행과 NH손해보험과의 계약에 따라 보험서비스는 변경 또는 중단될 수 있습니다.
+                                                <div>
+                                                    <ul class="ul">
+                                                        <li>☞ 보험의 보장내용 관련 약관은 농협은행 영업점이나 인터넷 홈페이지 「NH장병내일준비적금」에서 확인 가능하며, NH손해보험 콜센터로 요청시 Fax나 E-mail도 제공 가능합니다.</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>보험금 지급 요청은 가까운 농협은행 영업점 및 NH손해보험 콜센터(☎ 1644-9000)에서 가능합니다.</li>
+                                            <li>우대서비스/우대금리의 기준실적 또는 납입한도 산정 시 급여이체, 자동이체, 카드대금결제 등을 포함한 자동입출금거래는 신청일에 상관없이 실제거래가 발생한 날의 해당월을 기준으로 합니다.</li>
+                                            <li>신청일이 월말인 경우 주말 또는 공휴일의 사유로 실제거래가 익월에 발생하면 익월 실적에 포함됩니다.</li>
+                                        </ul>
+                                    </div>
+                                    <!-- //[240531]텍스트 변경 -->
+                                </div>
+                                
+                                <div role="tabpanel" aria-labelledby="segment05" id="segments-panel05" class="segments-panel" tabindex="0">
+                                    <div class="case-wrap -xs">
+                                        <!-- <h3 class="h4">기타사항</h3> -->   <!-- [240315]추가 -->
+                                        <h5 class="h5">기본이자율(연%, 세전)</h5>
+                                        <!-- <p class="p">NH장병내일준비적금 가입기간별 기본이자율 적용<br>
+                                            농협인터넷뱅킹>금융상품몰>농협은행>예금금리안내>적립식 작성기준일 현재 기본이자율이며 실제적용이율은 가입일의 고시금리에 따름
+                                        </p> -->
+                                        <p class="p">NH장병내일준비적금 가입기간별 기본이자율 적용</p>
+                                        <div>
+                                            <ul class="ul -bullet">
+                                                <li>농협인터넷뱅킹>금융상품몰>농협은행>예금금리안내>적립식
+                                                    <div>
+                                                        <ul class="ul -dash">
+                                                            <li>작성기준일 현재 기본이자율이며 실제적용이율은 가입일의 고시금리에 따름</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- [240531]텍스트, 마크업 변경 -->
+                                        <!-- <div>
+                                            <ul class="ul -bullet">
+                                                <li>농협인터넷뱅킹>금융상품몰>농협은행>예금금리안내>적립식
+                                                    <div>
+                                                        <ul class="ul -dash">
+                                                            <li>작성기준일 현재 기본이자율이며 실제적용이율은 가입일의 고시금리에 따름</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div> -->
+                                        <!-- //[240531]텍스트, 마크업 변경 -->
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">NH장병내일준비적금 가입기간별 기본이자율 적용</span></caption>
+                                                <colgroup>
+                                                    <col style="width:60%">
+                                                    <col style="width:40%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">가입기간</th>
+                                                        <th scope="col">기본금리 (연%,세전)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>6개월 이상 ~ 12개월 미만</td>
+                                                        <td>3.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12개월 이상 ~ 15개월 미만</td>
+                                                        <td>4.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15개월 이상 ~ 24개월 이내</td>   <!-- [240531]텍스트 변경 -->
+                                                        <td>5.00</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    
+                                        <h5 class="h5">중도해지이자율(연%,세전)</h5>
+                                        <p class="p">자유로우대적금 중도해지이자율 적용</p>
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">자유로우대적금 중도해지이자율 적용</span></caption>
+                                                <colgroup>
+                                                    <col style="width:40%">
+                                                    <col style="width:60%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">경과기간</th>
+                                                        <th scope="col">적용이율/적용률</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>3개월 미만</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6개월 미만</td>
+                                                        <td>중도해지 기준이율 × 50% × 경과월수 ÷ 계약월수</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9개월 미만</td>
+                                                        <td>중도해지 기준이율 × 60% × 경과월수 ÷ 계약월수</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11개월 미만</td>
+                                                        <td>중도해지 기준이율 × 70% × 경과월수 ÷ 계약월수</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11개월 이상</td>
+                                                        <td>중도해지 기준이율 × 80% × 경과월수 ÷ 계약월수</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    
+                                        <!-- [240531]텍스트, 마크업 변경 -->
+                                        <!-- <p class="p">중도해지이자율 : 소수 셋째자리까지 적용(소수 넷째자리에서 절사)</p>
+                                        <ul class="ul -dash">
+                                            <li>중도해지 최저이자율은 0.1%<br>중도해지 기준이율 : 예금가입일 당시 고시된 기본이자율</li>
+                                            <li>단, 거치식예금으로 회차별 입금이 가능한 경우는 해당 회차 
+                                                입금당시 고시금리<br>경과월수는 계약월수를 초과할 수 없음, 월 미만 일수는 버림</li>
+                                        </ul> -->
+                                        <ul class="ul -bullet">
+                                            <li>중도해지이자율 : 소수 셋째자리까지 적용(소수 넷째자리에서 절사)
+                                                <div>
+                                                    <ul class="ul -dash">
+                                                        <li>중도해지 최저이자율은 0.1%</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>중도해지 기준이율 : 예금가입일 당시 고시된 기본이자율
+                                                <div>
+                                                    <ul class="ul -dash">
+                                                        <li>단, 거치식예금으로 회차별 입금이 가능한 경우는 해당 회차 입금당시 고시금리</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>경과월수는 계약월수를 초과할 수 없음, 월 미만 일수는 버림</li>
+                                        </ul>
+                                    
+                                        <h5 class="h5">만기 후 이자율(연%, 세전)</h5>
+                                        <p class="p">자유로우대적금 만기후이자율 적용</p>
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">자유로우대적금 만기후이자율 적용</span></caption>
+                                                <colgroup>
+                                                    <col style="width:40%">
+                                                    <col style="width:60%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">경과기간</th>
+                                                        <th scope="col">적용이율</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>만기 후 1년 이내</td>
+                                                        <td>만기시점계약기간별 기본이자율의 1/2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>만기 후 1년 초과</td>
+                                                        <td>보통예금 이자율</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- <p class="p">만기일부터 지급일 전날까지의 기간에 대해 만기일 당시 농협은행 영업점과 인터넷 홈페이지에 공시한 만기 후 이자율로 셈한 이자를 더하여 지급<br>(단, 만기일 이후 금리가 변동된 경우 변동일로부터는 변동된 만기 후 이자율 적용)</p> -->
+                                        <ul class="ul -bullet">
+                                            <li>만기일부터 지급일 전날까지의 기간에 대해 만기일 당시 농협은행 영업점과 인터넷 홈페이지에 공시한 만기 후 이자율로 셈한 이자를 더하여 지급<br>
+                                                (단, 만기일 이후 금리가 변동된 경우 변동일로부터는 변동된 만기 후 이자율 적용)
+                                            </li>
+                                        </ul>
+
+                                        <h5 class="h5">가입대상</h5>
+                                        <p class="p">가입 시점 아래 1,2,3를 모두 충족하는 의무복무이행자 중 병급여체계 적용 대상 병사 개인 (1인1계좌)</p>
+                                        <ul class="ul -dash">
+                                            <li>현역병, 상근예비역, 의무경찰, 해양의무경찰, 의무소방원, 사회복무요원, 대체복무요원</li>
+                                        </ul>
+                                        <!-- [240531]텍스트, 마크업 변경 -->
+                                        <ol class="ol -number">
+                                            <li>이 적금 신규일 기준 남은 의무복무기간 : 1개월 이상</li>
+                                            <li>가입대상자격확인서류 「장병내일준비적금 가입자격 확인서」 원본 제출
+                                                <div>
+                                                    <ul class="ul -dash">
+                                                        <li>비대면 신규 시 모바일 “나라사랑 포털 APP”에서 발행한 금융 분산ID 방식 가입자격증명서가 당행 비대면 APP에서 확인된 경우 제출 생략 가능<br>(현역병, 상근예비역 대상)<br>* NH스마트뱅킹</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>조세특례제한법 제129조의2에 따른 금융소득종합과세 대상자가 아닐 경우 
+                                                <div>
+                                                    <ul class="ul -dash">
+                                                        <li>현역병사와 동일한 급여체계를 적용 받지 않는 기타 의무복무자(산업기능요원, 전문연구요원, 공중보건의사, 공중방역수의사, 공익법무관, 병역판정검사전담의사, 예술체육요원, 승선근무예비역 등)는 가입대상이 아님</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    
+                                        <h5 class="h5">가입기간</h5>
+                                        <!-- <p class="p">6개월 이상 24개월 이내(월, 일 단위)※ 적금의 만기일은 고객의 전역예정일(또는 소집해제예정일)이며, 단축·연장 불가<br>
+                                                                                    가입대상 중 대체복무요원은 복무기간이 36개월이므로 만기일이 소집해제예정일이 아닐 수 있음</p> -->
+                                        <div>
+                                            <ul class="ul -bullet">
+                                                <li>1개월 이상 24개월 이내(월,일 단위)
+                                                    <div>
+                                                        <ul class="ul -dash">
+                                                            <li>적금의 만기일은 고객의 전역예정일(또는 소집해제예정일)이며, 단축·연장 불가</li>
+                                                            <li>가입대상 중 대체복무요원은 복무기간이 36개월이므로 만기일이 소집해제예정일이 아닐 수 있음</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    
+                                        <h5 class="h5">재예치</h5>
+                                        <p class="p">불가</p>
+                                    
+                                        <h5 class="h5">부분인출</h5>
+                                        <p class="p">불가</p>
+                                    
+                                        <h5 class="h5">계약해지방법</h5>
+                                        <p class="p">영업점에서만 해지 가능</p>
+                                        <ul class="ul -bullet">
+                                            <li>만기앞당김 해지 시 비과세 적용불가 및 1% 이자지원금 지원불가
+                                                <div>
+                                                    <ul class="ul -dash">
+                                                        <li>계좌의 만기가 휴일인 경우 직전 영업일로부터 만기일 전일까지 중도해지가아닌 만기해지로 적용되며, 이자는 일수로 계산하여 지급</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    
+                                        <h5 class="h5">휴면예금 및 출연</h5>
+                                        <!-- <p class="p">적금 만기일 또는 이자지급을 포함한 최종거래일 이후 5년 이내 계좌를 해지하지 않을 경우 예금거래기본약관 제9조의2 휴면예금 및 출연에 따라 휴면예금은 “서민금융진흥원(국번없이 1397)”에 출연될 수 있으며,이 경우 서민금융진흥원을 통해 휴면예금을 찾으실 수 있습니다.
+                                                                                    휴먼예금은 휴면예금통합조회서비스(www.sleepmoney.or.kr)를 통해 조회 가능합니다.</p> -->
+                                        <div>
+                                            <ul class="ul -bullet">
+                                                <li>적금 만기일 또는 이자지급을 포함한 최종거래일 이후 5년 이내 계좌를 해지하지 않을 경우 예금거래기본약관 제9조의2 휴면예금 및 출연에 따라 휴면예금은 “서민금융진흥원(국번없이1397)“에 출연될 수 있으며, 이 경우 서민금융진흥원을 통해 휴면예금을 찾으실 수 있습니다.</li>
+                                                <li>휴면예금은 휴면예금통합조회서비스(www.sleepmoney.or.kr)를 통해 조회가능합니다.</li>
+                                            </ul>
+                                        </div>
+                                    
+                                        <h5 class="h5">양도 및 담보제공</h5>
+                                        <p class="p">은행의 승낙을 받은 경우 양도 및 담보제공 가능</p>
+                                    
+                                        <h5 class="h5">부가서비스</h5>
+                                        <div>
+                                            <ul class="ul -bullet">
+                                                <li>군복무 기간 중 ‘NH농협손해보험 단체상해보험 내 군인(병) 영외 체류 기간 중 상해 특별약관’에 대한 무료가입 서비스 제공
+                                                    <div>
+                                                        <ul class="ul -dash">
+                                                            <li>대상 : 신규가입 초입금 20만원(보험금 청구 시 적금 매달 1만원이상 납입실적 있을 시)</li>
+                                                            <li>보험보장금액 : 1천만원</li>
+                                                            <li>보험개시 및 기간 : 적금 가입 다음날 00시부터 전역(소집해제)전일까지</li>
+                                                            <li>보장기간 및 범위 : 군 복무 기간 중 영외 체류 기간동안 상해 발생 시<br>(영외 체류는 휴가나 외박, 외출에 해당되며 군복무에 의한 영외체류는 제외)</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- <p class="p">군복무 기간 중 ‘NH농협손해보험 단체상해보험 내 군인(병) 영외 체류 기간 중상해 특별약관’에 대한 무료가입 서비스 제공대상 : 신규가입 초입금 20만원(보험금 청구 시 적금 매달 1만원이상 납입실적 있을 시)</p>
+                                        <p class="p">보험보장금액 : 1천만원</p>
+                                        <p class="p">보험개시 및 기간 : 적금 가입 다음날 00시부터 전역(소집해제)전일까지</p>
+                                        <p class="p">보장기간 및 범위 : 군 복무 기간 중 영외 체류 기간동안 상해 발생 시<br>(영외 체류는 휴가나 외박, 외출에 해당되며 군복무에 의한 영외체류는 제외)</p> -->
+                                    
+                                        <h5 class="h5">1% 이자지원금</h5>
+                                        <ul class="ul -bullet">
+                                            <li>지급에 관한 문의는 국군재정관리단(☎ 02-3146-6123/6125)로 연락하시기 바랍니다.</li>
+                                            <li>사회복무요원의 경우 병무청(☎ 042-481-3043)으로 문의하시기 바랍니다.</li>
+                                        </ul>
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">1% 이자지원금</span></caption>
+                                                <colgroup>
+                                                    <col style="width:40%">
+                                                    <col style="width:60%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">구분</th>
+                                                        <th scope="col">내용</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1%이자지원금</td>
+                                                        <td>‘장병내일준비적금’ 가입자의 목돈 마련 지원을 위해 국가 예산으로 지급되는 장려금으로, 은행이 지급하는 이자와는 관련이 없습니다.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>지급금액</td>
+                                                        <td>적금 신규일부터 만기일까지 입금금액 건별로 실제 예치일수 기간 동안 연 1%를 적용하여 계산된 금액<br>
+                                                            * 실제 예치일수 : 입금일 부터 적금 만기일 전일까지<br>
+                                                            * 단, 1% 이자지원금은 ‘23.12.31까지 입금분에 한해서만 적용
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>과세여부</td>
+                                                        <td>비과세</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>지급대상</td>
+                                                        <td>
+                                                            <!-- [240603]텍스트, 마크업 변경 -->
+                                                            <!-- <div>
+                                                                <ul class="ul -bullet">
+                                                                    <li>이 적금의 가입자(예금주)로서 아래 1,2,3 조건을 모두 충족하는 경우
+                                                                        <ol class="ol-number">
+                                                                            <li>만기계좌</li>
+                                                                            <li>적금 만기일과 전역일(또는 소집해제일)이 일치<br>
+                                                                                * 법에 의해 복무기간이 단축되어 전역일(또는 소집해제일)이 앞당겨진 경우 포함
+                                                                            </li>
+                                                                            <li>적금계좌 만기해지 시 전역증・병역증・병적증명서・복무사실확인서 원본제출</li>
+                                                                        </ol>
+                                                                    </li>
+                                                                </ul>
+                                                            </div> -->
+                                                            이 적금의 가입자(예금주)로서 아래 1,2,3 조건을 모두 충족하는 경우
+                                                            <div>
+                                                                <ul class="ol -number">
+                                                                    <li>만기계좌</li>
+                                                                    <li>적금 만기일과 전역일(또는 소집해제일)이 일치<br>
+                                                                        * 법에 의해 복무기간이 단축되어 전역일(또는 소집해제일)이 앞당겨진 경우 포함
+                                                                    </li>
+                                                                    <li>적금계좌 만기해지 시 전역증・병역증・병적증명서・복무사실확인서 원본제출</li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- //[240603]텍스트, 마크업 변경 -->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>알아두실 사항</td>
+                                                        <td>
+                                                            <ul class="ul -bullet">
+                                                                <li>중도해지 계좌는 1% 이자지원금을 받을 수 없습니다.</li>
+                                                                <li>만기 해지 시 전역증・병역증・병적증명서・복무사실확인서 원본을 제출하지 않고 만기 해지하는 경우 1% 이자지원금을 받을 수 없습니다. 따라서, 1% 이자지원금을 받고자 하는 고객께서는 만기해지 시 반드시 해당 서류 원본을 영업점에 제출해 주시기 바랍니다.</li>
+                                                                <li>만기 시 해당 서류를 미제출하여 재정지원금을 받지 못한 경우예금주는 추후 은행에 ‘1% 이자지원금’을 재청구 할 수 없습니다.</li>
+                                                                <li>'21.10.14. 「병역법」 개정 시행에 따른 1% 이자지원금 지급으로 해당일 이전 전역 및 소집해제 된 장병에 대한 1% 이자지원금 소급적용은 불가합니다.</li>
+                                                                <li>이 적금은 과세특례를 전제로 출시한 상품이므로 과세특례 적용이 불가능한 금융소득종합과세 대상자는 1% 이자지원금이 지급되지 않습니다.</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    
+                                        <h5 class="h5">매칭지원금</h5>
+                                        <!-- <p class="p">지급에 관한 문의는 국군재정관리단(☎ 02-3146-6123/6125)로 연락하시기 바랍니다.
+                                                                                    사회복무요원의 경우 병무청(☎ 042-481-3043)으로 문의하시기 바랍니다.</p> -->
+                                        <div>
+                                            <ul class="ul -bullet">
+                                                <li>지급에 관한 문의는 국군재정관리단(☎ 02-3146-6123/6125)로 연락하시기 바랍니다.</li>
+                                                <li>사회복무요원의 경우 병무청(☎ 042-481-3043)으로 문의하시기 바랍니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">매칭지원금</span></caption>
+                                                <colgroup>
+                                                    <col style="width:40%">
+                                                    <col style="width:60%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">구분</th>
+                                                        <th scope="col">내용</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>매칭지원금</td>
+                                                        <td>‘장병내일준비적금’ 가입자의 목돈 마련 지원을 위해 국가 예산으로 지급되는 장려금으로, 은행이 지급하는 이자와는 관련이 없습니다.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>지급금액</td>
+                                                        <td>
+                                                            <div>
+                                                                <ul class="ul -bullet">
+                                                                    <li>매장지원금 지급 시행일은 2022년 1월 1일이며, 납입 당시 관련 법령 (병역법 시행령 제158조의 2제1항 제2호)에서 정한 금액으로 국방부(국군재정관리단) 및 병무청에서 직접 지급</li>
+                                                                    <li>매칭지원금 지원비율
+                                                                        <div>
+                                                                            <ul class="ul -dash">
+                                                                                <li>22.1.1. 이후 납입분 : (원금 + 이자 + 1% 이자지원금)의 33%</li>
+                                                                                <li>23.1.1 이후 납입분 : (원금 + 이자 + 1% 이자지원금)의 71%</li>
+                                                                                <li>24.1.1 이후 납입분 : 납입원금의 100%</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>과세여부</td>
+                                                        <td>비과세</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>지급대상</td>
+                                                        <td>
+                                                            <div>
+                                                                <ul class="ul -bullet">
+                                                                    <li>이 적금의 가입자(예금주)로서 아래 1,2,3 조건을 모두 충족하는 경우
+                                                                        <ol class="ol -number">
+                                                                            <li>만기계좌</li>
+                                                                            <li>적금 만기일과 전역일(또는 소집해제일)이 일치<br>
+                                                                                * 법에 의해 복무기간이 단축되어 전역일(또는 소집해제일)이 앞당겨진 경우 포함
+                                                                            </li>
+                                                                            <li>적금계좌 만기해지 시 전역증・병역증・병적증명서・복무사실확인서 원본제출</li>
+                                                                        </ol>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>알아두실 사항</td>
+                                                        <td>
+                                                            <ul class="ul -bullet">
+                                                                <li>중도해지 계좌는 매칭지원금을 받을 수 없습니다.</li>
+                                                                <li>만기 해지 시 전역증・병역증・병적증명서・복무사실확인서 원본을 제출하지 않고 만기 해지하는 경우 매칭지원금을 받을 수 없습니다. 따라서, 매칭지원금을 받고자 하는 고객께서는 만기해지 시 반드시 해당 서류 원본을 영업점에 제출해 주시기 바랍니다.</li>
+                                                                <li>만기 시 해당 서류를 미제출하여 재정지원금을 받지 못한 경우예금주는 추후 은행에 매칭지원금을 재청구 할 수 없습니다.</li>
+                                                                <li>'22.01.01. 「병역법」 시행령 개정에 따른 매칭지원금 지급으로 해당일 이후 납입하는 금액부터 적용되며 이전 납입했던 금액의 소급적용은 불가합니다.</li>
+                                                                <li>이 적금은 과세특례를 전제로 출시한 상품이므로 과세특례 적용이 불가능한 금융소득종합과세 대상자는 매칭지원금이 지급되지 않습니다.</li>
+                                                                <li>매칭지원금은 정책 및 관련 법령 등의 변경에 따라 시기별로 지원금액이 상이할 수 있으며, 지급이 중단될 수 있습니다.</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    
+                                        <h5 class="h5">원금 또는 이자지급 제한</h5>
+                                        <p class="p">계좌에 압류, 가압류 질권설정 등이 등록될 경우 원금 및 이자지급 제한<br>
+                                            예금잔액증명서 발급 당일에는 입금·출금·이체 등 잔액 변동 불가</p>
+                                    
+                                        <h5 class="h5">* 금융소비자 보호에 관한 법률 제19조제1항에 따른 설명을 받을 수 있는 권리가 있습니다.</h5>
+                                    
+                                        <h5 class="h5 mt-24">* 금융상품을 가입하시기 전에 상품설명서 및 약관을 반드시 읽어보시기 바랍니다.</h5>
+                                        <!-- //[240531]텍스트, 마크업 변경 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //상품 정보 영역 -->
+
+                        <!-- 상품 추가 정보 영역 -->
+                        <div class="product-other">
+                            <!-- 상품설명서 및 약관 -->
+                            <div class="product-agree-area">
+                                <div class="accordion -lg -active" data-role="fold">
+                                    <button type="button" class="title" data-role="marker">상품설명서 및 약관</button>
+                                    <div class="panel" data-role="hidden">
+                                        <div class="shortcut -boxType">
+                                            <ul>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">변경이력보기</a></li>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">기본약관</a></li>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">상품설명서</a></li>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">상품특약</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //상품설명서 및 약관 -->
+
+                            <!-- 예금자보호 (관리자) -->
+                            <div class="loadArea" data-includ="/content/nhbank/html/cn/common/protect01.html"></div>
+                            <!-- //예금자보호 (관리자) -->
+
+                            <!-- 준법감시 심의필 (관리자) -->
+                            <div class="product-deliberate">
+                                <p class="p">준법감시심의필 000-0000(심의일:YYYY.MM.DD)<br>유효기간 : YYYYY.MM.DD ~ YYYYY.MM.DD</p>
+                            </div>
+                            <!-- //준법감시 심의필 (관리자) -->
+                            
+                            <!-- 공유 -->
+                            <div class="product-share">
+                                <ul>
+                                    <li><button type="button" class="share" aria-haspopup="true"><span class="hide">공유</span></button></li>   
+                                    <li><button type="button" class="wishlist"><span class="hide">장바구니</span></button></li>                                             
+                                </ul>
+                            </div>
+                            <!-- //공유 -->
+                            
+                            <!-- 추천상품 -->
+                            <div class="product-recommend">
+                                <h4 class="h5"><span>김농협</span>님을 위한 추천 상품</h4>
+                                <div class="product-recommend-list">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">채움적금</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">e금리우대적금</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">청년도약계좌</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //추천상품 -->
+                        </div>
+                        <!-- //상품 추가 정보 영역 -->
+                    </div><!-- //.product-detail-wrap -->
+                </div>
+
+                <div class="fixer -jsProcuctBtn">
+                    <div class="buttons">
+                        <button type="button" class="button -lg">상담</button>
+                        <button type="button" class="button -lg -primary">가입하기</button>
+                    </div>
+                </div>
+
+                <!-- 토스트팝업은 -active 클래스 사용하여 실행합니다 -->
+                <div class="toast" role="alert" aria-live="assertive">
+                    <div class="message" >
+                        <p>장바구니에 담었어요</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+        procuctDatailAct();
+
+        // html 파일 로드 (퍼블확인용)
+        incHtml();
+        function incHtml() {
+            $('[data-includ]').each(function () {
+                $this = $(this);
+                var $url = $this.attr('data-includ')
+                $this.load($url)
+            })
+        }
+    </script>
+</body>
+</html>

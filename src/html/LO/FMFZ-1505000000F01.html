@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>사전체크리스트_작성 결과</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">사전체크리스트작성</h1>  <!-- [240305]텍스트 변경 -->
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 231205 h2-group코드변경 -->
+                    <div class="h2-group">
+                        <h2 class="h2">시작 전 확인해 주세요</h2>
+                        <!-- 2024-08-06 수정 -->
+                        <div class="box">
+                            <ul class="ul -dash">
+                                <li><strong>「사전 체크리스트」</strong>는 대출 신청 자격확인을 위한 사전 설문입니다. </li>
+                                <li><strong>작성내용에 오류가 있거나 기타 정밀심사가 필요한 경우</strong> 자산심사결과가 ‘적격’으로 판정됐어도 비대면 심사가 불가합니다.</li>
+                                <li>임차목적물 인근 희망 <strong>영업점(대면심사)으로 재신청(자산심사 재신청 포함)이 요청될 수 있습니다.</strong></li>
+                            </ul>
+                        </div>
+                        <!-- //2024-08-06 수정 -->
+                    </div>
+                    <div class="case-wrap -sm jsSrveyWrap"> <!-- 2024-07-17 감싸는 테그 추가(case-wrap -sm jsSrveyWrap) -->
+                        <div class="field  jsSrveyCurrent"> <!-- 2024-07-17 첫번째 항목 클래스(jsSrveyCurrent) 추가 -->
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">01</span>
+                                    <span>(세대주) 대출신청일 현재 민법상 ‘성년’인 고객님의 대출신청 자격을 선택해 주세요.</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-1" id="radio4-1" checked>
+                                                <label for="radio4-1" class="check-ox -left -orign">세대주</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-1" id="radio4-2">
+                                                <label for="radio4-2" class="check-ox -left -orign">세대원</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <!-- [CASE] [세대원] 선택 시  -->
+                            <div class="line-box">
+                                <h3 class="title">세대주 인정요건을 선택해 주세요.</h3>
+                                <div class="radio-row-box">
+                                    <div class="radio -sm">
+                                        <input type="radio" id="radio-sm-c" checked>
+                                        <label for="radio-sm-c">세대주의 세대원인 배우자</label>
+                                    </div>
+                                    <div class="radio -sm">
+                                        <input type="radio" id="radio-sm-c2">
+                                        <label for="radio-sm-c2">
+                                            <!-- 2024-10-21 문구 수정 -->
+                                            <span>세대주(예정자)</span> 
+                                            <!-- //2024-10-21 문구 수정 -->
+                                            <p class="p">주의 : 임차목적물에 대출신청일 현재 주민등록등본상 동일한 세대를 구성하고 있는 세대원만 전입하는 경우에 선택가능</p>
+                                        </label>
+                                        
+                                    </div>
+                                    <div class="radio -sm">
+                                        <input type="radio" id="radio-sm-c3">
+                                        <label for="radio-sm-c3">해당사항 없음</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //[CASE] [세대원] 선택 시  -->
+                        </div>
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">02</span>
+                                    <span>(재직 및 사업영위) (대출신청인 및 배우자) 현재의 직장(사업장)을 1개월 이상 재직(사업영위)중 이십니까?</span>
+                                    <!-- 2024-08-06 수정 -->
+                                    <div class="box -sm case-wrap -xxs ">주의 : 사업자등록증이 없는 개인사업자(프리랜서 등)은 불가</div>
+                                    <!-- //2024-08-06 수정 -->
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-2" id="radio4-3" checked>
+                                                <label for="radio4-3" class="check-ox -left -orign">예</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-2" id="radio4-4">
+                                                <label for="radio4-4" class="check-ox -left -orign">아니요</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">03</span>
+                                    <span>(소득) (대출신청인 및 배우자) 현재 건강보험자격득실확인서상 직장에 소속되어있고, 해당 직장에서 온전한 1개월 이상의 소득을 급여명세표 등으로 증빙가능하고, 부부합산 총소득이 5,000만원 이하인가요?</span>
+                                    <!-- 2024-08-06 수정 -->
+                                    <div class="box -sm case-wrap -xxs ">
+                                        <p class="p reg">[예외사항]</p>
+                                        <ul class="ul -bullet">
+                                            <li>신혼가구 : 7,500만원 이하</li>
+                                            <li>2자녀(만19세 미만)이상 가구, 혁신도시 이전 공공기관 종사자, 타 지역으로 이주하는 재개발 구역내 세입자인 경우 6,000만원 이하</li>
+                                            <!-- 2024-10-21 삭제 -->
+                                            <!-- <li>중소기업취업(창업)청년 : 전월세보증금대출의 경우 5,000만원 (단, 외벌이 가구 또는 단독세대주인 경우 3,500만원) 이하</li> -->
+                                            <!-- //2024-10-21 삭제 -->
+                                        </ul>
+                                    </div>
+                                    <!-- //2024-08-06 수정 -->
+                                    
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-3" id="radio4-5" checked>
+                                                <label for="radio4-5" class="check-ox -left -orign">예</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-3" id="radio4-6">
+                                                <label for="radio4-6" class="check-ox -left -orign">아니요</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">04</span>
+                                    <span>(추가대출) 기존에 전세자금대출 이용 중이면서, 전/월세 임차보증금 증액갱신계약(재계약)에 따른 추가대출신청 입니까?</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-4" id="radio4-7" checked>
+                                                <label for="radio4-7" class="check-ox -left -orign">예</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-4" id="radio4-8">
+                                                <label for="radio4-8" class="check-ox -left -orign">아니요</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">05</span>
+                                    <!-- 2024-10-31 문구 수정 -->
+                                    <span>(대출신청) 잔금일(자금이 필요한 날짜) 기준으로 최소 30일 전 신청입니까?</span>
+                                    <!-- //2024-10-31 문구 수정 -->
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-5" id="radio4-9" checked>
+                                                <label for="radio4-9" class="check-ox -left -orign">예</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-5" id="radio4-10">
+                                                <label for="radio4-10" class="check-ox -left -orign">아니요</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">06</span>
+                                    <!-- 2024-08-06 수정 -->
+                                    <span>(대출신청금액) 대출 신청금액이 3억원 이내입니까?</span>
+                                    <!-- //2024-08-06 수정 -->
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-6" id="radio4-11" checked>
+                                                <label for="radio4-11" class="check-ox -left -orign">예</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-6" id="radio4-12">
+                                                <label for="radio4-12" class="check-ox -left -orign">아니요</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">07</span>
+                                    <span>(담보) 신청하려는 전세자금대출의 담보가 한국주택금융공사(HF)보증서 입니까?</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-7" id="radio4-13" checked>
+                                                <label for="radio4-13" class="check-ox -left -orign">예</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-7" id="radio4-14">
+                                                <label for="radio4-14" class="check-ox -left -orign">아니요</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">08</span>
+                                    <span>(임차주택) 공동임차 계약입니까?</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-8" id="radio4-15" checked>
+                                                <label for="radio4-15" class="check-ox -left -orign">예</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-8" id="radio4-16">
+                                                <label for="radio4-16" class="check-ox -left -orign">아니요</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">09</span>
+                                    <!-- 240314 문구 수정 -->
+                                    <span>(임차주택) 임차예정주택의 주택유형을 선택해 주세요.</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <!-- <div class="field"> --> <!-- 2024-07-17 감싸는 테그 삭제 -->
+                                            <div class="box-radios -row">
+                                                <div class="box-radio  mt-0"><!-- 2024-07-17 클래스(mt-0) 추가 -->
+                                                    <input type="radio" name="period-point-color1" id="period-point-color22-1" checked>
+                                                    <label for="period-point-color22-1">아파트(주상복합아파트 포함)</label>
+                                                </div>
+                                                <div class="box-radio">
+                                                    <input type="radio" name="period-point-color1" id="period-point-color22-21" checked>
+                                                    <label for="period-point-color22-21">주거용 오피스텔</label>
+                                                </div>
+                                                <div class="box-radio">
+                                                    <input type="radio" name="period-point-color1" id="period-point-color22-22" checked>
+                                                    <label for="period-point-color22-22">연립주택</label>
+                                                </div>
+                                                <div class="box-radio">
+                                                    <input type="radio" name="period-point-color1" id="period-point-color22-23" checked>
+                                                    <label for="period-point-color22-23">다세대</label>
+                                                </div>
+                                                <div class="box-radio">
+                                                    <input type="radio" name="period-point-color1" id="period-point-color22-24" checked>
+                                                    <label for="period-point-color22-24">해당사항 없음</label>
+                                                </div>
+                                            </div>
+                                        <!-- </div> -->
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">10</span>
+                                    <span>(장애인 가구 여부) 장애인 가구입니까?</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-10" id="radio4-17" checked>
+                                                <label for="radio4-17" class="check-ox -left -orign">예</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-10" id="radio4-18">
+                                                <label for="radio4-18" class="check-ox -left -orign">아니요</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <!-- [CASE] [예] 선택 시  -->
+                            <div class="line-box">
+                                <h3 class="title">장애인에 해당하시는 분을 선택해주세요.</h3>
+                                <div class="radio-row-box">
+                                    <div class="radio -sm">
+                                        <input type="radio" id="radio-sm-c4" checked>
+                                        <label for="radio-sm-c4">그 외 세대원</label>
+                                    </div>
+                                    <div class="radio -sm">
+                                        <input type="radio" id="radio-sm-c5">
+                                        <label for="radio-sm-c5">대출신청인 본인</label>
+                                    </div>
+        
+                                </div>
+                                <p class="p">
+                                    주의 : 장애인가구에 해당하시어 금리·보증한도·보증료 우대를 희망하시는 경우, 우대를위해 필요한 민감정보 제공자의 자필서명이 필요한 사유로 장애인에 해당하시는 분이 대출신청인 본인이 아니신 경우 비대면 대출심사가 불가합니다. 
+                                </p>
+                            </div>
+                            <!-- //[CASE] [예] 선택 시  -->
+                        </div>
+
+                        <!-- 2024-07-25 추가 -->
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">11</span>
+                                    <span>신생아 특례 대출입니까?</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio11_00" id="radio11_00_1">
+                                                <label for="radio11_00_1" class="check-ox -left -orign">예</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio11_00" id="radio11_00_2">
+                                                <label for="radio11_00_1" class="check-ox -left -orign">아니요</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">12</span>
+                                    <span>신청자가 미성년자입니까?</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio12_00" id="radio12_00_1">
+                                                <label for="radio12_00_1" class="check-ox -left -orign">예</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio12_00" id="radio12_00_2">
+                                                <label for="radio12_00_1" class="check-ox -left -orign">아니요</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">13</span>
+                                    <span>직장인 소득이 있습니까?</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio13_00" id="radio13_00_1">
+                                                <label for="radio13_00_1" class="check-ox -left -orign">예</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio13_00" id="radio13_00_2">
+                                                <label for="radio13_00_1" class="check-ox -left -orign">아니요</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <!-- //2024-07-25 추가 -->
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                    <!-- [CASE] 모두 “예“ 선택, 체크박스 선택 시 활성화 처리 -->
+                    <button type="button" class="button -lg -primary" disabled>작성완료</button>
+                    </div>
+                    <!-- //[CASE] 모두 “예“ 선택, 체크박스 선택 시 활성화 처리 -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+
+<script>
+    // 설문 인터렉션 예시
+    const jsSrveyHandle = document.querySelectorAll('.jsSrveyWrap input');
+    jsSrveyHandle.forEach(element => {
+        element.addEventListener('click',function (e) {
+            jsSrveyNext(this)
+        })
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/retire.css">
+</head>
+<body>
+    <div id="layer" class="layer">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">조회 설정</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <!-- 2024-05-10 순서 변경 -->
+                    <div class="field">
+                        <label for="text" class="label">상품명</label>
+                        <div class="text">
+                            <input type="text" id="text" value="" placeholder="입력">
+                        </div>
+                    </div>
+                    
+                    <div class="field">
+                        <p class="label">정렬 기준(기간수익률)</p>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="radio" id="ts-1" name="ggh">
+                                <label for="ts-1">3개월</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" id="ts-2" name="ggh">
+                                <label for="ts-2">6개월</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" id="ts-3" name="ggh" checked>
+                                <label for="ts-3">1년</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="field">
+                        <p class="label">상품유형</p>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-1" checked>
+                                <label for="box-radio1-1">전체</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-2">
+                                <label for="box-radio1-2">국내주식형</label>
+                            </div>
+                        </div>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-3">
+                                <label for="box-radio1-3">국내주식혼합형</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-4">
+                                <label for="box-radio1-4">국내채권형</label>
+                            </div>
+                        </div>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-5">
+                                <label for="box-radio1-5">국내채권혼합형</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-6">
+                                <label for="box-radio1-6">단기금융(MMF)</label>
+                            </div>
+                        </div>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-7">
+                                <label for="box-radio1-7">국내부동산 간접투자형</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-8">
+                                <label for="box-radio1-8">국내실물자산 간접투자형</label>
+                            </div>
+                        </div>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-9">
+                                <label for="box-radio1-9">국내혼합자산</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-10">
+                                <label for="box-radio1-10">국내파생상품 간접투자형</label>
+                            </div>
+                        </div>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-11">
+                                <label for="box-radio1-11">해외주식형</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-12">
+                                <label for="box-radio1-12">해외주식혼합형</label>
+                            </div>
+                            
+                        </div>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-13">
+                                <label for="box-radio1-13">해외채권형</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-14">
+                                <label for="box-radio1-14">해외채권혼합형</label>
+                            </div>
+                            
+                        </div>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-15">
+                                <label for="box-radio1-15">해외부동산 간접투자형</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-16">
+                                <label for="box-radio1-16">해외실물자산 간접투자형</label>
+                            </div>
+                        </div>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-17">
+                                <label for="box-radio1-17">해외혼합자산</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-18">
+                                <label for="box-radio1-18">해외파생상품 간접투자형</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //2024-05-10 순서 변경 -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">조회</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Layer.open('layer');
+
+        // 레이어 닫기(마지막 인자 기본값: false)
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // });
+
+        // 레이어 닫기 + DOM 삭제
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

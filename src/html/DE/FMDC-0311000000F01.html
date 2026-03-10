@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">적금 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">
+                            가입정보를 확인해 주세요
+                        </h2>
+                    </div>
+
+                    <div class="case-wrap -sm">
+                        <div class="field">
+                            <!-- [240109]type 변경-->
+                            <div class="custom-checkbox-wrap">
+                                <div class="custom-checkbox type01">
+                                    <input type="radio" id="checkbox-tl" name="radio-select01">
+                                    <label for="checkbox-tl"><span>여행</span></label>
+                                </div>
+                                <div class="custom-checkbox type02">
+                                    <input type="radio" id="checkbox-tl1" name="radio-select01">
+                                    <label for="checkbox-tl1"><span>선물</span></label>
+                                </div>
+                            </div>
+                            <div class="custom-checkbox-wrap">
+                                <div class="custom-checkbox type03">
+                                    <input type="radio" id="checkbox-tl2" name="radio-select01">
+                                    <label for="checkbox-tl2"><span>비상금</span></label>
+                                </div>
+                                <div class="custom-checkbox type04">
+                                    <input type="radio" id="checkbox-tl3" name="radio-select01">
+                                    <label for="checkbox-tl3"><span>기념일</span></label>
+                                </div>
+                            </div>
+                            <div class="custom-checkbox-wrap">
+                                <div class="custom-checkbox type05">
+                                    <input type="radio" id="checkbox-tl4" name="radio-select01">
+                                    <label for="checkbox-tl4"><span>기타(직접입력)</span></label>
+                                </div>
+                            </div>
+                            <!-- //[240109]type 변경-->
+
+                            <div class="mt-16">
+                                <div class="text">
+                                    <input type="text" id="text" value="">
+                                    <p class="info red">특수문자는 입력 불가합니다.</p>
+                                    <p class="info">입력 정보 안내 메시지 출력</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="datedate" class="label">만기일</label>
+                            <div class="mix datepicker">
+                                <div class="text" data-clear="false">
+                                    <input type="text" class="left-side" id="datedate" value="2024.04.16 (D-35)" title="첫번째 날짜선택" aria-haspopup="true" disabled>  <!-- [240228]disabled 추가 -->
+                                </div>
+                                <div class="space -lined date">
+                                    <button type="button" class="icon-button -calendar" aria-haspopup="true"><span class="hide">달력 보기</span></button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- ui수정 240122 (삭제) -->
+                        <!-- <div class="field">
+                            <p class="p fs-14">총 적립일 <span class="limit-point ml-12">120일</span></p>
+                        </div> -->
+                        <!-- //ui수정 240122 (삭제) -->
+    
+                        <div class="field">
+                            <label for="tt12" class="label">목표 금액</label>
+                            <!-- ui수정 240122 (마크업 변경:추가) -->
+                            <dl class="dl -box -duedate">
+                                <div>
+                                    <dt>총 적립일</dt>
+                                    <dd class="fc-1">120일</dd>
+                                </div>
+                            </dl>
+                            <!-- //ui수정 240122 (마크업 변경:추가) -->
+                            <div class="mix mt-12">  <!-- ui수정 240122 (마크업 변경:클래스 mt-12 추가) -->
+                                <div class="text -won" data-clear="false">
+                                    <input type="tel" id="tt12" class="right" value="1,000,000" aria-haspopup="true" readonly>   <!-- [240228]마크업 변경 클래스 num-call 삭제-->
+                                    <div class="won">원</div>
+                                </div>
+                                <div class="info-wrap">
+                                    <p class="info right point">일백만원</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- ui수정 240122 (마크업 변경:추가 및 삭제) -->
+                        <div class="field">
+                            <dl class="dl -box -duedate">
+                                <div>
+                                    <dt>자동이체 시작일</dt>
+                                    <dd class="fc-1">2023.10.25</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <!-- <div class="field">
+                            <p class="p fs-14">자동이체 시작일 <span class="limit-point ml-12">2023.10.25</span></p>
+                        </div> -->
+                        <!-- //ui수정 240122 (마크업 변경:추가 및 삭제) -->
+    
+                        <div class="field">
+                            <label for="tt123" class="label">매일 자동이체 금액</label>
+                            <div class="mix">
+                                <div class="text -won" data-clear="false">
+                                    <input type="tel" id="tt123" class="right num-call" value="50,000" aria-haspopup="true"
+                                        readonly>
+                                    <div class="won">원</div>
+                                </div>
+                                <div class="info-wrap">
+                                    <p class="info right point">오만원</p>
+                                    <p class="info red"> 가입 금액 1,000원 이상 입력해 주세요</p>    <!-- [240327]추가 -->
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="field">
+                            <p class="label">출금계좌</p>
+                            <div class="select">
+                                <button type="button" class="-fixed" aria-haspopup="true">
+                                    <div class="selection">
+                                        <div data-bankcode="011" class="info">
+                                            <span class="name">
+                                                <span>주거래우대통장</span>
+                                            </span>
+                                            <span class="account-number">
+                                                <span>NH농협</span>
+                                                <span>111-1234-5678-99</span>
+                                            </span>
+                                        </div>
+                                        <div class="amount">
+                                            <div class="key">출금가능금액</div>
+                                            <div class="value">
+                                                <span>150,000,000</span>원
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="checkbox -sm">
+                                <input type="checkbox" id="checkbox-sm-checked01" checked="">
+                                <label for="checkbox-sm-checked01">출금계좌와 동일하게 비밀번호 설정</label>
+                            </div>
+                        </div>
+    
+                        <div class="field">
+                            <p class="label">과세유형</p>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color2" id="period-point-color2-1" checked="">
+                                    <label for="period-point-color2-1">일반과세</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color2" id="period-point-color2-2">
+                                    <label for="period-point-color2-2">비과세종합저축</label>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="field">
+                            <p class="label">만기알림 서비스</p>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color3" id="period-point-color3-1" checked="">
+                                    <label for="period-point-color3-1">문자메시지</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color3" id="period-point-color3-2">
+                                    <label for="period-point-color3-2">받지 않음</label>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="field">
+                            <p class="label">계약서류 받는 방법</p>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color5" id="period-point-color5-1" checked="">
+                                    <label for="period-point-color5-1">이메일</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color5" id="period-point-color5-2">
+                                    <label for="period-point-color5-2">문자메시지</label>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- [CASE]이메일 선택시 -->
+                        <div class="field mt-16">
+                            <div class="text">
+                                <input type="text" id="ttet" value="luckyGuy00@naver.com" placeholder="이메일 주소 입력" title="이메일 주소">    <!-- [240415]placeholder 변경 -->
+                            </div>
+                        </div>
+                        <!-- //[CASE]이메일 선택시 -->
+    
+                        <!-- [CASE]문자메시지 선택시 -->
+                        <div class="field mt-16">
+                            <div class="text">
+                                <div class="mix">
+                                    <div class="select flex-3">
+                                        <button type="button" class="left-side" aria-haspopup="true"
+                                            title="휴대폰 앞자리 선택">010</button>
+                                    </div>
+    
+                                    <div class="text flex-7" data-clear="false">
+                                        <input type="tel" data-id="phone123" class="mid-side num-call" placeholder="-없이 입력"
+                                            title="휴대폰번호 입력" aria-haspopup="true" readonly>
+                                    </div>
+                                    <div class="space -lined right-side">
+                                        <!-- <button type="button" class="button -xs -fit" title="인증번호 요청">요청</button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- //[CASE]문자메시지 선택시 -->
+
+                    <!-- [240109]위치 이동-->
+                    <hr class="hr -xxl" aria-hidden="true" tabindex="-1">
+
+                    <div class="case-wrap -sm">
+                        <!-- [CASE]관리점 및 권유직원 선택 시 -->
+                        <div class="field">
+                            <label for="text" class="label">권유직원
+                                <span class="tooltip">
+                                    <button type="button" class="trigger">
+                                        <span class="hide">툴팁</span>
+                                    </button>
+                                    <span class="panel">
+                                        <span class="title">권유직원번호</span>
+                                        <span class="t-content">
+                                            <span class="dot">상품가입에 도움을 준 직원번호(숫자 8자리)를 “직원찾기”로 검색하실 수 있습니다.</span>
+                                        </span>
+                                        <span class="title mt-10">관리점</span>
+                                        <span class="t-content">
+                                            <span class="dot">출금계좌 관리점으로 자동 등록되며, 변경이 필요한 경우 선택해 주시기 바랍니다.</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </label>
+                            <div class="mix">
+                                <div class="text">
+                                    <input type="text" class="left-side fake-readonly" id="search02" value="검색직원명"
+                                        title="검색하기" placeholder="직원 찾기" aria-haspopup="true" readonly>
+                                </div>
+
+                                <div class="space -lined search">
+                                    <button type="button" class="icon-button -search" aria-haspopup="true"><span
+                                            class="hide">조회</span></button>
+                                </div>
+                            </div>
+                            <!-- [240327]추가 -->
+                            <div class="mix">
+                                <div class="text flex-8 -readonly -textless" data-clear="false">
+                                    <input type="tel" data-id="none" class="left-side fake-readonly" placeholder="지점명" title="" aria-haspopup="true" readonly="">
+                                </div>
+                                <div class="space -lined right-side">
+                                    <button type="button" class="button -xs -fit" aria-haspopup="true">관리점 변경</button>
+                                </div>
+                            </div>
+                            <!-- //[240327]추가 -->
+                        </div>
+                        <!-- //[CASE]관리점 및 권유직원 선택 시 -->
+
+                        <!-- [CASE]우대쿠폰 사용 시 -->
+                        <div class="field">
+                            <div class="title-group">
+                                <div class="inner">
+                                    <span class="title">우대 쿠폰</span>
+                                </div>
+                                <span class="switch ml-auto -sm">
+                                    <input type="checkbox" id="switch4" checked="">
+                                    <label for="switch4"><span class="hide">스위치</span></label>
+                                </span>
+                            </div>
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">예·적금0.5%p / 대출0.3%p / 외화 0.1%p 금리우대</button>
+                            </div>
+                        </div>
+                        <!-- //[CASE]우대쿠폰 사용 시 -->
+
+                        <!-- [CASE]자동재예치 신청 시 -->
+                        <!-- [240125]마크업 변경 -->
+                        <div class="field">
+                            <div class="title-group">
+                                <div class="inner">
+                                    <span class="title">NH포인트 사용 내역</span>   <!-- [240327]텍스트 변경 -->
+                                </div>
+                            </div>
+                            <div class="mix">
+                                <div class="text -poin"> 
+                                    <input type="tel" id="text" class="right" value="90" readonly>
+                                    <div class="poin">p</div>
+                                </div>
+                            </div>
+                            <!-- <label for="text03" class="label">NH포인트 사용 내역</label>
+                            <div class="text">
+                                <input type="text" id="text03" class="right" readonly value="90 P">
+                            </div> -->
+                        </div>
+                        <!-- //[240125]마크업 변경 -->
+                        <!-- //[CASE]자동재예치 신청 시 -->
+                    </div>
+                    <!-- //[240109]위치 이동-->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary" disabled>다음</button>   <!-- [240329] disabled 추가 -->
+                    </div>
+                </div>
+        </div>
+        </main>
+    </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

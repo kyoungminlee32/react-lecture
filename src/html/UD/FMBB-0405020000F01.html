@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <!-- <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">본인인증</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header> -->
+
+            <main class="contents">
+                <div class="content">
+                    <div class="left">
+                        <!-- [240619]마크업 변경 -->
+                        <!-- <img src="/content/assets/imgs/img/utility/ico-submit.png" style="width:16.8rem" alt="가입 완료 이미지"> -->
+                        <div class="page-icon -type-confirm" aria-hidden="true"></div>
+                        <!-- //[240619]마크업 변경 -->
+                    </div>                    
+                    <div class="h1-group">
+                        <h2 class="h1"> 
+                            채움적금
+                        </h2>
+                        <!-- [240509]마크업 수정 -->
+                        <p class="p -aligncenter">예상제공금리 <span class="limit-point -type02">2.70%</span><span class="-baseline"> (mm/dd 기준)</span></p>
+                        <!-- //[240509]마크업 수정 -->
+                    </div>
+                    
+                    <div>
+                        <dl class="dl -box">
+                            <div>
+                                <dt>기본금리</dt>
+                                <dd>2.00%</dd>
+                            </div>
+                            <div>
+                                <dt>우대가능금리</dt>
+                                <dd>0.50%</dd>
+                            </div>
+                            <div>
+                                <dt>우대쿠폰금리</dt>
+                                <dd>0.20%</dd>
+                            </div>
+                        </dl>
+                    
+                        <dl class="dl -lined bt-none -fcg">
+                            <div>
+                                <dt>납입원금</dt>
+                                <dd>1,200,000원</dd>
+                            </div>
+                            <div>
+                                <dt>세전이자</dt>
+                                <dd>30,324원</dd>
+                            </div>
+                            <div>
+                                <dt>세후이자</dt>
+                                <dd>27,345원</dd>
+                            </div>
+                            <div>
+                                <dt>납입금액(월)</dt>
+                                <dd>100,000원</dd>
+                            </div>
+                            <div>
+                                <dt>기간(월)</dt>
+                                <dd>12개월</dd>
+                            </div>
+                        </dl>
+                        <p class="p -info">아래 우대조건 만족 시 제공되는 예상금액으로 실제 이자와는 차이날 수 있습니다.</p>
+                    </div>
+
+                    <div class="mt-42">
+                        <!-- [240130]type 변경 -->
+                        <!-- [240126]type 변경 -->
+                        <div class="accordion -lg -active" data-role="fold">
+                            <button type="button" class="title" data-role="marker">우대조건</button>
+                            <div class="panel" data-role="hidden">
+                                <!-- [240429]마크업 수정 -->
+                                <p class="p -sub">우대조건 선택하고 다시 계산해 주세요</p>   
+                                <div class="agree -separate">
+                                    <div class="title">
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="total01">
+                                            <label for="total01">
+                                                <div class="-suffic">
+                                                    <span class="-perc">0.10%</span>
+                                                    <span class="badge -blueline">충족</span>
+                                                </div>
+                                                <div>급여이체</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="agree -separate">
+                                    <div class="title">
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="total02">
+                                            <label for="total02">
+                                                <div class="-suffic">
+                                                    <span class="-perc">0.10%</span>
+                                                    <span class="badge -blueline">충족</span>
+                                                </div>
+                                                <div>주택청약종합저축 가입</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- [240125]마크업 변경 -->
+                                <div class="agree -separate">
+                                    <p class="p -info">* 한 항목만 적용 가능</p>
+                                    <div class="title">
+                                        <div class="checkbox -sm">
+                                            <input type="radio" id="total03" name="radio02">
+                                            <label for="total03">
+                                                <div class="-suffic">
+                                                    <span class="-perc">0.10%</span>
+                                                    <span class="badge -blueline">충족</span>
+                                                </div>
+                                                <div>채움공직자우대 대상자 선정 시 (창구 가입)</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="title">
+                                        <div class="checkbox -sm">
+                                            <input type="radio" id="total04" name="radio02">
+                                            <label for="total04">
+                                                <div class="-suffic">
+                                                    <span class="-perc">0.10%</span>
+                                                    <span class="badge -blueline -space"></span>
+                                                </div>
+                                                <div>채움공직자우대 대상자 선정 시 (디지털 가입)</div>
+                                            </label>
+                                        </div>                                       
+                                    </div>
+                                </div>
+                                <!-- //[240125]마크업 변경 -->
+
+                                <div class="agree -separate">
+                                    <div class="title">
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="total05">
+                                            <label for="total05">
+                                                <div class="-suffic">
+                                                    <span class="-perc">0.10%</span>
+                                                    <span class="badge -blueline -space"></span>
+                                                </div>
+                                                <div>추천 고객 1명 상품가입</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- [240125]마크업 변경 -->
+                                <div class="agree -separate">
+                                    <p class="p -info">* 한 항목만 적용 가능</p>
+                                    <div class="title">
+                                        <div class="checkbox -sm">
+                                            <input type="radio" id="total06" name="radio01">
+                                            <label for="total06">
+                                                <div class="-suffic">
+                                                    <span class="-perc">0.10%</span>
+                                                    <span class="badge -blueline">충족</span>
+                                                </div>
+                                                <div>급여이체 고객이 채움샐러리맨 통장 출금계좌로 가입 (1년 이상)</div>
+                                            </label>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="title">
+                                        <div class="checkbox -sm">
+                                            <input type="radio" id="total07" name="radio01">
+                                            <label for="total07">
+                                                <div class="-suffic">
+                                                    <span class="-perc">0.10%</span>
+                                                    <span class="badge -blueline -space"></span>
+                                                </div>
+                                                <div>급여이체 고객이 채움샐러리맨 통장 출금계좌로 가입 (2년 이상)</div>
+                                            </label>
+                                        </div>                                       
+                                    </div>
+                                    <div class="title">
+                                        <div class="checkbox -sm">
+                                            <input type="radio" id="total08" name="radio01">
+                                            <label for="total08">
+                                                <div class="-suffic">
+                                                    <span class="-perc">0.10%</span>
+                                                    <span class="badge -blueline -space"></span>
+                                                </div>
+                                                <div>급여이체 고객이 채움샐러리맨 통장 출금계좌로 가입 (3년 이상)</div>
+                                            </label>
+                                        </div>                                       
+                                    </div>
+                                    <div class="title">
+                                        <div class="checkbox -sm">
+                                            <input type="radio" id="total09" name="radio01">
+                                            <label for="total09">
+                                                <div class="-suffic">
+                                                    <span class="-perc">0.10%</span>
+                                                    <span class="badge -blueline -space"></span>
+                                                </div>
+                                                <div>스마트뱅킹을 통해 채움스마티 통장 출금계좌로 가입 (36개월 이상)</div>
+                                            </label>
+                                        </div>                                       
+                                    </div>
+                                </div>
+                                <!-- //[240125]마크업 변경 -->
+                                <!-- //[240429]마크업 수정 -->
+
+                                <div class="button-box-wrap24">
+                                    <button type="button" class="button -lg">계산하기</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //[240126]type 변경 -->
+                        <!-- //[240130]type 변경 -->
+                        <div class="accordion -lg" data-role="fold">  <!-- [240125]-active 삭제 -->
+                            <button type="button" class="title" data-role="marker">가입조건</button>
+                            <div class="panel" data-role="hidden">
+                                <dl class="dl -bordered -fcg">
+                                    <div>
+                                        <dt>가입대상</dt>
+                                        <dd>개인</dd>
+                                    </div>
+                                    <div>
+                                        <dt>가입기간</dt>
+                                        <dd>12개월 이상 26개월</dd>
+                                    </div>
+                                    <div>
+                                        <dt>가입금액</dt>
+                                        <dd>신규 시 1만원 이상 매회 1천원이상 매월 최대 50만원 한도</dd>
+                                    </div>
+                                    <div>
+                                        <dt>적립방법</dt>
+                                        <dd>자유적립식</dd>
+                                    </div>
+                                </dl>
+                                <p class="p -info">거래실적 유지 및 우대조건 신규 가입에 따른 예상금리로 실제 제공금리와는 차이가 날 수 있으니, 우대조건을 확인해 주시기 바랍니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion -lg bb-none -active" data-role="fold">
+                            <button type="button" class="title" data-role="marker">같은 조건으로 추천 상품 보기</button>
+                            <div class="panel" data-role="hidden">
+                                <div class="product-detail-wrap -depo">   <!-- [240409]클래스 -depo 추가 -->
+                                    <div class="product-other">
+                                        <div class="product-recommend">  <!-- [240409]클래스 -depo 삭제 -->
+                                            <div class="product-recommend-list">
+                                                <ul>
+                                                    <li>
+                                                        <a href="javascript:;" role="button">
+                                                            <div class="recnd-item">
+                                                                <div class="title">NH올원e예금</div>
+                                                                <div class="desc">예상제공금리</div>
+                                                                <div class="perc">3.85%</div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;" role="button">
+                                                            <div class="recnd-item">
+                                                                <div class="title">NH왈츠회전예금</div>
+                                                                <div class="desc">예상제공금리</div>
+                                                                <div class="perc">3.31%</div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;" role="button">
+                                                            <div class="recnd-item">
+                                                                <div class="title">NH왈츠회전예금</div>
+                                                                <div class="desc">예상제공금리</div>
+                                                                <div class="perc">3.31%</div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>                                  
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons -half">
+                        <button type="button" class="button -lg">조건 변경하기</button>
+                        <button type="button" class="button -lg -primary">가입하기</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+
+    </script>
+</body>
+</html>

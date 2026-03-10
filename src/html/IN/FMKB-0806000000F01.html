@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/insurance.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">보험 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+            <style>
+                /* .jsSrveyWrap{margin-bottom:882px} */
+                /* .jsSrveyWrap .answerConfim .item input[type=radio] + label{display: none;}
+                .jsSrveyWrap .answerConfim .item input[type=radio]:checked + label{display: block;} */
+                .jsSrveyWrap .field.jsSrveyCurrent ~ .field{display: none;}
+                /* .jsSrveyWrap .field.answerConfim ~ .field.answerConfim{display: block;} */
+            </style>
+
+            <main class="contents">                
+                <div class="content">
+                    <div class="progress-top"> <!-- [231205] 프로그레스바 추가 -->
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                    <h2 class="h2">다음 %질문 수%개 질문에 사실대로 알려주세요</h2>                    
+
+                    <!-- [240510]마크업 수정 -->
+                    <!-- [CASE] 설명이해여부 확인 시작 모든 문항 Default 미선택 -->
+                    <div class="case-wrap -sm jsSrveyWrap -ft-normal">
+                        <div class="field jsSrveyCurrent">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">01.</span>
+                                    <span><strong>최근 3개월 이내</strong>에 의사에게 진찰 또는 검사(건강검진 포함)로 <strong>의료 행위</strong>를 받은 사실이 있나요?</span> <!-- ux 라이팅 수정 --> 
+                                </dt>   
+                                <div class="box">
+                                    <h3 class="title">의료 행위</h3> <!-- ux 라이팅 수정 --> 
+                                    <div class="medical-list">
+                                        <ul class="ul -bullet">
+                                            <li>질병 확정 진단</li> <!-- ux 라이팅 수정 --> 
+                                            <li>질병 의심 소견</li> <!-- ux 라이팅 수정 -->  
+                                            <li>치료</li>                                                                                                                                   
+                                        </ul>
+                                        <ul class="ul -bullet">
+                                            <li>입원</li>
+                                            <li>수술(제왕절개 포함)</li> <!-- ux 라이팅 수정 -->   
+                                            <li>투약</li>                                                          
+                                        </ul>
+                                    </div>   
+                                    <ul class="ul -bullet">
+                                        <li>질병 의심 소견이란 의사가 진단서나 소견서 또는 진료 의뢰서 등을 포함하여 서류(전자문서 포함)로 교부한 경우를 말합니다.</li> <!-- ux 라이팅 수정 -->  
+                                        <li>투약이란 의사가 환자에게 약을 처방하는 행위를 말하는 것으로 실제로 약을 구입하지 않았어도 선택해야 합니다.</li>
+                                    </ul>                                                       
+                                </div>                   
+                                <dd class="answer-list">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="period1" id="box-radio1-2" checked>
+                                            <label for="box-radio1-2">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="period1" id="box-radio1-1">
+                                            <label for="box-radio1-1">아니요</label>
+                                        </div>
+                                    </div>
+                                </dd>  
+                                <div class="info-wrap">
+                                    <p class="message">해당 경우에는 상품을 가입할 수 없습니다.</p>
+                                </div>                               
+                            </dl> 
+                        </div>
+                        
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">02.</span>
+                                    <span><strong>최근 3개월 이내에 마약을 사용하거나 혈압강하제, 신경안정제, 수면제, 각성제(흥분제), 진통제 등 약물</strong>을 상시 복용한 사실이 있나요?</span> <!-- ux 라이팅 수정 --> 
+                                </dt>    
+                                <div class="box">
+                                    <h3 class="title">혈압강하제와 각성제</h3> <!-- ux 라이팅 수정 -->
+                                    <ul class="ul -bullet">
+                                        <li>혈압강하제란 혈압을 내리게 하는 의약품을 말합니다.</li>
+                                        <li>각성제란 신경제를 흥분시켜 잠이 오는 것을 억제하는 의약품을 말합니다.</li>
+                                    </ul>
+                                </div>
+                                <dd class="answer-list">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="period2" id="box-radio2-2" checked>
+                                            <label for="box-radio2-2">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="period2" id="box-radio2-1">
+                                            <label for="box-radio2-1">아니요</label>
+                                        </div>
+                                    </div>
+                                </dd> 
+                                <div class="info-wrap">
+                                    <p class="message">해당 경우에는 상품을 가입할 수 없습니다.</p>
+                                </div>   
+                            </dl>
+                        </div>
+
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">03.</span>
+                                    <span>
+                                        <strong>최근 1년 이내</strong>에 의사에게 진찰 또는 검사를 받고 검사 결과에 따라 <strong>추가 검사(재검사)</strong>를 받은 사실이 있나요? <!-- ux 라이팅 수정 --> 
+                                    </span>
+                                </dt>                    
+                                <!-- [240405] ux 라이팅 수정 -->
+                                <p class="ref">추가 검사(재검사)란 검사 결과 이상 소견이 확인되어 보다 정확한 진단을 위해 시행한 검사를 의미하여, 병증에 대한 치료 필요없이 유지되는 상태에서 시행하는 정기검사 또는 추적 관찰은 포함하지 않습니다.</p>
+                                <!-- // [240405] ux 라이팅 수정 -->
+                                <dd class="answer-list">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="period3" id="box-radio3-2" checked>
+                                            <label for="box-radio3-2">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="period3" id="box-radio3-1">
+                                            <label for="box-radio3-1">아니요</label>
+                                        </div>
+                                    </div>
+                                </dd>
+                                <div class="info-wrap">
+                                    <p class="message">해당 경우에는 상품을 가입할 수 없습니다.</p>
+                                </div>  
+                            </dl>
+                        </div>
+
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">04.</span>
+                                    <span>
+                                        <strong>최근 5년 이내</strong>에 의사에게 진찰 또는 검사로 <strong>의료 행위</strong>를 받은 사실이 있나요? <!-- ux 라이팅 수정 --> 
+                                    </span>
+                                </dt>   
+                                <div class="box">
+                                    <h3 class="title">의료 행위</h3> <!-- ux 라이팅 수정 --> 
+                                    <div class="medical-list">
+                                        <ul class="ul -bullet">
+                                            <li>입원</li>
+                                            <li>계속하여 7일 이상 치료</li>  <!-- ux 라이팅 수정 -->                                                                                                                                   
+                                        </ul>
+                                        <ul class="ul -bullet">
+                                            <li>수술(제왕절개 포함)</li> <!-- ux 라이팅 수정 -->  
+                                            <li>계속하여 30일 이상 투약 </li> <!-- ux 라이팅 수정 -->                                                        
+                                        </ul>
+                                    </div>                                                          
+                                </div>   
+                                <dd class="answer-list">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="period4" id="box-radio4-2" checked>
+                                            <label for="box-radio4-2">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="period4" id="box-radio4-1">
+                                            <label for="box-radio4-1">아니요</label>
+                                        </div>
+                                    </div>
+                                </dd>
+                                <div class="info-wrap">
+                                    <p class="message">해당 경우에는 상품을 가입할 수 없습니다.</p>
+                                </div>  
+                            </dl>   
+                        </div>
+
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">05.</span>
+                                    <span>
+                                        <strong>최근 5년 이내</strong>에 아래 10대 질병으로 의사에게 진찰, 검사로 <strong>의료 행위</strong>를 받은 사실이 있나요? <!-- ux 라이팅 수정 --> 
+                                    </span>
+                                </dt>  
+                                <div class="box">
+                                    <h3 class="title">10대 질병</h3>
+                                    <div class="medical-list">
+                                        <ul class="ul -bullet">
+                                            <li>암</li>
+                                            <li>고혈압</li>  
+                                            <li>심근경색</li>
+                                            <li>간경화증</li>   
+                                            <li>당뇨병</li>                                                                                                                                    
+                                        </ul>
+                                        <ul class="ul -bullet">
+                                            <li>백혈병</li>
+                                            <li>협심증</li>  
+                                            <li>심장판막증</li>
+                                            <li>뇌졸중증(뇌경색, 뇌출혈)</li>   
+                                            <li>에이즈 또는 HIV보균</li> <!-- ux 라이팅 수정 -->                                                             
+                                        </ul>
+                                    </div>     
+                                    <h3 class="title">의료 행위</h3> <!-- ux 라이팅 수정 --> 
+                                    <div class="medical-list">
+                                        <ul class="ul -bullet">
+                                            <li>질병 확정 진단</li> <!-- ux 라이팅 수정 --> 
+                                            <li>입원</li>  
+                                            <li>투약</li>                                                                                                                                  
+                                        </ul>
+                                        <ul class="ul -bullet">
+                                            <li>치료</li>
+                                            <li>수술</li>                                                         
+                                        </ul>
+                                    </div>                                                      
+                                </div>                  
+                                <dd class="answer-list">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="period5" id="box-radio5-2" checked>
+                                            <label for="box-radio5-2">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="period5" id="box-radio5-1">
+                                            <label for="box-radio5-1">아니요</label>
+                                        </div>
+                                    </div>
+                                </dd>   
+                                <div class="info-wrap">
+                                    <p class="message">해당 경우에는 상품을 가입할 수 없습니다.</p>
+                                </div>                               
+                            </dl>
+                        </div>
+                    </div><!-- //.jsSrveyWrap -->
+                    <!-- [CASE] 끝 -->
+                    <!-- //[240510]마크업 수정 -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE] 모든 문항의 답변 작성 완료 시, 버튼 활성화 -->
+                        <button type="button" class="button -lg -primary" disabled>다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 설문 인터렉션 예시
+        const jsSrveyHandle = document.querySelectorAll('.jsSrveyWrap input');
+        jsSrveyHandle.forEach(element => {
+            element.addEventListener('click',function (e) {
+                jsSrveyNext(this)
+            })
+        });
+    </script>
+</body>
+</html>

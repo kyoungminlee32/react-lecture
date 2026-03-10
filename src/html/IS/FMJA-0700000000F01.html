@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/isa.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">ISA 신규</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:1; --max:6;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="h2">투자성향분석 설문을 진행해 주세요</h2>
+                    <p class="p">
+                        고객님의 투자성향분석을 파악하기 위한 설문입니다.<br>
+                        투자목적, 재산상황 및 투자경험 등에 부합하거나 가장 가까운 항목을 선택해 주세요.
+                    </p>
+
+                    <div class="jsSrveyWrap">
+                        <div class="field jsSrveyCurrent">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">01</span>
+                                    <span>고객님의 수입형태를 선택해주세요.</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio1" id="radio1-1">
+                                        <label for="radio1-1" class="invest-unit isa-icon1">일정한 수입 발생 향후 유지 or 증가</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio1" id="radio1-2">
+                                        <label for="radio1-2" class="invest-unit isa-icon2">일정한 수입 발생 향후 불안정 or 감소</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio1" id="radio1-3">
+                                        <label for="radio1-3" class="invest-unit isa-icon3">일정한 수입 없음, 연금이 주 수입원</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">02</span>
+                                    <span>고객님의 투자경험 금융상품을 선택해주세요.(중복응답가능)</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="checkbox" name="radio2" id="radio2-1">
+                                        <label for="radio2-1" class="invest-unit isa-icon4">예적금, 국채, 지방채, MMF, CMA 등</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="checkbox" name="radio2" id="radio2-2">
+                                        <label for="radio2-2" class="invest-unit isa-icon5">금융채, 신용도높은 회사채, 채권형 펀드, 원금보장형 ELS</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="checkbox" name="radio2" id="radio2-3">
+                                        <label for="radio2-3" class="invest-unit isa-icon6">신용도 중간등급 회사채, 원금일부보장 ELS, 혼합형펀드 등</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="checkbox" name="radio2" id="radio2-4">
+                                        <label for="radio2-4" class="invest-unit isa-icon7">신용도 낮은 회사채, 주식, 원금 보장되지 않은 ELS, 시장수익률수준 수익 추구 주식형펀드 등</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="checkbox" name="radio2" id="radio2-5">
+                                        <label for="radio2-5" class="invest-unit isa-icon8">ELW, 선물옵션, 시장수익률 이상 수익추구 주식형펀드, 파생상품 투자상품, 주식 신용거래 등</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <!-- [CASE] 다음 버튼 선택 시 Interaction / Default:비활성화 / 중복답변 선택 시 -secondary 클래스 추가 disabled 삭제 -->
+                            <div class="case-wrap -xxs">
+                                <button type="button" class="button -lg -secondary" disabled>다음</button>
+                            </div>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">03</span>
+                                    <span>금융상품에 대한 지식 수준에 해당하는 것을 선택해 주세요.</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio3" id="radio3-1">
+                                        <label for="radio3-1" class="invest-unit isa-icon9">매우 높은 수준</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio3" id="radio3-2">
+                                        <label for="radio3-2" class="invest-unit isa-icon10">높은 수준</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio3" id="radio3-3">
+                                        <label for="radio3-3" class="invest-unit isa-icon11">낮은 수준</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio3" id="radio3-4">
+                                        <label for="radio3-4" class="invest-unit isa-icon12">매우 낮은 수준</label>
+                                    </div>
+                                </dd>
+                                <div class="invest-notice">
+                                    <div class="message">
+                                        금융상품지식수준 안내
+                                        <span class="tooltip">
+                                            <button type="button" class="trigger">
+                                                <span class="hide">툴팁</span>
+                                            </button>
+                                            <span class="panel">
+                                                <span class="t-content">
+                                                    <span class="dot">매우높은수준 : 금융상품을 비롯하여 모든 투자대상 상품의 차이를 이해할 수 있는 정도</span>
+                                                    <span class="dot">높은수준 : 투자할 수 있는 대부분의 금융상품 차이를 구별할 수 있는 정도</span>
+                                                    <span class="dot">낮은수준 : 주식과 채권의 차이를 구별할 수 있는 정도</span>
+                                                    <span class="dot">매우낮은수준 : 금융상품 중 예 · 적금에 대해서만 알고있는 정도</span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">04</span>
+                                    <span>감내할 수 있는 손실 감수 수준에 해당하는 것을 선택해 주세요.</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio4" id="radio4-1">
+                                        <label for="radio4-1" class="invest-unit isa-icon13">기대 수익이 높다면 위험이 높아도 감수</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio4" id="radio4-2">
+                                        <label for="radio4-2" class="invest-unit isa-icon14">20% 미만까지는 손실 감수</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio4" id="radio4-3">
+                                        <label for="radio4-3" class="invest-unit isa-icon15">10% 미만까지 손실 감수</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio4" id="radio4-4">
+                                        <label for="radio4-4" class="invest-unit isa-icon16">투자원금 보존</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">05</span>
+                                    <span>고객님께서 투자하시고자 하는 자금투자 예상 투자기간을 선택해 주세요.</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio5" id="radio5-1">
+                                        <label for="radio5-1" class="invest-unit isa-icon17">3년 이상</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio5" id="radio5-2">
+                                        <label for="radio5-2" class="invest-unit isa-icon18">2년 이상 ~ 3년 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio5" id="radio5-3">
+                                        <label for="radio5-3" class="invest-unit isa-icon19">1년 이상 ~ 2년 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio5" id="radio5-4">
+                                        <label for="radio5-4" class="invest-unit isa-icon20">6개월 이상 ~ 1년 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio5" id="radio5-5">
+                                        <label for="radio5-5" class="invest-unit isa-icon21">6개월 이내</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">06</span>
+                                    <span>고객님의 월 소득을 선택해 주세요.</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio6" id="radio6-1">
+                                        <label for="radio6-1" class="invest-unit isa-icon22">400만원 이상</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio6" id="radio6-2">
+                                        <!-- 2024-05-07 문구 수정 -->
+                                        <label for="radio6-2" class="invest-unit isa-icon23">200만원 이상 ~ 400만원 미만</label>
+                                        <!-- //2024-05-07 문구 수정 -->
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio6" id="radio6-3">
+                                        <!-- 2024-04-17 문구 수정 -->
+                                        <label for="radio6-3" class="invest-unit isa-icon24">200만원 미만</label>
+                                        <!-- //2024-04-17 문구 수정 -->
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">07</span>
+                                    <span>고객님의 총 자산대비 금융자산의 비중은 어느정도입니까?</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio7" id="radio7-1">
+                                        <label for="radio7-1" class="invest-unit isa-icon25">5% 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio7" id="radio7-2">
+                                        <label for="radio7-2" class="invest-unit isa-icon14">5% 이상 20% 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio7" id="radio7-3">
+                                        <label for="radio7-3" class="invest-unit isa-icon26">20% 이상</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">08</span>
+                                    <span>고객님의 투자목적은 무엇입니까?</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio8" id="radio8-1">
+                                        <label for="radio8-1" class="invest-unit isa-icon27">적극적인 재산증식</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio8" id="radio8-2">
+                                        <label for="radio8-2" class="invest-unit isa-icon28">시장평균 이상 수익률 기대</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio8" id="radio8-3">
+                                        <label for="radio8-3" class="invest-unit isa-icon29">예/적금 수준 수익률 기대</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio8" id="radio8-4">
+                                        <label for="radio8-4" class="invest-unit isa-icon30">단기자금 운용</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">09</span>
+                                    <span>고객님께서 파생상품, 파생결합증권 또는 파생상품 투자펀드에 투자한 경험이 있으신 경우 투자기간은 얼마나 되십니까?</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio9" id="radio9-1">
+                                        <label for="radio9-1" class="invest-unit isa-icon31">투자경험 없음</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio9" id="radio9-2">
+                                        <label for="radio9-2" class="invest-unit isa-icon20">1년 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio9" id="radio9-3">
+                                        <label for="radio9-3" class="invest-unit isa-icon32">1년 이상 ~ 3년 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio9" id="radio9-4">
+                                        <label for="radio9-4" class="invest-unit isa-icon17">3년 이상</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE] 모든 문항의 답변 작성 완료 시, 버튼 활성화 -->
+                        <button type="button" class="button -lg -primary -disabled">결과확인</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 설문 인터렉션 예시
+        const jsSrveyHandle = document.querySelectorAll('.jsSrveyWrap input');
+        jsSrveyHandle.forEach(element => {
+            element.addEventListener('click',function (e) {
+                jsSrveyNext(this)
+            })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>과세유형을 선택</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/fund.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">펀드 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ui수정 240415 (결함번호:3744 / ui수정으로 인한 마크업수정) -->
+                    <div class="h2-group">
+                        <h2 class="h2">과세유형을 선택해 주세요</h2>
+                    </div>
+
+                    <div class="box-radios">
+                        <div class="box-radio">
+                            <input type="radio" name="period" id="pq1" checked>
+                            <label for="pq1">일반과세</label>
+                        </div>
+                        <div class="box-radio">
+                            <input type="radio" name="period" id="pq2" >
+                            <label for="pq2">비과세종합저축</label>
+                        </div>
+                    </div>
+                    <p class="info">비과세종합저축 대상자 <!-- ux 라이팅 수정 -->
+                        <span class="tooltip">
+                            <button type="button" class="trigger">
+                                <span class="hide">툴팁</span>
+                            </button>
+                            <span class="panel"> <!-- [240308] 마크업변경 -->
+                                <!-- <span class="title">보험계약 상세조회</span> -->
+                                <span class="t-content">
+                                    <span class="dot">65세 이상인 거주자</span>
+                                    <span class="dot">장애인복지법 제32조 규정에 의하여 등록한 장애인</span>
+                                    <span class="dot">독립유공자 예우에 관한 법률 제6조의 규정에 의하여 등록한 독립유공자와 그 유족 또는 가족</span>
+                                    <span class="dot">국가유공자 등 예우 및 지원에 관한 법률 제6조의 규정에 의하여 등록한 상이자</span>
+                                    <span class="dot">국민기초생활보장법 제2조 제2호의 규정에 의한 수급자</span>
+                                    <span class="dot">고엽제후유증 등 환자지원 및 단체설립에 관한 법률 제2조 제3호의 규정에 의한 고엽제후유증 환자</span>
+                                </span>
+                            </span> <!-- //[240308] 마크업변경 -->
+                        </span>
+                    </p>
+                    <!-- //ui수정 240415 (결함번호:3744 / ui수정으로 인한 마크업수정) -->
+
+                    <!-- 2024-05-28 MMF일 경우 CASE 추가 -->
+                    <div style="background-color: yellow;margin-top: 32px;">[CASE MMF일 경우]비과세종합저축 선택불가 및 툴팁 삭제</div>
+                    <div class="box-radios">
+                        <div class="box-radio">
+                            <input type="radio" name="period00" id="pq001">
+                            <label for="pq001">일반과세</label>
+                        </div>
+                        <div class="box-radio" id="tese">
+                            <input type="radio" name="period00" id="pq002" disabled >
+                            <label for="pq002">비과세종합저축</label>
+                        </div>
+                    </div>
+                    <!-- //2024-05-28 MMF일 경우 CASE 추가 -->
+                    <script>
+                        // 비과세 종합저축 클릭시 메시지 출력하려면 상위 div에 이벤트 연결하시면 됩니다.
+                        document.querySelector('#tese').addEventListener('click',function () {
+                            alert(1111)
+                        })
+                    </script>
+
+                    <!-- [CASE] 신청시 -->
+                    <div class="case-wrap">
+                        <!-- ui수정 240122 (마크업 변경) -->
+                        <div class="field">
+                            <div class="data-box">
+                                <div class="data-box-title">나의 잔여한도</div>
+                                <div class="data-box-content">8,400,000원</div>
+                            </div>
+                            <div class="text">
+                                <p class="info">2020년 1월 1일 이후 3개의 과세기간 중 하나 이상의 과세기간이 금융소득 종합과세대상자에 해당될 경우 비과세종합저축 가입 대상에서 제외됩니다. 이후 관련 법령에서 정하는 절차에 따라 비과세종합저축이 일반과세로 전환됩니다.</p>
+                            </div>
+                        </div>
+                        <!-- <p class="p">나의 잔여한도<span class="limit-point">8,400,000P</span></p>
+                        <p class="message">
+                            2020년 1월 1일 이후 3개의 과세기간 중 하나 이상의 과세기간이 금융소득 종합과세대상자에 해당될 경우 비과세종합저축 가입대상에서 제외되며, 
+                            이후 관련 법령에서 정하는 절차에 따라 비과세종합저축이 일반과세로 전환됩니다.
+                        </p> -->
+                        <!-- //ui수정 240122 (마크업 변경) -->
+
+                        <div class="field"> <!-- 에러일 경우 field에 -error 추가 -->
+                            <label for="text" class="label">납입한도 설정</label> <!-- ux 라이팅 수정 -->
+                            <div class="mix">
+                                <div class="text -won" data-clear="false">
+                                    <input type="tel" id="text" class="right num-call" value="500,000" aria-haspopup="true" placeholder="한도 설정 금액 입력" readonly onclick="numKey.keyOpen(this,'amount')" > <!-- ux 라이팅 수정 -->
+                                    <div class="won">원</div>
+                                </div>
+                                <div class="info-wrap">
+                                    <p class="info right point">오십만원</p>
+                                    <!-- [CASE] 한도초과 메세지-->
+                                    <!-- <p class="message">비과세종합저축 한도를 모두 사용하였습니다.</p> -->
+                                    <!-- <p class="message">잔여한도 이내로 입력해 주세요.</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // [CASE] 신청시 -->
+                </div>
+
+                <!-- 플로팅 버튼 -->
+                <div class="floating-wrap">
+                    <div class="floating-btn" role="button"> <!-- [240111] role="button" 추가 -->
+                        <p>원금손실<br>가능상품</p>  <!-- ux 라이팅 수정 -->
+                    </div>
+                    <a class="floating_close" title="원금 손실가능 상품 플로팅버튼 닫기"></a>
+                </div>
+                
+                <!-- //플로팅 버튼 -->                 
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg">다음</button>
+                    </div>
+                </div>                
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

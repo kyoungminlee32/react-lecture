@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>유의사항 확인</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출기한연기</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">진행 절차를 확인해 주세요</h2>
+                    </div>
+
+                    <ol class="ol -badge">
+                        <li>
+                            <span class="gadget">1단계</span>
+                            <div class="title">기한연기 신청</div>
+                            신청 전 준비사항
+                            <div class="gray-bullet">
+                                <ul class="ul -bullet">
+                                    <li>연장 임대차계약서 원본</li>
+                                    <li>사설인증서 또는 공동인증서</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="gadget">2단계</span>
+                            <div class="title">기한연기 심사</div>
+                        </li>
+                        <li>
+                            <span class="gadget">3단계</span>
+                            <div class="title">전자약정서 작성</div>
+                        </li>
+                        <li>
+                            <span class="gadget">4단계</span>
+                            <div class="title">기한연기 완료</div>
+                        </li>
+                    </ol>
+                    <div class="case-wrap">
+                        <div class="box">
+                            <ul class="ul -bullet">
+                                <li>채무자/소유자 불일치(제3자담보제공), 신청 가능 기간 경과, 서류제출 미비 등 부득이한 사유로 영업점 방문이 필요할 수 있습니다.</li>
+                                <li>대출 신규 시 체결한 약정(주택 추가 구입 금지의무 등) 이행여부에 따라 기한연기가 제한될 수 있습니다.</li>
+                                <li>주택 추가 구입 금지 특약이 체결된 경우 채무자 및 세대원 전원의 무주택 동의 절차가 필요합니다.</li>
+                                <li>담보물건의 시세 하락 및 선순위 근저당권설정금액 증가 등에 따라 대출한도가 감액 될 수 있습니다.</li>
+                                <li>비대면 대출연기신청은 심사에 필요한 최소한의 신청 정보와 서류를 제출하는 과정으로 신청 후 심사과정에서 기한연기 기준에 부합하지 않는 내용이 확인되는 경우 대출 연기가 제한될 수 있습니다.</li>
+                                <li>세대원이란?<br>세대별 주민등록표상에 배우자, 직계존속(배우자의 직계존속 포함),직계비속 및 그 배우자 (세대 분리된 배우자 및 그 배우자와 동일세대를 이루고 있는 직계비속 및 그 배우자를 포함)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <li>본인 명의의 휴대폰으로만 신청할 수 있습니다.</li>
+                                <li>기한연기를 신청하려면 NH농협은행 입출금계좌가 등록되어 있어야 신청할 수 있습니다.</li>
+                                <li>대출 심사 중 필요서류 제출을 추가로 요청할 수 있습니다.</li>
+                                <li>상품에 대한 자세한 내용은 공시내용을 확인해 주세요.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

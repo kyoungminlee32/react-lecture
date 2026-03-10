@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/isa.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">ISA 신규</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:2; --max:6;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <h2 class="h2">ISA 유형을 선택해 주세요</h2>
+                    </div>
+
+                    <div class="field">
+                        <p class="label">고객구분</p>
+                        <!-- [CASE] 15~19세 미만인 경우[사업소득자], [소득확인 불가] 비활성화 -->
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-1" checked>
+                                <label for="box-radio1-1">근로소득자</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-2">
+                                <label for="box-radio1-2">사업소득자</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-3">
+                                <label for="box-radio1-3">소득확인 불가</label>
+                            </div>
+                        </div>
+                        <!-- // [CASE] 15~19세 미만인 경우[사업소득자], [소득확인 불가] 비활성화 -->
+                    </div>
+
+                    
+                    <div class="field">
+                        <p class="label">소득구분</p>
+                        <!-- [CASE] 근로소득자 선택 시 -->
+                        <div class="box-radios">
+                            <div class="box-radio -left">
+                                <input type="radio" name="period2" id="box-radio2-1" checked>
+                                <label for="box-radio2-1">
+                                    서민형 (총 급여액 5,000만원 이하)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="box-radios">
+                            <div class="box-radio -left">
+                                <input type="radio" name="period2" id="box-radio2-2">
+                                <label for="box-radio2-2">
+                                    일반형 (총 급여액 5,000만원 초과)
+                                </label>
+                            </div>
+                        </div>
+                        <!-- // [CASE] 근로소득자 선택 시 -->
+
+                        <!-- [CASE] 사업소득자 선택 시 -->
+                        <!-- <div class="box-radios">
+                            <div class="box-radio -left">
+                                <input type="radio" name="period2" id="period2-3" checked>
+                                <label for="period2-3">
+                                    서민형 (종합소득금액 3,800만원 이하)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="box-radios">
+                            <div class="box-radio -left">
+                                <input type="radio" name="period2" id="box-radio2-4">
+                                <label for="box-radio2-4">
+                                   일반형 (종합소득금액 3,800만원 초과)
+                                </label>
+                            </div>
+                        </div> -->
+                        <!-- // [CASE] 사업소득자 선택 시 -->
+
+                        <!-- [CASE] 소득확인 불가 선택 시 -->
+                        <!-- <div class="box-radios">
+                            <div class="box-radio -left">
+                                <input type="radio" name="period2" id="period2-5" checked>
+                                <label for="period2-5">서민형</label>
+                            </div>
+                        </div>
+                        <div class="box-radios">
+                            <div class="box-radio -left">
+                                <input type="radio" name="period2" id="period2-6">
+                                <label for="period2-6">일반형</label>
+                            </div>
+                        </div> -->
+                        <!-- // [CASE] 소득확인 불가 선택 시 -->
+                    </div>
+                    
+                    <!-- [CASE] 나이 만 19세 이상인 경우 : 1)근로소득자 선택 -> 2)일반형 (총 급여액 5,000만원 초과) 선택한 경우 미노출 -->
+                    <!-- [CASE] 나이 만 19세 이상인 경우 : 1)사업소득자 선택 -> 2)일반형 (종합소득금액 3,800만원 초과) 선택한 경우 미노출 -->
+                    <!-- [CASE] 나이 만 19세 이상인 경우 : 1)소득확인 불가 선택 -> 2)일반형 선택한 경우 미노출 -->
+                    <div class="field">
+                        <label for="iiyi" class="label">
+                            소득확인증명서 발급번호(14자리)
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">소득확인증명서 발급번호</span>
+                                    <span class="t-content">
+                                        <span class="dot">소득확인증명서 (개인종합자산관리계좌 가입용) 발급번호 14자리 입력</span>
+                                        <span class="dot">
+                                            발급방법<br>
+                                            - (모바일) 손택스 : PC에서출력(발급번호만 부여)<br>
+                                            - (인터넷) 홈택스 : 인터넷발급 (프린터출력)
+                                        </span>
+                                        <span class="dot">발급수량 : 2매 이상(1매 은행에서 출력하여 보관)</span>
+                                        <span class="dot">국세청 홈택스에서 발급한 서류만 사용할 수 있습니다. (세무서 발급서류는 사용할 수 없음)</span>
+                                        <span class="dot">소득확인증명서 유효기간 : 발급일부터 90일</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </label>
+                        <div class="text">
+                            <input type="tel" id="iiyi" value="" placeholder="14자리 입력">
+                            <p class="info">소득확인증명서의 발급번호가 올바르지 않거나 ISA유형과 맞지 않으면 ISA를 가입할 수 없습니다.</p>
+                        </div>
+                    </div>
+                    <!-- // [CASE] 나이 만 19세 이상인 경우 : 1)근로소득자 선택 -> 2)일반형 (총 급여액 5,000만원 초과) 선택한 경우 미노출 -->
+                    <!-- // [CASE] 나이 만 19세 이상인 경우 : 1)사업소득자 선택 -> 2)일반형 (종합소득금액 3,800만원 초과) 선택한 경우 미노출 -->
+                    <!-- // [CASE] 나이 만 19세 이상인 경우 : 1)소득확인 불가 선택 -> 2)일반형 선택한 경우 미노출 -->
+
+                    <!-- [CASE] 나이 만 19세 이상인 경우 : 1)근로소득자 선택 -> 2)서민형 (총 급여액 5,000만원 이하) 선택한 경우 미노출 -->
+                    <!-- [CASE] 나이 만 19세 이상인 경우 : 1)사업소득자 선택 -> 2)서민형 (종합소득금액 3,800만원 이하) 선택한 경우 미노출 -->
+                    <!-- [CASE] 나이 만 19세 이상인 경우 : 1)소득확인 불가 선택 -> 2)서민형 선택한 경우 미노출 -->
+                    <div class="field">
+                        <label for="phone123" class="label">휴대폰번호</label>
+                        <div class="mix">
+                            <div class="select flex-4">
+                                <button type="button" class="left-side" aria-haspopup="true" title="휴대폰 앞자리 선택">010</button>
+                            </div>
+            
+                            <div class="text flex-8" data-clear="false">
+                                <input type="tel" data-id="phone123" class="mid-side num-call" placeholder="숫자만 입력" title="휴대폰 번호 뒷자리 입력" aria-haspopup="true" readonly>
+                            </div>
+                            <div class="space -lined right-side">
+                                <!-- <button type="button" class="button -xs -fit" title="인증번호 요청">요청</button> -->
+                            </div>
+                        </div>
+                        <div class="text">
+                            <p class="info -bullet">가입 내용 이해 여부 확인 과 계약 결과를 안내 받을 수 있는 휴대폰번호를 입력해 주세요.</p>
+                            <p class="info -bullet">전화 연결이 되지 않으면  ISA를 가입할 수 없습니다.</p>
+                        </div>
+                    </div>
+                    <!-- // [CASE] 나이 만 19세 이상인 경우 : 1)근로소득자 선택 -> 2)서민형 (총 급여액 5,000만원 이하) 선택한 경우 미노출 -->
+                    <!-- // [CASE] 나이 만 19세 이상인 경우 : 1)사업소득자 선택 -> 2)서민형 (종합소득금액 3,800만원 이하) 선택한 경우 미노출 -->
+                    <!-- // [CASE] 나이 만 19세 이상인 경우 : 1)소득확인 불가 선택 -> 2)서민형 선택한 경우 미노출 -->
+
+                    <div class="case-wrap -sm">
+                        <div class="checkbox -sm">
+                            <input type="checkbox" id="checkbox-sm">
+                            <label for="checkbox-sm">가입자격 확인을 위해 NH농협은행이 소득확인증명서를 출력·보관하고, 가입 내용 이해 여부 확인을 위한 연락 하는 것을 동의합니다.</label>
+                        </div>
+                    </div>
+
+                    <!-- 플로팅 버튼 -->
+                    <div class="floating-wrap">
+                        <div class="floating-btn" role="button">
+                            <p>
+                                원금손실<br>
+                                가능상품
+                            </p>
+                        </div>
+                        <a class="floating_close" title="원금 손실가능 상품 플로팅버튼 닫기"></a>
+                    </div>
+                    <!-- // 플로팅 버튼 -->
+                </div>
+
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <li>가입 예약시간 : 영업일 09:00 ~ 17:00</li>
+                                <li>소득확인증명서를 발급하고 서민형으로 가입한 경우에도 국세청은 전년도 소득을 기준으로 확인하므로 요건을 갖추지 못하면 계좌가 해지되거나 일반형으로 전환될 수 있습니다.</li>
+                                <li>ISA 만기와 금융상품의 만기가 다르면 중도해지(상환) 수수료 발생 등으로 손실이 발생할 수 있습니다.</li>
+                                <li>농어민 ISA 유형은 NH농협은행 영업점에서 가입할 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE] Default : 비활성 / 가입자격확인서류정보 및 체크사항 유효성 확인 후 활성화-->
+                        <button type="button" class="button -lg -primary">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>전세주택 정보 입력</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출한도 조회</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+            <main class="contents">
+                <div class="content">
+                    <!-- 240202 프로그래스바 수정-->
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //240202 프로그래스바 수정-->
+                    
+                    <div class="h2-group">
+                        <!-- 231229 ux라이팅 수정 -->
+                        <h2 class="h2">계약서상 전세 주택 정보를 <br> 입력해 주세요</h2>
+                    </div>
+                    <div class="field">
+                        <label for="text1" class="label">지역(읍·면·동)</label>
+                        <!-- 231229 info 변경 -->
+                        <div class="text">
+                            <input type="text" id="text1" value="" placeholder="지역(읍·면·동) 입력">
+                            <p class="info">남가좌1동(x), 남가좌(o), 남가좌동(o)</p>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="text2" class="label">주택명</label>
+                        <div class="text">
+                            <input type="text" id="text2" value="" placeholder="주택명 입력">
+                            <!-- 240130 ux라이팅 수정 -->
+                            <p class="info">DMC삼성래미안(x), DMC(o), 삼성(o), 래미안(o)</p>
+                            <!-- //240130 ux라이팅 수정 -->
+                        <!-- //231229 info 변경 -->
+                        </div>
+                    </div>
+                    <div class="case-wrap -sm">
+                        <button type="button" class="button -lg -secondary">주택 검색</button>
+                    </div>
+                    <hr class="hr -xxl">
+                    <!-- [CASE]검색결과 있는 경우 -->
+                    <div class="field">
+                        <p class="list-title">주택검색결과</p>
+                        <div class="custom-list">
+                            <ul>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p class="addr-num">DMC <span class="point">래미안</span>클라시스</p>
+                                                <p class="sub-addr">은평구 불광동 북한산현대힐스테이트3차아파트</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p class="addr-num"><span class="point">래미안</span>남가좌1차</p>
+                                                <p class="sub-addr">서울시 서대문구 남가좌동</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="button" class="more-button">더보기</button>
+                    </div>
+                    <!-- //[CASE]검색결과 있는 경우 -->
+
+                    <!-- [CASE]검색결과 없는 경우 -->
+                    <div class="result -sm">
+                        <p class="message">검색 결과가 없습니다.</p>
+                    </div>
+                    <!-- //[CASE]검색결과 없는 경우 -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

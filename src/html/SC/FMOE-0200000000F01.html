@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>영업점방문예약</title>    
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <!-- 차트 관련css -->
+    <link rel="stylesheet" href="../../assets/libs/Chart/dist/Chart.css">
+    <link rel="stylesheet" href="../../assets/libs/Chart/dist/Chart.min.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+                    <!-- ux 라이팅 수정 시작 -->
+                    <h1 class="title">영업점 방문 예약</h1>
+                    <!-- //ux 라이팅 수정 끝 -->
+
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                        <button type="button" class="func -menu"><span class="hide">전체메뉴</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="h2-group">
+                        <h2 class="h2">영업점 방문 예약을 신청해 주세요</h2>
+                    </div>
+                    <div class="field">
+                        <label for="text" class="label">이름</label>
+                        <div class="text">
+                            <input type="text" id="text" readonly value="김농협">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="label-group">
+                            <label for="text123213" class="label">연락처</label>
+                            <!-- 2023-12-26 문구 수정 -->
+                            <button type="button" class="goto-button">내 정보 수정</button>
+                            <!-- //2023-12-26 문구 수정 -->
+                        </div>
+                        <div class="mix">
+                            <div class="select flex-3">
+                                <button type="button" class="left-side" aria-haspopup="true" title="휴대폰 앞자리 선택" >010</button>
+                            </div>
+                            <div class="text flex-7" data-clear="false">
+                                <input type="tel" class="right-side num-call" placeholder="-없이 입력" title="010제외한 휴대전화번호" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="label">
+                            <label for="search">영업점</label>
+                        </div>
+                        <div class="mix">
+                            <div class="text">
+                                <input type="text" class="left-side fake-readonly" id="search" placeholder="영업점을 선택해 주세요" value="" aria-haspopup="true" readonly>
+                            </div>
+            
+                            <div class="space -lined search">
+                                <button type="button" class="icon-button -search right-side"><span class="hide">조회</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ux 라이팅 수정 시작 -->
+                    <h3 class="h5">방문 고객 수 그래프</h3>
+                    <p class="p">방문 예약 영업점의 직전월 기준 요일별/시간대별 방문 고객 통계입니다. 혼잡 시간대를 참고해 주세요.</p>
+                    <!-- //ux 라이팅 수정 끝 -->
+                    <div class="subs -anchor">
+                        <div>
+                            <div class="inner">
+                                <div role="tablist" class="list">
+                                    <div class="item -active"><button type="button" role="tab"  aria-controls="subs-panel1">월</button></div>
+                                    <div class="item"><button type="button" role="tab" aria-controls="subs-panel1">화</button></div>
+                                    <div class="item"><button type="button" role="tab" aria-controls="subs-panel1">수</button></div>
+                                    <div class="item"><button type="button" role="tab" aria-controls="subs-panel1">목</button></div>
+                                    <div class="item"><button type="button" role="tab" aria-controls="subs-panel1">금</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subs-panels">
+                        <div role="tabpanel" aria-labelledby="sub1" id="subs-panel1" class="subs-panel -active" tabindex="0">
+                            <div class="chart-area">
+                                <p class="chart-title">방문고객수(명)</p>
+                                <canvas id="line-chart" height="166rem" aria-label=""></canvas> <!-- 임시 높이값 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <p class="label">상담직원(선택)</p>
+                        <div class="select">
+                            <!-- ux 라이팅 수정 시작 -->
+                            <button type="button" aria-haspopup="true">미지정(가능 직원 우선 상담)</button>
+                            <p class="info">방문 영업점 상황에 따라 직원이 변경될 수 있습니다.</p>
+                            <!-- //ux 라이팅 수정 끝 -->
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <!-- ux 라이팅 수정 시작 -->
+                        <label for="datedate" class="label">방문 예약일</label>
+                        <!-- //ux 라이팅 수정 끝 -->
+                        <div class="datapicker-select">
+                            <div class="mix datepicker">
+                                <div class="text" data-clear="false">
+                                    <input type="text" class="left-side" id="datedate" value="2023.08.23" title="첫번째 날짜선택" aria-haspopup="true" readonly>
+                                </div>
+                                <div class="space -lined date">
+                                    <button type="button" class="icon-button -calendar" aria-haspopup="true"><span class="hide">달력 보기</span></button>
+                                </div>
+                            </div>
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">시간 선택</button>
+                            </div>
+                        </div>
+                        <p class="message">당일은 예약할 수 없습니다. 다음 영업일 13시부터 선택해 주세요.</p>
+                    </div>
+                  
+                    <hr class="hr -xxl">
+
+                    <div class="field">
+                        <!-- ux 라이팅 수정 시작 -->
+                        <h3 class="h5">상담 내용</h3>
+                        <!-- //ux 라이팅 수정 끝 -->
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">개인예금(예금/펀드/신탁/퇴직연금)</button>
+                        </div>
+                        <!-- [CASE] 상담내용 -->
+                        <div class="case-wrap -xxs">
+                            <div class="textarea">
+                                <textarea id="textarea" placeholder="상담하실 내용을 간단히 입력해 주세요.(선택)"></textarea>
+                                <div class="text-count">
+                                    <span class="count point">0</span>
+                                    <span class="total">60</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // [CASE] 상담내용 -->
+
+                        <!-- [CASE] 상담상품 선택 시 -->
+                        
+                        <!-- <div class="case-wrap -xxs">
+                            <button type="button" class="button -lg -secondary">상품찾기</button>
+                            <div class="btw-12">
+                                <div class="selection">
+                                    <ul>
+                                        <li>
+                                            <div class="info -bordered -check">
+                                                <div class="top-area">
+                                                    <span class="badge -disabled">예적금</span>
+                                                </div>
+                                                <div class="info-main">
+                                                    NH올원e예금
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> -->
+                        
+                        <!-- // [CASE] 상담상품 선택 시 -->
+                    </div>
+
+                    <div class="field">
+                        <p class="label">사전 상담표 작성 여부</p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="period-point-color1-1" checked>
+                                <label for="period-point-color1-1">예</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="period-point-color1-2">
+                                <label for="period-point-color1-2">아니오</label>
+                            </div>
+                        </div>
+                        <!-- ux 라이팅 수정 시작 -->
+                        <p class="info">사전 상담표를 작성하지 않아도 방문 예약할 수 있습니다.</p>
+                        <!-- //ux 라이팅 수정 끝 -->
+                    </div>
+                    <!-- [CASE] 사전상담표 예 선택시 -->
+                    <div class="case-wrap">
+                        <div class="field">
+                            <!-- ux 라이팅 수정 시작 -->
+                            <p class="label">상담 구분</p>
+                            <!-- //ux 라이팅 수정 끝 -->
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">예금</button>
+                            </div>
+                        </div>
+                        <!-- [240408] 월소득 수준 만원으로 변경요청 -->
+                        <div class="field">
+                            <!-- ux 라이팅 수정 시작 -->
+                            <label for="tt1" class="label">월소득 수준</label>
+                            <!-- //ux 라이팅 수정 끝 -->
+                            <div class="mix">
+                                <div class="text -won" data-clear="false">
+                                    <input type="tel" id="tt1" class="right num-call manwon" value="800000" aria-haspopup="true" placeholder="금액입력" readonly>
+                                    <div class="won">만원</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="field">
+                            <p class="label">직업군</p>
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">공무원</button>
+                            </div>
+                        </div>
+    
+                        <div class="field">
+                            <!-- ux 라이팅 수정 시작 -->
+                            <p class="label">투자상품(펀드, ETF) 가입 경험</p>
+                            <!-- //ux 라이팅 수정 끝 -->
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color1" id="period-point-color1j" checked>
+                                    <label for="period-point-color1j">예</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color1" id="period-point-coloruy">
+                                    <label for="period-point-coloruy">아니오</label>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="field">
+                            <label for="ghga" class="label">투자금액</label>
+                            <div class="mix">
+                                <div class="text -won" data-clear="false">
+                                    <input type="tel" id="ghga" class="right num-call manwon" aria-haspopup="true" value="10" placeholder="금액 입력" readonly>
+                                    <div class="won">만원</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="field">
+                            <div class="field">
+                                <!-- ux 라이팅 수정 시작 -->
+                                <label for="tt1" class="label">투자 기간</label>
+                                <!-- //ux 라이팅 수정 끝 -->
+                                <div class="mix">
+                                    <div class="text -won" data-clear="false">
+                                        <input type="tel" id="tt1" class="right num-call month" aria-haspopup="true" value="1" placeholder="투자기간 입력" readonly>
+                                        <div class="won">개월</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="field">
+                            <div class="field">
+                                <label for="gggs" class="label">목표수익률</label>
+                                <div class="mix">
+                                    <div class="text -percent" data-clear="false">
+                                        <input type="tel" id="gggs" class="right num-call" value="" aria-haspopup="true" placeholder="1 ~ 999 이내로 입력" readonly>
+                                        <div class="percent">%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // [CASE] 사전상담표 예 선택시 -->
+
+                    <!-- [CASE] 개인대출 선택 시 -->
+                    <div class="case-wrap">
+                        <div class="field">
+                            <p class="label">대출구분</p>
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">선택</button>
+                            </div>
+                        </div>
+                        <!-- [240408] 월소득 수준 만원으로 변경요청 -->
+                        <div class="field">
+                            <label for="tt1" class="label">월소득 수준</label>
+                            <div class="mix">
+                                <div class="text -won" data-clear="false">
+                                    <input type="tel" id="tt1" class="right num-call manwon" value="12300" aria-haspopup="true" placeholder="금액입력" readonly>
+                                    <div class="won">만원</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="tex11" class="label">물건소재지</label>
+                            <div class="text">
+                                <input type="text" id="tex11" value="" placeholder="예) 서울시 중구 동암로 00 (동/호수)">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="tex" class="label">주택구분</label>
+                            <div class="text">
+                                <input type="text" id="tex" value="" placeholder="예) 아파트, 오피스텔 등">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <p class="label">주택보유여부</p>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="perio" id="period-point-color1j" checked>
+                                    <label for="period-point-color1j">미보유</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="perio" id="period-point-gas">
+                                    <label for="period-point-gas">1주택</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="perio" id="period-point-g">
+                                    <label for="period-point-g">2주택 이상</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <p class="label">주택관련대출 보유여부</p>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="perio55" id="period-point-asd" checked>
+                                    <label for="period-point-asd">미보유</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="perio55" id="period-point-kghf">
+                                    <label for="period-point-kghf">1건</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="perio55" id="period-poindsfg">
+                                    <label for="period-poindsfg">2건 이상</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <p class="label">대출용도</p>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color1" id="period-point-b" checked>
+                                    <label for="period-point-b">주택구입</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color1" id="period-point-m">
+                                    <label for="period-point-m">가계자금</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+    
+                        <div class="field">
+                            <label for="ghga" class="label">대출 희망금액</label>
+                            <div class="mix">
+                                <div class="text -won" data-clear="false">
+                                    <input type="tel" id="ghga" class="right num-call manwon" aria-haspopup="true" value="" placeholder="금액 입력" readonly>
+                                    <div class="won">만원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // [CASE] 개인대출 선택 시 -->
+
+                    <div class="field">
+                        <div class="agree">
+                            <div class="title">
+                                <div class="checkbox -sm">
+                                    <input type="checkbox" id="required-total">
+                                    <!-- ux 라이팅 수정 시작 -->
+                                    <label for="required-total">[필수] 전체 동의</label>
+                                    <!-- //ux 라이팅 수정 끝 -->
+                                </div>
+                                <button type="button" class="more"><span class="hide">필수 전체 동의 약관</span></button>
+                            </div>
+                            <div class="panel">
+                                <div class="checkboxes -full">
+                                    <div class="checkbox -sub">
+                                        <input type="checkbox" id="required1">
+                                        <!-- ux 라이팅 수정 시작 -->
+                                        <label for="required1">개인(신용)정보 수집·이용 동의서(필수)(영업점 방문 예약(개인예금))</label>
+                                        <!-- //ux 라이팅 수정 끝 -->
+                                        <button type="button" class="more"><span class="hide">약관</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="btw-32">
+                        <div class="checkbox -sm">
+                            <input type="checkbox" id="checkbox-sm">
+                            <label for="checkbox-sm">안내사항 확인</label>
+                        </div>
+                        <!-- ux 라이팅 수정 시작 -->
+                        <p class="message">상담 업무 외 입출금, 카드 수령, 재발급 등 단순 업무나 제신고 업무 신청 시 상담을 할 수 없습니다. 또한, 먼저 상담 중이신 고객님의 응대가 끝나지 않을 경우 대기 시간이 발생할 수 있습니다.</p>
+                        <!-- //ux 라이팅 수정 끝 -->
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <!-- 차트 관련js -->
+    <script src="../../assets/libs/Chart/dist/Chart.js"></script>
+    <script src="../../assets/libs/Chart/dist/Chart.min.js"></script>
+    <script>
+        // 라인형 그래프
+        var lineChart = document.getElementById('line-chart');
+        var chart = new Chart(lineChart, {
+            type: 'line',
+            // 데이터 집합
+            data : {
+                labels: ['09시', '10시', '11시', '12시', '13시', '14시', '15시'],
+                datasets: [{
+                    label: '방문고객수(명)',
+                    data: [10, 3, 30, 23, 10, 5, 40],
+                    pointBackgroundColor: 'rgba(251,78,77,.5)',
+                    borderColor: '#fb4e4d',
+                    borderWidth: 1,
+                    fill: false,
+                    lineTension: 0,
+                    pointBorderWidth: 1,
+                    pointRadius: 4,
+                }]
+            },
+            //설정
+            options: {
+                responsive: true,
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                legend: {
+                    display : false
+                },
+                scales:{
+                    xAxes:[{
+                        ticks:{
+                            fontColor : '#909090',
+                            fontSize : 10,
+                            fontFamily : 'Pretendard'
+                        }
+                    }],
+                    yAxes:[{
+                        ticks:{
+                            fontColor : '#909090',
+                            fontSize : 10,
+                            fontFamily : 'Pretendard'
+                        }
+                    }]
+                }           
+            }
+        })
+
+    </script>
+</body>
+</html>

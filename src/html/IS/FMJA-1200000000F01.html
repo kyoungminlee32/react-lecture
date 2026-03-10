@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/isa.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">ISA 신규</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:2; --max:6;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <h2 class="h2">비예금상품을 이해했는지 확인해 주세요</h2>
+                    </div>
+
+                    <div class="box">
+                        <ul class="ul -bullet">
+                            <li>일임형 개인종합자산관리계좌(ISA)는 일반 예금상품과 달리 원금의 일부 또는 전부 손실이 발생할 수 있으며, 투자로 인한 손실은 투자자 본인에게 귀속됩니다.</li>
+                            <li>계약서류는 법령 및 내부통제 기준에 따른 절차를 거쳐 제공됩니다.</li>
+                            <li>비예금 상품설명서는 은행이 판매하는 비예금 상품 중 확인해야 하는 사항을 안내합니다.</li>
+                            <li>충분한 이해 없이 답변하실 경우 추후 소송이나 분쟁에서 불리하게 작용할 수 있습니다.</li>
+                        </ul>
+                    </div>
+
+                    <!-- [CASE] 비예금상품 설명확인서 설문 시작 모든 문항 Default 미선택 -->
+                    <div class="case-wrap -sm jsSrveyWrap">
+                        <div class="field jsSrveyCurrent">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">01</span>
+                                    <span>일임형 개인종합자산관리계좌(ISA)는 예·적금 상품과 달리 예금자보호를 받지 못해 원금 손실이 발생할 수 있습니다. 투자로 인한 손실은 투자자 본인에게 귀속됩니다. 확인하셨나요?</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="box-radios">
+                                        <div class="box-radio -left">
+                                            <input type="radio" name="radio1" id="radio1-1">
+                                            <label for="radio1-1">예</label>
+                                        </div>
+                                        <div class="box-radio -left">
+                                            <input type="radio" class="-caution" name="radio1" id="radio1-2">
+                                            <label for="radio1-2">아니오</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- [CASE] 오답 선택했을 경우 -->
+                                    <div class="invest-notice">
+                                        <div class="inner">
+                                            <div class="message">
+                                                <span class="red">다시 확인해 주세요.</span><br>
+                                                일임형 개인종합자산관리계좌(ISA)는 예·적금과는 다른 상품으로 은행이 판매하는 상품이지만, 예금자보호를 받지 못해 원금 손실 위험이 있습니다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                </dd>    
+                            </dl>
+                        </div>
+
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">02</span>
+                                    <span>일임형 개인종합자산관리계좌(ISA)의 원금 손실 위험 발생 가능성에 대해 어떻게 생각하시나요?</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio2" id="radio2-1">
+                                        <label for="radio2-1" class="invest-unit isa-icon37">원금 손실 위험이 거의 없다.</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio2" id="radio2-2">
+                                        <label for="radio2-2" class="invest-unit isa-icon38">원금 손실 위험이 있지만 경미한 수준이다.</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio2" id="radio2-3">
+                                        <label for="radio2-3" class="invest-unit isa-icon39">원금 손실 위험이 있지만 높은 수익률을 위해 받아들여야 한다.</label>
+                                    </div>
+                                </dd>
+
+                                <!-- [CASE] 오답 선택했을 경우 -->
+                                <!-- <div class="invest-notice">
+                                    <div class="inner">
+                                        <div class="message">
+                                            <span class="red">다시 확인해 주세요.</span><br>
+                                            일임형 개인종합자산관리계좌(ISA)는 원금손실위험을 감수해야 하는 상품이며 시장상황 등에 따라 원금 전액 손실도 가능합니다.
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- // -->
+                            </dl>
+                        </div>
+
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">03</span>
+                                    <span>계약서를 통해 일임형 개인종합자산관리계좌(ISA)의 최대 원금 손실 규모를 어느 정도로 이해하셨나요?</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio3" id="radio3-1">
+                                        <label for="radio3-1" class="invest-unit isa-icon40">경미한 수준일 것이다.</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio3" id="radio3-2">
+                                        <label for="radio3-2" class="invest-unit isa-icon41">원금의 0 ~ 100%(원금 전액)의 손실이 발생할 수 있다.</label>
+                                    </div>
+                                </dd>
+                                
+                                <!-- [CASE] 오답 선택했을 경우 -->
+                                <!-- <div class="invest-notice">
+                                    <div class="inner">
+                                        <div class="message">
+                                            <span class="red">다시 확인해 주세요.</span><br>
+                                            일임형 개인종합자산관리계좌(ISA)는 100%(원금 전액 손실)까지 손실이 발생할 수 있는 상품입니다.
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- // -->
+                            </dl>
+                        </div>
+
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">04</span>
+                                    <span>원금 손실 가능성과 최대 손실 가능금액을 이해하고, 손실 위험이 있음에도 일임형 개인종합자산관리계좌 (ISA)에 가입하시겠어요?</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="box-radios">
+                                        <div class="box-radio -left">
+                                            <input type="radio" name="radio4" id="radio4-1">
+                                            <label for="radio4-1">예</label>
+                                        </div>
+                                        <div class="box-radio -left">
+                                            <input type="radio" name="radio4" id="radio4-2">
+                                            <label for="radio4-2">아니오</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- [CASE] 오답 선택했을 경우 -->
+                                    <!-- <div class="invest-notice">
+                                        <div class="inner">
+                                            <div class="message">
+                                                <span class="red">다시 확인해 주세요.</span><br>
+                                                일임형 개인종합자산관리계좌(ISA)는 원금 손실 위험 최대 원금 손실 규모를 정확하게 이해한 후, 가입할 수 있는 상품입니다.
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                <!-- // -->
+                                </dd>    
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- [CASE] 끝 -->
+
+                    <!-- 플로팅 버튼 -->
+                    <div class="floating-wrap">
+                        <div class="floating-btn" role="button">
+                            <p>
+                                원금손실<br>
+                                가능상품
+                            </p>
+                        </div>
+                        <a class="floating_close" title="원금 손실가능 상품 플로팅버튼 닫기"></a>
+                    </div>
+                    <!-- // 플로팅 버튼 -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 설문 인터렉션 예시
+        const jsSrveyHandle = document.querySelectorAll('.jsSrveyWrap input');
+        jsSrveyHandle.forEach(element => {
+            element.addEventListener('click',function (e) {
+                jsSrveyNext(this)
+            })
+        });
+    </script>
+</body>
+</html>

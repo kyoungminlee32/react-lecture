@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>외환 | 상품상세</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+                    <h1 class="title">상품상세</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                        <button type="button" class="func -menu"><span class="hide">전체메뉴</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner center">
+                    <h1 class="title">외환 적금</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="product-detail-wrap">
+                        <!-- 상품 안내 영역 -->
+                        <div class="procuct-summary">
+                            <div class="info-area">
+                                <div class="title-area">
+                                    <h2>올원외화포켓적립예금</h2>
+                                    <div class="hashtag"><span>#NH올원뱅크전용</span><span>#환율우대</span></div>   <!-- [240419]텍스트 변경, 추가 -->
+                                </div><!-- //.title-area -->
+                                
+                                <div class="subtitle-area">
+                                    <div class="procuct-currency point">USD, JPY, EUR, CNY</div>   <!-- [240419]텍스트 변경 -->
+                                    <ul class="product-dl-list">
+                                        <li class="range">
+                                            <dl>
+                                                <dt>계약기간</dt>
+                                                <dd>12개월 단일</dd>   <!-- [240520]텍스트 변경 -->
+                                            </dl>
+                                        </li>
+                                        <li class="cost -type2">   <!-- [240320]클래스 -type2 추가 -->
+                                            <dl>
+                                                <dt>가입금액</dt><!-- 2024-05-02 문구 수정 -->
+                                                <dd>USD10, JPY1,000, EUR10, CNY100</dd>   <!-- [240419]텍스트 변경 -->
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div><!-- //.subtitle-area -->
+
+                                <div class="top-join-btn"><button type="button" class="button -lg -primary">가입하기</button></div>
+                            </div><!-- //.info-area -->
+
+                            <div class="loadArea" data-includ="/content/nhbank/html/ef/ef60000525_de.html"></div>
+
+                        </div><!-- //.procuct-summary -->
+                        <!-- //상품 안내 영역 -->
+
+                        <!-- 상품 정보 영역 -->
+                        <div class="procuct-info">
+                            <div class="segments -tabstyle">
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div role="tablist" class="list">
+                                            <div class="item -active"><button type="button" role="tab" aria-selected="true" aria-controls="segments-panel01" id="segment01">상품안내</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel02" id="segment02">금리안내</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel03" id="segment03">기타사항</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="segments-panels">
+                                <div role="tabpanel" aria-labelledby="segment01" id="segments-panel01" class="segments-panel -active" tabindex="0">
+                                    <dl class="prodect-info-dl">
+                                        <dt class="h5">가입대상</dt>
+                                        <dd>
+                                            <p class="p">국민인 개인(거주자)</p>
+                                        </dd>
+
+                                        <dt class="h5">가입통화</dt>
+                                        <dd>
+                                            <p class="p">USD, JPY, EUR, CNY(1계좌 1통화 예치)</p>
+                                        </dd>
+
+                                        <dt class="h5">가입기간</dt>
+                                        <dd>
+                                            <p class="p">12개월 단일</p>
+                                        </dd>
+
+                                        <dt class="h5">가입좌수</dt>
+                                        <dd>
+                                            <p class="p">1인당 최대 4개 계좌</p>
+                                        </dd>
+
+                                        <dt class="h5">최초 가입금액</dt>
+                                        <dd>
+                                            <div class="case-wrap -xxs">
+                                                <div class="table">
+                                                    <table>
+                                                        <caption><span class="hide">예치통화별 최초 가입금액</span></caption>
+                                                        <colgroup>
+                                                            <col style="width:40%">
+                                                            <col style="width:60%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">예치통화</th>
+                                                                <th scope="col">최초 가입금액</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><span><span data-countrycode="001" class="-sm -tble"></span>USD</span></td>
+                                                                <td>10달러</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span><span data-countrycode="002" class="-sm -tble"></span>JPY</span></td>
+                                                                <td>1,000엔</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span><span data-countrycode="003" class="-sm -tble"></span>EUR</span></td>
+                                                                <td>10유로</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span><span data-countrycode="004" class="-sm -tble"></span>CNY</span></td>
+                                                                <td>100위안</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>                                            
+                                        </dd>
+                                        
+                                        <dt class="h5">추가적립</dt>
+                                        <dd>
+                                            <ul class="ul -bullet">
+                                                <li>만기일 7일 전까지 적립 가능, 만기 후에는 적립 불가</li>
+                                                <li>추가 적립건의 만기일은 동일</li>
+                                                <li>추가 적립 횟수는 제한 없음</li>
+                                                <li>일일 추가적립 가능 금액</li>
+                                            </ul>
+
+                                            <div class="case-wrap -xxs">
+                                                <div class="table">
+                                                    <table>
+                                                        <caption><span class="hide">예치통화별 추가 적립 금액</span></caption>
+                                                        <colgroup>
+                                                            <col style="width:40%">
+                                                            <col style="width:60%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">예치통화</th>
+                                                                <th scope="col">추가 적립 금액</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><span><span data-countrycode="001" class="-sm -tble"></span>USD</span></td>
+                                                                <td>최저 10달러 이상 ~ 최대 500달러 이하</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span><span data-countrycode="002" class="-sm -tble"></span>JPY</span></td>
+                                                                <td>최저 1,000엔 이상 ~ 최대 50,000엔 이하</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span><span data-countrycode="003" class="-sm -tble"></span>EUR</span></td>
+                                                                <td>최저 10유로 이상 ~ 최대 500유로 이하</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span><span data-countrycode="004" class="-sm -tble"></span>CNY</span></td>
+                                                                <td>최저 100위안 이상 ~ 최대 3,000위안 이하</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div> 
+                                        </dd>
+
+                                        <dt class="h5">금리안내</dt>
+                                        <dd>
+                                            <p class="p">추가적립은 “쏙~입금”을 통해 편하게 이용이 가능해요!<br>“쏙~입금”이 궁금하시면</p>
+                                        </dd>
+
+                                        <dt class="h5">적용금리</dt>
+                                        <dd>
+                                            <p class="p">적립회차 단위로 입금 당시 고시된 기간별 외화정기예금 금리 적용(적립회차별 금리 각각 적용)</p>
+                                        </dd>
+
+                                        <dt class="h5">중도해지금리 및 만기 후 금리(연%, 세전)</dt>
+                                        <dd>
+                                            <p class="p">NH농협은행 외화정기예금 중도해지금리 및 만기 후 금리 적용</p>
+                                        </dd>
+
+                                        <dt class="h5">이자지급방식</dt>
+                                        <dd>
+                                            <p class="p">만기일시지급식 : 만기(후) 또는 중도해지 요청 시 이자를 지급</p>
+                                        </dd>
+
+                                        <dt class="h5">분할인출</dt>
+                                        <dd>
+                                            <p class="p">만기 전 10회에 한하여 분할인출 가능</p>
+                                            <ul class="ul -bullet">
+                                                <li>적립회차 단위로 고객이 지정하여 인출<br>(적립금 한 회차의 일부 금액 인출은 불가)</li>
+                                                <li>10회 초과 시 전액 중도해지 처리</li>
+                                                <li>분할인출 시 중도해지 금리 적용</li>
+                                            </ul>
+                                        </dd>
+
+                                        <dt class="h5">만기 자동 해지</dt>
+                                        <dd>
+                                            <ul class="ul -bullet">
+                                                <li>만기일에 고객님의 올원출금계좌(원화입출식계좌)로 자동으로 해지하여 입금</li>
+                                                <li>환율은 만기일에 고시된 전신환매입율이 적용</li>
+                                                <li>신규 가입 시 만기 자동해지를 신청하여야 하며, 미신청 시는 고객님이 직접 해지 처리</li>
+                                            </ul>
+                                        </dd>
+
+                                        <dt class="h5">우대서비스</dt>
+                                        <dd>
+                                            <ul class="ul -bullet">
+                                                <li>환율스프레드 우대<br>이 예금에 원화대가로 신규가입, 추가적립, 분할인축 및 새지할 때에는 통화별 전신환율의 스프레드를 최대 70~40% 자동우대(할인)
+                                                    <div class="case-wrap -xxs">
+                                                        <div class="table">
+                                                            <table>
+                                                                <caption><span class="hide">예치통화별 우대환율혜택</span></caption>
+                                                                <colgroup>
+                                                                    <col style="width:40%">
+                                                                    <col style="width:60%">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">구분</th>
+                                                                        <th scope="col">우대환율혜택</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><span><span data-countrycode="001" class="-sm -tble"></span>USD</span></td>
+                                                                        <td>70%</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span><span data-countrycode="002" class="-sm -tble"></span>JPY</span></td>
+                                                                        <td>70%</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span><span data-countrycode="003" class="-sm -tble"></span>EUR</span></td>
+                                                                        <td>70%</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span><span data-countrycode="004" class="-sm -tble"></span>CNY</span></td>
+                                                                        <td>40%</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div> 
+                                                </li>
+                                                <li>현찰수수료 우대<br>이 예금을 당행 영업점에서 외화현찰로 분할인출 또는 해지 거래시에 고객이 부담하는 통화별 현찰수수료율의 60% 자동 우대
+                                                    <!-- [240520]텍스트 삭제 -->
+                                                    <!-- <div>
+                                                        <ul class="ul -dash">
+                                                            <li>USD/JPY : 1.5%  0.6%</li>
+                                                            <li>EUR/CNY : 3.0%  1.2%</li>
+                                                        </ul>
+                                                    </div> -->
+                                                    <!-- //[240520]텍스트 삭제 -->
+                                                </li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div role="tabpanel" aria-labelledby="segment02" id="segments-panel02" class="segments-panel" tabindex="0">
+                                    <!-- <h3 class="h4">금리안내</h3> -->   <!-- [240315]추가 -->
+                                    <div class="foresearch">
+                                        <div class="mix">
+                                            <div class="select">
+                                                <button type="button" aria-haspopup="true" title="통화 선택"><span data-countrycode="001" class="-sm"></span>USD</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="mix datepicker">
+                                            <div class="text" data-clear="false">
+                                                <input type="text" class="left-side" id="gga" value="2023.08.23" title="첫번째 날짜선택" aria-haspopup="true" readonly>
+                                            </div>
+                                            <div class="space -lined date">
+                                                <button type="button" class="icon-button -calendar" aria-haspopup="true"><span class="hide">달력 보기</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="button-box-wrap12">
+                                        <button type="button" class="button -lg">조회</button>
+                                    </div>
+
+                                    <div class="case-wrap -xs">
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">통화별 거주자와 비거주자의 금리</span></caption>
+                                                <colgroup>
+                                                    <col style="width:30%">
+                                                    <col style="width:35%">
+                                                    <col style="width:35%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" rowspan="2">통화</th>
+                                                        <th scope="col" colspan="2">금리(연이율/세전)</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">거주자</th>
+                                                        <th scope="col">비거주자</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>USD</td>
+                                                        <td>0.01000</td>
+                                                        <td>0.01000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div role="tabpanel" aria-labelledby="segment03" id="segments-panel03" class="segments-panel" tabindex="0">
+                                    <!-- <h3 class="h4">기타사항</h3> -->   <!-- [240315]추가 -->
+                                    <h4 class="h5">가입대상</h4>
+                                    <p class="p">통화별 고시 외화정기예금금리(2013.12.27현재, 세전)</p>   <!-- [240520]텍스트 변경 -->
+                                    <div class="case-wrap -xxs">
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">통화별 고시 회화정기예금금리</span></caption>
+                                                <colgroup>
+                                                    <col style="width:33.3%">
+                                                    <col style="width:33.3%">
+                                                    <col style="width:33.3%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">구분</th>
+                                                        <th scope="col">우대환율혜택</th>
+                                                        <th scope="col">가입기간</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><span><span data-countrycode="001" class="-sm -tble"></span>USD</span></td>
+                                                        <td>연 4.70%</td>
+                                                        <td rowspan="4">12개월</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span><span data-countrycode="002" class="-sm -tble"></span>JPY</span></td>
+                                                        <td>연 0.00%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span><span data-countrycode="003" class="-sm -tble"></span>EUR</span></td>
+                                                        <td>연 2.90%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span><span data-countrycode="004" class="-sm -tble"></span>CNY</span></td>
+                                                        <td>연 1.12%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                
+                                    <ul class="ul -bullet">
+                                        <li>위 금리는 12개월 예치시에 적용되는 금리입니다.</li>
+                                        <li>적립금의 입금일이 다른 경우 예치기간이 달라지므로 적용금리가 다름에 유의하시기 바랍니다.</li>
+                                        <li>예치기간별 외화정기예금금리는 [당행 인터넷뱅킹 홈페이지 > 외환 > 외화예금>외화예금금리조회]에서 확인이 가능합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //상품 정보 영역 -->
+
+                        <!-- 상품 추가 정보 영역 -->
+                        <div class="product-other">
+                            <!-- 상품설명서 및 약관 -->
+                            <div class="product-agree-area">
+                                <div class="accordion -lg -active" data-role="fold">
+                                    <button type="button" class="title" data-role="marker">상품설명서 및 약관</button>
+                                    <div class="panel" data-role="hidden">
+                                        <div class="shortcut -boxType">
+                                            <ul>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">올원외화포켓적립예금 상품안내서</a></li>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">올원외화포켓적립예금 약관</a></li>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">예금거래기본약관, 외화예금거래기본약관, 계좌간자동이체약관</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //상품설명서 및 약관 -->
+
+                            <!-- 예금자보호 (관리자) -->
+                            <div class="loadArea" data-includ="/content/nhbank/html/cn/common/protect01.html"></div>
+                            <!-- //예금자보호 (관리자) -->
+
+                            <!-- 준법감시 심의필 (관리자) -->
+                            <div class="product-deliberate">
+                                <p class="p">준법감시심의필 000-0000(심의일:YYYY.MM.DD)<br>유효기간 : YYYYY.MM.DD ~ YYYYY.MM.DD</p>
+                            </div>
+                            <!-- //준법감시 심의필 (관리자) -->
+
+                            <!-- 공유 -->
+                            <div class="product-share">
+                                <ul>
+                                    <li><button type="button" class="share" aria-haspopup="true"><span class="hide">공유</span></button></li>   
+                                    <li><button type="button" class="wishlist"><span class="hide">장바구니</span></button></li>                                             
+                                </ul>
+                            </div>
+                            <!-- //공유 -->
+                            
+                            <!-- 추천상품 -->
+                            <div class="product-recommend">
+                                <h4 class="h5"><span>김농협</span>님을 위한 추천 상품</h4>
+                                <div class="product-recommend-list">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">다통화외화예금</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">NH고향사랑 기부적금</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">NH고향사랑 기부적금</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //추천상품 -->
+                        </div>
+                        <!-- //상품 추가 정보 영역 -->
+                    </div><!-- //.product-detail-wrap -->
+                </div>
+
+                <div class="fixer -jsProcuctBtn">
+                    <div class="buttons">
+                        <button type="button" class="button -lg">상담</button>
+                        <button type="button" class="button -lg -primary">가입하기</button>
+                    </div>
+                </div>
+
+                <!-- 토스트팝업은 -active 클래스 사용하여 실행합니다 -->
+                <div class="toast" role="alert" aria-live="assertive">
+                    <div class="message">
+                        <p>장바구니에 담었어요.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+        procuctDatailAct();
+
+        // html 파일 로드 (퍼블확인용)
+        incHtml();
+        function incHtml() {
+            $('[data-includ]').each(function () {
+                $this = $(this);
+                var $url = $this.attr('data-includ')
+                $this.load($url)
+            })
+        }
+        
+        
+        //Layer.open('layer');
+
+        // 레이어 닫기(마지막 인자 기본값: false)
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // });
+
+        // 레이어 닫기 + DOM 삭제
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

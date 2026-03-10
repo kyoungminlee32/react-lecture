@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/insurance.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">보험 설계</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top"> <!-- [240110] 프로그레스바 추가 -->
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">보장받을 항목을 선택해 주세요</h2>
+                    </div>
+                    <div class="field">
+                        <dl class="dl -security">
+                            <div class="sumgroup"> <!-- ui수정 240122 (sumgroup 클래스 추가) -->
+                                <dt>합계 보험료</dt>
+                                <dd class="money"><span class="mo-year">매년</span>2,940원</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="field right">
+                        <div class="checkbox -sm allselect">
+                            <input type="checkbox" id="checkbox-sm">
+                            <label for="checkbox-sm">전체 선택</label>
+                        </div>
+                    </div>
+                    <!-- [240403] insurance-gadget 클래스로 감싸기 필요 -->
+                    <div class="insurance-gadget">
+                        <dl class="invest-qna">
+                            <dd class="answer-list">
+                                <div class="item host">
+                                    <input type="checkbox" name="radio1" id="radio1">
+                                    <label for="radio1" class="invest-unit in-icon84">
+                                        <span class="sick">위암<br>2,940원</span>    
+                                    </label>
+                                    <div class="ensure">
+                                        <p class="name">보장 내용</p> <!-- ux 라이팅 수정 -->
+                                        <span class="tooltip">
+                                            <button type="button" class="trigger">
+                                                <span class="hide">툴팁</span>
+                                            </button>
+                                            <span class="panel">
+                                                <span class="title">위암 진단자금</span>
+                                                <span class="t-content">
+                                                    피보험자가 보험기간 중 암보장개시일 이후에 위암으로 진단 확정된 경우 (최초 1회 한함, 1년 미만 50% 지급)                                                    
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item host">
+                                    <input type="checkbox" name="radio2" id="radio2">
+                                    <label for="radio2" class="invest-unit in-icon85">
+                                        <span class="sick">대장암<br>1,800원</span>    
+                                    </label>
+                                    <div class="ensure">
+                                        <p class="name">보장 내용</p> <!-- ux 라이팅 수정 -->
+                                        <span class="tooltip">
+                                            <button type="button" class="trigger">
+                                                <span class="hide">툴팁</span>
+                                            </button>
+                                            <span class="panel">
+                                                <span class="title">대장암 진단자금</span>
+                                                <span class="t-content">
+                                                    피보험자가 보험기간 중 암보장개시일 이후에 대장암으로 진단 확정된 경우 (최초 1회 한함, 1년 미만 50% 지급)                                                        
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item host">
+                                    <input type="checkbox" name="radio3" id="radio3">
+                                    <label for="radio3" class="invest-unit in-icon86">
+                                        <span class="sick">폐암<br>820원</span>    
+                                    </label>
+                                    <div class="ensure">
+                                        <p class="name">보장 내용</p> <!-- ux 라이팅 수정 -->
+                                        <span class="tooltip">
+                                            <button type="button" class="trigger">
+                                                <span class="hide">툴팁</span>
+                                            </button>
+                                            <span class="panel">
+                                                <span class="title">폐암 진단자금</span>
+                                                <span class="t-content">
+                                                    피보험자가 보험기간 중 암보장개시일 이후에 폐암으로 진단 확정된 경우 (최초 1회 한함, 1년 미만 50% 지급)                                                      
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item host">
+                                    <input type="checkbox" name="radio4" id="radio4">
+                                    <label for="radio4" class="invest-unit in-icon87">
+                                        <span class="sick">간암<br>740원</span>    
+                                    </label>
+                                    <div class="ensure">
+                                        <p class="name">보장 내용</p> <!-- ux 라이팅 수정 -->
+                                        <span class="tooltip">
+                                            <button type="button" class="trigger">
+                                                <span class="hide">툴팁</span>
+                                            </button>
+                                            <span class="panel">
+                                                <span class="title">간암 진단자금</span>
+                                                <span class="t-content">
+                                                    피보험자가 보험기간 중 암보장개시일 이후에 간암으로 진단 확정된 경우 (최초 1회 한함, 1년 미만 50% 지급)                                                     
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item host">
+                                    <input type="checkbox" name="radio5" id="radio5">
+                                    <label for="radio5" class="invest-unit in-icon88">
+                                        <span class="sick">일반암<br>140원</span> <!-- [240326] 문구수정 --> 
+                                    </label>
+                                    <div class="ensure">
+                                        <p class="name">보장 내용</p> <!-- ux 라이팅 수정 -->
+                                        <span class="tooltip">
+                                            <button type="button" class="trigger">
+                                                <span class="hide">툴팁</span>
+                                            </button>
+                                            <span class="panel"> <!-- [240326] 문구수정 -->
+                                                <span class="title">일반암 진단자금</span>
+                                                <span class="t-content">
+                                                    피보험자가 보험기간 중 암보장개시일 이후에 일반암으로 진단 확정된 경우 (최초 1회 한함, 1년 미만 50% 지급)                                                    
+                                                </span> <!-- //[240326] 문구수정 -->
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item host">
+                                    <input type="checkbox" name="radio6" id="radio6">
+                                    <label for="radio6" class="invest-unit in-icon89">
+                                        <span class="sick">췌장암<br>240원</span>    
+                                    </label>
+                                    <div class="ensure">
+                                        <p class="name">보장 내용</p> <!-- ux 라이팅 수정 -->
+                                        <span class="tooltip">
+                                            <button type="button" class="trigger">
+                                                <span class="hide">툴팁</span>
+                                            </button>
+                                            <span class="panel">
+                                                <span class="title">췌장암 진단자금</span>
+                                                <span class="t-content">
+                                                    피보험자가 보험기간 중 암보장개시일 이후에 췌장암으로 진단 확정된 경우 (최초 1회 한함, 1년 미만 50% 지급)                                                      
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item host"> <!-- [240110] 위치변경 -->
+                                    <input type="checkbox" name="radio9" id="radio9">
+                                    <label for="radio9" class="invest-unit in-icon92">
+                                        <span class="sick">소액암<br>7,520원</span>    
+                                    </label>
+                                    <div class="ensure">
+                                        <p class="name">보장 내용</p> <!-- ux 라이팅 수정 -->
+                                        <span class="tooltip">
+                                            <button type="button" class="trigger">
+                                                <span class="hide">툴팁</span>
+                                            </button>
+                                            <span class="panel">
+                                                <span class="title">소액암 진단자금 </span>
+                                                <span class="t-content">
+                                                    피보험자가 보험기간 중 기타피부암, 갑상선암, 제자리암, 경계성종양, 대장점막내암으로 진단 확정된 경우 (각 최초 1회 한함, 1년 미만 50% 지급)                                                       
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div> <!-- //[240110] 위치변경 -->                        
+                                <div class="item host">
+                                    <input type="checkbox" name="radio7" id="radio7" disabled>
+                                    <label for="radio7" class="invest-unit in-icon90">
+                                        <span class="sick">남성 특정암<br>0원</span> <!-- ux 라이팅 수정 -->   
+                                    </label>
+                                    <div class="ensure">
+                                        <p class="name">보장 내용</p> <!-- ux 라이팅 수정 -->
+                                        <span class="tooltip">
+                                            <button type="button" class="trigger">
+                                                <span class="hide">툴팁</span>
+                                            </button>
+                                            <span class="panel">
+                                                <span class="title">남성 특정암 진단자금</span> <!-- ux 라이팅 수정 -->
+                                                <span class="t-content">
+                                                    피보험자가 보험기간 중 암보장개시일 이후에 남성 특정암으로 진단 확정된 경우 (최초 1회 한함, 1년 미만 50% 지급)                                                   
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item host">
+                                    <input type="checkbox" name="radio8" id="radio8">
+                                    <label for="radio8" class="invest-unit in-icon91">
+                                        <span class="sick">여성 특정암<br>7,720원</span> <!-- ux 라이팅 수정 -->  
+                                    </label>
+                                    <div class="ensure">
+                                        <p class="name">보장 내용</p> <!-- ux 라이팅 수정 -->
+                                        <span class="tooltip">
+                                            <button type="button" class="trigger">
+                                                <span class="hide">툴팁</span>
+                                            </button>
+                                            <span class="panel">
+                                                <span class="title">여성 특정암 진단자금</span> <!-- ux 라이팅 수정 -->
+                                                <span class="t-content">
+                                                    피보험자가 보험기간 중 암보장개시일 이후에 여성 특정암으로 진단 확정된 경우 (최초 1회 한함, 1년 미만 50% 지급)                                                      
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!-- // [240403] insurance-gadget 클래스로 감싸기 필요 -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary -disabled">다음</button>
+                    </div>
+                </div>                
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

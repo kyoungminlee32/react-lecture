@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>보증서대출 부적격 대상자</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <!-- 240221 코드 전체 변경 -->
+            <main class="contents">
+                <div class="content">
+                    <div class="page-img">
+                        <img src="/content/assets/imgs/img/utility/ico-incongruity.png" style="width:10rem"
+                            alt="모바일신분증 인증 예시">
+                    </div>
+                    <div class="h2-group">
+                        <!-- ui수정 240122 (h2 -> h1 수정) -->
+                        <h2 class="h1">
+                            대출을 신청할 수 없어요
+                        </h2>
+                        <!-- 240328 코드 변경 -->
+                        <div class="case-wrap -xxs">
+                            <h3 class="h5">보증서대출 대상자가 아닙니다.</h3>
+                        </div>
+                    </div>
+                    <div class="case-wrap">
+                        <p class="p">
+                            자세한 내용은 고객행복센터로 문의해 주세요. <br>
+                            고객행복센터 : 1661-3000, 1600-2800
+                        </p>
+                        <!-- [240326] 공통 에러코드 아코디언 수정 요청 -->
+                        <div class="error-accordion">
+                            <div class="accordion" data-role="fold">
+                                <button type="button" class="title" data-role="marker">오류코드확인</button>
+                                <div class="panel" data-role="hidden">
+                                    <p class="red">ABCD0000</p>
+                                    <p class="red">ABCD0000</p>
+                                    <p class="red">ABCD0000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// [240326] 공통 에러코드 아코디언 수정 요청 -->                
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // Popup.open('popup');
+    </script>
+</body>
+
+</html>

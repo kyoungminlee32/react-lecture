@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대표자 · 사업자 정보를 확인</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+</head>
+
+<body>
+    <div id="layer" class="layer" aria-labelledby="coupon-head" role="region">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <!-- 240202 ux라이팅 수정 -->
+                    <h1 class="title">대표자 · 사업자정보를 확인해 주세요</h1>
+                    <!-- //240202 ux라이팅 수정 -->
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="content">
+                    <dl class="dl -lined">
+                        <div>
+                            <dt>대표자 이름</dt>
+                            <dd>김금상</dd>
+                        </div>
+                        <div>
+                            <!-- 240202 ux라이팅 수정 -->
+                            <dt>대표자 주민등록번호</dt>
+                            <!-- //240202 ux라이팅 수정 -->
+                            <dd>123456-*******</dd>
+                        </div>
+                        <div>
+                            <dt>휴대폰번호</dt>
+                            <dd>010-1234-****</dd>
+                        </div>
+                        <div>
+                            <dt>우편번호</dt>
+                            <dd>11111</dd>
+                        </div>
+                        <div>
+                            <!-- 2024-05-31 띄어쓰기 수정 -->
+                            <dt>대표자 집 주소</dt>
+                            <!-- 2024-05-31 띄어쓰기 수정 -->
+                            <dd>서울시 중구 통일로 120</dd>
+                        </div>
+                        <div>
+                            <dt>사업자등록번호</dt>
+                            <dd>111-11-11111</dd>
+                        </div>
+                        <div>
+                            <dt>상호</dt>
+                            <dd>농협</dd>
+                        </div>
+                        <div>
+                            <!-- 240306 ux라이팅 수정 -->
+                            <dt>개업(일)</dt>
+                            <!-- //240306 ux라이팅 수정 -->
+                            <dd>yyyy.mm.dd</dd>
+                        </div>
+                        <div>
+                            <!-- 240306 ux라이팅 수정 -->
+                            <dt>업종</dt>
+                            <!-- //240306 ux라이팅 수정 -->
+                            <dd>지주회사</dd>
+                        </div>
+                    </dl>
+                    <!-- 240306 ux라이팅 수정 -->
+                    <ul class="ul -bullet -small">
+                        <li>NH농협은행에 등록된 고객님의 정보입니다.</li>
+                        <li>대출 심사와 관련 있으니 최근 정보와 다른 부분이 있으면 <span class="medium">NH농협은행에 방문하여 고객님의 정보를 변경</span>해 주세요.</li>
+                    </ul>
+                    <!-- //240306 ux라이팅 수정 -->
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Layer.open('layer');
+
+        // 레이어 닫기(마지막 인자 기본값: false)
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // });
+
+        // 레이어 닫기 + DOM 삭제
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+
+</html>

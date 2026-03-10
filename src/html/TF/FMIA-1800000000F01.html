@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/etf.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">ETF 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <h2 class="h2">상품 내용을 이해하였는지 확인해 주세요</h2>
+                        <!-- 240425 결함4831 : 문구삭제 -->
+                        <!-- <p class="desc">상품설명 내용을 하단 텍스트 박스에 내용을 직접 작성해 주세요.</p> -->
+                        <!-- // 240425 결함4831 : 문구삭제 -->
+                    </div>
+
+                    <!-- 최초 체크 선택 x / 체크시 label-state에 -checking클래스 추가 -->
+                    <!-- ui수정 240122 (field안에 인풋 삭제 마크업 변경) -->
+                    <div class="field">
+                        <div class="etf-checkbox -sm">
+                            <input type="checkbox" id="checkbox-smc1" checked>
+                            <label for="checkbox-smc1">신탁 운용 방법<span class="label-state -checking">ELT</span></label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="etf-checkbox -sm">
+                            <input type="checkbox" id="checkbox-smc2" checked>
+                            <label for="checkbox-smc2">운용자산명<span class="label-state -checking">TIGER 2차전지테마 경영글벌 ETF</span></label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="etf-checkbox -sm">
+                            <input type="checkbox" id="checkbox-smc3" checked>
+                            <label for="checkbox-smc3">(TIGER 2차전지테마 경영글벌 ETF)의 운용비중은<span class="label-state -checking">100% 이내</span></label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="etf-checkbox -sm">
+                            <input type="checkbox" id="checkbox-smc4" checked>
+                            <label for="checkbox-smc4">(TIGER 2차전지테마 경영글벌 ETF)의 위험도는<span class="label-state -checking">보통위험</span> 임을 확인하였음</label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="etf-checkbox -sm">
+                            <input type="checkbox" id="checkbox-smc5">
+                            <label for="checkbox-smc5">(TIGER 2차전지테마 경영글벌 ETF)의 상품설명서 및 계약서류를<span class="label-state">교부받았음</span></label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="etf-checkbox -sm">
+                            <input type="checkbox" id="checkbox-smc6">
+                            <label for="checkbox-smc6">(TIGER 2차전지테마 경영글벌 ETF)의 상품 내용, 핵심투자위험(신용위험, 시장위험, 환위험 등), 원금손실 가능성(예금자보호법상 보호상품 아님), 수수료, 조기 상환 조건, 계약의 해제∙해지, 금융취약 소비자 우선설명에 관한 사항에 대하여 설명을<span class="label-state">듣고 이해하였음</span></label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="etf-checkbox -sm">
+                            <input type="checkbox" id="checkbox-smc7">
+                            <!-- 2024-06-10 마크업수정 (p 테그 삭제) -->
+                            <label for="checkbox-smc7">
+                                동 상품의 투자위험은 <span class="label-state">6등급 중 4등급(보통위험)</span>으로 원금 전액을 손실할 수 있으며 조기상환, 환매 불가 여부 등 해당 상품의 특성을 <span class="label-state">충분히 이해하였음</span>
+                            </label>
+                            <!-- 2024-06-10 마크업수정 (p 테그 삭제) -->
+                        </div>
+                    </div>
+                    <!-- //ui수정 240122 (field안에 인풋 삭제 마크업 변경) -->
+                    <!-- // 최초 체크 선택 x / 체크시 label-state에 -checking클래스 추가 -->
+
+                    <div class="case-wrap">
+                        <div class="checkbox -sm">
+                            <input type="checkbox" id="checkbox-sm8">
+                            <label for="checkbox-sm8">본인은 상품의 특성 및 위험을 충분히 이해하고 본인 판단과 책임하에 작성하였습니다.</label>
+                        </div>
+                    </div>
+
+                    <!-- ui수정 240125 (플로팅 버튼 추가) -->
+                    <!-- 플로팅 버튼 -->
+                    <div class="floating-wrap">
+                        <div class="floating-btn" role="button">
+                            <p>
+                                원금손실<br>
+                                가능상품
+                            </p>
+                        </div>
+                        <a class="floating_close" title="원금 손실가능 상품 플로팅버튼 닫기"></a>
+                    </div>
+                    <!-- // 플로팅 버튼 -->
+                    <!-- //ui수정 240125 (플로팅 버튼 추가) -->
+                </div>
+
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <li>신탁재산의 운용 결과에 따라 이익, 손실이 발생할 수 있습니다.</li>
+                                <li>상품에 대하여 충분히 이해하고 투자를 결정해 주시기 바랍니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

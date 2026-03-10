@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출신청 정보 입력_바닥 페이지</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <!-- 240131 ux라이팅 수정 -->
+                        <h2 class="h2">대출 신청정보를 입력해 주세요</h2>
+                        <!-- //240131 ux라이팅 수정 -->
+                    </div>
+                    <dl class="dl -box -row -w50">
+                        <div>
+                            <!-- 240126 ux라이팅 수정 -->
+                            <dt>대출 가능금액</dt>
+                            <!-- //240126 ux라이팅 수정 -->
+                            <dd>1,000만원</dd>
+                        </div>
+                        <div>
+                            <dt>이미 받은 금액</dt>
+                            <dd>700만원</dd>
+                        </div>
+                    </dl>
+                    <div class="field">
+                        <!-- 240110 ux라이팅 수정 -->
+                        <label for="text" class="label">대출 신청금액</label>
+                        <!-- //240110 ux라이팅 수정 -->
+                        <div class="mix">
+                            <div class="text -won">
+                                <!-- 231205 value값 수정 -->
+                                <input type="tel" id="text" class="right num-call" value="700,000,000" aria-haspopup="true" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">칠억원</p>
+                                <p class="info">대출 신청금액 = 이미 받은 금액 + 추가 신청금액</p>   <!-- [240610]텍스트 변경 -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <!-- 240124 ux 라이팅 수정  -->
+                        <p class="label">
+                            대출방법
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">개별거래</span>
+                                    <span class="t-content">
+                                        <!-- 240313 dot 클래스 삭제 -->
+                                        <span>신청한 대출금액을 한 번에 입출금계좌로 입금 받는 방법</span>
+                                    </span>
+                                    <span class="title">한도거래 (마이너스통장대출)</span>
+                                    <span class="t-content">
+                                        <!-- 240313 dot 클래스 삭제 -->
+                                        <span>신청한 대출금액을 거래하는 입출금계좌를 이용하여 수시로 빌려 쓰는 방법</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <!-- //240124 ux 라이팅 수정  -->
+                        <div class="select">
+                            <button type="button">개별거래</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <!-- 240124 ux 라이팅 수정  -->
+                        <p class="label">
+                            상환방법
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">만기일시상환(직접 상환)</span>
+                                    <span class="t-content">
+                                        <!-- 240313 dot 클래스 삭제 -->
+                                        <span>대출 만기일에 고객님이 직접 상환하는 방법</span>
+                                    </span>
+                                    <span class="title">만기일시상환(자동이체 상환)</span>
+                                    <span class="t-content">
+                                        <!-- 240313 dot 클래스 삭제 -->
+                                        <span>대출 만기일에 이자 납입계좌에서 자동 상환하는 방법</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <!-- //240124 ux 라이팅 수정  -->
+                        <div class="select">
+                            <button type="button">만기일 직접상환</button>
+                        </div>
+                    </div>
+
+                    <!-- 2024-06-11 순서 변경 -->
+                    <!--[CASE] 청약저축 대출의 경우-->
+                    <!-- ui수정 240122 (코드변경) -->
+                    <div class="field">
+                        <p class="label">이자 납입일</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">매월 3일</button>
+                        </div>
+                    </div>
+                    <!-- //ui수정 240122 (코드변경) -->
+                    <!--//[CASE] 청약저축 대출의 경우-->
+
+                    <!-- [240610]추가 -->
+                    <div class="field">
+                        <p class="label">금리산정주기</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">12개월</button>
+                        </div>
+                    </div>
+                    <!-- //[240610]추가 -->
+
+                    
+                    <!-- 
+                        //2024-06-11 순서 변경 -->
+
+
+                    <!-- ui수정 240122 (코드 변경) -->
+                    <div class="field">
+                        <!-- 240124 ux 라이팅 수정  -->
+                        <p class="label">대출금 입금계좌(이자 납입계좌)</p>
+                        <!-- //240124 ux 라이팅 수정  -->
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">
+                                <div class="selection">
+                                    <div data-bankcode="011" class="info">
+                                        <span class="name">
+                                            <span>주거래우대통장</span>
+                                        </span>
+                                        <span class="account-number">
+                                            <span>NH농협</span>
+                                            <span>111-1234-5678-99</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <!-- 240219 코드 변경 -->
+                        <div class="checkbox -sm">
+                            <input type="checkbox" id="checkbox-smc" checked>
+                            <label for="checkbox-smc">인지세 출금을 확인하고 동의합니다.</label>
+                        </div>
+                        <div class="info-detail">
+                            <a href="javascript:void(0)" class="a -arrow">인지세 안내</a>
+                        </div>
+                        <!-- //240219 코드 변경 -->
+                    </div>
+                    <!-- [CASE] 초기값 -->
+                    <!-- <div class="field">
+                        <p class="label">대출금 입금계좌(이자 납입계좌)</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">계좌선택</button>
+                        </div>
+                    </div> -->
+                    <!-- //ui수정 240122 (코드 변경) -->
+                    <div class="case-wrap">
+                        <!-- 240228 ux라이팅 수정 -->
+                        <p class="label">담보계좌</p>
+                        <div class="account">
+                            <div data-bankcode="011" class="info">
+                                <span class="name">
+                                    <span>NH직장인월복리적금</span>
+                                </span>
+                                <span class="account-number">
+                                    <span>301-1234-5678-11</span>
+                                </span>
+                            </div>
+                        <!-- //240228 ux라이팅 수정 -->
+                            <dl class="dl">
+                                <div>
+                                    <dt>예금잔액</dt>
+                                    <dd><span>50,000,000</span>원</dd>
+                                </div>
+                                <div>
+                                    <dt>희망 관리점</dt>
+                                    <dd>서대문지점(02-1234-5678)</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="text" class="label">담보계좌 비밀번호</label>
+                        <div class="text">
+                            <input type="password" class="num-call" id="text" value="" placeholder="비밀번호 4자리 입력" aria-haspopup="true" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <!-- 240228 ux 라이팅 수정  -->
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <li>대출금 상환일은 담보 예·적금/신탁계좌의 만기일로 자동 지정됩니다.</li>
+                                <li>대출신청금액은 예·적금/신탁 납입액의 90%까지 10만원부터 2억원까지 10만원 단위로 신청할 수 있습니다.</li>
+                                <li>대출 이자는 대출금 입금계좌에서 자동이체됩니다. 자동이체 계좌를 변경하려면 자동이체 메뉴를 이용해 주세요.</li>
+                            </ul>
+                            <!-- //240228 ux 라이팅 수정  -->
+                        </div>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE]모든 항목 채워지면 활성화 -->
+                        <button type="button" class="button -lg -primary" disabled>다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

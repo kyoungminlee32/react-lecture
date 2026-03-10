@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>비대면 기한연기</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출기한연기</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <h2 class="h2">대출 기한연기 정보를 입력해 주세요</h2>
+                    </div>
+                    <h4 class="h5">기존계약정보</h4>
+                    <dl class="dl -box">
+                        <p class="box-title">NH모바일전세대출(주택도시보증공사)</p>
+                        <div>
+                            <dt>임차보증금</dt>
+                            <dd>220,000,000원</dd>
+                        </div>
+                        <div>
+                            <dt>임대차기간</dt>
+                            <dd>2022.03.15~2024.03.14</dd>
+                        </div>
+                        <div>
+                            <dt>목적물주소</dt>
+                            <dd>서울 노원구 통일로 120</dd>
+                        </div>
+                    </dl>
+                    
+                    <div class="field">
+                        <p class="label">전세계약 연장 여부</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">선택</button>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <p class="label">공동 임차인 존재여부</p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="period-point-color1-1" checked>
+                                <label for="period-point-color1-1">단독 계약</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="period-point-color1-2">
+                                <label for="period-point-color1-2">공동 임차인 있음</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <p class="label">결혼 여부</p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color2" id="period-point-color1-3" checked>
+                                <label for="period-point-color1-3">미혼</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color2" id="period-point-color1-4">
+                                <label for="period-point-color1-4">기혼</label>
+                            </div>
+                        </div>
+                        <p class="info">3개월 내 결혼예정자의 경우 기혼에 체크해 주세요.</p>
+                    </div>
+
+                    <div class="field">
+                        <label for="text" class="label">배우자 휴대폰 번호</label>
+                        <div class="mix">
+                            <div class="select flex-3">
+                                <button type="button" class="left-side" aria-haspopup="true" title="휴대폰번호 앞">010</button>
+                            </div>
+                            <div class="text flex-7" data-clear="false">
+                                <input type="tel" class="right-side num-call" id="phone" placeholder="숫자만 입력하세요." title="휴대폰번호 뒤">
+                            </div>
+                        </div>
+                        <div class="checkbox -sm">
+                            <input type="checkbox" id="checkbox-sm-checked" checked>
+                            <label for="checkbox-sm-checked">배우자의 정보 제공 동의 안내 문자메시지 보내기</label>
+                        </div>
+                        <div class="info-wrap">
+                            <p class="message">기혼이신 경우, 배우자의 주택 보유 수 확인을 위해 배우자의 정보 제공 동의를 진행합니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <p class="label">주택보유 수</p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period12344" id="box-radio1-111" checked>
+                                <label for="box-radio1-111">무주택</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period12344" id="box-radio1-211">
+                                <label for="box-radio1-211">1주택</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period12344" id="box-radio1-311">
+                                <label for="box-radio1-311">2주택 이상</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <p class="label">임대인 변경 여부</p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period--color1" id="period-point-color1-11" checked>
+                                <label for="period-point-color1-11">임대인 기존과 동일</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period--color1" id="period-point-color1-22">
+                                <label for="period-point-color1-22">임대인 변경</label>
+                            </div>
+                        </div>
+                        <p class="info">기존 임대인 이름 : 김농협</p>
+                        <p class="info">임대인 정보 확인을 위해 새로운 임대차계약서, 매매계약서 등을 필수로 요청드릴 수 있습니다.</p>
+                    </div>
+
+                    <div class="field">
+                        <p class="label">2020.07.10 이후 3억 초과 규제지역 아파트 취득 여부</p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="pcolor1" id="period-point-color1-33" checked>
+                                <label for="period-point-color1-33">아니오</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="pcolor1" id="period-point-color1-44">
+                                <label for="period-point-color1-44">예</label>
+                            </div>
+                        </div>
+                        <p class="info">규제지역 및 3억 초과 여부는 구입시점 기준으로 판단</p>
+                    </div>
+
+                    <div class="field">
+                        <p class="label">예외사유 구분 
+                            <span class="tooltip">
+                                <button type="button" class="tooltip-button" aria-haspopup="true"><span class="hide">툴팁</span></button>
+                            </span>
+                        </p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">선택</button>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <p class="label">임차보증금</p>
+                        <div class="data-box">
+                            <div class="data-box-title">갱신 전 금액</div>
+                            <div class="data-box-content">22,000,000원</div>
+                        </div>
+                        <div class="case-wrap -xxs">
+                            <div class="mix">
+                                <div class="text -won" data-clear="false">
+                                    <input type="tel" id="tt12" class="right num-call" value="20,000,000" aria-haspopup="true" readonly>
+                                    <div class="won">원</div>
+                                </div>
+                                <div class="info-wrap">
+                                    <p class="info right point">이억이천만원</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <p class="label">반환보증신청금액</p>
+                        <div class="data-box">
+                            <div class="data-box-title">기존 가입금액</div>
+                            <div class="data-box-content">20,000,000원</div>
+                        </div>
+                        <div class="case-wrap -xxs">
+                            <div class="mix">
+                                <div class="text -won" data-clear="false">
+                                    <input type="tel" id="tt12" class="right num-call" value="20,000,000" aria-haspopup="true" readonly>
+                                    <div class="won">원</div>
+                                </div>
+                                <div class="info-wrap">
+                                    <p class="info right point">이억원</p>
+                                    <p class="info -bullet">가입가능금액 : 대출금의 125%이상~임차보증금</p>
+                                    <p class="info -bullet">반환보증금액 증액 신청 시 영업점 방문이 필요합니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <p class="label">보증 우대정보입력(선택)
+                            <span class="tooltip">
+                                <button type="button" class="tooltip-button" aria-haspopup="true"><span class="hide">툴팁</span></button>
+                            </span>
+                        </p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">선택</button>
+                        </div>
+                        <p class="message">보증 우대 대상 증빙서류를 촬영 제출해주시기 바랍니다. (등본 및 가족관계증명서 제외)</p>
+                    </div>
+
+                    <div class="field">
+                        <p class="label">임대인 수</p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color2" id="period-point-color1-34" checked>
+                                <label for="period-point-color1-34">1명</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color2" id="period-point-color1-44">
+                                <label for="period-point-color1-44">2명 이상</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <hr class="hr -xl">
+                        <h4 class="h5">임대인 정보입력 1</h4>
+                        <p class="message">임대인 정보는 전세대출 심사 진행에 필요한 법률이 정한 바에 따라 임대차 계약 확인 목적으로만 이용됩니다.
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">관련법률안내</span>
+                                    <span class="t-content">
+                                        개인정보보호법 제15조 제1항 제2호,제4호,제6호(기타 개인정보), 제24조의2 제1항 제1호 <br>
+                                        주택도시기금법 시행령 제22조 제2항 제1호, 동 시행령 제26조 제2항 제1호 등
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+    
+                        <div class="field"> <!-- 애러일 경우 -error 클래스 추가 -->
+                            <label for="text1" class="label">이름</label>
+                            <div class="text">
+                                <input type="text" id="text1" value="" placeholder="이름 입력">
+                                <!-- [CASE] 애러일 경우 -->
+                                <!-- <p class="info red">이름을 입력해 주세요.</p> -->
+                                <!-- // [CASE] 애러일 경우 -->
+                            </div>
+                        </div>
+    
+                        <div class="field">
+                            <label for="rrn" class="label multi-label">주민등록번호</label>
+                            <div class="mix id-number">
+                                <div class="text" data-clear="false">
+                                    <input type="tel" class="left-side num-call" id="rrn" placeholder="앞 6자리" title="주민등록번호 앞자리" aria-haspopup="true" readonly>
+                                </div>
+                
+                                <div class="dash">-</div>
+                
+                                <div class="text" data-clear="false">
+                                    <input type="password"  class="right-side num-call"data-id="rrn" placeholder="뒤 7자리" title="주민등록번호 뒷자리" aria-haspopup="true" readonly>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="field">
+                            <label for="text01" class="label">휴대폰번호</label>
+                            <div class="mix">
+                                <div class="select flex-4">
+                                    <button type="button" class="left-side" aria-haspopup="true" title="휴대폰 앞자리 선택">010</button>
+                                </div>
+                                <div class="text flex-8" data-clear="false">
+                                    <input type="tel" id="text01" data-id="phone123" class="mid-side num-call" placeholder="-없이 입력" title="휴대폰 번호 뒷자리 입력" aria-haspopup="true" readonly>
+                                </div>
+                                <div class="space -lined right-side">
+                                    <!-- <button type="button" class="button -xs -fit" title="인증번호 요청">요청</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE]모든 항목 채워지면 활성화 -->
+                        <button type="button" class="button -lg -primary" disabled>다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

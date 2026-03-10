@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">금융상품 중요사항 확인</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <!-- [240724] 설명의무 관련 개선 -->
+                    <p class="p"><span class="point">금융소비자보호법 제19조(설명의무) 제1항에서 규정하고 있는 금융상품에 관한 중요한 사항을 안내해 드립니다.</span></p>
+                    <!-- // [240724] 설명의무 관련 개선 -->
+                    <div class="jsImportConfWrap">
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="total01">
+                                        <label for="total01">우선 설명사항(이자율)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="inner">
+                                    <div class="sm-title-group">
+                                        <h2 class="h5">상품안내</h2>
+                                        <h3 class="sub-title -gap">상품특징</h3>  <!-- [240201]클래스 -gap 추가 -->
+                                        <p class="info">목표환율을 매일 체크하여 도달 시 자동해지 되며, 목표환율 미도달 시 회전되는 상품</p>
+                                    </div>
+        
+                                    <div class="sm-title-group">
+                                        <h3 class="sub-title">가입대상</h3>
+                                        <p class="p">국민인 거주자 (개인 또는 법인)</p>
+                                    </div>
+                                      
+                                    <div class="sm-title-group">
+                                        <h3 class="sub-title">가입금액</h3>
+                                        <p class="p">미화 환산 100불 ~ 1,000,000불</p>
+                                    </div>
+        
+                                    <div class="sm-title-group">
+                                        <h3 class="sub-title">가입통화</h3>
+                                        <p class="p">USD, AUD, CNY(1계좌1통화)<br>- 단, 법인은 USD만 가능</p>
+                                    </div>
+                                        
+                                    <div class="sm-title-group">
+                                        <h3 class="sub-title">예치기간</h3>
+                                        <p class="p">12개월, 24개월, 36개월<br>- 회전주기 : 1, 2, 3,  6, 12개월 중 택 1 (회전주기는 금리가 변경되는 주기를 말함)</p>
+                                    </div>
+        
+                                    <div class="sm-title-group">
+                                        <h2 class="sub-title">만기약정이율</h2>
+                                        <p class="p">매 회전주기 시작일에 당행이 고시한 통화별, 기긴별 외화정기예금 금리 적용</p>
+                                    </div>
+                                        
+                                    <div class="sm-title-group">
+                                        <h2 class="h5">기타사항</h2>
+                                        <h3 class="sub-title">우대서비스</h3>
+                                        <ul class="ul -bullet">
+                                            <li>환율 스프레드 60% 우대 : 이 예금에 원화대가로 외화를 적립하거나 인출하는 경우</li>
+                                            <li>현찰수수료 면제 : 1회전주기 이상 경과 후 해지하는 경우</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="sm-title-group">
+                                        <h3 class="sub-title">목표환율 도달 시 자동해지</h3>
+                                        <ul class="ul -bullet">
+                                            <li>예금 신규가입 시 고객이 원하는 목표환율을 지정(가입 후 다음날부터 목표환율 변경 가능, 변경된 목표환율은 변경 다음날부터 적용)</li>
+                                            <li>매영업일 ‘당행이 고시하는 2회차 환율의 전신환매입률 ≥ 목표환율”인 경우 자동해지되어 사전에 지정한 원화계좌로 입금</li>
+                                            <li>회전주기 경과분은 만기이자, 회전주기 미경과분은 예치기간에 따른 중도해지이율 적용</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="sm-title-group">
+                                        <h3 class="sub-title">이자지급방식</h3>
+                                        <p class="p">만기일시지급식(복리)<br>- 회전주기별 원금에 새로 가산되는 이자는 세전금이며, 이자에 대한 원천징수는 만기시점에 실시</p> <!-- [231229]텍스트 수정 -->
+                                    </div>
+
+                                    <div class="sm-title-group">
+                                        <h3 class="sub-title">만기후이율</h3>
+                                        <p class="p">최종 회전주기에 적용되는 만기 약정금리의 3/10 적용</p>
+                                    </div>
+
+                                    <div class="sm-title-group">
+                                        <h3 class="sub-title">예금지급</h3>
+                                        <p class="p">영업점 및 비대면 채널을 통해 해지 가능</p>
+                                    </div>
+
+                                    <div class="sm-title-group">
+                                        <h3 class="sub-title">분할인출</h3>
+                                        <p class="p">불가</p>
+                                    </div>
+
+                                    <div class="sm-title-group">
+                                        <h3 class="sub-title">양도 및 담보제공</h3>
+                                        <p class="p">불가</p>
+                                    </div>
+
+                                    <div class="sm-title-group">
+                                        <h3 class="sub-title">세제혜택</h3>
+                                        <p class="p">해당사항 없음</p>
+                                    </div>
+        
+                                    <div class="sm-title-group">
+                                        <h3 class="sub-title">기타 유의사항</h3>
+                                        <ul class="ul -bullet">
+                                            <li>해당 상품은 환율변동으로 인하여 이익 또는 손실이 발생할 수 있습니다.</li>
+                                            <li>영업점에서 외화현찰로 찾을 경우 현찰수수료가 발생합니다.</li>
+                                        </ul>
+                                    </div>
+                                        
+                                    <div class="sm-title-group">
+                                        <h3 class="sub-title">원금 및 이자 지급제한</h3>
+                                        <ul class="ul -bullet">
+                                            <li>계좌에 압류, 가압류, 절권설정 등이 등록될 경우</li>
+                                            <li>예금잔액증명서 발급 당일에는 입출・출금・이체 등 잔액 변동 불가</li> <!-- [231229]텍스트 수정 -->
+                                        </ul>
+                                    </div>
+
+                                    <div class="sm-title-group">
+                                        <h3 class="sub-title">꼭 알아두세요</h3>
+                                        <ul class="ul -bullet">
+                                            <li>금융상품을 가입하시기 전에 상품설명서 및 약관을 반드시 읽어보시기 바랍니다.</li>
+                                            <li>금융소비자 보호에 관한 법률 제19조 제1항에 따른 설명을 받을 수 있는 권리가 있습니다.</li>
+                                            <li>기타 자세한 내용은 해당 상품 약관 및 상품 설명서를 참조하시거나, 가까운 NH농협은행 영업점 또는 고객행복센터(1661-3000,1522-3000)로 문의하시기 바랍니다.</li>
+                                            <li>약정된 만기일 이전에 해지하시면 중도해지금리가 적용되며, 중도해지금리는 약정금리보다 낮게 적용됨을 주의하시기 바랍니다.</li>
+                                        </ul>                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>     
+    
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="total03">
+                                        <label for="total03">중도해지에 따른 불이익 사항</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="inner">
+                                    <div class="sm-title-group">
+                                        <p class="p">약정된 만기일 이전에 해지하시면 중도해지금리가 적용되며, 중도해지금리는 약정금리보다 낮게 적용됨을 주의하시기 바랍니다.</p> 
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">경과기간에 따른 적용 이자율</span></caption>
+                                                <colgroup>
+                                                    <col style="width:30.0%">
+                                                    <col style="width:70.0%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">경과기간</th>
+                                                        <th scope="col">적용 이자율</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1회전 주기 도래 전 해지</td>
+                                                        <td>신규일~중도해지 전일에 대하여 예치기간에 따른 중도해지 이율 적용</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1회전 주기 도래 후 해지</td>
+                                                        <td>회전주기 경과분 : 만기이자 계산 적용 회전주기 미경과분 : ‘중도해지 직전 회전주기 종료일 ~ 중도해지 전일＇에 대하여 예치기간에 따라 중도해지 이율 적용</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7일 미만</td>
+                                                        <td>무이자</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7일 이상</td>
+                                                        <td>중도해지일이 속한 회전주기에 적용되는 약정금리의 2/10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1개월 이상</td>
+                                                        <td>중도해지일이 속한 회전주기에 적용되는 약정금리의 3/10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3개월 이상</td>
+                                                        <td>중도해지일이 속한 회전주기에 적용되는 약정금리의 5/10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6개월 이상</td>
+                                                        <td>예치당시 6개월물 고시금리</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <!-- [240509]추가 -->
+                                        <!-- [CASE]Muti-one 외화정기예금 / 외화정기 예금 중도해지 불이익 사항 -->
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">경과기간에 따른 적용 이자율</span></caption>
+                                                <colgroup>
+                                                    <col style="width:30.0%">
+                                                    <col style="width:70.0%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">경과기간</th>
+                                                        <th scope="col">적용 이자율</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>7일 미만</td>
+                                                        <td>무이자</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7일 이상</td>
+                                                        <td>약정금리의 2/10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1개월 이상</td>
+                                                        <td>약정금리의 3/10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3개월 이상</td>
+                                                        <td>약정금리의 5/10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6개월 이상</td>
+                                                        <td>예치당시 6개월물 고시금리 </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- [CASE]Muti-one 외화정기예금 / 외화정기 예금 중도해지 불이익 사항 -->
+                                        <!-- //[240509]추가 -->
+                                    </div>
+                                </div>         
+                            </div>
+                        </div>
+
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="total07">
+                                        <label for="total07">외화현찰수수료 설명 확인</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="inner">
+                                    <div class="sm-title-group">
+                                        <!-- [240328]삭제 및 추가 -->
+                                        <!-- <ul class="ul -bullet">    
+                                            <li>미국달러(USD) 이외의 외화현찰을 외화예금에 입금할 경우 및 외화현찰 이외의 수단(해외로부터 송금 받은 외화 등)으로 입금한 외화예금을 외화 현찰로 인출할 경우 외화현찰수수료가 발생할 수 있습니다.</li>                      
+                                        </ul>   -->   <!-- [231229]텍스트 수정 -->  
+                                        <p class="p">미국달러(USD) 이외의 외화현찰을 외화예금에 입금할 경우 및 외화현찰 이외의 수단(해외로부터 송금 받은 외화 등)으로 입금한 외화예금을 외화 현찰로 인출할 경우 외화현찰수수료가 발생할 수 있습니다.</p>
+                                        <!-- [240328]삭제 및 추가 -->
+                                    </div>
+                                </div>         
+                            </div>
+                        </div>
+    
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="total04">
+                                        <label for="total04">외화예금 금리 관련 유의사항 확인</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="inner">
+                                    <div class="sm-title-group">
+                                        <!-- [240328]삭제 및 추가 -->
+                                        <!-- <ul class="ul -bullet">
+                                            <li>외화예금 신규 가입(또는 입금) 당일 농협은행이 고시하는 통화별・기간별・상품별 외화예금 금리를 적용합니다. 고시금리는 국제금융시장 및 농협은행 외화자금 상황에 연동하여 매일 고시하며, 신규 가입(또는 입금) 시 통화별・기간별・상품별 고시금리가 0%인 경우 입금 건별 입금일부터 만기일 전일까지 기간에 대하여 예금이자가 제공되지 않습니다.</li>                            
+                                        </ul> -->
+                                        <p class="p">외화예금 신규 가입(또는 입금) 당일 농협은행이 고시하는 통화별・기간별・상품별 외화예금 금리를 적용합니다. 고시금리는 국제금융시장 및 농협은행 외화자금 상황에 연동하여 매일 고시하며, 신규 가입(또는 입금) 시 통화별・기간별・상품별 고시금리가 0%인 경우 입금 건별 입금일부터 만기일 전일까지 기간에 대하여 예금이자가 제공되지 않습니다.</p>
+                                        <!-- [240328]삭제 및 추가 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="total05">
+                                        <label for="total05">금융소비자의 권리</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <!-- [240724] 설명의무 관련 개선 -->
+                                <div class="inner">
+                                    <div class="sm-title-group">
+                                        <h2 class="h5">자료열람요구권</h2>
+                                        <ul class="ul -bullet fs-15">
+                                            <li>금융소비자는 <span class="point">분쟁 조정 또는 소송의 수행 등 권리구제를 위한 목적으로 은행이 기록 및 유지 · 관리하는 다음의 자료에 대한 열람(사본 및 청취 포함)을 요구</span>할 수 있습니다.
+                                                <!-- 2024-04-24 수정 -->
+                                                <div>
+                                                    <ul class="ul -dash">
+                                                        <li>계약체결에 관한 자료, 계약의 이행에 관한 자료</li>
+                                                        <li>금융상품 등에 관한 광고 자료</li>
+                                                        <li>금융소비자의 권리행사에 관한 자료</li>
+                                                        <li>내부통제기준의 제정 및 운영 등에 관한 자료</li>
+                                                        <li>업무 위탁에 관한 자료</li>
+                                                    </ul>
+                                                </div>
+                                                <!-- //2024-04-24 수정 -->
+                                                <!-- <ul class="ul -dash pl-12">
+                                                    <li>계약체결에 관한 자료, 계약의 이행에 관한 자료, 금융상품 등에 관한 광고 자료, 금융소비자의 권리행사에 관한 자료, 내부통제기준의 제정 및 운영 등에 관한 자료, 업무 위탁에
+                                                        관한 자료</li>
+                                                </ul> -->
+                                            </li>
+                                            <li>은행은 법령, 제3자의 이익 침해, 영업비밀의 침해 등의 사유가 있는 경우 이를 금융소비자에게 알리고 자료 열람을 제한하거나 거절할 수 있습니다.</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="sm-title-group">
+                                        <h2 class="h5">위법계약해지권</h2>
+                                        <ul class="ul -bullet fs-15">
+                                            <li>금융회사가 금융소비자보호법상 판매원칙 위반 시 일정 기간 이내에 금융소비자가 계약 해지를 요구할 수 있습니다. <span class="point">금융회사는 10일 이내에 수락 여부를 통지</span>해야 하며, 거절 시에는 거절사유와 함께 통지하여야 합니다.</li>
+                                            <li>위법계약해지 요구는 계약서류를 받은 날부터 5년, <span class="point">위법사실을 안 날부터 1년 이내에 가능(계약 종료 시 행사 불가)</span></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="sm-title-group">
+                                        <h2 class="h5">민원처리 및 분쟁조정 절차</h2>
+                                        <p class="p">본 상품에 대한 문의사항 또는 민원 상담이 필요하시면 영업점, <span class="point">고객상담센터(1661-3000, 1522-3000) 또는 인터넷 홈페이지(https://banking.nonghyup.com)를 통해 문의주시기 바랍니다. </span>또한 본 상품에 대하여 당 은행과 분쟁이 있는 경우에는 금융소비자보호법에 따라 금융감독원 민원상담 센터 (국번없이 1332) 또는 e-금융민원센터(https://www.fcsc.kr)에 분쟁조정을 신청할 수 있습니다.</p>
+                                    </div>
+                                    
+                                    <div class="sm-title-group">
+                                        <h2 class="h5">예금자보호 여부</h2>
+                                        <!-- [240425]텍스트 변경 -->
+                                        <!-- 2024-04-24 문구 수정 -->
+                                        <p class="p">이 예금은 예금자보호법에 따라 예금보험공사가 보호하되, 보호한도는 본 은행에 있는 귀하의 모든 예금보호대상<span class="point">금융상품의 원금과 소정의 이자를 합하여 1인당 “최고 5천만원” 이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</span></p>
+                                        <!-- //2024-04-24 문구 수정 -->
+                                        <!-- //[240425]텍스트 변경 -->
+                                        <!-- <p class="p">이 예금은 예금자보호법에 따라 예금보험공사가 보호하되, 보호한도는 NH농협은행에 있는 귀하의 모든 예금보호대상 금융상품의 원금과 이자를 합하여 1인당 “최고 5천만원”입니다. 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</p>                 -->
+                                    </div>
+                                </div>
+                                <!-- // [240724] 설명의무 관련 개선 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary -disabled">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+    </script>
+</body>
+
+</html>

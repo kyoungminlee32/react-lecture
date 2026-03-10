@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">실버바 구매</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:4;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 4단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">
+                            구매정보를 확인해 주세요
+                        </h2>
+                    </div>
+                    <dl class="dl -box">
+                        <div>
+                            <dt>1kg / %N%개 </dt>
+                            <dd>3,040,378원</dd>
+                        </div>
+                        <div>
+                            <!-- ux 라이팅 수정 시작 -->
+                            <dt>결제 예상금액</dt>
+                            <!-- //ux 라이팅 수정 끝 -->
+                            <dd>48,242,711원</dd>
+                        </div>
+                        <div>
+                            <!-- ux 라이팅 수정 시작 -->
+                            <dt>수령 영업점</dt>
+                            <!-- //ux 라이팅 수정 끝 -->
+                            <dd>양재지점</dd>
+                        </div>
+                        <div>
+                            <!-- ux 라이팅 수정 시작 -->
+                            <dt>현금영수증</dt>
+                            <!-- //ux 라이팅 수정 끝 -->
+                            <dd>신청(010-1234-1234)</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <!-- ux 라이팅 수정 시작 -->
+                                <li>실버바 구매 후 권종 교환, 취소, 환불, 정정을 할 수 없습니다.</li>
+                                <li>실버바 구매는 실명의 개인을 대상으로 합니다.</li>
+                                <li>구매한 날부터 통상 영업일 기준 7일 이내에 본인이 지정한 영업점에서만 실물 수령을 할 수 있습니다.</li>
+                                <li>현금영수증 발급을 신청하지 않으면 추가 발급할 수 없습니다. </li>
+                                <!-- //ux 라이팅 수정 끝 -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- <button type="button" class="button -lg">취소</button> -->
+                        <!-- 2024-06-05 버튼명 변경 -->
+                        <button type="button" class="button -lg -primary">구매하기</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

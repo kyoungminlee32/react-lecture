@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/retire.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">펀드 운용상품조회</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <!-- ui수정 240130 (디자인 수정) -->
+                    <div class="box">
+                        <p class="p">이 금융상품은 예금자보호법에 따라 보호되지 않습니다.</p>
+                    </div>
+                    <!-- //ui수정 240130 (디자인 수정) -->
+                    
+                    <!-- 240430 결함4708 : ui수정 -->
+                    <div class="case-wrap -xxs right">
+                        <a href="javascript:void(0)" class="a -arrow">운용상품 변경</a>
+                    </div>
+                    <!-- // 240430 결함4708 : ui수정 -->
+
+                    <!-- 240430 결함4708 : ui수정 -->
+                    <div class="case-wrap -xxs"> <!-- ui수정 240130 (case-wrap -xxs 추가) -->
+                        <div class="filter-bar">
+                            <div class="mix-bar">
+                                <div class="search">전체ㆍ3개월</div>
+                                <button type="button" class="button -xs -inline -inquiry">조회설정</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 240430 결함4708 : ui수정 -->
+
+                    <div class="case-wrap -xxs2"> <!-- 240430 결함4708 : case-wrap -xxs2 추가 -->
+                        <div class="selection">
+                            <ul>
+                                <!-- [CASE] Default : 상품 10건 노출 -->
+                                <li>
+                                    <div class="info -bordered" role="button">
+                                        <div class="top-area">
+                                            <!-- [CASE] 매우높은위험:-grade1, 높은위험:-grade2, 다소높은위험:-grade3, 보통위험:-grade4, 낮은위험:-grade5, 매우낮은위험:-grade6 -->
+                                            <span class="badge -grade3">다소높은위험</span>
+                                        </div>
+                                        <div class="info-main">
+                                            NH-Amundi 필승코리아증권투자신탁[주식]C-P2e
+                                            <dl class="info-dl">
+                                                <div>
+                                                    <dt>국내주식형</dt>
+                                                    <dd>KB자산운용</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                        <div class="info-standard">
+                                            <p class="standard-h">기준가</p>
+                                            <p class="standard-price">1088.55<span class="red">+6.33%</span></p>
+    
+                                            <div class="standard-value">
+                                                <div class="value-item">
+                                                    <p class="month-text">3개월</p>
+                                                    <span class="red">+6.33%</span>
+                                                </div>
+                                                <div class="value-item">
+                                                    <p class="month-text">6개월</p>
+                                                    <span class="blue">-14.33%</span>
+                                                </div>
+                                                <div class="value-item">
+                                                    <p class="month-text">12개월</p>
+                                                    <span class="red">+6.33%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info -bordered" role="button">
+                                        <div class="top-area">
+                                            <!-- [CASE] 매우높은위험:-grade1, 높은위험:-grade2, 다소높은위험:-grade3, 보통위험:-grade4, 낮은위험:-grade5, 매우낮은위험:-grade6 -->
+                                            <span class="badge -grade4">보통위험</span>
+                                        </div>
+                                        <div class="info-main">
+                                            IBK골드마이닝증권투자신탁1호(주식) C-Re
+                                            <dl class="info-dl">
+                                                <div>
+                                                    <dt>국내주식형</dt>
+                                                    <dd>KB자산운용</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                        <div class="info-standard">
+                                            <p class="standard-h">기준가</p>
+                                            <p class="standard-price">1088.55<span class="red">+6.33%</span></p>
+    
+                                            <div class="standard-value">
+                                                <div class="value-item">
+                                                    <p class="month-text">3개월</p>
+                                                    <span class="blue">-6.33%</span>
+                                                </div>
+                                                <div class="value-item">
+                                                    <p class="month-text">6개월</p>
+                                                    <span class="blue">-14.33%</span>
+                                                </div>
+                                                <div class="value-item">
+                                                    <p class="month-text">12개월</p>
+                                                    <span class="red">+6.33%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- [CASE] Default : 미노출 / 1번 리스트내 검색결과 11건 이상일 경우 더보기 버튼 노출 -->
+                            <button type="button" class="more-button">더보기(1/50)</button>
+                        </div>
+                    </div>
+
+                    <!-- [CASE] 상품 미존재 시 -->
+                    <!-- <div class="result -sm -caution">
+                        <p class="message">
+                            조회 결과가 없습니다.<br>
+                            설정을 변경해 주세요.
+                        </p>
+                    </div> -->
+                    <!-- // -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

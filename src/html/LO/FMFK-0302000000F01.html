@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <h2 class="h2">대출약정서를 작성해 주세요</h2>
+                    </div>
+
+                    <div class="box ps">
+                        <!-- 2024-05-23 문구 수정 -->
+                        <p class="p">
+                            대출 약정서는 심사 담당자와 대출 상담 후 작성할 수 있습니다.
+                        </p>
+                        <!-- 2024-05-23 문구 수정 -->
+                        <div class="case-wrap -xxs">
+                            <ul class="ul -bullet">
+                                <li>최근 30일 이내에 신청하신 신청내역이 조회됩니다.</li>
+                                <li>대출 전자약정서 작성 세부 사항은 희망 관리점으로 문의하여 주시기 바랍니다.</li>
+                                <!-- 2024-06-03 수정 -->
+                                <li>
+                                    서비스 이용시간<br>
+                                    기한연기 : 00:30 ~ 23:30 (영업일/휴일)<br>
+                                    대출신규 : 09:00 ~ 18:00 (영업일)
+                                </li>
+                                <!-- //2024-06-03 수정 -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 240201 divbox로 변경 -->
+                    <div class="accounts divbox">
+                        <div class="account">
+                            <!-- 240320 data-code 로고 삭제 -->
+                            <div class="info">  <!-- [240430]type="button" 삭제 -->
+                                <span class="name">
+                                    <span>(가계일반)NH모바일아파트대출2.0</span>
+                                </span>
+                                <!-- [240430]삭제 -->
+                                <!-- 240422 계좌 복구 -->
+                                <!-- <div class="account-number">
+                                    <span>NH농협</span>
+                                    <span>302-1234-5678-81</span>   
+                                </div> -->
+                                <!-- //[240430]삭제 -->
+                            </div>
+                            <dl class="dl">
+                                <div>
+                                    <dt>대출금액</dt>
+                                    <dd>100,000,000원</dd>
+                                </div>
+                                <div>
+                                    <!-- 240312 ux라이팅 수정 -->
+                                    <dt>신청일</dt>
+                                    <!-- //240312 ux라이팅 수정 -->
+                                    <dd>2023.10.05</dd>
+                                </div>
+                                <div>
+                                    <!-- 240312 ux라이팅 수정 -->
+                                    <dt>진행 상태</dt>
+                                    <!-- //240312 ux라이팅 수정 -->
+                                    <dd>약정서 작성</dd>
+                                </div>
+                                <div>
+                                    <dt>희망 관리점</dt>
+                                    <dd>
+                                        NH농협은행 서대문지점<br>
+                                        <a href="tel:02-1234-5678" class="link">02-1234-5678</a>   <!-- [240430]마크업 수정 -->
+                                    </dd>
+                                </div>
+                            </dl>
+
+                            <hr class="hr -thin -dl">
+                            
+                            <div class="agree-box">
+                                <!-- <p class="label">전자약정</p> -->
+                                <div class="agree">
+                                    <div class="title">
+                                        <div class="checkbox -sub -readonly">
+                                            <input type="checkbox" id="optional-total01">
+                                            <label for="optional-total01">약정서 작성</label>
+                                        </div>
+                                        <button type="button" class="more"><span class="hide">약정서 작성</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <!-- 240312 ux라이팅 수정 -->
+                                <p class="label">대출 계약서류 받는 방법</p>
+                                <div class="box-radios -point" role="tablist">
+                                    <div class="box-radio">
+                                        <input type="radio" name="period-point-color1" id="tab01" checked>
+                                        <label for="tab01">이메일</label>
+                                    </div>
+                                    <div class="box-radio">
+                                        <input type="radio" name="period-point-color1" id="tab02">
+                                        <!-- 240119 ux라이팅 수정 -->
+                                        <label for="tab02">문자메시지</label>
+                                        <!-- //240119 ux라이팅 수정 -->
+                                    </div>
+                                </div>
+                                <!-- [CASE] id="tab01"의 콘텐트 -->
+                                <!-- [에러] text -error-->
+                                <!-- 240214 bottomline 추가 -->
+                                <div class="text bottomline">
+                                    <input type="text" id="field1" value="ABC123@gmail.com" title="이메일">
+                                    <!-- 240312 ux라이팅 수정 -->
+                                    <p class="info">대출 계약서류는 이메일로 보내드립니다.</p>
+                                </div>
+                                <!-- //[CASE] id="tab01"의 콘텐트 -->
+
+                                <!-- [CASE] id="tab02"의 콘텐트 -->
+                                <!-- 240214 bottomline 추가 -->
+                                <div class="mix bottomline">
+                                    <div class="select flex-3">
+                                        <button type="button" class="left-side" aria-haspopup="true"
+                                            title="휴대폰 앞자리 선택">010</button>
+                                    </div>
+                                    <div class="text flex-7" data-clear="false">
+                                        <input type="tel" class="right-side num-call" placeholder="-없이 입력"
+                                            title="010제외한 휴대전화번호" readonly>
+                                    </div>
+                                    <!-- 240312 ux라이팅 수정 -->
+                                    <p class="info">대출 계약서류는 문자메시지로 보내드립니다.</p>
+                                </div>
+                                <!-- //[CASE] id="tab02"의 콘텐트 -->
+                            </div>
+                            <!-- [CASE] 약정서 작성이 완료되면 활성화-->
+                            <div class="fit-buttons2">
+                                <!-- 240312 ux라이팅 수정 -->
+                                <button type="button" class="button -sm -primary" disabled>다음</button>   <!-- [240618]텍스트 변경 -->
+                                <!-- //240312 ux라이팅 수정 -->
+                            </div>
+                            <!-- //[CASE] 약정서 작성이 완료되면 활성화-->
+                        </div>
+                        
+                        <div class="account">
+                            <!-- 240117 button 태그 div로 변경  -->
+                            <!-- 240320 data-code 로고 삭제 -->
+                            <div class="info">   <!-- [240430]type="button" 삭제 -->
+                                <span class="name">
+                                    <span>버팀목전세자금대출</span>
+                                </span>
+                                <!-- [240430]삭제 -->
+                                <!-- 240422 계좌 복구 -->
+                                <!-- <div class="account-number">
+                                    <span>NH농협</span>
+                                    <span>302-1234-5678-81</span>
+                                </div> -->
+                                <!-- //[240430]삭제 -->
+                            </div>
+                            <dl class="dl">
+                                <div>
+                                    <dt>대출금액</dt>
+                                    <dd>5,000,000원</dd>
+                                </div>
+                                <div>
+                                    <!-- 240312 ux라이팅 수정 -->
+                                    <dt>신청일</dt>
+                                    <!-- //240312 ux라이팅 수정 -->
+                                    <dd>2023.10.05</dd>
+                                </div>
+                                <div>
+                                    <!-- 240312 ux라이팅 수정 -->
+                                    <dt>진행 상태</dt>
+                                    <!-- //240312 ux라이팅 수정 -->
+                                    <dd>약정서 작성</dd>
+                                </div>
+                                <div>
+                                    <dt>희망 관리점</dt>
+                                    <dd>
+                                        NH농협은행 서대문지점<br>
+                                        <a href="tel:02-1234-5678" class="link">02-1234-5678</a>   <!-- [240430]마크업 수정 -->
+                                    </dd>
+                                </div>
+                            </dl>
+                            <hr class="hr -thin -dl">
+                            <div class="agree-box">
+                                <!-- <p class="label">전자약정</p> -->
+                                <div class="agree">
+                                    <div class="title">
+                                        <div class="checkbox -sub -readonly">
+                                            <input type="checkbox" id="optional-total02">
+                                            <label for="optional-total02">약정서 작성</label>
+                                        </div>
+                                        <button type="button" class="more"><span class="hide">약정서 작성</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <!-- 240312 ux라이팅 수정 -->
+                                <p class="label">대출 계약서류 받는 방법</p>
+                                <div class="box-radios -point" role="tablist">
+                                    <div class="box-radio">
+                                        <input type="radio" name="period-point-color2" id="tab03" checked>
+                                        <label for="tab03">이메일</label>
+                                    </div>
+                                    <div class="box-radio">
+                                        <input type="radio" name="period-point-color2" id="tab04">
+                                        <!-- 240119 ux라이팅 수정 -->
+                                        <label for="tab04">문자메시지</label>
+                                        <!-- 240119 ux라이팅 수정 -->
+                                    </div>
+                                </div>
+                                <!-- [CASE] id="tab01"의 콘텐트 -->
+                                <!-- [에러] text -error-->
+                                <!-- 240214 bottomline 추가 -->
+                                <div class="text bottomline">
+                                    <input type="text" id="field1" value="ABC123@gmail.com" title="이메일">
+                                    <!-- 240312 ux라이팅 수정 -->
+                                    <p class="info">대출 계약서류는 이메일로 보내드립니다.</p>
+                                </div>
+                                <!-- //[CASE] id="tab01"의 콘텐트 -->
+
+                                <!-- [CASE] id="tab02"의 콘텐트 -->
+                                <!-- 240214 bottomline 추가 -->
+                                <div class="mix bottomline">
+                                    <div class="select flex-3">
+                                        <button type="button" class="left-side" aria-haspopup="true"
+                                            title="휴대폰 앞자리 선택">010</button>
+                                    </div>
+                                    <div class="text flex-7" data-clear="false">
+                                        <input type="tel" class="right-side num-call" placeholder="-없이 입력"
+                                            title="010제외한 휴대전화번호" readonly>
+                                    </div>
+                                    <!-- 240312 ux라이팅 수정 -->
+                                    <p class="info">대출 계약서류는 문자메시지로 보내드립니다.</p>
+                                </div>
+                                <!-- //[CASE] id="tab02"의 콘텐트 -->
+                            </div>
+                            <!-- [CASE] 약정서 작성이 완료되면 활성화-->
+                            <div class="fit-buttons2">
+                                <!-- 240312 ux라이팅 수정 -->
+                                <button type="button" class="button -sm -primary" disabled>다음</button>   <!-- [240618]텍스트 변경 -->
+                                <!-- //240312 ux라이팅 수정 -->
+                            </div>
+                            <!-- //[CASE] 약정서 작성이 완료되면 활성화-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <!-- 2024-04-22 문구 수정 -->
+                                <!-- [240430]텍스트 변경 -->
+                                <!-- 2024-04-22 문구 삭제 -->
+                                <!-- <li>
+                                    서류접수방법(재직증명서, 소득확인서류 등)<br>
+                                    - 팩스전송 : 02-2059-3157 (모바일주택/중도금대출)
+                                </li> -->
+                                <!-- //2024-04-22 문구 삭제 -->
+                                <!-- //[240430]텍스트 변경 -->
+                                <li>대출신청일로부터 30일 이내에 약정서 작성 및 서류접수를 하지 않으면 대출이 자동으로 취소됩니다.</li>
+                                <!-- 2024-04-22 문구 수정 -->
+                                <li>서류제출당일 기준 최근 30일 이내에 발급 받으신 서류로 제출해 주십시오.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

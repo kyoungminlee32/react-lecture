@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/retire.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">예금 운용상품조회</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="box">
+                        <ul class="ul -bullet">
+                            <li>기간에 따라 다양한 확정금리를 드리는 정기예금 상품입니다.</li>
+                            <li>이 퇴직연금은 예금자보호법에 따라 예금보호대상 금융상품으로 운용되는 적립금에 대하여 다른 보호상품과는 별도로 1인당 “5천만원까지“ (운용되는 금융상품 판매회사별 보호상품 합산) 보호됩니다.</li>
+                            <li>금리는 매월 첫 영업일에 업데이트됩니다.</li>
+                        </ul>
+                    </div>
+
+                    
+
+                    <!-- 240430 결함4708 : ui수정 -->
+                    <div class="case-wrap -xxs right">
+                        <a href="javascript:void(0)" class="a -arrow">운용상품 변경</a>
+                    </div>
+                    <!-- // 240430 결함4708 : ui수정 -->
+
+                    <!-- 240430 결함4708 : ui수정 -->
+                    <div class="case-wrap -xxs"> <!-- ui수정 240130 (case-wrap -xxs 추가) -->
+                        <div class="filter-bar">
+                            <div class="mix-bar">
+                                <!-- [CASE] Default : 전체 -->
+                                <div class="search">전체ㆍ1년ㆍ금리순</div>
+                                <!-- // -->
+                                <!-- [CASE] 계약기간 전체 선택한 경우 -->
+                                <!-- <div class="search">전체ㆍ전체ㆍ금리순</div> -->
+                                <!-- // -->
+                                <!-- [CASE] 현금성자산 선택한 경우 -->
+                                <!-- <div class="search">현금성자산ㆍ전체ㆍ금리순</div> -->
+                                <!-- // -->
+                                <button type="button" class="button -xs -inline -inquiry">조회설정</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 240430 결함4708 : ui수정 -->
+
+                    <div class="case-wrap -xxs2"> <!-- 240430 결함4708 : case-wrap -xxs2 추가 -->
+                        <div class="selection">
+                            <ul>
+                                <li>
+                                    <div class="info -bordered" role="button">
+                                        <div class="info-main">
+                                            (DC/IRP)기업은행 정기예금 1년
+                                        </div>
+                                        <div class="info-bottom right">
+                                            <span class="sm-txt">금리</span>
+                                            <span class="numbe red">3.57%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info -bordered" role="button">
+                                        <div class="info-main">
+                                            (DC/IRP)하나은행 정기예금 1년
+                                        </div>
+                                        <div class="info-bottom right">
+                                            <span class="sm-txt">금리</span>
+                                            <span class="number red">4.07%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info -bordered" role="button">
+                                        <div class="info-main">
+                                            (DC/IRP)우체국 정기예금 1년
+                                        </div>
+                                        <div class="info-bottom right">
+                                            <span class="sm-txt">금리</span>
+                                            <span class="number red">3.48%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- [CASE] 계약기간 전체 선택한 경우에만 현금성자산 리스트 노출 + 필터 현금성자산 선택한 경우 해당 상품만 노출 -->
+                                <!-- <li>
+                                    <div class="info -bordered" role="button">
+                                        <div class="info-main">
+                                            농협현금성자산(대기자금)
+                                        </div>
+                                        <div class="info-bottom right">
+                                            <span class="sm-txt">금리</span>
+                                            <span class="number red">3.48%</span>
+                                        </div>
+                                    </div>
+                                </li> -->
+                                <!-- // -->
+                            </ul>
+                            <!-- [CASE] Default : 미노출 / 리스트 10건 초과 시 버튼 노출 -->
+                            <button type="button" class="more-button">더보기(1/50)</button>
+                        </div>
+                    </div>
+
+                    <!-- [CASE] FMHB-0501000000F01-B 상품명 입력 후 상품이 없을 경우 노출 -->
+                    <!-- <div class="result -sm -caution">
+                        <p class="message">
+                            조회 결과가 없습니다.<br>
+                            설정을 변경해 주세요.
+                        </p>
+                    </div> -->
+                    <!-- // -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

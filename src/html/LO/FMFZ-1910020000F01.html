@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출한도조회위한 정보 입력_바닥페이지</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <h2 class="h2">예상금리를 확인해 주세요</h2>
+                    </div>
+                    <dl class="dl -box -row2">
+                        <div>
+                            <dt>대출 신청금액</dt>
+                            <dd>4억</dd>
+                        </div>
+                        <div>
+                            <dt><a href="javascript:void(0)" class="a -arrow">예상금리</a></dt>
+                            <dd class="point"><span>연4.20%</span></dd>
+                        </div>
+                        <div class="dlInbtn">
+                            <dd>
+                                <button type="button" class="button -xs -inline">대출조건 변경</button>
+                                <button type="button" class="button -xs -inline">원리금상환 예상액</button>
+                            </dd>
+                        </div>
+                    </dl>
+                    <!-- 240116 대출기간 코드 수정 -->
+                    <div class="field">
+                        <p class="label">대출기간</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true" disabled="disabled">10년</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">거치기간(이자만 내는 기간)</p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period2" id="box-radio11-13" checked>
+                                <!-- 240307 ux라이팅 수정 -->
+                                <label for="box-radio11-13">설정 안함</label>
+                                <!-- //240307 ux라이팅 수정 -->
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period2" id="box-radio11-23">
+                                <label for="box-radio11-23">6개월</label>
+                            </div>
+                        </div>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period2" id="box-radio11-33">
+                                <label for="box-radio11-33">12개월</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period2" id="box-radio11-44">
+                                <label for="box-radio11-44">직접입력</label>
+                            </div>
+                        </div>
+                        <!-- [CASE] 직접입력 선택시 -->
+                        <!-- 240116 div 추가 -->
+                        <div>
+                            <div class="field">
+                                <div class="text">
+                                    <input type="text" id="text" class="fake-readonly" value=""
+                                        placeholder="거치기간을 입력하세요." readonly>
+                                </div>
+                                <div class="info-wrap">
+                                    <p class="message">거치기간은 0~12개월까지 신청 할 수 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //[CASE] 직접입력 선택시 -->
+                    </div>
+                    <div class="field">
+                        <p class="label">금리방식
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">변동금리</span>
+                                    <span class="t-content">
+                                        <span>대출 약정기간 동안 일정한 주기로 기준금리가 변경되는 금리가 적용돼요.</span>
+                                    </span>
+                                    <span class="title">고정금리</span>
+                                    <span class="t-content">
+                                        <span>최초 대출취급 당시 약정된 기준금리가 대출 약정기간 동안 변하지 않고 계속 동일한 금리가 적용돼요.</span>
+                                    </span>
+
+                                </span>
+                            </span>
+                        </p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="period-point-color1-1" checked>
+                                <label for="period-point-color1-1">변동금리</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="period-point-color1-2">
+                                <label for="period-point-color1-2">고정금리</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-wrap -sm">
+                        <!-- 2024-06-11 수정 -->
+                        <button type="button" class="button -lg -secondary" onclick="goTopPage()">금리 다시 계산하기</button>
+                        <!-- 2024-06-11 수정 -->
+                    </div>
+                    <div class="total-account-Wrap dl-accountlist case-wrap">
+                        <p class="total-count tit">대출 상환정보 <span class="point">2</span>개</p>
+                        <!-- 240307 case-box4로 변경 -->
+                        <dl class="dl -box case-box4">
+                            <div>
+                                <dt>대환대상 총 대출잔액</dt>
+                                <dd>450,000,000원</dd>
+                            </div>
+                        </dl>
+                        <div class="account">
+                            <div data-bankcode="088" class="info">
+                                <span class="name">
+                                    <span>신한은행</span>
+                                </span>
+                                <span class="account-number">
+                                    <span>111-1234-5678-99</span>
+                                </span>
+                            </div>
+                            <div class="dls" data-role="fold">
+                                <button type="button" class="more" data-role="marker">
+                                    <span class="hide">더보기</span>
+                                </button>
+                                <dl class="dl -lined">
+                                    <div>
+                                        <dt>총 상환 금액</dt>
+                                        <dd>450,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>대출잔액</dt>
+                                        <dd>450,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>이자</dt>
+                                        <dd>450,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>중도상환해약금</dt>
+                                        <dd>450,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>말소비용</dt>
+                                        <dd>450,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>기타비용</dt>
+                                        <dd>450,000,000원</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

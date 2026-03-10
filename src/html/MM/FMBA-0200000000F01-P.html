@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>금융상품 검색</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        *.focus{border: dotted 2px orange;}
+    </style>
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">금융상품 검색</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="search-area">
+                        <div class="field">
+                            <div class="mix">
+                                <div class="text">
+                                    <input type="text" class="left-side" id="searchce" placeholder="상품을 검색해보세요 (2글자 이상)">
+                                </div>
+                
+                                <div class="space -lined search">
+                                    <button type="button" class="icon-button -search right-side"><span class="hide">조회</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="hr -xl">
+                    <div class="result-area">
+                        <h4 class="h5">인기검색어</h4>
+                        <!-- 인기검색어 영역 -->
+                        <div class="popular-search">
+                            <!-- 인기검색어 열림 상태 : popular-anchors 에 -active 클래스 추가 -->
+                            <div class="popular-anchors -active">
+                                <div class="outer">
+                                    <div class="inner over-x">
+                                        <ul class="list">
+                                            <li class="item"><button class="hash-btn">#목돈모으기</button></li>
+                                            <li class="item"><button class="hash-btn">#목돈굴리기</button></li>
+                                            <li class="item"><button class="hash-btn">#주택청약</button></li>
+                                            <li class="item"><button class="hash-btn">#주택청약</button></li>
+                                            <li class="item"><button class="hash-btn">#주택전세자금</button></li>
+                                            <li class="item"><button class="hash-btn">#전문직</button></li>
+                                            <li class="item"><button class="hash-btn">#공무원</button></li>
+                                            <li class="item"><button class="hash-btn">#MZ세대</button></li>
+                                            <!-- 버튼 선택시 -active 클래스 추가  -->
+                                            <li class="item"><button class="hash-btn -active">#청소년</button></li>
+                                            <li class="item"><button class="hash-btn">#주거래우대</button></li>
+                                            <li class="item"><button class="hash-btn">#여행</button></li>
+                                            <li class="item"><button class="hash-btn">#환테크</button></li>
+                                            <li class="item"><button class="hash-btn">#세태크</button></li>
+                                            <li class="item"><button class="hash-btn">#노후준비</button></li>
+                                        </ul>
+                                    </div>
+                                    <!-- 2024 접근성 펼쳐진 상태인 경우 aria-expanded="true" 접혀진 상태인경우 aria-expanded="false" -->
+                                    <button type="button" class="more" aria-expanded="true"><span class="hide">펼쳐보기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 인기검색어 영역 -->
+
+                        <!-- 검색결과 영역 -->
+                        <div class="search-list-wrap">
+                            <div class="search-result">
+                                <p class="total-count">검색결과 <span class="point">2</span>건</p>
+                                <div class="result-list">
+                                    <div class="selection">
+                                        <!-- 매치되는 단어들은 <span class="point"></span> 사용 -->
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0);" >
+                                                    <div class="info -bordered">
+                                                        <div class="top-area">
+                                                            <span class="badge -disabled">저축</span>
+                                                        </div>
+                                                        <div class="info-main">무배당 보너스 주는 e저축보험Ⅵ</div>
+                                                        <div class="info-sub">만 14세~만 18세 <span class="point">청소년</span> 고객님을 위한 특화상품</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);" >
+                                                    <div class="info -bordered">
+                                                        <div class="top-area">
+                                                            <span class="badge -disabled">저축</span>
+                                                        </div>
+                                                        <div class="info-main">NH1418스윙적금</div>
+                                                        <div class="info-sub">만 14세~만 18세 <span class="point">청소년</span> 고객님을 위한 적금</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="more-button">더보기(1/12)</button>
+                                </div>
+                            </div>
+
+                            <!-- 조회결과 없음 -->
+                            <div class="result -sm">
+                                <p class="message">조회 결과가 없습니다.</p>
+                            </div>
+                        </div>
+                        <!-- // 검색결과 영역 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 2024 접근성 스크립트 수정
+        $(document).on('click', '.popular-anchors .more', function(e){
+            $('.popular-anchors').toggleClass('-active');
+
+            // common-js 에 작성
+            /* var $this = $(this)
+            var $target = $this.closest('.popular-anchors');
+            if ($target.hasClass('-active')) {
+                $this.attr('aria-expanded','true')
+            }else{
+                $this.attr('aria-expanded','false')
+            } */
+        })
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/retire.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">퇴직연금IRP 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <h2 class="h2">사전지정운용방법을 등록해 주세요</h2>
+                        <!-- [CASE] 투자성향 없이 초저위험 상품만 있는 경우 & 투자성향없음+회사에서 초저위험 상품 지정한 경우 -->
+                        <p class="desc">
+                            빠른 가입을 원하시나요?<br>
+                            <!-- [CASE] 고위험:-grade1, 중위험:-grade3, 저위험:-grade4, 초저위험:-grade5, -->
+                            <span class="-grade5">‘초저위험’</span>으로 디폴트옵션 상품이 등록됩니다.<br>
+                            <!-- 2024-03-26 문구 수정  -->
+                            더 많은 상품을 둘러보려면<br>투자성향분석을 진행해 주세요.
+                            <!-- //2024-03-26 문구 수정  -->
+                        </p>
+                        <!-- // [CASE] 투자성향 없이 초저위험 상품만 있는 경우 & 투자성향없음+회사에서 초저위험 상품 지정한 경우 -->
+
+                        <!-- [CASE] 투자성향없음+ 회사에서 초저위험 상품 미지정한 경우 -->
+                        <!-- <p class="desc">
+                            <span class="user-bold">김농협님</span>은 투자성향 결과가 없습니다.<br>
+                            사전지정운용 방법 등록을 위해 투자성향분석을 진행해 주세요.
+                        </p> -->
+                        <!-- // [CASE] 투자성향없음+ 회사에서 초저위험 상품 미지정한 경우 -->
+                        
+                        <a href="javascript:void(0)" class="a -arrow">디폴트옵션 안내</a>
+                    </div>
+
+                    <!-- [CASE] DC형 : 투자성향없음+ 회사에서 초저위험 상품 미지정한 경우 미노출 -->
+                    <div class="case-wrap -sm">
+                        <div class="selection">
+                            <ul>
+                                <li>
+                                    <div class="info -bordered -delete" >
+                                        <div class="top-area">
+                                            <!-- [CASE] 고위험:-grade1, 중위험:-grade3, 저위험:-grade4, 초저위험:-grade5, -->
+                                            <span class="badge -grade5">초저위험</span>
+                                        </div>
+                                        <div class="info-main">
+                                            NH농협은행 디폴트옵션초저위험 예금 포트폴리오
+                                        </div>
+                                        <dl class="dl -reversed">
+                                            <div>
+                                                <dt>국민은행 정기예금 3년</dt>
+                                                <dd>40%</dd>
+                                            </div>
+                                            <div>
+                                                <dt>신한은행 정기예금 3년</dt>
+                                                <dd>40%</dd>
+                                            </div>
+                                            <div>
+                                                <dt>기업은행 정기예금 3년</dt>
+                                                <dd>20%</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- // [CASE] DC형 : 투자성향없음+ 회사에서 초저위험 상품 미지정한 경우 미노출 -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons -half">
+                        <!-- [CASE] DC형 : 투자성향없음+ 회사에서 초저위험 상품 미지정한 경우 투자성향분석 버튼 미노출 -->
+                        <!-- <button type="button" class="button -lg">투자성향분석</button> -->
+                        <!-- // [CASE] DC형 : 투자성향없음+ 회사에서 초저위험 상품 미지정한 경우 투자성향분석 버튼 미노출 -->
+                        <button type="button" class="button -lg -primary">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

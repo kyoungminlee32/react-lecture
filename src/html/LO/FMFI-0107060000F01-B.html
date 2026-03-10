@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>예상금리 산출내역</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div id="layer" class="layer" aria-labelledby="coupon-head" role="region">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <!-- 2024-05-10 문구 수정 -->
+                    <h1 class="title">대출금리를 확인해 주세요</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="content">
+                    <dl class="dl -box limit-point-box">
+                        <div>
+                            <!-- 240131 ux 라이팅 수정  -->
+                            <dt>예상금리</dt>
+                            <dd class="limit-point">4.82%</dd>
+                        </div>
+                    </dl>
+                    <dl class="dl case-box">
+                        <div>
+                            <dt>기준금리</dt>
+                            <!-- 240311 +삭제 -->
+                            <dd>2.20%</dd>
+                        </div>
+                        <div>
+                            <dt>가산금리</dt>
+                            <!-- 240311 +삭제 -->
+                            <dd>1.90%</dd>
+                        </div>
+                        <div>
+                            <dt>우대금리</dt>
+                            <!-- //240131 ux 라이팅 수정  -->
+                            <dd>-0.50%</dd>
+                        </div>
+                        <div class="case">
+                            <dt>농협은행 계좌 최근 2개월간 카드매출대금 입금 카드사수 3개 이상</dt>
+                            <dd>0.20%</dd>
+                        </div>
+                        <div class="case">
+                            <dt>Hanaro(경리나라), NH소상공인파트너 우대</dt>
+                            <dd>0.20%</dd>
+                        </div>
+                        <div class="case">
+                            <dt>비상금대출 고객</dt>
+                            <dd>0.10%</dd>
+                        </div>
+                        <div>
+                            <dt>우대쿠폰(D)</dt>
+                            <dd>0.32%</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Layer.open('layer');
+
+        // 레이어 닫기(마지막 인자 기본값: false)
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // });
+
+        // 레이어 닫기 + DOM 삭제
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+
+</html>

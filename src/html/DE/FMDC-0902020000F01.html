@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">청약 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">  
+                    <!-- [240206]텍스트 변경 -->                
+                    <div class="h2-group">                        
+                        <h2 class="h2"> 
+                            스크래핑 약관에 동의해 주세요
+                        </h2>
+                    </div>
+                        
+                    <div class="agree">
+                        <div class="title">
+                            <div class="checkbox -sm">
+                                <input type="checkbox" id="required-total">
+                                <label for="required-total">[필수] 전체 동의</label>
+                            </div>
+                            <button type="button" class="more"><span class="hide">필수 전체 동의 약관</span></button>
+                        </div>
+                        <div class="panel">
+                            <div class="checkboxes -full">
+                                <div class="checkbox -sub">
+                                    <input type="checkbox" id="required1">
+                                    <label for="required1">(비여신) 개인(신용)정보 수집·이용 동의서(청년 주택드림 청약통장 자격 확인용)</label>
+                                    <button type="button" class="more"><span class="hide">개별 약관</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //[240206]텍스트 변경 -->
+                    
+                    <div class="case-wrap -sm">
+                        <!-- [240206]삭제 -->
+                        <!-- <div class="accordion -card -v2 -active" data-role="fold">
+                            <button type="button" class="title" data-role="marker">스크래핑 서비스 이용 정의</button>
+                            <div class="panel" data-role="hidden">
+                                <div>
+                                    <p class="p">고객님이 신청하신 금융거래 및 서비스 신청 완료 후 별도로 이용기관(국세청,정부24) 홈페이지에 로그인하여 세대/소득관련 서류를 제출하여 은행에 제출하는 번거로움을 없애고자, 금융거래 및 서비스 신청 시 고객님이 공동인증서 기반으로 이용기관(정부24,국세청)에 자동으로 접속하여 주민등록등본/소득관련 서류를 전자적 방식으로 제출하는 서비스입니다.</p>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- //[240206]삭제 -->
+    
+                        <!-- [240206]텍스트 변경, 안내툴팁 및 리스트 삭제 -->
+                        <div class="accordion -card -v2 -active" data-role="fold">
+                            <button type="button" class="title" data-role="marker">유의사항</button>
+                            <div class="panel" data-role="hidden">
+                                <div>
+                                    <!-- [240214]텍스트 변경 -->
+                                    <ol class="ol -number">
+                                        <!-- [240513]텍스트 변경 -->
+                                        <li>가입 자격 확인을 위해 간편인증 또는 공동인증서가 필요합니다. 
+                                            <div>
+                                                <ul class="ul -dash">
+                                                    <li>간편인증 : 국세청 홈택스, 정부24 각각 인증이 진행됩니다.</li>
+                                                    <li>공동인증서 : 국세청 홈택스와 정부24에 회원가입 후 공동인증서를 등록해야 이용할 수 있습니다.</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <!-- //[240513]텍스트 변경 -->
+                                        <li>가입일 기준으로 1~6월은 전전년도 신고소득, 7~12월은 전년도 신고소득(소득확인증명서 기준)이 있어야 합니다.</li>
+                                        <!-- [240328]텍스트 변경 -->
+                                        <li>소득이 없으면 일반 주택청약종합저축을 가입할 수 있습니다.<br>
+                                            단, 비과세 소득만 있는 군인은 증빙서류를 가지고 NH농협은행 영업점에서 가입해 주시기 바랍니다.                                          
+                                            <div class="button-box-wrap -guide">
+                                                <!-- ui수정 240122 (마크업 변경) --> 
+                                                <button type="button" class="button -sm -arrow" aria-haspopup="true">주택청약종합저축 바로가기</button>
+                                                <!-- <button type="button" class="button -sm -widthauto">주택청약종합저축 바로가기</button> -->
+                                                <!-- //ui수정 240122 (마크업 변경) --> 
+                                            </div>
+                                        </li>
+                                        <!-- //[240328]텍스트 변경 -->
+                                        <!-- <li>2번 이외의 소득 자격은 홈택스에서 확인이 불가하니 별도 서류를 준비하여 영업점에서 가입하시기 바랍니다.</li> -->
+                                        <li><span>가입 자격과 비과세 자격은 다릅니다. 가입 시점에 따라 비과세 가능 여부가 달라질 수 있으니 약관과 상품설명서를 확인해 주시기 바랍니다. 비과세는 가입일부터 2년 내에 영업점에서 신청해야 합니다.</span>  <!-- [240206]클래스 point 삭제 -->
+                                            <!-- <div class="text info-box-wrap">
+                                                <p class="info">비과세 자격 안내
+                                                    <span class="tooltip">
+                                                        <button type="button" class="trigger">
+                                                            <span class="hide">툴팁</span>
+                                                        </button>
+                                                        <span class="panel">
+                                                            <span class="title">비과세 자격 안내 (상품 가입일 기준)</span>
+                                                            <span class="t-content">
+                                                                <span class="dot">(세법상)무주택세대의 세대주</span>
+                                                                <span class="dot">근로소득자 : 직전년도 신고 총 급여액 3천6백만원 이하</span>
+                                                                <span class="dot">종합소득자 : 직전년도 신고 종합소득금액 2천6백만원 이하(단, 총 급여액 3천6백만원 초과 근로소득 있는 자는 제외)</span>
+                                                                <span class="dot">(세법상)세대 :  본인 및 배우자와 동일한 주소 또는 거소에서 생계를 같이 하는 직계존비속(그 배우자를 포함) 및 형제자매 (배우자 분리세대의 세대원 포함)</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </p>
+                                            </div> -->
+                                        </li>
+                                        <li>NH농협은행 주택청약종합저축을 이미 가입한 고객님은 영업점에서 청년 주택드림 청약통장으로 전환 신규할 수 있습니다.</li>
+                                        <!-- <li>세대주 관련 자격은 가입 후 변경이 불가능합니다. <span class="point">정부24확인결과와 다른 자격(무주택세대의 세대원 )으로 가입을  원할 경우 영업점에서 가입하시기 바랍니다. (서류지참)</span></li> -->
+                                    </ol> 
+                                    <!-- //[240214]텍스트 변경 -->                           
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //[240206]텍스트 변경 -->
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

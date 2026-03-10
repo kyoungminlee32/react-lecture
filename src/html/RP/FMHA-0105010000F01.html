@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/retire.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">퇴직연금IRP 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <h2 class="h2">연금저축한도를 설정해 주세요
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">잔여 연금저축한도</span>
+                                    <span class="t-content">
+                                        연금저축한도 1,800만원*에서 이미 사용된 저축한도를 차감하고 남은 미사용금액 (즉, 개인형 퇴직연금(IRP) 신규가입할 때 연금저축한도 항목에 입력할 수 있는 최대 금액을 뜻함)<br><br>
+                                        *연금저축한도 1,800만원 : 전체 금융기관 연금저축 및 확정기여형 퇴직연금(DC) 개인적립금과 합산
+                                    </span>
+                                </span>
+                            </span>
+                        </h2>
+                    </div>
+
+                    <!-- [CASE] 잔여한도 없을경우 - 오류로 조회되지 않을 경우 -->
+                    <!-- <div class="field">
+                        <div class="data-box">
+                            <div class="data-box-title">한도조회 버튼을 선택해 주세요</div>
+                        </div>
+                        <div class="limit-btn">
+                            <button type="button" class="button -xs -fit">한도 조회</button>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="mix">
+                            <div class="text -won" data-clear="false">
+                                <input type="tel" id="t4" class="right" value="" placeholder="잔여 연금저축한도 이내로 입력" readonly>
+                                <div class="won">원</div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- // [CASE] 잔여한도 없을경우 - 오류로 조회되지 않을 경우 -->
+                    
+                    <!-- [CASE] 잔여한도 있을경우 -->
+                    <div class="field">
+                        <div class="data-box">
+                            <div class="data-box-title">잔여 연금저축한도</div>
+                            <div class="data-box-content">6,000,000원</div>
+                        </div>
+                    </div>
+
+                    <div class="field"> <!-- field에 -error 클래스 추가 -->
+                        <div class="mix">
+                            <div class="text -won" data-clear="false">
+                                <input type="tel" id="tt1" class="right num-call" aria-haspopup="true" value="500,000" placeholder="잔여 연금저축한도 이내로 입력" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <!-- [CASE] 오류 케이스 -->
+                                <!-- <p class="message -error">잔여한도 이내로 입력해 주세요.</p> -->
+                                <!-- <p class="message -error">1만원 이상 입력해 주세요.</p> -->
+                                <!-- // [CASE] 오류 케이스 -->
+
+                                <p class="info right point">오십만원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // [CASE] 잔여한도 있을경우 -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+    </script>
+</body>
+</html>

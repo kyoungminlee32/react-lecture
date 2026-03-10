@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/retire.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">퇴직소득세 계산 안내</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="box">
+                        <p class="p">국세청 홈택스에서 퇴직소득세 계산프로그램(엑셀파일)을 다운받아 퇴직소득세를 계산할 수 있습니다.</p>
+                    </div>
+
+                    <div class="case-wrap">
+                        <ol class="ol -circle -lg">
+                            <li>
+                                국세청 홈택스 홈페이지(www.hometax.go.kr)에 접속합니다.
+                                <img class="hometax-img" src="/content/assets/imgs/img/retire/img-FMHD-0200000000F01-P-1.png" alt="국세청 홈텍스">
+                            </li>
+                            <li>홈페이지 상단 <span class="bold">[전체메뉴 > 기타 > 고객센터 > 자료실]에서 ’2024년 귀속 퇴직소득 세액계산 프로그램’</span>을 선택합니다.</li> <!-- 240416 ux 라이팅 수정 (2024년) -->
+                            <li>게시물에 첨부된 엑셀파일 <span class="point">’2024년 귀속 퇴직소득 세액계산 프로그램’</span>을 다운로드합니다.</li>
+                            <li>
+                                엑셀파일에 관련 정보를 입력하면 세액이 자동 계산됩니다. 그 중 <span class="point">지방소득세를 제외한 소득세</span>만 입력해 주세요.
+                                <img class="incometax-img" src="/content/assets/imgs/img/retire/img-FMHD-0200000000F01-P-2.png" alt="소득세">
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

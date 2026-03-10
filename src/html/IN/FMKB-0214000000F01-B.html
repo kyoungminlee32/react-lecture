@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/insurance.css">
+</head>
+<body>
+    <div id="layer" class="layer">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">직업을 선택해 주세요</h1> <!-- [231227] 마침표 삭제 -->
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="options">
+                        <ul>
+                            <li><button type="button" class="option">회사 사무직 종사자</button></li>  
+                            <li><button type="button" class="option">전업주부</button></li> 
+                            <li><button type="button" class="option">소규모 상점경영</button></li> 
+                            <li><button type="button" class="option -active">금융관련 전문가</button></li>    
+                            <li><button type="button" class="option">경영지원 사무직 관리자</button></li>                     
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="fixer">
+                    <p class="errormessage"> <!-- [231212] 위치변경 -->
+                        내 직업이 없으면 직업 찾기를 선택해서 검색해 주세요. <!-- ux 라이팅 수정 -->
+                    </p>
+                    <div class="buttons">                        
+                        <button type="button" class="button -lg -primary">직업 찾기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Layer.open('layer');
+    </script>
+</body>
+</html>

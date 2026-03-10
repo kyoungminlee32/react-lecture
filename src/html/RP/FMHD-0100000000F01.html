@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/retire.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">연금 설계</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <p class="p">시뮬레이션으로 연금 신청금액과 퇴직연금 예상 수령액 등 퇴직연금 예상정보를 확인할 수 있습니다.</p>
+                    </div>
+                    
+                    <div class="refresh-h-group">
+                        <h4 class="refresh-h5">기본정보</h4>
+                        <button type="button" class="refresh-btn"><span class="hide">새로고침</span>초기화</button>
+                    </div>
+
+                    <div class="field"> <!-- 애러일 경우 -error 클래스 추가 -->
+                        <label for="text1" class="label">이름</label>
+                        <div class="text">
+                            <input type="text" id="text1" value="" placeholder="이름 입력">
+                            <!-- [CASE] 애러일 경우 -->
+                            <!-- <p class="info red">이름을 입력해 주세요.</p> -->
+                            <!-- // [CASE] 애러일 경우 -->
+                        </div>
+                    </div>
+
+                    <div class="field"> <!-- 애러일 경우 -error 클래스 추가 -->
+                        <label for="tt1" class="label">생년월일</label>
+                        <div class="mix">
+                            <div class="text" data-clear="false">
+                                <input type="tel" id="tt1" class="num-call" aria-haspopup="true" title="생년월일 입력" placeholder="19700101, 8자리 입력">
+                                <!-- [CASE] 애러일 경우 -->
+                                <!-- <p class="info red">생년월일을 정확히 입력해 주세요</p> -->
+                                <!-- // [CASE] 애러일 경우 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="hr -xl">
+
+                    <div class="case-wrap -sm">
+                        <h4 class="h5">개인형 퇴직연금(IRP) 입금(예상)금액</h4>
+                        <p class="p">퇴직금(A), 세액공제 받은 금액(B), 세액공제 받지 않은 금액(C) 중 하나 이상 입력하셔야 합니다.</p>
+                    </div>
+
+                    <div class="case-wrap -sm">
+                        <div class="field">
+                            <div class="label">
+                                <label for="tt2">퇴직금(A)</label>
+                                <span class="tooltip">
+                                    <button type="button" class="trigger">
+                                        <span class="hide">툴팁</span>
+                                    </button>
+                                    <span class="panel">
+                                        <span class="title">퇴직금(A)</span>
+                                        <!-- ui수정 240416 (기획요청 수정 불릿 삭제) -->
+                                        <span class="t-content">
+                                            퇴직할 때 회사가 근로자에게 지급하는 퇴직 소득세를 포함한 퇴직금액을 뜻합니다.
+                                            <br>
+                                            <br>
+                                            단, 만55세 이후 퇴직하거나 퇴직금액이 300만원 이하여서 일시금으로 받을 경우 퇴직금 수령액 중 개인형 퇴직연금(IRP) 입금금액만 해당합니다.
+                                        </span>
+                                        <!-- // ui수정 240416 (기획요청 수정 불릿 삭제) -->
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="mix">
+                                <div class="text -won" data-clear="false">
+                                    <input type="tel" id="tt2" class="right num-call" value="10,000" placeholder="0" aria-haspopup="true" readonly>
+                                    <div class="won">원</div>
+                                </div>
+                                <div class="info-wrap">
+                                    <p class="info right point">일만원</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- [CASE] Default : 퇴직금 입력 전에는 입력 비활성화 / 퇴직금 입력 완료 시, 활성화 -->
+                    <div class="field"> <!-- 애러일 경우 -error 클래스 추가 -->
+                        <div class="label-group">
+                            <label for="text2" class="label">퇴직 소득세</label>
+                            <button type="button" class="goto-button">퇴직 소득세 계산 안내</button>
+                        </div>
+                        <div class="mix">
+                            <div class="text -won" data-clear="false">
+                                <input type="tel" id="text2" class="right num-call" value="10,000" placeholder="0" aria-haspopup="true" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <!-- [CASE] 퇴직금 보다 퇴직소득세  금액을 높게 입력 시 -->
+                                <!-- <p class="info red">퇴직 소득세는 퇴직금보다 적게 입력해 주세요.</p> -->
+                                <!-- // [CASE] 퇴직금 보다 퇴직소득세  금액을 높게 입력 시 -->
+                                
+                                <p class="info right point">일만원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // [CASE] Default : 퇴직금 입력 전에는 입력 비활성화 / 퇴직금 입력 완료 시, 활성화 -->
+
+                    <div class="field">
+                        <div class="label">
+                            <label for="tt3">세액공제 받은 금액(B)</label>
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">세액공제 받은 금액(B)</span>
+                                    <span class="t-content">
+                                        개인부담금은 개인형 퇴직연금(IRP)에 입금한 퇴직금을 제외한 본인 부담금을 뜻합니다. 연금저축을 포함하여 연간 900만원까지 연말 정산에서 세액공제를 받을 수 있습니다.<br>
+                                        단, 세법 개정되면 세액공제 한도금액은 변경될 수 있습니다.
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="mix">
+                            <div class="text -won" data-clear="false">
+                                <input type="tel" id="tt3" class="right num-call" value="10,000" placeholder="0" aria-haspopup="true" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">일만원</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="label">
+                            <label for="tt4">세액공제 받지 않은 금액(C)</label>
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">세액공제 받지 않은 금액(C)</span>
+                                    <span class="t-content">
+                                        개인형 퇴직연금(IRP) 연간 입금한도는 1,800만원(연금 저축 포함)입니다. 개인부담금 입금 총액에서 세액공제 받은 부담금(B)를 제외한 금액을 뜻합니다.
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="mix">
+                            <div class="text -won" data-clear="false">
+                                <input type="tel" id="tt4" class="right num-call" value="10,000" placeholder="0" aria-haspopup="true" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">일만원</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ui수정 240122 (총액 ui 마크업 변경) -->
+                    <div class="field">
+                        <div class="data-box">
+                            <div class="data-box-title">총액</div>
+                            <div class="data-box-content"><span class="point">124,568원</span></div>
+                        </div>
+                    </div>
+                    <!-- //ui수정 240122 (총액 ui 마크업 변경) -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

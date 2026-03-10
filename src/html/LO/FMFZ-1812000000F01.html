@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출신청정보확인</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">대출 신청정보를 확인해 주세요</h2>
+                    </div>
+                    <div class="limit-point-box">
+                        <!-- 240213 p 문구수정 -->
+                        <p class="p">가능금액 <span class="limit-point bk">1,000만원</span></p>
+                        <!-- 240429 mb-0 추가 -->
+                        <p class="p mb-0">예상금리 <a href="javascript:void(0)" class="limit-point detail -arrow">2.52%</a></p>
+                        <!-- 240429 문구 추가 -->
+                        <p class="message mt-5">실제 적용금리는 대출 실행일에 확정됩니다.</p>
+                    </div>
+                    <div class="accounts-box">
+                        <!-- 240213 total-count 문구수정 -->
+                        <p class="total-count">대출 상환정보 <span class="point">25</span>개</p>
+                        <div class="account">
+                            <!-- 240213 data-bankcode삭제 -->
+                            <div class="info">
+                                <span class="name">
+                                    <span>주거래우대통장</span>
+                                </span>
+                                <span class="account-number">
+                                    <span>NH농협</span>
+                                    <span>111-1234-5678-99</span>
+                                </span>
+                            </div>
+                            <div class="dls" data-role="fold">
+                                <button type="button" class="more" data-role="marker">
+                                    <span class="hide">더보기</span>
+                                </button>
+                                <dl class="dl -lined">
+                                    <div>
+                                        <dt>총 상환 금액</dt>
+                                        <dd>450,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>대출잔액</dt>
+                                        <dd>330.000.000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>이자</dt>
+                                        <dd>98,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>중도상환해약금</dt>
+                                        <dd>98,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>말소비용</dt>
+                                        <dd>98,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>기타비용</dt>
+                                        <dd>98,000,000원</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="account">
+                            <!-- 240213 data-bankcode삭제 -->
+                            <div class="info">
+                                <span class="name">
+                                    <span>주거래우대통장</span>
+                                </span>
+                                <span class="account-number">
+                                    <span>NH농협</span>
+                                    <span>111-1234-5678-99</span>
+                                </span>
+                            </div>
+                            <div class="dls" data-role="fold">
+                                <button type="button" class="more" data-role="marker">
+                                    <span class="hide">더보기</span>
+                                </button>
+                                <dl class="dl -lined">
+                                    <div>
+                                        <dt>총 상환 금액</dt>
+                                        <dd>450,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>대출잔액</dt>
+                                        <dd>330.000.000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>이자</dt>
+                                        <dd>98,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>중도상환해약금</dt>
+                                        <dd>98,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>말소비용</dt>
+                                        <dd>98,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>기타비용</dt>
+                                        <dd>98,000,000원</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="account">
+                            <!-- 240213 data-bankcode삭제 -->
+                            <div class="info">
+                                <span class="name">
+                                    <span>주거래우대통장</span>
+                                </span>
+                                <span class="account-number">
+                                    <span>NH농협</span>
+                                    <span>111-1234-5678-99</span>
+                                </span>
+                            </div>
+                            <div class="dls" data-role="fold">
+                                <button type="button" class="more" data-role="marker">
+                                    <span class="hide">더보기</span>
+                                </button>
+                                <dl class="dl -lined">
+                                    <div>
+                                        <dt>총 상환 금액</dt>
+                                        <dd>450,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>대출잔액</dt>
+                                        <dd>330.000.000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>이자</dt>
+                                        <dd>98,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>중도상환해약금</dt>
+                                        <dd>98,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>말소비용</dt>
+                                        <dd>98,000,000원</dd>
+                                    </div>
+                                    <div data-role="hidden">
+                                        <dt>기타비용</dt>
+                                        <dd>98,000,000원</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-wrap -sm">
+                        <dl class="dl -box case-box2">
+                            <div>
+                                <dt>상품명</dt>
+                                <dd>주택금융공사(일반대출)</dd>
+                            </div>
+                            <div>
+                                <dt>신청금액</dt>
+                                <dd>70,000,000원</dd>
+                            </div>
+                            <div>
+                                <dt>보증료</dt>
+                                <dd>150,000원(고객부담금)</dd>
+                            </div>
+                            <div>
+                                <dt>인지세</dt>
+                                <dd>35,000원(고객부담금)</dd>
+                            </div>
+                        </dl>    
+                    </div>
+                </div>
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <li>신청정보가 사실과 다르거나 정부정책 및 고객 신용평가등에 따라 대출이 제한될 수 있으며 대출한도 및 금리 등 조건이 변경될 수 있습니다.</li>
+                                <li>보증료, 인지세는 신청정보(가능금액) 기준으로 산출된 예상금액으로 대출 실행 시 변경될 수 있습니다.</li>
+                                <li>인지세는 대출금액이 5천만원 초과 시 NH농협은행과 고객이 50%씩 부담합니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">신청하기</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

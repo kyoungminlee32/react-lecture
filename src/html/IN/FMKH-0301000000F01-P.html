@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>금융상품 중요사항 확인</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">    
+    <link rel="stylesheet" href="../../assets/css/insurance.css">   
+</head>
+
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">금융상품 중요사항 확인</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="jsImportConfWrap">
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="optional-total01">
+                                        <label for="optional-total01">상품 설계 내용</label> <!-- ux 라이팅 수정 -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--[CASE] 상품설계내용 체크전 -->
+                            <div class="panel">
+                                <div class="inner">                 
+                                    <dl class="dl">
+                                        <div>
+                                            <dt>상품명</dt>
+                                            <dd>NH해외여행보험_가족 고급형</dd>
+                                        </div>
+                                        <div>
+                                            <dt>계약자</dt>
+                                            <dd>김농협</dd>
+                                        </div>
+                                        <div>
+                                            <dt>여행국가</dt>
+                                            <dd>미국</dd>
+                                        </div>
+                                        <div>
+                                            <dt>여행기간</dt>
+                                            <dd>2023.03.01 16:00<br>
+                                                ~ 2023.04.06 15:00
+                                            </dd>
+                                        </div>
+                                        <div>
+                                            <dt>피보험자</dt>
+                                            <dd>김농협(본인), 김아들(자녀), 
+                                                김남아(자녀), 김여아(자녀) 
+                                            </dd>
+                                        </div>
+                                        <div>
+                                            <dt>보험료</dt>
+                                            <dd>20,000원</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                            <!--//[CASE] 상품설계내용 체크전 -->
+                        </div>
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="optional-total02">
+                                        <label for="optional-total02">보장 내용</label> <!-- ux 라이팅 수정 -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [CASE] 보장내용 체크전 -->
+                            <div class="panel">
+                                <div class="inner security-list">
+                                    <dl class="dl -lined -thin">
+                                        <div>
+                                            <dt>해외여행 중 상해사망 및 후유장애</dt>
+                                            <dd>20,000만원</dd>
+                                        </div>
+                                    </dl>
+                                    <dl class="dl -lined -thin">
+                                        <div>
+                                            <dt>해외여행 중 질병사망 및 질병 80%이상 후유장애</dt>
+                                            <dd>2,000만원</dd> <!-- [240202] 콤마(,) 추가 -->
+                                        </div>
+                                    </dl>
+                                    <dl class="dl -lined -thin">
+                                        <div>
+                                            <dt>급여 실손의료비(상해입원)</dt>
+                                            <dd>1,000만원</dd> <!-- [240202] 콤마(,) 추가 -->
+                                        </div>
+                                    </dl>
+                                    <dl class="dl -lined -thin">
+                                        <div>
+                                            <dt>해외여행 중 상해사망 및 후유장애</dt>
+                                            <dd>20,000만원</dd>
+                                        </div>
+                                    </dl>
+                                    <dl class="dl -lined -thin">
+                                        <div>
+                                            <dt>해외여행 중 질병사망 및 질병 80%이상 후유장애</dt>
+                                            <dd>2,000만원</dd> <!-- [240202] 콤마(,) 추가 -->
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                            <!-- //[CASE] 보장내용 체크전 -->
+                        </div>
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="optional-total03">
+                                        <label for="optional-total03">유의사항</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--[CASE] 유의사항 체크전 -->
+                            <div class="panel">
+                                <div class="inner"> 
+                                    <div class="sm-title-group">
+                                        <h3 class="h5">보험금 지급제한 사유</h3> <!-- ux 라이팅 수정 -->
+                                    </div>     
+                                    <ol class="ol -number">
+                                        <li>피보험자가 고의로 자신을 해친 경우</li>
+                                        <li>보험수익자가 고의로 피보험자를 해친 경우</li>
+                                        <li>계약자가 고의로 피보험자를 해친 경우</li>
+                                    </ol>    
+                                    <div class="sm-title-group">
+                                        <h3 class="h5">보험금 지급절차</h3> <!-- ux 라이팅 수정 -->
+                                        <!-- 2024-04-19 문구 수정 -->
+                                        <p class="p">
+                                            회사에서 정한 서류를 접수한 때에는 그 서류를 접수한 날로부터 3영업일 이내에 보험금을 지급하거나 보험료의 납입을 면제합니다. 다만, 보험금 지급사유 또는 보험료 납입면제 사유의 조사나 확인이 필요하면 접수 후 30영업일 이내에 보험금을 지급하거나 보험료의 납입을 면제합니다. <!-- ux 라이팅 수정 -->
+                                        </p>
+                                        <!-- //2024-04-19 문구 수정 -->
+                                    </div>          
+                                </div>
+                            </div>
+                            <!--//[CASE] 유의사항 체크전 -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <!-- 차트 관련js -->
+    <script src="../../assets/libs/Chart/dist/Chart.js"></script>
+    <script src="../../assets/libs/Chart/dist/Chart.min.js"></script>
+    
+    <script>
+        Popup.open('popup');
+        
+
+
+    </script>
+</body>
+
+</html>

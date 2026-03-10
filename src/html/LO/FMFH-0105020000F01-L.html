@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>하단팝업)대출가능 금액조회</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+</head>
+
+<body>
+    <div id="layer" class="layer" aria-labelledby="coupon-head" role="region">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <!-- 240313 ux라이팅 수정 -->
+                    <h1 class="title">대출 가능금액을 확인해 주세요</h1>
+                    <!-- //240313 ux라이팅 수정 -->
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="content">
+                    <dl class="dl -lined">
+                        <div>
+                            <dt>계좌번호</dt>
+                            <dd>000-0000-0000-00</dd>
+                        </div>
+                        <div>
+                            <dt>예금주명</dt>
+                            <dd>김금상</dd>
+                        </div>
+                        <div>
+                            <dt>대출한도금액</dt>
+                            <dd>70,000,000원</dd>
+                        </div>
+                        <div>
+                            <dt>기설정금액</dt>
+                            <dd>0원</dd>
+                        </div>
+                        <div>
+                            <dt>대출예상금리</dt>
+                            <dd>5.76%</dd>
+                        </div>
+                        <div>
+                            <dt>영업점대출가능금액</dt>
+                            <dd>55,000,000원</dd>
+                        </div>
+                        <div>
+                            <dt>대출한도</dt>
+                            <dd>50,000,000원</dd>
+                        </div>
+                    </dl>
+                    <ul class="ul -bullet -small">
+                        <li>신탁 수익권 담보대출의 대출금리는 <span class="medium">장부 가격 신탁은 한 달 전 배당률, 기준 가격 신탁은 신잔액 COFIX 고시금리에 연동</span> 적용됩니다.</li>
+                        <li>
+                            해당 계좌로 담보대출을 받으면 모든 금액을 상환할 때까지 처음에 설정한 대출 신청금액(기 설정 금액)이 표시됩니다. 일부 상환금액을 포함해 대출을 받으려면 희망 관리점을 방문해 주시기 바랍니다.
+                        </li>
+                    </ul>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">대출신청</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Layer.open('layer');
+
+        // 레이어 닫기(마지막 인자 기본값: false)
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // });
+
+        // 레이어 닫기 + DOM 삭제
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+
+</html>

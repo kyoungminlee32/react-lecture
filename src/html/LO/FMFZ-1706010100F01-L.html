@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>(팝업)예상금리 상세보기</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div id="layer" class="layer" aria-labelledby="coupon-head" role="region">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">대출 가능금액 산출 내역을 확인해 주세요</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="contents">
+                <!-- ui수정 240206 (코드 변경) -->
+                <div class="content">
+                    <dl class="dl -box limit-point-box tooltipbtn">
+                        <div class="first-line">
+                            <dt>MCG 가입 대상 <div>(F ＝ E + D)</div></dt>
+                            <dd>530,000,000원</dd>
+                        </div>
+                        <div class="first-line">
+                            <dt>MCG 미가입 대상 <div>(E = (A x B) – D)</div></dt>
+                            <dd>493,000,000원</dd>
+                        </div>
+                    </dl>
+                    <dl class="dl tooltipbtn">
+                        <div>
+                            <dt>감정가액/시세(A)</dt>
+                            <dd>725,000,000원</dd>
+                        </div>
+                        <div>
+                            <dt>담보인정비율(B)
+                                <span class="tooltip">
+                                    <button type="button" class="trigger">
+                                        <span class="hide">툴팁</span>
+                                    </button>
+                                    <span class="panel">
+                                        <span class="title">주택담보가치에 따른 대출가능 한도</span>
+                                        <span class="t-content">
+                                            <span>
+                                                담보물의 가치에 대비해서 얼마를 빌려줄 것이냐를 정하는 비율 LTV 비율이 낮으면 대출가능 금액이 낮고, LTV 비율이 높으면 대출가능 금액이 높음
+                                                <br>
+                                                <br>
+                                                예를 들면 아파트 금액(가치)이 5억원이고 LTV가 60%일 경우  담보인정금액은 3억원 (5억원x60%=3억원)임
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </dt>
+                            <dd>40%</dd>
+                        </div>
+                        <div>
+                            <dt>담보인정금액(AxB)</dt>
+                            <dd>290,000,000원</dd>
+                        </div>
+                        <div>
+                            <dt>소액임차보증금(D)
+                                <span class="tooltip">
+                                    <button type="button" class="trigger">
+                                        <span class="hide">툴팁</span>
+                                    </button>
+                                    <span class="panel">
+                                        <!-- <span class="title"></span> -->
+                                        <span class="t-content">
+                                            <span>
+                                                세입자의 일정보증금에 대해 세입자의 안정을 위하여 법으로 최우선 보장해주는 것으로 먼저 설정된 담보권 보다 우선 보장하는 금액
+                                                <br>
+                                                <br>
+                                                따라서, 담보인정금액에서 소액임차보증금을 차감하여 대출가능금액 계산함
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+
+                            </dt>
+                            <dd>37,000,000원</dd>
+                        </div>
+
+                    </dl>
+                    <!-- 240112 -dl 클레스 추가 case-box 삭제 -->
+                    <hr class="hr -thin -dl">
+                    <p class="message">MCG 가입 대상 대출 가능금액(F) = 미가입 대상 대출 가능금액(E)에서 소액임차보증금(D)을 차감하지 않은 금액
+                    </p>
+                </div>
+                <!-- //ui수정 240206 (코드 변경) -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Layer.open('layer');
+
+        // 레이어 닫기(마지막 인자 기본값: false)
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // });
+
+        // 레이어 닫기 + DOM 삭제
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+
+</html>

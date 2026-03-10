@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/isa.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">계약해지에 관한 사항</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div>
+                        <h4 class="h5">계약기간 만료에 따른 해지</h4>
+                        <ul class="ul -bullet">
+                            <!-- 2024-06-04 강조 추가 -->
+                            <li><strong>계약기간 만료일</strong>에 계좌 내 모든 재산을 매각·환매하여 <strong>손익통산</strong> 및 그에 따른 원천징수를 한 후 계약을 해지합니다.</li>
+                            <!-- //2024-06-04 강조 추가 -->
+                            <li>해지없이 유지하고자 하는 경우 일반 계약으로 전환하여 유지할 수 있으며, 일반과세로 전환되어 손익통산 및 세제혜택 불가합니다.</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-wrap -sm">
+                        <h4 class="h5">중도해지에 관한 사항</h4>
+                        <ul class="ul -bullet">
+                            <!-- 2024-06-04 강조 추가 및 마크업 변경 -->
+                            <li>
+                                계약기간 만료 전 가입자의 의사에 따라 해지 가능합니다.
+                                <div><p class="p">단, <strong>의무가입기간(3년) 경과 전 중도해지 할 경우 세제혜택 불가</strong>합니다.</p></div>
+                            </li>
+                            <!-- //2024-06-04 강조 추가 및 마크업 변경 -->
+                        </ul>
+                    </div>
+
+                    <div class="case-wrap -sm">
+                        <h4 class="h5">특별해지에 관한 사항</h4>
+                        <!-- 2024-06-04 강조 추가 -->
+                        <p class="p"><strong>부득이한 사유</strong>(가입자의 사망, 해외이주, 6개월 이내에 발생한 천재지변, 퇴직, 폐업, 3개월 이상의 입원 또는 요양을 요하는 상해·질병, 저축취급기간의 영업정지·파산 등)에 의해 <strong>의무가입기간(3년) 경과 전 해지</strong>하는 경우 <strong>세제혜택 및 손익 통산은 유지</strong>합니다.</p>
+                        <!-- //2024-06-04 강조 추가 -->
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

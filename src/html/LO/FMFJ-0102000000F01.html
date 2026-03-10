@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청내역 조회</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <!-- 240326 재검토 -->
+                    <div class="h2-group">
+                        <h2 class="h2">대출 진행 현황을 확인해 주세요</h2>
+                    </div>
+
+                    <h4 class="h5">NH모바일중도금대출</h4>
+                    <ol class="ol -step -horizontal -loan">
+                        <li class="step1 -done">
+                            <div class="title">대출 신청</div>
+                        </li>
+                        <li class="step2 -ing">
+                            <div class="title">심사 중</div>
+                        </li>
+                        <li class="step3">
+                            <div class="title">대출 실행</div>
+                        </li>
+                    </ol>
+
+                    <div class="judge-box">
+                        <p class="judge-notice">대출 심사 중입니다.</p>
+                    </div>
+                    <!-- // 240326 재검토 -->
+
+                    <!-- 2024-10-04 버튼 추가 -->
+                    <div class="case-wrap -xxs right">
+                        <button type="button" class="button -xs -fit">주택 소유 확인 URL 전송</button>
+                    </div>
+                    <!-- //2024-10-04 버튼 추가 -->
+
+                    <h4 class="h5">회차별 신청정보</h4>
+                    <div class="table">
+                        <table>
+                            <caption><span class="hide">회차별 중도금 일자, 신청금액</span></caption>   <!-- [240503]캡션 문구 수정 -->
+                            <colgroup>
+                                <col style="width:20%">
+                                <col style="width:30%">
+                                <col style="width:40%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">회차</th>
+                                    <!-- 240326 재검토 -->
+                                    <th scope="col">중도금 일자</th>
+                                    <!-- // 240326 재검토 -->
+                                    <th scope="col">신청금액</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2023.07.22</td>
+                                    <td>32,000,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2024.11.20</td>
+                                    <td>32,000,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>2024.03.20</td>
+                                    <td>32,000,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>2024.08.20</td>
+                                    <td>32,000,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>2025.01.20</td>
+                                    <td>32,000,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>2025.04.20</td>
+                                    <td>32,000,000원</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" scope="row">신청금액 합계</th>
+                                    <td>192,000,000원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4 class="h5">대출 신청정보</h4>
+                    <!-- 240326 재검토 -->
+                    <dl class="dl -box">
+                        <div>
+                            <dt>고객명</dt>
+                            <dd>김금상</dd>
+                        </div>
+                        <div>
+                            <dt>분양 아파트</dt>
+                            <dd>서울시 은평구 불광동 북한산 현대힐스테이트3차 105동 1012호</dd>
+                        </div>
+                        <div>
+                            <dt>신청금액</dt>
+                            <dd>192,000,000원</dd>
+                        </div>
+                        <div>
+                            <dt>대출금리</dt>
+                            <dd>2.31%(2020.07.27기준) 신잔액기준COFIX 6개월+1.30%</dd>
+                        </div>
+                        <div>
+                            <dt>이체계좌</dt>
+                            <dd>302-1234-5678-80</dd>
+                        </div>
+                        <div>
+                            <dt>대출 시작일</dt>
+                            <dd>2023.07.22</dd>
+                        </div>
+                        <div>
+                            <dt>대출 만기일</dt>
+                            <dd>2025.04.20</dd>
+                        </div>
+                        <div>
+                            <dt>인지세(고객부담금)</dt>
+                            <dd>75,000원</dd>
+                        </div>
+                        <div>
+                            <!-- 240126 ux라이팅 수정 -->
+                            <dt>희망 관리점</dt>
+                            <!-- //240126 ux라이팅 수정 -->
+                            <dd>서대문지점(02-1234-5678)</dd>
+                        </div>
+                    </dl>
+                    <!-- // 240326 재검토 -->
+                </div>
+                
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <!-- 240326 재검토 -->
+                            <ul class="ul -bullet">
+                                <li>배우자 및 세대원 전원이 정보 제공에 동의해야 대출 심사가 진행됩니다.</li>
+                                <li>대출 심사 후 전자약정서를 작성하면 대출 실행일에 대출금이 입금됩니다.</li>
+                                <li>전자약정서 작성은 관리점에서 심사 후 URL로 안내해 드릴 예정입니다.</li>
+                            </ul>
+                            <!-- // 240326 재검토 -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

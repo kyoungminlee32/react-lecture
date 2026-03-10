@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div id="layer" class="layer" aria-labelledby="coupon-head" role="region">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <!-- 240306 ux라이팅 변경 -->
+                    <h1 class="title">대출 신청 정보를 확인해 주세요</h1>
+                    <!-- 240306 ux라이팅 변경 -->
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="content">
+                    <dl class="dl">
+                        <div>
+                            <dt>담보정보</dt>
+                            <!-- 231206 코드변경 -->
+                            <dd>[불광동]북한산현대힐스테이트3차 <div>102동 3106호</div>
+                            </dd>
+                            <!-- 231206 코드변경 -->
+                        </div>
+                        <div>
+                            <!-- 240126 ux라이팅 수정 -->
+                            <dt>대출 신청금액</dt>
+                            <!-- //240126 ux라이팅 수정 -->
+                            <dd>230,000,000원</dd>
+                        </div>
+                        <div>
+                            <dt>예상금리</dt>
+                            <dd><span class="point">4.13%</span>
+                                <div class="message">(월중신규COFIX 6개월 + 0.60%, 2023.10.01기준)</div>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>금리방식</dt>
+                            <dd>변동금리</dd>
+                        </div>
+                        <div>
+                            <dt>상환방법</dt>
+                            <dd>원금균등분할상환</dd>
+                        </div>
+                        <div>
+                            <dt>대출 희망일</dt>
+                            <dd>2023.10.20</dd>
+                        </div>
+                        <div>
+                            <dt>대출기간</dt>
+                            <dd>10년</dd>
+                        </div>
+                        <div>
+                            <dt>거치기간</dt>
+                            <dd>12개월</dd>
+                        </div>
+                        <div>
+                            <dt>대출용도</dt>
+                            <dd>주택구입</dd>
+                        </div>
+                        <div>
+                            <dt>권유직원</dt>
+                            <dd>NH농협은행 불광지점(김농협)</dd>
+                        </div>
+                        <div>
+                            <dt>희망 관리점</dt>
+                            <dd>서대문지점</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Layer.open('layer');
+
+        // 레이어 닫기(마지막 인자 기본값: false)
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // });
+
+        // 레이어 닫기 + DOM 삭제
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+
+</html>

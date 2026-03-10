@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>보안카드 입력</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title"></h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="h2-group">
+                        <h2 class="h2">
+                            보안카드 번호를 입력해 주세요
+                        </h2>
+                    </div>
+                    <div class="otp-pw-wrap">
+                        <ul class="security-card">
+                            <li class="front">
+                                <dl>
+                                    <dt><span>[<strong>33</strong>]</span> 앞 2자리</dt>
+                                    <dd>
+                                        <div class="short-pw">
+                                            <span class="filled"><input title="보안카드 앞두자리중 첫번째자리 입력" type="password" maxlength="1" disabled></span>
+                                            <span class=""><input title="보안카드 앞두자리중 두번째자리 입력" type="password" maxlength="1" disabled></span>
+                                        </div>
+                                        <span class="pw-bg" aria-hidden="true"></span>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="back">
+                                <dl>
+                                    <dt><span>[<strong>28</strong>]</span> 뒤 2자리</dt>
+                                    <dd>
+                                        <span class="pw-bg" aria-hidden="true"></span>
+                                        <div class="short-pw">
+                                            <span class="filled"><input title="보안카드 뒤두자리중  첫번째자리 입력" type="password" maxlength="1" disabled></span>
+                                            <span class="filled"><input title="보안카드 뒤두자리중 두번째자리 입력" type="password" maxlength="1" disabled></span>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <div class="info-area">
+                            <p class="info -error">보안카드 비밀번호가 일치하지 않습니다 (n/5)</p>
+
+                            <!-- [case] 연속 5회 오류시 -->
+                            <p class="info -error">비밀번호 5회 오류로 사용이 제한됩니다.<br>영업점 방문 후 조치해 주세요.</p>
+
+                            <!-- [case] 미입력 시 -->
+                            <p class="info -error">코드표 $33$번의 앞 두자리를 입력해 주세요</p>
+                            <p class="info -error">코드표 $28$번의 뒤 두자리를 입력해 주세요</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

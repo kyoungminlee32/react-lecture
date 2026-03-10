@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>자금용도선택</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+</head>
+<body>
+    <div id="layer" class="layer" aria-labelledby="coupon-head" role="region">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">대출금 입금계좌를 확인해 주세요</h1>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <p class="p">
+                        영업점에서 가입한 한도제한계좌로는 대출금을 입금할 수 없습니다.
+                        다른 입출금계좌를 선택하거나 비대면에서 새로운 입출금계좌를 가입해 주세요.
+                        한도제한계좌를 이용하려면 고객행복센터 문의 후 영업점을 방문하여 한도제한을 해제해 주세요.                    
+                    </p>
+                    <div class="box">
+                        <ul class="ul -bullet">
+                            <li>새로운 입출금계좌를 가입하려면 모든 금융기관에서 입출금계좌를 가입한 날부터 20영업일이 지나야 가입할 수 있습니다.</li>
+                            <li>한도제한을 해제하려면 신분증과 증빙서류가 필요합니다. 자세한 내용은 고객행복센터로 문의해주세요.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Layer.open('layer');
+
+        // 레이어 닫기(마지막 인자 기본값: false)
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // });
+
+        // 레이어 닫기 + DOM 삭제
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

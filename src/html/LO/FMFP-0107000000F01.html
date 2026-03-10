@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출신청 정보 입력_바닥 페이지</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">대출 신청정보를 입력해 주세요</h2>
+                    </div>
+                    <dl class="dl -box -row -w50">
+                        <div>
+                            <dt>대출한도</dt>
+                            <dd>3,500만원</dd>
+                        </div>
+                        <div>
+                            <dt><a href="javascript:void(0)" class="a -arrow">대출금리</a></dt>
+                            <dd class="point">4.82%</dd>
+                        </div>
+                    </dl>
+                    <div class="field">
+                        <!-- 240110 ux라이팅 수정 -->
+                        <label for="text" class="label">대출 신청금액</label>
+                        <!-- //240110 ux라이팅 수정 -->
+                        <div class="mix">
+                            <div class="text -won">
+                                <!-- 231205 value값 수정 -->
+                                <input type="tel" id="text" class="right num-call" value="700,000,000" aria-haspopup="true" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">칠억원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">만기 상환방법
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <!-- 240207 ux라이팅 -->
+                                    <span class="title">만기일시상환</span>
+                                    <!-- //240207 ux라이팅 -->
+                                    <span class="t-content">
+                                        <span>대출기간 동안 이자만 갚다가 대출 만기일에 대출금을 한 번에 상환해요.</span>
+                                    </span>
+                                    <span class="title">원리금균등분할상환</span>
+                                    <span class="t-content">
+                                        <span>원금과 이자를 함께 갚아요. 매월 일정한 금액을 내요.</span>
+                                    </span>
+                                    <span class="title">원금균등분할상환</span>
+                                    <span class="t-content">
+                                        <span>원금과 이자를 함께 갚아요. 회차별로 이자가 줄어들어요.</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <!-- [CASE] 마이너스 대출인 경우 -->
+                        <!-- <div class="select">
+                            <button type="button" aria-haspopup="true" readonly>수시로 상환하기(마이너스)</button>
+                        </div> -->
+                        <!-- //[CASE] 마이너스 대출인 경우 -->
+
+                        <!-- [CASE] 일시상환 대출인 경우 -->
+                        <!-- <div class="select">
+                            <button type="button" aria-haspopup="true">일시상환</button>
+                        </div> -->
+                        <!-- //[CASE] 일시상환 대출인 경우 -->
+                        <!-- [CASE] 원(리)금균등분할상환 대출인 경우 -->
+                        <!-- ui수정 240122 -->
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">원금균등분할상환</button>
+                        </div>
+
+                        <div class="field">
+                            <div class="data-box">
+                                <div class="data-box-title">최초 상환금액</div>
+                                <div class="data-box-content">500,000원</div>
+                            </div>
+                            <div class="case-wrap -xxs right"><a href="javascript:void(0)" class="a -arrow" aria-haspopup="true">상환스케줄</a></div>
+                            
+                        </div>
+                        <!-- //ui수정 240122 -->
+                        <!-- //[CASE] 원(리)금균등분할상환 대출인 경우 -->
+                    </div>
+                    <div class="field">
+                        <p class="label">이자 납입일</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">매월 13일</button>
+                        </div>
+                        <!-- [CASE] 오늘날짜가 말일인 경우 -->
+                        <!-- <div class="select">
+                            <button type="button" aria-haspopup="true" readonly>매월 31일(말일)</button>
+                        </div> -->
+                        <!-- //[CASE] 오늘날짜가 말일인 경우 -->
+                    </div>
+                    <div class="field">
+                        <p class="label">대출기간</p>
+                        <div class="select">
+                            <!-- 240207 readonly추가 -->
+                            <button type="button" aria-haspopup="true" readonly>1년</button>
+                            <!-- //240207 readonly추가 -->
+                        </div>
+                        <p class="message">대출 만기일 : 2024.09.13</p>
+                    </div>
+                    <div class="field">
+                        <div class="title-group">
+                            <div class="inner">
+                                <span class="title">우대 쿠폰</span>
+                            </div>
+                            <span class="switch ml-auto -sm">
+                                <input type="checkbox" id="switch2" checked>
+                                <label for="switch2"><span class="hide">스위치</span></label>
+                            </span>
+                        </div>                        
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">우대 쿠폰을 선택하세요</button>
+                        </div>
+                    </div>  
+                    <div class="case-wrap -sm">
+                        <!-- 2024-06-11 수정 -->
+                        <button type="button" class="button -lg -secondary" onclick="goTopPage()">금리 다시 계산하기</button>
+                        <!-- 2024-06-11 수정 -->
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE]금리 재조회 시 활성화 -->
+                        <button type="button" class="button -lg -primary" disabled>다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

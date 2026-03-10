@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/insurance.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">해약환급금 예시</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="field">
+                        <p class="label">해약환급금 예시 산출 기준</p> <!-- ux 라이팅 수정 -->
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">투자수익률 평균공시이율 2.5% 가정</button> <!-- [240214] 문구수정 -->
+                        </div>
+                    </div>                                      
+                    <div class="pension-group">
+                        <h4 class="h5"></h4>                          
+                        <span class="unit">(단위 : 원/세전)</span> <!-- ux 라이팅 수정 -->
+                    </div>                    
+                    <div class="table">
+                        <table>
+                            <caption><span class="hide">차기 상환예측정보(S&ampP500)</span></caption>
+                            <colgroup>
+                                <col style="width:20%">
+                                <col style="width:30%">
+                                <col style="width:30%">
+                                <col style="width:20%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">경과<br>기간</th>
+                                    <th scope="col">납입보험료<br>누계</th>
+                                    <th scope="col">해약환급금</th>
+                                    <th scope="col">환급률<br>(%)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3개월</td>
+                                    <td>300,000</td>
+                                    <td>293,699</td>
+                                    <td>97.9</td>
+                                </tr>
+                                <tr>
+                                    <td>6개월</td>
+                                    <td>600,000</td>
+                                    <td>588,311</td>
+                                    <td>98.1</td>
+                                </tr>
+                                <tr>
+                                    <td>9개월</td>
+                                    <td>900,000</td>
+                                    <td>883,839</td>
+                                    <td>97.9</td>
+                                </tr>
+                                <tr>
+                                    <td>1년</td>
+                                    <td>1,200,000</td>
+                                    <td>1,180,287</td>
+                                    <td>98.4</td>
+                                </tr>
+                                <tr>
+                                    <td>2년</td>
+                                    <td>2,400,000</td>
+                                    <td>2,402,915</td>
+                                    <td>100.1</td>
+                                </tr>
+                                <tr>
+                                    <td>3년</td>
+                                    <td>2,400,000</td>
+                                    <td>2,414,649</td>
+                                    <td>100.6</td>
+                                </tr>
+                                <tr>
+                                    <td>4년</td>
+                                    <td>2,400,000</td>
+                                    <td>2,426,505</td>
+                                    <td>101.1</td>
+                                </tr>
+                                <tr>
+                                    <td>5년</td>
+                                    <td>2,400,000</td>
+                                    <td>2,438,485</td>
+                                    <td>101.6</td>
+                                </tr>
+                                <tr>
+                                    <td>6년</td>
+                                    <td>2,400,000</td>
+                                    <td>2,444,531</td>
+                                    <td>101.9</td>
+                                </tr>
+                                <tr>
+                                    <td>7년</td>
+                                    <td>2,400,000</td>
+                                    <td>2,450,614 </td>
+                                    <td>102.1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- [240129] 표 추가 -->
+                    <div class="pension-group">
+                        <h4 class="h5"></h4>                          
+                        <span class="unit">(단위 : 원/세전)</span> <!-- ux 라이팅 수정 -->
+                    </div>
+                    <div class="table -sm -xx">
+                        <table>
+                            <caption><span class="hide">차기 상환예측정보(S&ampP500)</span></caption>
+                            <colgroup>
+                                <col style="width:12%">
+                                <col style="width:25%">
+                                <col style="width:25%">
+                                <col style="width:24%">
+                                <col style="width:14%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" rowspan="2">경과<br>기간</th>
+                                    <th scope="col" rowspan="2">실납입<br>보험료<br>누계</th>
+                                    <th scope="col" rowspan="2">특별계정<br>투입금액<br>누계</th>
+                                    <th scope="col" colspan="2">투자수익률 2.5% 가정<br>(순수익률 2.35%)</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">해약<br>환급금</th>
+                                    <th scope="col">환급률<br>(%)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3개월</td>
+                                    <td>300,000</td>
+                                    <td>293,699</td>
+                                    <td>290,496</td>
+                                    <td>97.9</td>
+                                </tr>
+                                <tr>
+                                    <td>6개월</td>
+                                    <td>600,000</td>
+                                    <td>588,311</td>
+                                    <td>583,120</td>
+                                    <td>98.1</td>
+                                </tr>
+                                <tr>
+                                    <td>9개월</td>
+                                    <td>900,000</td>
+                                    <td>883,839</td>
+                                    <td>877,888</td>
+                                    <td>97.9</td>
+                                </tr>
+                                <tr>
+                                    <td>1년</td>
+                                    <td>1,200,000</td>
+                                    <td>1,180,287</td>
+                                    <td>1,174,819</td>
+                                    <td>98.4</td>
+                                </tr>
+                                <tr>
+                                    <td>2년</td>
+                                    <td>2,400,000</td>
+                                    <td>2,402,915</td>
+                                    <td>2,384,525</td>
+                                    <td>100.1</td>
+                                </tr>
+                                <tr>
+                                    <td>3년</td>
+                                    <td>2,400,000</td>
+                                    <td>2,414,649</td>
+                                    <td>3,630,164</td>
+                                    <td>100.6</td>
+                                </tr>
+                                <tr>
+                                    <td>4년</td>
+                                    <td>2,400,000</td>
+                                    <td>2,426,505</td>
+                                    <td>4,913,059</td>
+                                    <td>101.1</td>
+                                </tr>
+                                <tr>
+                                    <td>5년</td>
+                                    <td>2,400,000</td>
+                                    <td>2,438,485</td>
+                                    <td>6,234,334</td>
+                                    <td>101.6</td>
+                                </tr>
+                                <tr>
+                                    <td>6년</td>
+                                    <td>2,400,000</td>
+                                    <td>2,444,531</td>
+                                    <td>7,597,642</td>
+                                    <td>101.9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //[240129] 표 추가 -->
+                </div>
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <!-- 2024-05-16 블릿 삭제 -->
+                            <p class="p">이 상품은 납입한 보험료 중 일부(위험보험료, 계약체결비용, 계약관리비용)를 차감한 보험료에 대하여만 공시이율을 적용하여 적립합니다.</p>
+                            <p class="p">상기 예시금액은 【①최저보증이율 ②현재 평균공시이율[연복리 2.25%]와 공시이율 [연복리 2.7%] 중 작은 값 ③현재 공시이율 [연복리 2.7%]】를 기준으로 계산한 금액입니다.</p>
+                            <p class="p">공시이율은 매월 변동될 수 있으며, 상기 최저보증이율은 계약일부터 【①5년 이하 경과기간 연복리 1.25% ②5년 초과 10년 이하 경과기간 연복리 1.0% ③10년 초과 경과기간 연복리 0.5%】입니다.</p>
+                            <p class="p">상기 예시금액 및 환급률은 적용금리가 변동하지 않고, 중도인출이 없으며, 보험료를 납입해당일에 납입한 경우의 금액이므로 보험기간 중 적용금리가 변동하거나 중도인출이 발생 혹은 보험료를 납입 해당일에 납입하지 않았을 경우에는 예시금액 및 환급률과 상이할 수 있습니다.</p>
+                            <p class="p">이 계약을 중도해지 할 경우 납입한 보험료에서 경과된 기간의 위험보험료, 계약체결비용, 계약관리비용 등이 차감된 금액을 해약환급금으로 지급하므로, 해약환급금이 납입보험료보다 적거나 없을 수도 있습니다.</p>
+                            <p class="p">상기 예시된 금액 및 환급률 등이 미래의 수익을 보장하는 것은 아닙니다.</p>
+                            <p class="p">상기 예시된 금액은 납입완료보너스 적립액을 계약자적립액에 더하여 계산한 금액입니다.</p>
+                            <!-- 2024-05-16 블릿 삭제 -->
+                            <!-- <ul class="ul -bullet">
+                                <li>이 상품은 납입한 보험료 중 일부(위험보험료, 계약체결비용, 계약관리비용)를 차감한 보험료에 대하여만 공시이율을 적용하여 적립합니다.</li>
+                                <li>상기 예시금액은 【①최저보증이율 ②현재 평균공시이율[연복리 2.25%]와 공시이율 [연복리 2.7%] 중 작은 값 ③현재 공시이율 [연복리 2.7%]】를 기준으로 계산한 금액입니다.</li>
+                                <li>공시이율은 매월 변동될 수 있으며, 상기 최저보증이율은 계약일부터 【①5년 이하 경과기간 연복리 1.25% ②5년 초과 10년 이하 경과기간 연복리 1.0% ③10년 초과 경과기간 연복리 0.5%】입니다.</li>
+                                <li>상기 예시금액 및 환급률은 적용금리가 변동하지 않고, 중도인출이 없으며, 보험료를 납입해당일에 납입한 경우의 금액이므로 보험기간 중 적용금리가 변동하거나 중도인출이 발생 혹은 보험료를 납입 해당일에 납입하지 않았을 경우에는 예시금액 및 환급률과 상이할 수 있습니다.</li>
+                                <li>이 계약을 중도해지 할 경우 납입한 보험료에서 경과된 기간의 위험보험료, 계약체결비용, 계약관리비용 등이 차감된 금액을 해약환급금으로 지급하므로, 해약환급금이 납입보험료보다 적거나 없을 수도 있습니다. </li>
+                                <li>상기 예시된 금액 및 환급률 등이 미래의 수익을 보장하는 것은 아닙니다.</li>
+                                <li>상기 예시된 금액은 납입완료보너스 적립액을 계약자적립액에 더하여 계산한 금액입니다.</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

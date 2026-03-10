@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div id="alert" class="alert">
+        <div class="container">
+            <div class="contents">
+                <div class="content">
+                    <h3 class="title">가장 많이 가입한 설계로 추천받으시겠어요?</h3> <!-- ux 라이팅 수정 -->
+                    <p class="p">보험기간 <span class="point">10년</span>, 납입기간 <span class="point">10년납</span>, 납입방법 <span class="point">매월</span>(으)로 설계해 드립니다.</p> <!-- ux 라이팅 수정 -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button">아니요</button>
+                        <button type="button" class="button -secondary">예</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Alert.open('alert');
+
+        // 얼럿 닫기(마지막 인자 기본값: false)
+        // Alert.close('alert', function() {
+        //     '콜백함수'
+        // });
+
+        // 얼럿 닫기 + DOM 삭제
+        // Alert.close('alert', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

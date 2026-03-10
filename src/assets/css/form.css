@@ -1,0 +1,970 @@
+@charset "utf-8";
+
+/* 프로그레스 */
+.progress-box .progress .bar {width:100%; height:.6rem; border-radius:.3rem; background-color:var(--line1);}
+.progress-box .progress .bar .gauge {display:flex; justify-content:flex-end; align-items:center; position:relative; width:0; height:.6rem; border-radius:.3rem; animation:progressBar 1s forwards; background-color:var(--point);}
+
+@-webkit-keyframes progressBar {
+    0%   {width:0;}
+    100% {width:calc( 100% * (var(--current) / var(--max)) );}
+}
+@keyframes progressBar {
+    0%   {width:0;}
+    100% {width:calc( 100% * (var(--current) / var(--max)) );}
+}
+
+.progress-box .progress-label {display:flex; justify-content:space-between; margin-top:1.1rem; line-height:1.2;}
+
+/* 스텝 프로세스용 상단 프로그레스 */
+.progress-top {height:2.7rem; padding:1.2rem .1rem; position:fixed;top:4.9rem; display: block; left:2.3rem; right:2.3rem; z-index: 90; background:linear-gradient(0deg, rgba(255,255,255,0) 0%, var(--G10) .8rem);}
+.progress-top .progress .bar {height:.2rem; border-radius:0; background-color:#f4f9f6; box-shadow:inset 0 .1rem .1rem 0 rgba(0, 0, 0, .05); overflow: hidden;}
+.dark-mode .progress-top .progress .bar {height:.2rem; border-radius:0; background-color:#2f2f2f; box-shadow:inset 0 .1rem .1rem 0 rgba(0, 0, 0, .05); overflow: hidden;}
+.progress-top .progress .bar .gauge {width:0; height:.2rem; display:flex; justify-content:flex-end; align-items:center; position:relative; border-radius:0.6rem; animation:Barcalc .8s forwards;  background-color:var(--point); overflow: hidden;}
+.content .progress-top + .field {margin-top:0}
+.page .content.progress-layout {padding-top:5rem;}
+.popup .content.sticker-layout {padding-bottom:4rem;}
+.page .content.sticker-layout {padding-bottom:4rem;}
+.layer .content.sticker-layout {padding-bottom:3.2rem;}
+
+@keyframes Barcalc {
+    0% {width:calc( 100% * ((var(--current) - 1 ) / var(--max)));}
+    100% {width:calc( 100% * (var(--current) / var(--max)));}
+}
+
+/* 박스라디오 */
+.box-radio {display:flex; position:relative; margin-right:1rem;}
+.box-radio:last-child {margin-right:0}
+.box-radio input {position:absolute; width:100%; height:100%; font-size: 1.4rem; font-weight: 500; color:var(--font2)}
+.box-radio label {display:inline-flex; flex-direction:column; justify-content:center; align-items:center; position:relative; z-index:2; width:100%; padding:1.6rem .4rem; background-color:var(--bg-box-radio); color:var(--color-box-radio); font-weight:normal; font-size:1.5rem; line-height:1.2; text-align:center; cursor:pointer; border-radius: 1rem; letter-spacing: -.1rem;}
+.box-radio label:after {content:""; position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid var(--border-box-radio);border-radius: 1rem;}
+.box-radio label span.sub {font-size: 1.2rem; margin-top:.4rem;}
+.box-radio input:checked ~ label {z-index:3; background-color:var(--bg-box-radio-checked); color:var(--color-box-radio-checked);font-weight: 500;}
+.box-radio input:checked ~ label:after {border-color:var(--border-box-radio-checked);}
+.box-radio input[disabled] ~ label{color:var(--color-box-radio-disabled); border-color: var(--border-box-radio-disabled);}
+.box-radio input[disabled]:checked ~ label {color:var(--color-radio-checked-disabled); background-color: var(--bg-box-radio-checked-disabled)}
+.box-radio input[disabled]:checked ~ label:after {border-color: var(--inner-box-radio-checked-disabled);}
+.box-radio input.-caution + label {color:var(--red); font-weight: normal;}
+.box-radio input.-caution + label::after {border-color: var(--red);}
+.box-radio.-left label {align-items: flex-start; text-align: left; padding:1.6rem;}
+.box-radios.-sm .box-radio label {padding:.6rem .4rem; min-height:3.6rem; font-size: 1.4rem; border-radius:.8rem;}
+.box-radios.-sm .box-radio label::after {border-radius: .8rem;}
+.box-radios.-sm .box-radio {margin-right:.6rem;}
+.box-radios.-sm .box-radio:last-child {margin-right:0;}
+
+.box-radios {display:flex; flex-wrap:wrap; width: 100%;}
+.box-radios .box-radio {flex:1;}
+.box-radios + .box-radios {margin-top:1.2rem}
+.box-radios.-sm + .box-radios.-sm {margin-top:.6rem}
+.box-radios.custom label{padding:1.6rem 2rem;}
+
+/* 박스체크 */
+.box-check {display:flex; position:relative; margin-right:1rem;}
+.box-check:last-child {margin-right:0}
+.box-check input {position:absolute; width:100%; height:100%; font-size: 1.4rem; font-weight: 500; color:var(--font2)}
+.box-check label {display:inline-flex; flex-direction:column; justify-content:center; align-items:center; position:relative; z-index:2; width:100%; padding:1.6rem .4rem; background-color:var(--bg-box-check); color:var(--color-box-check); font-weight:normal; font-size:1.5rem; line-height:1.2; text-align:center; cursor:pointer; border-radius: 1rem; letter-spacing: -.1rem;}
+.box-check label:after {content:""; position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid var(--border-box-check);border-radius: 1rem;}
+.box-check label span.sub {font-size: 1.2rem; margin-top:.4rem;}
+.box-check input:checked ~ label {z-index:3; background-color:var(--bg-box-check-checked); color:var(--color-box-check-checked);font-weight: 500;}
+.box-check input:checked ~ label:after {border-color:var(--border-box-check-checked);}
+.box-check input[disabled] ~ label{color:var(--color-box-check-disabled); border-color: var(--border-box-check-disabled);}
+.box-check input[disabled]:checked ~ label {color:var(--color-radio-checked-disabled); background-color: var(--bg-box-check-checked-disabled)}
+.box-check input[disabled]:checked ~ label:after {border-color: var(--inner-box-check-checked-disabled);}
+.box-check input.-caution + label {color:var(--red); font-weight: normal;}
+.box-check input.-caution + label::after {border-color: var(--red);}
+.box-check.-left label {align-items: flex-start; text-align: left; padding:1.6rem;}
+.box-checks.-sm .box-check label {padding:.6rem .4rem; min-height:3.6rem; font-size: 1.4rem;}
+.box-checks.-sm .box-check {margin-right:.6rem;}
+.box-checks.-sm .box-check:last-child {margin-right:0;}
+
+.box-checks {display:flex; flex-wrap:wrap;}
+.box-checks .box-check {flex:1;}
+.box-checks + .box-checks {margin-top:1rem}
+.box-checks.custom label{padding:1.6rem 2rem;}
+
+.box-checks.-point .box-check input:checked + label:after {border-color:var(--point);}
+
+.show-wrap .step-area {
+    display: none;
+}
+
+.show-wrap .step-area.-show {
+    display: block !important;
+    animation: change 350ms ease-out backwards;
+}
+
+/* 레이블 */
+.label {display:block; margin-bottom:1rem; padding:0; color:var(--font2); font-size:1.4rem; text-align:left; transition:color .3s; font-weight: 500;}
+p.label {color:var(--font2);}
+.label.-textless,
+.label label.-textless {color:var(--font2);}
+/* .label.-disabled,
+.label label.-disabled {color:var(--font5);} */
+.label.-error,
+.label label.-error {color:var(--red);}
+.label.-readonly,
+.label label.-readonly {color:var(--font2);}
+
+.label-group {display:flex; align-items:center; margin-bottom:1rem; justify-content: space-between; align-items: center;}
+.label-group .label {margin-bottom:0;}
+.label-group .goto-button {width:auto; margin:0}
+
+.title-group {display:flex; align-items:center; margin-bottom:1.2rem; justify-content: space-between; align-items: center;}
+.title-group .title {font-size: 1.5rem; font-weight: 500; color:var(--F01)}
+.title-group + .title-group {margin-top:3.2rem;}
+.title-group .label {margin-bottom:0}
+.title-group .h5{margin-bottom:0}
+.title-group .unit{font-size:1.3rem;color:var(--F04) ;}
+
+.label .i {vertical-align:0.6rem;}
+.label.-lg {font-size: 2.3rem; color:var(--font2); margin-bottom:2.6rem; margin-top:1.6rem; font-weight: bold;}
+
+.switch.-sm input {width:4rem; height:2.4rem; }
+.switch.-sm label {height:2.4rem; padding-left:4.6rem; font-size:1.4rem; line-height:2rem;}
+.switch.-sm label:before {width:4rem; height:2.4rem;}
+.switch.-sm label:after {width:2rem; height:2rem;}
+.switch.-sm input:checked ~ label:after {transform:translateX(1.6rem);}
+
+.switch.-sm.-textless label {margin-left:0; padding-left:4rem;}
+
+/* 텍스트필드 */
+.text {position:relative;}
+.text input {display:block; width:100%; height:5.4rem; padding:1.4rem 2rem 1.4rem 2rem; border:1px solid var(--line1); border-radius:1.2rem; background-color:transparent; color:var(--font1); font-weight:500; font-size:1.8rem; text-align:left; transition:border .3s;}
+.text input.left-right {text-align:right !important;}
+.text input:focus {border-color:var(--point);}
+.text input[readonly] {background-color: var(--G09);}
+.text input[readonly]:focus {border-color:var(--line1);}
+.text input.fake-readonly { background-color: var(--G10);}
+.text.-focused:not(.-textless):not([data-clear="false"]):not(.-readonly) input {padding-right:4.4rem;}
+.text[data-clear="false"] input {padding-right:2rem}
+.text input::placeholder {color:var(--placeholder-color); font-weight:500; font-size: 1.8rem; text-align: left; letter-spacing: -.1rem;} /* 20240822 접근성 폰트색상 변경 */
+.text .text-count {margin-top:1rem; padding:0; color:var(--font3); font-size:1.4rem; text-align:right;}
+.text .text-count.-limit {color:var(--red);}
+.text .total:before {content:" / ";}
+.text .input {display:block; width:100%; height:5.4rem; padding:1.4rem 1.6rem 1.4rem 1.6rem; border:1px solid var(--line1); border-radius:1.2rem; color:var(--font1); font-weight:500; font-size:1.8rem; text-align:left; transition:border .3s; background:transparent}
+.text .input:focus {border-color:var(--point);}
+.text input[disabled] {opacity:1; background-color: var(--G09);}
+.text .input[data-bankcode]:before,
+.text .input[data-conuntrycode]:before {vertical-align:-0.8rem;}
+.text .unit {position:absolute; top:1.1rem; right:.4rem; color:var(--font1); font-weight:bold; font-size:1.8rem;}
+.text .info,
+.box-radios ~ .info,
+.box-checks ~ .info {width:100%; margin-top:1rem; padding:0; color:var(--font3); font-size:1.3rem; text-align:left; font-weight: 400;}
+.text .info.-bullet,
+.box-radios ~ .info.-bullet,
+.box-checks ~ .info.-bullet {position:relative; padding: 0 0 0 0.9rem;}
+.text .info.-bullet:before,
+.box-radios ~ .info.-bullet:before,
+.box-checks ~ .info.-bullet:before {content:""; position:absolute; top:.75rem; left:0; width:.3rem; height:.3rem; border-radius:50%; background-color:#9e9e9e}
+.text .info + .info,
+.box-radios ~ .info + .info,
+.box-checks ~ .info + .info {margin-top:.7rem}
+.text .message {width:100%; margin-top:1rem; padding:0; color:var(--font3); font-size:1.2rem; text-align:left;}
+.message {width:100%; margin-top:1.2rem; padding:0; color:var(--font3); font-size:1.3rem; line-height: 1.3;}
+.text.-error .message {display: flex; align-items: center; color:var(--red); position:relative;}
+/* .text .clear {opacity:0; position:absolute; top:1.5rem; right:1.2rem; width:2.4rem; height:2.4rem; background:url(../imgs/ico/common/ico-round-del.png) no-repeat 0 / cover;transform:translate3d(0,0,0);} */
+/* .dark-mode .text .clear {opacity:0; position:absolute; top:1.5rem; right:1.2rem; width:2.4rem; height:2.4rem; background:url(../imgs/ico/common/ico-round-del_dk.png) no-repeat 0 / cover;} */
+.text .clear:focus {opacity:1;}
+.text.-textless .clear {display:none;}
+.text:not(.-textless).-focused .clear {opacity:1;}
+.text.-confirm {position:relative}
+.text.-confirm input {display: block; padding-right: 4rem;}
+.text button.input {line-height:2.4rem;}
+.text input[type="password"] {font-family: 'Pass'; letter-spacing: .2rem;}
+.text input[type="password"]::placeholder {color:var(--placeholder-color); font-weight:500; font-size: 1.8rem; text-align: left; letter-spacing: -.1rem; font-family: 'Pretendard';} /* 20240822 접근성 폰트색상 변경 */
+
+.text + .checkbox {margin-top:1.2rem;}
+
+.text.-textless + .space.-hide {display:none;}
+.text.-textless input.left-right {text-align:left !important;}
+
+.text + .text,
+.select + .text,
+.mix + .text {margin-top:1rem;}
+
+.mix .text + .text {margin-top:0; margin-left:1rem;}
+.mix .text + .text {margin-top:0; margin-left:1rem;}
+.mix .select + .text {margin-top:0; padding:0;}
+
+.mix .dot   + .text,
+.mix .dot   + .text,
+.mix .dash  + .text,
+.mix .tilde + .text,
+.mix .at    + .text,
+.mix .money + .text,
+.mix .space + .text,
+.mix .word  + .text {margin-left:0;}
+
+.mix + .fit-buttons,.mix + .buttons, .mix + .checks {margin-top:1.2rem;}
+
+.multi {display: flex;}
+.multi .inner {width:50%}
+.multi .inner + .inner {margin-left:1rem;}
+
+.mix .dash{border:1px solid var(--line1); border-left:0; border-right:0; transition:border .3s;}
+.multi-label + .id-number {position:relative}
+.-lasthide .dash {border:none; font-weight: 500;}
+.-lasthide .last-area {display: flex;}
+.-lasthide .last-area input {font-variant-numeric: tabular-nums; flex:0 !important; padding:1.4rem; width:4.4rem;}
+.-lasthide .last-area input::placeholder {font-family: 'Pass'; letter-spacing: .2rem; font-size: 2.2rem;}
+.-lasthide .hide-num {display: flex; align-items: center; font-family: 'Pass'; letter-spacing: .2rem; font-size: 2.2rem; margin-left:.5rem;}
+.mix .space.time-limit {font-size: 1.4rem; color:var(--red); padding:0;}
+.mix div.flex-1 input {min-width:2.8rem; padding-right:var(--indent);}
+.mix .-unit:not(:last-child) input {padding-right:var(--indent);}
+
+.box-radios + .text,
+.box-checks + .text {margin-top:1.2rem;}
+
+.plus-minus + .text {margin-left:1rem;}
+
+/* 다중 텍스트필드 */
+.textarea {position:relative;}
+.textarea textarea {display:block; width:100%; min-height:15.6rem; padding:1.6rem 3.2rem 2rem 2rem; border:1px solid var(--line1); border-radius:1.2rem; background-color:transparent; color:var(--font2); font-size:1.5rem; resize:none; transition:border .3s;}
+.textarea textarea:focus {border-color:var(--point);}
+.textarea textarea[readonly] {background-color: var(--G09);}
+.textarea textarea[readonly]:focus {border-color:var(--line1);}
+.textarea textarea[disabled] {opacity:1; background-color: var(--G09); }
+.textarea textarea::placeholder {color:var(--placeholder-color); font-weight:normal; letter-spacing: -.1rem;} /* 20240822 접근성 폰트색상 변경 */
+.textarea .text-count {margin-top:1rem; padding:0 var(--indent); color:var(--font2); font-size:1.4rem; text-align:right;}
+.textarea .text-count.-limit {color:var(--red);}
+.textarea .total:before {content:" / ";}
+.textarea .info {width:100%; margin-top:1rem; padding:0 var(--indent); color:var(--font3); font-size:1.4rem; text-align:left;}
+.textarea .info.-bullet {position:relative; padding:0 var(--indent) 0 1.9rem;}
+.textarea .info.-bullet:before {content:""; position:absolute; top:1rem; left:0.6rem; width:.3rem; height:.3rem; border-radius:50%; background-color:var(--font3);}
+.textarea .message {width:100%; margin-top:1rem; padding:0 var(--indent); color:var(--font3); font-size:1.4rem; text-align:left;}
+.textarea.-error .message {color:var(--red);}
+/* .textarea .clear {opacity:0; position:absolute; top:1rem; right:1rem; width:2.4rem; height:2.4rem; background:url(../imgs/ico/common/ico-round-del.png) no-repeat 50% / 2.4rem;} */
+/* .dark-mode .textarea .clear {opacity:0; position:absolute; top:1rem; right:1rem; width:2.4rem; height:2.4rem; background:url(../imgs/ico/common/ico-round-del_dk.png) no-repeat 50% / 2.4rem;} */
+.textarea .clear:focus {opacity:1;}
+.textarea.-textless .clear {display:none;}
+.textarea:not(.-textless).-focused .clear {opacity:1;}
+
+.box-radios + .textarea,
+.box-checks + .textarea {margin-top:2rem;}
+
+/* 셀렉트 */
+.select {overflow:hidden; position:relative;}
+.select > button {display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; width:100%; min-height:5.4rem; padding:1.2rem 4rem 1.2rem 2rem; border:1px solid var(--line1); background:transparent url(../imgs/ico/common/ico-select-arr.png) no-repeat right 1.6rem top 50% / 2.4rem ; font-weight:500; font-size:1.8rem; border-radius: 1.2rem; text-align:left; transition:border .3s;}
+.select > .button-type {display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; width:100%; min-height:5.4rem; padding:2.4rem 2rem 2.4rem 2rem; border:1px solid var(--line1); background:transparent url(../imgs/ico/common/ico-select-arr.png) no-repeat right 1.6rem top 50% / 2.4rem ; font-weight:500; font-size:1.8rem; border-radius: 1.2rem; text-align:left; transition:border .3s;}
+.select > .button-type.-fixed {background:transparent url(../imgs/ico/common/ico-select-arr.png) no-repeat right 2rem top 2.4rem / 2.4rem; padding:2.4rem 2rem 2.4rem 2rem; border-radius: 1.6rem;}
+.select > button.-fixed {background:transparent url(../imgs/ico/common/ico-select-arr.png) no-repeat right 2rem top 2.4rem / 2.4rem; padding:2.4rem 2rem 2.4rem 2rem; border-radius: 1.6rem;}
+/* .dark-mode .select > button {display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; width:100%; min-height:5.4rem; padding:1.2rem 4rem 1.2rem 2rem; border:1px solid var(--line1); background:transparent url(../imgs/ico/common/ico-select-arr_dk.png) no-repeat right 1.6rem top 50% / 2.4rem ; font-weight:500; font-size:1.8rem; border-radius: 1.2rem; text-align:left; transition:border .3s;} */
+/* .dark-mode .select > .button-type {display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; width:100%; min-height:5.4rem; padding:2.4rem 2rem 2.4rem 2rem; border:1px solid var(--line1); background:transparent url(../imgs/ico/common/ico-select-arr_dk.png) no-repeat right 1.6rem top 50% / 2.4rem ; font-weight:500; font-size:1.8rem; border-radius: 1.2rem; text-align:left; transition:border .3s;} */
+/* .dark-mode .select > .button-type.-fixed {background:transparent url(../imgs/ico/common/ico-select-arr_dk.png) no-repeat right 2rem top 2.4rem / 2.4rem; padding:2.4rem 2rem 2.4rem 2rem; border-radius: 1.6rem;} */
+/* .dark-mode .select > button.-fixed {background:transparent url(../imgs/ico/common/ico-select-arr_dk.png) no-repeat right 2rem top 2.4rem / 2.4rem; padding:2.4rem 2rem 2.4rem 2rem; border-radius: 1.6rem;} */
+.select > button[readonly] {background-color:var(--F09);}
+.select > button[readonly]:focus {border-color:var(--line1);}
+.select > button[disabled] {background-color:var(--F09)}
+.select > button[data-bankcode]:before {width:2rem; height:2rem; vertical-align:-0.4rem;}
+.select > button .sub {display:block; width:100%; margin-top:.2rem; color:var(--font3); font-weight:normal; font-size:1.4rem;}
+.select > button .selection .info {padding-right:1.6rem;}
+.select .info {width:100%; margin-top:1rem; padding:0; color:var(--font3); font-size:1.3rem; text-align:left;}
+.select .info.-error {color:var(--red)}
+.select .message {width:100%; margin-top:1rem; padding:0 0; color:var(--font3); font-size:1.4rem; text-align:left;}
+.select.-error .message,
+.select .message.-error{color:var(--red);}
+.select .selection {padding:0;}
+.select .selection .info {margin:0; padding-right:2rem;}
+.select .amounts {display:flex; align-items:flex-end;  margin-top:2rem;}
+.select .amount {display:flex; flex-direction:column; justify-content:center; align-items:flex-end; margin:2rem 0 0 auto;}
+.select .amounts .amount {margin-top:0;}
+.select .amount.-x {flex-direction:row; justify-content:flex-end; align-items:center;}
+.select .amount .key {color:var(--font3); font-size:1.4rem;}
+.select .amount .value {font-size:2rem; font-weight: 500;}
+.select .amount .refresh,
+.accounts-box .amount .refresh {width:2.4rem;height:2.4rem; background:url(../imgs/ico/common/ico-refresh.png) no-repeat center center / 2.4rem; vertical-align: middle; margin-top:-.4rem}
+/* .dark-mode .select .amount .refresh {width:2.4rem;height:2.4rem; background:url(../imgs/ico/common/ico-refresh_dk.png) no-repeat center center / 2.4rem; vertical-align: middle; margin-top:-.4rem} */
+
+.box-radios + .select,
+.box-checks + .select {margin-top:2rem;}
+.select + .select,
+.text + .select,
+.mix + .select {margin-top:1.2rem;}
+
+.mix .dot   + .select,
+.mix .dash  + .select,
+.mix .tilde + .select,
+.mix .at    + .select,
+.mix .money + .select,
+.mix .word + .select {margin-left:0;}
+
+.mix .select + .select,
+.mix .text + .select {margin-top:0;}
+
+/* 필드/믹스 */
+.field {margin-top:3.2rem;}
+.field:first-child {margin-top:0;}
+.field.-sm {margin-top:3.2rem;}
+
+.h1 + .field,
+.h2 + .field,
+.h3 + .field,
+.h4 + .field,
+.h5 + .field,
+.h6 + .field,
+.h1-group + .field,
+.h2-group + .field,
+.h3-group + .field {margin-top:3.2rem;}
+
+.hr + .field {margin-top:0;}
+
+.mix {display:flex; flex-wrap:wrap;}
+.mix .text,
+.mix .select {flex:1;}
+
+.mix .dot   {display:inline-flex; justify-content:center; align-items:center; width:2.2rem; font-size:1.8rem;}
+.mix .dash  {display:inline-flex; justify-content:center; align-items:center; width:2.2rem; font-size:1.8rem;}
+.mix .left-text  {display:inline-flex; justify-content:center; align-items:center; font-size:1.4rem; color: var(--font2); margin-right:1.6rem}
+.mix .tilde {display:inline-flex; justify-content:center; align-items:center; width:2.2rem; font-size:1.8rem;}
+.mix .at    {display:inline-flex; justify-content:center; align-items:center; width:3.1rem; font-size:1.8rem;}
+.mix .wave   {display:inline-flex; justify-content:center; align-items:center; width:3.2rem; font-size:1.8rem; font-weight: bold;}
+.mix .money {display:inline-flex; justify-content:center; align-items:center; order:-1; padding-right:.8rem; padding-left:var(--indent); font-size:1.8rem;}
+.mix .space {display:inline-flex; justify-content:center; align-items:center; padding:1rem 1.6rem; font-size:1.8rem; height:5.4rem;}
+.mix .word {display:inline-flex; justify-content:center; align-items:center; flex:0 0 auto; width:3.1rem; font-size:1.8rem;}
+.mix .word:last-child {width:2.2rem; justify-content:flex-end;}
+.mix .-lined {border:1px solid var(--line1); transition:border .3s; border-radius: 1.2rem;}
+.mix .-lined .round-button {margin-top:.2rem;}
+.mix .text > input.left-side {border-right:0; border-radius: 1.2rem 0 0 1.2rem; padding-left:2rem}
+.mix .text > input.mid-side {border-right:0; border-left:0; border-radius:0 !important;}
+.mix .text > input:focus {border-color: var(--line1);}
+.mix .text > input.right-side {border-left:0; border-radius: 0 1.2rem 1.2rem 0;}
+.mix .select button.left-side,
+.mix .space.left-side {display: flex; align-items: center; border-radius: 1.2rem 0 0 1.2rem; border:1px solid var(--line1); border-right:0; background: transparent url(../imgs/ico/common/ico-select-arr.png) no-repeat right .6rem top 50% / 2.4rem; padding-right:2.6rem;}
+.dark-mode .mix .select button.left-side,
+/* .dark-mode .mix .space.left-side {display: flex; align-items: center; border-radius: 1.2rem 0 0 1.2rem; border:1px solid var(--line1); border-right:0; background: transparent url(../imgs/ico/common/ico-select-arr_dk.png) no-repeat right .6rem top 50% / 2.4rem; padding-right:2.6rem;} */
+/* .dark-mode .mix .space.left-side {display: flex; align-items: center; border-radius: 1.2rem 0 0 1.2rem; border:1px solid var(--line1); border-right:0; background: transparent url(../imgs/ico/common/ico-select-arr_dk.png) no-repeat right .6rem top 50% / 2.4rem; padding-right:2.6rem;} */
+.mix .left-space .left-side {display: flex; align-items: center; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; min-height:5.4rem; padding:1.1rem 1.4rem 1.1rem 1.8rem; border:1px solid var(--line1); font-weight:500; font-size:1.8rem; border-radius: 1.2rem 0 0 1.2rem; text-align:left; transition:border .3s; border-right:none;}
+.mix .select button.mid-side,
+.mix .space.mid-side {border-right:0; border-left:0; border-radius:0 !important;}
+.mix .select button.right-side,
+.mix .space.right-side {border-radius: 0 1.2rem 1.2rem 0; border:1px solid var(--line1); border-left:0; padding:1rem;}
+.mix .space.right-side button {min-height:3.4rem}
+.mix .-lined.search {border-left:0;border-radius: 0 1.2rem 1.2rem 0; padding-left:.8rem;}
+.mix .-lined.date {border-left:0;border-radius: 0 1.2rem 1.2rem 0;padding-left:0.5rem ;}
+.-disabled + .-lined.date {background-color: var(--G09) !important; opacity: 1 !important;}
+.-disabled + .-lined.search {background-color: var(--G09) !important; opacity: 1 !important;}
+.mix.datepicker {position:relative}
+.mix.datepicker .-start,.mix.datepicker .-end {padding-left:0; padding-right:.8rem; letter-spacing: -.1rem;}
+.mix.datepicker .-end {padding-right:1.6rem;}
+.mix.datepicker .-start {border-right:0; border-radius: 0;}
+.mix.datepicker .-start + .dash + .text input {border-left:0; border-radius: 0; padding-left:2rem; }
+.mix.datepicker .dash {position:absolute; top:2.7rem; transform: translate(-50%, -50%); left:50%; border:none;} /* 2025-07-01 물결 표시 위치값 수정 */
+.mix.datepicker .text input{padding-right:0}
+.mix.datepicker .text input[readonly] {background:transparent}
+.-error .mix .left-space .left-side {border-color: var(--red);}
+
+.-focused + .dot.-lined {border-color:var(--point);}
+.-focused + .dot.-lined + .space.-lined {border-color:var(--point);}
+.-focused + .money.-lined + .dot.-lined {border-color:var(--point);}
+.-focused + .money.-lined + .dot.-lined + .space.-lined {border-color:var(--point);}
+.-success + .-lined {border-color:var(--blue);}
+.-error + .-lined {border-color:var(--red);}
+.mix .info {width:100%; margin-top:1rem; color:var(--font3); font-size:1.3rem;}
+.mix .info + .info {margin-top:0.6rem;}
+.mix .info.-bullet {position:relative; padding:0 var(--indent) 0 1.9rem;}
+.mix .info.-bullet:before {content:""; position:absolute; top:1rem; left:0.6rem; width:0.3rem; height:0.3rem; border-radius:50%; background-color:var(--font3);}
+.mix .message {width:100%; margin-top:1rem; color:var(--font3); font-size:1.3rem;}
+.mix .message + .message {margin-top:0.6rem;}
+.mix.-error .message {color:var(--red);}
+.mix .-unit + .space {padding-right:var(--indent); padding-left:0.2rem;}
+
+.mix .text.-won {position:relative;}
+.mix .text.-won input {padding-right:3.4rem;}
+.mix .text.-won input::placeholder {text-align: left; letter-spacing: -.1rem;}
+.mix .text.-won.-textless input {padding-right:2rem;}
+.mix .text .won {display: block; position:absolute; right:2rem; top:1.35rem; font-weight: 500; font-size: 1.8rem; touch-action: none; pointer-events: none; opacity: 0;}
+.mix .text.-won:not(.-textless) .won {pointer-events: none; opacity: 1;}
+
+.mix .text.-percent {position:relative;}
+.mix .text.-percent input {padding-right:3.6rem;padding-left:.8rem;}
+.mix .text.-percent input::placeholder {text-align: right; letter-spacing: -.1rem;}
+.mix .text .percent {display: block; position:absolute; right:2rem; top:1.35rem; font-weight: 500; font-size: 1.8rem; touch-action: none; pointer-events: none;}
+
+.info .mix .text.-percent {position:relative;}
+.info .mix .text.-percent input {padding-right:3rem;padding-left:.8rem;}
+.info .mix .text.-percent input::placeholder {text-align: right; letter-spacing: -.1rem;}
+.info .mix .text .percent {display: block; position:absolute; right:.8rem; top:1.35rem; font-weight: 500; font-size: 1.8rem; touch-action: none; pointer-events: none;}
+
+.mix .text.-poin {position:relative;}
+.mix .text.-poin input {padding-right:3.2rem;}
+.mix .text.-poin input::placeholder {text-align: left; letter-spacing: -.1rem;}
+.mix .text .poin {display: block; position:absolute; right:2rem; top:1.35rem; font-weight: 500; font-size: 1.8rem; touch-action: none; pointer-events: none; opacity: 0;}
+.mix .text.-poin:not(.-textless) .poin {pointer-events: none; opacity: 1; text-transform: capitalize;}
+
+.mix.-error input,
+.mix.-error .-lined,
+.text.-error input,
+.textarea.-error textarea,
+.select.-error button,
+.field.-error .text input{border-color:var(--red) !important;}
+.field.-error .message,
+.message.-error {color:var(--red) !important;}
+
+.mix.mix-focused.-focused .select button.left-side,
+.mix.mix-focused.-focused .text > input.right-side{border-color:var(--point);}
+
+.text + .mix,
+.select + .mix,
+.mix + .mix {margin-top:1.2rem;}
+
+.box-radios + .mix,
+.box-checks + .mix {margin-top:1.2rem;}
+
+.mix ~ .buttons,
+.text ~ .buttons,
+.textarea ~ .buttons,
+.select ~ .buttons {margin-top:1.2rem;}
+
+.mix ~ .checkbox,
+.text ~ .checkbox,
+.textarea ~ .checkbox,
+.select ~ .checkbox {margin-top:1.2rem;}
+
+.field .info-wrap {width:100%;}
+
+.plus-minus {display:flex; align-items:flex-end;}
+.plus-minus .plus label {display:block; position:relative; width:3.2rem; height:3.2rem; border:1px solid var(--border-button); border-radius:0.8rem; cursor:pointer; transition:border .3s;}
+.plus-minus .plus label:before {content:""; position:absolute; top:1.5rem; left:.9rem; width:1.3rem; height:1px; background-color:var(--border-box-radio-checked);}
+.plus-minus .plus label:after {content:""; position:absolute; top:.9rem; left:1.5rem; width:1px; height:1.3rem; background-color:var(--border-box-radio-checked);}
+.plus-minus .plus input:checked + label {border-color:var(--point);}
+.plus-minus .plus input:checked + label:before {background-color:var(--point);}
+.plus-minus .plus input:checked + label:after {background-color:var(--point);}
+
+.plus-minus .minus label {display:block; position:relative; width:3.2rem; height:3.2rem; margin-left:.6rem; border:1px solid var(--border-button); border-radius:0.8rem; cursor:pointer; transition:border .3s;}
+.plus-minus .minus label:before {content:""; position:absolute; top:1.5rem; left:.9rem; width:1.3rem; height:1px; background-color:var(--border-box-radio-checked);}
+.plus-minus .minus input:checked + label {border-color:var(--point);}
+.plus-minus .minus input:checked + label:before {background-color:var(--point);}
+
+/* 체크박스 (기본,sm 통합) */
+.checkbox {display:flex; position:relative;}
+.checkbox.-textless {width:2.8rem;height:2.8rem;}
+.checkbox.-textless.-sm {width:2.4rem;height:2.4rem;}
+.forms + .checkbox {margin-top:1.2rem;}
+
+.checkbox input {position:absolute; width:2.4rem; height:2.4rem; top:0; left:0; border-radius:1rem; background-color:rgba(0,0,0,0); visibility: hidden; z-index: -1;}
+.checkbox label {min-height:2.4rem; display:inline-flex; flex:1; position:relative; padding-left:3.8rem; color:var(--color-checkbox); font-size:1.6rem; word-break:break-all; cursor:pointer; font-weight: 500; line-height:1.7; min-height:2.4rem; padding:0 0 0 3.2rem; font-size:1.5rem; line-height:1.6}
+.checkbox label:before,
+.checkbox.-sm > label:before {content:""; position:absolute; top:0; left:0; width:2.4rem; height:2.4rem; border:1px solid var(--border-checkbox); border-radius:.8rem; background-color: transparent;}
+.checkbox label:after,
+.checkbox.-sm > label:after {content:"";  position:absolute; top:0; left:0; width:2.4rem; height:2.4rem; border-radius:.8rem; background:url(../imgs/ico/common/ico-checkbox-sm.png) no-repeat 0 / 2.4rem;}
+.dark-mode .checkbox label:after,
+/* .dark-mode .checkbox.-sm > label:after {content:"";  position:absolute; top:0; left:0; width:2.4rem; height:2.4rem; border-radius:.8rem; background:url(../imgs/ico/common/ico-checkbox-sm_dk.png) no-repeat 0 / 2.4rem;} */
+.checkbox input,
+.checkbox.-sm > input {position:absolute; width:2.4rem; height:2.4rem; top:.1rem; left:0; border-radius:1rem; background-color:rgba(0,0,0,0); visibility: hidden; z-index: -1;}
+.checkbox label,
+.checkbox.-sm > label {min-height:2.4rem; padding:0 0 0 3.2rem; font-size:1.5rem; line-height:1.6}
+.checkbox > input:checked ~ label:after,
+.checkbox.-sm > input:checked ~ label:after {background-image:url(../imgs/ico/common/ico-checkbox-sm-checked.png);}
+.dark-mode .checkbox > input:checked ~ label:after {background-image:url(../imgs/ico/common/ico-checkbox-sm-checked.png);}
+.checkbox.-sm > input:checked:focus ~ label:after {-webkit-animation:checkbox-sm .3s ease-out; animation:checkbox-sm .3s ease-out;}
+.checkbox input:checked ~ label:before {border-color:var(--border-checkbox-checked); background-color:var(--bg-checkbox-checked); transition:border .3s, background .3s;}
+.checkbox input:checked:focus ~ label:after {-webkit-animation:checkbox .3s ease-out; animation:checkbox .3s ease-out;}
+
+/* 체크박스 lg */
+.checkbox.-lg input {position:absolute; width:2.8rem; height:2.8rem; top:0; left:0; border-radius:1rem; background-color:rgba(0,0,0,0); visibility: hidden; z-index: -1;}
+.checkbox.-lg label {min-height:2.8rem; display:inline-flex; flex:1; position:relative; padding-left:3.8rem; color:var(--color-checkbox); font-size:1.6rem; word-break:break-all; cursor:pointer; letter-spacing: -.08rem; font-weight: 500; line-height:1.7}
+.checkbox.-lg label:before {content:""; position:absolute; top:0; left:0; width:2.8rem; height:2.8rem; border:1px solid var(--border-checkbox); border-radius:1rem;}
+.checkbox.-lg label:after {content:"";  position:absolute; top:0; left:0; width:2.8rem; height:2.8rem; border-radius:1rem; background:url(../imgs/ico/common/ico-checkbox-sm.png) no-repeat 0 / 2.8rem;}
+.checkbox.-lg input:checked ~ label:before {border-color:var(--border-checkbox-checked); background-color:var(--bg-checkbox-checked); transition:border .3s, background .3s;}
+/* .checkbox.-lg input:checked ~ label:after {background-image:url(../imgs/ico/common/ico-checkbox-checked.png);} */
+.checkbox.-lg input:checked:focus ~ label:after {-webkit-animation:checkbox .3s ease-out; animation:checkbox .3s ease-out;}
+
+.checkbox input[disabled] ~ label {color:var(--color-checkbox-disabled);}
+.checkbox input[checked] ~ label {color:var(--color-checkbox);}
+.checkbox input[disabled] ~ label:before {border-color: var(--border-checkbox-disabled); background-color:var(--bg-checkbox-disabled);}
+.dark-mode .checkbox input[disabled] ~ label:before {background-color:var(--bg-checkbox-disabled); border-color:var(--border-checkbox-disabled);}
+.checkbox input[disabled]:checked ~ label:before {border-color:var(--border-checkbox-checked-disabled); background-color:var(--bg-checkbox-checked-disabled);}
+.dark-mode .checkbox input[disabled]:checked ~ label:before {border-color:var(--border-checkbox-checked-disabled); background-color:var(--bg-checkbox-checked-disabled);}
+/* .dark-mode .checkbox > input[disabled]:checked ~ label:after {background-image:url(../imgs/ico/common/ico-checkbox-disable-sm_dk.png);} */
+.checkbox.-textless label {padding:0;}
+
+.checkbox label .input {display:inline-block; position:relative; width:2.8rem; height:2.8rem;}
+.checkbox label .input:before {content:""; position:absolute; top:.1rem; left:0; width:2.8rem; height:2.8rem; background-color:var(--bg-checkbox); border:1px solid var(--border-checkbox); border-radius:50%;}
+/* .checkbox label .input:after {content:""; position:absolute; top:.1rem; left:0; width:2.8rem; height:2.8rem; border-radius:50%; background:url(../imgs/ico/common/ico-checkbox.png) no-repeat .2rem / 2.4rem;} */
+.checkbox input:checked ~ label .input:before {border-color:var(--border-checkbox-checked); background-color:var(--bg-checkbox-checked);}
+/* .checkbox input:checked ~ label .input:after {background-image:url(../imgs/ico/common/ico-checkbox-checked.png);} */
+.checkbox input:checked:focus ~ label .input:after {-webkit-animation:checkbox .3s ease-out; animation:checkbox .3s ease-out;}
+
+@-webkit-keyframes checkbox {
+    0%   {width:0;}
+    50%  {width:1.25rem;}
+    100% {width:2.8rem;}
+}
+@keyframes checkbox {
+    0%   {width:0;}
+    50%  {width:1.25rem;}
+    100% {width:2.8rem;}
+}
+
+.checkbox.-sub + .checkbox.-sub {margin-top:1rem;}
+.checkbox.-sub > label:before {content:""; position:absolute; top:0; border:none; left:0; width:2.4rem; height:2.4rem; border:1px solid transparent; border-radius:.8rem;}
+.checkbox.-sub > label:after {content:"";  position:absolute; top:0; left:0; width:2.4rem; height:2.4rem; border-radius:.8rem; background:url(../imgs/ico/common/ico-sub-checkbox-def.png) no-repeat 0 / 2.4rem; transition:.2s;}
+/* .dark-mode .checkbox.-sub > label:after {content:"";  position:absolute; top:0; left:0; width:2.4rem; height:2.4rem; border-radius:.8rem; background:url(../imgs/ico/common/ico-sub-checkbox-def_dk.png) no-repeat 0 / 2.4rem; transition:.2s;} */
+.checkbox.-sub > input {position:absolute; width:2.4rem; height:2.4rem; top:0; left:0; border-radius:1rem; background-color:rgba(0,0,0,0); transform: translateY(-50%);}
+.checkbox.-sub > label {min-height:2.4rem; padding:0 0 0 3.2rem; font-size:1.5rem; font-weight: 400;}
+.checkbox.-sub > input:checked ~ label:after {background-image:url(../imgs/ico/common/ico-sub-checkbox-active.png);}
+.checkbox.-sub > input:checked:focus ~ label:after {-webkit-animation:checkbox-sm .3s ease-out; animation:checkbox-sm .3s ease-out;}
+.checkbox.-sub input:checked ~ label:before {border-color:transparent; background-color:var(--G10); transition:border .3s}
+.checkbox.-sub input:checked ~ label:after {background-image:url(../imgs/ico/common/ico-sub-checkbox-active.png);}
+.checkbox.-sub input:checked:focus ~ label:after {-webkit-animation:checkbox .3s ease-out; animation:checkbox .3s ease-out;}
+.checkbox.-sub {align-items:center;}
+
+@-webkit-keyframes checkbox-sub {
+    0%   {width:0;}
+    50%  {width:1.1rem;}
+    100% {width:2.4rem;}
+}
+@keyframes checkbox-sub {
+    0%   {width:0;}
+    50%  {width:1.1rem;}
+    100% {width:2.4rem;}
+}
+
+@-webkit-keyframes checkbox-sm {
+    0%   {width:0;}
+    50%  {width:1.1rem;}
+    100% {width:2.4rem;}
+}
+@keyframes checkbox-sm {
+    0%   {width:0;}
+    50%  {width:1.1rem;}
+    100% {width:2.4rem;}
+}
+
+.checkbox input[disabled] ~ label .input:before {background-color:var(--bg-checkbox-disabled);}
+.checkbox input[disabled]:checked ~ label .input:before {border-color:var(--border-checkbox-checked-disabled); background-color:var(--bg-checkbox-checked-disabled);}
+/* .checkbox input[disabled]:checked ~ label .input:after {background:url(../imgs/ico/common/ico-checkbox-checked.png) no-repeat / 2.4rem;} */
+
+.checkbox.-sub input[disabled] ~ label {color:var(--F07) !important}
+.checkbox.-sub input[disabled] ~ label:before {background-color:transparent; border-color: transparent;}
+.checkbox.-sub input[disabled] ~ label:after {background-image:url(../imgs/ico/common/ico-sub-checkbox-dis.png);}
+/* .dark-mode .checkbox.-sub input[disabled] ~ label:after {background-image:url(../imgs/ico/common/ico-sub-checkbox-def_dk.png);} */
+.checkbox.-sub input[disabled]:checked ~ label {color:var(--F01) !important}
+.checkbox.-sub input[disabled]:checked ~ label:before {border-color:transparent; background-color:transparent;}
+
+.checkboxes {display:flex; flex-wrap:wrap;}
+.checkboxes .checkbox {padding:1rem .4rem 1rem 0;}
+.checkboxes .checkbox input {top:1rem;}
+.checkboxes.-half .checkbox:first-child,
+.checkboxes.-triple .checkbox:first-child {padding:1rem .4rem 1rem 0;}
+.checkboxes .checkbox.-sub {padding:0;}
+.checkboxes.-half {flex-direction:row; flex-wrap:wrap;}
+.checkboxes.-half .checkbox {width:50%;}
+.checkboxes.-half .checkbox.-expand {width:100%;}
+.checkboxes.-triple {flex-direction:row; flex-wrap:wrap;}
+.checkboxes.-triple .checkbox {width:33.33333333%;}
+.checkboxes.-triple .checkbox.-expand {width:100%;}
+.checkboxes.-full {flex-direction:column; flex-wrap:nowrap;}
+.checkboxes.-full .checkbox {padding-right:0;}
+.checkboxes.-full .checkbox label {padding-right:0;}
+
+/* 라디오 (기본,sm 통합) */
+.radio {display:inline-flex; position:relative;}
+.forms + .radio {margin-top:1.2rem;}
+
+.radio input {position:absolute; width:2.8rem; height:2.8rem; border-radius:50%; background-color:rgba(0,0,0,0); -webkit-appearance: none; appearance: none;}
+.radio label {display:inline-flex; align-items:flex-start; flex:1; position:relative; min-height:2.8rem; padding-left:3.6rem; color:var(--color-radio); font-size:1.6rem; word-break:break-all; cursor:pointer; line-height:2.8rem; font-weight: 500;}
+.radio label:before {content:""; position:absolute; top:0; left:0; width:2.8rem; height:2.8rem; border:1px solid var(--border-radio); border-radius:50%; transition:border .3s;}
+.radio input:checked ~ label:before {transition:none; border-color: var(--border-radio-checked);}
+.radio label:after {content:""; position:absolute; top:.8rem; left:.8rem; width:1.2rem; height:1.2rem; border-radius:50%; transition: background .3s; background-color: var(--inner-radio);}
+.radio input:checked ~ label:after {background-color: var(--inner-radio-checked);}
+.radio input[disabled] ~ label {color:var(--color-radio-disabled)}
+.radio input[disabled] ~ label:before {border-color:var(--border-radio-disabled); background-color:var(--bg-radio-disabled);}
+.radio input[disabled]:checked ~ label {color:var(--color-radio-checked-disabled)}
+.radio input[disabled]:checked ~ label:before {border-color:var(--border-radio-checked-disabled); background-color:var(--bg-radio-checked-disabled);}
+.radio input[disabled]:checked ~ label:after {background-color: var(--inner-radio-checked-disabled);}
+
+.radio input,
+.radio.-sm input {position:absolute; width:2.4rem; height:2.4rem; border-radius:50%; background-color:rgba(0,0,0,0);}
+.radio label,
+.radio.-sm label {display:inline-flex; align-items:flex-start; flex:1; position:relative; min-height:2.4rem; padding-left:3.2rem; color:var(--color-radio); font-size:1.5rem; word-break:break-all; cursor:pointer; line-height:2.6rem;}
+.radio label:before,
+.radio.-sm label:before {content:""; position:absolute; top:0; left:0; width:2.4rem; height:2.4rem; }
+.radio label:after,
+.radio.-sm label:after {content:""; position:absolute; top:.7rem; left:.7rem; width:1rem; height:1rem;}
+
+.radio.-textless label {width:2.8rem; height:2.8rem; padding:0;}
+
+/* 라디오 lg*/
+.radio.-lg input {position:absolute; width:2.8rem; height:2.8rem; border-radius:50%; background-color:rgba(0,0,0,0);}
+.radio.-lg label {display:inline-flex; align-items:flex-start; flex:1; position:relative; min-height:2.8rem; padding-left:3.6rem; color:var(--color-radio); font-size:1.6rem; word-break:break-all; cursor:pointer; line-height:2.8rem; font-weight: 500;}
+.radio.-lg label:before {content:""; position:absolute; top:0; left:0; width:2.8rem; height:2.8rem; border:1px solid var(--border-radio); border-radius:50%; transition:border .3s;}
+.radio.-lg input:checked ~ label:before {transition:none; border-color: var(--border-radio-checked);}
+.radio.-lg label:after {content:""; position:absolute; top:.8rem; left:.8rem; width:1.2rem; height:1.2rem; border-radius:50%; transition: background .3s cubic-bezier(0.25, 0, 0, 1); background-color: var(--inner-radio);}
+.radio.-lg input:checked ~ label:after {background-color: var(--inner-radio-checked);}
+.radio.-lg input[disabled] ~ label {color:var(--color-radio-disabled)}
+.radio.-lg input[disabled] ~ label:before {border-color:var(--border-radio-disabled); background-color:var(--bg-radio-disabled);}
+.radio.-lg input[disabled]:checked ~ label {color:var(--color-radio-checked-disabled)}
+.radio.-lg input[disabled]:checked ~ label:before {border-color:var(--border-radio-checked-disabled); background-color:var(--bg-radio-checked-disabled);}
+.radio.-lg input[disabled]:checked ~ label:after {background-color: var(--inner-radio-checked-disabled);}
+
+.radios {display:flex; flex-wrap:wrap;}
+.radios .radio {padding:1rem 1.2rem 1rem 0;}
+.radios.-half {flex-direction:row; flex-wrap:wrap;}
+.radios.-half .radio {width:50%;}
+.radios.-half .radio.-expand {width:100%;}
+.radios.-triple {flex-direction:row; flex-wrap:wrap;}
+.radios.-triple .radio {width:33.33333333%;}
+.radios.-triple .radio.-expand {width:100%;}
+.radios.-full {flex-direction:column; flex-wrap:nowrap;}
+.radios.-full .radio {padding-right:0;}
+.radios.-full .radio + .radio {margin-top:1.2rem;}
+.radio-panel {margin-top:2.6rem;}
+
+/* 박스라디오 */
+.box-radio {display:flex; position:relative; margin-right:1rem;}
+.box-radio:last-child {margin-right:0}
+.box-radio input {position:absolute; width:100%; height:100%; font-size: 1.4rem; font-weight: 500; color:var(--font2)}
+.box-radio label {display:inline-flex; flex-direction:column; justify-content:center; align-items:center; position:relative; z-index:2; width:100%; padding:1.6rem .4rem; background-color:var(--bg-box-radio); color:var(--color-box-radio); font-weight:normal; font-size:1.5rem; line-height:1.2; text-align:center; cursor:pointer; border-radius: 1rem; letter-spacing: -.1rem;}
+.box-radio label:after {content:""; position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid var(--border-box-radio);border-radius: 1rem;}
+.box-radio label span.sub {font-size: 1.2rem; margin-top:.4rem;}
+.box-radio input:checked ~ label {z-index:3; background-color:var(--bg-box-radio-checked); color:var(--color-box-radio-checked);font-weight: 500;}
+.box-radio input:checked ~ label:after {border-color:var(--border-box-radio-checked);}
+.box-radio input[disabled] ~ label{color:var(--color-box-radio-disabled); border-color: var(--border-box-radio-disabled);}
+.box-radio input[disabled]:checked ~ label {color:var(--color-radio-checked-disabled); background-color: var(--bg-box-radio-checked-disabled)}
+.box-radio input[disabled]:checked ~ label:after {border-color: var(--inner-box-radio-checked-disabled);}
+.box-radio input.-caution + label {color:var(--red); font-weight: normal;}
+.box-radio input.-caution + label::after {border-color: var(--red);}
+.box-radio.-left label {align-items: flex-start; text-align: left; padding:1.6rem;}
+.box-radios.-sm .box-radio label {padding:.6rem .4rem; min-height:3.6rem; font-size: 1.4rem; border-radius:.8rem;}
+.box-radios.-sm .box-radio label::after {border-radius: .8rem;}
+.box-radios.-sm .box-radio {margin-right:.6rem;}
+.box-radios.-sm .box-radio:last-child {margin-right:0;}
+
+/* 라디오탭과 모양이 같은 라디오 */
+
+.box-radios.-tab-radios {background-color: var(--bg-bar-segments); border-radius: 1rem;}
+.box-radios.-tab-radios .box-radio label {display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; width: 100%; height: 100%; padding: 1.45rem 0.5rem; background-color: var(--bg-segments); color: var(--color-segments); font-weight: normal; font-size: 1.5rem; text-align: center; cursor: pointer; border-radius: 1rem; line-height: 1.4;}
+.box-radios.-tab-radios .box-radio label::after {border-radius: 1rem; border-color: transparent;}
+.box-radios.-tab-radios .box-radio input:checked ~ label {    background-color: var(--bg-segments-active); color: var(--color-segments-active); font-weight: 600;}
+.box-radios.-tab-radios .box-radio input ~ label::after {transition: .2s;}
+.box-radios.-tab-radios .box-radio input:checked ~ label::after {border-color: var(--border-segments-active);}
+.box-radios.-tab-radios .box-radio {margin-right:0;}
+.box-radios.-tab-radios .box-radio:last-child {margin-right:0;}
+
+.box-radios {display:flex; flex-wrap:wrap; width: 100%;}
+.box-radios .box-radio {flex:1;}
+.box-radios + .box-radios {margin-top:1.2rem}
+.box-radios.-sm + .box-radios.-sm {margin-top:.6rem}
+.box-radios.custom label{padding:1.6rem 2rem;}
+
+.box-radios.-point .box-radio input:checked + label:after {border-color:var(--point);}
+
+/* 박스체크 */
+.box-check {display:flex; position:relative; margin-right:1rem;}
+.box-check:last-child {margin-right:0}
+.box-check input {position:absolute; width:100%; height:100%; font-size: 1.4rem; font-weight: 500; color:var(--font2)}
+.box-check label {display:inline-flex; flex-direction:column; justify-content:center; align-items:center; position:relative; z-index:2; width:100%; padding:1.6rem .4rem; background-color:var(--bg-box-check); color:var(--color-box-check); font-weight:normal; font-size:1.5rem; line-height:1.2; text-align:center; cursor:pointer; border-radius: 1rem; letter-spacing: -.1rem;}
+.box-check label:after {content:""; position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid var(--border-box-check);border-radius: 1rem;}
+.box-check label span.sub {font-size: 1.2rem; margin-top:.4rem;}
+.box-check input:checked ~ label {z-index:3; background-color:var(--bg-box-check-checked); color:var(--color-box-check-checked);font-weight: 500;}
+.box-check input:checked ~ label:after {border-color:var(--border-box-check-checked);}
+.box-check input[disabled] ~ label{color:var(--color-box-check-disabled); border-color: var(--border-box-check-disabled);}
+.box-check input[disabled]:checked ~ label {color:var(--color-radio-checked-disabled); background-color: var(--bg-box-check-checked-disabled)}
+.box-check input[disabled]:checked ~ label:after {border-color: var(--inner-box-check-checked-disabled);}
+.box-check input.-caution + label {color:var(--red); font-weight: normal;}
+.box-check input.-caution + label::after {border-color: var(--red);}
+.box-check.-left label {align-items: flex-start; text-align: left; padding:1.6rem;}
+.box-checks.-sm .box-check label {padding:.6rem .4rem; min-height:3.6rem; font-size: 1.4rem;}
+.box-checks.-sm .box-check {margin-right:.6rem;}
+.box-checks.-sm .box-check:last-child {margin-right:0;}
+
+.box-checks {display:flex; flex-wrap:wrap;}
+.box-checks .box-check {flex:1;}
+.box-checks + .box-checks {margin-top:1rem}
+.box-checks.custom label{padding:1.6rem 2rem;}
+
+.box-checks.-point .box-check input:checked + label:after {border-color:var(--point);}
+
+/* 스위치 */
+.switch {position:relative; display:inline-block; font-size:0; vertical-align:middle;}
+.switch input {position:absolute; top:0; left:0; width:5.2rem; height:3rem; border-radius:2.6rem; vertical-align:top;}
+.switch label {display:inline-block; height:3rem; padding:.1rem 0 .1rem 6rem; color:var(--color-switch); font-size:1.6rem; line-height:3rem; vertical-align:top; cursor:pointer;}
+.switch label:before {content:""; position:absolute; top:0; left:0; width:5.2rem; height:3rem; border-color:var(--bg-switch); border-radius:2.6rem; background-color:var(--bg-switch); transition:border-color .3s cubic-bezier(1, 0, 0.5, 1), background-color .3s cubic-bezier(1, 0, 0.5, 1);}
+.switch label:after {content:""; position:absolute; top:.2rem; left:.2rem; width:2.6rem; height:2.6rem; border-radius:50%; background-color:#fff; transition:transform .3s cubic-bezier(1, 0, 0.5, 1); box-shadow: 0 .3rem .2rem  rgba(0, 0, 0, .06);}
+.switch input:checked ~ label:before {border-color:var(--border-switch-checked); background-color:var(--bg-switch-checked);}
+.switch input:checked ~ label:after {opacity:1; transform:translateX(2.2rem);}
+.switch input[disabled] ~ label {color:var(--font5); cursor:default;}
+.switch input[disabled] ~ label:before {border-color:var(--border-switch-disabled); background-color:var(--bg-switch-disabled);}
+
+/* 셀렉트 */
+.select {overflow:hidden; position:relative;}
+.select > button {display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; width:100%; min-height:5.4rem; padding:1.2rem 4rem 1.2rem 2rem; border:1px solid var(--line1); background:transparent url(../imgs/ico/common/ico-select-arr.png) no-repeat right 1.6rem top 50% / 2.4rem ; font-weight:500; font-size:1.8rem; border-radius: 1.2rem; text-align:left; transition:border .3s;}
+.select > button:focus {border-color:var(--point);}
+.select > button[readonly] {background-color:var(--F09);}
+.select > button[readonly]:focus {border-color:var(--line1);}
+.select > button[disabled] {background-color:var(--F09)}
+.select > button[data-bankcode]:before {width:2rem; height:2rem; vertical-align:-0.4rem;}
+.select > button .sub {display:block; width:100%; margin-top:.2rem; color:var(--font3); font-weight:normal; font-size:1.4rem;}
+.select > button .selection .info {padding-right:1.6rem;}
+.select .info {width:100%; margin-top:1rem; padding:0; color:var(--font3); font-size:1.3rem; text-align:left;}
+.select .info.-error {color:var(--red)}
+.select .message {width:100%; margin-top:1rem; padding:0 0; color:var(--font3); font-size:1.4rem; text-align:left;}
+.select.-error .message,
+.select .message.-error{color:var(--red);}
+.select .selection {padding:0;}
+.select .selection .info {margin:0; padding-right:2rem;}
+.select .amounts {display:flex; align-items:flex-end;  margin-top:2rem;}
+.select .amount {display:flex; flex-direction:column; justify-content:center; align-items:flex-end; margin:2rem 0 0 auto;}
+.select .amounts .amount {margin-top:0;}
+.select .amount.-x {flex-direction:row; justify-content:flex-end; align-items:center;}
+.select .amount .key {color:var(--font3); font-size:1.4rem;}
+.select .amount .value {font-size:2rem; font-weight: 500;}
+.select .amount .refresh,
+/* .accounts-box .amount .refresh {width:2.4rem;height:2.4rem; background:url(../imgs/ico/common/ico-refresh.png) no-repeat center center / 2.4rem; vertical-align: middle; margin-top:-.4rem} */
+/* .dark-mode .select .amount .refresh {width:2.4rem;height:2.4rem; background:url(../imgs/ico/common/ico-refresh_dk.png) no-repeat center center / 2.4rem; vertical-align: middle; margin-top:-.4rem} */
+
+.box-radios + .select,
+.box-checks + .select {margin-top:2rem;}
+.select + .select,
+.text + .select,
+.mix + .select {margin-top:1.2rem;}
+
+.mix .dot   + .select,
+.mix .dash  + .select,
+.mix .tilde + .select,
+.mix .at    + .select,
+.mix .money + .select,
+.mix .word + .select {margin-left:0;}
+
+.mix .select + .select,
+.mix .text + .select {margin-top:0;}
+
+/* 필드/믹스 */
+.field {margin-top:3.2rem;}
+.field:first-child {margin-top:0;}
+.field.-sm {margin-top:3.2rem;}
+
+.h1 + .field,
+.h2 + .field,
+.h3 + .field,
+.h4 + .field,
+.h5 + .field,
+.h6 + .field,
+.h1-group + .field,
+.h2-group + .field,
+.h3-group + .field {margin-top:3.2rem;}
+
+.hr + .field {margin-top:0;}
+
+.mix {display:flex; flex-wrap:wrap;}
+.mix .text,
+.mix .select {flex:1;}
+
+.mix .dot   {display:inline-flex; justify-content:center; align-items:center; width:2.2rem; font-size:1.8rem;}
+.mix .dash  {display:inline-flex; justify-content:center; align-items:center; width:2.2rem; font-size:1.8rem;}
+.mix .left-text  {display:inline-flex; justify-content:center; align-items:center; font-size:1.4rem; color: var(--font2); margin-right:1.6rem}
+.mix .tilde {display:inline-flex; justify-content:center; align-items:center; width:2.2rem; font-size:1.8rem;}
+.mix .at    {display:inline-flex; justify-content:center; align-items:center; width:3.1rem; font-size:1.8rem;}
+.mix .wave   {display:inline-flex; justify-content:center; align-items:center; width:3.2rem; font-size:1.8rem; font-weight: bold;}
+.mix .money {display:inline-flex; justify-content:center; align-items:center; order:-1; padding-right:.8rem; padding-left:var(--indent); font-size:1.8rem;}
+.mix .space {display:inline-flex; justify-content:center; align-items:center; padding:1rem 1.6rem; font-size:1.8rem; height:5.4rem;}
+.mix .word {display:inline-flex; justify-content:center; align-items:center; flex:0 0 auto; width:3.1rem; font-size:1.8rem;}
+.mix .word:last-child {width:2.2rem; justify-content:flex-end;}
+.mix .-lined {border:1px solid var(--line1); transition:border .3s; border-radius: 1.2rem;}
+.mix .-lined .round-button {margin-top:.2rem;}
+.mix .text > input.left-side {border-right:0; border-radius: 1.2rem 0 0 1.2rem; padding-left:2rem}
+.mix .text > input.mid-side {border-right:0; border-left:0; border-radius:0 !important;}
+.mix .text > input:focus {border-color: var(--line1);}
+.mix .text > input.right-side {border-left:0; border-radius: 0 1.2rem 1.2rem 0;}
+.mix .select button.left-side,
+.mix .space.left-side {display: flex; align-items: center; border-radius: 1.2rem 0 0 1.2rem; border:1px solid var(--line1); border-right:0; background: transparent url(../imgs/ico/common/ico-select-arr.png) no-repeat right .6rem top 50% / 2.4rem; padding-right:2.6rem;}
+.dark-mode .mix .select button.left-side,
+/* .dark-mode .mix .space.left-side {display: flex; align-items: center; border-radius: 1.2rem 0 0 1.2rem; border:1px solid var(--line1); border-right:0; background: transparent url(../imgs/ico/common/ico-select-arr_dk.png) no-repeat right .6rem top 50% / 2.4rem; padding-right:2.6rem;} */
+/* .dark-mode .mix .space.left-side {display: flex; align-items: center; border-radius: 1.2rem 0 0 1.2rem; border:1px solid var(--line1); border-right:0; background: transparent url(../imgs/ico/common/ico-select-arr_dk.png) no-repeat right .6rem top 50% / 2.4rem; padding-right:2.6rem;} */
+.mix .left-space .left-side {display: flex; align-items: center; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; min-height:5.4rem; padding:1.1rem 1.4rem 1.1rem 1.8rem; border:1px solid var(--line1); font-weight:500; font-size:1.8rem; border-radius: 1.2rem 0 0 1.2rem; text-align:left; transition:border .3s; border-right:none;}
+.mix .select button.mid-side,
+.mix .space.mid-side {border-right:0; border-left:0; border-radius:0 !important;}
+.mix .select button.right-side,
+.mix .space.right-side {border-radius: 0 1.2rem 1.2rem 0; border:1px solid var(--line1); border-left:0; padding:1rem;}
+.mix .space.right-side button {min-height:3.4rem}
+.mix .-lined.search {border-left:0;border-radius: 0 1.2rem 1.2rem 0; padding-left:.8rem;}
+.mix .-lined.date {border-left:0;border-radius: 0 1.2rem 1.2rem 0;padding-left:0.5rem ;}
+.-disabled + .-lined.date {background-color: var(--G09) !important; opacity: 1 !important;}
+.-disabled + .-lined.search {background-color: var(--G09) !important; opacity: 1 !important;}
+.mix.datepicker {position:relative}
+.mix.datepicker .-start,.mix.datepicker .-end {padding-left:0; padding-right:.8rem; letter-spacing: -.1rem;}
+.mix.datepicker .-end {padding-right:1.6rem;}
+.mix.datepicker .-start {border-right:0; border-radius: 0;}
+.mix.datepicker .-start + .dash + .text input {border-left:0; border-radius: 0; padding-left:2rem; }
+.mix.datepicker .dash {position:absolute; top:2.7rem; transform: translate(-50%, -50%); left:50%; border:none;} /* 2025-07-01 물결 표시 위치값 수정 */
+.mix.datepicker .text input{padding-right:0}
+.mix.datepicker .text input[readonly] {background:transparent}
+.-error .mix .left-space .left-side {border-color: var(--red);}
+
+.-focused + .dot.-lined {border-color:var(--point);}
+.-focused + .dot.-lined + .space.-lined {border-color:var(--point);}
+.-focused + .money.-lined + .dot.-lined {border-color:var(--point);}
+.-focused + .money.-lined + .dot.-lined + .space.-lined {border-color:var(--point);}
+.-success + .-lined {border-color:var(--blue);}
+.-error + .-lined {border-color:var(--red);}
+.mix .info {width:100%; margin-top:1rem; color:var(--font3); font-size:1.3rem;}
+.mix .info + .info {margin-top:0.6rem;}
+.mix .info.-bullet {position:relative; padding:0 var(--indent) 0 1.9rem;}
+.mix .info.-bullet:before {content:""; position:absolute; top:1rem; left:0.6rem; width:0.3rem; height:0.3rem; border-radius:50%; background-color:var(--font3);}
+.mix .message {width:100%; margin-top:1rem; color:var(--font3); font-size:1.3rem;}
+.mix .message + .message {margin-top:0.6rem;}
+.mix.-error .message {color:var(--red);}
+.mix .-unit + .space {padding-right:var(--indent); padding-left:0.2rem;}
+
+.mix .text.-won {position:relative;}
+.mix .text.-won input {padding-right:3.4rem;}
+.mix .text.-won input::placeholder {text-align: left; letter-spacing: -.1rem;}
+.mix .text.-won.-textless input {padding-right:2rem;}
+.mix .text .won {display: block; position:absolute; right:2rem; top:1.5rem; font-weight: 500; font-size: 1.8rem; touch-action: none; pointer-events: none; opacity: 0;}
+.mix .text.-won:not(.-textless) .won {pointer-events: none; opacity: 1;}
+
+.mix .text.-percent {position:relative;}
+.mix .text.-percent input {padding-right:3.6rem;padding-left:.8rem;}
+.mix .text.-percent input::placeholder {text-align: right; letter-spacing: -.1rem;}
+.mix .text .percent {display: block; position:absolute; right:2rem; top:1.35rem; font-weight: 500; font-size: 1.8rem; touch-action: none; pointer-events: none;}
+
+.info .mix .text.-percent {position:relative;}
+.info .mix .text.-percent input {padding-right:3rem;padding-left:.8rem;}
+.info .mix .text.-percent input::placeholder {text-align: right; letter-spacing: -.1rem;}
+.info .mix .text .percent {display: block; position:absolute; right:.8rem; top:1.35rem; font-weight: 500; font-size: 1.8rem; touch-action: none; pointer-events: none;}
+
+.mix .text.-poin {position:relative;}
+.mix .text.-poin input {padding-right:3.2rem;}
+.mix .text.-poin input::placeholder {text-align: left; letter-spacing: -.1rem;}
+.mix .text .poin {display: block; position:absolute; right:2rem; top:1.35rem; font-weight: 500; font-size: 1.8rem; touch-action: none; pointer-events: none; opacity: 0;}
+.mix .text.-poin:not(.-textless) .poin {pointer-events: none; opacity: 1; text-transform: capitalize;}
+
+.mix.-error input,
+.mix.-error .-lined,
+.text.-error input,
+.textarea.-error textarea,
+.select.-error button,
+.field.-error .text input{border-color:var(--red) !important;}
+.field.-error .message,
+.message.-error {color:var(--red) !important;}
+
+.mix.mix-focused.-focused .select button.left-side,
+.mix.mix-focused.-focused .text > input.right-side{border-color:var(--point);}
+
+.text + .mix,
+.select + .mix,
+.mix + .mix {margin-top:1.2rem;}
+
+.box-radios + .mix,
+.box-checks + .mix {margin-top:1.2rem;}
+
+.mix ~ .buttons,
+.text ~ .buttons,
+.textarea ~ .buttons,
+.select ~ .buttons {margin-top:1.2rem;}
+
+.mix ~ .checkbox,
+.text ~ .checkbox,
+.textarea ~ .checkbox,
+.select ~ .checkbox {margin-top:1.2rem;}
+
+.field .info-wrap {width:100%;}
+
+.mix .text.-won {display:flex;align-items:center;}
+/* .mix .text.-won input {padding-right:3.4rem;} */
+.mix .text.-won input::placeholder {text-align: left; letter-spacing: -.1rem;}
+/* .mix .text.-won.-textless input {padding-right:2rem;} */
+/* .mix .text .won {display: block; position:absolute; right:2rem; top:1.35rem; font-weight: 500; font-size: 1.8rem; touch-action: none; pointer-events: none; opacity: 0;} */
+.mix .text.-won:not(.-textless) .won {pointer-events: none; opacity: 1;}
+
+* 텍스트필드 */
+.text {position:relative;}
+.text input {display:block; width:100%; height:5.4rem; padding:1.4rem 2rem 1.4rem 2rem; border:1px solid var(--line1); border-radius:1.2rem; background-color:transparent; color:var(--font1); font-weight:500; font-size:1.8rem; text-align:left; transition:border .3s;}
+.text input.left-right {text-align:right !important;}
+.text input:focus {border-color:var(--point);}
+.text input[readonly] { background-color: var(--G09);}
+.text input[readonly]:focus {border-color:var(--line1);}
+.text input.fake-readonly { background-color: var(--G10);}
+/* .text.-focused:not(.-textless):not([data-clear="false"]):not(.-readonly) input {padding-right:4.4rem;} */
+.text[data-clear="false"] input {padding-right:2rem}
+.text input::placeholder {color:var(--placeholder-color); font-weight:500; font-size: 1.8rem; text-align: left; letter-spacing: -.1rem;} /* 20240822 접근성 폰트색상 변경 */
+.text .text-count {margin-top:1rem; padding:0; color:var(--font3); font-size:1.4rem; text-align:right;}
+.text .text-count.-limit {color:var(--red);}
+.text .total:before {content:" / ";}
+.text .input {display:block; width:100%; height:5.4rem; padding:1.4rem 1.6rem 1.4rem 1.6rem; border:1px solid var(--line1); border-radius:1.2rem; color:var(--font1); font-weight:500; font-size:1.8rem; text-align:left; transition:border .3s; background:transparent}
+.text .input:focus {border-color:var(--point);}
+.text input[disabled] {opacity:1; background-color: var(--G09);}
+.text .input[data-bankcode]:before,
+.text .input[data-conuntrycode]:before {vertical-align:-0.8rem;}
+.text .unit {position:absolute; top:1.1rem; right:.4rem; color:var(--font1); font-weight:bold; font-size:1.8rem;}
+.text .info,
+.box-radios ~ .info,
+.box-checks ~ .info {width:100%; margin-top:1rem; padding:0; color:var(--font3); font-size:1.3rem; text-align:left; font-weight: 400;}
+.text .info.-bullet,
+.box-radios ~ .info.-bullet,
+.box-checks ~ .info.-bullet {position:relative; padding: 0 0 0 0.9rem;}
+.text .info.-bullet:before,
+.box-radios ~ .info.-bullet:before,
+.box-checks ~ .info.-bullet:before {content:""; position:absolute; top:.75rem; left:0; width:.3rem; height:.3rem; border-radius:50%; background-color:#9e9e9e}
+.text .info + .info,
+.box-radios ~ .info + .info,
+.box-checks ~ .info + .info {margin-top:.7rem}
+.text .message {width:100%; margin-top:1rem; padding:0; color:var(--font3); font-size:1.2rem; text-align:left;}
+.message {width:100%; margin-top:1.2rem; padding:0; color:var(--font3); font-size:1.3rem; line-height: 1.3;}
+.text.-error .message {display: flex; align-items: center; color:var(--red); position:relative;}
+/* .text .clear {opacity:0; position:absolute; top:1.5rem; right:1.2rem; width:2.4rem; height:2.4rem; background:url(../imgs/ico/common/ico-round-del.png) no-repeat 0 / cover;transform:translate3d(0,0,0);} */
+/* .dark-mode .text .clear {opacity:0; position:absolute; top:1.5rem; right:1.2rem; width:2.4rem; height:2.4rem; background:url(../imgs/ico/common/ico-round-del_dk.png) no-repeat 0 / cover;} */
+.text .clear:focus {opacity:1;}
+.text.-textless .clear {display:none;}
+.text:not(.-textless).-focused .clear {opacity:1;}
+.text.-confirm {position:relative}
+.text.-confirm input {display: block; padding-right: 4rem;}
+.text button.input {line-height:2.4rem;}
+.text input[type="password"] {font-family: 'Pass'; letter-spacing: .2rem;}
+.text input[type="password"]::placeholder {color:var(--placeholder-color); font-weight:500; font-size: 1.8rem; text-align: left; letter-spacing: -.1rem; font-family: 'Pretendard';} /* 20240822 접근성 폰트색상 변경 */
+
+.text + .checkbox {margin-top:1.2rem;}
+
+.text.-textless + .space.-hide {display:none;}
+.text.-textless input.left-right {text-align:left !important;}
+
+.text + .text,
+.select + .text,
+.mix + .text {margin-top:1rem;}
+
+.mix .text + .text {margin-top:0; margin-left:1rem;}
+.mix .text + .text {margin-top:0; margin-left:1rem;}
+.mix .select + .text {margin-top:0; padding:0;}
+
+.mix .dot   + .text,
+.mix .dot   + .text,
+.mix .dash  + .text,
+.mix .tilde + .text,
+.mix .at    + .text,
+.mix .money + .text,
+.mix .space + .text,
+.mix .word  + .text {margin-left:0;}
+
+.mix + .fit-buttons,.mix + .buttons, .mix + .checks {margin-top:1.2rem;}
+
+.multi {display: flex;}
+.multi .inner {width:50%}
+.multi .inner + .inner {margin-left:1rem;}
+
+.field .info-wrap {width:100%;}
+.mix .info {width:100%; margin-top:1rem; color:var(--font3); font-size:1.3rem;}
+
+/* 체크박스 (기본,sm 통합) */
+.checkbox {display:flex; position:relative;}
+.checkbox.-textless {width:2.8rem;height:2.8rem;}
+.checkbox.-textless.-sm {width:2.4rem;height:2.4rem;}
+.forms + .checkbox {margin-top:1.2rem;}
+
+.checkbox input {position:absolute; width:2.4rem; height:2.4rem; top:0; left:0; border-radius:1rem; background-color:rgba(0,0,0,0); visibility: hidden; z-index: -1;}
+.checkbox label {min-height:2.4rem; display:inline-flex; flex:1; position:relative; padding-left:3.8rem; color:var(--color-checkbox); font-size:1.6rem; word-break:break-all; cursor:pointer; font-weight: 500; line-height:1.7; min-height:2.4rem; padding:0 0 0 3.2rem; font-size:1.5rem; line-height:1.6}
+.checkbox label:before,
+.checkbox.-sm > label:before {content:"";position:absolute;top:0;left:0;width:2.4rem;height:2.4rem;border:1px solid var(--border-checkbox);border-radius:.8rem;background-color: transparent;}
+.checkbox label:after,
+.checkbox.-sm > label:after {content:"";  position:absolute; top:0; left:0; width:2.4rem; height:2.4rem; border-radius:.8rem; background:url(../imgs/ico/common/ico-checkbox-sm.png) no-repeat 0 / 2.4rem;}
+.dark-mode .checkbox label:after,
+/* .dark-mode .checkbox.-sm > label:after {content:"";  position:absolute; top:0; left:0; width:2.4rem; height:2.4rem; border-radius:.8rem; background:url(../imgs/ico/common/ico-checkbox-sm_dk.png) no-repeat 0 / 2.4rem;} */
+.checkbox input,
+.checkbox.-sm > input {position:absolute; width:2.4rem; height:2.4rem; top:.1rem; left:0; border-radius:1rem; background-color:rgba(0,0,0,0); visibility: hidden; z-index: -1;}
+.checkbox label,
+.checkbox.-sm > label {min-height:2.4rem; padding:0 0 0 3.2rem; font-size:1.5rem; line-height:1.6}
+.checkbox > input:checked ~ label:after,
+.checkbox.-sm > div > input:checked ~ label:after {background-image:url(../imgs/ico/common/ico-checkbox-sm-checked.png);}
+.dark-mode .checkbox > div > input:checked ~ label:after {background-image:url(../imgs/ico/common/ico-checkbox-sm-checked.png);}
+.checkbox.-sm > input:checked:focus ~ label:after {-webkit-animation:checkbox-sm .3s ease-out; animation:checkbox-sm .3s ease-out;}
+.checkbox input:checked ~ label:before {border-color:var(--border-checkbox-checked); background-color:var(--bg-checkbox-checked); transition:border .3s, background .3s;}
+.checkbox input:checked:focus ~ label:after {-webkit-animation:checkbox .3s ease-out; animation:checkbox .3s ease-out;}

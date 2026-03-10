@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출신청</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+                    <h1 class="title">대출신청</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+            <main class="contents">
+                <div class="content"> 
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="mix">
+                            <div class="text">
+                                <input type="text" class="left-side" id="search01" value="" placeholder="예) 합정동 KCC엠파이어리버" title="동(읍·면) 또는 오피스텔 입력">
+                            </div>
+                            <div class="space -lined search">
+                                <button type="button" class="icon-button -search"><span class="hide">조회</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [240701]텍스트, 마크업 변경 -->
+                    <!-- 240201 코드 수정 -->
+                    <!-- [CASE]default -->
+                    <div class="case-wrap -sm">
+                        <div class="h4-group block">
+                            <!-- <h3 class="h5">이렇게 찾아 보세요</h3>
+                            <p class="p blockspan">아파트가 위치한 동(읍·면)과 아파트명을 검색 <span>예) 불광동 힐스테이트</span></p> -->
+                            <h3 class="h4 bold">이렇게 검색해 보세요</h3>
+                            <h4 class="h5 mt-5">KB시세가 있는 오피스텔만 조회가 가능해요</h4>
+                        </div>
+
+                        <ol class="ol mt-25">
+                            <li>
+                                <span class="fc-2 number">지역명(동,읍,면) + 건물명</span><br>
+                                <span class="point">예) 합정동 KCC엠파이어리버</span>
+                            </li>
+                            <li>
+                                <span class="fc-2 number">건물명</span><br>
+                                <span class="point">예) KCC엠파이어리버</span>
+                            </li>
+                            <li>
+                                <span class="fc-2 number">지역명(동,읍,면)</span><br>
+                                <span class="point">예) 합정동</span>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- //[CASE]default -->
+                    <!-- //240201 코드 수정 -->
+                    <!-- //[240701]텍스트, 마크업 변경 -->
+                    
+                    <!-- [CASE]검색결과 있는 경우 -->
+                    <div class="field">
+                        <p class="total-count">총 <span class="point">5</span>건</p>
+                        <div class="custom-list">
+                            <ul>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p>은평구 <span class="point">불광동</span> 북한산현대힐스테이트3차아파트</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p>은평구 <span class="point">불광동</span> 북한산힐스테이트7차</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p>은평구 <span class="point">불광동</span> 북한산힐스테이트1차아파트</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p>은평구 <span class="point">불광동</span> 북한산힐스테이트1차아파트</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p>은평구 <span class="point">불광동</span> 북한산힐스테이트1차아파트</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p>은평구 <span class="point">불광동</span> 북한산힐스테이트1차아파트</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <button type="button" class="more-button">더보기(1/50)</button>
+                    </div>
+                    <!-- //[CASE]검색결과 있는 경우 -->
+
+                    <!-- [CASE]검색결과 없는 경우 -->
+                    <div class="result -sm -sub">
+                        <p class="message">검색결과가 없습니다.</p>
+                        <p class="desc">
+                            지역명(동,읍,면) 또는 건물명으로 검색하셨나요?<br>
+                            오피스텔 검색 시 찾는 결과가 없다면<br>
+                            [AVM(자동가치평가모형) 시세 조회] 버튼을 선택하여<br>
+                            지역명(동,읍,면) + 번지로 검색해 보세요.
+                        </p>
+                    </div>
+                    <!-- //[CASE]검색결과 없는 경우 -->
+
+                    <div class="case-wrap">
+                        <button type="button" class="button -lg -secondary">AVM(자동가치평가모형) 시세 조회</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></body>
+
+</html>

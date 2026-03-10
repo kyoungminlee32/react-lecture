@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">예금 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div><button type="button" class="button" onclick="Popup.open('popup');">팝업</button></div>
+
+                    <div class="field">
+                        <label for="text" class="label">사업자등록번호</label>
+                        <div class="text -key-layer-active"><!-- 열고 닫을 때 -key-layer-active 토글 -->
+                            <input type="text" id="text" class="num-call" value="" readonly placeholder="-없이 입력">
+                        </div>
+                    </div>
+
+                    <style>
+                        .textlist{}
+                        .textlist li{height:50px;text-align: center;border:solid 2px yellowgreen;margin-bottom:15px}
+                    </style>
+
+                    <ul class="textlist">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                    </ul>
+                    
+                    <div class="h2-group">                        
+                        <h2 class="h2">
+                            가입금액을 입력해 주세요
+                        </h2>
+                    </div>
+                    <div class="field">     
+                        <div class="mix -key-layer-active"><!-- 열고 닫을 때 -key-layer-active 토글 -->
+                            <div class="text -won"><!-- 금액입력 받는 키 이벤트에서 input.value 유무에 따라 '-textless' 클래스 토글 -textless가 있으면 '원'(금액단위)노출 안된 -->
+                                <input type="tel" id="text1213" class="right num-call" onclick="numInputMove(this)" readonly placeholder="10만원~10억원" readonly>
+                                <div class="won">원</div>
+                            </div>                           
+                            <div class="info-wrap">
+                                <p class="message point">유효성메시지 출력 영역</p>
+                                <p class="info right point"><span>오십만</span>원</p> 
+                            </div>
+                        </div> 
+                    </div> 
+                    
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="layer2" class="layer dimWhiteLayer">
+        <div class="container">
+            <!-- <div class="header">
+                <div class="inner">
+                    <h1 class="title">가입금액을 입력해 주세요</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="contents">
+                <div class="content">
+                    <div class="choose-account-Wrap -inputed">
+                        <div class="amount-btn-wrap">
+                            <button type="button" value="100000" class="button numBtn -sm -fit">+10만</button>
+                            <button type="button" value="500000" class="button numBtn -sm -fit">+50만</button>
+                            <button type="button" value="1000000" class="button numBtn -sm -fit">+100만</button>
+                            <button type="button" value="10000000" class="button numBtn -sm -fit">+1,000만</button>
+                        </div>
+                        <div class="custom-key-wrap">
+                            <button type="button" value="1" title="숫자 1 입력">1</button>
+                            <button type="button" value="2" title="숫자 2 입력">2</button>
+                            <button type="button" value="3" title="숫자 3 입력">3</button>
+                            <button type="button" value="4" title="숫자 4 입력">4</button>
+                            <button type="button" value="5" title="숫자 5 입력">5</button>
+                            <button type="button" value="6" title="숫자 6 입력">6</button>
+                            <button type="button" value="7" title="숫자 7 입력">7</button>
+                            <button type="button" value="8" title="숫자 8 입력">8</button>
+                            <button type="button" value="9" title="숫자 9 입력">9</button>
+                            <button type="button" disabled aria-hidden="true">NH</button>
+                            <button type="button" value="0" title="숫자 0 입력">0</button>
+                            <button type="button" class="btn-del" title="마지막 숫자 삭제">←</button>
+                        </div>
+                        <div class="buttons">
+                            <button type="button" class="button -lg -primary" onclick="clickTest()">확인</button>
+                        </div>
+                    </div>
+                    <!-- //.choose-account-Wrap -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">팝업</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <h2 class="h5">제목</h2>
+                    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero suscipit accusantium veritatis alias, tenetur, quod soluta quam obcaecati odit ut, voluptas earum quae cumque unde quo et temporibus cupiditate dolores.</p>
+                    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero suscipit accusantium veritatis alias, tenetur, quod soluta quam obcaecati odit ut, voluptas earum quae cumque unde quo et temporibus cupiditate dolores.</p>
+                    <div class="field">     
+                        <div class="mix -key-layer-active"><!-- 열고 닫을 때 -key-layer-active 토글 -->
+                            <div class="text -won"><!-- 금액입력 받는 키 이벤트에서 input.value 유무에 따라 '-textless' 클래스 토글 -textless가 있으면 '원'(금액단위)노출 안된 -->
+                                <input type="tel" id="text1213" class="right num-call" onclick="numInputMove(this)" readonly placeholder="10만원~10억원">
+                                <!-- <input type="tel" id="text1213" class="right" placeholder="10만원~10억원"> -->
+                                <div class="won">원</div>
+                            </div>                           
+                            <div class="info-wrap">
+                                <p class="message point">유효성메시지 출력 영역</p>
+                                <p class="info right point"><span>오십만</span>원</p> 
+                            </div>
+                        </div> 
+                    </div> 
+                    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero suscipit accusantium veritatis alias, tenetur, quod soluta quam obcaecati odit ut, voluptas earum quae cumque unde quo et temporibus cupiditate dolores.</p>
+                    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero suscipit accusantium veritatis alias, tenetur, quod soluta quam obcaecati odit ut, voluptas earum quae cumque unde quo et temporibus cupiditate dolores.</p>
+                    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero suscipit accusantium veritatis alias, tenetur, quod soluta quam obcaecati odit ut, voluptas earum quae cumque unde quo et temporibus cupiditate dolores.</p>
+                    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero suscipit accusantium veritatis alias, tenetur, quod soluta quam obcaecati odit ut, voluptas earum quae cumque unde quo et temporibus cupiditate dolores.</p>
+                    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero suscipit accusantium veritatis alias, tenetur, quod soluta quam obcaecati odit ut, voluptas earum quae cumque unde quo et temporibus cupiditate dolores.</p>
+                    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero suscipit accusantium veritatis alias, tenetur, quod soluta quam obcaecati odit ut, voluptas earum quae cumque unde quo et temporibus cupiditate dolores.</p>
+                    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero suscipit accusantium veritatis alias, tenetur, quod soluta quam obcaecati odit ut, voluptas earum quae cumque unde quo et temporibus cupiditate dolores.</p>
+                    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero suscipit accusantium veritatis alias, tenetur, quod soluta quam obcaecati odit ut, voluptas earum quae cumque unde quo et temporibus cupiditate dolores.</p>
+                    <div class="field">     
+                        <div class="mix -key-layer-active"><!-- 열고 닫을 때 -key-layer-active 토글 -->
+                            <div class="text -won"><!-- 금액입력 받는 키 이벤트에서 input.value 유무에 따라 '-textless' 클래스 토글 -textless가 있으면 '원'(금액단위)노출 안된 -->
+                                <input type="tel" id="text1213" class="right num-call" onclick="numInputMove(this)" readonly placeholder="10만원~10억원">
+                                <!-- <input type="tel" id="text1213" class="right" placeholder="10만원~10억원"> -->
+                                <div class="won">원</div>
+                            </div>                           
+                            <div class="info-wrap">
+                                <p class="message point">유효성메시지 출력 영역</p>
+                                <p class="info right point"><span>오십만</span>원</p> 
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg">취소</button>
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        //Layer.open('layer2');
+
+        setTimeout(function(){
+            $('.dimWhite').click(function () {
+                Layer.close('layer2');
+                console.log(111)
+            })
+         }, 100);
+
+        // 레이어 닫기(마지막 인자 기본값: false)
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // });
+
+        // 레이어 닫기 + DOM 삭제
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+
+    <script>
+        /* function numInputMove(e) {
+            Layer.open('layer2');
+            var $winScTop = window.scrollY;
+            var $this = e;
+            var $thisSCTop = $this.getBoundingClientRect().top; //클릭된 요소의 위치
+            var $target = document.querySelector('body.lock');  
+            var $targetPoTop = $target.getBoundingClientRect().top; //변경된 body 위치
+            var $targetTempTop = -($thisSCTop - 76)
+            $target.style.marginTop = ($targetPoTop + $targetTempTop) + 'px' //레이어가 떠있을 때 위치이동
+        } */
+
+        // 팝업인 경우 추가
+        var $oldSctop = 0 ; //팝업스크롤 초기값
+        function numInputMove(e) {
+            Layer.open('layer2');
+            var $winScTop = window.scrollY;
+            var $this = e;
+            var $hasPopup = $this.closest('.popup');//팝업인 경우 선택
+            var $thisSCTop = $this.getBoundingClientRect().top; //클릭된 요소의 위치
+            if ($hasPopup == null) {    //페이지 인경우
+                var $target = document.querySelector('body.lock');  
+                var $targetPoTop = $target.getBoundingClientRect().top; //변경된 body 위치
+                var $targetTempTop = -($thisSCTop - 76)
+                $target.style.marginTop = ($targetPoTop + $targetTempTop) + 'px' //레이어가 떠있을 때 위치이동
+            }else{  //팝업인 경우
+                $this.closest('.content').classList.add('popTempMargin')    //아래에 있는 영역 위로 올리기 popTempMargin 추가
+                var $scTarget = $this.closest('.popup .contents');
+                $oldSctop = $scTarget.scrollTop; //스크롤 값 임시저장
+                var $goScroll = $thisSCTop + $scTarget.scrollTop - 55;  //이동할 스크롤 위치
+                $scTarget.scrollTo({top:$goScroll,})
+            }
+        }
+        // 버텀레이아 닫을 때와 똑같이 아래 함수 실행하시면 원래 자리로 돌아 옵니다.
+        // Layer.close('layer2')
+
+        // 키패드 닫을 때 아래 클래스 삭제
+        function clickTest() {
+            var $closeTarget = document.querySelector('.popup.-active .content').classList.remove('popTempMargin');
+            document.querySelector('.popup.-active .contents').scrollTo({top:$oldSctop,}) //스크롤 원래대로 이동
+            Layer.close('layer2')
+        }
+
+        
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/fund.css">
+</head>
+<body>
+    <div class="page"> <!-- [240312] 마크업 변경 -->
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <!-- [240312] 마크업 변경 -->
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">펀드콜 설문</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                    <!-- //[240312] 마크업 변경 -->
+                </div>
+            </div>
+
+            <main class="contents">
+                <div class="content">
+                    <ul class="ul -bullet">
+                        <li>펀드콜 설문은 가입하신 상품의 주요내용에 대해 충분히 이해하였는지 확인하기 위한 절차입니다.</li>
+                        <li>고객님의 권리보호를 위해 설문 참여를 부탁드립니다.</li>
+                    </ul>
+                    <div class="field">
+                        <div class="line-box">
+                            <span class="badge -grade2">주식형</span>
+                            <h3 class="title">NH-Amundi필승코리아30증권투자신탁채권 [혼합]ClassAe</h3>
+                            <p class="p">DB금융투자</p>
+                        </div>
+                    </div>
+
+                    <!-- [CASE] 1번 문항 -->                    
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">01</span>
+                                <span>고객님의 투자성향은 ‘위험 중립형’입니다. 투자성향진단 결과를 확인하고 적합한 상품에 가입했나요?</span> <!-- ux 라이팅 수정 -->
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="box-radios">
+                                    <div class="box-radio -left">
+                                        <input type="radio" name="radio1" id="radio1-1">
+                                        <label for="radio1-1">예</label>
+                                    </div>
+                                    <div class="box-radio -left">
+                                        <input type="radio" name="radio1" id="radio1-2" checked>
+                                        <label for="radio1-2">아니요</label>   <!-- 통테 ux-라이팅 반영 -->
+                                    </div>
+                                </div> 
+                            </dd>    
+                            <div class="invest-notice">
+                                <div class="inner">
+                                    <p class="rethink">다시 확인해 주세요.</p> <!-- [240307] 문구수정 -->
+                                    <div class="message">
+                                        투자성향진단 결과 확인 후 고객님의 투자성향에 적합한 상품을 가입하셔야 합니다. <br>
+                                        알고 있는 사실과 다르다면 펀드 가입을 취소해 주세요. <!-- ux 라이팅 수정 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <!-- [CASE] 2번 문항 -->
+                    <div class="field">                        
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">02</span>
+                                <span>가입하신 상품은 예·적금 상품과 달리 예금자보호를 받지 못해 원금 손실이 발생할 수 있습니다. 확인하셨나요?</span> <!-- ux 라이팅 수정 -->
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="box-radios">
+                                    <div class="box-radio -left">
+                                        <input type="radio" name="radio2" id="radio2-1">
+                                        <label for="radio2-1">예</label>
+                                    </div>
+                                    <div class="box-radio -left">
+                                        <input type="radio" name="radio2" id="radio2-2" checked>
+                                        <label for="radio2-2">아니요</label>
+                                    </div>
+                                </div> 
+                            </dd>     
+                            <div class="invest-notice">
+                                <div class="inner">
+                                    <p class="rethink">다시 확인해 주세요.</p> <!-- [240307] 문구수정 -->
+                                    <div class="message">
+                                        펀드는 예금자보호법에 따라 보호되지 않으며, 원금손실이 발생할 수 있습니다. <br><!-- [240307] 문구수정 --> 
+                                        알고 있는 사실과 다르다면 펀드 가입을 취소해 주세요. <!-- [240308] 문구추가 --> 
+                                    </div>
+                                </div>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <!-- [CASE] 3번 문항 -->
+                    <div class="field">                        
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">03</span>
+                                <span>가입하신 상품의 기준가 적용일과 환매 방법, 환매수수료 등을 확인하셨나요?</span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="box-radios">
+                                    <div class="box-radio -left">
+                                        <input type="radio" name="radio3" id="radio3-1">
+                                        <label for="radio3-1">예</label>
+                                    </div>
+                                    <div class="box-radio -left">
+                                        <input type="radio" name="radio3" id="radio3-2" checked>
+                                        <label for="radio3-2">아니요</label>
+                                    </div>
+                                </div> 
+                            </dd>     
+                            <div class="invest-notice">
+                                <div class="inner">
+                                    <p class="rethink">다시 확인해 주세요.</p> <!-- [240307] 문구수정 -->
+                                    <div class="message"> <!-- ux 라이팅 수정 -->
+                                        기준가 및 환매와 관련된 내용을 확인하지 못하셨다면 투자설명서를 다시 한 번 다시 확인해 주세요. <br>
+                                        알고 있는 사실과 다르다면 펀드 가입을 취소해 주세요. 
+                                    </div>
+                                </div>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <!-- [CASE] 4번 문항 -->
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">04</span>
+                                <span>
+                                    이 펀드에서 발생한 이자, 배당 및 양도 차익, 매매 차익을 포함한 수익에 대해서는 소득세를 공제하고 환매 대금을 지급합니다. 투자자 개인의 연간 금융소득이 기준금액을 초과하는 경우에는 금융소득종합과세 대상이 될 수 있습니다. 이해하셨나요? <!-- ux 라이팅 수정 -->
+                                </span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="box-radios">
+                                    <div class="box-radio -left">
+                                        <input type="radio" name="radio4" id="radio4-1">
+                                        <label for="radio4-1">예</label>
+                                    </div>
+                                    <div class="box-radio -left">
+                                        <input type="radio" name="radio4" id="radio4-2" checked>
+                                        <label for="radio4-2">아니요</label>
+                                    </div>
+                                </div> 
+                            </dd>  
+                            <div class="invest-notice">
+                                <div class="inner">
+                                    <p class="rethink">다시 확인해 주세요.</p> <!-- [240307] 문구수정 -->
+                                    <div class="message">
+                                        펀드 과세와 관련된 내용을 이해하지 못하셨다면 투자설명서를 다시 한 번 확인하시기 바랍니다. <br>
+                                        알고 있는 사실과 다르다면 펀드 가입을 취소해 주세요. <!-- ux 라이팅 수정 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </dl>                              
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary -disabled">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // [240312] 스크립트 삭제
+    </script>
+</body>
+</html>

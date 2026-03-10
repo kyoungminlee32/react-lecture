@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>전자약정서 작성</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <!-- 240425 헤더 수정 -->
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                        <button type="button" class="func -menu"><span class="hide">전체메뉴</span></button>
+                    </div>
+                    <!-- //240425 헤더 수정 -->
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">대출 기한연기 신청을 위해 전자약정서를 작성해 주세요</h2>
+                    </div>
+                    <div class="account">            
+                        <!-- 240117 button -> div 수정 -->
+                        <div type="button" data-bankcode="011" class="info">
+                            <span class="name">
+                                <span>NH직장인월복리적금</span>
+                            </span>
+                            <span class="account-number">
+                                <span>NH농협</span>
+                                <span>111-1234-5678-99</span>
+                            </span>
+                        </div>
+                        <dl class="dl">
+                            <div>
+                                <dt>대출금액</dt>
+                                <dd>5,000,000원</dd>
+                            </div>
+                            <div>
+                                <dt>예상금리</dt>
+                                <dd>4.80%</dd>
+                            </div>
+                            <div>
+                                <dt>새로운 만기일</dt>
+                                <dd>2024.10.15</dd>
+                            </div>
+                            <div>
+                                <dt>희망 관리점</dt>
+                                <dd>NH농협은행 서대문지점</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <!-- 240312 ux라이팅 수정 -->
+                    <p class="message">실제 적용되는 금리는 만기일에 고시되는 기준금리에 의해 달라질 수 있습니다.</p>
+                    <!-- //240312 ux라이팅 수정 -->
+                    <div class="field">
+                        <p class="label">수수료 선택
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">한도약정수수료</span>
+                                    <span class="t-content">
+                                        여신약정한도의 0.3%를 청구
+                                    </span>
+                                    <span class="title">한도미사용수수료</span>
+                                    <span class="t-content">
+                                        한도미사용분 X 미사용수수료율 X 운용기간(일) / 365(윤년은 366)를 청구
+                                    </span>
+                                </span>
+                            </span>                        
+                        </p>
+                        <div class="box-radios -point" role="tablist">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="tab01" checked>
+                                <label for="tab01">한도약정수수료</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="tab02">
+                                <label for="tab02">한도미사용수수료</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="agree-box">
+                        <!-- <p class="label">전자약정</p> -->
+                        <div class="agree">
+                            <div class="title">
+                                <div class="checkbox -sub -readonly">
+                                    <input type="checkbox" id="optional-total02">
+                                    <label for="optional-total02">약정서 작성</label>
+                                </div>
+                                <button type="button" class="more"><span class="hide">약정서 작성</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <!-- 240312 ux라이팅 수정 -->
+                                <p class="label">대출 계약서류 받는 방법</p>
+                        <div class="box-radios -point" role="tablist">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color2" id="tab03" checked>
+                                <label for="tab03">이메일</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color2" id="tab04">
+                                <!-- 240119 ux라이팅 수정 -->
+                                <label for="tab04">문자메시지</label>
+                                <!-- 240119 ux라이팅 수정 -->
+                            </div>
+                        </div>
+                        <!-- [CASE] id="tab01"의 콘텐트 -->
+                         <!-- [에러] text -error-->
+                        <div class="text">
+                            <input type="text" id="field1" value="ABC123@gmail.com" title="이메일">
+                            <!-- [CASE] 에러메세지-->
+                            <!-- <p class="message">입력 오류 알림 내용 출력</p> -->
+                            <!-- //[CASE] 에러메세지-->
+                        </div>
+                        <!-- //[CASE] id="tab01"의 콘텐트 -->
+
+                        <!-- [CASE] id="tab02"의 콘텐트 -->
+                        <div class="mix">
+                            <div class="select flex-3">
+                                <button type="button" class="left-side" aria-haspopup="true" title="휴대폰 앞자리 선택" >010</button>
+                            </div>
+                            <div class="text flex-7" data-clear="false">
+                                <input type="tel" class="right-side num-call" placeholder="-없이 입력" title="010제외한 휴대전화번호" readonly>
+                            </div>
+                            <!-- [CASE] 에러메세지-->
+                            <!-- <p class="message -error">입력 오류 알림 내용 출력</p> -->
+                            <!-- //[CASE] 에러메세지-->
+                        </div>
+                        <!-- //[CASE] id="tab02"의 콘텐트 -->
+                    </div>
+                    
+                </div>
+                <!-- 240312 알아두세요 삭제 -->
+                <!-- <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <li>위의 기한연기 조건(금리, 연기기간 등)과 다른 상담을 원하면 희망 관리점에 문의하시기 바랍니다.</li>
+                                <li>실제 적용되는 금리는 만기일에 고시되는 기준금리에 의해 변동될 수 있습니다.</li>
+                                <li>대출실행일부터 3년 미 경과한 대출을 기한연기 후 중도에 원금을 상환하는 경우 중도상환해약금이 발생할 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- 2024-06-18 버튼명 수정 -->
+                        <button type="button" class="button -lg -primary" disabled>확인</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

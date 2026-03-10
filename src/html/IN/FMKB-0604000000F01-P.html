@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">보험가입 확인 및 안내사항</h1>
+
+                    <div class="funcs">                        
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <!-- <iframe class="iframe" title="보험가입 확인 및 안내사항">아이프레임 약관</iframe> -->
+                    <h4 class="h5">수익자 및 보험금 대리청구인 지정</h4>                       
+                    <ul class="ul -bullet">
+                        <li>
+                            보험계약자 본인이 사망 시 본계약을 승계한 계약자가 보험수익자 지정, 변경권을 행사하도록 약정하거나, 보험금청구가 어려운 상황이 발생할 경우 보험금을 대신 청구하는 자(보험금/대리 청구인)를 지정하고자 하는 경우 해당보험사를 통해 변경이 가능합니다.
+                        </li>
+                    </ul>
+                    <h4 class="h5">자동이체</h4>                       
+                    <ul class="ul -bullet">
+                        <li>
+                            전자금융거래법 출금이체에 대한 상세내용을 인지하고, 예금주가 동의한 계좌를 이용하여 동 계약에 대한 보험료 및 대출관련 출금이체, 만기(중도)환급금에 대한 송금 이체에 동의합니다.
+                        </li>
+                        <li>
+                            출금 및 송금이체 동의는 보험회사가 손님(예금주)의 은행 계좌로부터 보험료 및 대출원리금 등을 출금하는 경우에 해당 손님 (예금주)로부터 의무적으로 사전에 서면 또는 전자서명으로 동의를 얻도록 하는 제도입니다.
+                        </li>
+                        <li>
+                            이는 [전자금융거래법]에 의거 전자금융거래의 안전성과 신뢰성을 확보하여 전자금융 소비자를 보호하기 위함입니다.
+                        </li>
+                    </ul>
+                    <h4 class="h5">보험감액청구권</h4>                       
+                    <ul class="ul -bullet">
+                        <li>
+                            보험계약을 가입할 때 선택한 보험가입금액을 낮추는 것을 감액이라고 하며, 계약자는 회사의 신청 기준에 따라 보험료 납입 중에 보험가입금액 감액을 신청할 수 있습니다. 다만, 보험료를 감액하더라도 사업비는 보험료가 감액된 비율만큼 줄지 않아, 최초 가입 시 안내받은 만기(해약)환급률보다 크게 낮아질 수 있습니다. 보험계약자가 보험가입금액을 감액하고자 할 때에는 그 감액된 부분은 해지된 것으로 보고 이로 인해 발생한 해약환급금이 지급됩니다. 단, ‘보험료 감액 청구’가 적용되지 않는다면 감액청구가 불가능합니다.
+                        </li>
+                    </ul>
+                    <h4 class="h5">보험계약승낙절차</h4>                       
+                    <ul class="ul -bullet">
+                        <li>
+                            보험가입 후 보험회사는 청약을 받고 제1회 보험료를 받은 경우 무진단 계약은 청약일로부터 30일 이내, 진단계약은 진단일로부터 30일 이내 승낙 또는 거절해야하고, 30일 이내에 통지되지 않는 경우 승낙된 것으로 처리됩니다.
+                        </li>
+                    </ul>
+                    <h4 class="h5">해피콜(완전판매모니터링)</h4>                       
+                    <ul class="ul -bullet">
+                        <li>
+                            가입한 상품의 중요 내용을 충분히 이해하고 적절한 절차에 따라 가입하였는지를 확인하여 고객의 권리를 보호하는 보험가입 필수 절차입니다.
+                        </li>
+                        <li>
+                            청약 후 알림톡(SMS) 또는 보험사 콜센터 상담원 통화로 진행됩니다.
+                        </li>
+                    </ul>
+                </div>
+                <div class="fixer">                   
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>    
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">스크롤 내리기(1/N)</button>
+                    </div>                    
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+    </script>
+</body>
+</html>

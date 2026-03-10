@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출기한연기</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 231205 h2-group코드변경 -->
+                    <div class="h2-group">
+                        <h2 class="h2">비대면 신청 가능 여부를 확인해 주세요</h2>                        
+                    </div>
+                    <div class="case-wrap -sm jsSrveyWrap"> <!-- 2024-07-17 감싸는 테그 추가(case-wrap -sm jsSrveyWrap) -->
+                        <div class="field  jsSrveyCurrent"> <!-- 2024-07-17 첫번째 항목 클래스(jsSrveyCurrent) 추가 -->
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">01</span>
+                                    <span>현재 집을 두 채 이상 가지고 계신가요? (배우자 합산)</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-1" id="radio4-1" checked>
+                                                <label for="radio4-1" class="check-ox -left -orign">예</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-1" id="radio4-2">
+                                                <label for="radio4-2" class="check-ox -left -orign">아니오</label>
+                                            </div>
+                                        </div>
+                                        <div class="invest-notice">
+                                            <div class="message">
+                                                부부합산 2020.07.10 이후 규제지역 소재 3억초과(구입시점) 아파트 1주택 보유 시 또는 2주택 이상 다주택자일 경우 기한연기 제한됩니다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">02</span>
+                                    <span>임차보증금 수도권 7억원, 비수도권 5억원 초과이십니까? 수도권(서울/인천/경기)</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-2" id="radio4-3" checked>
+                                                <label for="radio4-3" class="check-ox -left -orign">예</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-2" id="radio4-4">
+                                                <label for="radio4-4" class="check-ox -left -orign">아니오</label>
+                                            </div>
+                                        </div>
+                                        <div class="invest-notice">
+                                            <div class="message">
+                                                임차보증금 수도권 7억원, 그 외 지역 5억원 초과 시 기한연기가 제한됩니다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">03</span>
+                                    <span>만기 전까지 이사할 계획이 있거나 이미 이사 하셨나요?</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-2" id="radio4-333" checked>
+                                                <label for="radio4-333" class="check-ox -left -orign">예</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-2" id="radio4-41">
+                                                <label for="radio4-41" class="check-ox -left -orign">아니오</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">04</span>
+                                    <span>이번에 대출금을 추가로 신청하시겠어요?</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-3" id="radio4-5" checked>
+                                                <label for="radio4-5" class="check-ox -left -orign">예</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-3" id="radio4-6">
+                                                <label for="radio4-6" class="check-ox -left -orign">아니오</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">05</span>
+                                    <span>임대인이 법인 또는 외국인(재외국민)인가요?</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-3" id="radio4-533" checked>
+                                                <label for="radio4-533" class="check-ox -left -orign">예</label>
+                                            </div>
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4-3" id="radio4-611">
+                                                <label for="radio4-611" class="check-ox -left -orign">아니오</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sticker">
+                    <div class="notice" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <p class="p">차주의 신용도 하락, 임차 주택의 시세하락 및 선순위채권 증가, 보유 주택 수 증가 발생 시 일부  상환이 필요할 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                    <!-- [CASE] 모두 “예“ 선택, 체크박스 선택 시 활성화 처리 -->
+                    <button type="button" class="button -lg -primary" disabled>확인</button>
+                    </div>
+                    <!-- //[CASE] 모두 “예“ 선택, 체크박스 선택 시 활성화 처리 -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+
+<script>
+    // 설문 인터렉션 예시
+    const jsSrveyHandle = document.querySelectorAll('.jsSrveyWrap input');
+    jsSrveyHandle.forEach(element => {
+        element.addEventListener('click',function (e) {
+            jsSrveyNext(this)
+        })
+    });
+</script>
+</body>
+
+</html>

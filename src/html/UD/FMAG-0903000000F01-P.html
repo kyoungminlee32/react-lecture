@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">개인(신용)정보 수집・이용 동의(상품서비스…</h1> <!-- ux 라이팅 수정 -->
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="h2-group">            
+                        <h2 class="h2">
+                            우대금리 혜택을 받으시려면<br>
+                            전체 동의해 주세요 
+                        </h2>                        
+                    </div>
+                    <iframe class="iframe" title="개인(신용)정보 수집・이용 동의">아이프레임 약관</iframe>
+
+                    <!-- ux 라이팅 수정 시작 -->                    
+                    <div class="field">
+                        <p class="label fc-1 fs-15">상품서비스 안내 방법</p>
+                        <p class="fs-14 fc-1">전체 동의 시 연 0.2% 우대금리 제공합니다.<br>우대금리는 가입 시에만 적용(이후 적용 불가)</p>                    
+                    </div>
+                    <!-- //ux 라이팅 수정 끝 -->
+                    <div class="case-wrap -xxs">
+                        <div class="checkboxes -triple">
+                            <div class="checkbox -sm">
+                                <input type="checkbox" id="checkbox-1" checked>
+                                <label for="checkbox-1">전체</label>
+                            </div>
+                            <div class="checkbox -sm">
+                                <input type="checkbox" id="checkbox-2" >
+                                <label for="checkbox-2">전화</label>
+                            </div>
+                            <div class="checkbox -sm">
+                                <input type="checkbox" id="checkbox-3" >
+                                <label for="checkbox-3">문자메시지</label>
+                            </div>
+                            <div class="checkbox -sm">
+                                <input type="checkbox" id="checkbox-4" >
+                                <label for="checkbox-4">우편물</label>
+                            </div>
+                            <div class="checkbox -sm">
+                                <input type="checkbox" id="checkbox-5" >
+                                <label for="checkbox-5">이메일</label>
+                            </div>                            
+                        </div>
+                    </div>                                      
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+    </script>
+</body>
+</html>

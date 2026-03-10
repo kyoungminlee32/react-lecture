@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/fund.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">수익율조회</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <nav class="tabs">
+                    <div class="outer">
+                        <div class="inner">
+                            <ul class="list">
+                                <li class="item"><a href="javascript:void(0)">기준가</a></li>
+                                <li class="item -active"><a href="javascript:void(0)">수익률</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="content">
+                    <div class="box">
+                        <p class="p">수익률은 금융감독당국의 수익률고지지침에 따라 실현수익률로 게시합니다.</p>
+                    </div>
+
+                    <!-- 검색 조건 -->
+                    <div class="case-wrap -sm">
+                        <div class="field">
+                            <label for="datedate" class="label">기준일</label>
+                            <div class="mix datepicker">
+                                <div class="text" data-clear="false">
+                                    <input type="text" class="left-side" id="datedate" value="2023.08.23" title="기준일 선택" aria-haspopup="true" readonly>
+                                </div>
+                                <div class="space -lined date">
+                                    <button type="button" class="icon-button -calendar" aria-haspopup="true"><span class="hide">달력 보기</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="text" class="label">펀드명</label>
+                            <div class="text">
+                                <!-- 2024-06-12 placeholder 수정 -->
+                                <input type="text" id="text" value="" placeholder="검색어 입력">
+                                <!-- 2024-06-12 placeholder 수정 -->
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <p class="label">펀드유형</p>
+                            <div class="select">
+                                <button type="button" title="펀드유형 선택" aria-haspopup="true">펀드유형 선택</button>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <p class="label">운용사</p>
+                            <div class="select">
+                                <button type="button" title="운용사 선택" aria-haspopup="true">운용사 선택</button>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <p class="label">수익률</p>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color1" id="period-point-color1-1" checked>
+                                    <label for="period-point-color1-1">단순 수익률</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color1" id="period-point-color1-2">
+                                    <label for="period-point-color1-2">연 수익률</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="button-box-wrap">
+                            <button type="button" class="button -lg">조회</button>
+                        </div>
+                    </div>
+                    <!-- //검색 조건 -->
+
+                    <!-- 검색 결과 -->
+                    <div class="case-wrap -sm -jsResultTop" id="jsResult01" ><!-- 2024-05-17 검색결과 상단으로 올릴 대상 div 아이디  추가  -->
+                        <ul class="return-list-wrap">
+                            <li class="line-box">
+                                <h3 class="title">신한공모주&밴드트레이딩30증권사투자신탁[채권혼합]ClassA1</h3>
+                                <div class="standard-price">
+                                    <span class="label">기준가</span>
+                                    <div class="data"><strong>1,146.43</strong><span class="red">+1.76</span></div>
+                                </div>
+                                <ul class="period-list">
+                                    <li>
+                                        <span class="label">1주일</span>
+                                        <strong class="red">+0.92%</strong>
+                                    </li>
+                                    <li>
+                                        <span class="label">1개월</span>
+                                        <strong class="blue">-0.49%</strong>
+                                    </li>
+                                    <li>
+                                        <span class="label">3개월</span>
+                                        <strong class="blue">-1.65%</strong>
+                                    </li>
+                                    <li>
+                                        <span class="label">6개월</span>
+                                        <strong>0.00</strong>
+                                    </li>
+                                    <li>
+                                        <span class="label">12개월</span>
+                                        <strong class="red">+5.65%</strong>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="line-box">
+                                <h3 class="title">신한공모주&밴드트레이딩30증권사투자신탁[채권혼합]ClassA1</h3>
+                                <div class="standard-price">
+                                    <span class="label">기준가</span>
+                                    <div class="data"><strong>1,146.43</strong><span class="red">+1.76</span></div>
+                                </div>
+                                <ul class="period-list">
+                                    <li>
+                                        <span class="label">1주일</span>
+                                        <strong class="red">+0.92%</strong>
+                                    </li>
+                                    <li>
+                                        <span class="label">1개월</span>
+                                        <strong class="blue">-0.49%</strong>
+                                    </li>
+                                    <li>
+                                        <span class="label">3개월</span>
+                                        <strong class="blue">-1.65%</strong>
+                                    </li>
+                                    <li>
+                                        <span class="label">6개월</span>
+                                        <strong>0.00</strong>
+                                    </li>
+                                    <li>
+                                        <span class="label">12개월</span>
+                                        <strong class="red">+5.65%</strong>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="line-box">
+                                <h3 class="title">신한공모주&밴드트레이딩30증권사투자신탁[채권혼합]ClassA1</h3>
+                                <div class="standard-price">
+                                    <span class="label">기준가</span>
+                                    <div class="data"><strong>1,146.43</strong><span class="red">+1.76</span></div>
+                                </div>
+                                <ul class="period-list">
+                                    <li>
+                                        <span class="label">1주일</span>
+                                        <strong class="red">+0.92%</strong>
+                                    </li>
+                                    <li>
+                                        <span class="label">1개월</span>
+                                        <strong class="blue">-0.49%</strong>
+                                    </li>
+                                    <li>
+                                        <span class="label">3개월</span>
+                                        <strong class="blue">-1.65%</strong>
+                                    </li>
+                                    <li>
+                                        <span class="label">6개월</span>
+                                        <strong>0.00</strong>
+                                    </li>
+                                    <li>
+                                        <span class="label">12개월</span>
+                                        <strong class="red">+5.65%</strong>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <button type="button" class="more-button">더보기(1/50)</button>
+                    </div>
+                    <!-- //검색 결과 -->
+                </div><!-- //.content -->
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+        
+        /* 2024-05-17 조회 영역 로드 후 아래 스크립트 실행  */
+        // JsResultTop('jsResult01')
+        
+    </script>
+</body>
+</html>

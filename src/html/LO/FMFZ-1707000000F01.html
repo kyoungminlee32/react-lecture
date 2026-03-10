@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출한도조회위한 정보 입력_바닥페이지</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+</head>
+
+<body>
+    <!-- 231207 모든 내용 수정 -->
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <h2 class="h2">대출한도 조회를 위해<br>정보를 입력해 주세요</h2>
+                    </div>
+                    <!-- ui수정 240214 (코드 수정) -->
+                    <div class="title-group">
+                        <div class="inner">
+                            <h3 class="h5">대출 가능금액</h3>
+                        </div>
+                        <a href="javascript:void(0)" class="a -arrow">산출 내역</a>                
+                    </div>  
+
+                    <!-- <dl class="dl -box limit-point-box mci"> -->
+                    <dl class="dl -box -row2"><!-- 2024-06-04 클래스 명 수정 -->
+                        <div>
+                            <dt>MCI 가입 대상
+                                <span class="tooltip">
+                                    <button type="button" class="trigger">
+                                        <span class="hide">툴팁</span>
+                                    </button>
+                                    <span class="panel">
+                                        <span class="title">MCI(mortgage Credit Insurance : 모기지신용보험)</span>
+                                        <span class="t-content">
+                                            <!-- 240424 오타 수정 -->
+                                            <span class="dot">
+                                                대출 가능금액 산정할 때 차감되는 소액임차보증금만큼을 서울보증보험의 보험을 가입하고 소액임차보증금 차감금액만큼을 추가로 대출할 수
+                                                있는 상품입니다.
+                                            </span>
+                                            <span class="dot">MCI 보험료는 NH농협은행에서 부담합니다.</span>
+                                        </span>
+                                    </span>
+                                </span>
+
+                            </dt>
+                            <dd>5억 3,000만원</dd>
+                        </div>
+                        <div>
+                            <dt>MCI 미가입 대상</dt>
+                            <dd>4억 9,300만원</dd>
+                        </div>
+                    </dl>
+                    <dl class="dl -lined -bottom">
+                        <div>
+                            <dt>대환대상 총 대출잔액</dt>
+                            <dd>500,000,000원</dd>
+                        </div>
+                        <div>
+                            <dt>신청금액</dt>
+                            <dd>500,000,000원</dd>
+                        </div>
+                    </dl>
+                    <!-- 2024-07-24 마크업 수정 -->
+                    <div class="text">
+                        <p class="info -bullet">신청금액은 대환대상 총 대출잔액에 맞춰 자동으로 입력됩니다.</p>
+                    </div>
+                    <div class="field">
+                        <p class="label">배우자 소득합산</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">소득합산</button>
+                        </div>
+                        <div class="text">
+                            <p class="info -bullet">배우자 소득 합산을 선택하는 경우 상환능력심사(DTI, DSR)를 할때 배우자의 소득과 부채를 합산하여 심사합니다.</p>
+                            <p class="info -bullet">배우자 소득합산시에는 배우자의 소득자료 제출이 필요하며, 서류제출을 위해 ‘정부24’, ‘국세청홈택스’에 민간인증서나 공동인증서가 등록되어야 합니다.</p>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">상환방법
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">원리금균등분할상환</span>
+                                    <span class="t-content">
+                                        <span>원금과 이자를 함께 갚아요. 매월 일정한 금액을 내요.</span>
+                                    </span>
+                                    <span class="title">원금균등분할상환</span>
+                                    <span class="t-content">
+                                        <span>원금과 이자를 함께 갚아요. 회차별로 이자가 줄어들어요.</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">원리금균등분할상환</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="text" class="label">연소득</label>
+                        <div class="mix">
+                            <div class="text -won">
+                                <!-- 231205 value값 수정 -->
+                                <input type="tel" id="text" class="right num-call" value="90,000,000"
+                                    aria-haspopup="true" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">구천만원</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="text" class="label">배우자 연소득</label>
+                        <div class="mix">
+                            <div class="text -won">
+                                <!-- 231205 value값 수정 -->
+                                <input type="tel" id="text" class="right num-call" value="80,000,000"
+                                    aria-haspopup="true" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">팔천만원</p>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="message">내부심사 진행 시 배우자 부채정보를 감안하므로 심사결과가 달라질수 있습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 240111 field 코드 수정 -->
+                    <div class="field">
+                        <p class="label">대출기간</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">10년</button>
+                        </div>
+                        <div class="info-wrap">
+                            <p class="message">기존대출의 최초 대출기간 이내로 선택해 주세요.</p>
+                        </div>
+                    </div>
+                    <!-- 240111 field 코드 수정 -->
+                    <div class="field">
+                        <div class="field">
+                            <p class="label">거치기간</p>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period2" id="box-radio11-13" checked>
+                                    <!-- 240307 ux라이팅 수정 -->
+                                <label for="box-radio11-13">설정 안함</label>
+                                <!-- //240307 ux라이팅 수정 -->
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period2" id="box-radio11-23">
+                                    <label for="box-radio11-23">6개월</label>
+                                </div>
+                            </div>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period2" id="box-radio11-33">
+                                    <label for="box-radio11-33">12개월</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period2" id="box-radio11-44">
+                                    <label for="box-radio11-44">직접입력</label>
+                                </div>
+                            </div>
+                            <!-- [CASE] 직접입력 선택시 -->
+                            <div class="field">
+                                <div class="text">
+                                    <input type="text" id="text" class="fake-readonly" value=""
+                                        placeholder="거치기간을 입력하세요." readonly>
+                                </div>
+                                <div class="info-wrap">
+                                    <p class="message">거치기간은 0~12개월까지 신청 할 수 있습니다.</p>
+                                </div>
+                            </div>
+                            <!-- //[CASE] 직접입력 선택시 -->
+
+                        </div>
+                    </div>
+
+                    <!-- 2024-07-24 마크업 및 문구 수정 -->
+                    <div class="field">
+                        <p class="label">금리변동주기
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">6개월</span>
+                                    <span class="t-content">
+                                        <span>대출 약정기간 동안 6개월 주기로 기준금리(신규COFIX)가 변경됩니다.</span>
+                                    </span>
+                                    <span class="title">5년</span>
+                                    <span class="t-content">
+                                        <span>대출 약정기간 동안 5년 주기로 기준금리(5년MOR)가 변경됩니다.</span>
+                                    </span>
+
+                                </span>
+                            </span>
+                        </p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="period-point-color1-1" checked>
+                                <label for="period-point-color1-1">6개월</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="period-point-color1-2">
+                                <label for="period-point-color1-2">5년</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //2024-07-24 마크업 및 문구 수정 -->
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

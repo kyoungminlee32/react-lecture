@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>고객정보확인-사업자</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+</head>
+
+<body>
+    <!-- 240304 popup으로 변경 -->
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">사업자 고객정보</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="selection">
+                        <ul>
+                            <li>
+                                <!-- [240109] 접근성 처리 a태그 추가 및 선택시 -active 클래스 필요 -->
+                                <a href="javascript:void(0);" role="radio">
+                                    <div class="info -bordered -portfolio productch -active">
+                                        <div class="name -arrow">주식회사 디자인펙터</div>
+                                        <dl class="dl">
+                                            <div>
+                                                <!-- 240130 ux라이팅 수정 -->
+                                                <dt>사업자등록번호</dt>
+                                                <!-- //240130 ux라이팅 수정 -->
+                                                <dd>000-00-00000</dd>
+                                            </div>
+                                        </dl>                                
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <!-- [240109] 접근성 처리 a태그 추가 및 선택시 -active 클래스 필요 -->
+                                <a href="javascript:void(0);" role="radio">
+                                    <div class="info -bordered -portfolio productch">
+                                        <div class="name -arrow">주식회사 디자인펙터</div>
+                                        <dl class="dl">
+                                            <div>
+                                                <!-- 240130 ux라이팅 수정 -->
+                                                <dt>사업자등록번호</dt>
+                                                <!-- //240130 ux라이팅 수정 -->
+                                                <dd>000-00-00000</dd>
+                                            </div>
+                                        </dl>                                
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="case-wrap -xs">
+                        <ul class="ul -bullet">
+                            <li>대출 받을 사업자정보가 없다면?
+                                <div>
+                                    <ul class="ul -dash">
+                                        <li>NH농협은행 영업점에서 사업자정보를 등록하거나 비대면으로 개인사업자 입출금통장 가입 후 대출을 신청해 주세요.</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>등록된 사업자정보가 다르다면?
+                                <div>
+                                    <ul class="ul -dash">
+                                        <li>가까운 NH농협은행 영업점을 방문하여 수정해 주세요.</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+
+</html>

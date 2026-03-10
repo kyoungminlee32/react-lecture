@@ -1,0 +1,144 @@
+/* 버튼 */
+.button.-xs {min-height:3rem; padding:.2rem 1.2rem; border-radius:.6rem; font-size:1.3rem; font-weight: 400 !important;}
+.button.-sm {min-height:3.6rem; padding:.85rem 1.2rem; border-radius:.8rem; font-size:1.4rem; font-weight: 600 !important;}
+.button.-lg {min-height:4.8rem; padding:1.3rem 1.6rem 1.2rem; border-radius:1.2rem; font-size:1.6rem; font-weight: 600;}
+.button.-xs.-round {border-radius: 1.2rem;}
+
+.button {display:flex; justify-content:center; align-items:center; width:100%; padding:.6rem 1.6rem; border:1px solid var(--border-button); border-radius:1.2rem; background-color:transparent; color:var(--color-button); font-size:1.5rem; line-height:1.2; text-align:center; word-break:break-word; user-select:none; transition:color .3s;  transition:border-color .3s, background-color .3s; font-weight: 600; min-height:4.2rem;}
+.button:active {border-color:var(--border-button-active); color:var(--color-button-active); background-color:var(--bg-button-active); transition:none;}
+.button[disabled],
+.button.-disabled {border-color:var(--border-button-disabled); color:var(--color-button-disabled); cursor:default;}
+
+.button.-primary {border-color:var(--border-button-primary); background-color:var(--bg-button-primary); color:var(--color-button-primary); transition:border-color .3s, background-color .3s; font-weight: 500;}
+.button.-primary:active {border-color:var(--border-button-primary-active); background-color:var(--bg-button-primary-active); transition:none;}
+.button.-primary[disabled],
+.button.-primary.-disabled {border-color:var(--border-button-primary-disabled); background-color:var(--bg-button-primary-disabled); color:var(--color-button-primary-disabled);}
+
+.button.-secondary {border-color:var(--border-button-secondary); background-color:transparent; color:var(--color-button-secondary); transition:border-color .3s, color .3s; font-weight: 600;}
+.button.-secondary:active {border-color:var(--border-button-secondary-active); color:var(--color-button-secondary-active); background-color:var(--bg-button-secondary-active); transition:none;}
+.button.-secondary[disabled],
+.button.-secondary.-disabled {border-color:var(--border-button-secondary-disabled); color:var(--color-button-secondary-disabled);}
+
+.fixer .buttons + .button {margin-top:1.2rem;}
+.fixer .button {padding-right:0; padding-left:0;}
+.fixer .button.-lg {min-height:5.6rem; padding:1rem 0; border-radius:1.4rem; font-size:1.8rem;}
+
+/* 버퍼 */
+.content + .buffer,
+.sticker + .buffer {height:0 !important}
+
+/* fixer 없는 케이스 */
+.fixer[style*="none"] ~ .buffer,
+.fixer.dp-none ~ .buffer {height:0px !important}
+
+/* fixer 있는 케이스 */
+.fixer[style*="block"] ~ .buffer,
+.fixer:not(.dp-none):not([style*="none"]) ~ .buffer {height:98px !important}
+.layer .fixer[style*="block"] ~ .buffer,
+.layer .fixer:not(.dp-none):not([style*="none"]) ~ .buffer {height:88px !important}
+.alert .fixer[style*="block"] ~ .buffer,
+.alert .fixer:not(.dp-none):not([style*="none"]) ~ .buffer {height:78px !important}
+.content ~ .fixer:not(.dp-none):not([style*="none"]).position-static ~ .buffer {height:0 !important} /* input 포커스시 간격생기는 문제로 변경 */
+
+.button.-inline {display:inline-flex; width:auto; vertical-align:middle;}
+.button.-fit {display:inline-flex; width:auto; vertical-align:middle;}
+.button .number {margin-top:0.3rem;}
+
+/* 버튼 그룹 */
+.buttons {display:flex; flex-wrap:wrap; margin:0 -.5rem -0.6rem;}
+.buttons > .button {flex-basis:calc(50% - 1rem); margin:0 .5rem .6rem; padding:.6rem .4rem}
+.buttons > .button:first-child:last-child {flex-basis:calc(100% - 1rem);}
+.buttons > .button.-expand {flex-basis:calc(100% - 1rem);}
+.buttons.-custom {flex-wrap: nowrap;}
+.buttons.-custom > .button {flex-basis:auto;}
+.buttons.-left {justify-content:flex-start;}
+.buttons.-center {justify-content:center;}
+.buttons.-right {justify-content:flex-end;}
+
+.inline-buttons {display:flex; flex-wrap:wrap; margin:0 -.5rem -0.6rem;}
+.inline-buttons > .button {margin:0 .5rem .6rem;}
+.inline-buttons.-left {justify-content:flex-start;}
+.inline-buttons.-center {justify-content:center;}
+.inline-buttons.-right {justify-content:flex-end;}
+.inline-buttons .button + .button  {margin-top:0.6rem;}
+
+.fit-buttons {display:flex; flex-wrap:wrap; margin:0 -.5rem -0.6rem;}
+.fit-buttons > .button {margin:0 .3rem .6rem;}
+.fit-buttons.-left {justify-content:flex-start;}
+.fit-buttons.-center {justify-content:center;}
+.fit-buttons.-right {justify-content:flex-end;}
+
+/* 아이콘 버튼 */
+.icon-button {display:inline-flex; width:2.4rem; height:2.4rem; background-color:transparent;}
+.icon-button + .icon-button {margin-left:1.5rem;}
+.icon-button.-calendar {background:url(../imgs/ico/common/ico-calendar.png) no-repeat 0 / 2.4rem;}
+.icon-button.-search   {background:url(../imgs/ico/common/ico-search.png)   no-repeat 0 / 2.4rem;}
+.icon-button.-filter   {background:url(../imgs/ico/common/ico-filter.png)   no-repeat 0 / 2.4rem;}
+.icon-button.-select   {background:url(../imgs/ico/common/ico-select-arr.png)   no-repeat 0 / 2.4rem;}
+/* .dark-mode .icon-button.-calendar {background:url(../imgs/ico/common/ico-calendar_dk.png) no-repeat 0 / 2.4rem;} */
+/* .dark-mode .icon-button.-search   {background:url(../imgs/ico/common/ico-search_dk.png)   no-repeat 0 / 2.4rem;} */
+/* .dark-mode .icon-button.-filter   {background:url(../imgs/ico/common/ico-filter_dk.png)   no-repeat 0 / 2.4rem;} */
+/* .dark-mode .icon-button.-select   {background:url(../imgs/ico/common/ico-select-arr_dk.png)   no-repeat 0 / 2.4rem;} */
+
+.icon-button[disabled],
+.icon-button.-disabled {opacity:0.3;}
+
+/* 개별 아이콘 버튼 */
+/* .icon-button.-pencil {background:transparent url(../imgs/ico/common/ico-pencil.png) no-repeat 50% / auto 100%;} */
+/* .icon-button.-delete {background:transparent url(../imgs/ico/common/ico-delete.png) no-repeat 50% / auto 100%;} */
+
+/* 헤더 버튼 */
+.header .func {display:flex; align-items:center; height:2.4rem; background-color:transparent; font-size:1.4rem; white-space:nowrap; color:var(--F02)}
+.header .func.-back    {width:2.4rem; background:url(../imgs/ico/common/ico-func-back.png)       no-repeat 0 / cover;}
+.header .func.-home    {width:2.4rem; background:url(../imgs/ico/common/ico-func-home.png)       no-repeat 50% / 2.4rem 2.4rem;}
+/* .smart-bank .header .func.-home    {width:2.4rem; background:url(../imgs/ico/common/ico-func-home-smart.png)       no-repeat 50% / 2.4rem 2.4rem;} */
+.header .func.-menu    {width:2.4rem; background:url(../imgs/ico/common/ico-func-menu.png)       no-repeat 0 / cover;}
+.header .func.-cs      {width:2.4rem; background:url(../imgs/ico/common/ico-func-cs.png)         no-repeat 0 / cover;}
+.header .func.-close   {width:2.4rem; background:url(../imgs/ico/common/ico-func-close.png)      no-repeat 0 / cover;}
+.header .func.-search  {width:2.4rem; background:url(../imgs/ico/common/ico-func-search.png)     no-repeat 0 / cover;}
+.header .func.-download  {width:2.4rem; background:url(../imgs/ico/common/ico-download.png)     no-repeat 0 / cover;}
+.header .func.-cart    {width:2.4rem; background:url(../imgs/ico/common/ico-func-cart.png)       no-repeat 0 / cover;}
+/* .dark-mode .header .func.-back    {width:2.4rem; background:url(../imgs/ico/common/ico-func-back_dk.png)       no-repeat 0 / cover;}
+.dark-mode .header .func.-home    {width:2.4rem; background:url(../imgs/ico/common/ico-func-home_dk.png)       no-repeat 50% / 2.4rem 2.4rem;}
+.smart-bank.dark-mode .header .func.-home    {width:2.4rem; background:url(../imgs/ico/common/ico-func-home-smart_dk.png)       no-repeat 50% / 2.4rem 2.4rem;}
+.dark-mode .header .func.-menu    {width:2.4rem; background:url(../imgs/ico/common/ico-func-menu_dk.png)       no-repeat 0 / cover;}
+.dark-mode .header .func.-cs      {width:2.4rem; background:url(../imgs/ico/common/ico-func-cs_bk.png)         no-repeat 0 / cover;}
+.dark-mode .header .func.-close   {width:2.4rem; background:url(../imgs/ico/common/ico-func-close_dk.png)      no-repeat 0 / cover;}
+.dark-mode .header .func.-search  {width:2.4rem; background:url(../imgs/ico/common/ico-func-search_dk.png)     no-repeat 0 / cover;}
+.dark-mode .header .func.-download  {width:2.4rem; background:url(../imgs/ico/common/ico-download_dk.png)     no-repeat 0 / cover;}
+.dark-mode .header .func.-cart    {width:2.4rem; background:url(../imgs/ico/common/ico-func-cart_dk.png)       no-repeat 0 / cover;} */
+
+.header .func.-active {position:relative;}
+.header .func.-active:after {content:""; position:absolute; top:0; right:-0.3rem; width:.5rem; height:.5rem; border-radius:50%; background-color:#f00;}
+
+.profile-image {display:flex; overflow:hidden; position:absolute; top:50%; left:var(--in); transform:translateY(-50%); width:3.6rem; height:3.6rem; border:1px solid var(--line2); border-radius:50%;}
+.profile-image img {width:100%; background-color:var(--bg-root);}
+.profile-image .profile-button {position:absolute; top:0; left:0; z-index:1; width:100%; height:100%; background-color:transparent;}
+/* .profile-image.-character0 {background:var(--G08) url(../imgs/ico/service/navigation/ico-none-profile.png) no-repeat 50% / 100% auto;} */
+/* .profile-image.-character1 {background:var(--bg-root) url(../imgs/img/navigation/img-NB-02000000V01-L-1.png) no-repeat 50% / 100% auto;}
+.profile-image.-character2 {background:var(--bg-root) url(../imgs/img/navigation/img-NB-02000000V01-L-2.png) no-repeat 50% / 100% auto;}
+.profile-image.-character3 {background:var(--bg-root) url(../imgs/img/navigation/img-NB-02000000V01-L-3.png) no-repeat 50% / 100% auto;}
+.profile-image.-character4 {background:var(--bg-root) url(../imgs/img/navigation/img-NB-02000000V01-L-4.png) no-repeat 50% / 100% auto;}
+.profile-image.-character5 {background:var(--bg-root) url(../imgs/img/navigation/img-NB-02000000V01-L-5.png) no-repeat 50% / 100% auto;}
+.profile-image.-character6 {background:var(--bg-root) url(../imgs/img/navigation/img-NB-02000000V01-L-6.png) no-repeat 50% / 100% auto;}
+.profile-image.-character7 {background:var(--bg-root) url(../imgs/img/navigation/img-NB-02000000V01-L-7.png) no-repeat 50% / 100% auto;} */
+
+/* 기타 버튼 */
+.more-button {display:flex; justify-content:center; align-items:center; width:100%; height:3rem; margin-top:1.6rem; border:none; border-radius:0.8rem; background-color:transparent; color:var(--font1); font-size:1.4rem; font-weight: 500; transition:background-color .3s;}
+.more-button:after {content:""; display:inline-block; width:1.6rem; height:1.6rem; margin-left:.2rem; background:url(../imgs/ico/common/ico-more-sm.png) no-repeat 0 / cover;}
+/* .dark-mode .more-button:after {content:""; display:inline-block; width:1.6rem; height:1.6rem; margin-left:.2rem; background:url(../imgs/ico/common/ico-more-sm_dk.png) no-repeat 0 / cover;} */
+
+.goto-button {display:flex; justify-content:center; align-items:center; width:100%; margin-top:2.8rem; border:none; border-radius:0.8rem; background-color:transparent; color:var(--font1); font-size:1.4rem; font-weight: 500; transition:background-color .3s;}
+.goto-button:after {content:""; display:inline-block; width:1.6rem; height:1.6rem; margin-left:.1rem; background:url(../imgs/ico/common/ico-alink-arrow.png) no-repeat 0 / cover;}
+/* .dark-mode .goto-button:after {content:""; display:inline-block; width:1.6rem; height:1.6rem; margin-left:.1rem; background:url(../imgs/ico/common/ico-alink-arrow_dk.png) no-repeat 0 / cover;} */
+
+.more-toggle-button  {display:flex; justify-content:center; align-items:center; width:100%; height:3rem; margin-top:1.6rem; border:none; border-radius:0.8rem; background-color:transparent; color:var(--font1); font-size:1.4rem; font-weight: 500; transition:background-color .3s;line-height:0;}
+/* .more-toggle-button.up:after {content:""; display:inline-block; width:1.6rem; height:1.6rem; margin-left:.2rem; background:url(../imgs/ico/common/ico-more-sm-up.png) no-repeat 0 / cover;} */
+.more-toggle-button.no:after{display:none;}
+.more-toggle-button:after {content:""; display:inline-block; width:1.6rem; height:1.6rem; margin-left:.2rem; background:url(../imgs/ico/common/ico-more-sm.png) no-repeat 0 / cover;}
+/* .dark-mode .more-toggle-button.up:after {content:""; display:inline-block; width:1.6rem; height:1.6rem; margin-left:.2rem; background:url(../imgs/ico/common/ico-more-sm-up_dk.png) no-repeat 0 / cover;} */
+/* .dark-mode .more-toggle-button:after {content:""; display:inline-block; width:1.6rem; height:1.6rem; margin-left:.2rem; background:url(../imgs/ico/common/ico-more-sm_dk.png) no-repeat 0 / cover;} */
+
+.fixer .gl__preview .buttons:not(.-half) {display:flex; flex-wrap:nowrap;}
+.fixer .gl__preview .buttons:not(.-half) > .button:nth-child(1) {flex-basis:calc(34% - 0.8rem);}
+.fixer .gl__preview .buttons:not(.-half) > .button:nth-child(2) {flex-basis:calc(66% - 0.8rem);}

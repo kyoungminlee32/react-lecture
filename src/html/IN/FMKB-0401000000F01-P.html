@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/insurance.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">연금 수령액 예시</h1> <!-- ux 라이팅 수정 -->
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="field">
+                        <p class="label">예상 연금 수령액 산출 기준</p> <!-- ux 라이팅 수정 -->
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">현재 공시이율 2.7%</button>
+                        </div>
+                    </div>                                      
+                    <div class="pension-group">
+                        <h4 class="h5">연금 수령액 예시</h4> <!-- ux 라이팅 수정 -->                         
+                        <span class="unit">(단위 : 원/세전)</span> <!-- ux 라이팅 수정 -->   
+                    </div>
+                    <div class="pension-box">                        
+                        <p class="sum">연금신청시점의 계약자적립액 예상액</p> <!-- ux 라이팅 수정 -->  
+                        <h3 class="title">63,273,537원</h3>
+                        <p class="sum">상속형의 사망 시 일시금</p> <!-- ux 라이팅 수정 -->  
+                        <h3 class="title">63,273,537원</h3>
+
+                        <p class="message -insurance">단, 연금 지급형태를 상속형으로 선택이 불가한 상품은 금액이 표시되지 않을 수 있습니다.</p>
+                    </div>  
+                    <div class="pension-group">
+                        <h4 class="h5">유형별 연금수령액 예시(매년)</h4>  <!-- ux 라이팅 수정 --> <!-- 240315 문구수정 -->                       
+                        <span class="unit">(단위 : 원/세전)</span> <!-- ux 라이팅 수정 --> 
+                    </div>      
+                    <dl class="dl -bordered">
+                        <div class="title">종신형</div>
+                        <div>
+                            <dt>개인정액(10년)</dt>
+                            <dd>148,408원</dd>
+                        </div>
+                        <div>
+                            <dt>개인정액(10년)</dt>
+                            <dd>248,408원</dd>
+                        </div>
+                        <div class="title">확정형</div>
+                        <div data-role="hidden">
+                            <dt>10년확정형</dt>
+                            <dd>3,367,067원</dd>
+                        </div>
+                        <div data-role="hidden">
+                            <dt>20년확정형</dt>
+                            <dd>5,667,067원</dd>
+                        </div>
+                        <div class="title">상속형</div>
+                        <div data-role="hidden">
+                            <dt>상속형(종신)</dt>
+                            <dd>2,367,067원</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <!-- 2024-05-16 마크업 변경 블릿 삭제 -->
+                            <p class="p">평균공시이율은 감독원장이 정하는 바에 따라 산정한 전체 보험회사 공시이율의 평균으로, 전년도 9월말 기준 직전 12개월간 보험회사 평균공시이율입니다.</p>
+                            <p class="p">연금개시점 계약자적립액이란 이계약의 순보험료(보험료에서 계약체결비용 및 계약관리비용을 뺀 금액)를 기준으로 적립이율을 적용하여 이 보험의 보험료 및 해약환급금 산출방법서에서 정한 방법에 따라 연금개시시점까지 계산한 금액을 말합니다.</p>
+                            <p class="p">연금개시시점 계약자적립액은 이미 납입한 보험료(계약자 적립액의 인출이 있었던 때에는 이를 차감한 금액)+1,000원을 최저보증합니다. 다만, 계약자적립액의 인출이 있는 경우에는 해당시점의 계약자적립액에서 중도인출금을 차감하며, 보험료 납입이 완료된 이후의 납입 후 계약관리비용은 매월 계약해당일에 계약자적립액에서 차감합니다.</p>
+                            <p class="p">종신연금형의 경우 연금개시 후 보증지금기간 안에 사망시에는 보증지급기간까지의 미지급된 연금연액을 “공시이율로 할인하여 계산한 금액을 일시금으로 지급받는 방법과 연금지급주기에 따라 지급받는 방법＂중 선택한 방법에 따라 해당 금액을 지급합니다.</p>
+                            <p class="p">종신연금형의 경우 생존연금 지급개시 후 보증지급횟수까지 지급되지 않은 생존연금을 보험료 및 해약환급금 산출방법서에 따라 공시이율로 할인하여 선지급할 수 있습니다.</p>
+                            <p class="p">확정연금형의 경우 연금개시 후 생사여부와 관계없이 확정지급기간까지의 연금액을 드립니다.</p>
+                            <p class="p">상속연금형의 경우 연금개시 이후 피보험자 사망시 그 시점의 상속연금형 계약자적립액을 지급합니다. 상속연금형 계약자적립액은 상기 예시된 사망시 일시금을 말하며, 보험년도 말</p>
+                            <!-- //2024-05-16 마크업 변경 블릿 삭제 -->
+                            <!-- <ul class="ul -bullet">
+                                <li>평균공시이율은 감독원장이 정하는 바에 따라 산정한 전체 보험회사 공시이율의 평균으로, 전년도 9월말 기준 직전 12개월간 보험회사 평균공시이율입니다.</li>
+                                <li>연금개시점 계약자적립액이란 이계약의 순보험료(보험료에서 계약체결비용 및 계약관리비용을 뺀 금액)를 기준으로 적립이율을 적용하여 이 보험의 보험료 및 해약환급금 산출방법서에서 정한 방법에 따라 연금개시시점까지 계산한 금액을 말합니다.</li>
+                                <li>연금개시시점 계약자적립액은 이미 납입한 보험료(계약자 적립액의 인출이 있었던 때에는 이를 차감한 금액)+1,000원을 최저보증합니다. 다만, 계약자적립액의 인출이 있는 경우에는 해당시점의 계약자적립액에서 중도인출금을 차감하며, 보험료 납입이 완료된 이후의 납입 후 계약관리비용은 매월 계약해당일에 계약자적립액에서 차감합니다.</li>
+                                <li>종신연금형의 경우 연금개시 후 보증지금기간 안에 사망시에는 보증지급기간까지의 미지급된 연금연액을 “공시이율로 할인하여 계산한 금액을 일시금으로 지급받는 방법과 연금지급주기에 따라 지급받는 방법＂중 선택한 방법에 따라 해당 금액을 지급합니다.</li>
+                                <li>종신연금형의 경우 생존연금 지급개시 후 보증지급횟수까지 지급되지 않은 생존연금을 보험료 및 해약환급금 산출방법서에 따라 공시이율로 할인하여 선지급할 수 있습니다.</li>
+                                <li>확정연금형의 경우 연금개시 후 생사여부와 관계없이 확정지급기간까지의 연금액을 드립니다.</li>
+                                <li>상속연금형의 경우 연금개시 이후 피보험자 사망시 그 시점의 상속연금형 계약자적립액을 지급합니다. 상속연금형 계약자적립액은 상기 예시된 사망시 일시금을 말하며, 보험년도 말</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

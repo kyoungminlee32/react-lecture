@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/retire.css">
+</head>
+<body>
+    <div id="layer" class="layer">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">검색 조건을 선택해 주세요</h1> <!-- [240311] 마침표 삭제 -->
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="field">
+                        <p class="label">지역 구분</p>
+                        <!-- 2024-07-10 수정 -->
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="asdf-1">
+                                <label for="asdf-1">국내</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="asdf-2">
+                                <label for="asdf-2">해외(원화)</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="asdf-3">
+                                <label for="asdf-3">해외(외화)</label>
+                            </div>
+                        </div>
+                        <!-- //2024-07-10 수정 -->
+                    </div>
+                    <div class="field">
+                        <p class="label">펀드유형<span class="label-sub">(중복 선택 가능)</span></p>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="checkbox" id="box-radio1-1">
+                                <label for="box-radio1-1">주식형</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="checkbox" id="box-radio1-2">
+                                <label for="box-radio1-2">주식혼합형</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="checkbox" id="box-radio1-3">
+                                <label for="box-radio1-3">채권혼합형</label>
+                            </div>
+                        </div>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="checkbox" id="box-radio2-1">
+                                <label for="box-radio2-1">채권형</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="checkbox" id="box-radio2-2">
+                                <label for="box-radio2-2">MMF</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="checkbox" id="box-radio2-3">
+                                <label for="box-radio2-3">파생형</label>
+                            </div>
+                        </div>
+                        <div class="triple-radios">
+                            <div class="box-radios -sm">
+                                <div class="box-radio">
+                                    <input type="checkbox" id="box-radio1-4">
+                                    <label for="box-radio1-4">부동산</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="checkbox" id="box-radio1-5">
+                                    <label for="box-radio1-5">기타</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">선취판매수수료<span class="label-sub">(중복 선택 가능)</span></p>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="checkbox" id="ggkjg-1">
+                                <label for="ggkjg-1">없음</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="checkbox" id="ggkjg-2">
+                                <label for="ggkjg-2">있음</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">위험등급<span class="label-sub">(중복 선택 가능)</span></p>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="checkbox" id="box-radio1">
+                                <label for="box-radio1">매우높은위험</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="checkbox" id="box-radio2">
+                                <label for="box-radio2">높은위험</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="checkbox" id="box-radio3">
+                                <label for="box-radio3">다소높은위험</label>
+                            </div>
+                        </div>
+                        <div class="box-radios -sm">
+                            <div class="box-radio">
+                                <input type="checkbox" id="box-radio12">
+                                <label for="box-radio12">보통위험</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="checkbox" id="box-radio23">
+                                <label for="box-radio23">낮은위험</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="checkbox" id="box-radio53">
+                                <label for="box-radio53">매우낮은위험</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons -half">
+                        <button type="button" class="button -lg">초기화</button>
+                        <button type="button" class="button -lg -primary">검색</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Layer.open('layer');
+
+        // 레이어 닫기(마지막 인자 기본값: false)
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // });
+
+        // 레이어 닫기 + DOM 삭제
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

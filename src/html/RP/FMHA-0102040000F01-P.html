@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/retire.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">스크래핑 이용 동의</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <p class="p">고객님이 신청하신 금융거래 및 서비스 신청 완료 후 별도로 이용기관(건강보험공단) 홈페이지에 로그인하여 소득/재직관련 서류를 제출하여 은행에 제출하는 번거로움을 없애고자, 금융거래 및 서비스 신청 시 고객님이 공동인증서 기반으로 이용기관(건강보험공단, 국세청)에 자동으로 접속하여 소득/재직관련 서류를 전자적 방식으로 제출하는 서비스입니다.</p>
+
+                    <h4 class="h5">이용기관별 세부내용</h4>
+                    <ul class="ul -bullet fs-15">
+                        <li>건강보험공단
+                            <div>
+                                <ul class="ul -dash">
+                                    <li>가입자전체의 조회 조건으로 건강보험자격득실확인서 발급</li>
+                                    <li>국문, 최근 12개월, 납부확인 용도로 건강, 장기요양보험료 납부확인서 발급</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>국세청
+                            <div>
+                                <ul class="ul -dash">
+                                    <li>은행에 등록된 고객님의 전화번호, 한글증명, 근로소득자용, 전연도 과세기간, 금융기관제출용도, 금융기관 제출, 주민등록번호 미공개, 주소 미공개, 인터넷 열람용으로 소득금액증명서 발급</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h4 class="h5">유의사항</h4>
+                    <p class="p">이용기관의 이용제한, 전산장애 등이 발생할 경우 서비스 제공이 제한될 수 있습니다.</p>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

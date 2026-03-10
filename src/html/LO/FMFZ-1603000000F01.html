@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출신청정보확인</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">아낌e보금자리론</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">한국주택금융공사(HF)의<br>대출 심사내역을 확인해 주세요</h2>
+                    </div>
+                    <div class="limit-point-box">
+                        <!-- 240126 ux라이팅 수정 -->
+                        <p class="p">대출 신청금액 <span class="limit-point bk">5억6,000만원</span></p>
+                        <!-- //240126 ux라이팅 수정 -->
+                        <p class="p">적용금리 <span class="limit-point">4.40%</span></p>
+                    </div>
+                    <!-- [240313]ux 라이팅 수정 시작 -->
+                    <dl class="dl -box case-box2">
+                        <div>
+                            <dt>이름</dt>
+                            <dd>조하연</dd>
+                        </div>
+                        <div>
+                            <dt>대출 상품</dt>
+                            <dd>아낌e-보금자리론</dd>
+                        </div>
+                        <div>
+                            <dt>자금 용도</dt>
+                            <dd>구입</dd>
+                        </div>
+                        <div>
+                            <dt>대출 상환방법</dt>
+                            <dd>원금균등상환</dd>
+                        </div>
+                        <div>
+                            <dt>거치기간</dt>
+                            <dd>0 개월</dd>
+                        </div>
+                        <div>
+                            <dt>대출기간</dt>
+                            <dd>120 개월</dd>
+                        </div>
+                        <div>
+                            <dt>담보물 주소</dt>
+                            <dd>전라북도 익산시 어양동 652-1번지 부영아파트 106동 508호</dd>
+                        </div>
+                        <div>
+                            <!-- 240126 ux라이팅 수정 -->
+                                <dt>희망 관리점</dt>
+                                <!-- //240126 ux라이팅 수정 -->
+                            <dd>NH농협은행 익산시지부</dd>
+                        </div>              
+                    </dl>
+                    <p class="message">주택금융공사 신청내역과 심사내역이 다른 경우 한국주택금융공사 콜센터(1688-8114)로 문의해 주시기 바랍니다.</p>
+                    <!-- //[240313]ux 라이팅 수정 끝 -->
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE]대출 약정서‘ 선택하여 “금융상품 중요사항 이해 확인“ 팝업 페이지 > (연속팝업)전자문서 미리보기 확인 후 버튼 활성화 처리 -->
+                        <button type="button" class="button -lg -primary" disabled>대출 신청하기</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

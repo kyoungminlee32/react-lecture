@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>중요사항확인</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/isa.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">ISA 신규</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:1; --max:6;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <h2 class="h2">
+                            투자자 권리 보호를 위한<br>
+                            중요사항을 확인해 주세요
+                        </h2>
+                    </div>
+
+                    <!-- 2024-05-13 감싸는 테그 (otherServeyWrap) 추가  -->
+                    <div class="otherServeyWrap">
+                        <div class="accordion -card -v2 -active" data-role="fold">
+                            <button type="button" class="title" data-role="marker">구속 행위 규제 유의사항 안내</button>
+                            <div class="panel" data-role="hidden">
+                                <!-- [CASE] 체크시 아코디언 접힘 -->
+                                <div class="checkbox -sm">
+                                    <input type="checkbox" id="checkbox-sm" onclick="jsSrveyNextOther(this)">
+                                    <label for="checkbox-sm">중소기업 및 그 기업의 대표자, 개인인 금융소비자의 경우 「금융소비자 보호에 관한 법률」 등의 “구속 행위” 여부 판정에 따라 신용평가 등급과 무관하게 일임형 개인종합자산관리계좌 신규 후 1개월 이내 대출 거래가 제한될 수 있음을 확인합니다.</label>
+                                </div>
+                                <!-- // [CASE] 체크시 아코디언 접힘 -->
+                            </div>
+                        </div>
+
+                        <div class="accordion -card -v2" data-role="fold"><!-- 2024-05-13 클래스(-active) 삭제 -->
+                            <button type="button" class="title" data-role="marker">금융취약투자자 우선 설명 안내</button>
+                            <div class="panel" data-role="hidden">
+                                <div class="field">
+                                    <!-- ui수정 240122 (텍스트 수정) -->
+                                    <h4 class="h5">금융소비자 유형을 선택해 주세요.</h4>
+                                    <!-- //ui수정 240122 (텍스트 수정) -->
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <!-- [CASE] Defualt : 일반금융소비자 -->
+                                            <input type="radio" name="period-point-color1" id="period-point-color1-1" checked>
+                                            <!-- // -->
+                                            <label for="period-point-color1-1">일반금융소비자</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="period-point-color1" id="period-point-color1-2">
+                                            <label for="period-point-color1-2">전문금융소비자</label>
+                                        </div>
+                                    </div>
+                                    <p class="info">전문금융소비자 안내
+                                        <span class="tooltip">
+                                            <button type="button" class="trigger">
+                                                <span class="hide">툴팁</span>
+                                            </button>
+                                            <span class="panel">
+                                                <span class="title">전문금융소비자란?</span>
+                                                <span class="t-content">
+                                                    「금융소비자 보호에 관련 법률」<br>
+                                                    제2조 제9호에 따라 금융상품에 관한 전문성 또는 소유 자산 규모 등에 비추어 금융상품 계약에 따른 위험 감수 능력이 있는 금융소비자
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </p>
+                                </div>
+
+                                <div class="case-wrap -sm">
+                                    <h4 class="h5">해당하는 항목을 선택해 주세요.</h4>
+                                    
+                                    <div class="custom-checkbox-wrap">
+                                        <div class="custom-checkbox type01">
+                                            <input type="checkbox" id="checkbox-tl">
+                                            <label for="checkbox-tl"><span>만65세 이상</span></label>
+                                        </div>
+                                        <div class="custom-checkbox type02">
+                                            <input type="checkbox" id="checkbox-tl1">
+                                            <label for="checkbox-tl1"><span>은퇴자</span></label>
+                                        </div>
+                                        <div class="custom-checkbox type03">
+                                            <input type="checkbox" id="checkbox-tl2">
+                                            <label for="checkbox-tl2"><span>주부</span></label>
+                                        </div>
+                                        <div class="custom-checkbox type04">
+                                            <input type="checkbox" id="checkbox-tl3">
+                                            <label for="checkbox-tl3"><span>우선설명 요청 고객</span></label>
+                                        </div>
+                                        <div class="custom-checkbox type05">
+                                            <input type="checkbox" id="checkbox-tl4">
+                                            <label for="checkbox-tl4"><span>해당 없음</span></label>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- [CASE] 만65세 이상, 은퇴자, 주부, 우선 설명 요청 고객 중 선택 시해당 콘텐츠가 보여짐 -->
+                                    <div class="case-wrap -xxs">
+                                        <div>
+                                            <p class="p">금융취약 투자자 (만65세 이상, 은퇴자, 주부, 우선 설명 요청 고객) 대상 고객님께 「금융소비자 보호 모범규준」에 따라 “확인할 사항 및 불이익 사항”을 안내해 드립니다.</p>
+
+                                            <div class="line-box">
+                                                <h3 class="title">원금 비보장</h3>
+                                                <p class="p">일임형 개인종합자산관리계좌(ISA) 상품은 원금손실이 발생할 수 있으며, 예금자보호법에 따라 보호되지 않습니다. 손실 가능 범위는 각 상품별로 다를 수 있습니다.</p>
+                    
+                                                <h3 class="title">투자 성과</h3>
+                                                <ul class="ul -bullet">
+                                                    <li>일임형 개인종합자산관리계좌(ISA) 상품은 운용실적에 따라 이익 또는 손실이 발생할 수 있으며, 그 결과는 투자자에게 귀속됩니다.</li>
+                                                    <li>상품의 과거의 운용 실적은 미래의 수익률을 보장하지 않습니다.</li>
+                                                </ul>
+                    
+                                                <h3 class="title">중도해지 및 중도인출</h3>
+                                                <p class="p">중도해지 시 환매수수료 또는 기타 비용이 발생할 수 있으며 특별중도해지 사유 이외의 사유로 의무가입기간(3년) 경과 전 중도해지 시에는 과세 특례를 적용받은 소득세액이 상당하는 세액이 추징 됩니다. (납입 원금 한도 내에서 중도 인출은 가능)</p>     
+                                            </div>
+
+                                            <p class="p">최종적으로 가입을 결정하시기 전에 MP설명서나 약관을 통해 투자대상, 환매방법, 보수 등에 관하여 반드시 확인하시기 바랍니다.</p>
+                                        </div>
+
+                                        <div class="case-wrap -xs">
+                                            <div class="checkbox -sm">
+                                                <input type="checkbox" id="checkbox-sm-1">
+                                                <label for="checkbox-sm-1">일임형 개인종합자산관리계좌(ISA) 운용상품 가입 시 반드시 확인할 사항 및 불이익 사항에 대한 정보를 다른 정보보다 우선하여 설명을 받고 충분히 이해하였음을 확인합니다.</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // [CASE] 만65세 이상, 은퇴자, 주부, 우선 설명 요청 고객 중 선택 시해당 콘텐츠가 보여짐 -->
+
+                                    <!-- [CASE] 해당없음 선택 시 노출 -->
+                                    <div style="background-color: yellow;margin:20px 0 -15px 0">[CASE] 해당없음 선택 시 노출</div>
+                                    <!-- 2024-05-08 따옴표 제거 -->
+                                    <p class="p">금융소비자의 불이익 사항을 설명서 및 계약서류를 통해 반드시 확인하시기 바랍니다.</p>
+                                    <!-- // [CASE] 해당없음 선택 시 노출 -->
+                                    
+                                    <!-- [CASE] 항상 노출 -->
+                                    <div class="case-wrap -xs">
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="checkbox-sm-2" onclick="jsSrveyNextOther(this)">
+                                            <label for="checkbox-sm-2">금융취약 투자자 해당 여부를 농협은행에 제공하는 것에 동의합니다.</label>
+                                        </div>
+                                    </div>
+                                    <!-- // [CASE] 항상 노출 -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion -card -v2" data-role="fold"><!-- 2024-05-13 클래스(-active) 삭제 -->
+                            <button type="button" class="title" data-role="marker">현재 투자자금 성향 파악</button>
+                            <div class="panel" data-role="hidden">
+                                <div class="jsSrveyWrap">
+                                    <div class="field jsSrveyCurrent">
+                                        <dl class="invest-qna">
+                                            <dt class="question-text">
+                                                <span class="number">01</span>
+                                                <span>투자자금의 목적 또는 원천을 선택해 주세요.</span>
+                                            </dt>
+                                
+                                            <dd class="answer-list">
+                                                <div class="item">
+                                                    <input type="radio" name="radio1" id="radio1-1">
+                                                    <!-- 2024-04-18 띄어쓰기 수정 -->
+                                                    <label for="radio1-1" class="invest-unit isa-icon33">학자금, 전세금, 결혼 자금, 노후 자금 등 단기간 내에 확실한 사용처가 정해진 자금</label>
+                                                    <!-- //2024-04-18 띄어쓰기 수정 -->
+                                                </div>
+                                                <div class="item">
+                                                    <input type="radio" name="radio1" id="radio1-2">
+                                                    <label for="radio1-2" class="invest-unit isa-icon34">여유자금이나 원금 보존을 추구하고자 함</label>
+                                                </div>
+                                                <div class="item">
+                                                    <input type="radio" name="radio1" id="radio1-3">
+                                                    <label for="radio1-3" class="invest-unit isa-icon35">여유자금으로서 수익실현을 위한 투자를 목적으로 함</label>
+                                                </div>
+                                            </dd>
+                                            <div class="invest-notice">
+                                                <!-- [CASE] Default & 정답일 경우 -->
+                                                <!-- 2024-04-18 띄어쓰기 수정 -->
+                                                <div class="message">학자금, 전세금, 결혼 자금, 노후 자금 등의 단기간 내에 사용처가 확실한 자금으로 투자하실 경우에는 투자가능 기간 등을 고려하여 상품의 특징 및 투자위험 등을 충분히 이해한 상태에서 투자결정을 하셔야 합니다. 그럼에도 불구하고 해당 자금으로 원금손실 가능성이 있는 상품에 투자하는 것은 신중하셔야 합니다.</div>
+                                                <!-- //2024-04-18 띄어쓰기 수정 -->
+                                                <!-- // [CASE] Default & 정답일 경우 -->
+        
+                                                <!-- [CASE] 오답일 경우 -->
+                                                <div class="message">
+                                                    <span class="red">다시 확인해 주세요.</span><br>
+                                                    투자자금의 확실한 사용처가 정해져 있거나, 원금 보존을 추구하는 경우 일임형 개인종합자산관리계좌(ISA) 가입이 불가합니다.
+                                                </div>
+                                                <!-- // [CASE] 오답일 경우 -->
+                                            </div>
+                                        </dl>
+                                    </div>
+        
+                                    <div class="field">
+                                        <dl class="invest-qna">
+                                            <dt class="question-text">
+                                                <span class="number">02</span>
+                                                <span>수익 및 손실 위험에 대한 생각을 선택해 주세요.</span>
+                                            </dt>
+                                
+                                            <dd class="answer-list">
+                                                <div class="item">
+                                                    <input type="radio" name="radio2" id="radio2-1">
+                                                    <label for="radio2-1" class="invest-unit isa-icon34">투자 수익도 중요하나 원금 보존을 희망함</label>
+                                                </div>
+                                                <div class="item">
+                                                    <input type="radio" name="radio2" id="radio2-2">
+                                                    <label for="radio2-2" class="invest-unit isa-icon36">손실 위험이 있더라도 투자 수익 중요</label>
+                                                </div>
+                                            </dd>
+                                            <div class="invest-notice">
+                                                <!-- [CASE] Default & 정답일 경우 -->
+                                                <div class="message">투자성 상품은 원금보존이 불가한 상품으로 적절한 투자수익을 위해서는 손실위험을 감수하여야 합니다.</div>
+                                                <!-- // [CASE] Default & 정답일 경우 -->
+        
+                                                <!-- [CASE] 오답일 경우 -->
+                                                <div class="message">
+                                                    <span class="red">다시 확인해 주세요.</span><br>
+                                                    투자 수익보다 원금 보존을 원하시는 경우에는 일임형 개인종합자산관리계좌(ISA) 가입이 불가합니다.
+                                                </div>
+                                                <!-- // [CASE] 오답일 경우 -->
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 플로팅 버튼 -->
+                    <div class="floating-wrap">
+                        <div class="floating-btn" role="button">
+                            <p>
+                                원금손실<br>
+                                가능상품
+                            </p>
+                        </div>
+                        <a class="floating_close" title="원금 손실가능 상품 플로팅버튼 닫기"></a>
+                    </div>
+                    <!-- // 플로팅 버튼 -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 설문 인터렉션 예시
+        const jsSrveyHandle = document.querySelectorAll('.custom-checkbox input, .invest-qna .answer-list .item input');
+        jsSrveyHandle.forEach(element => {
+            element.addEventListener('click',function (e) {
+                // jsSrveyNext(this)
+                jsSrveyNextOther(this) //2024-05-13 호출하는 함수 변경
+            })
+        });
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/fund.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">펀드 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>                         
+                    
+                    <div class="h2-group">                        
+                        <h2 class="h2">
+                            보고서를 어떻게 받을까요? <!-- [240126] 문구수정 -->
+                        </h2>
+                    </div>
+                    <div class="field">
+                        <dl class="dl -box">
+                            <div>
+                                <dt>집 주소</dt> <!-- [240126] 문구수정 --> <!-- ux 라이팅 수정 -->
+                                <dd>서울특별시 중구 통일로 120</dd>
+                            </div>
+                            <div>
+                                <dt>이메일</dt>
+                                <dd>이메일 주소가 없습니다</dd>
+                            </div>
+                            <div>
+                                <dt>휴대폰번호</dt>
+                                <dd>010-14-5678</dd>
+                            </div>
+                        </dl>                         
+                        <div class="right mt-13">
+                            <a href="javascript:void(0)" class="a -arrow">내 정보 수정</a>
+                        </div>
+                    </div> 
+                    <div class="field">
+                        <p class="label">자산운용보고서 <!-- [231212] 툴팁 추가 -->
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="t-content">
+                                        <span class="dot">펀드의 운용결과를 운용사로부터 3개월마다 1회 이상 안내받을 수 있습니다.</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-1" checked>
+                                <label for="box-radio1-1">이메일</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-2">
+                                <label for="box-radio1-2">우편</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period1" id="box-radio1-3">
+                                <label for="box-radio1-3">받지 않음</label>
+                            </div>
+                        </div>
+                        <p class="info">우편 통보 시에는 고객정보에 등록된 우편물 수령처로 발송됩니다.</p>
+                    </div>   
+                    <div class="field">
+                        <p class="label">실질투자수익률보고서 <!-- [231212] 툴팁 추가 -->
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">실질투자수익률보고서</span>
+                                    <span class="t-content">
+                                        <span class="dot">매월 1회 이메일 또는 문자메시지로 안내받을 수 있습니다.</span>
+                                        <span class="dot">실질 투자 수익률(펀드에서 발생한 모든 비용을 반영), 투자원금, 환매예상금액, 판매수수료, 총보수 정보를 안내받을 수 있습니다.</span>
+                                        <span class="dot">ETF, MMF 및 평가일기준으로 평가금액이 10만원 이하인 계좌에 대해서는 안내해드리지 않습니다.</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period2" id="box-radio2-1" checked>
+                                <label for="box-radio2-1">이메일</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period2" id="box-radio2-2">
+                                <label for="box-radio2-2">우편</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period2" id="box-radio2-3">
+                                <label for="box-radio2-3">받지 않음</label>
+                            </div>
+                        </div>                        
+                    </div>  
+                    <div class="field">
+                        <p class="label">수익률 안내 <!-- [231212] 툴팁 추가 --> <!-- [240205] 문구변경 -->
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">수익률 안내</span> <!-- [240205] 문구변경 -->
+                                    <span class="t-content">
+                                        <span class="dot">평가금액, 수익률 등을 문자메시지로 안내받을 수 있습니다.</span>
+                                        <span class="dot">월 기준 : 매 월말 기준 익월초 안내</span>
+                                        <span class="dot">주 기준 : 매 주말 기준 다음주초 안내 </span>
+                                        <span class="dot">ELF/DLF, MMF 및 평가일기준으로 평가금액이 10만원 미만인 계좌에 대해서는 안내해드리지 않습니다.</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period3" id="box-radio3-1" checked>
+                                <label for="box-radio3-1">매월</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period3" id="box-radio3-2">
+                                <label for="box-radio3-2">매주</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period3" id="box-radio3-3">
+                                <label for="box-radio3-3">받지 않음</label>
+                            </div>
+                        </div>
+
+                        <!-- 2024-05-07 [CASE] 매주 없는 경우 추가 -->
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period3" id="box-radio3-1" checked>
+                                <label for="box-radio3-1">매월</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period3" id="box-radio3-3">
+                                <label for="box-radio3-3">받지 않음</label>
+                            </div>
+                        </div>
+                        <!-- //2024-05-07 [CASE] 매주 없는 경우 추가 -->
+                        <!-- <p class="info">매주/매월 선택 시, 상단에 노출된 휴대폰번호로 문자메시지 발송합니다.</p> --> <!-- 240328 안내문구 삭제 -->
+                    </div>                                          
+                </div>
+
+                <!-- 플로팅 버튼 -->
+                <div class="floating-wrap">
+                    <div class="floating-btn" role="button"> <!-- [240111] role="button" 추가 -->
+                        <p>원금손실<br>가능상품</p>  <!-- ux 라이팅 수정 -->
+                    </div>
+                    <a class="floating_close" title="원금 손실가능 상품 플로팅버튼 닫기"></a>
+                </div>
+                <!-- //플로팅 버튼 -->   
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg">다음</button>
+                    </div>
+                </div>             
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

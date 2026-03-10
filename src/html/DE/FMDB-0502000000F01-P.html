@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">NH고향사랑 온도계</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="h2-group">
+                        <h2 class="h2">
+                            지역을 선택하시면<br> 지역별 온도계를 확인할 수 있어요
+                        </h2>
+                    </div>
+
+                    <div class="field thermo-btn-group">
+                        <div class="box-radios -sm -radius4">
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="all" data-number="32" data-state="전체">
+                                <label for="all">전체</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-2" data-number="20" data-state="서울" >
+                                <label for="box-radio11-2">서울</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-3" data-number="40" data-state="부산" >
+                                <label for="box-radio11-3">부산</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-4" data-number="41" data-state="대구" >
+                                <label for="box-radio11-4">대구</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-5" data-number="61" data-state="인천" >
+                                <label for="box-radio11-5">인천</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-6" data-number="81" data-state="광주" >
+                                <label for="box-radio11-6">광주</label>
+                            </div>
+                        </div>
+                        <div class="box-radios -sm -radius4">
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio12-1" data-number="86" data-state="대전" >
+                                <label for="box-radio12-1">대전</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio12-2" data-number="93" data-state="울산" >
+                                <label for="box-radio12-2">울산</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio12-3" data-number="77" data-state="세종" >
+                                <label for="box-radio12-3">세종</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio12-4" data-number="2" data-state="경기" >
+                                <label for="box-radio12-4">경기</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio12-5" data-number="8" data-state="강원" >
+                                <label for="box-radio12-5">강원</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio12-6" data-number="21" data-state="충북" >
+                                <label for="box-radio12-6">충북</label>
+                            </div>
+                        </div>
+                        <div class="box-radios -sm -radius4">
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio13-1" data-number="11" data-state="충남" >
+                                <label for="box-radio13-1">충남</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio13-2" data-number="83" data-state="전북" >
+                                <label for="box-radio13-2">전북</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio13-3" data-number="22" data-state="전남" >
+                                <label for="box-radio13-3">전남</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio13-4" data-number="77" data-state="경북" >
+                                <label for="box-radio13-4">경북</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio13-5" data-number="18" data-state="경남" >
+                                <label for="box-radio13-5">경남</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio13-6" data-number="100" data-state="제주" >
+                                <label for="box-radio13-6">제주</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="thermo-field">
+                        <div class="thermo-title">
+                            <h3 class="h4"><span class="point region">전체</span>NH고향사랑온도계</h3>
+                            <p class="text-right">기준일 : 2024.01.02</p>
+                        </div>
+                        <div class="thermo-wrap">
+                            <div class="meter-wrap">
+                                <span class="thermo-bar">
+                                    <span class="wave"></span>
+                                </span>
+                            </div>
+                            <div class="thermo-body"></div>
+                            <div class="partial-wrap">
+                                <span class="heart p1"></span>
+                                <span class="heart p2"></span>
+                                <span id="ally"></span>
+                                <span class="shadow"></span>
+                            </div>
+                            <span class="counter-wrap">
+                                <!-- 온도계 %는 data-count에 입력, 초기값 전체 온도계 값 디폴트로 노출 필요 -->
+                                <span class="inner"><span class="counter num" data-count="0" aria-live="assertive">0</span>%</span>
+                            </span>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <li>상품 판매에 대한 공익기금은 지역의 균형적인 발전에 기준하여 통합하여 지원됩니다.</li>
+                                <li>고향사랑온도는 전체(또는 지역별)목표액 대비 모금액 비율입니다. </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixer" >
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+    </script>
+    <script>
+		// 고향사랑 온도계 스크립트
+		$(document).ready(function () {
+			function gage() {
+				$('.counter').each(function(){
+					var $this = $(this),
+						countTo = $this.attr('data-count');
+					$('#ally').removeClass();
+
+					if (countTo <= 20) {$('#ally').addClass('st1')}
+					else if ( countTo <= 40){$('#ally').addClass('st2')}
+					else if ( countTo <= 60){$('#ally').addClass('st3')}
+					else if ( countTo <= 80){$('#ally').addClass('st4')}
+					else {$('#ally').addClass('st5')}
+					$this.attr('title',countTo);
+					$({ countNum : $this.text()}).animate({
+						countNum:countTo
+						},
+						{
+							duration:500,
+							easing:'easeOutCirc',
+							step:function(){
+								$this.text(Math.floor(this.countNum));
+							},
+							complete:function(){
+								$this.text(this.countNum);
+							}
+						}
+					);
+                    
+					$('.thermo-bar .wave').stop().animate({
+					'margin-left':-320
+					},{
+						duration:3000,
+						easing:'easeOutCirc',
+						complete:function(){
+							$(this).css('margin-left',0)
+						}
+					})
+					$('.thermo-bar').css({
+						'height': countTo + '%',
+					});
+				});
+				$('.region').addClass('hang');
+			}
+
+			$('.thermo-btn-group input').on('change', function(e){
+				// 라디오 클릭시 data-number값을 온도계 data-count로 넘김
+				var $this = $(this)
+				numberTo = $this.attr('data-number')
+				region = $this.attr('data-state');
+				$('.region').removeClass('hang');
+				$('.counter').attr('data-count',numberTo);
+				$('.thermo-btn-group button').removeClass('btn-border-fill');
+				$this.addClass('btn-border-fill');
+				$('.region').text(region);
+				$('.thermo-bar .wave').css({'margin-left':0});
+				gage();
+			});
+            // 전체 온도계 실행
+			$('#all').click();
+		});
+	</script>
+</body>
+</html>

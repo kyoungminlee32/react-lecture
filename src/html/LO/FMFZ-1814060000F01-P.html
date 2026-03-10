@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>보증료 우대대상</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+</head>
+
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">보증료 할인 대상</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="table">
+                        <table>
+                            <caption><span class="hide">보증료 할인 대상</span></caption>
+                            <colgroup>
+                                <col style="width:30%">
+                                <col style="width:60%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" rowspan="2">대상</th>
+                                    <th scope="col">조건</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">필요서류</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">저소득 가구</th>
+                                    <td>연 소득(배우자 포함)이 4,000만원 이하 가구</td>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>본인 : 소득금액증명원 / 배우자 : 건강보험증</td>
+                                </tr>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">청년 가구</th>
+                                    <td>본인 : 소득금액증명원 / 배우자 : 건강보험증</td>
+                                </tr>
+                                <tr>
+                                    <td>만19세 이상 ~ 34세 이하</td>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                </tr>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">다자녀 가구</th>
+                                    <td>만 19세 미만(태아 포함) 3인이상 가구</td>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>주민등록등본, 가족관계증명서, 임신진단서(태아의 경우)</td>
+                                </tr>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">장애인 가구</th>
+                                    <td>장애인증명서 발급 대상자</td>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>주민등록등본, 장애인증명서 또는 장애인등록증(복지카드)</td>
+                                </tr>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">고령자 가구 또는 노인부양 가구</th>
+                                    <td>만 65세 이상 세대 구성 가구</td>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>주민등록등본</td>
+                                </tr>
+
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">신혼 부부</th>
+                                    <td>혼인기간 7년 이내인 신혼부부</td>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>혼인관계증명서(3개월 이내 예정자는 청첩장 또는 예식장 계약서), 연소득증빙서류</td>
+                                </tr>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">한부모 가구</th>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                    <td>‘한부모가족지원법’에 의거 지원되는 가족</td>
+                                </tr>
+                                <tr>
+                                    <td>한부모가족증명서</td>
+                                </tr>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">다문화 가구</th>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                    <td>배우자가 외국인이거나 귀화로 인한 국적취득자</td>
+                                </tr>
+                                <tr>
+                                    <td>외국인등록증, 혼인관계증명서 또는 가족관계증명서</td>
+                                </tr>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">국가유공자 가구</th>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                    <td>국가유공자 혹은 선순위 유족인 세대구성 가구</td>
+                                </tr>
+                                <tr>
+                                    <td>독립유공자</td>
+                                </tr>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">의사상자 가구</th>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                    <td>의상자 본인 또는 의사상자 수권자 확인 가구</td>
+                                </tr>
+                                <tr>
+                                    <td>의사자(유족)증 또는 의사자 증서</td>
+                                </tr>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">모범 납세자</th>
+                                    <td>모범 납세자 해당 가구</td>
+                                </tr>
+                                <tr>
+                                    <td>모범 납세자 증명서(우대기간 이내 1개월내 발급분)</td>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                </tr>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">특별 재난 지역</th>
+                                    <td>특별 재난 지역 해당 가구</td>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>없음(자동확인)</td>
+                                </tr>
+                                <!-- 240201 청년가구 삭제 -->
+                                <tr>
+                                    <th scope="row" rowspan="2">전자계약시스템 이용자</th>
+                                    <td>전자계약시스템 이용자</td>
+                                </tr>
+                                <tr>
+                                    <td>없음(자동확인)</td>
+                                </tr>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">독거 노인 가구</th>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                    <td>단독세대주인 만65세 이상 고령자</td>
+                                </tr>
+                                <tr>
+                                    <td>주민등록등본</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" rowspan="2">최후선변제권 소액임차인</th>
+                                    <td>배당이의 소송 당사자인 최우선변제권 소액임차인</td>
+                                </tr>
+                                <tr>
+                                    <td>배당표, 증명원(소장), 종전 임대차계약서, 연소득증빙서류</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+
+</html>

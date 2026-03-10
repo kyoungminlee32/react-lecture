@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>상품상세</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+                    <h1 class="title">상품상세</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                        <button type="button" class="func -menu"><span class="hide">전체메뉴</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner center">
+                    <h1 class="title">적금</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="product-detail-wrap">
+                        <!-- 상품 안내 영역 -->
+                        <div class="procuct-summary">
+                            <div class="info-area">
+                                <div class="title-area">
+                                    <h2>NH청년도약계좌</h2>
+                                    <div class="hashtag"><span>#청년</span><span>#사회초년생</span><span>#주거래우대</span></div>   <!-- [240416]텍스트 수정 -->
+                                </div><!-- //.title-area -->
+                                
+                                <div class="subtitle-area">
+                                    <div class="product-cost-area">
+                                        <div class="inner">
+                                            <dl>
+                                                <dt>최고</dt>
+                                                <dd class="point">6.00%</dd>
+                                            </dl>
+                                            <span class="daesh">~</span>
+                                            <dl>
+                                                <dt>기본</dt>
+                                                <dd>4.50%</dd>
+                                            </dl>
+                                        </div>
+                                        <p class="cost-para">(연/세전)2024.08.31 기준</p>
+                                    </div>
+
+                                    <ul class="product-dl-list">
+                                        <li class="range">
+                                            <dl>
+                                                <dt>가입기간</dt>
+                                                <dd>%60개월%</dd>   <!-- [240416]텍스트 수정 -->
+                                            </dl>
+                                        </li>
+                                        <li class="cost">
+                                            <dl>
+                                                <dt>가입금액</dt>
+                                                <dd>%월 70만원% 이내</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div><!-- //.subtitle-area -->
+
+                                <div class="top-join-btn"><button type="button" class="button -lg -primary">가입하기</button></div>
+                            </div><!-- //.info-area -->
+
+                            <div class="loadArea" data-includ="/content/nhbank/html/dt/dt10001241_de.html"></div>                          
+
+                            <!-- 금리 계산해보기 -->
+                            <div class="interest-calc-wrap">
+                                <div class="accordion -card" data-role="fold">
+                                    <button type="button" class="title -interest" data-role="marker">만기금액 미리 계산해보기</button>   <!-- [240417]텍스트 수정 -->
+                                    <div class="panel" data-role="hidden">
+                                        <div class="interest-calc-cont">
+                                            <!-- 통테 ux-라이팅 반영 -->
+                                            <div class="calc-row">
+                                                <span class="calc-para -front">만기 금액은 실제와 다를 수 있습니다.</span>
+                                            </div>
+                                            <!-- //통테 ux-라이팅 반영 -->
+                                            <div class="calc-row">
+                                                <span class="calc-para -front">매월</span>
+                                                <span class="calc-input">
+                                                    <div class="mix">
+                                                        <div class="text -won" data-clear="false">
+                                                            <input type="tel" id="tt1" class="right num-call" aria-haspopup="true" placeholder="금액을 입력하세요" readonly>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                                <span class="calc-para">원을</span>
+                                            </div>
+                                            <div class="calc-row">
+                                                <span class="calc-input">
+                                                    <div class="mix">
+                                                        <div class="text" data-clear="false">
+                                                            <input type="tel" id="tt2" class="right num-call" aria-haspopup="true" placeholder="개월 입력" readonly>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                                <span class="calc-para">개월 동안 저축한다면?</span>
+                                            </div>
+                                            <div class="calc-btn-wrap"><button type="button" class="button -lg -secondary">계산해보기</button></div>
+                                            <div class="interest-calc-result">
+                                                <dl>
+                                                    <dt>세전</dt>
+                                                    <dd>1,040,500원</dd>
+                                                </dl>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //금리 계산해보기 -->
+                        </div><!-- //.procuct-summary -->
+                        <!-- //상품 안내 영역 -->
+
+                        <!-- 상품 정보 영역 -->
+                        <div class="procuct-info">
+                            <div class="segments -tabstyle">
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div role="tablist" class="list">
+                                            <div class="item -active"><button type="button" role="tab" aria-selected="true" aria-controls="segments-panel01" id="segment01">상품안내</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel02" id="segment02">우대금리</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel03" id="segment03">금리안내</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel04" id="segment04">기타사항</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="segments-panels">
+                                <div role="tabpanel" aria-labelledby="segment01" id="segments-panel01" class="segments-panel -active" tabindex="0">
+                                    <dl class="prodect-info-dl">
+                                        <dt class="h5">상품특징</dt>
+                                        <dd>
+                                            <p class="p">청년의 중장기 자산형성 지원을 위한 정책형 금융상품으로, 만기5년(60개월) 동안 매월 70만원 한도 내에서 자유롭게 납입하면 매월 최대 6%의 정부기여금을 지급하고 이자소득에 대한 비과세 혜택을 제공하는 상품</p>
+                                        </dd>
+
+                                        <dt class="h5">가입대상</dt>
+                                        <dd>
+                                            <!-- [240531]텍스트 변경 -->
+                                            <p class="p">(나이) 신규 가입일 기준 만 19세~34세 이하<br>
+                                                * 병역이행기간(최대 6년)은 만 나이 계산 시 제외
+                                            </p>
+                                            <!-- //[240531]텍스트 변경 -->
+                                        </dd>
+
+                                        <dt class="h5">가입기간</dt>
+                                        <dd>
+                                            <p class="p">5년(60개월)</p>
+                                        </dd>
+
+                                        <dt class="h5">가입금액</dt>
+                                        <dd>
+                                            <p class="p">초입금/매회 1천원 이상, 매월 70만원 이하 금액을 만기일 전일까지 자유 적립</p>
+                                        </dd>
+
+                                        <dt class="h5">예금종류</dt>
+                                        <dd>
+                                            <p class="p">자유로우대적금</p>
+                                        </dd>
+
+                                        <dt class="h5">적립방법</dt>
+                                        <dd>
+                                            <p class="p">자유적립식 적금</p>
+                                        </dd>
+
+                                        <dt class="h5">금리안내</dt>
+                                        <dd>
+                                            <p class="p">
+                                                NH청년도약계좌 기본 금리
+                                            </p>
+                                        </dd>
+
+                                        <dt class="h5">세제혜택안내</dt>
+                                        <dd>
+                                            <!-- [240531]텍스트, 마크업 변경 -->
+                                            <!-- <p class="p">
+                                                조세특례제한법 제91조의22에 따른 비과세 상품<br>
+                                                (상품 계약기간 만료 후 이자는 과세되며, 상품의 약관에도 불구하고 조세특례제한법 및 그 시행령과 시행규칙의 변경 시 해당 법령에 따름)<br>
+                                                전전년도 과세기간 신고소득을 기준으로 가입한 고객이 이후 직전 과세 기간의 신고소득이 소득요건을 충족하지 못하는 경우 일반과세로 전환하여 이자소득 과세                                           
+                                            </p> -->
+                                            <div>
+                                                <ul class="ul -bullet">
+                                                    <li>조세특례제한법 제91조의22에 따른 비과세 상품 (상품 계약기간 만료 후 이자는 과세되며, 상품의 약관에도 불구하고 조세특례제한법 및 그 시행령과 시행규칙의 변경 시 해당 법령에 따름)</li>
+                                                    <li>가입일 현재 직전 과세기간의 소득이 확정되지 않은 경우에는 전전 과세기간의 소득을 기준으로 소득요건의 충족 여부를 판단</li>
+                                                </ul>
+                                            </div>
+                                            <!-- //[240531]텍스트, 마크업 변경 -->
+                                        </dd>
+
+                                        <dt class="h5">이자지급 방법</dt>
+                                        <dd>
+                                            <!-- [240531]텍스트 변경 -->
+                                            <p class="p">
+                                                입금건별 입금일부터 해지 전일까지 기간에 대하여 약정이율로 계산한 이자금액을 합산하여 지급<br>
+                                                (입금건별 이자 계산 예시 : 입금액 X 약정금리 X 예치일수/365)
+                                            </p>
+                                            <!-- //[240531]텍스트 변경 -->
+                                        </dd>
+
+                                        <dt class="h5">판매한도</dt>
+                                        <dd>
+                                            <p class="p">
+                                                별도 판매한도는 없으나, 정부기여금이 정부 예산으로 지급됨에 따라 정부예산 조기 소진 시, 판매중단될 수 있음
+                                            </p>
+                                        </dd>
+
+                                        <dt class="h5">가입/해지안내</dt>
+                                        <dd>
+                                            <!-- [240531]텍스트 변경 -->
+                                            <ul class="ul -bullet">
+                                                <li>가입신청
+                                                    <div>
+                                                        <ul class="ul -dash">
+                                                            <li>(매월 초)가입 신청 : NH스마트뱅킹 또는 NH올원뱅크</li>
+                                                            <li>(신청 후 약 3주)가입요건 확인 및 가입가능여부 안내(서민금융진흥원)</li>
+                                                            <!-- <li>(익월 초)계좌개설 : NH스마트뱅킹 또는 NH올원뱅크</li> -->    <!-- [240531]삭제 -->
+                                                        </ul>
+                                                    </div>
+                                                    * 개인 및 가구원 소득, 가구원 확정 등 세부기준은 서민금융진흥원 홈페이지나 앱, 서민금융콜센터(국번없이 1397)에 문의
+                                                </li>
+                                                <li>계좌개설 : 영업점, NH스마트뱅킹 또는 NH올원뱅크에서 가능(외국인의 경우 영업점에서만 가입 가능)
+                                                    <!-- <p class="p">영업점, NH스마트뱅킹 또는 NH올원뱅크에서 가능(외국인의 경우 영업점에서만 가입 가능)</p> -->
+                                                </li>
+                                                <li>해지 : 영업점, NH스마트뱅킹 또는 NH올원뱅크에서 가능(특별 중도해지의 경우, 특별해지사유신고서 및 증빙서류 지참 후 영업점에서 해지 가능)
+                                                    <!-- <p class="p">영업점, NH스마트뱅킹 또는 NH올원뱅크에서 가능(특별 중도해지의 경우, 특별해지사유신고서 및 증빙서류 지참 후 영업점에서 해지 가능)</p> -->
+                                                </li>
+                                            </ul>
+                                            <!-- //[240531]텍스트 변경 -->
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div role="tabpanel" aria-labelledby="segment02" id="segments-panel02" class="segments-panel" tabindex="0">
+                                    <div class="field">
+                                        <!-- <h3 class="h4">우대금리</h3> -->   <!-- [240315]추가 -->
+                                        <div class="data-box">
+                                            <div class="data-box-title">우대금리</div>
+                                            <div class="data-box-content">최대 연 1.50%p</div>
+                                        </div>
+                                    </div>
+                                    <p class="p">우대금리는 우대조건을 충족하는 경우 만기해지 시에 제공</p>
+                                    <!-- [240531]텍스트, 마크업 변경 -->
+                                    <ol class="ol -number">
+                                        <li>이 적금의 가입월부터 만기 전전월말까지 NH농협은행 입출식 계좌로 급여입금 실적이 12/36/50개월 이상 있을 시 : 0.1/0.3/0.5%p</li>
+                                        <li>이 적금의 가입월부터 만기 전전월말까지 농협은행에서 발급한 NH채움(개인 신용/체크)카드에 월평균 20만원 이상 이용실적이 있을 시 : 0.2%p</li>
+                                        <li>이 적금의 가입 직전 1년간 농협은행 예·적금(주택청약 포함)을 보유하지 않았거나 NH청년희망적금 만기해지 고객 : 0.1%p</li>
+                                        <li>적금가입 시점에 상품서비스 안내 동의서(7번동의서) 전체 동의 고객 : 0.2%p</li>
+                                        <li>소득+우대금리 : 최고 0.5%p</li>
+                                    </ol>
+
+                                    <ul class="ul -bullet">
+                                        <li>급여이체실적 인정기준은 [농협은행 하나로고객제도]에서 정하는 급여이체 기준을 준용하며 월별 50만원 이상인 경우 인정. 비연속적인 경우도 포함합니다.</li>
+                                        <!-- <li>5회 : 우대금리, 4회 : 우대금리 X 80%, 3회 : 우대금리 X 60%, 2회 : 우대금리 X 40%, 1회 : 우대금리 X 20%
+                                            <div class="notewrap">
+                                                <p class="p pt-0">주) 총급여 2,400만원 이하, 종합소득과세표준에 합산되는 종합소득 1,600만원 이하, 연말정산 사업소득 1,600만원 이하인 경우</p>
+                                            </div>
+                                        </li> -->
+                                        <li>급여는 농협(NH농협은행, 지역 농/축협) 급여이체와 타행 급여이체로 구분되며 건당 50만원 이상인 경우, 입금월 기준으로 실적이 인정됩니다</li>
+                                        <li>카드이용실적은 승인 실적을 의미하며 현금서비스는 제외됩니다. 거래를 취소한 경우 향후 이용실적 금액에서 차감됩니다.</li>
+                                        <li>직전 1년간 기준 : (신규일 전일 - 1년) ~ 신규일 전일</li>
+                                        <li>신규 시점에 7번 동의서 전체 동의한 경우만 인정(상품 가입 후 동의 시 적용 불가)</li>
+                                    </ul>
+                                    <!-- //[240531]텍스트, 마크업 변경 -->
+                                </div>
+
+                                <div role="tabpanel" aria-labelledby="segment03" id="segments-panel03" class="segments-panel" tabindex="0">
+                                    <!-- <h3 class="h4">금리안내</h3> -->   <!-- [240315]추가 -->
+                                    <!-- <h4 class="h5">금리안내</h4> -->   <!-- [240315]삭제 -->
+                                    <div class="mix datepicker">
+                                        <div class="text" data-clear="false">
+                                            <input type="text" class="left-side" id="gga" value="2023.08.23" title="날짜선택" aria-haspopup="true" readonly>
+                                        </div>
+                                        <div class="space -lined date">
+                                            <button type="button" class="icon-button -calendar" aria-haspopup="true"><span class="hide">달력 보기</span></button>
+                                        </div>
+                                    </div>
+                                    <div class="button-box-wrap12">
+                                        <button type="button" class="button -lg">조회</button>
+                                    </div>
+                                    <div class="case-wrap -xs">
+                                        <h5 class="h5">만기지급금리</h5>
+                                        <p class="p">만기일시지급식</p>
+                                        <!-- [240531]마크업 변경 -->
+                                        <!-- <div class="table">
+                                            <table>
+                                                <caption><span class="hide">기본금리</span></caption>
+                                                <colgroup>
+                                                    <col style="width:70%">
+                                                    <col style="width:30%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">가입기간</th>
+                                                        <th scope="col">기본금리 (연%,세전)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>4.50</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div> -->
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">기본금리</span></caption>
+                                                <colgroup>
+                                                    <col style="width:100%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">기본금리 (연%,세전)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>4.50</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="notewrap">
+                                            <p class="p">자세한 사항은 상품설명서 및 특약 참조</p>
+                                        </div>
+                                        <!-- //[240531]마크업 변경 -->
+                                    </div>
+                                </div>
+
+                                <div role="tabpanel" aria-labelledby="segment04" id="segments-panel04" class="segments-panel" tabindex="0">
+                                    <!-- <h3 class="h4">기타사항</h3> -->   <!-- [240315]추가 -->
+                                    <h5 class="h5">가입대상</h5>
+                                    <ol class="ol -number">
+                                        <li>(나이)신규 가입일 기준 만 19~34세 이하<br>병역이행기간(최대6년)은 만 나이 계산 시 제외</li>
+                                        <li>(개인소득)직전 과세기간의 총 급여액이 7,500만원 이하이며, 종합소득과세표준에 합산되는 종합소득금액이 6,300만원 이하인 경우(단, 비과세 소득만 있는 경우는 제외)
+                                            <div>
+                                                <ul class="ul -dash">
+                                                    <li>직전 과세기간의 소득이 확정되지 않은 기간에 소득을 확인한 경우 전전년도 소득으로 인정</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>(가구소득)가구원 수에 따른 기준 중위소득 180% 이하에 해당하는 자
+                                            <div>
+                                                <ul class="ul -dash">
+                                                    <li>직전 과세기간의 소득이 확정되지 않은 기간에 소득을 확인한 경우 전전년도 소득으로 인정</li>
+                                                    <li>가구원은 청년 본인과 본인의 주민등록표 등본상 배우자, 부모, 자녀, 형제·자매(미성년자)를 기준으로 판단</li>
+                                                </ul>
+                                            </div>
+                                            <div class="case-wrap -xs">
+                                                <h5 class="h5">
+                                                    <참고 : ‘22년 기준 중위소득 180%>
+                                                </h5>
+                                                <p class="p right">(원/월)</p>
+                                                <div class="table">
+                                                    <table>
+                                                        <caption><span class="hide">채움적금 중도해지이자율 적용</span></caption>
+                                                        <colgroup>
+                                                            <col style="width:30%">
+                                                            <col style="width:70%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">가구원수</th>
+                                                                <th scope="col">22년 기준<br>중위소득 180% 금액</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1인 가구</td>
+                                                                <td>3,500,661</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2인 가구</td>
+                                                                <td>5,868,153</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3인 가구</td>
+                                                                <td>7,550,461</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4인 가구</td>
+                                                                <td>9,217,944</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>5인 가구</td>
+                                                                <td>10,844,127</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>6인 가구</td>
+                                                                <td>12,432,607</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>7인 가구</td>
+                                                                <td>14,005,065</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>(금융소득종합과세)가입일이 속한 과세기간의 직전 3개년도 중 1회 이상 금융소득종합과세 대상자에 해당하지 않는 자<br>
+                                            <div><p class="p">가입대상에 대한 자세한 사항은 상품특약을 참고해 주시기 바랍니다.</p></div>
+                                        </li>
+                                    </ol>
+
+                                    <div class="case-wrap -xs">
+                                        <h5 class="h5">NH청년도약계좌 혜택</h5>
+                                        <ul class="ul -dash">
+                                            <li>납입한 금액에 비례해 소득구간별 정부기여금 지원</li>
+                                            <li>본인납입금액과 정부기여금에 대한 이자와 이에 대한 비과세 혜택</li>
+                                            <li>저소득층 청년 대상 일정 수준의 우대금리 제공</li>
+                                        </ul>
+
+                                        <h5 class="h5">
+                                            <참고 : ‘22년 기준 중위소득 180%>
+                                        </h5>
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">총 금여 2,400만원 이하<br>(종합·사업소득 : 1,600만원 이하)</span></caption>
+                                                <colgroup>
+                                                    <col style="width:60%">
+                                                    <col style="width:40%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" colspan="2">총 금여 2,400만원 이하<br>(종합·사업소득 : 1,600만원 이하)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>본인 납입한도(月)</td>
+                                                        <td>70만원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>기여금 적용한도(月)</td>
+                                                        <td>40만원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>기여금 매칭 비율</td>
+                                                        <td>6.0%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>월 최대 기여금</td>
+                                                        <td>24,000원</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">총 금여 3,600만원 이하<br>(종합·사업소득 : 2,600만원 이하)</span></caption>
+                                                <colgroup>
+                                                    <col style="width:60%">
+                                                    <col style="width:40%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" colspan="2">총 금여 3,600만원 이하<br>(종합·사업소득 : 2,600만원 이하)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>본인 납입한도(月)</td>
+                                                        <td>70만원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>기여금 적용한도(月)</td>
+                                                        <td>50만원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>기여금 매칭 비율</td>
+                                                        <td>4.6%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>월 최대 기여금</td>
+                                                        <td>23,000원</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">총 금여 4,800만원 이하<br>(종합·사업소득 : 3,600만원 이하)</span></caption>
+                                                <colgroup>
+                                                    <col style="width:60%">
+                                                    <col style="width:40%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" colspan="2">총 금여 4,800만원 이하<br>(종합·사업소득 : 3,600만원 이하)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>본인 납입한도(月)</td>
+                                                        <td>70만원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>기여금 적용한도(月)</td>
+                                                        <td>60만원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>기여금 매칭 비율</td>
+                                                        <td>3.7%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>월 최대 기여금</td>
+                                                        <td>22,200원</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">총 금여 6,000만원 이하<br>(종합·사업소득 : 4,800만원 이하)</span></caption>
+                                                <colgroup>
+                                                    <col style="width:60%">
+                                                    <col style="width:40%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" colspan="2">총 금여 6,000만원 이하<br>(종합·사업소득 : 4,800만원 이하)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>본인 납입한도(月)</td>
+                                                        <td>70만원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>기여금 적용한도(月)</td>
+                                                        <td>70만원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>기여금 매칭 비율</td>
+                                                        <td>3.0%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>월 최대 기여금</td>
+                                                        <td>21,000원</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">총 금여 7,500만원 이하<br>(종합·사업소득 : 6,300만원 이하)</span></caption>
+                                                <colgroup>
+                                                    <col style="width:60%">
+                                                    <col style="width:40%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" colspan="2">총 금여 7,500만원 이하<br>(종합·사업소득 : 6,300만원 이하)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>본인 납입한도(月)</td>
+                                                        <td>70만원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>기여금 적용한도(月)</td>
+                                                        <td rowspan="3">미지급</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>기여금 매칭 비율</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>월 최대 기여금</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="p">가입일 기준 12개월마다 개인소득을 재확인하여 소득구간별 정부기여금 매칭비율 매년 조정</p>
+
+                                        <h5 class="h5">무통장거래</h5>
+                                        <p class="p">가능</p>
+
+                                        <h5 class="h5">자동이체</h5>
+                                        <p class="p">월 자동이체 가능하며, 다른 금융회사 입출금 계좌에서도 등록 가능하나, 자동이체 신청은 해당 금융 회사에서 신청해야 함</p>
+                                        <p class="p">월 한도 제한 상품으로 월말 자동이체 시 말일이 휴일일 경우 익일인 다음달 첫 영업일자로 처리되어 당월 입금 한도가 누락 발생하니 말일 이체는 지양해 주시기 바랍니다.</p>
+
+                                        <h5 class="h5">중도해지금리</h5>
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">중도해지금리</span></caption>
+                                                <colgroup>
+                                                    <col style="width:30%">
+                                                    <col style="width:70%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">경과기간</th>
+                                                        <th scope="col">적용이율</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>3개월 미만</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6개월 미만</td>
+                                                        <td>중도해지 기준이율 X 50% X 경과월수 ÷ 계약월수</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9개월 미만</td>
+                                                        <td>중도해지 기준이율 X 60% X 경과월수 ÷ 계약월수</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11개월 미만</td>
+                                                        <td>중도해지 기준이율 X 70% X 경과월수 ÷ 계약월수</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11개월 이상</td>
+                                                        <td>중도해지 기준이율 X 80% X 경과월수 ÷ 계약월수</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="ul -bullet">
+                                            <li>중도해지 기준이자율 : 가입일 당시 고시된 자유로우대적금 기본금리</li>
+                                            <li>중도해지이자율 : 소수 셋쨰자리까지 적용(소수 넷째자리에서 절사)<br>중도해지 최저이자율은 0.1%</li>
+                                            <li>경과월수는 계약월수를 초과할 수 없음. 월 미만 일수는 버림</li>
+                                        </ul>
+
+                                        <h5 class="h5">재가입</h5>
+                                        <ul class="ul -bullet">
+                                            <li>중도해지 시 재가입 가능<br>
+                                                단, 중도해지(특별중도해지 포함) 후 해지 일이 포함된 월을 기준으로 2개월 후부터 재신청 가능하며 재가입 시 정부기여금은 계약기간에서 기 기입기간만큼 차감한 비율을 적용(원단위 미만 절사)하여 제공
+                                            </li>
+                                            <li>재가입시에도 가입기간은 5년 동일<br>
+                                                “(계약기간(60개월) – 재가입전 가입기간) / 계약기간(60개월)”, 이때 가입기간이라 함은 가입일부터 해지일까지 기간을 개월 수 로 환산하여 올림한 기간을 의미함<br>
+                                                예시) 개인소득 1구간 대상자가 ’23.7.5일에 가입 & ’23.8.31일에 중도 해지 후 재 가입 시
+                                                <div>
+                                                    <ul class="ul -dash">
+                                                        <li>차감비율 96.7%(소수둘째자리에서 반올림하여 첫째자리까지 표시) = (60개월-2개월)/60개월 = 96.7%</li>
+                                                        <li>재 가입 시 정부기여금 지급최대한도 월 23,200원 = (40만원 X 6.0%) <sup>주1)</sup> X 96.7% <sup>주2)</sup> = 월 23,200원
+                                                            <div class="notewrap">
+                                                                <ul>
+                                                                    <li>주1) 1구간 대상자 정부기여금 지급최대한도</li>
+                                                                    <li>주2) 재가입 시 조정 비율</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        
+                                        <h5 class="h5">분할해지 및 만기앞당김해지</h5>
+                                        <p class="p">불가</p>
+
+                                        <h5 class="h5">특별중도해지</h5>
+                                        <p class="p">특별중도해지는 가입자의 사망·해외이주 또는 계약해지일 전 6개월 이전에 천재지변, 퇴직, 폐업, 3개월 이상의 입원치료 또는 요약이 필요한 상해·질병의 발생, 은행의 영업정지, 인가·허가의 취소, 해단 결의 또는 파산선고, 가입자의 첫 주택 취득 발생 시 특별해지사유신고서 및 증빙서류를 은행에 제출하는 경우에 한하여 인정됩니다.<br>
+                                            특별중도해지를 하는 경우 이자소득에 대해서는 소득세 및 농어촌특별세가 부과되지 않습니다.
+                                        </p>
+
+                                        <h5 class="h5">휴면예금 및 출연</h5>
+                                        <!-- [240531]텍스트, 마크업 변경 -->
+                                        <!-- <p class="p">예금 만기 이후 5년 이내에 계좌를 해지하지 않을 경우 예금거래기본약관에 따라 휴면예금이 되어 서민금융진흥원으로 출연되며, 휴면예금은 휴면예금통합조회서비스를 통해 조회 가능</p> -->
+                                        <ul class="ul -bullet">
+                                            <li>적금 만기일 또는 이자지급을 포함한 최종거래일 이후 5년 이내 계좌를 해지하지 않을 경우 예금거래기본약관 제9조의2 휴면예금 및 출연에 따라 휴면예금은 “서민금융진흥원(국번없이1397)“에 출연될 수 있으며, 이 경우 서민금융진흥원을 통해 휴면예금을 찾으실 수 있습니다.</li>                                            
+                                            <li>휴면예금은 휴면예금통합조회서비스(www.sleepmoney.or.kr)를 통해 조회가능합니다.</li>                                            
+                                        </ul>
+                                        <!-- //[240531]텍스트, 마크업 변경 -->
+
+                                        <h5 class="h5">양도 및 질권설정</h5>
+                                        <p class="p">양도는 불가하며 질권설정은 가능</p>
+
+                                        <h5 class="h5">유의사항</h5>
+                                        <ul class="ul -bullet">
+                                            <li>취급기관을 통틀어 1명당 1개의 계좌만 가입 가능</li>
+                                            <li>현재 청년희망적금을 가입 유지하고 있는 경우 가입 불가능</li>
+                                            <li>가입일 현재 직전 과세기간의 소득이 확정되지 않아 전전 과세기간의 소득을 기준으로 가입한 경우 가입 후 직전 과세기간의 소득을 기준으로 한 개인 소득 기준을 충족하지 못하는 것으로 확인되면 비과세 혜택 적용 불가하며, 금융소득종합과세 대상자 여부로 확인되면 납입 중치 처리</li>
+                                            <li>첫 해 가입자는 ’23.8~9월부터 납입중지(가입대상 미해당) 대상, ’24.2~3월부터 비과세 미적용 대상 계좌 발생 가능</li>
+                                            <li>「공공재정 부정청구 금지 및 부정이익 환수 등에 관한 법률」에 따른 부정이익으로 확인되는 경우 환수 등의 제재 가능</li>
+                                        </ul>
+
+                                        <h5 class="h5">원금 또는 이자지급 제한</h5>
+                                        <!-- [240531]텍스트, 마크업 변경 -->
+                                        <!-- <p class="p">계좌에 압류, 가압류, 질권설정 등이 등록될 경우 원금 및 이자 지급을 제한합니다.<br>
+                                            예금잔액증명서 발급 당일에는 입금/출금/이체 등 잔액 변동이 불가합니다.                                            
+                                        </p> -->
+                                        <ul class="ul -bullet">
+                                            <li>계좌에 압류, 가압류, 질권설정 등이 등록될 경우 원금 및 이자 지급을 제한합니다.</li>
+                                            <li>예금잔액증명서 발급 당일에는 입금/출금/이체 등 잔액 변동이 불가합니다.</li>
+                                        </ul>
+                                        <!-- //[240531]텍스트, 마크업 변경 -->
+
+                                        <h5 class="h5">* 금융소비자 보호에 관한 법률 제19조제1항에 따른 설명을 받을 수 있는 권리가 있습니다.</h5>   <!-- [240531]텍스트 변경 -->
+
+                                        <h5 class="h5">* 금융상품을 가입하시기 전에 상품설명서 및 약관을 반드시 읽어보시기 바랍니다.</h5>   <!-- [240531]텍스트 변경 -->
+                                    </div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <!-- //상품 정보 영역 -->
+
+                        <!-- 상품 추가 정보 영역 -->
+                        <div class="product-other">
+                            <!-- 상품설명서 및 약관 -->
+                            <div class="product-agree-area">
+                                <div class="accordion -lg -active" data-role="fold">
+                                    <button type="button" class="title" data-role="marker">상품설명서 및 약관</button>
+                                    <div class="panel" data-role="hidden">
+                                        <div class="shortcut -boxType">
+                                            <ul>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">변경이력보기</a></li>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">기본약관</a></li>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">상품설명서</a></li>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">상품특약</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //상품설명서 및 약관 -->
+
+                            <!-- 예금자보호 (관리자) -->
+                            <div class="loadArea" data-includ="/content/nhbank/html/cn/common/protect01.html"></div>
+                            <!-- //예금자보호 (관리자) -->
+
+                            <!-- 준법감시 심의필 (관리자) -->
+                            <div class="product-deliberate">
+                                <p class="p">준법감시심의필 000-0000(심의일:YYYY.MM.DD)<br>유효기간 : YYYYY.MM.DD ~ YYYYY.MM.DD</p>
+                            </div>
+                            <!-- //준법감시 심의필 (관리자) -->
+                            
+                            <!-- 공유 -->
+                            <div class="product-share">
+                                <ul>
+                                    <li><button type="button" class="share" aria-haspopup="true"><span class="hide">공유</span></button></li>   
+                                    <li><button type="button" class="wishlist"><span class="hide">장바구니</span></button></li>                                             
+                                </ul>
+                            </div>
+                            <!-- //공유 -->
+                            
+                            <!-- 추천상품 -->
+                            <div class="product-recommend">
+                                <h4 class="h5"><span>김농협</span>님을 위한 추천 상품</h4>
+                                <div class="product-recommend-list">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">채움적금</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">e금리우대적금</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">청년도약계좌</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //추천상품 -->
+                        </div>
+                        <!-- //상품 추가 정보 영역 -->
+                    </div><!-- //.product-detail-wrap -->
+                </div>
+
+                <div class="fixer -jsProcuctBtn">
+                    <div class="buttons">
+                        <button type="button" class="button -lg">상담</button>
+                        <button type="button" class="button -lg -primary">가입하기</button>
+                    </div>
+                </div>
+
+                <!-- 토스트팝업은 -active 클래스 사용하여 실행합니다 -->
+                <div class="toast" role="alert" aria-live="assertive">
+                    <div class="message" >
+                        <p>장바구니에 담었어요</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+        procuctDatailAct();
+
+        // html 파일 로드 (퍼블확인용)
+        incHtml();
+        function incHtml() {
+            $('[data-includ]').each(function () {
+                $this = $(this);
+                var $url = $this.attr('data-includ')
+                $this.load($url)
+            })
+        }
+    </script>
+</body>
+</html>

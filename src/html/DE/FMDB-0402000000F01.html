@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">입출금 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>                         
+                    
+                    <div class="h2-group">                        
+                        <h2 class="h2">
+                            가입정보를 확인해 주세요 <!-- [231206]텍스트 수정 -->
+                        </h2>
+                    </div>
+                    <div class="field">
+                        <label for="period01" class="label">가입기간</label>
+                        <!-- [240205]마크업 변경 -->
+                        <div class="box-radio -sm">
+                            <input type="radio" id="radio--dc" disabled checked>
+                            <label for="radio--dc">6개월</label>
+                        </div>
+                        <!-- <div class="text period-disabled">
+                            <input type="text" id="text" readonly value="6개월" disabled>
+                        </div> -->
+                        <!-- //[240205]마크업 변경 -->
+                    </div>
+                    <div class="field">
+                        <label for="text" class="label">가입금액</label>
+                        <div class="mix">
+                            <div class="text -won" data-clear="false">
+                                <input type="tel" id="text" class="right num-call" aria-haspopup="true" placeholder="1만원 ~" title="가입금액 입력" value="100,000" onclick="numKey.keyOpen(this,'amount')" readonly>
+                                <div class="won">원</div>
+                            </div>                            
+                        </div>
+                        <div>
+                            <!-- [CASE] 한글 금액 -->
+                            <p class="message point right">일십만원</p>
+                            <!-- //[CASE] 한글 금액 -->
+
+                            <!-- [CASE] 에러메세지 -->
+                            <!-- <p class="message red">입력 오류 알림 내용 출력</p> -->
+                            <!-- //[CASE] 에러메세지 -->
+
+                            <!-- [CASE] 에러메세지 -->
+                            <!-- <p class="message point">한도안내 or 한도체크값 출력 </p> -->
+                            <!-- //[CASE] 에러메세지 -->
+                        </div>
+                    </div>
+                    
+                    <div class="case-wrap">
+                        <div class="field">                           
+                            <p class="label">출금계좌</p>
+                            <div class="account">
+                                <button type="button" data-bankcode="011" class="info">
+                                    <span class="name">
+                                        <span>주거래우대통장</span>
+                                    </span>
+                                    <span class="account-number">
+                                        <span>NH농협</span>   
+                                        <span>111-1234-5678-99</span>
+                                    </span>
+                                </button>
+                    
+                                <div class="amount">
+                                    <div class="key">출금가능금액</div>
+                                    <div class="value">
+                                        <span>150,000,000</span>원
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkbox -sm mt-12">
+                                <input type="checkbox" id="checkbox-sm-checked01" checked="">
+                                <label for="checkbox-sm-checked01">출금계좌와 동일하게 비밀번호 설정</label>
+                            </div>
+                            <!-- //[231206]마크업 변경 -->
+                        </div>    
+                        
+                        <div class="field">
+                            <p class="label">만기알림 서비스</p>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color3" id="period-point-color3-1" checked="">
+                                    <label for="period-point-color3-1">문자메시지</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color3" id="period-point-color3-2">
+                                    <label for="period-point-color3-2">받지 않음</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- [CASE]만기알림 신청 선택시 -->
+                        <div class="field">
+                            <label for="text02" class="label">휴대폰번호</label>
+                            <div class="text">
+                                <input type="tel" id="text02" value="010-1234-5678" aria-haspopup="true" readonly>   <!-- [240326]클래스 num-call 삭제 -->
+                            </div>
+                            <div class="right mt-13">
+                                <a href="javascript:void(0)" class="a -arrow">내 정보 수정</a>
+                            </div>
+                        </div>
+                        <!-- //[CASE]만기알림 신청 선택시 -->
+
+                        <div class="field">
+                            <p class="label">계약서류 받는 방법</p>
+                            <div class="box-radios -point" role="tablist">
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color1" id="tab01" checked>
+                                    <label for="tab01">이메일</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color1" id="tab02">
+                                    <label for="tab02">문자메시지</label>
+                                </div>
+                            </div>
+                            <!-- [CASE] id="tab01" 콘텐트 -->
+                             <!-- [에러] text -error-->
+                            <div class="text">
+                                <input type="text" id="field1" value="ABC123@gmail.com" title="이메일">
+                                <!-- [CASE] 에러메세지-->
+                                <!-- <p class="message">입력 오류 알림 내용 출력</p> -->
+                                <!-- //[CASE] 에러메세지-->
+                            </div>
+                            <!-- //[CASE] id="tab01" 콘텐트 -->
+    
+                            <!-- [CASE] id="tab02" 콘텐트 -->
+                            <div class="mix">
+                                <div class="select flex-3">
+                                    <button type="button" class="left-side num-call" aria-haspopup="true" title="휴대폰 앞자리 선택" readonly>010</button>
+                                </div>
+                                <div class="text flex-7" data-clear="false">
+                                    <input type="tel" class="right-side num-call" placeholder="-없이 입력" title="010제외한 휴대전화번호" readonly>
+                                </div>
+                                <!-- [CASE] 에러메세지-->
+                                <!-- <p class="message -error">입력 오류 알림 내용 출력</p> -->
+                                <!-- //[CASE] 에러메세지-->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- 숫자 키패드 레이어 -->
+    <div class="custom-key-layer" aria-hidden="true">
+        <div class="amount-btn-wrap">
+            <button type="button" value="100000" class="button numBtn -sm -fit">+10만</button>
+            <button type="button" value="500000" class="button numBtn -sm -fit">+50만</button>
+            <button type="button" value="1000000" class="button numBtn -sm -fit">+100만</button>
+            <button type="button" value="10000000" class="button numBtn -sm -fit">+1,000</button>
+        </div>
+        <div class="custom-key-wrap">
+            <button type="button" class="numBtn" value="1" title="숫자 1 입력">1</button>
+            <button type="button" class="numBtn" value="2" title="숫자 2 입력">2</button>
+            <button type="button" class="numBtn" value="3" title="숫자 3 입력">3</button>
+            <button type="button" class="numBtn" value="4" title="숫자 4 입력">4</button>
+            <button type="button" class="numBtn" value="5" title="숫자 5 입력">5</button>
+            <button type="button" class="numBtn" value="6" title="숫자 6 입력">6</button>
+            <button type="button" class="numBtn" value="7" title="숫자 7 입력">7</button>
+            <button type="button" class="numBtn" value="8" title="숫자 8 입력">8</button>
+            <button type="button" class="numBtn" value="9" title="숫자 9 입력">9</button>
+            <button type="button" class="numBtn btn-temp" disabled  aria-hidden="true">NH</button>
+            <button type="button" class="numBtn btn-amount" value="00" title="숫자 00입력" >00</button>
+            <button type="button" class="numBtn" value="0" title="숫자 0 입력">0</button>
+            <button type="button" class="numBtn btn-del" title="마지막 숫자 삭제">←</button>
+        </div>
+        <div class="buttons">
+            <button type="button" class="button -lg -primary" onclick="numKey.keyClose()">확인</button>
+        </div>
+    </div>
+    <!-- 숫자 키패드 레이어 -->
+
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

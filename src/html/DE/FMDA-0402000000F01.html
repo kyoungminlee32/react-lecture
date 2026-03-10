@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>출금계좌 비밀번호</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">입출금 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- <span class="bubble"><span class="now">1</span><span class="total">4</span></span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">
+                            사용할 비밀번호를 입력해 주세요
+                        </h2>      
+                    </div>
+
+                    <div class="field -error">
+                        <label for="text" class="label">신규계좌 비밀번호</label>
+                        <div class="text">
+                            <input type="password" class="num-call" title="신규계좌 비밀번호 입력" id="text" placeholder="4자리 숫자 입력" aria-haspopup="true" readonly>      
+                            <!-- 2024 접근성 아래 div에도 커스텀 키패드 호출하는 함수 넣어 주세요  -->
+                            <div class="a11y-num-call"><span class="hide">신규계좌 비밀번호입력 버튼</span></div>                      
+                        </div>       
+                        <div class="info-wrap">
+                            <p class="message">같은 숫자를 반복해서 사용할 수 없습니다.</p> <!-- ux 라이팅 수정 -->
+                        </div>                
+                        <div class="checkbox -sm">
+                            <input type="checkbox" id="checkbox-sm-checked" checked>
+                            <label for="checkbox-sm-checked">출금계좌와 동일하게 증권거래 비밀번호 설정</label>
+                        </div>
+                    </div>
+                    
+                    <div class="field">
+                        <label for="text" class="label">증권거래 비밀번호</label>
+                        <div class="text">
+                            <input type="password" class="num-call" id="text" placeholder="4자리 숫자 입력" aria-haspopup="true" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="field">
+                        <p class="label">증권사 우편물 받을 곳</p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period12344" id="box-radio1-111" checked>
+                                <label for="box-radio1-111">집</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period12344" id="box-radio1-211">
+                                <label for="box-radio1-211">직장</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- [CASE]CRM 조회 시 직장 주소 없는 경우  -->
+                    <div class="field">
+                        <p class="label">증권사 우편물 받을 곳</p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period123445" id="box-radio3-111" checked>
+                                <label for="box-radio3-111">집</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period123445" id="box-radio3-211" disabled>
+                                <label for="box-radio3-211">직장</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //[CASE]CRM 조회 시 직장 주소 없는 경우  -->
+
+                    <div class="field">
+                        <label for="search01" class="label">관리점
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <!-- <span class="title">보험계약 상세조회</span> -->
+                                    <span class="t-content">
+                                        <span>관리점은 수수료, 사고 처리, 고객안내 등을 위해 필수로 입력해야 합니다.</span>   <!-- [240328]텍스트 변경 -->
+                                    </span>
+                                </span>
+                            </span>
+                        </label>
+                        <div class="mix">
+                            <div class="text">
+                                <input type="text" class="left-side fake-readonly" id="search01" placeholder="관리점 찾기" aria-haspopup="true" readonly>
+                            </div>
+                            <div class="space -lined search">
+                                <button type="button" class="icon-button -search right-side" aria-haspopup="true"><span class="hide">조회</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="search02" class="label">권유직원 (선택)</label> <!-- ux 라이팅 수정 -->  <!-- [240126]텍스트 수정 -->
+                        <div class="mix">
+                            <div class="text">
+                                <input type="text" class="left-side fake-readonly" id="search02" placeholder="직원 찾기" aria-haspopup="true" readonly>
+                            </div>
+                            <div class="space -lined search">
+                                <button type="button" class="icon-button -search right-side" aria-haspopup="true"><span class="hide">조회</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg" disabled>다음</button>   <!-- [240329] disabled 추가 -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- 숫자 키패드 레이어 -->
+    <div class="custom-key-layer" aria-hidden="false">
+        <div class="amount-btn-wrap">
+            <button type="button" value="100000" class="button numBtn -sm -fit">+10만</button>
+            <button type="button" value="500000" class="button numBtn -sm -fit">+50만</button>
+            <button type="button" value="1000000" class="button numBtn -sm -fit">+100만</button>
+            <button type="button" value="10000000" class="button numBtn -sm -fit">+1,000</button>
+        </div>
+        <div class="custom-key-wrap">
+            <button type="button" class="numBtn" value="1" title="숫자 1 입력">1</button>
+            <button type="button" class="numBtn" value="2" title="숫자 2 입력">2</button>
+            <button type="button" class="numBtn" value="3" title="숫자 3 입력">3</button>
+            <button type="button" class="numBtn" value="4" title="숫자 4 입력">4</button>
+            <button type="button" class="numBtn" value="5" title="숫자 5 입력">5</button>
+            <button type="button" class="numBtn" value="6" title="숫자 6 입력">6</button>
+            <button type="button" class="numBtn" value="7" title="숫자 7 입력">7</button>
+            <button type="button" class="numBtn" value="8" title="숫자 8 입력">8</button>
+            <button type="button" class="numBtn" value="9" title="숫자 9 입력">9</button>
+            <button type="button" class="numBtn btn-temp" disabled="" aria-hidden="true">NH</button>
+            <button type="button" class="numBtn btn-amount" value="00" title="숫자 00입력">00</button>
+            <button type="button" class="numBtn" value="0" title="숫자 0 입력">0</button>
+            <button type="button" class="numBtn btn-del" title="마지막 숫자 삭제">←</button>
+        </div>
+        <div class="buttons">
+            <button type="button" class="button -lg -primary" onclick="numKey.keyClose()">확인</button>
+        </div>
+    </div>
+    <!-- //숫자 키패드 레이어 -->
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

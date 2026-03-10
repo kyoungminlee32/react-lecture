@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>상품 검색</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">가입 플랜</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <h2 class="h5">생애첫플랜</h2>
+                    <ul class="ul -bullet">
+                        <li>스쿨존 사고 : 3,000만원 한도 내 보장</li>
+                        <li>스쿨존 이외 사고 : 2,000만원 한도 내 보장</li>
+                        <li>자동차 사고 벌금 상품에 가입하지 않은 고객인 경우 선택가능</li>
+                    </ul>
+
+                    <h2 class="h5">하나더플랜</h2>
+                    <ul class="ul -bullet">
+                        <li>스쿨존 사고 : 2,000만원 초과하면 1,000만원 한도 내 보장</li>
+                        <li>자동차 사고 벌금 2,000만원 상품에 가입한 고객인 경우 선택가능</li>
+                    </ul>
+
+                    <h2 class="h5">플러스플랜</h2>
+                    <ul class="ul -bullet">
+                        <li>자동차 사고 벌금 3,000만원 상품에 가입한 고객인 경우 선택가능</li>
+                        <li>벌금 담보 외 운전자 보험 보장 확대</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

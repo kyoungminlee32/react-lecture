@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/retire.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">My 포트폴리오</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <nav class="tabs">
+                    <div class="outer">
+                        <div class="inner">
+                            <ul class="list">
+                                <li class="item"><a href="javascript:void(0)">자산현황</a></li>
+                                <li class="item"><a href="javascript:void(0)">운용성과</a></li>
+                                <li class="item -active"><a href="javascript:void(0)">거래내역</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="content">
+                    <!-- 2024-04-16 삭제 -->
+                    <!-- <div class="myportfolio-h-group">
+                        <h4 class="title">포트폴리오 현황</h4>
+                        <div class="link-text">
+                            <a href="javascript:void(0)" class="a -arrow">리밸런싱 알림설정</a>
+                        </div>
+                    </div> -->
+                    <!-- //2024-04-16 삭제 -->
+
+                    <div class="field">
+                        <div class="mix datepicker">
+                            <div class="text" data-clear="false">
+                                <input type="text" class="left-side" id="datedate" value="2023.07.12" title="시작일을 선택해 주세요" aria-haspopup="true" readonly>
+                            </div>
+                            <div class="space -lined date -start">
+                                <button type="button" class="icon-button -calendar" aria-haspopup="true"><span class="hide">달력 보기</span></button>
+                            </div>
+                            <div class="dash"><span class="부터"></span>~</div>
+                            <div class="text" data-clear="false">
+                                <input type="text" class="left-side" data-id="datedate" value="2023.10.10" title="종료일을 선택해 주세요" aria-haspopup="true" readonly>
+                            </div>
+                            <div class="space -lined date -end">
+                                <button type="button" class="icon-button -calendar" aria-haspopup="true"><span class="hide">달력 보기</span></button>
+                            </div>
+                        </div>
+
+                        <div class="case-wrap -xxs">
+                            <div class="box-radios -sm">
+                                <!-- [CASE] Default : [3개월] -->
+                                <div class="box-radio">
+                                    <input type="radio" name="period" id="box-radio11-1">
+                                    <label for="box-radio11-1">1개월</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period" id="box-radio11-2" checked>
+                                    <label for="box-radio11-2">3개월</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period" id="box-radio11-3">
+                                    <label for="box-radio11-3">6개월</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period" id="box-radio11-4">
+                                    <label for="box-radio11-4">1년</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period" id="box-radio11-5">
+                                    <label for="box-radio11-5">3년</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-wrap -xs2">
+                        <button type="button" class="button -lg">조회</button>
+                    </div>
+
+                    <div class="case-wrap -xs">
+                        <div class="selection">
+                            <ul>
+                                <!-- [CASE] 거래취소 시 -->
+                                <li>
+                                    <div class="info -bordered">
+                                        <div class="top-area">
+                                            <!-- [CASE] 해지:-redline, 가입:-greenline, 리밸런싱:-greenline, 묶음해제:-grade2, 추가입금:-grade6 -->
+                                            <span class="badge -grade1">해지</span>
+                                        </div>
+                                        <div class="info-main">
+                                            (NH전문가) 위험중립형e
+                                        </div>
+                                        <dl class="dl">
+                                            <div>
+                                                <dt>신청내역</dt>
+                                                <dd>포트폴리오 100%</dd>
+                                            </div>
+                                            <div>
+                                                <dt>가래일자</dt>
+                                                <dd>2022.12.12</dd>
+                                            </div>
+                                            <div>
+                                                <dt>평가금액</dt>
+                                                <dd>16,985원</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <!-- // [CASE] 거래취소 시 -->
+
+                                <!-- [CASE] 포트폴리오 설계 신청 시 -->
+                                <li>
+                                    <div class="info -bordered">
+                                        <div class="top-area">
+                                            <!-- [CASE] 해지:-redline, 가입:-greenline, 리밸런싱:-greenline, 묶음해제:-grade2, 추가입금:-grade6 -->
+                                            <span class="badge -greenline">가입</span>
+                                        </div>
+                                        <div class="info-main">
+                                            (NH전문가) 위험중립형e
+                                        </div>
+                                        <dl class="dl">
+                                            <div>
+                                                <dt>신청내역</dt>
+                                                <dd>포트폴리오 100%</dd>
+                                            </div>
+                                            <div>
+                                                <dt>가래일자</dt>
+                                                <dd>2022.12.12</dd>
+                                            </div>
+                                            <div>
+                                                <dt>평가금액</dt>
+                                                <dd>10,000원</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <!-- // [CASE] 포트폴리오 설계 신청 시 -->
+
+                                <!-- [CASE] 포트폴리오 리밸런싱 신청 시 -->
+                                <li>
+                                    <div class="info -bordered">
+                                        <div class="top-area">
+                                            <!-- [CASE] 해지:-redline, 가입:-greenline, 리밸런싱:-greenline, 묶음해제:-grade2, 추가입금:-grade6 -->
+                                            <span class="badge -greenline">리밸런싱</span>
+                                        </div>
+                                        <div class="info-main">
+                                            (NH전문가) 위험중립형e
+                                        </div>
+                                        <dl class="dl">
+                                            <div>
+                                                <dt>신청내역</dt>
+                                                <dd>포트폴리오 100%</dd>
+                                            </div>
+                                            <div>
+                                                <dt>가래일자</dt>
+                                                <dd>2022.12.12</dd>
+                                            </div>
+                                            <div>
+                                                <dt>평가금액</dt>
+                                                <dd>10,000원</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <!-- // [CASE] 포트폴리오 리밸런싱 신청 시 -->
+
+                                <!-- [CASE] 묶음해제 시 -->
+                                <li>
+                                    <div class="info -bordered">
+                                        <div class="top-area">
+                                            <!-- [CASE] 해지:-redline, 가입:-greenline, 리밸런싱:-greenline, 묶음해제:-grade2, 추가입금:-grade6 -->
+                                            <span class="badge -grade2">묶음해제</span>
+                                        </div>
+                                        <div class="info-main">
+                                            (NH전문가) 위험중립형e
+                                        </div>
+                                        <dl class="dl">
+                                            <div>
+                                                <dt>신청내역</dt>
+                                                <dd>포트폴리오 100%</dd>
+                                            </div>
+                                            <div>
+                                                <dt>가래일자</dt>
+                                                <dd>2022.12.12</dd>
+                                            </div>
+                                            <div>
+                                                <dt>평가금액</dt>
+                                                <dd>10,000원</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <!-- // [CASE] 묶음해제 시 -->
+
+                                <!-- [CASE] 추가입금 시 -->
+                                <li>
+                                    <div class="info -bordered">
+                                        <div class="top-area">
+                                            <!-- [CASE] 해지:-redline, 가입:-greenline, 리밸런싱:-greenline, 묶음해제:-grade2, 추가입금:-grade6 -->
+                                            <span class="badge -grade6">추가입금</span>
+                                        </div>
+                                        <div class="info-main">
+                                            (NH전문가) 위험중립형e
+                                        </div>
+                                        <dl class="dl">
+                                            <div>
+                                                <dt>신청내역</dt>
+                                                <dd>포트폴리오 100%</dd>
+                                            </div>
+                                            <div>
+                                                <dt>가래일자</dt>
+                                                <dd>2022.12.12</dd>
+                                            </div>
+                                            <div>
+                                                <dt>평가금액</dt>
+                                                <dd>10,000원</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <!-- // [CASE] 추가입금 시 -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- [CASE] 거래내역 미존재 시 -->
+                    <!-- <div class="result -sm -caution">
+                        <p class="message">조회 결과가 없습니다.</p>
+                    </div> -->
+                    <!-- // [CASE] 거래내역 미존재 시 -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

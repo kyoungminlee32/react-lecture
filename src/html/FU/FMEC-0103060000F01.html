@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/fund.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">펀드 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                           
+                    <div class="h2-group">                        
+                        <h2 class="h2">
+                            가입정보를 확인해 주세요
+                        </h2>
+                    </div>
+                    <div class="field">
+                        <div class="data-box">
+                            <div class="data-box-title">연금저축한도</div> <!-- [240206] 문구수정 -->
+                            <div class="data-box-content">6,000,000원</div>
+                        </div>
+                        <div class="fit-buttons -right">
+                            <button type="button" class="button -fit -xs">한도조회</button>                            
+                        </div>
+                    </div>    
+                    <div class="field">
+                        <label for="tt12" class="label">연금저축한도 설정 <!-- [240206] 문구수정 -->
+                            <span class="tooltip"> <!-- [240206] 툴팁추가 -->
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">연금저축한도</span>
+                                    <span class="t-content">
+                                        모든 금융기관 연금저축,  확정기여형 퇴직연금(DC), 개인형 퇴직연금(IRP) 개인적립금을 합산하여 연 1,800만원
+                                    </span>
+                                </span>
+                            </span>
+                        </label>
+                        <div class="mix">
+                            <div class="text -won">
+                                <input type="tel" id="tt12" class="right num-call" value="500,000" aria-haspopup="true" onclick="numKey.keyOpen(this,'amount')" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">오십만원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">출금계좌</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true" class="-fixed">
+                                <div class="selection">
+                                    <div data-bankcode="011" class="info">
+                                        <span class="name">
+                                            <span>주거래우대통장</span>
+                                        </span>
+                                        <span class="account-number">
+                                            <span>NH농협</span>
+                                            <span>111-1234-5678-99</span>
+                                        </span>
+                                    </div>
+                                    <div class="amount">
+                                        <div class="key">출금가능금액</div>
+                                        <div class="value">
+                                            <span>150,000,000</span>원
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="checkbox -sm">
+                            <input type="checkbox" id="checkbox-sm-checked01" checked="">
+                            <label for="checkbox-sm-checked01">출금계좌와 동일하게 비밀번호 설정</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">가입유형
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="t-content">
+                                        <span class="dot">임의식: <br>자유롭게 입·출금을 할 수 있는 투자 방식</span> <!-- ux 라이팅 수정 -->
+                                        <span class="dot">적립식: <br>기간을 정하고 금액과 납입 횟수는 자유롭게 적립하는 방식(일부출금불가)</span>
+                                        <span class="dot">거치식: <br>투자금액을 일정기간 동안 예치하는 방식(추가입금, 일부출금불가)
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <div class="box-radios">
+                            <div class="box-radio -jointype">
+                                <input type="radio" name="period-point-color1" id="period-point-color22-1" disabled checked> <!-- [240205] checked 추가 -->
+                                <label for="period-point-color22-1">적립식</label>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="field">
+                        <p class="label">가입기간</p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period10" id="box-radio10-12" checked>
+                                <label for="box-radio10-12">5년</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period10" id="box-radio10-22">
+                                <label for="box-radio10-22">6년</label>
+                            </div>
+                        </div>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period10" id="box-radio10-32">
+                                <label for="box-radio10-32">7년</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period10" id="box-radio10-42">
+                                <label for="box-radio10-42">직접입력</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">자동이체</p>
+                        <!-- [240605]위치 변경 -->
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color3" id="period-point-color3-2" checked>
+                                <label for="period-point-color3-2">신청함</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color3" id="period-point-color3-1">
+                                <label for="period-point-color3-1">신청 안함</label>
+                            </div>
+                        </div>
+                        <!-- //[240605]위치 변경 -->
+                        <p class="info">자동이체 신청 안내
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">자동이체 신청 안내</span>
+                                    <span class="t-content">
+                                        <span class="dot">자동이체일이 토요일 /공휴일이면 다음 날(영업일 기준)에 출금됩니다.</span>
+                                        <span class="dot">자동이체일이 말일이고, 토요일/공휴일이라 다음 달에 출금되면 그 달의 저축한도에 따라 자동이체가 되지 않을 수 있습니다.</span>                                        
+                                    </span>
+                                </span>
+                            </span>
+                        </p>                     
+                    </div>    
+                    <div class="field">
+                        <label for="text" class="label">자동이체금액</label>
+                        <div class="mix">
+                            <div class="text -won">
+                                <input type="tel" id="tt12" class="right num-call" value="500,000" aria-haspopup="true"  onclick="numKey.keyOpen(this,'amount')" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">오십만원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">자동이체주기</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">매월</button>
+                        </div>
+                    </div>  
+                    <div class="field">
+                        <p class="label">자동이체일</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">21일</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">자동이체 시작월</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">2024년 10월</button>
+                        </div>
+                    </div>   
+                    <div class="field">
+                        <label for="tt2" class="label">자동이체 개월수</label>                      
+                        <div class="mix">
+                            <div class="text -won">
+                                <input type="tel" id="text1213" class="num-call right tomonth" value="30" onclick="numKey.keyOpen(this)" readonly> <!-- [240205] 클래스추가(right, tomonth) -->
+                                <div class="won">개월까지</div> <!-- [240205] 클래스변경(tomonth -> won 변경) -->
+                            </div>
+                        </div>
+                    </div>           
+                    <div class="field">
+                        <p class="label">연금내역 안내</p> <!-- [240205] 문구변경 -->
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-12">
+                                <label for="box-radio11-12">이메일</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-22">
+                                <label for="box-radio11-22">우편</label>
+                            </div>
+                        </div>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-32">
+                                <label for="box-radio11-32">문자메시지</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-42" checked>
+                                <label for="box-radio11-42">받지 않음</label>
+                            </div>
+                        </div>
+                        <!-- <p class="info">우편 안내 시에는 고객정보에 등록된 우편물 수령처로 발송됩니다.</p>  --> <!-- [240206] 문구삭제 -->
+                    </div>                    
+                    <div class="field">
+                        <p class="label">수익률 안내
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">수익률 안내</span>
+                                    <span class="t-content">
+                                        <span class="dot">평가금액, 수익률 등을 문자메시지로 안내받을 수 있습니다.</span>
+                                        <span class="dot">월 기준 : 매 월말 기준 익월초 안내</span>
+                                        <span class="dot">주 기준 : 매 주말 기준 다음주초 안내 </span>
+                                        <span class="dot">ELF/DLF, MMF 및 평가일기준으로 평가금액이 10만원 미만인 계좌에 대해서는 안내해드리지 않습니다.</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p> 
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period35" id="box-radio35-1">
+                                <label for="box-radio35-1">매월</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period35" id="box-radio35-2">
+                                <label for="box-radio35-2">매주</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period35" id="box-radio35-3" checked>
+                                <label for="box-radio35-3">받지 않음</label>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="field">
+                        <p class="label">목표수익률ᆞ위험수익률
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">목표수익률ᆞ위험수익률</span>
+                                    <span class="t-content">
+                                        <span class="dot">목표수익률 및 위험수익률 도달 시 1회 익영업일에 문자메시지로 안내 받을 수 있습니다.</span>
+                                        <span class="dot">신규일로부터 1년 미만인 적립식 계좌, 평가금액 10만원 미만인 계좌에 대해서는 안내해드리지 않습니다.</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p> 
+                        <!-- [240605]위치 변경 -->
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color5" id="period-point-color5-2">
+                                <label for="period-point-color5-2">신청함</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color5" id="period-point-color5-1" checked>
+                                <label for="period-point-color5-1">신청 안함</label>
+                            </div>
+                        </div>
+                        <!-- //[240605]위치 변경 -->
+                    </div>  
+                    <div class="field">
+                        <div class="title-group">
+                            <div class="inner">
+                                <span class="title">관리점</span>                               
+                            </div>
+                            <span class="switch ml-auto -sm">
+                                <input type="checkbox" id="switch2">
+                                <label for="switch2"><span class="hide">스위치</span></label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 플로팅 버튼 -->
+                <div class="floating-wrap">
+                    <div class="floating-btn" role="button"> 
+                        <p>원금손실<br>가능상품</p> 
+                    </div>
+                    <a class="floating_close" title="원금 손실가능 상품 플로팅버튼 닫기"></a>
+                </div>
+                <!-- //플로팅 버튼 -->                 
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- 숫자 키패드 레이어 -->
+    <div class="custom-key-layer" aria-hidden="true">
+        <div class="amount-btn-wrap">
+            <button type="button" value="100000" class="button numBtn -sm -fit">+10만</button>
+            <button type="button" value="500000" class="button numBtn -sm -fit">+50만</button>
+            <button type="button" value="1000000" class="button numBtn -sm -fit">+100만</button>
+            <button type="button" value="10000000" class="button numBtn -sm -fit">+1,000</button>
+        </div>
+        <div class="custom-key-wrap">
+            <button type="button" class="numBtn" value="1" title="숫자 1 입력">1</button>
+            <button type="button" class="numBtn" value="2" title="숫자 2 입력">2</button>
+            <button type="button" class="numBtn" value="3" title="숫자 3 입력">3</button>
+            <button type="button" class="numBtn" value="4" title="숫자 4 입력">4</button>
+            <button type="button" class="numBtn" value="5" title="숫자 5 입력">5</button>
+            <button type="button" class="numBtn" value="6" title="숫자 6 입력">6</button>
+            <button type="button" class="numBtn" value="7" title="숫자 7 입력">7</button>
+            <button type="button" class="numBtn" value="8" title="숫자 8 입력">8</button>
+            <button type="button" class="numBtn" value="9" title="숫자 9 입력">9</button>
+            <button type="button" class="numBtn btn-temp" disabled  aria-hidden="true">NH</button>
+            <button type="button" class="numBtn btn-amount" value="00" title="숫자 00입력" >00</button>
+            <button type="button" class="numBtn" value="0" title="숫자 0 입력">0</button>
+            <button type="button" class="numBtn btn-del" title="마지막 숫자 삭제">←</button>
+        </div>
+        <div class="buttons">
+            <button type="button" class="button -lg -primary" onclick="numKey.keyClose()">확인</button>
+        </div>
+    </div>
+    <!-- 숫자 키패드 레이어 -->
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        //10만, 50만.... 버튼 클릭시
+        const amountBtn = document.querySelectorAll('.amount-btn-wrap button');
+        amountBtn.forEach(amountBtn => {
+            amountBtn.addEventListener('click',function () {
+                let $targetInput;
+                const $thisValLayer = amountBtn.closest('.custom-key-layer.-active');  //dim 없는 레이어 숫자 키패드
+                const $thisValChoose = amountBtn.closest('.choose-account-Wrap');  //bottom sheet 숫자 키패드
+                if ($thisValLayer !== null) {
+                    $targetInput = numKey.numInput;
+                } else if($thisValChoose !== null) {
+                    $targetInput = $thisValChoose.querySelector('.choose-account-input input')
+                }
+                let $thisval = amountBtn.value;
+                $targetInput.value = Number($thisval) + Number($targetInput.value);
+            })
+            
+        });
+        /* //키패드 키입력 예시 */
+    </script>
+</body>
+</html>

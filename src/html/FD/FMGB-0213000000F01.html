@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">예금 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>                      
+                    <div class="h2-group">                        
+                        <h2 class="h2">
+                            가입정보를 확인해 주세요
+                        </h2>
+                    </div>
+                    <!-- ux 라이팅 수정 시작 -->
+                    <div class="case-wrap -sm">
+                        <div class="field">
+                            <label for="asd" class="label">통화</label>
+                            <div class="mix">
+                                <div class="select">
+                                    <button type="button" aria-haspopup="true" title="통화 선택"><span data-countrycode="001" class="-sm"></span>USD(미국 달러)</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field"> <!-- [CASE]클래스 -error 추가 -->
+                            <label for="phonen" class="label">가입금액</label>
+                            <div class="mix">
+                                <div class="left-space flex-2">
+                                    <div class="left-side" aria-haspopup="true" title="통화 선택">USD</div>
+                                </div>
+                
+                                <div class="text flex-8" data-clear="false">
+                                    <input type="tel" class="right-side num-call right" id="phonen" placeholder="1,000 이상" value="" aria-haspopup="true" readonly>
+                                </div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="message">최소 가입 금액%JPY 14,892%</p>
+                            </div>
+                        </div>
+
+                        <div class="field mt-24">
+                            <!-- [240426]마크업 수정 -->
+                            <div class="data-box">
+                                <div class="data-box-title">원화 환산금액</div>
+                                <div class="data-box-content">132,697원</div>
+                            </div>
+                            <!-- <dl class="dl -box limit-point-box type02">
+                                <div>
+                                    <dt>원화 환산금액</dt>
+                                    <dd>132,697원</dd>   
+                                </div>
+                            </dl> -->
+                            <!-- //[240426]마크업 수정 -->
+                            <!-- <p class="message -type02 -left">원화 환산금액 <span class="limit-point">132,697원</span></p> -->
+                             <!-- ux 라이팅 수정 시작 -->
+                            <div class="exchange-rate -search">
+                                <p class="message -type02 -left">현재 환율 AUD 1 = 1,124.01원</p>
+                                <div class="fit-buttons -right">           
+                                    <button type="button" class="button -fit -xs">현재 환율 조회</button>
+                                </div>
+                            </div>
+                           
+                            <div class="text">
+                                <p class="info -bullet">환율 변동으로 가입 시 원화 환산금액이 변경될 수 있습니다.</p>
+                                <p class="info -bullet">현재 환율은 전신환매도율 정보 기준입니다.</p>  <!-- [240122]추가 -->
+                            </div>
+                            <!-- //ux 라이팅 수정 끝 -->
+                        </div>
+
+                        <div class="field">
+                            <p class="label">가입기간</p>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period123" id="box-radio1-111" checked>
+                                    <label for="box-radio1-111">12개월</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period123" id="box-radio1-211">
+                                    <label for="box-radio1-211">24개월</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period123" id="box-radio1-311">
+                                    <label for="box-radio1-311">36개월</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <p class="label">회전기간</p>   <!-- [240314]텍스트 변경 -->
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period123-1" id="box-radio1-111-1" checked>
+                                    <label for="box-radio1-111-1">1개월</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period123-1" id="box-radio1-211-2">
+                                    <label for="box-radio1-211-2">2개월</label>
+                                </div>
+                            </div>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period123-1" id="box-radio1-111-3" checked>
+                                    <label for="box-radio1-111-3">3개월</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period123-1" id="box-radio1-211-4">
+                                    <label for="box-radio1-211-4">6개월</label>
+                                </div>
+                            </div>
+                            <div class="box-radios radio-w-half">
+                                <div class="box-radio">
+                                    <input type="radio" name="period123-1" id="box-radio1-111-5" checked>
+                                    <label for="box-radio1-111-5">12개월</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <p class="label">출금계좌</p>
+                            <div class="select">
+                                <button type="button" class="-fixed" aria-haspopup="true">
+                                    <div class="selection">
+                                        <div data-bankcode="011" class="info">
+                                            <span class="name">
+                                                <span>주거래우대통장</span>
+                                            </span>
+                                            <span class="account-number">
+                                                <span>NH농협</span>
+                                                <span>111-1234-5678-99</span>
+                                            </span>
+                                        </div>
+                                        <div class="amount">
+                                            <div class="key">출금가능금액</div>
+                                            <div class="value">
+                                                <span>150,000,000</span>원
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="checkbox -sm">
+                                <input type="checkbox" id="checkbox-sm-checked01" checked="">
+                                <label for="checkbox-sm-checked01">출금계좌와 동일하게 비밀번호 설정</label>
+                            </div>
+                        </div> 
+
+                        <div class="field">
+                            <div class="label">
+                                <label for="">목표환율</label>
+                                <span class="tooltip">
+                                    <button type="button" class="trigger">
+                                        <span class="hide">툴팁</span>
+                                    </button>
+                                    <span class="panel">
+                                        <span class="title">목표환율 안내</span>
+                                        <span class="t-content">
+                                            <span class="dot">목표환율은 가입 시점에 고객님께서 설정하신 환율로 예금 자동해지의 기준이 되는 환율입니다.</span>
+                                            <span class="dot">매 은행영업일에 농협은행이 고시하는 2회차 송금받으실 때 환율이 목표환율 이상인 경우 자동해지 됩니다. (스프레드 60% 우대 적용)</span>
+                                            <span class="dot">회전주기 종료일에 목표환율에 도달하지 못한 경우 자동 회전됩니다.</span>
+                                            <span class="dot">가입 시점에 적용되는 환율은 송금보내실 때 환율입니다.</span>   <!-- [240607]텍스트 변경 -->
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                            <!-- [240116]삭제 및 추가 -->
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">직접 입력</button>
+                            </div>
+                            <!-- <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color1" id="period-point-color1-1" checked>
+                                    <label for="period-point-color1-1">직접 입력</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color1" id="period-point-color1-2">
+                                    <label for="period-point-color1-2">최고환율</label>
+                                </div>
+                            </div> -->
+                            <!-- //[240116]삭제 및 추가 -->
+                            <div class="text mt-12">
+                                <input type="text" id="tex" value="" placeholder="직접입력(예상우대환율 기준)">
+                            </div>
+                        </div>
+
+                        
+                        <div class="field mt-0">
+                            <div class="exchange-rate -search">
+                                <p class="message -type02 -left">현재 환율 AUD 1 = 1,124.01원</p>
+                                <div class="fit-buttons -right">           
+                                    <button type="button" class="button -fit -xs">현재 환율 조회</button>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <p class="info">모든 영업일의 2회차 환율이 목표 환율이 되면, 가입기간과 관계없이 자동으로 해지됩니다.</p>
+                            </div>
+                        </div>
+                        
+
+                        <div class="field">
+                            <p class="label">목표환율 도달 시 입금계좌</p>
+                            <!-- ui수정 240122 (마크업 변경) -->
+                            <!-- [240115]영역 삭제 및 추가 -->
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">
+                                    <div class="selection">
+                                        <div data-bankcode="011" class="info">
+                                            <span class="name">
+                                                <span>통장(상품)명</span>
+                                            </span>
+                                            <span class="account-number">
+                                                <span>NH농협은행</span>
+                                                <span>111-1234-5678-99</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                            <!-- <div class="select">
+                                <button type="button" aria-haspopup="true">123-45678901-23</button>
+                            </div> -->
+                            <!-- //[240115]영역 삭제 및 추가 -->
+                            <!-- //ui수정 240122 (마크업 변경) -->
+                        </div>
+
+                        <div class="field">
+                            <p class="label">만기알림 서비스</p>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color3" id="period-point-color3-1" checked="">
+                                    <label for="period-point-color3-1">문자메시지</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color3" id="period-point-color3-2">
+                                    <label for="period-point-color3-2">받지 않음</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="text02" class="label">휴대폰번호</label>
+                            <div class="text">
+                                <input type="text" id="text02" readonly="" value="010-1234-5678">
+                            </div>
+                            <div class="right mt-13">
+                                <a href="javascript:void(0)" class="a -arrow">내 정보 수정</a>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <p class="label">계약서류 받는 방법</p>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color5" id="period-point-color5-1" checked="">
+                                    <label for="period-point-color5-1">이메일</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color5" id="period-point-color5-2">
+                                    <label for="period-point-color5-2">문자메시지</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- [CASE]이메일 선택시 -->
+                        <div class="field mt-16">
+                            <div class="text">
+                                <input type="text" id="t" value="luckyGuy00@naver.com" placeholder="이메일 주소 입력" title="이메일 주소">   <!-- [240415]placeholder 추가 -->
+                            </div>
+                        </div>
+                        <!-- //[CASE]이메일 선택시 -->
+
+                        <!-- [CASE]문자메시지 선택시 -->
+                        <div class="field mt-16">                       
+                            <div class="text">
+                                <div class="mix">
+                                    <div class="select flex-3">
+                                        <button type="button" class="left-side" aria-haspopup="true" title="휴대폰 앞자리 선택">010</button>
+                                    </div>
+                    
+                                    <div class="text flex-7" data-clear="false">
+                                        <input type="tel" data-id="phone123" class="mid-side num-call" placeholder="-없이 입력" title="휴대폰번호 입력" aria-haspopup="true"  readonly>
+                                    </div>
+                                    <div class="space -lined right-side">
+                                        <!-- <button type="button" class="button -xs -fit" title="인증번호 요청">요청</button> -->
+                                    </div>
+                                </div>                                  
+                            </div>
+                        </div>
+                        <!-- //[CASE]문자메시지 선택시 -->
+                    </div>
+                    <hr class="hr -xxl" aria-hidden="true" tabindex="-1">
+                    <div class="case-wrap -sm">
+                        <!-- [CASE]관리점 및 권유직원 선택 시 -->
+                        <div class="field">
+                            <label for="text" class="label">권유직원
+                                <span class="tooltip">
+                                    <button type="button" class="trigger">
+                                        <span class="hide">툴팁</span>
+                                    </button>
+                                    <!-- [240605]텍스트 변경 -->
+                                    <span class="panel">
+                                        <span class="title">권유직원번호</span>
+                                        <span class="t-content">
+                                            <span class="dot">상품 가입에 도움을 준 직원명을 검색해 주세요. </span>
+                                        </span>
+                                        <span class="title mt-10">관리점</span>
+                                        <span class="t-content">
+                                            <span class="dot">출금계좌 관리점으로 자동 등록되며. 변경이 필요한 경우 선택해 주세요.</span>
+                                        </span>
+                                    </span>
+                                    <!-- //[240605]텍스트 변경 -->
+                                </span>
+                            </label>
+                            <div class="mix">
+                                <div class="text">
+                                    <input type="text" class="left-side fake-readonly" id="search02" value="검색직원명" title="검색하기" placeholder="직원 찾기" aria-haspopup="true" readonly>
+                                </div>
+                
+                                <div class="space -lined search">
+                                    <button type="button" class="icon-button -search" aria-haspopup="true"><span class="hide">조회</span></button>
+                                </div>
+                            </div>
+                            <div class="mix">
+                                <div class="text flex-8" data-clear="false">
+                                    <input type="tel" data-id="none" class="left-side fake-readonly" placeholder="지점명" title="" aria-haspopup="true" readonly>
+                                </div>
+                                <div class="space -lined right-side">
+                                    <button type="button" class="button -xs -fit" aria-haspopup="true">관리점 변경</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //[CASE]관리점 및 권유직원 선택 시 -->
+                              
+                        <!-- [CASE]우대쿠폰 사용 시 -->
+                        <div class="field">
+                            <div class="title-group">
+                                <div class="inner">
+                                    <span class="title">우대 쿠폰</span>                
+                                </div>
+                                <span class="switch ml-auto -sm">
+                                    <input type="checkbox" id="switch4" checked="">
+                                    <label for="switch4"><span class="hide">스위치</span></label>
+                                </span>
+                            </div>
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">예·적금0.5%p / 대출0.3%p / 외화 0.1%p 금리우대</button>
+                            </div>
+                        </div>
+                        <!-- //[CASE]우대쿠폰 사용 시 -->
+
+                        <div class="field">
+                            <div class="title-group">
+                                <div class="inner">
+                                    <span class="title">예금잔액통보 신청</span>                               
+                                </div>
+                                <span class="switch ml-auto -sm">
+                                    <input type="checkbox" id="switch5">
+                                    <label for="switch5"><span class="hide">스위치</span></label>
+                                </span>
+                            </div>
+                            <div class="text">
+                                <!-- [CASE] 예금 잔액통보(우편)신청 토글 시 -->
+                                <p class="info">금차 신청계좌의 기준 잔액이 매월 말일 기준으로 5억원 이상인 경우 사고예방을 위해 예금잔액이 우편(등기)발송됩니다.</p>
+                                <!-- //[CASE] 예금 잔액통보(우편)신청 토글 시  -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //ux 라이팅 수정 끝 -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

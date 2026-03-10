@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/fund.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">포트폴리오 관리</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="tabs">
+                    <div class="outer">
+                        <div class="inner">
+                            <ul class="list">
+                                <li class="item"><a href="javascript:void(0)">매수하기</a></li>
+                                <li class="item"><a href="javascript:void(0)">매도하기</a></li>
+                                <li class="item"><a href="javascript:void(0)">계좌관리</a></li>
+                                <li class="item -active"><a href="javascript:void(0)">거래조회</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="field">
+                        <h3 class="h5">거래이력 조회</h3>     
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period--color1" id="period-point-color1-1" checked>
+                                <label for="period-point-color1-1">보유 포트폴리오</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period--color1" id="period-point-color1-2">
+                                <label for="period-point-color1-2">해지 포트폴리오</label>
+                            </div>
+                        </div>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">나에게 주는 3년 여행자금 모으기</button>
+                        </div>
+                        <!-- 선택가능한 포트폴리오가 없을때 -->
+                        <div class="select">
+                            <button type="button" aria-haspopup="true" disabled>선택 가능한 포트폴리오가 없습니다.</button>
+                        </div>
+                        <!-- //선택가능한 포트폴리오가 없을때 -->
+                        <div class="mix datepicker">
+                            <div class="text" data-clear="false">
+                                <input type="text" class="left-side" id="datedate" value="2023.08.23" title="첫번째 날짜선택" aria-haspopup="true" readonly>
+                            </div>
+                            <div class="space -lined date -start">
+                                <button type="button" class="icon-button -calendar" aria-haspopup="true"><span class="hide">달력 보기</span></button>
+                            </div>
+                            <div class="dash"><span class="부터"></span>~</div>
+                            <div class="text" data-clear="false">
+                                <input type="text" class="left-side" data-id="datedate" value="2023.08.23" title="두번째 날짜선택" aria-haspopup="true" readonly>
+                            </div>
+                            <div class="space -lined date -end">
+                                <button type="button" class="icon-button -calendar" aria-haspopup="true"><span class="hide">달력 보기</span></button>
+                            </div>
+                        </div>
+                        <div class="button-wrap">
+                            <button type="button" class="button -lg">조회</button>
+                        </div>
+                    </div>   
+                    <div class="deal-history-list">                        
+                        <div class="tit-wrap">
+                            <h3 class="h5">거래이력</h3>
+                            <p class="total-count">총 <span class="point">5</span>건</p>
+                        </div>
+                        <div class="selection">
+                            <ul>
+                                <li>
+                                    <div class="info -bordered" >
+                                        <div class="info-main"> 매도하기 (일부매도)</div>
+                                        <dl class="dl">
+                                            <div>
+                                                <dt>매도신청비율</dt>
+                                                <!-- 2024-06-11 "+" 삭제 -->
+                                                <dd><span class="red">50 %</span></dd>
+                                            </div>
+                                            <div>
+                                                <dt>거래일</dt>
+                                                <dd>2023.10.21 09:10:00</dd>
+                                            </div>
+                                        </dl>                                        
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info -bordered" >
+                                        <div class="info-main"> 매도하기 (일부매도)</div>
+                                        <dl class="dl">
+                                            <div>
+                                                <dt>매도신청비율</dt>
+                                                <!-- 2024-06-11 "+" 삭제 -->
+                                                <dd><span class="red">50 %</span></dd>
+                                            </div>
+                                            <div>
+                                                <dt>거래일</dt>
+                                                <dd>2023.10.21 09:10:00</dd>
+                                            </div>
+                                        </dl>                                        
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info -bordered" >
+                                        <div class="info-main">매수하기</div>
+                                        <dl class="dl">
+                                            <div>
+                                                <dt>총 매수금액</dt>
+                                                <dd>1,000,000원</dd>
+                                            </div>
+                                            <div>
+                                                <dt>거래일</dt>
+                                                <dd>2023.10.21 09:10:00</dd>
+                                            </div>
+                                        </dl>                                        
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info -bordered" >
+                                        <div class="info-main">교체매매</div>
+                                        <dl class="dl">
+                                            <div>
+                                                <dt>총 매수금액</dt>
+                                                <dd>1,000,000원</dd>
+                                            </div>
+                                            <div>
+                                                <dt>거래일</dt>
+                                                <dd>2023.10.21 09:10:00</dd>
+                                            </div>
+                                        </dl>                                        
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info -bordered" >
+                                        <div class="info-main">매도하기 (전부매도)</div>
+                                        <dl class="dl">
+                                            <div>
+                                                <dt>총 매도금액</dt>
+                                                <dd>1,000,000원</dd>
+                                            </div>
+                                            <div>
+                                                <dt>거래일</dt>
+                                                <dd>2023.10.21 09:10:00</dd>
+                                            </div>
+                                        </dl>                                        
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>              
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

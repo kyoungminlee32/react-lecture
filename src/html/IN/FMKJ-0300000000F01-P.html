@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>금융상품 중요사항 확인</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">    
+    <link rel="stylesheet" href="../../assets/css/insurance.css">   
+</head>
+
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">금융상품 중요사항 확인</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="jsImportConfWrap">
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="optional-total01">
+                                        <label for="optional-total01">상품 설계 내용</label> <!-- ux 라이팅 수정 -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--[CASE] 상품설계내용 체크전 -->
+                            <div class="panel">
+                                <div class="inner">                 
+                                    <dl class="dl">
+                                        <div>
+                                            <dt>상품명</dt>
+                                            <dd>효밍아웃NH부모님안전보험(무)</dd>
+                                        </div>
+                                        <div>
+                                            <dt>계약자</dt>
+                                            <dd>김농협</dd>
+                                        </div>
+                                        <div>
+                                            <dt>보험기간</dt> <!-- [240227] 문구수정 --> 
+                                            <dd>1년</dd>
+                                        </div>
+                                        <!-- <div>  [240227] 마크업 삭제
+                                            <dt>납입방법</dt>
+                                            <dd>한번에 내기</dd>
+                                        </div> -->
+                                        <div>
+                                            <dt>보험료</dt>
+                                            <dd>11,300원</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                            <!--//[CASE] 상품설계내용 체크전 -->
+                        </div>
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="optional-total02">
+                                        <label for="optional-total02">보장 내용</label> <!-- ux 라이팅 수정 -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [CASE] 보장내용 체크전 -->
+                            <div class="panel">
+                                <div class="inner security-list listrigh">
+                                    <div class="sm-title-group">
+                                        <h3 class="h5">재해골절치료급여금</h3>
+                                    </div>
+                                    <!-- [231222] 마크업(dl -> table) 변경 -->
+                                    <div class="table">
+                                        <table>
+                                            <caption><span class="hide">재해골절치료급여금</span></caption>
+                                            <colgroup>
+                                                <col style="width:30%">
+                                                <col style="width:70%">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" class="left">지급이유</th> <!-- ux 라이팅 수정 -->
+                                                    <td class="left">피보험자가 보험기간 중 재해를 직접적인 원인으로 재해골절(치아파절 제외)이 발생하였을 때</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="left">지급금액</th>
+                                                    <td class="left">20만원(재해골절발생 1회당)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="sm-title-group">
+                                        <h3 class="h5">깁스치료급여금</h3>
+                                    </div>
+                                    <div class="table">
+                                        <table>
+                                            <caption><span class="hide">깁스치료급여금</span></caption>
+                                            <colgroup>
+                                                <col style="width:30%">
+                                                <col style="width:70%">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" class="left">지급이유</th> <!-- ux 라이팅 수정 -->
+                                                    <td class="left">피보험자가 보험기간 중 깁스(Cast) 치료를 받았을 때</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="left">지급금액</th>
+                                                    <td class="left">5만원(깁스치료 1회당)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="sm-title-group">
+                                        <h3 class="h5">아나필락시스쇼크 진단보험금</h3>
+                                    </div>
+                                    <div class="table">
+                                        <table>
+                                            <caption><span class="hide">아나필락시스쇼크 진단보험금</span></caption>
+                                            <colgroup>
+                                                <col style="width:30%">
+                                                <col style="width:70%">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" class="left">지급이유</th> <!-- ux 라이팅 수정 -->
+                                                    <td class="left">피보험자가 보험기간 중 아나필락시스쇼크로 진단 확정되었을때(다만, 최초 1회에 한함)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="left">지급금액</th>
+                                                    <td class="left">200만원</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="sm-title-group">
+                                        <h3 class="h5">강력범죄∙폭력사고 위로금</h3>
+                                    </div>
+                                    <div class="table">
+                                        <table>
+                                            <caption><span class="hide">강력범죄∙폭력사고 위로금</span></caption>
+                                            <colgroup>
+                                                <col style="width:30%">
+                                                <col style="width:70%">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" class="left">지급이유</th> <!-- ux 라이팅 수정 -->
+                                                    <td class="left">피보험자가 보험기간 중 강력범죄∙폭력사고를 직접적인 원인으로 전치 1개월(4주)을 초과하는 상해가 발생하였을 때(동일사고에 의한 경우 1회에 한함)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="left">지급금액</th>
+                                                    <td class="left">사고 1회당 300만원</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- //[231222] 마크업(dl -> table) 변경 --> 
+
+                                    <!-- [231227] 알아두세요 추가 -->
+                                    <div class="box">
+                                        <h3 class="title">알아두세요</h3>
+                                        <ul class="ul -bullet">
+                                            <li>피보험자가 보험기간 중 사망한 경우에는 이 계약은 그 때부터 효력이 없습니다. 이때 '보험료 및 해약환급금 산출방법서'에서 정하는 바에 따라 회사가 적립한 사망 당시의 계약자적립액을 계약자에게 지급합니다.</li>
+                                            <li>보험기간 중 피보험자가 동일한 재해로 인하여 두가지 이상으 골절(복합골절) 상태가 되더라도 재해골절치료급여금은 1회만 지급하며, 의학적 처치 및 치료를 목적으로 골절을 시키는 경우에는 재해골절치료급여금을 지급하지 않습니다.</li>
+                                            <li>보험기간 중 동일한 질병 또는 재해로 인하여 깁스치료를 2회이상 받은 경우, 또는 동시에 서로 다른 신체부위에 깁스치료를 받은 경우에는 1회에 한하여 깁스치료급여금을 지급합니다.</li>
+                                            <li>동일한 재해의 경우 하나의 사고로 인한 재해를 말합니다.</li>
+                                            <li>피보험자, 보험수익자 및 계약자에 의한 고의적 사고의 경우 보험금 지급을 제한합니다.</li>
+                                        </ul>
+                                    </div>
+                                    <!-- //[231227] 알아두세요 추가 -->
+                                </div>
+                            </div>
+                            <!-- //[CASE] 보장내용 체크전 -->
+                        </div>
+
+                        <!-- [231227] 유의사항 추가 --> <!-- [240326] 유의사항 삭제 -->
+                        <!-- <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="optional-total03">
+                                        <label for="optional-total03">유의사항</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel">
+                                <div class="inner"> 
+                                    <div class="sm-title-group">
+                                        <h3 class="h5">보험금 지급제한 사유</h3>
+                                    </div>     
+                                    <ol class="ol -number">
+                                        <li>피보험자가 고의로 자신을 해친 경우</li>
+                                        <li>보험수익자가 고의로 피보험자를 해친 경우</li>
+                                        <li>계약자가 고의로 피보험자를 해친 경우</li>
+                                    </ol>    
+                                    <div class="sm-title-group">
+                                        <h3 class="h5">보험금 지급절차</h3>
+                                        <p class="p">
+                                            서류를 접수하면 그 서류를 접수한 날로부터 3영업일 이내에 보험금을 지급하거나 보험료의 납입을 면제합니다. 다만, 보험금 지급사유 또는 보험료 납입면제 사유의 조사나 확인이 필요하면 접수 후 30영업일 이내에 보험금을 지급하거나 보험료의 납입을 면제합니다. 
+                                        </p>
+                                    </div>          
+                                </div>
+                            </div>                            
+                        </div> -->
+                        <!-- //[231227] 유의사항 추가 --> <!-- //[240326] 유의사항 삭제 -->                   
+                    </div>
+                </div>
+                <!-- //[231227] 알아두세요 삭제 -->
+                
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <!-- 차트 관련js -->
+    <script src="../../assets/libs/Chart/dist/Chart.js"></script>
+    <script src="../../assets/libs/Chart/dist/Chart.min.js"></script>
+    
+    <script>
+        Popup.open('popup');
+        
+
+
+    </script>
+</body>
+
+</html>

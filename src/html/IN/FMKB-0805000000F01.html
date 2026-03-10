@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/insurance.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">보험 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+            <style>
+                /* .jsSrveyWrap{margin-bottom:882px} */
+                /* .jsSrveyWrap .answerConfim .item input[type=radio] + label{display: none;}
+                .jsSrveyWrap .answerConfim .item input[type=radio]:checked + label{display: block;} */
+                .jsSrveyWrap .field.jsSrveyCurrent ~ .field{display: none;}
+                /* .jsSrveyWrap .field.answerConfim ~ .field.answerConfim{display: block;} */
+            </style>
+
+            <main class="contents">                
+                <div class="content">
+                    <div class="progress-top"> <!-- [231205] 프로그레스바 추가 -->
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                    <h2 class="h2">다음 %질문 수%개 질문에 사실대로 알려주세요</h2>                    
+
+                    <!-- [240510]마크업 수정 -->
+                    <!-- [CASE] 설명이해여부 확인 시작 모든 문항 Default 미선택 -->
+                    <div class="case-wrap -sm jsSrveyWrap -ft-normal">
+                        <div class="field jsSrveyCurrent">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">01.</span>
+                                    <span><strong>현재 운전을 하고 있나요?</strong></span> <!-- ux 라이팅 수정 --> 
+                                </dt>                 
+                                <dd class="answer-list">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="period1" id="box-radio1-2" checked>
+                                            <label for="box-radio1-2">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="period1" id="box-radio1-1">
+                                            <label for="box-radio1-1">아니요</label>
+                                        </div>
+                                    </div>
+                                </dd>                
+                            </dl>
+
+                            <!-- 예 선택 시 '차종관련 질문 항목' 노출 -->
+                            <div class="case-wrap">
+                                <div class="field -error">
+                                    <p class="label">차종(둘 이상 차종 운전 시 모든 차종 선택)</p> <!-- ux 라이팅 수정 -->
+                                    <div class="checkboxes -half">
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="checkbox-26" checked>
+                                            <label for="checkbox-26">승용차(영업용)</label>
+                                        </div>
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="checkbox-27" >
+                                            <label for="checkbox-27">승용차(자가용)</label>
+                                        </div>
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="checkbox-28" >
+                                            <label for="checkbox-28">승합차(영업용)</label>
+                                        </div>
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="checkbox-29" >
+                                            <label for="checkbox-29">승합차(자가용)</label>
+                                        </div>   
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="checkbox-30">
+                                            <label for="checkbox-30">화물차(영업용)</label>
+                                        </div>
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="checkbox-31" >
+                                            <label for="checkbox-31">화물차(자가용)</label>
+                                        </div>
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="checkbox-32" >
+                                            <label for="checkbox-32">이륜자동차(영업용)</label>
+                                        </div>
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="checkbox-33" >
+                                            <label for="checkbox-33">이륜자동차(자가용)</label>
+                                        </div>    
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="checkbox-34" >
+                                            <label for="checkbox-34">건설기계</label>
+                                        </div>
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="checkbox-35" >
+                                            <label for="checkbox-35">농기계</label>
+                                        </div>
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="checkbox-36" >
+                                            <label for="checkbox-36">기타</label>
+                                        </div>                                                                                                               
+                                    </div>
+                                    <!-- ui수정 240122 (마크업 변경) -->
+                                    <div class="info-wrap">
+                                        <p class="message">차종을 선택해 주세요.</p>
+                                    </div>                                        
+                                    <!-- <div class="invest-notice">
+                                        <div class="message">차종을 선택해 주세요.</div>
+                                    </div>    -->
+                                    <!-- //ui수정 240122 (마크업 변경) -->
+                                </div>  
+                                <div class="field"> <!-- 에러시 -error클래스 추가 -->
+                                    <label for="text1" class="label">그 밖의 차량</label> <!-- ux 라이팅 수정 -->
+                                    <div class="text">
+                                        <input type="text" id="text1" value="" placeholder="운전 중인 모든 차종 입력" title="운전 중인 모든 차종 입력">
+                                    </div>
+                                    <div class="info-wrap">
+                                        <p class="message">차종을 입력해 주세요.</p>
+                                    </div>
+                                </div>   
+                                <div class="box">
+                                    <ul class="ul -bullet"> <!-- [240109] 마크업수정 -->
+                                        <li>차량을 두 대 이상 운전하거나 한 차량을 두 가지 이상의 목적으로 사용하는 경우 모두 입력해 주세요.</li> <!-- ux 라이팅 수정 -->                                     
+                                    </ul>
+                                </div>     
+                            </div>
+                            <!-- //예 선택 시 '차종관련 질문 항목' 노출 -->                            
+                            <button type="button" class="button -lg">다음 질문 보기</button>  
+                        </div>
+                        
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">02.</span>
+                                    <span><strong>원동기 장치 자전거</strong> (전동킥보드, 전동이륜평행차, 전동기의 동력만으로 움직일 수 있는 자전거 등 개인형 이동 장치를 포함)를 사용하나요? 
+                                        (전동휠체어, 의료용 스쿠터 등 보행 보조용 의자차 제외)  <!-- ux 라이팅 수정 --> 
+                                    </span>
+                                </dt>    
+                                <div class="box">                                    
+                                    <ul class="ul -bullet">
+                                        <li>직업, 직무 또는 동호회 활동과 출퇴근 용도 등 계속적으로 사용하는 경우 ‘예’ 선택해 주세요.</li>
+                                        <li>해당 질문에 ‘아니요’로 선택하고 보험계약 체결 후 이륜자동차 또는 전동킥보드 등 개인형 이동 장치를 포함한 원동기 장치 자전거를 사용하게 된 사실을 즉시 회사에 알리지 않은 경우 계약 해지 등 알릴 의무 위반에 따른 불이익이 발생할 수 있습니다.</li> <!-- ux 라이팅 수정 -->
+                                    </ul>
+                                    <!-- <div class="field -sm"> 마크업삭제
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="checkbox-smc" checked>
+                                            <label for="checkbox-smc">확인합니다.</label>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <!-- [240228] 마크업추가 -->
+                                <div class="checkbox -sm">
+                                    <input type="checkbox" id="checkbox-smc" checked>
+                                    <label for="checkbox-smc">확인합니다.</label>
+                                </div>
+                                <!-- //[240228] 마크업추가 -->
+                                <p class="message -error">알릴 의무 위반에 따른 불이익 안내 확인을 체크해 주세요.</p> <!-- ux 라이팅 수정 --> 
+                                <dd class="answer-list">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="period2" id="box-radio2-2" checked>
+                                            <label for="box-radio2-2">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="period2" id="box-radio2-1">
+                                            <label for="box-radio2-1">아니요</label>
+                                        </div>
+                                    </div>
+                                </dd>  
+                                <div class="info-wrap">
+                                    <p class="message">해당 경우에는 상품을 가입할 수 없습니다.</p>
+                                </div>
+                            </dl>                            
+                        </div>
+
+                        <div class="field -error">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">03.</span>
+                                    <span>
+                                        <strong>최근 3개월 이내</strong>에 의사에게 진찰 또는 검사로 다음과 같은 <strong>필요 소견</strong>을 받은 사실이 있나요? <!-- ux 라이팅 수정 --> 
+                                    </span>
+                                </dt>    
+                                <div class="box">     
+                                    <!-- [240405] ux 라이팅 수정 -->
+                                    <div class="medical-list">
+                                        <ul class="ul -bullet">
+                                            <li>질병 확정 진단</li>
+                                            <li>질병 의심 소견</li> <!-- ux 라이팅 수정 -->                                                                                                                                 
+                                        </ul>
+                                        <ul class="ul -bullet">
+                                            <li>입원 필요 소견</li>                                                            
+                                            <li>수술 필요 소견</li>                                                            
+                                        </ul>
+                                        <ul class="ul -bullet">
+                                            <li>추가 검사(재검사) 필요 소견</li>                                                                                                                   
+                                        </ul>
+                                    </div>                                  
+                                    <ul class="ul -bullet"> <!-- ux 라이팅 수정 -->    
+                                        <li>필요 소견이란 의사로부터 진단서, 소견서를 발급받은 경우 또는 의사가 진료기록부 등에 기재하고 이를 환자에게 설명하거나 권유한 경우를 말합니다.</li> 
+                                        <li>질병 의심 소견이란 의사가 진단서나 소견서 또는 진료의뢰서 등을 포함하여 서면(전자문서 포함)으로 교부한 경우를 말합니다.</li> <!-- [231226] 즐바꿈(li추가) -->
+                                        <li>추가 검사(재검사)란 검사 결과 이상 소견이 확인되어 보다 정확한 진단을 위해 시행한 검사를 의미하며, 병증에 대한 치료 필요없이 유지되는 상태에서 시행하는 정기검사 또는 추적 관찰은 포함하지 않습니다.</li> 
+                                    </ul> <!-- //ux 라이팅 수정 -->    
+                                    <!-- // [240405] ux 라이팅 수정 -->
+                                </div>                
+                                <dd class="answer-list">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="period3" id="box-radio3-2" checked>
+                                            <label for="box-radio3-2">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="period3" id="box-radio3-1">
+                                            <label for="box-radio3-1">아니요</label>
+                                        </div>
+                                    </div>
+                                </dd>
+                                <div class="info-wrap">
+                                    <p class="message">해당 경우에는 상품을 가입할 수 없습니다.</p>
+                                </div>                                
+                            </dl>
+                        </div>
+
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">04.</span>
+                                    <span><strong>최근 2년 이내</strong>에 질병이나 상해 사고로 인해 <strong>입원 또는 수술(제왕절개 포함)</strong>을 받은 사실이 있나요?</span> <!-- ux 라이팅 수정 -->   
+                                </dt>   
+                                <div class="box">
+                                    <ul class="ul -bullet"> <!-- ux 라이팅 수정 -->  
+                                        <li>자동차 사고(최근 2년이내)</li>  
+                                        <li>맹장 또는 치조골 수술력</li>   
+                                        <li>기타(자동차 사고, 맹장 또는 치조골 수술력 제외)</li>                                                                                                                                    
+                                    </ul> <!-- //ux 라이팅 수정 -->                                                 
+                                </div>                   
+                                <dd class="answer-list">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="period4" id="box-radio4-2" checked>
+                                            <label for="box-radio4-2">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="period4" id="box-radio4-1">
+                                            <label for="box-radio4-1">아니요</label>
+                                        </div>
+                                    </div>
+                                </dd>   
+                                <div class="info-wrap">
+                                    <p class="message">해당 경우에는 상품을 가입할 수 없습니다.</p>
+                                </div>                            
+                            </dl>
+                        </div>
+
+                        <div class="field -error">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">05.</span>
+                                    <span>
+                                        <strong>최근 5년 이내</strong>에 암으로 진단받거나 암으로 <strong>입원 또는 수술</strong>을 받은 사실이 있나요? <!-- ux 라이팅 수정 --> 
+                                    </span>
+                                </dt>                  
+                                <dd class="answer-list">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="period5" id="box-radio5-2" checked>
+                                            <label for="box-radio5-2">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="period5" id="box-radio5-1">
+                                            <label for="box-radio5-1">아니요</label>
+                                        </div>
+                                    </div>
+                                </dd>
+                                <div class="info-wrap">
+                                    <p class="message">해당 경우에는 상품을 가입할 수 없습니다.</p>
+                                </div>                                
+                            </dl>
+                        </div>
+
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">06.</span>
+                                    <span>
+                                        <strong>직업이 무엇인가요?</strong>
+                                    </span>
+                                </dt>                                                   
+                            </dl>
+                            <div class="case-wrap -sm">
+                                <div class="field -error">  <!-- 에러시 -error클래스 추가 -->
+                                    <label for="text2" class="label">근무처</label>
+                                    <div class="text">
+                                        <input type="text" id="text2" value="" placeholder="근무처 입력" title="근무처 입력">
+                                    </div>
+                                    <div class="info-wrap">
+                                        <p class="message">근무처를 입력해 주세요. </p>
+                                    </div>
+                                </div>
+                                <div class="field"><!-- ux 라이팅 수정 -->
+                                    <label for="text3" class="label">근무 지역</label>
+                                    <div class="text">
+                                        <input type="text" id="text3" value="" placeholder="근무 지역 입력" title="근무 지역 입력">
+                                    </div>
+                                    <div class="info-wrap">
+                                        <p class="message">근무 지역을 입력해 주세요. </p>
+                                    </div>
+                                </div><!-- //ux 라이팅 수정 -->
+                                <div class="field"> 
+                                    <label for="text4" class="label">업종</label>
+                                    <div class="text">
+                                        <input type="text" id="text4" value="" placeholder="업종 입력" title="업종 입력">
+                                    </div>
+                                    <div class="info-wrap">
+                                        <p class="message">업종을 입력해 주세요. </p>
+                                    </div>
+                                </div>
+                                <div class="field"> 
+                                    <label for="text5" class="label">취급하는 업무(구체적으로 입력) </label>
+                                    <div class="text">
+                                        <input type="text" id="text5" value="" placeholder="취급하는 업무 입력" title="취급하는 업무 입력">
+                                    </div>
+                                    <div class="info-wrap">
+                                        <p class="message">취급하는 업무를 입력해 주세요. </p>
+                                    </div>
+                                </div>
+                                <div class="box">                                    
+                                    <ul class="ul -bullet">
+                                        <li>보험계약 체결 당시 직업 또는 직무를 사실대로 알리지 않거나 보험계약 체결 후 직업 또는 직무가 변경된 사실 ((예)사무 관리 ↔ 현장 관리)을 즉시 회사에 알리지 않으면 계약 해지 등 알릴 의무 위반에 따른 불이익이 발생할 수 있습니다.</li> <!-- ux 라이팅 수정 --> <!-- [240227] 문구수정 -->
+                                    </ul>
+                                    <!-- <div class="field -sm"> [240228] 마크업삭제
+                                        <div class="checkbox -sm">
+                                            <input type="checkbox" id="checkbox-smc1" checked>
+                                            <label for="checkbox-smc1">확인합니다.</label>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <!-- [240228] 마크업추가 -->
+                                <div class="checkbox -sm">
+                                    <input type="checkbox" id="checkbox-smc1" checked>
+                                    <label for="checkbox-smc1">확인합니다.</label>
+                                </div>
+                                <!-- //[240228] 마크업추가 -->
+                                <p class="message -error">알릴 의무 위반에 따른 불이익 안내 확인을 체크해 주세요.</p> <!-- ux 라이팅 수정 -->
+                            </div> 
+                            <button type="button" class="button -lg">다음 질문 보기</button>   
+                        </div> 
+                        
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">07.</span>
+                                    <span>
+                                        <strong>월 소득을 입력해 주세요.</strong><br>
+                                        (계약자 기준 단, 계약자가 미성년자, 주부인 경우 가구 총소득 입력) <!-- [231226] 문구수정(단삭제) -->
+                                    </span>
+                                </dt>                              
+                                <div class="field">
+                                    <label for="income" class="label">월 평균소득</label> <!-- ux 라이팅 수정 -->
+                                    <div class="mix">
+                                        <div class="text -percent" data-clear="false">
+                                            <input type="tel" id="income" class="right num-call wide" onclick="numKey.keyOpen(this)" value="" aria-haspopup="true" placeholder="월 평균소득 입력"> <!-- ux 라이팅 수정 -->
+                                            <div class="percent">만원</div>
+                                        </div>
+                                        <!-- <div class="info-wrap">
+                                            <p class="message">월 평균소득을 입력해 주세요.</p>
+                                        </div> [231226] 메세지삭제 -->
+                                    </div>
+                                </div>                                  
+                            </dl>
+                        </div>                          
+                    </div><!-- //.jsSrveyWrap -->
+                    <!-- [CASE] 끝 -->
+                    <!-- //[240510]마크업 수정 -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE] 모든 문항의 답변 작성 완료 시, 버튼 활성화 -->
+                        <button type="button" class="button -lg -primary" disabled>다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- 숫자 키패드 레이어 -->
+    <div class="custom-key-layer" aria-hidden="true">
+        <div class="amount-btn-wrap">
+            <button type="button" value="100000" class="button numBtn -sm -fit">+10만</button>
+            <button type="button" value="500000" class="button numBtn -sm -fit">+50만</button>
+            <button type="button" value="1000000" class="button numBtn -sm -fit">+100만</button>
+            <button type="button" value="10000000" class="button numBtn -sm -fit">+1,000</button>
+        </div>
+        <div class="custom-key-wrap">
+            <button type="button" class="numBtn" value="1" title="숫자 1 입력">1</button>
+            <button type="button" class="numBtn" value="2" title="숫자 2 입력">2</button>
+            <button type="button" class="numBtn" value="3" title="숫자 3 입력">3</button>
+            <button type="button" class="numBtn" value="4" title="숫자 4 입력">4</button>
+            <button type="button" class="numBtn" value="5" title="숫자 5 입력">5</button>
+            <button type="button" class="numBtn" value="6" title="숫자 6 입력">6</button>
+            <button type="button" class="numBtn" value="7" title="숫자 7 입력">7</button>
+            <button type="button" class="numBtn" value="8" title="숫자 8 입력">8</button>
+            <button type="button" class="numBtn" value="9" title="숫자 9 입력">9</button>
+            <button type="button" class="numBtn btn-temp" disabled  aria-hidden="true">NH</button>
+            <button type="button" class="numBtn btn-amount" value="00" title="숫자 00입력" >00</button>
+            <button type="button" class="numBtn" value="0" title="숫자 0 입력">0</button>
+            <button type="button" class="numBtn btn-del" title="마지막 숫자 삭제">←</button>
+        </div>
+        <div class="buttons">
+            <button type="button" class="button -lg -primary" onclick="numKey.keyClose()">확인</button>
+        </div>
+    </div>
+    <!-- 숫자 키패드 레이어 -->    
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 설문 인터렉션 예시
+        const jsSrveyHandle = document.querySelectorAll('.jsSrveyWrap input');
+        jsSrveyHandle.forEach(element => {
+            element.addEventListener('click',function (e) {
+                jsSrveyNext(this)
+            })
+        });
+
+
+       /* 키패드 키입력 예시 */
+       const numKeyEmt = document.querySelectorAll('.custom-key-wrap button');
+        numKeyEmt.forEach(numKeyEmt => {
+            numKeyEmt.addEventListener('click',function () {
+                let $targetInput;
+                const $thisValLayer = numKeyEmt.closest('.custom-key-layer.-active');  //dim 없는 레이어 숫자 키패드
+                const $thisValChoose = numKeyEmt.closest('.choose-account-Wrap');  //bottom sheet 숫자 키패드
+                
+                if ($thisValLayer !== null) {
+                    $targetInput = numKey.numInput;
+                    $targetInput.closest('.text').classList.remove('-textless');
+                } else if($thisValChoose !== null) {
+                    $targetInput = $thisValChoose.querySelector('.choose-account-input input')
+                    $targetInput.closest('.text').classList.remove('-textless');
+                }
+                let $thisval = numKeyEmt.value;
+
+                if (numKeyEmt.classList.contains('btn-del')) {
+                    if ($targetInput.value.length !== 0) {
+                        $targetInput.value = $targetInput.value.slice(0,-1);
+                        if ($targetInput.value.length == 0) {
+                            setTimeout(() => {
+                                $targetInput.closest('.text').classList.add('-textless');
+                            }, 101);
+                        }
+                    }
+                }else{
+                    $targetInput.value = $targetInput.value + $thisval;
+                }
+            })
+        });
+
+
+        //10만, 50만.... 버튼 클릭시
+        const amountBtn = document.querySelectorAll('.amount-btn-wrap button');
+        amountBtn.forEach(amountBtn => {
+            amountBtn.addEventListener('click',function () {
+                let $targetInput;
+                const $thisValLayer = amountBtn.closest('.custom-key-layer.-active');  //dim 없는 레이어 숫자 키패드
+                const $thisValChoose = amountBtn.closest('.choose-account-Wrap');  //bottom sheet 숫자 키패드
+                if ($thisValLayer !== null) {
+                    $targetInput = numKey.numInput;
+                } else if($thisValChoose !== null) {
+                    $targetInput = $thisValChoose.querySelector('.choose-account-input input')
+                }
+                let $thisval = amountBtn.value;
+                $targetInput.value = Number($thisval) + Number($targetInput.value);
+            })
+            
+        });
+        /* //키패드 키입력 예시 */        
+    </script>
+</body>
+</html>

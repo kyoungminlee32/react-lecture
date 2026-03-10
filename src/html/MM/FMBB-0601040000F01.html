@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>펀드 검색</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">펀드 검색</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <!-- 비교하기 상단 고정 영역 -->
+                    <div class="compare-wrap">
+                        <div class="compares">
+                            <div class="compare-item">
+                                NH밸런스 고위험형ISA A형
+                                <button type="button" class="compare-delete"><span class="hide">삭제</span></button>
+                            </div>
+                            <!-- <div class="compare-item">
+                                NH밸런스 고위험형ISA B형
+                                <button type="button" class="compare-delete"><span class="hide">삭제</span></button>
+                            </div> -->
+                            <!-- [CASE] 상품 선택 안됐을 경우 -->
+                            <div class="compare-item -disabled"> <!-- -disabled 클래스 추가 -->
+                                상품선택
+                            </div>
+                            <!-- // [CASE] 상품 선택 안됐을 경우 -->
+                        </div>
+
+                        <!-- [CASE] 상품 선택x, 상품 하나만 선택 시 비활성화 disabled 속성 추가 -->
+                        <button type="button" class="button -xs -fit -secondary -compare" disabled>비교하기</button>
+                        <!-- // [CASE] 상품 선택x, 상품 하나만 선택 시 비활성화 disabled 속성 추가 -->
+                    </div>
+                    <!-- // 비교하기 상단 고정 영역 -->
+                    <div class="search-area">
+                        <div class="field">
+                            <div class="fund-search-wrap">
+                                <div class="mix">
+                                    <div class="text">
+                                        <input type="text" class="left-side" id="searchce" placeholder="상품을 검색해보세요">
+                                    </div>
+                                    <div class="space -lined search">
+                                        <button type="button" class="icon-button -search right-side"><span class="hide">조회</span></button>
+                                    </div>
+                                </div>
+                                <button type="button" class="fund-filter" aria-haspopup="true"><span class="hide">조건설정 하기</span></button>
+                            </div>
+
+                            <div class="filter-result">
+                                <div class="inner over-x">
+                                    <div class="filter-gadget">
+                                        국내
+                                        <button type="button" class="compare-delete"><span class="hide">삭제</span></button>
+                                    </div>
+                                    <div class="filter-gadget">
+                                        주식형
+                                        <button type="button" class="compare-delete"><span class="hide">삭제</span></button>
+                                    </div>
+                                    <div class="filter-gadget">
+                                        선취판매수수료 있음
+                                        <button type="button" class="compare-delete"><span class="hide">삭제</span></button>
+                                    </div>
+                                    <div class="filter-gadget">
+                                        매우높은위험
+                                        <button type="button" class="compare-delete"><span class="hide">삭제</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="client-info">
+                                <!-- [CASE] 공격투자형:-grade1,  적극투자형:-grade3, 위험중립형:-grade4, 안정추구형:-grade5, 안정형:-grade6 -->
+                                <p class="desc">김농협님의 <span class="-grade3">적극투자형</span>에 적합한 상품입니다.</p>
+                                <a href="javascript:void(0)" class="a -arrow">투자성향분석 결과 보기 </a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="hr -xl">
+                    <div class="result-area">
+                        <h4 class="h5">추천키워드</h4>
+                        <!-- 인기검색어 영역 -->
+                        <div class="popular-search">
+                            <!-- 인기검색어 열림 상태 : popular-anchors 에 -active 클래스 추가 -->
+                            <div class="popular-anchors -active">
+                                <div class="outer">
+                                    <div class="inner over-x">
+                                        <ul class="list">
+                                            <li class="item"><button class="hash-btn -active">#레버리지</button></li>
+                                            <li class="item"><button class="hash-btn">#ESG</button></li>
+                                            <li class="item"><button class="hash-btn">#인버스</button></li>
+                                            <li class="item"><button class="hash-btn">#중국</button></li>
+                                            <li class="item"><button class="hash-btn">#자산배분</button></li>
+                                            <li class="item"><button class="hash-btn">#금</button></li>
+                                            <li class="item"><button class="hash-btn">#공모주</button></li>
+                                            <li class="item"><button class="hash-btn">#반도체</button></li>
+                                            <!-- 버튼 선택시 -active 클래스 추가  -->
+                                            <li class="item"><button class="hash-btn">#일본</button></li>
+                                            <li class="item"><button class="hash-btn">#단기채</button></li>
+                                            <li class="item"><button class="hash-btn">#성장주</button></li>
+                                            <li class="item"><button class="hash-btn">#기술주</button></li>
+                                            <li class="item"><button class="hash-btn">#배당</button></li>
+                                            <li class="item"><button class="hash-btn">#가치주</button></li>
+                                            <li class="item"><button class="hash-btn">#미국</button></li>
+                                            <li class="item"><button class="hash-btn">#롱숏</button></li>
+                                            <li class="item"><button class="hash-btn">#전기차</button></li>
+                                            <li class="item"><button class="hash-btn">#2차전지</button></li>
+                                            <li class="item"><button class="hash-btn">#하이일드</button></li>
+                                        </ul>
+                                    </div>
+                                    <!-- 2024 접근성 펼쳐진 상태인 경우 aria-expanded="true" 접혀진 상태인경우 aria-expanded="false" -->
+                                    <button type="button" class="more" aria-expanded="true"><span class="hide">펼쳐보기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 인기검색어 영역 -->
+
+                        <!-- 검색결과 영역 -->
+                        <div class="fund-list-area">
+                            <div class="filter-bar">
+                                <div class="mix-bar">
+                                    <p class="total-count">검색결과 <span class="point">2</span>건</p>
+                                    <!-- <div class="search"><span>3개월</span>ㆍ<span>수익률</span><button type="button" class="icon-button -select"><span class="hide">필터</span></button></div> -->
+                                    <!-- 2024 접근성 수정 -->
+                                    <div class="search" role="button" title="상품 정렬 선택"><span>3개월</span>ㆍ<span>수익률</span><span class="icon-button -select" aria-hidden="true"><span class="hide">필터</span></span></div>
+                                </div>
+                            </div>
+        
+                            <div class="selection">
+                                <ul>
+                                    <li>
+                                        
+                                        <div class="info -bordered" role="button">
+                                            <div class="top-area">
+                                                <!-- [CASE] 매우높은위험:-grade1, 높은위험:-grade2, 다소높은위험:-grade3, 보통위험:-grade4, 낮은위험:-grade5, 매우낮은위험:-grade6 -->
+                                                <span class="badge -grayline">추천</span>
+                                                <span class="badge -grayline">신규</span>
+                                                <span class="badge -grayline">계열사</span>
+                                                <span class="badge -grayline">인기</span>
+                                                <span class="badge -grade1">고난도</span>
+                                                <span class="badge -grade3">다소높은위험</span>
+                                            </div>
+                                            <a href="javascript:void(0);" aria-haspopup="true">
+                                                <div class="fund-info-main">
+                                                    NH-Amundi 필승코리아증권투자신탁[주식]C-P2e
+                                                    <dl class="info-dl">
+                                                        <div>
+                                                            <dt>국내주식형</dt>
+                                                            <dd>KB자산운용</dd>
+                                                        </div>
+                                                    </dl>
+                                                </div>
+                                                <div class="fund-info-standard">        
+                                                    <div class="standard-value">
+                                                        <div class="value-item">
+                                                            <p class="month-text">3개월</p>
+                                                            <span class="red">+6.33%</span>
+                                                        </div>
+                                                        <div class="value-item">
+                                                            <p class="month-text">6개월</p>
+                                                            <span class="blue">-14.33%</span>
+                                                        </div>
+                                                        <div class="value-item">
+                                                            <p class="month-text">12개월</p>
+                                                            <span class="red">+6.33%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="compare-checkbox">
+                                                비교하기
+                                                <div class="checkbox -sm">
+                                                    <input type="checkbox" id="bordered-account1">
+                                                    <label for="bordered-account1"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info -bordered" role="button">
+                                            <div class="top-area">
+                                                <!-- [CASE] 매우높은위험:-grade1, 높은위험:-grade2, 다소높은위험:-grade3, 보통위험:-grade4, 낮은위험:-grade5, 매우낮은위험:-grade6 -->
+                                                <span class="badge -grayline">추천</span>
+                                                <span class="badge -grayline">신규</span>
+                                                <span class="badge -grayline">계열사</span>
+                                                <span class="badge -grayline">인기</span>
+                                                <span class="badge -grade1">고난도</span>
+                                                <span class="badge -grade4">보통위험</span>
+                                            </div>
+                                            <a href="javascript:void(0);" aria-haspopup="true">
+                                                <div class="fund-info-main">
+                                                    IBK골드마이닝증권투자신탁1호(주식) C-Re
+                                                    <dl class="info-dl">
+                                                        <div>
+                                                            <dt>국내주식형</dt>
+                                                            <dd>KB자산운용</dd>
+                                                        </div>
+                                                    </dl>
+                                                </div>
+                                                <div class="fund-info-standard">        
+                                                    <div class="standard-value">
+                                                        <div class="value-item">
+                                                            <p class="month-text">3개월</p>
+                                                            <span class="blue">-6.33%</span>
+                                                        </div>
+                                                        <div class="value-item">
+                                                            <p class="month-text">6개월</p>
+                                                            <span class="blue">-14.33%</span>
+                                                        </div>
+                                                        <div class="value-item">
+                                                            <p class="month-text">12개월</p>
+                                                            <span class="red">+6.33%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="compare-checkbox">
+                                                비교하기
+                                                <div class="checkbox -sm">
+                                                    <input type="checkbox" id="sggds">
+                                                    <label for="sggds"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button type="button" class="more-button">더보기(1/50)</button>
+                            </div>
+
+                            <!-- 조회결과 없음 -->
+                            <div class="result -sm">
+                                <p class="message">조회 결과가 없습니다.</p>
+                            </div>
+                        </div>
+                        <!-- // 검색결과 영역 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+        
+        // 추천키워드
+        // 2024 접근성 스크립트 수정
+        $(document).on('click', '.popular-anchors .more', function(e){
+            $('.popular-anchors').toggleClass('-active');
+            var $this = $(this)
+            var $target = $this.closest('.popular-anchors');
+            if ($target.hasClass('-active')) {
+                $this.attr('aria-expanded','true')
+            }else{
+                $this.attr('aria-expanded','false')
+            }
+        })
+
+        // 비교하기
+        document.querySelector('#bordered-account1').addEventListener('click', function(){
+            document.querySelector('.compare-wrap').classList.toggle('-active');
+        })
+        $(document).ready(
+            function(){
+                $('#bordered-account1').click()
+            }
+        )
+
+        // 좌우 스크롤 fade
+        overX();
+    </script>
+</body>
+</html>

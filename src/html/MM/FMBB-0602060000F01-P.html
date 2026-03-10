@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">신탁 유의사항</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="trust-info-wrap">
+                        <div class="h2-group">
+                            <h2 class="h2">
+                                AI행원이 ELT, ETF 상품 가입 시 유의사항을 안내해드립니다
+                            </h2>
+                        </div>
+    
+                        <div class="video-contents">
+                            <p class="p">동영상 영역</p><!-- 비디오 추가 시 p 삭제 -->
+                        </div>
+                        <!-- [240307] 비디오 하단 아코디언 및 간격 변경 -->
+                        <div class="case-wrap -xs">
+                            <div class="accordion -card -invideo" data-role="fold">
+                                <button type="button" class="title" data-role="marker">신탁 유의사항 내용</button>
+                                <div class="panel" data-role="hidden">
+                                    <p class="p">
+                                    안녕하세요 고객님 ELT, ETF 상품에 관심을 가져주셔서 감사드리며, 상품가입 유의사항을 안내해 드리겠습니다. 
+                                    ELT는 주가지수에 연계하여 조건에 따라 투자수익이 결정되는 파생결합형 특정금전신탁 상품입니다. ETF는 거래소에 상장되어 
+                                    주식처럼 편리하게 매매할 수 있는 특정금전신탁 상품입니다. 
+                                    신탁상품은 일반 예금상품과 달리 원금의 일부 또는 전부 손실이 발생 할 수 있으며, 투자로 인한 손실은 투자자 본인에게 귀속됩니다. 
+                                    고객님의 투자성향에 적합한 상품만 신규 가입할 수 있고, 관련 금융투자업 규정에 따라 농협은행 영상통화 수행 직원을 통해 상품 설명을 듣고 이해하신 후 신탁계약을 체결할 수 있습니다.
+                                    영상통화를 통한 상품 설명은 약 10분간 진행되며, 데이터 사용 시 통신요금이 발생할 수 있으므로 와이파이 사용을 권장드립니다. 
+                                    또한 고객님께서 영상통화 예약을 원하시면 선택한 예약시간에 영상통화 연결 안내 문자를 보내드립니다. 영상통화를 통한 상품설명 음성 및 영상은 녹화되며 관련 법률에 따라 10년간 보관 됩니다.
+                                    지금까지 신탁 상품가입 유의사항을 들어주셔서 감사드리며 가입 프로세스에 따라 신탁 상품가입을 진행하여 주십시오.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <!-- 2024-05-14 문구 수정 -->
+                                <li>가입 가능 시간 - 9:30 ~ 17:30 </li>
+                                <!-- 2024-05-14 문구 수정 -->
+                                <!-- <li>가입 가능 시간은 아래와 같습니다.</li>
+                                <li>모집기간 중 : 06:00 ~ 22:00 <br>모집 종료일 : 06:00 ~ 16:00</li> -->
+                                <li>정정 취소는 모집기간 중에만 할 수 있습니다.</li>
+                                <li>모집기간 종료 후 중도해지는 관리점에서만 가능하며, 환매수수료가 징구 됩니다.</li>
+                                <li>ELF펀드 중도상환 또는 만기상환시에는 별도 환매신청없이 자동해지되어 연결계좌에 입금처리 됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

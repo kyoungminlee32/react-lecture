@@ -13,11 +13,25 @@ import { AppPhoto } from './pages/Photo';
 import { AppTodoList } from './pages/TodoList';
 import { Worklist } from './pages/Worklist';
 import { Layout } from './layouts/Layout';
+import { AType } from './prototype/A-type/html/A-type';
 
+import './assets/css/reset.css';
+import './assets/css/base.css';
+import './assets/css/variables.css';
+import './assets/css/layout.css';
+import './assets/css/title.css';
+import './assets/css/list.css';
+import './assets/css/form.css';
+import './assets/css/ico.css';
+import './assets/css/table.css';
+import './assets/css/button.css';
+import './assets/css/sample.css';
+import './assets/css/util.css';
 
 function App() {
   return (
      <Routes>
+      <Route path="/Worklist" element={<Worklist />} />
       <Route path="/" element={<Layout><Home /></Layout>} />
       <Route path="/About" element={<Layout><About /></Layout>} />
       <Route path="/Example1" element={<Layout><Example1 /></Layout>} />
@@ -26,9 +40,9 @@ function App() {
       <Route path="/메뉴2" element={<Layout><StateComponent1 /></Layout>} />
       <Route path="/메뉴3" element={<Layout><StateComponent2 /></Layout>} />
       <Route path="/BlogPosts" element={<Layout><BlogPosts /></Layout>} />
-      <Route path="/Worklist" element={<Layout><Worklist /></Layout>} />
       <Route path="/Photo" element={<Layout><AppPhoto /></Layout>} />
       <Route path="/TodoList" element={<Layout><AppTodoList /></Layout>} />
+      <Route path="/prototype/A-type/html/A-type" element={<AType />} />
       <Route 
         path="*"
         element={

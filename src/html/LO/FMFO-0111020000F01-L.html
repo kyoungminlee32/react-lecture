@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">우대금리</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <!-- 240312 ux라이팅 전체 수정 -->
+                    <h4 class="h5">거래 실적 우대금리 적용 기준</h4>
+                    <p class="p">
+                        기한연기 등록 전 만기월의 말일부터 즉시 거래실적을 확인하여, 우대 조건이 미달된 경우 다음 달 넷째 주 토요일 다음 날부터 우대금리 적용을 중단합니다.
+                    </p>
+
+                    <div class="contentIn">
+                        <div class="literary">
+                            <h4 class="h5">급여이체</h4>
+                            <p class="p">
+                                아래 ①~③의 조건 중 하나라도 충족하는 경우 급여이체 실적 인정
+                            </p>
+                            <ol class="ol gual">
+                                <li>① NH농협은행이나 농·축협 계좌에서 출금되어 NH농협은행계좌로 매월 50만원 이상 급여이체 실적이 있는 경우(반드시 급여코드로 입금)</li>
+                                <li>② NH농협은행을 제외한 은행 계좌에서 NH농협은행 계좌로 매월 50만원 이상 입금되는 경우 급여성 문구 <급여, 월급, 봉급, 월급, 상여(금), 보너스, 성과급, 급료, 임금, 수당, 연금, 보수, 월보수, salary, pay>로 입금하는 경우</li>
+                                <li>③ 급여 자동이체일을 영업점에서 등록한 경우로 매월 50만원 이상 입금되는 경우 (소급등록은 불가)</li>
+                            </ol>    
+
+                        </div>
+                        <div class="literary">
+                            <h4 class="h5">신용카드 이용실적</h4>
+                            <p class="p">
+                                NH농협은행 발급 채움·BC카드의 최근 3개월 이용금액을 실적 인정(최종 월의 다음 달 5일까지 신용카드 이용 전표가 매입되지 않는 경우에는 다음 월 실적 산정에 포함됨)
+                            </p>
+                            <ol class="ol gual">
+                                <li>① 할부는 할부금 전액이 이용월 실적으로 인정되며, 개인사업자는 개인· 개인사업자 카드의 이용 실적이 합산(고유번호증 발급 단체카드는 이용 실적 제외)</li>
+                                <li>② 채무자 본인 명의의 가족카드 실적은 본인 실적에 포함되며, 연회비·연체료· 단기카드대출<현금 서비스>·장기카드대출<카드론>·제수수료는 제외</li>
+                            </ol>    
+                        </div>
+                        <div class="literary">
+                            <h4 class="h5">자동이체</h4>
+                            <p class="p">
+                                매월 정상 출금 건수 기준으로 실적 인정되며, 같은 납부자번호에 대한 복수 자동이체건은 1건으로 실적 인정
+                            </p>
+                            <ol class="ol gual">
+                                <li>① 아파트관리비, 지로, 금융결제원 CMS펌뱅킹 자동이체에 해당할 경우 실적으로 인정</li>
+                                <li>② 계좌 간 자동이체는 실적 인정 제외(A계좌↔B계좌, 대출금 또는 적금 자동이체)</li>
+                            </ol>    
+                        </div>
+                        <div class="literary">
+                            <h4 class="h5">적립식예금</h4>
+                            <p class="p">
+                                정기적금, 상호부금, 재형저축, 가계우대정기적금, 장기주택마련저축, 근로자주택마련저축, 평생우대적금, 주택청약부금, 자유로우대적금, 근로자장기저축의 매월 입금금액으로 산정하며 계좌별 입금금액을 합산하여 실적 인정
+                            </p>
+                        </div>
+                        <div class="literary">
+                            <h4 class="h5">주택청약종합저축</h4>
+                            <p class="p">
+                                매월 입금금액을 실적 인정(매월 1회 이상, 최소 2만원 이상 입금)
+                            </p>
+                        </div>
+                        <div class="literary">
+                            <h4 class="h5">기타</h4>
+                            <p class="p">
+                                하나로고객, 수신평잔 등 과거 거래 실적 우대금리 우대항목으로 약정된 상품에 해당하는 경우
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

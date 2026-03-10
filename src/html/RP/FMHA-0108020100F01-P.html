@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/retire.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">운용상품 직접 선택</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="fixed-wrap">
+                        <div class="fixed-inner">
+                            <div class="product-h-group">
+                                <P class="total-text">선택 상품(최대7개)</p>
+                                <p class="total-num">7개</p>
+                            </div>
+        
+                            <div class="subs -anchor">
+                                <div>
+                                    <div class="inner">
+                                        <div role="tablist" class="list">
+                                            <div class="item -active"><button type="button" role="tab" aria-selected="true" aria-controls="subs-panel1" id="sub1">현금성자산</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="subs-panel2" id="sub2">예금</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="subs-panel3" id="sub3">펀드</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="subs-panel4" id="sub4">ETF</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr class="hr -divid">
+
+                    <div class="subs-panels">
+                        <div role="tabpanel" aria-labelledby="sub1" id="subs-panel1" class="subs-panel -active" tabindex="0">
+                            <div class="case-wrap -xs">
+                                <div class="selection">
+                                    <ul>
+                                        <li>
+                                            <div class="info -bordered -delete">
+                                                <div class="info-main">
+                                                    농협현금성자산(대기자금)
+                                                </div>
+                                                <div class="info-bottom right">
+                                                    <span class="sm-txt">금리</span>
+                                                    <span class="number red">3.48%</span>
+                                                </div>
+                                                <div class="checkbox -sm -fixed">
+                                                    <input type="checkbox" id="bordered-account1">
+                                                    <label for="bordered-account1"><span class="hide">선택항목1</span></label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                        <div role="tabpanel" aria-labelledby="sub1" id="subs-panel2" class="subs-panel" tabindex="0">
+                            <div class="filter-bar">
+                                <div class="mix-bar">
+                                    <!-- <div class="search">1년 · 금리순<button type="button" class="icon-button -filter"><span class="hide">필터</span></button></div> -->
+                                    <!-- 2024 접근성 수정 -->
+                                    <div class="search" role="button" title="상품 정렬 선택">1년 · 금리순<span class="icon-button -filter" aria-hidden="true"><span class="hide">필터</span></span></div>
+                                </div>
+                            </div>
+
+                            <div class="selection">
+                                <ul>
+                                    <li>
+                                        <div class="info -bordered -delete">
+                                            <div class="info-main">
+                                                (DC/IRP)기업은행 정기예금 1년
+                                            </div>
+                                            <div class="info-bottom right">
+                                                <span class="sm-txt">금리</span>
+                                                <span class="number red">3.57%</span>
+                                            </div>
+                                            <div class="checkbox -sm -fixed">
+                                                <input type="checkbox" id="bordered-account2">
+                                                <label for="bordered-account2"><span class="hide">선택항목1</span></label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info -bordered -delete">
+                                            <div class="info-main">
+                                                (DC/IRP)하나은행 정기예금 1년
+                                            </div>
+                                            <div class="info-bottom right">
+                                                <span class="sm-txt">금리</span>
+                                                <span class="number red">4.07%</span>
+                                            </div>
+                                            <div class="checkbox -sm -fixed">
+                                                <input type="checkbox" id="bordered-account3">
+                                                <label for="bordered-account3"><span class="hide">선택항목2</span></label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info -bordered -delete">
+                                            <div class="info-main">
+                                                (DC/IRP)국민은행 정기예금 1년
+                                            </div>
+                                            <div class="info-bottom right">
+                                                <span class="sm-txt">금리</span>
+                                                <span class="number red">2.91%</span>
+                                            </div>
+                                            <div class="checkbox -sm -fixed">
+                                                <input type="checkbox" id="bordered-account4">
+                                                <label for="bordered-account4"><span class="hide">선택항목3</span></label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info -bordered -delete">
+                                            <div class="info-main">
+                                                (DC/IRP)신한은행 정기예금 1년
+                                            </div>
+                                            <div class="info-bottom right">
+                                                <span class="sm-txt">금리</span>
+                                                <span class="number red">2.91%</span>
+                                            </div>
+                                            <div class="checkbox -sm -fixed">
+                                                <input type="checkbox" id="bordered-account5">
+                                                <label for="bordered-account5"><span class="hide">선택항목4</span></label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button type="button" class="more-button">더보기</button>
+                            </div>
+        
+                            <!-- [CASE] 상품 미존재 시 -->
+                            <!-- <div class="result -sm -caution">
+                                <p class="message">
+                                    조회 결과가 없습니다.<br>
+                                    설정을 변경해 주세요.
+                                </p>
+                            </div> -->
+                            <!-- // -->
+                        </div>
+
+                        <div role="tabpanel" aria-labelledby="sub1" id="subs-panel3" class="subs-panel" tabindex="0">
+                            <!-- [CASE] 공격투자형:-grade1, 적극투자형:-grade3, 위험중립형:-grade4, 안정추구형:-grade5, 안정형:-grade6 -->
+                            <p class="grade-notice -panel-case">김농협님의 <span class="-grade3">적극투자형</span>에 적합한 상품입니다.</p>
+
+                            <div class="filter-bar">
+                                <div class="mix-bar">
+                                    <!-- <div class="search"><span>전체</span><span>ㆍ</span><span>3개월</span><button type="button" class="icon-button -filter"><span class="hide">필터</span></button></div> -->
+                                    <!-- 2024 접근성 수정 -->
+                                    <div class="search" role="button" title="상품 정렬 선택"><span>전체</span><span>ㆍ</span><span>3개월</span><span class="icon-button -filter" aria-hidden="true"><span class="hide">필터</span></span></div>
+                                    <div class="etc">
+                                        <div class="label">
+                                            <label for="">추천 상품</label>
+                                            <span class="tooltip">
+                                                <button type="button" class="tooltip-button" aria-haspopup="true" ><span class="hide">툴팁</span></button>
+                                            </span>
+                                        </div>
+                                        <span class="switch -sm">
+                                            <input type="checkbox" id="switch-sm-tlccc">
+                                            <label for="switch-sm-tlccc"><span class="hide">토글스위치</span></label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="selection">
+                                <ul>
+                                    <li>
+                                        <div class="info -bordered -check">
+                                            <div class="top-area">
+                                                <span class="badge -grayline">계열사</span> <span class="badge -grade3">다소높은위험</span>
+                                            </div>
+                                            <div class="info-main">
+                                                NH-Amundi 필승코리아증권투자신탁[주식]C-P2e
+                                            </div>
+                                            <div class="info-bottom right">
+                                                <span class="sm-txt">3개월</span>
+                                                <span class="number red">4.51%</span>
+                                            </div>
+                                            <div class="checkbox -sm -fixed">
+                                                <input type="checkbox" id="bordered-account6">
+                                                <label for="bordered-account6"><span class="hide">선택항목1</span></label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info -bordered -check">
+                                            <div class="top-area">
+                                                <span class="badge -greenline">금융상품몰</span> <span class="badge -grade3">다소높은위험</span>
+                                            </div>
+                                            <div class="info-main">
+                                                BK골드마이닝증권투자신탁1호(주식) C-Re
+                                            </div>
+                                            <div class="info-bottom right">
+                                                <span class="sm-txt">3개월</span>
+                                                <span class="number blue">4.51%</span>
+                                            </div>
+                                            <div class="checkbox -sm -fixed">
+                                                <input type="checkbox" id="bordered-accoun7">
+                                                <label for="bordered-accoun7"><span class="hide">선택항목2</span></label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info -bordered -check">
+                                            <div class="top-area">
+                                                <span class="badge -greenline">금융상품몰</span> <span class="badge -grade3">다소높은위험</span>
+                                            </div>
+                                            <div class="info-main">
+                                                한국투자저축은행 정기예금 1년 개인형IRP
+                                            </div>
+                                            <div class="info-bottom right">
+                                                <span class="sm-txt">3개월</span>
+                                                <span class="number blue">4.51%</span>
+                                            </div>
+                                            <div class="checkbox -sm -fixed">
+                                                <input type="checkbox" id="bordered-account8">
+                                                <label for="bordered-account8"><span class="hide">선택항목3</span></label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button type="button" class="more-button">더보기</button>
+                            </div>
+
+                            <!-- [CASE] 투자성향분석을 하지 않은 경우 시 -->
+                            <!-- <div class="result -sm -caution">
+                                <p class="message">
+                                    투자성향분석을 하면<br>
+                                    상품을 선택할 수 있어요.
+                                </p>
+                            </div>
+                            <div class="case-wrap -sm">
+                                <button type="button" class="button -lg">투자성향 분석하기</button>
+                            </div> -->
+                            <!-- // [CASE] 투자성향분석을 하지 않은 경우 시 -->
+
+                            <!-- [CASE] 상품 미존재 시 -->
+                            <!-- <div class="result -sm -caution">
+                                <p class="message">
+                                    조회 결과가 없습니다.<br>
+                                    설정을 변경해 주세요.
+                                </p>
+                            </div> -->
+                            <!-- // [CASE] 상품 미존재 시 -->
+                        </div>
+                        
+                        <div role="tabpanel" aria-labelledby="sub1" id="subs-panel4" class="subs-panel" tabindex="0">
+                            <!-- [CASE] 공격투자형:-grade1, 적극투자형:-grade3, 위험중립형:-grade4, 안정추구형:-grade5, 안정형:-grade6 -->
+                            <p class="grade-notice -panel-case">김농협님의 <span class="-grade3">적극투자형</span>에 적합한 상품입니다.</p>
+
+                            <div class="filter-bar">
+                                <div class="mix-bar">
+                                    <!-- <div class="search">1년 · 금리순<button type="button" class="icon-button -filter"><span class="hide">필터</span></button></div> -->
+                                    <!-- 2024 접근성 수정 -->
+                                    <div class="search" role="button" title="상품 정렬 선택">1년 · 금리순<span class="icon-button -filter" aria-hidden="true"><span class="hide">필터</span></span></div>
+                                </div>
+                            </div>
+
+                            <div class="selection">
+                                <ul>
+                                    <li>
+                                        <div class="info -bordered -check">
+                                            <div class="top-area">
+                                                <span class="badge -grayline">계열사</span> <span class="badge -grade3">다소높은위험</span>
+                                            </div>
+                                            <div class="info-main">
+                                                NH-Amundi 필승코리아증권투자신탁[주식]C-P2e
+                                            </div>
+                                            <div class="info-bottom right">
+                                                <span class="sm-txt">3개월</span>
+                                                <span class="number red">4.51%</span>
+                                            </div>
+                                            <div class="checkbox -sm -fixed">
+                                                <input type="checkbox" id="bordered-account9">
+                                                <label for="bordered-account9"><span class="hide">선택항목1</span></label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info -bordered -check">
+                                            <div class="top-area">
+                                                <span class="badge -greenline">금융상품몰</span> <span class="badge -grade3">다소높은위험</span>
+                                            </div>
+                                            <div class="info-main">
+                                                BK골드마이닝증권투자신탁1호(주식) C-Re
+                                            </div>
+                                            <div class="info-bottom right">
+                                                <span class="sm-txt">3개월</span>
+                                                <span class="number blue">4.51%</span>
+                                            </div>
+                                            <div class="checkbox -sm -fixed">
+                                                <input type="checkbox" id="bordered-account10">
+                                                <label for="bordered-account10"><span class="hide">선택항목2</span></label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info -bordered -check">
+                                            <div class="top-area">
+                                                <span class="badge -greenline">금융상품몰</span> <span class="badge -grade3">다소높은위험</span>
+                                            </div>
+                                            <div class="info-main">
+                                                한국투자저축은행 정기예금 1년 개인형IRP
+                                            </div>
+                                            <div class="info-bottom right">
+                                                <span class="sm-txt">3개월</span>
+                                                <span class="number blue">4.51%</span>
+                                            </div>
+                                            <div class="checkbox -sm -fixed">
+                                                <input type="checkbox" id="bordered-account11">
+                                                <label for="bordered-account11"><span class="hide">선택항목3</span></label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button type="button" class="more-button">더보기</button>
+                            </div>
+
+                            <!-- [CASE] 상품 미존재 시 -->
+                            <!-- <div class="result -sm -caution">
+                                <p class="message">
+                                    조회 결과가 없습니다.<br>
+                                    설정을 변경해 주세요.
+                                </p>
+                            </div>
+                            <div class="case-wrap -sm">
+                                <button type="button" class="button -lg">투자성향 분석하기</button>
+                            </div> -->
+                            <!-- // -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- [CASE] 현금성자산 탭에서만 알아두세요 노출 -->
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <!-- [CASE] IRP 세액공제용 / 포트폴리오설정->직접일 경우 -->
+                                <li>현금성자산이란 예금, 투자상품 등의 운용상품으로 운용되지 않는 대기자금입니다. 저금리가 적용되기 때문에 현재보유상품 변경 및 입금예정상품 변경에서 관리해 주시기 바랍니다.</li>
+                                <!-- // [CASE] IRP 세액공제용 / 포트폴리오설정->직접일 경우 -->
+
+                                <!-- [CASE] IRP 퇴직금수령용 / 가입방법 선택:꼼꼼일 경우 -->
+                                <!-- <li>퇴직금 수령 후 바로 해지를 원하시는 경우 상품매도기간이 가장 짧은 현금성자산(대기자금)으로 운용을 권해 드립니다.</li> -->
+                                <!-- // [CASE] IRP 퇴직금수령용 / 가입방법 선택:꼼꼼일 경우 -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- // [CASE] 현금성자산 탭에서만 알아두세요 노출 -->
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+        
+        var fixWrap = document.querySelector('.fixed-wrap');
+        var fixInner = document.querySelector('.fixed-wrap .fixed-inner');
+        var popupContents = document.querySelector('.popup').children[0].children[1];
+        // console.log(popupContents);
+        
+        popupContents.addEventListener('scroll', function(){
+            if(popupContents.scrollTop > 16) {
+                fixWrap.classList.add('-on');
+            }else {
+                fixWrap.classList.remove('-on');
+            }
+        })
+
+        var fixedSubs = document.querySelectorAll('.item');
+        fixedSubs.forEach(function(e){
+            e.addEventListener('click', function(){
+                popupContents.scrollTop = 0;
+            })
+        })
+    </script>
+</body>
+</html>

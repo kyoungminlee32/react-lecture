@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출한도조회위한 정보 입력_바닥페이지</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">갈아타기를 위한 상세 대출 정보를<br>확인해 주세요</h2>
+                    </div>
+                    <div class="title-group">
+                        <div class="inner">
+                            <h3 class="h5">대출 가능금액</h3>
+                        </div>
+                        <a href="javascript:void(0)" class="a -arrow">산출 내역</a>                
+                    </div>  
+                    <dl class="dl -box limit-point-box mci">
+                        <div>
+                            <dt>MCI 가입 대상
+                                <span class="tooltip">
+                                    <button type="button" class="trigger">
+                                        <span class="hide">툴팁</span>
+                                    </button>
+                                    <span class="panel">
+                                        <span class="title">MCI(mortgage Credit Insurance : 모기지신용보험)</span>
+                                        <span class="t-content">
+                                            <!-- 240424 오타 수정 -->
+                                            <span class="dot">
+                                                대출 가능금액 산정할 때 차감되는 소액임차보증금만큼을 서울보증보험의 보험을 가입하고 소액임차보증금 차감금액만큼을 추가로 대출할 수
+                                                있는 상품입니다.
+                                            </span>
+                                            <span class="dot">MCI 보험료는 NH농협은행에서 부담합니다.</span>
+                                        </span>
+                                    </span>
+                                </span>
+
+                            </dt>
+                            <dd>5억 3,000만원</dd>
+                        </div>
+                        <div>
+                            <dt>MCI 미가입 대상</dt>
+                            <dd>4억 9,300만원</dd>
+                        </div>
+                    </dl>
+                    <!-- [CASE] 다른 금융기관 대출 정보 조회 -->
+                    <dl class="dl -lined -bottom">
+                        <div>
+                            <dt>대환대상 총 대출잔액</dt>
+                            <dd>500,000,000원</dd>
+                        </div>
+                        <div>
+                            <dt>신청금액</dt>
+                            <dd>500,000,000원</dd>
+                        </div>
+                    </dl>
+                    <!-- 2024-07-24 마크업 수정 -->
+                    <div class="text">
+                        <p class="info -bullet">신청금액은 대환대상 총 대출잔액에 맞춰 자동으로 입력됩니다.</p>
+                    </div>
+                    <!-- //2024-07-24 마크업 수정 -->
+                    <div class="total-account-Wrap dl-accountlist">
+                        <p class="total-count tit">상환되는 대출정보 <span class="point">2</span>건</p>
+                        <dl class="dl -box case-box2">
+                            <div>
+                                <dt>등기고유번호</dt>
+                                <dd>11112020112147</dd>
+                            </div>
+                            <div>
+                                <dt>담보 아파트</dt>
+                                <dd>서울시 은평구 불광로 122-10 <br> 북한산현대힐스테이트3차 317동 1106호</dd>
+                            </div>
+                        </dl>
+                        <div class="accounts">
+                            <div class="account">
+                                <div data-bankcode="088" class="info">
+                                    <span class="name">
+                                        <span>신한은행</span>
+                                    </span>
+                                    <span class="account-number">
+                                        <span>주택담보대출1</span>
+                                    </span>
+    
+                                </div>
+                                <dl class="dl">
+                                     <!-- 2024-07-24 마크업 추가 -->
+                                     <div>
+                                        <dt>주택종류</dt>
+                                        <dd>빌라</dd>
+                                    </div>
+                                    <!-- //2024-07-24 마크업 추가 -->
+                                    <div>
+                                        <dt>대출잔액 <br>(최초대출금액)</dt>
+                                        <dd>5,150,000원 <br> (500,000,000원)</dd>
+                                    </div>
+                                    <div>
+                                        <!-- 240325 ux라이팅 수정 -->
+                                        <dt>대출 계좌번호</dt>
+                                        <!-- //240325 ux라이팅 수정 -->
+                                        <dd>12-2569-652398</dd>
+                                    </div>
+                                    <div>
+                                        <dt>대출일자</dt>
+                                        <dd>2019.08.01</dd>
+                                    </div>
+                                    <!-- 240220 만기일자 추가 -->
+                                    <div>
+                                        <dt>만기일자</dt>
+                                        <dd>2019.08.01</dd>
+                                    </div>
+                                    <!-- //240220 만기일자 추가 -->
+                                    <div>
+                                        <dt>대출금리</dt>
+                                        <dd>7.5%</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                            <div class="account">
+                                <div data-bankcode="088" class="info">
+                                    <span class="name">
+                                        <span>신한은행</span>
+                                    </span>
+                                    <span class="account-number">
+                                        <span>주택담보대출1</span>
+                                    </span>
+                                </div>
+                                <dl class="dl">
+                                     <!-- 2024-07-24 마크업 추가 -->
+                                     <div>
+                                        <dt>주택종류</dt>
+                                        <dd>아파트</dd>
+                                    </div>
+                                    <!-- //2024-07-24 마크업 추가 -->
+                                    <div>
+                                        <dt>대출잔액 <br>(최초대출금액)</dt>
+                                        <dd>5,150,000원 <br> (500,000,000원)</dd>
+                                    </div>
+                                    <div>
+                                        <!-- 240325 ux라이팅 수정 -->
+                                        <dt>대출 계좌번호</dt>
+                                        <!-- //240325 ux라이팅 수정 -->
+                                        <dd>12-2569-652398</dd>
+                                    </div>
+                                    <div>
+                                        <dt>대출일자</dt>
+                                        <dd>2019.08.01</dd>
+                                    </div>
+                                    <!-- 240220 만기일자 추가 -->
+                                    <div>
+                                        <dt>만기일자</dt>
+                                        <dd>2019.08.01</dd>
+                                    </div>
+                                    <!-- //240220 만기일자 추가 -->
+                                    <div>
+                                        <dt>대출금리</dt>
+                                        <dd>7.5%</dd>
+                                    </div>
+                                </dl>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <!-- //[CASE] 다른 금융기관 대출 정보 조회 -->
+
+                    <div class="case-wrap -sm">
+                        <button type="button" class="button -lg -secondary">다른 금융기관 대출 정보 조회</button>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary -disabled">확인</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

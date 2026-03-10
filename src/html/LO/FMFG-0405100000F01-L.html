@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>(팝업)소유권이전후경과기간</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">소유권 이전 후 경과기간</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="h4-group pop-tit">
+                        <h3 class="h5">등기부등본상의 소유권이전일로부터 대출희망일까지 기간</h3>
+                    </div>
+                    <p class="p bk">예시) 소유권이전일이 2020.08.05. 인 경우</p>
+                    <ul class="ul -bullet big">
+                        <li>대출희망일 [2020.10.05] : 2개월</li>
+                        <li>대출희망일 [2020.11.05] : 3개월</li>
+                        <li>대출희망일 [2020.12.05] : 4개월</li>
+                    </ul>
+                    <p class="message">대출희망일은 신청일 기준으로 15일 이후로만 선택 가능합니다.</p>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE] 모두 “예“ 선택, 체크박스 선택 시 활성화 처리 -->
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                    <!-- //[CASE] 모두 “예“ 선택, 체크박스 선택 시 활성화 처리 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <!-- 차트 관련js -->
+    <script src="../../assets/libs/Chart/dist/Chart.js"></script>
+    <script src="../../assets/libs/Chart/dist/Chart.min.js"></script>
+
+    <script>
+        Popup.open('popup');
+
+
+
+    </script>
+</body>
+
+</html>

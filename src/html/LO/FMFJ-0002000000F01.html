@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <!-- 240326 재검토 -->
+                    <h1 class="title">대출신청내역 조회</h1>
+                    <!-- // 240326 재검토 -->
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="h2-group">
+                        <!-- 240326 재검토 -->
+                        <h2 class="h2">대출 진행 현황을 확인해 주세요</h2>
+                        <!-- // 240326 재검토 -->
+                    </div>
+
+                    <h4 class="h5">NH모바일아파트대출2.0</h4>
+
+                    <ol class="ol -step -horizontal -loan">
+                        <li class="step1 -done">
+                            <div class="title">
+                                대출<br>
+                                신청
+                            </div>
+                        </li>
+                        <!-- 240326 재검토 -->
+                        <li class="step2 -ing">
+                            <div class="title">
+                                정보 제공<br>
+                                동의
+                            </div>
+                        </li>
+                        <!-- // 240326 재검토 -->
+                        <li class="step3">
+                            <div class="title">
+                                대출<br>
+                                심사
+                            </div>
+                        </li>
+                        <li class="step4">
+                            <div class="title">
+                                대출<br>
+                                약정
+                            </div>
+                        </li>
+                        <li class="step5">
+                            <div class="title">
+                                인터넷<br>
+                                등기
+                            </div>
+                        </li>
+                    </ol>
+
+                    <!-- [CASE] 대출실행 진행중 진입 시 노출 -->
+                    <!-- <ul class="ul -bullet">
+                        <li>대출실행에 필요한 모든 절차가 완료되어 <span class="point">대출실행일에 지정된 계좌로 입금될 예정</span>입니다.</li>
+                        <li>대출실행일 전 담보물, 신용상태 등의 변동이 있는 경우에는 대출이 제한될 수 있습니다.</li>
+                    </ul> -->
+                    <!-- // [CASE] 대출실행 진행중 진입 시 노출 -->
+
+                    <div class="case-wrap -sm">
+                        <!-- 240326 재검토 -->
+                        <ol class="ol -step -loan">
+                            <li class="-done">
+                                <!-- 240326 재검토 -->
+                                <div class="title">대출 신청</div>
+                                <!-- // 240326 재검토 -->
+                                <div>
+                                    [CASE] 진행중 : 담보물건 구입예정 / 담보물건 보유중일 경우
+                                    <p class="p">신청한 대출 금액과 예상 금리를 확인 후 대출 신청 절차를 완료해 주세요</p>
+                                    <!-- // [CASE] 진행중 : 담보물건 구입예정 / 담보물건 보유중일 경우 -->
+
+                                    <!-- 2024-11-26 문구 수정 -->
+                                    [CASE] 진행완료 : 담보물건 구입예정
+                                    <ul class="ul -bullet">
+                                        <li>매매계약서를 제출해 주세요.</li>
+                                        <li>매매계약서와 관리점에서 추가 요청한 서류는 ‘증빙서류 사진 제출’로 제출해 주세요.</li>
+                                    </ul>
+                                    <!-- // [CASE] 진행완료 : 담보물건 구입예정 -->
+
+                                    [CASE] 진행완료 : 담보물건 보유중
+                                    <ul class="ul -bullet">
+                                        <li>담보제공 아파트의 등기필정보를 입력해 주세요.</li>
+                                        <li>희망 관리점에서 추가 요청한 서류는 ‘증빙서류 사진 제출’ 로 제출해 주세요.</li>
+                                    </ul>
+                                    <!-- // [CASE] 진행완료 : 담보물건 보유중 -->
+
+                                    <!-- //2024-11-26 문구 수정 -->
+                                </div>
+                                <div class="case-wrap -xxs">
+                                    <!-- [CASE] 진행중 : 담보물건 구입예정 / 담보물건 보유중일 경우 -->
+                                    <!-- <button type="button" class="button -xs -fit">대출 신청 이어하기</button> -->
+                                    <!-- // [CASE] 진행중 : 담보물건 구입예정 / 담보물건 보유중일 경우 -->
+
+                                    <!-- [CASE] 진행완료 : 담보물건 구입예정 -->
+                                    <!-- <button type="button" class="button -xs -fit">증빙서류 사진 제출</button> -->
+                                    <!-- // [CASE] 진행완료 : 담보물건 구입예정 -->
+
+                                    <!-- [CASE] 진행완료 : 담보물건 보유중 -->
+                                    <div class="fit-buttons">
+                                        <button type="button" class="button -xs -fit">등기필정보 입력</button>
+                                        <button type="button" class="button -xs -fit">증빙서류 사진 제출</button>
+                                    </div>
+                                    <!-- // [CASE] 진행완료 : 담보물건 보유중 -->
+                                </div>
+                            </li>
+                            <li class="-ing">
+                                <!-- 2024-11-26 문구 수정 -->
+                                <div class="title">[배우자(결혼예정자)] 신용 정보 제공 동의</div>
+                                <div>
+                                    <!-- [CASE] 진행전  -->
+                                    <!-- <p class="p">신청한 대출 금액과 예상 금리를 확인 후 대출 신청 절차를 완료해 주세요.</p> -->
+                                    <!-- // [CASE] 진행전 -->
+
+                                    <!-- [CASE] 진행중(동의자 없을 경우) -->
+                                    <ul class="ul -bullet">
+                                        <li>배우자(결혼예정자)의 신용 정보 제공에 동의해 주세요. </li>
+                                        <li>대출 신청일은 2023.10.04이며, 신청일 이후 6일 이내 배우자(결혼예정자)가 동의하지 않으면 대출 실행이 어려울 수 있습니다.</li>
+                                    </ul>
+                                    <!-- // [CASE] 진행중(동의자 없을 경우) -->
+                                    
+                                    <!-- [CASE] 진행중(1인 이상 동의 완료) -->
+                                    <!-- <ul class="ul -bullet">
+                                        <li>배우자/세대원 전원의 동의가 완료되지 않는 경우 대출 실행이 어려울 수 있습니다.</li>
+                                        <li>김은상 / 동의완료</li>
+                                        <li>김동상 / 모바일 서류 제출 완료</li>
+                                        <li>김농업 / 미성년 자녀 대리 동의 완료</li>
+                                        <li>김가업 / 동의완료</li>
+                                    </ul> -->
+                                    <!-- // [CASE] 진행중(1인 이상 동의 완료) -->
+
+                                    <!-- [CASE] 진행완료 -->
+                                    <!-- <ul class="ul -bullet">
+                                        <li>김은상 / 동의완료</li>
+                                        <li>김동상 / 모바일 서류 제출 완료</li>
+                                        <li>김농업 / 미성년 자녀 대리 동의 완료</li>
+                                        <li>김가업 / 동의완료/li>
+                                        <li>김동업 / 동의완료</li>
+                                    </ul> -->
+                                    <!-- [CASE] 진행완료 -->
+                                </div>
+                                <!-- //2024-11-26 문구 수정 -->
+
+                                <!-- [CASE] 진행중일경우만 노출 -->
+                                <div class="case-wrap -xxs">
+                                    <!-- 2024-11-26 문구 수정 -->
+                                    <button type="button" class="button -xs -fit">배우자(결혼예정자) 신용정보조회동의 URL 전송</button>
+                                    <!-- //2024-11-26 문구 수정 -->
+                                </div>
+                                <!-- // [CASE] 진행중일경우만 노출 -->
+                            </li>
+                            <li>
+                                <div class="title">대출 심사</div>
+                                <div>
+                                    <!-- [CASE] 진행전 -->
+                                    <p class="p">대출신청과 서류제출이 완료되면 희망 관리점에서 심사를 진행합니다.</p>
+                                    <!-- // [CASE] 진행전 -->
+                                    
+                                    <!-- [CASE] 진행중 -->
+                                    <!-- <ul class="ul -bullet">
+                                        <li>신청정보와 제출서류를 영업점에서 확인합니다.</li>
+                                        <li>대출 심사 후 대출금액과 금리를 안내해 드릴 예정입니다.</li>
+                                        <li>[NH농협은행 불광지점 김은상(02-0000-0000)]</li>
+                                    </ul> -->
+                                    <!-- // [CASE] 진행중 -->
+
+                                    <!-- [CASE] 진행완료 -->
+                                    <!-- <ul class="ul -bullet">
+                                        <li>대출심사가 완료되었습니다.</li>
+                                        <li>담보물 : [남가좌동] DMC래미안클라시스 102동  1703호</li>
+                                        <li>대출금액 : 120,000,000원</li>
+                                        <li>대출금리 : 2.53%</li>
+                                    </ul> -->
+                                    <!-- // [CASE] 진행완료 -->
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">대출 약정</div>
+                                <div>
+                                    <!-- [CASE] 진행전 -->
+                                    <p class="p">대출금액, 금리 등 대출 조건을 확인하고 전자약정서를 작성합니다.</p>
+                                    <!-- // [CASE] 진행전 -->
+
+                                    <!-- [CASE] 진행중 : 전자약정서 신청 전 -->
+                                    <!-- <ul class="ul -bullet">
+                                        <li>대출심사가 완료되어 영업점에서 작성하실 전자약정서를 준비하고 있습니다.</li>
+                                        <li>전자약정서 작성 요청 안내를 받으시면, 대출조건을 확인하고 작성해 주세요.</li>
+                                    </ul> -->
+                                    <!-- // [CASE] 진행중 : 전자약정서 신청 전 -->
+
+                                    <!-- [CASE] 진행중 : 전자약정서 신청 후 -->
+                                    <!-- <p class="p">[대출약정서 작성] 버튼을 선택하여 대출금액, 금리 등 대출조건을 확인하고 전자약정서를 작성해 주세요.</p> -->
+                                    <!-- // [CASE] 진행중 : 전자약정서 신청 후 -->
+
+                                    <!-- [CASE] 진행완료 -->
+                                    <!-- <p class="p">전자약정서 작성이 완료되었습니다.</p> -->
+                                    <!-- // [CASE] 진행완료 -->
+                                </div>
+
+                                <!-- [CASE] 진행중 : 전자약정서 신청 후에서만 노출 -->
+                                <div class="case-wrap -xxs">
+                                    <button type="button" class="button -xs -fit">대출약정서 작성</button>
+                                </div>
+                                <!-- // [CASE] 진행중 : 전자약정서 신청 후에서만 노출 -->
+                            </li>
+                            <li>
+                                <div class="title">인터넷 등기</div>
+                                <div>
+                                    <!-- [CASE] 진행전 -->
+                                    <ul class="ul -bullet">
+                                        <li>인터넷 등기로 근저당권설정을 위한 전자서명을 진행합니다.</li>
+                                        <li>전자서명을 위해 ㈜피노텍의 ‘통합 모바일 전자서명‘ 앱을 설치해 주세요.</li>
+                                    </ul>
+                                    <!-- // [CASE] 진행전 -->
+
+                                    <!-- [CASE] 진행중 : 대출진행상태11 & 등기상태 미 신청 -->
+                                    <!-- <ul class="ul -bullet">
+                                        <li>근저당권설정을 담당할 법무법인에서 근저당권설정 관련 서류를 준비하고 있습니다.</li>
+                                        <li>인터넷등기 전자서명 요청 안내를 받으시면, ㈜피노텍의 ‘통합 모바일 전자서명‘ 앱 설치 후 전자서명을 진행합니다.</li>
+                                    </ul> -->
+                                    <!-- // [CASE] 진행중 : 대출진행상태11 & 등기상태 미 신청 -->
+
+                                    <!-- [CASE] 진행중 : 등기상태 신청 중 -->
+                                    <!-- <p class="p">㈜피노텍의 ‘통합 모바일 전자서명‘ 앱 설치 후 근저당권설정을 위한 인터넷 등기 전자서명을 진행해 주세요.</p> -->
+                                    <!-- // [CASE] 진행중 : 등기상태 신청 중 -->
+
+                                    <!-- [CASE] 진행완료 -->
+                                    <!-- <p class="p">인터넷 등기 전자서명이 완료되었습니다.</p> -->
+                                    <!-- // [CASE] 진행완료 -->
+                                </div>
+
+                                <!-- [CASE] 진행완료에서는 미노출 나머지 노출 -->
+                                <div class="case-wrap -xxs">
+                                    <button type="button" class="button -xs -fit">통합 모바일 전자서명 앱 설치</button>
+                                </div>
+                                <!-- // [CASE] 진행완료에서는 미노출 나머지 노출 -->
+                            </li>
+                            <li>
+                                <div class="title">대출 실행</div>
+                                <div>
+                                    <!-- [CASE] 진행전 : 희망 관리점 심사전 -->
+                                    <ul class="ul -bullet">
+                                        <li>대출금액을 고객님이 지정한 계좌에 입금합니다.</li>
+                                        <li>대출 실행일 전 담보물, 신용상태 등의 변동이 있는 경우 대출이 제한될 수 있습니다.</li>
+                                    </ul>
+                                    <!-- // [CASE] 진행전 : 희망 관리점 심사전 -->
+
+                                    <!-- [CASE] 진행전 : 희망 관리점 심사후/진행중 -->
+                                    <!-- <ul class="ul -bullet">
+                                        <li>대출금액이 지정된 계좌에 입금됩니다.</li>
+                                        <li>대출 실행일 전 담보물, 신용상태 등의 변동이 있는 경우 대출이 제한될 수 있습니다.</li>
+                                    </ul> -->
+                                    <!-- // [CASE] 진행전 : 희망 관리점 심사후/진행중 -->
+                                </div>
+                            </li>
+                        </ol>
+                        <!-- // 240326 재검토 -->
+                    </div>
+                </div>
+
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <!-- 240326 재검토 -->
+                                <li>대출에 관한 자세한 사항은 희망 관리점으로 문의햬 주세요.</li>
+                                <!-- // 240326 재검토 -->
+                                <li>희망 관리점 : NH농협은행 불광지점 김은상(02-0000-0000)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg">대출 취소</button>
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

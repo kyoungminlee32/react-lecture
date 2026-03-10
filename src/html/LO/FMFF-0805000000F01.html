@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>사업업종 및 소호심사대상 여부 확인-바닥 페이지</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+                    <h1 class="title">대출한도 조회</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                        <button type="button" class="func -menu">
+                            <div class="hide">menu</div>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <!-- 231206 h2 문구수정 -->
+                        <h2 class="h2"> 대출 신청 전에 업종 및 소호심사대상을 확인해 주세요</h2>
+                    </div>
+                    <!-- 240227 ux라이팅 질문 전체 수정  -->
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">01</span>
+                                <span>한국표준산업분류표상 일반유흥주점업 (56211)에 해당되나요?</span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio1" id="radio1-1" checked>
+                                            <!-- 231205 label 클레스 수정 box-radio 클레스 수정 -->
+                                            <label for="radio1-1" class="check-ox -left -orign">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <!-- 240315 아니요 선택시 -caution 클래스 토글  -->
+                                            <input type="radio" class="-caution" name="radio1" id="radio1-2" checked>
+                                            <!-- //240315 -->
+                                            <label for="radio1-2" class="check-ox -left -orign">아니요</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">02</span>
+                                <span>한국표준산업분류표상 무도유흥주점업 (56212)에 해당되나요?</span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio2" id="radio2-1" checked>
+                                            <label for="radio2-1" class="check-ox -left -orign">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio2" id="radio2-2">
+                                            <label for="radio2-2" class="check-ox -left -orign">아니요</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">03</span>
+                                <span>도박장운영업(지방자치단체 출자 업체 제외) (91249)에 해당되나요?</span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio3" id="radio3-1" checked>
+                                            <label for="radio3-1" class="check-ox -left -orign">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio3" id="radio3-2">
+                                            <label for="radio3-2" class="check-ox -left -orign">아니요</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">04</span>
+                                <span>안마시술소 (96122)에 해당되나요?</span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4" id="radio4-1" checked>
+                                            <label for="radio4-1" class="check-ox -left -orign">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4" id="radio4-2">
+                                            <label for="radio4-2" class="check-ox -left -orign">아니요</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">05</span>
+                                <span>증기탕 (96121)에 해당되나요?</span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio5" id="radio5-1" checked>
+                                            <label for="radio5-1" class="check-ox -left -orign">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio5" id="radio5-2">
+                                            <label for="radio5-2" class="check-ox -left -orign">아니요</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">06</span>
+                                <span>사행성게임기 제조 또는 유통 관련 기업, 사행성오락실 또는 성인PC방 운영업에 해당되나요?</span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio6" id="radio6-1" checked>
+                                            <label for="radio6-1" class="check-ox -left -orign">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio6" id="radio6-2">
+                                            <label for="radio6-2" class="check-ox -left -orign">아니요</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">07</span>
+                                <span>대부업에 해당되나요?</span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio7" id="radio7-1" checked>
+                                            <label for="radio7-1" class="check-ox -left -orign">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio7" id="radio7-2">
+                                            <label for="radio7-2" class="check-ox -left -orign">아니요</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <hr class="hr -xxl">
+                    <div class="field mt-32">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">01</span>
+                                <span>이번 신청금액을 포함하여 NH농협은행 총 대출금액이 10억원을 초과하나요?</span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <!-- 240206 for,id 수정 -->
+                                            <input type="radio" name="radio4-1" id="radio4-01" checked>
+                                            <label for="radio4-01" class="check-ox -left -orign">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4-1" id="radio4-02">
+                                            <label for="radio4-02" class="check-ox -left -orign">아니요</label>
+                                            <!-- //240206 for,id 수정 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">02</span>
+                                <span>NH농협은행에서 지급보증대출을 보유 중인가요?</span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4-2" id="radio4-3" checked>
+                                            <label for="radio4-3" class="check-ox -left -orign">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4-2" id="radio4-4">
+                                            <label for="radio4-4" class="check-ox -left -orign">아니요</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">03</span>
+                                <span>B2B관련여신상품을 보유 중인가요?</span>
+                                <span class="tooltip">
+                                    <button type="button" class="trigger">
+                                        <span class="hide">툴팁</span>
+                                    </button>
+                                    <span class="panel">
+                                        <span class="t-content">
+                                            <span>(전자)어음할인, 외상매출채권담보대출, 미래채원담보대출, 다같이성장론, 기업구매자금대출, 의료진료비채권담보대출,
+                                                전자채권담보대출 등</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4-3" id="radio4-5" checked>
+                                            <label for="radio4-5" class="check-ox -left -orign">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4-3" id="radio4-6">
+                                            <label for="radio4-6" class="check-ox -left -orign">아니요</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">04</span>
+                                <span>외국환관련여신상품을 보유 중인가요?</span>
+                                <span class="tooltip">
+                                    <button type="button" class="trigger">
+                                        <span class="hide">툴팁</span>
+                                    </button>
+                                    <span class="panel">
+                                        <span class="t-content">
+                                            <span>수출환어음매입, 수입신용장개설 등</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4-4" id="radio4-7" checked>
+                                            <label for="radio4-7" class="check-ox -left -orign">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4-4" id="radio4-8">
+                                            <label for="radio4-8" class="check-ox -left -orign">아니요</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!-- //240227 ux라이팅 질문 전체 수정  -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE] 모두 “예“ 선택, 체크박스 선택 시 활성화 처리 -->
+                        <button type="button" class="button -lg -primary" disabled>확인</button>
+                    </div>
+                    <!-- //[CASE] 모두 “예“ 선택, 체크박스 선택 시 활성화 처리 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layer" class="layer" aria-labelledby="coupon-head" role="region">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <!-- 240130 ux라이팅 수정 -->
+                    <h1 class="title">시·도</h1>
+                    <!-- //240130 ux라이팅 수정 -->
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="options">
+                        <ul>
+                            <li><button type="button" class="option -active">서울</button></li>
+                            <li><button type="button" class="option">부산</button></li>
+                            <li><button type="button" class="option">대구</button></li>
+                            <li><button type="button" class="option">인천</button></li>
+                            <li><button type="button" class="option">광주</button></li>
+                            <li><button type="button" class="option">대전</button></li>
+                            <li><button type="button" class="option">울산</button></li>
+                            <li><button type="button" class="option">세종</button></li>
+                            <li><button type="button" class="option">경기</button></li>
+                            <li><button type="button" class="option">강원</button></li>
+                            <li><button type="button" class="option">충북</button></li>
+                            <li><button type="button" class="option">제주</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+        Layer.open('layer');
+    </script>
+</body>
+
+</html>

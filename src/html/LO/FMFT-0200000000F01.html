@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>시작 전 확인사항</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출한도 조회</h1>
+
+                    <div class="funcs">
+                        <!-- <button type="button" class="func -cs"><span class="hide">상담</span></button> -->
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 231205 h2-group코드변경 -->
+                    <div class="h2-group">
+                        <h2 class="h2">시작 전 확인해 주세요</h2>
+                        <!-- 240318 문구 수정 -->
+                        <ul class="ul -bullet">
+                            <li>대출을 신청할 수 있는지 확인하는 단계입니다.</li>
+                            <li>사실과 다르게 작성하면 대출이 취소될 수 있습니다.</li>
+                        </ul>
+                        <!-- //240318 문구 수정 -->
+                    </div>
+                    <!-- 240318 ux라이팅 전체 수정 -->
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">01</span>
+                                <span>자동차운전면허증을 가지고 있으며, 신차 구입자금을 위해 신청하시나요?</span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4-1" id="radio4-1">
+                                            <label for="radio4-1" class="check-ox -left -orign">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <!-- 240315 아니요 선택시 -caution 클래스 토글  -->
+                                            <input type="radio" class="-caution" name="radio4-1" id="radio4-2" checked>
+                                            <!-- //240315 -->
+                                            <label for="radio4-2" class="check-ox -left -orign">아니요</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">02</span>
+                                <span>급여소득자(사업소득자)로 3개월 이상 근무(사업영위)하고 계신가요?</span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4-2" id="radio4-3" checked>
+                                            <label for="radio4-3" class="check-ox -left -orign">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4-2" id="radio4-4">
+                                            <label for="radio4-4" class="check-ox -left -orign">아니요</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">03</span>
+                                <span>자동차 등록(차량등록사업소) 신청 전인가요?</span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4-3" id="radio4-5" checked>
+                                            <label for="radio4-5" class="check-ox -left -orign">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4-3" id="radio4-6">
+                                            <label for="radio4-6" class="check-ox -left -orign">아니요</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">04</span>
+                                <span>NH농협은행에 본인 명의의 휴대폰번호가 등록되어 있나요?</span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4-4" id="radio4-7" checked>
+                                            <label for="radio4-7" class="check-ox -left -orign">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4-4" id="radio4-8">
+                                            <label for="radio4-8" class="check-ox -left -orign">아니요</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">05</span>
+                                <span>NH농협은행 입출식계좌를 보유하고 계신가요?</span>
+                            </dt>
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4-5" id="radio4-9" checked>
+                                            <label for="radio4-9" class="check-ox -left -orign">예</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="radio4-5" id="radio4-10">
+                                            <label for="radio4-10" class="check-ox -left -orign">아니요</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                    <!-- [CASE] 모두 “예“ 선택, 체크박스 선택 시 활성화 처리 -->
+                    <button type="button" class="button -lg -primary" disabled>확인</button>
+                    </div>
+                    <!-- //[CASE] 모두 “예“ 선택, 체크박스 선택 시 활성화 처리 -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

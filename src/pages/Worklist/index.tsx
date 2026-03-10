@@ -1,127 +1,117 @@
-import './index.css';
+// import './index.css';
+import styles from './worklist.module.css';
+
 import { Link } from 'react-router-dom';
 
 export const Worklist = () => {
   return (
-    <div>
-      <div className='wh'>
-        <div className='wh__title'><Link to='/'>NDS</Link></div>
-        <div className='wh__nav'>
-            <Link to='/'>홈</Link>
-            <Link to='/About'>About</Link>
-            <Link to='/메뉴1'>메뉴1</Link>
-            <Link to='/메뉴2'>메뉴2</Link>
-            <Link to='/메뉴3'>메뉴3</Link>
-            <Link to='#' className='-active'>Example of use</Link>
+    <div className={styles.worklist}>
+        <div className={styles.skipNav}>
+            <a href="#main">본문 바로가기</a>
+            <a href="#gnb">메뉴 바로가기</a>
         </div>
-
-        <div className='wh__search'>
-            <div className='wh__inner'>
-                <div className='field'>
-                    <div className='mix'>
-                        <div className='text'>
-                            <input type='text' id='tableSearch' className='left-side' />
-                        </div>
-        
-                        <div className='space -lined search'>
-                            <button type='button' className='icon-button -search right-side search-bt'></button>
-                        </div>
-                    </div>
+        <header>
+            <div className={styles.title}>
+                <div className={styles.subject}>
+                    {/* <img src="./com/images/guide_logo_nh.svg" alt="NH Bank, NH 농협" className="nhLogo"> */}
+                    <span className={styles.headerTit}>
+                        <em className={styles.headerYear}>UI/UX Guide SYSTEM</em> | 
+                        <em className="prj">금상몰</em>
+                    </span>
+                    {/* <div className="total"><em>진행률 </em><span></span></div> */}
+                </div>
+                <div className={styles.search}>
+                    <input type="text" id="tableSearch" placeholder="검색어입력" />
+                </div>
+                <div className={styles.menu}>
+                    <ul>
+                        <li><Link to="pubList.html" className={styles.active} title="선택됨">퍼블리스트</Link></li>
+                        <li><Link to="guide.html">UI가이드</Link></li>
+                        <li><Link to="docs.html">컨벤션</Link></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-      </div>
-      <main>
-        <div className='wrap'>
-            <table>
-                <colgroup>
-                    <col style={{width: '10%'}} />
-                    <col style={{width: '10%'}} />
-                    <col style={{width: '10%'}} />
-                    <col style={{width: '10%'}} />
-                    <col style={{width: '10%'}} />
-                    <col style={{width: '10%'}} />
-                    <col style={{width: '15%'}} />
-                    <col style={{width: '4%'}} />
-                    <col style={{width: '5%'}} />
-                    <col style={{width: '5%'}} />
-                    <col style={{width: '5%'}} />
-                    <col style={{width: '10%'}} />
-                </colgroup>
-                <thead>
+            <nav className={styles.gnb}>
+                <ul>
+                    {/* gnb는 depth1로 자동생성됩니다. */}
+                    <li><span>전체보기</span></li>
+                    <li><span>2025_상시</span></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main" className={styles.pubList}>
+            <table className="dataTable compact">
+                <tbody>
                     <tr>
-                        <th>Lv2</th>
-                        <th>Lv3</th>
-                        <th>Lv4</th>
-                        <th>Lv5</th>
-                        <th>Lv6</th>
-                        <th>Lv7</th>
-                        <th>화면ID</th>
-                        <th>담당</th>
-                        <th>완료일</th>
-                        <th>UX라이팅</th>
-                        <th>수정일</th>
-                        <th>수정내역</th>
-                    </tr>
-                </thead>
-                {/* 공통 */}
-                <tbody className='util2'>
-                    <tr>
-                        <td className='lv2'>공통</td>
-                        <td className='lv3'>셀렉트 박스</td>
-                        <td className='lv4'>통신사 선택</td>
-                        <td className='lv5'></td>
-                        <td className='lv6'></td>
-                        <td className='lv7'></td>
-                        <td className='func'>
-                            <input type='radio' className='iframe-select' name='iframename' />
-                            <Link to='./prototype/NDS/html/BKOB/BKOB-0100000000V01-P.html' className='linked' target='_blank'>BKOB-0100000000V01-P</Link>
-                        <button type='button' className='clip'></button></td>
-                        <td className='user'></td>
-                        <td className='date'></td>
-                        <td className='cf1'></td>
-                        <td className='cf2'></td>
-                        <td className='note'></td>
-                    </tr>
-                    <tr>
-                        <td className='lv2'>공통</td>
-                        <td className='lv3'>셀렉트 박스</td>
-                        <td className='lv4'>휴대폰번호 앞자리 선택</td>
-                        <td className='lv5'></td>
-                        <td className='lv6'></td>
-                        <td className='lv7'></td>
-                        <td className='func'>
-                            <input type='radio' className='iframe-select' name='iframename' />
-                            <Link to='./prototype/NDS/html/BKOB/BKOB-0200000000V01-P.html' className='linked' target='_blank'>BKOB-0200000000V01-P</Link>
-                        <button type='button' className='clip'></button></td>
-                        <td className='user'></td>
-                        <td className='date'></td>
-                        <td className='cf1'></td>
-                        <td className='cf2'></td>
-                        <td className='note'></td>
-                    </tr>
-                    <tr>
-                        <td className='lv2'>공통</td>
-                        <td className='lv3'>셀렉트 박스</td>
-                        <td className='lv4'>이메일 선택</td>
-                        <td className='lv5'></td>
-                        <td className='lv6'></td>
-                        <td className='lv7'></td>
-                        <td className='func'>
-                            <input type='radio' className='iframe-select' name='iframename' />
-                            <Link to='./prototype/NDS/html/BKOB/BKOB-0400000000V01-P.html' className='linked' target='_blank'>BKOB-0400000000V01-P</Link>
+                        <td className="lv2">A타입 인터랙션</td>
+                        <td className="lv3"></td>
+                        <td className="lv4"></td>
+                        <td className="lv5"></td>
+                        <td className="lv6"></td>
+                        <td className="lv7"></td>
+                        <td className={styles.func}>
+                            <input type="radio" className={styles['iframe-select']} name="iframename" />
+                            <Link to="/prototype/A-type/html/A-type" className="linked" target="_blank">A타입인터랙션 샘플</Link>
                         </td>
-                        <td className='user'></td>
-                        <td className='date'></td>
-                        <td className='cf1'></td>
-                        <td className='cf2'></td>
-                        <td className='note'></td>
+                        <td className={styles.user}>이병철</td>
+                        <td className={styles.date}><span></span></td>
+                        <td className={styles.cf1}></td>
+                        <td className={styles.note}></td>
+                    </tr>
+                    <tr>
+                        <td className="lv2">B타입 인터랙션</td>
+                        <td className="lv3"></td>
+                        <td className="lv4"></td>
+                        <td className="lv5"></td>
+                        <td className="lv6"></td>
+                        <td className="lv7"></td>
+                        <td className={styles.func}>
+                            <input type="radio" className={styles['iframe-select']} name="iframename" />
+                            <Link to="./prototype/B-type/html/B-type" className="linked" target="_blank">B타입인터랙션 샘플</Link>
+                        </td>
+                        <td className={styles.user}>이병철</td>
+                        <td className={styles.date}><span></span></td>
+                        <td className={styles.cf1}></td>
+                        <td className={styles.note}></td>
+                    </tr>
+                    <tr>
+                        <td className="lv2">상품상세 템플릿</td>
+                        <td className="lv3"></td>
+                        <td className="lv4"></td>
+                        <td className="lv5"></td>
+                        <td className="lv6"></td>
+                        <td className="lv7"></td>
+                        <td className={styles.func}>
+                            <input type="radio" className={styles['iframe-select']} name="iframename" />
+                            <Link to="./html/_FW/fw_product_detail" className="linked" target="_blank">템플릿</Link>
+                        </td>
+                        <td className={styles.user}>이원익</td>
+                        <td className={styles.date}><span>240112</span></td>
+                        <td className={styles.cf1}></td>
+                        <td className={styles.note}></td>
+                    </tr>
+                    <tr>
+                        <td className="lv2">상품상세 템플릿</td>
+                        <td className="lv3">수신상품</td>
+                        <td className="lv4"></td>
+                        <td className="lv5"></td>
+                        <td className="lv6"></td>
+                        <td className="lv7"></td>
+                        <td className={styles.func}>
+                            <input type="radio" className={styles['iframe-select']} name="iframename" />
+                            <Link to='./html/_PD/FMDC-temp' className='linked' target='_blank'>FMDC-temp</Link>
+                        </td>
+                        <td className={styles.user}>이원익</td>
+                        <td className={styles.date}>240112</td>
+                        <td className={styles.cf1}></td>
+                        <td className={styles.note}></td>
                     </tr>
                 </tbody>
-                {/* //모듈서비스 */}
             </table>
-        </div>
-      </main>
+        </main>
+        <footer>
+            <address>Copyright © NH Bank. All Rights Reserved.</address>
+        </footer>
     </div>
   );
 };

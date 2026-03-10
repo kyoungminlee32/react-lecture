@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+                    <h1 class="title">상품상세</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                        <button type="button" class="func -menu"><span class="hide">전체메뉴</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner center">
+                    <h1 class="title">상품 상세</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="product-detail-wrap">
+                        <!-- 상품 안내 영역 -->
+                        <div class="procuct-summary">
+                            <!-- 플로팅 버튼 -->
+                            <div class="floating-wrap">
+                                <div class="floating-btn" role="button">
+                                    <p>
+                                        원금손실<br>
+                                        가능상품
+                                    </p>
+                                </div>
+                                <a class="floating_close" title="원금 손실가능 상품 플로팅버튼 닫기"></a>
+                            </div>
+                            <!-- //플로팅 버튼 -->
+                            <div class="info-area">
+                                <div class="title-area">
+                                    <h2>KODEX200</h2>
+                                    <div class="hashtag"><span>#선취</span><span>#월수익지급식</span></div>
+                                </div><!-- //.title-area -->
+
+                                <div class="subtitle-area">
+                                    <div class="product-cost-area -center-item">
+                                        <div class="inner">
+                                            <dl>
+                                                <dt>상품유형</dt>
+                                                <dd>국내주식형</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>위험등급</dt>
+                                                <!-- [CASE] 매우높은위험:-grade1, 높은위험:-grade2, 다소높은위험:-grade3, 보통위험:-grade4, 낮은위험:-grade5, 매우낮은위험:-grade6 -->
+                                                <dd class="-grade5">낮은위험</dd>
+                                            </dl>
+                                            <dl>
+                                                <!-- 2024-05-14 문구 변경 -->
+                                                <dt>년수익률</dt>
+                                                <!-- //2024-05-14 문구 변경 -->
+                                                <dd class="red">+15.53%</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+
+                                    <div class="isa-box-info">
+                                        <div class="line-box">
+                                            <p class="p">본 상품은 일반 예금상품과 달리 원금의 일부 또는 전부 손실이 발생할 수 있으며, 투자로 인한 손실은 투자자 본인에게 귀속됩니다.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- //.subtitle-area -->
+                            </div><!-- //.info-area -->
+                            <hr class="hr">
+                        </div><!-- //.procuct-summary -->
+                        <!-- //상품 안내 영역 -->
+
+                        <!-- 상품 정보 영역 -->
+                        <div class="procuct-info">
+                            <div class="segments -tabstyle">
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div role="tablist" class="list">
+                                            <div class="item -active"><button type="button" role="tab" aria-selected="true" aria-controls="segments-panel01" id="segment01">상품안내</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel02" id="segment02">유의사항</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="segments-panels">
+                                <div role="tabpanel" aria-labelledby="segment01" id="segments-panel01" class="segments-panel -active" tabindex="0">
+                                    <dl class="prodect-info-dl">
+                                        <dt class="h5">운용자산</dt>
+                                        <dd>
+                                            <p class="p">NH투자증권 제1회 ELS</p>
+                                        </dd>
+
+                                        <dt class="h5">기초지수</dt>
+                                        <dd>
+                                            <p class="p">KOSPI200, S&P500, HSCEI</p>
+                                        </dd>
+
+                                        <dt class="h5">위험등급</dt>
+                                        <dd>
+                                            <p class="p">매우 높은 위험(1등급)</p>
+                                        </dd>
+
+                                        <dt class="h5">상환조건</dt>
+                                        <dd>
+                                            <p class="p">90-85-85-80-75-65(낙인)</p>
+                                        </dd>
+
+                                        <dt class="h5">연 기대수익률</dt>
+                                        <dd>
+                                            <p class="p">7.00%</p>
+                                        </dd>
+
+                                        <dt class="h5">최대손실률</dt>
+                                        <dd>
+                                            <p class="p">100%</p>
+                                        </dd>
+
+                                        <dt class="h5">신탁보수</dt>
+                                        <dd>
+                                            <p class="p">선취 수수료 1.00%</p>
+                                        </dd>
+
+                                        <dt class="h5">신탁기간</dt>
+                                        <dd>
+                                            <p class="p">3년 (6개월단위 평가)</p>
+                                        </dd>
+
+                                        <dt class="h5">최소가입금액</dt>
+                                        <dd>
+                                            <!-- 2024-05-14 문구 수정 -->
+                                            <p class="p">100만원(100만원 단위)</p>
+                                            <!-- 2024-05-14 문구 수정 -->
+                                        </dd>
+
+                                        <dt class="h5">가입한도금액</dt>
+                                        <dd>
+                                            <p class="p">
+                                                5,000,000,000원<br>
+                                                (상품가입 절차 진행 중 한도 소진으로 상품 가입이 불가 할 수 있습니다.)
+                                            </p>
+                                        </dd>
+
+                                        <dt class="h5">설정일/최초기준가격 결정일</dt>
+                                        <dd>
+                                            <p class="p">2022-01-01</p>
+                                        </dd>
+
+                                        <dt class="h5">판매 종료일</dt>
+                                        <dd>
+                                            <p class="p">2024-12-31</p>
+                                        </dd>
+
+                                        <dt class="h5">원금보장 안내</dt>
+                                        <dd>
+                                            <p class="p">원금비보장</p>
+                                        </dd>
+
+                                        <dt class="h5">중도해지 수수료 내용</dt>
+                                        <dd>
+                                            <p class="p">0~999개월 0.5%이면 중도해지수수료~</p>
+                                        </dd>
+
+                                        <dt class="h5">예금자 보호대상 안내</dt>
+                                        <dd>
+                                            <p class="p">이 금융상품은 예금자보호법에 따라 보호되지 않습니다.</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div role="tabpanel" aria-labelledby="segment02" id="segments-panel02" class="segments-panel" tabindex="-1">
+                                    <!-- <h3 class="h4">유의사항</h3> -->
+
+                                    <div class="depositor-protect -noimg">
+                                        <ul class="ul -bullet">
+                                            <li>이 금융상품은 예금자보호법에 따라 보호되지 않습니다.</li>
+                                            <li>신탁은 운용 결과에 따라 원금의 일부 또는 전부 손실이 발생할 수 있으며, 투자로 인한 손실은 투자자 본인에게 귀속됩니다.</li>
+                                            <li>상품가입 전 상품설명서를 반드시 확인하시기 바랍니다.</li>
+                                            <li>상품 신규일 다음 영업일부터 2영업일 동안 투자여부를 결정하는 숙려시간을 부여하고 숙려기간 종료 후 2영업일 동안 계약 확정을 위한 숙려콜이 실시되며 계약이 확정적임을 승낙하지 않거나 무응답시 신탁계약은 자동 취소됩니다.</li>
+                                            <li>예탁한 금전을 청약 철회 기간 이내에 운용하는 것에 동의한 고객만 신탁계약이 가능합니다.(청약 철회권 미적용)</li>
+                                            <li>상품 가입 후 기타 문의사항은 농협은행 영업점 또는 1661-3000로 문의하여 주시기 바랍니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //상품 정보 영역 -->
+
+                        <!-- 상품 추가 정보 영역 -->
+                        <div class="product-other">
+                            <!-- 상품설명서 및 약관 -->
+                            <div class="product-agree-area">
+                                <div class="accordion -lg -active" data-role="fold">
+                                    <button type="button" class="title" data-role="marker">상품설명서 및 약관</button>
+                                    <div class="panel" data-role="hidden">
+                                        <div class="shortcut -boxType">
+                                            <ul>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">특정금전신탁 계약서</a></li>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">특정금전신탁 상품설명서</a></li>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">운용자산 상품설명서</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //상품설명서 및 약관 -->
+                        </div>
+                        <!-- //상품 추가 정보 영역 -->
+                    </div><!-- //.product-detail-wrap -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg">상담</button>
+                        <button type="button" class="button -lg -primary">가입하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+        procuctDatailAct();
+
+        // html 파일 로드 (퍼블확인용)
+        incHtml();
+        function incHtml() {
+            $('[data-includ]').each(function () {
+                $this = $(this);
+                var $url = $this.attr('data-includ')
+                $this.load($url)
+            })
+        }
+
+
+        //Layer.open('layer');
+
+        // 레이어 닫기(마지막 인자 기본값: false)
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // });
+
+        // 레이어 닫기 + DOM 삭제
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

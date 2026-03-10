@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">청년 주택드림 청약통장 가입용 각서</h1>  <!-- [240206]텍스트 변경 -->
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <!-- [240214]텍스트, 마크업 변경 -->
+                    <!-- [240206]텍스트, 마크업 변경 -->
+                    <p class="p">청년 주택드림 청약통장 가입자격 안내에 관한 사항을 확인해 주시기 바랍니다.</p>
+                    <div class="jsImportConfWrap"> 
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="total01">
+                                        <label for="total01">자격확인</label>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="panel">
+                                <div class="inner"> 
+                                    <div class="sm-title-group">
+                                        <p class="p">본인은 「청년 주택드림 청약통장」가입 신청자로서, 가입일 현재 주택을 소유하지 않은 자 입니다.</p>                        
+                                        <!-- <ul class="ul">
+                                            <li>가. 주택을 소유하지 않은 세대주<span class="point">(3개월 이상 연속 세대주)</span></li>
+                                            <li>나. 주택을 소유하지 않은 자이며 <span class="point">가입 후 3년 이내 3개월 이상 연속 세대주 예정자 (해지 전까지 주민등록등본을 제출하여 동 사실을 입증할 것)</span></li>
+                                        </ul> -->
+                                        <p class="p">연 5,000만원 이하의 신고소득(근로소득자는 총 급여액, 사업·기타소득자는 종합소득금액 기준)이 있음을 확인하고 약속합니다. 
+                                            위 내용과 제출 증빙의 내용이 사실이 아닌 경우 해지할 때 「청년 주택드림 청약통장」의 <span class="point">우대금리 대상에서 제외됨에 동의합니다.</span></p> <!-- [231228]텍스트 수정 -->   <!-- [240513]텍스트 변경 -->
+                                    </div>
+                                </div>                         
+                            </div> 
+                        </div> 
+                        
+                        <div class="important-confirm-box">
+                            <div class="agree">
+                                <div class="title">
+                                    <div class="checkbox -sm">
+                                        <input type="checkbox" id="total02">
+                                        <label for="total02">유의사항</label>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="panel">
+                                <div class="inner">
+                                    <div class="sm-title-group">
+                                        <p class="p">가입기간 중 주택을 취득하는 경우 <span class="point">우대금리</span>는 가입일부터 <span class="point">처음 주택을 취득한 직전년도까지만</span> 적용됩니다. <span class="point">(최대 10년)</span></p>
+                                        <p class="p point">비과세는 가입일(전환 신규일)부터 2년 이내(저축 해지 전) 영업점 별도 방문하여 ‘(비과세 신청용) 청년 주택드림 청약통장 무주택 확인서'를 제출하여야 합니다.</p>
+                                        <p class="p point">상품 가입 자격과 비과세 자격은 다릅니다. 비과세 자격은 상품 가입일 기준으로 국세청 검증 후 적용하므로 가입 후 비과세 자격을 갖추어도 비과세 신청을 할 수 없습니다.</p>
+                                        <!-- <ul class="ul -bullet">
+                                            <li class="point">상품 가입자격과 비과세 자격은 상이하며 비과세 자격은 상품가입일 기준으로 국세청 검증 및 적용하므로 가입 후 비과세 자격을 갖추어도 비과세 신청은 불가합니다.</li>
+                                        </ul> -->
+                                        <div class="text info-box-wrap">
+                                                <p class="info">비과세 자격 안내
+                                                    <span class="tooltip">
+                                                        <button type="button" class="trigger">
+                                                            <span class="hide">툴팁</span>
+                                                        </button>
+                                                        <span class="panel">
+                                                            <span class="title">비과세 자격 안내(상품 가입일 기준)</span>
+                                                            <!-- 2024-05-29 문구 수정 -->
+                                                            <span class="t-content">
+                                                                <span class="dot">(세법상)무주택 세대의 세대주<br>(가입일 이후 세대원에서 세대주가 된 경우 비과세 신청 불가)</span>
+                                                                <span class="dot">근로소득자 : 직전년도 신고 총 급여액 3,600만원 이하</span>
+                                                                <span class="dot">종합소득자 : 직전년도 신고 종합소득금액 2,600만원 이하(단, 총 급여액 3,600만원 초과 근로소득 있는 자는 제외)</span>
+                                                                <span class="dot">단, 직전년도 소득이 확정되지 않은 1~6월 가입자는 전전년도 소득을 기준으로 판단(직전년도 소득이 최초 소득인 경우 제외)</span>
+                                                                <span class="dot">(세법상)세대 :  본인이나 배우자와 같은 주소 또는 거소에서 생계를 같이 하는 부모, 조부모, 자녀, 손주 등 직계존비속 (그 배우자를 포함)과 형제자매 (배우자 분리 세대의 세대원 포함)</span>
+                                                            </span>
+                                                            <!-- //2024-05-29 문구 수정 -->
+                                                        </span>
+                                                    </span>
+                                                </p>
+                                            </div>
+
+                                        <h2 class="h5 mt-32">기타 유의사항</h2>
+                                        <ul class="ul -bullet">
+                                            <li>기존 ‘주택청약종합저축’ 가입자가 ‘청년 주택드림 청약통장’으로 전환 신규하는 경우 전환 원금에는 우대금리가 적용되지 않습니다.</li>
+                                            <li>가입일(전환계좌인 경우 전환신규일)로부터 청약당첨 외의 사유로 <span class="point">2년 미만 해지할 때 우대금리는 적용되지 않습니다.</span></li>
+                                            <li>이 저축이 상속인에게 명의 변경되는 경우, 통장 해지 시 우대이율 적용을 위한 조건은 상속인 기준으로 적용합니다.</li>
+                                            <li>이 저축에 대해 상계 통지가 되는 경우 우대금리 적용을 받고자 하는 경우에는 상계 통지 발송일부터 영업일 기준 7일 안에 가입자가 직접 방문하여 자격 요건을 입증하여야 합니다.</li>
+                                            <li>소득공제 신청 후, 가입일부터 5년 이내 해지(특별중도해지 제외) 또는 85㎡ 초과 주택에 당첨 해지하면 조세특례제한법 제87조에 의한 추징 세금이 발생됩니다.</li>
+                                            <!-- <li>계좌부활 시 주택청약종합저축으로만 부활 가능합니다.</li> -->
+                                            <!-- 2024-05-24 홑따옴표 수정 -->
+                                            <li>이 저축은 조세특례제한법 제88조의2에 의한 ‘비과세종합저축’으로 가입이 불가능합니다.</li>
+                                            <!-- //2024-05-24 홑따옴표 수정 -->
+                                            <li>조세특례제한법 제129조의2에 따라 2021.01.01 이후 가입자가 (가입 직전 3개년도까지)금융소득 종합과세 대상자로 확인된 경우 이자소득 비과세가 적용되지 않습니다.</li>
+                                            <!-- 2024-05-31 문구 수정 -->
+                                            <li>비과세 대상, 요건과 범위 등 세부사항은 조세특례제한법 제87조, 제91조의24, 제129조의2, 제146조의2와 같은 법 시행령 제81조, 제93조의10, 제123조의2, 제137조의2, 같은 법 시행규칙 제43조 등에 따르며, 추후 관련법령 개정 시 수시로 변동될 수 있습니다.</li>   <!-- [240513]텍스트 변경 -->   <!-- [240524]텍스트 변경 -->
+                                            <!-- 2024-05-31 문구 수정 -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <!-- //[240206]텍스트, 마크업 변경 -->
+                    <!-- //[240214]텍스트, 마크업 변경 -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary" disabled>확인</button>   <!-- [240329] disabled 추가 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+    </script>
+</body>
+</html>

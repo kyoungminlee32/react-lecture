@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>상품상세</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+                    <h1 class="title">상품상세</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                        <button type="button" class="func -menu"><span class="hide">전체메뉴</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner center">
+                    <h1 class="title">입출금</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="product-detail-wrap">
+                        <!-- 상품 안내 영역 -->
+                        <div class="procuct-summary">
+                            <div class="info-area">
+                                <div class="title-area">
+                                    <h2>NH모여라통장(저축예금)</h2>   <!-- [240416]텍스트 수정 -->
+                                    <div class="hashtag"><span>#저축예금</span></div>
+                                </div><!-- //.title-area -->
+                                
+                                <div class="subtitle-area">
+                                    <div class="product-cost-area">
+                                        <div class="inner">
+                                            <dl>
+                                                <dt>최고</dt>
+                                                <dd class="point">0.10%</dd>
+                                            </dl>
+                                            <span class="daesh">~</span>
+                                            <dl>
+                                                <dt>기본</dt>
+                                                <dd>0.10%</dd>
+                                            </dl>
+                                        </div>
+                                        <p class="cost-para">(연/세전)2024.08.31 기준</p>
+                                    </div>
+                                </div><!-- //.subtitle-area -->
+
+                                <div class="top-join-btn"><button type="button" class="button -lg -primary">가입하기</button></div>
+                            </div><!-- //.info-area -->
+
+                            <div class="loadArea" data-includ="/content/nhbank/html/dt/dt10000967_de.html"></div>
+                        </div><!-- //.procuct-summary -->
+                        <!-- //상품 안내 영역 -->
+
+                        <!-- 상품 정보 영역 -->
+                        <div class="procuct-info">
+                            <div class="segments -tabstyle">
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div role="tablist" class="list">
+                                            <div class="item -active"><button type="button" role="tab" aria-selected="true" aria-controls="segments-panel01" id="segment01">상품안내</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel02" id="segment02">금리안내</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel03" id="segment03">유의사항</button></div>   <!-- [240424]텍스트 변경 -->
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel04" id="segment04">기타사항</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="segments-panels">
+                                <div role="tabpanel" aria-labelledby="segment01" id="segments-panel01" class="segments-panel -active" tabindex="0">
+                                    <dl class="prodect-info-dl">
+                                        <dt class="h5">상품특징</dt>
+                                        <dd>
+                                            <p class="p">모임 및 회비관리를 위한 농협은행 입출식 통장</p>
+                                        </dd>
+
+                                        <dt class="h5">가입대상</dt>
+                                        <dd>
+                                            <p class="p">개인(1인1계좌)</p>
+                                        </dd>
+
+                                        <dt class="h5">가입금액</dt>
+                                        <dd>
+                                            <p class="p">제한없음</p>
+                                        </dd>
+
+                                        <dt class="h5">상품과목</dt>
+                                        <dd>
+                                            <p class="p">저축예금</p>
+                                        </dd>
+                                    </dl>
+                                </div>                   
+
+                                <div role="tabpanel" aria-labelledby="segment02" id="segments-panel02" class="segments-panel" tabindex="0">
+                                    <!-- <h3 class="h4">금리안내</h3> -->   <!-- [240315]추가 -->
+                                    <!-- <h4 class="h5">금리안내</h4> -->   <!-- [240315]삭제 -->
+                                    <p class="p">0.10%(예금종류별 기본금리 준용)</p>   <!-- [240604]텍스트 변경 -->
+                                    
+                                    <h4 class="h5">세제혜택안내</h4>
+                                    <p class="p">비과세 종합저축 가능(전 금융기관 통합한도 범위 내)</p>
+
+                                    <h4 class="h5">이자지급방법</h4>
+                                    <p class="p">매년 3월, 6월, 9월, 12월의 넷째 토요일 (공휴일인 경우 직전 영업일)에 결산하여 다음날 입금 (매일 최종잔액에 대하여 기본금리를 적용하여 계산)</p>
+                                </div>
+
+                                <div role="tabpanel" aria-labelledby="segment03" id="segments-panel03" class="segments-panel" tabindex="0">
+                                    <!-- <h3 class="h4">유의사항</h3> -->   <!-- [240315]추가 -->   <!-- [240424]텍스트 변경 -->
+                                    <h4 class="h5">부가/우대 서비스</h4>
+                                    <ol class="ol">
+                                        <li>① 서비스 기간 : 이번 달 1일부터 말일까지 전자금융 수수료 면제 서비스 제공</li>
+                                        <li>② 우대내용 : 이 통장으로 전자금융 이체 및 출금 거래 시 기본제공
+                                            <div>
+                                                <ul class="ul -dash">
+                                                    <li>농협은행 인터넷/스마트뱅킹 타행이체 수수료(월5회)</li>
+                                                    <li>농협은행 CD/ATM기기를 통한 현금인출 수수료(월5회)</li>
+                                                </ul>
+                                            </div>                                         
+                                        </li>
+                                    </ol>
+
+                                    <h4 class="h5">유의사항</h4>
+                                    <p class="p">NH모여라통장은 모임주 개인 명의의 통장으로 멤버들이 납입한 모임회비의 지급, 해지 권한은 모임주에게 있으며, 압류 등 모임주의 상태에 따라 모임 회비 및 모임통장서비스 이용이 제한 될 수 있습니다.</p>
+                                    <p class="p">상품내용 및 서비스는 시장 상황 등에 따라 변경 가능하며, 변경 시 인터넷 홈페이지 등에 공시합니다.</p>
+                                
+                                    <h4 class="h5">판매한도</h4>
+                                    <p class="p">없음</p>
+
+                                    <!-- [240604]텍스트 변경 -->
+                                    <!-- [240424]마크업,텍스트 수정 -->
+                                    <h4 class="h5">가입/해지안내</h4>
+                                    <div>
+                                        <ul class="ul -bullet">
+                                            <li>가입 : 영업점, 비대면 채널</li>
+                                            <li>해지 : 영업점, 비대면 채널</li>
+                                        </ul>
+                                        <!-- <p class="p">영업점, 올원뱅크에서 신규 가능<br>영업점, 스마트뱅킹, 올원뱅크에서 해지 가능</p> -->
+                                    </div>
+                                    <!-- //[240424]마크업,텍스트 수정 -->
+                                    <!-- //[240604]텍스트 변경 -->
+                                </div>
+
+                                <!-- [240604]텍스트, 마크업 변경 -->
+                                <div role="tabpanel" aria-labelledby="segment04" id="segments-panel04" class="segments-panel" tabindex="0">
+                                    <!-- <h3 class="h4">기타사항</h3> -->   <!-- [240315]추가 -->
+                                    <h4 class="h5">상품전환</h4>
+                                    <!-- <p class="p">일반 저축예금에서 이 통장으로의 전환이나, 이 통장에서 저축예금으로의 전환 모두 가능.<br>단, 상품전환 시 이 통장의 기본서비스는 제공되지 않음</p> -->
+                                    <ul class="ul -bullet">
+                                        <li>일반 저축예금에서 이 통장으로의 전환이나, 이 통장에서 저축예금으로의 전환 모두 가능</li>
+                                        <li>단, 상품전환 시 이 통장의 기본서비스는 제공되지 않음</li>
+                                    </ul>
+
+                                    <h4 class="h5">거래제한</h4>
+                                    <p class="p">이 예금은 한도대출 약정용 계좌로 사용할 수 없습니다.</p>
+
+                                    <h4 class="h5">휴면예금 및 출연</h4>
+                                    <ul class="ul -bullet">
+                                        <li>적금 만기일 또는 이자지급을 포함한 최종거래일 이후 5년 이내 계좌를 해지하지 않을 경우 예금거래기본약관 제9조의2 휴면예금 및 출연에 따라 휴면예금은 “서민금융진흥원(국번없이1397)“에 출연될 수 있으며, 이 경우 서민금융진흥원을 통해 휴면예금을 찾으실 수 있습니다.</li>
+                                        <li>휴면예금은 휴면예금통합조회서비스(www.sleepmoney.or.kr)를 통해 조회가능합니다.</li>
+                                    </ul>
+
+                                    <h4 class="h5">원금 또는 이자지급 제한</h4>
+                                    <!-- <p class="p">계좌에 압류, 가압류, 질권설정 등이 등록될 경우 원금 및 이자 지급을 제한합니다.<br>
+                                        예금잔액증명서 발급 당일에는 입금/출금/이체 등 잔액변동이 불가합니다.</p> -->
+                                    <ul class="ul -bullet">
+                                        <li>계좌에 압류, 가압류, 질권설정 등이 등록될 경우 원금 및 이자 지급을 제한합니다.</li>
+                                        <li>예금잔액증명서 발급 당일에는 입금/출금/이체 등 잔액변동이 불가합니다.</li>
+                                    </ul>
+
+                                    <h4 class="h5">* 금융소비자 보호에 관한 법률 제19조제1항에 따른 설명을 받을 수 있는 권리가 있습니다.</h4>
+
+                                    <h4 class="h5">* 금융상품을 가입하시기 전에 상품설명서 및 약관을 반드시 읽어보시 바랍니다.</h4>
+                                </div>
+                                <!-- //[240604]텍스트, 마크업 변경 -->
+                            </div>
+                        </div>
+                        <!-- //상품 정보 영역 -->
+
+                        <!-- 상품 추가 정보 영역 -->
+                        <div class="product-other">
+                            <!-- 상품설명서 및 약관 -->
+                            <div class="product-agree-area">
+                                <div class="accordion -lg -active" data-role="fold">
+                                    <button type="button" class="title" data-role="marker">상품설명서 및 약관</button>
+                                    <div class="panel" data-role="hidden">
+                                        <div class="shortcut -boxType">
+                                            <ul>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">기본약관</a></li>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">상품설명서</a></li>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">상품특약</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //상품설명서 및 약관 -->
+
+                            <!-- 예금자보호 (관리자) -->
+                            <div class="loadArea" data-includ="/content/nhbank/html/cn/common/protect01.html"></div>
+                            <!-- //예금자보호 (관리자) -->
+
+                            <!-- 준법감시 심의필 (관리자) -->
+                            <div class="product-deliberate">
+                                <p class="p">준법감시심의필 000-0000(심의일:YYYY.MM.DD)<br>유효기간 : YYYYY.MM.DD ~ YYYYY.MM.DD</p>
+                            </div>
+                            <!-- //준법감시 심의필 (관리자) -->
+                            
+                            <!-- 공유 -->
+                            <div class="product-share">
+                                <ul>
+                                    <li><button type="button" class="share" aria-haspopup="true"><span class="hide">공유</span></button></li>   
+                                    <li><button type="button" class="wishlist"><span class="hide">장바구니</span></button></li>                                             
+                                </ul>
+                            </div>
+                            <!-- //공유 -->
+                            
+                            <!-- 추천상품 -->
+                            <div class="product-recommend">
+                                <h4 class="h5"><span>김농협</span>님을 위한 추천 상품</h4>
+                                <div class="product-recommend-list">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">채움적금</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">e금리우대적금</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">청년도약계좌</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //추천상품 -->
+                        </div>
+                        <!-- //상품 추가 정보 영역 -->
+                    </div><!-- //.product-detail-wrap -->
+                </div>
+
+                <div class="fixer -jsProcuctBtn">
+                    <div class="buttons">
+                        <button type="button" class="button -lg">상담</button>
+                        <button type="button" class="button -lg -primary">가입하기</button>
+                    </div>
+                </div>
+
+                <!-- 토스트팝업은 -active 클래스 사용하여 실행합니다 -->
+                <div class="toast" role="alert" aria-live="assertive">
+                    <div class="message" >
+                        <p>장바구니에 담었어요</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+        procuctDatailAct();
+
+        // html 파일 로드 (퍼블확인용)
+        incHtml();
+        function incHtml() {
+            $('[data-includ]').each(function () {
+                $this = $(this);
+                var $url = $this.attr('data-includ')
+                $this.load($url)
+            })
+        }
+    </script>
+</body>
+</html>

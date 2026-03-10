@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출한도 조회</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">사전체크리스트작성</h1>  <!-- [240305]텍스트 변경 -->
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">진행 절차를 확인해 주세요</h2>
+                    </div>
+                    <ol class="ol -badge">
+                        <li>
+                            <span class="gadget">1단계</span>
+                            <div class="title">유의사항안내, 대출사전심사</div>
+                            대출유의사항 및 상세내역 안내<br>
+                            사전 체크 리스트 작성<br>
+                            작성한 체크리스트 확인
+                        </li>
+                        <li>
+                            <span class="gadget">2단계</span>
+                            <div class="title"> “기금e든든”에서 대출신청</div>
+                            신청정보확인 및 각종 조회 동의<br>
+                            대출 심사에 필요한 서류 자동 제출<br>
+                            자산심사 신청정보 입력
+                        </li>
+                        <li>
+                            <span class="gadget">3단계</span>
+                            <div class="title">대출신청 결과확인, 대출심사신청완료</div>
+                            <!-- 2024-10-21 문구 수정 -->
+                            사전자산심사진행상황 확인<br>
+                            서류제출을 위한 동의서 작성<br>
+                            모바일 서류 제출
+                            <!-- //2024-10-21 문구 수정 -->
+                        </li>
+                        <li>
+                            <span class="gadget">4단계</span>
+                            <div class="title">대출심사 및 실행</div>
+                            대출심사<br>
+                            대출약정서 작성<br>
+                            대출실행(입금)<br>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- <button type="button" class="button -lg">취소</button> -->
+                        <button type="button" class="button -lg -primary">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

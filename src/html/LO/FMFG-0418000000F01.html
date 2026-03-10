@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출신청 완료</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <!-- <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">본인인증</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header> -->
+
+            <main class="contents">
+                <div class="content">
+                    <div class="left">
+                        <img src="/content/assets/imgs/img/utility/ico-resultconfirm.png" style="width:16.8rem" alt="가입 완료 이미지">
+                    </div>                    
+                    <div class="h1-group">
+                        <h2 class="h1">
+                            대출을 신청했어요
+                        </h2>
+                        <!-- [CASE] 미혼의 경우 비노출-->
+                        <!-- [240502]텍스트 변경 -->
+                        <div class="case-wrap -sm">
+                            <!-- 240110 h4-group 삭제 -->
+                            <h3 class="h5">배우자 및 세대원 전원의 주택 소유 확인을 꼭 진행해 주세요.</h3>
+                            <p class="p">배우자 및 만 19세 이상 세대원이 있으면 대출 심사를 위해 세대원 전원의 주택 소유 확인이 필요합니다.</p>
+                            <!-- ui수정 240322 (case-wrap -xs 추가) -->
+                            <div class="case-wrap -xs">
+                                <button type="button" class="button -lg">배우자 및 세대원에게 동의 요청하기</button>
+                            </div>
+                            <!-- //ui수정 240322 (case-wrap -xs 추가) -->
+                        </div>
+                        <!-- //[240502]텍스트 변경 -->
+                        <!-- //[CASE] 미혼의 경우 비노출-->
+                    </div>
+                    <div class="case-wrap -sm">
+                        <div class="dls -box" data-role="fold">
+                            <button type="button" class="more" data-role="marker">
+                                <span>더보기</span>
+                            </button>
+                            <dl class="dl">
+                                <div>
+                                    <dt>담보정보</dt>
+                                    <dd>북한산현대힐스테이트3차</dd>
+                                </div>
+                                <div>
+                                    <!-- 240126 ux라이팅 수정 -->
+                                    <dt>대출 신청금액</dt>
+                                    <!-- //240126 ux라이팅 수정 -->
+                                    <dd>150,000,000원</dd>
+                                </div>
+                                <div>
+                                    <dt>대출금리</dt>
+                                    <dd>연4.13%</dd>
+                                </div>
+                                <div>
+                                    <!-- 240202 ux라이팅 수정 -->
+                                    <dt>이자 납입일</dt>
+                                    <!-- //240202 ux라이팅 수정 -->
+                                    <dd>매월 15일</dd>
+                                </div>
+                                <div data-role="hidden">
+                                    <!-- 240304 ux라이팅 수정 -->
+                                    <dt>대출금 입금계좌 <br> (이자 납입계좌)</dt>
+                                    <!-- //240304 ux라이팅 수정 -->
+                                    <dd>000-0000-0000-00</dd>
+                                </div>
+                                <div data-role="hidden">
+                                    <!-- 240304 ux라이팅 수정 -->
+                                    <dt>상환방법</dt>
+                                    <!-- //240304 ux라이팅 수정 -->
+                                    <dd>원리금균등분할상환</dd>
+                                </div>
+                                <div data-role="hidden">
+                                    <dt>대출기간</dt>
+                                    <dd>40년</dd>
+                                </div>
+                                <div data-role="hidden">
+                                    <dt>이자만 내는 기간</dt>
+                                    <dd>12개월</dd>
+                                </div>
+                                <div data-role="hidden">
+                                    <!-- 240304 ux라이팅 수정 -->
+                                    <dt>기준금리</dt>
+                                    <!-- //240304 ux라이팅 수정 -->
+                                    <dd>변동금리</dd>
+                                </div>
+                                <div data-role="hidden">
+                                    <dt>대출 희망일</dt>
+                                    <dd>yyyy.mm.dd</dd>
+                                </div>
+                                <!-- [CASE] 다른 금융기관 대환대출인 경우 -->
+                                <div data-role="hidden">
+                                    <dt>대출 용도</dt>
+                                    <dd>다른 금융기관 대출상환</dd>
+                                </div>
+                                <!-- //[CASE] 다른 금융기관 대환대출인 경우 -->
+                                <div data-role="hidden">
+                                    <dt>배우자소득합산</dt>
+                                    <dd>해당 없음</dd>
+                                </div>
+                                <div data-role="hidden">
+                                    <dt>권유직원</dt>
+                                    <!-- 231206 코드변경 -->
+                                    <dd>김*리(8051****) <div>양재지점하나로점</div></dd>
+                                    <!--// 231206 코드변경 -->
+                                </div>
+                                <!-- [CASE] 대출상담사의 경우 -->
+                                <div data-role="hidden">
+                                    <dt>대출상담사</dt>
+                                    <dd>본점영업부 / KF12355565</dd>
+                                </div>
+                                <!-- //[CASE] 대출상담사의 경우 -->
+                                <div data-role="hidden">
+                                    <!-- 240304 ux라이팅 수정 -->
+                                    <dt>희망 관리점</dt>
+                                    <!-- //240304 ux라이팅 수정 -->
+                                    <dd>서대문지점 / 02-1234-5678</dd>
+                                </div>
+                                <div data-role="hidden">
+                                    <dt>대출알림</dt>
+                                    <dd>문자메시지</dd>
+                                </div>
+                                <div data-role="hidden">
+                                    <!-- 240202 ux라이팅 수정 -->
+                                    <dt>대출 안내장</dt>
+                                    <!-- //240202 ux라이팅 수정 -->
+                                    <dd>집</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <!-- [240605] cms 이벤트 배너 추가, cms 영역 실행함수 : incHtml() -->
+                    <div class="loadArea" data-includ="/content/cms/market/FMFE1014R_ifrme01.html"></div>
+                    <!-- // [240605] cms 이벤트 배너 추가, cms 영역 실행함수 : incHtml() -->
+                    <!-- [240613] cms 아닌 관리자형식으로 배너 개발시 사용할 마크업 -->
+                    <div class="loadArea" data-includ="/content/cms/market/FMDB1001R_ifrme01.html">
+                        <a href="javascript:void(0)" class="cms-banner -imgType">
+                            <img src="../../assets/imgs/ico/banner/event-bn-img.png">
+                        </a>
+                    </div>
+                    <!-- // [240613] cms 아닌 관리자형식으로 배너 개발시 사용할 마크업 -->
+                </div>
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <!-- [240502]텍스트 변경 -->
+                            <ul class="ul -bullet">
+                                <li>세대원의 주택 소유 확인 요청은 [대출 진행현황]에서 다시 전송할 수 있습니다.</li>
+                                <li>영업점에서 대출심사 후 전자약정 및 인터넷등기 작성을 안내해 드립니다.</li>
+                                <li>전자약정 및 인터넷등기 전자서명이 완료되어야 대출이 실행됩니다.</li>
+                                <!-- [CASE] 대출용도 : 다른 금융기관 대환대출인 경우 -->
+                                <li>다른 금융기관 대출 상환 시 발행하는 비용(이자, 중도상환수수료, 말소관련비용)은 법무법인 한울에서 안내해 드립니다.</li>
+                                <!-- //[CASE] 대출용도 : 다른 금융기관 대환대출인 경우 -->
+                            </ul>
+                            <!-- //[240502]텍스트 변경 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

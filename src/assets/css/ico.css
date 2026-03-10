@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+/* 은행 */
+[data-bankcode]:before {content:""; display:inline-block; width:4rem; height:4rem; margin-right:1.2rem; background-repeat:no-repeat; background-size:100%; vertical-align:middle;}
+[data-bankcode].-xs:before {width:2rem; height:2rem;}
+[data-bankcode].-sm:before {width:2.8rem; height:2.8rem;}
+[data-bankcode].-lg:before {width:4rem; height:4rem;}
+[data-bankcode].-xl:before {width:5.6rem; height:5.6rem;}
+[data-bankcode].-textless:before {margin-right:0;}
+
+[data-bankcode="002"]:before {background-image:url(../imgs/ico/ci/ci_kdb.svg);}                /* 산업은행 */
+[data-bankcode="003"]:before {background-image:url(../imgs/ico/ci/ci_ibk.svg);}                /* 기업은행 */
+[data-bankcode="004"]:before {background-image:url(../imgs/ico/ci/ci_kb.svg);}                 /* 국민은행 */
+[data-bankcode="005"]:before {background-image:url(../imgs/ico/ci/ci_hana.svg);}               /* 하나은행 */
+[data-bankcode="006"]:before {background-image:url(../imgs/ico/ci/ci_kb.svg);}                 /* 국민은행 */
+[data-bankcode="007"]:before {background-image:url(../imgs/ico/ci/ci_suhyup.svg);}             /* 수협은행 */
+[data-bankcode="009"]:before {background-image:url(../imgs/ico/ci/ci_suhyup.svg);}             /* 수협중앙회 */
+[data-bankcode="010"]:before {background-image:url(../imgs/ico/ci/ci_nh.svg);}                 /* 농협은행 */
+[data-bankcode="011"]:before {background-image:url(../imgs/ico/ci/ci_nh.svg);}                 /* 농협은행 */
+[data-bankcode="012"]:before {background-image:url(../imgs/ico/ci/ci_nh.svg);}                 /* 지역농축협 */
+[data-bankcode="013"]:before {background-image:url(../imgs/ico/ci/ci_nh.svg);}                 /* 지역농축협 */
+[data-bankcode="014"]:before {background-image:url(../imgs/ico/ci/ci_nh.svg);}                 /* 지역농축협 */
+[data-bankcode="015"]:before {background-image:url(../imgs/ico/ci/ci_nh.svg);}                 /* 지역농축협 */
+[data-bankcode="016"]:before {background-image:url(../imgs/ico/ci/ci_nh.svg);}                 /* 농협은행 */
+[data-bankcode="017"]:before {background-image:url(../imgs/ico/ci/ci_nh.svg);}                 /* 지역농축협 */
+[data-bankcode="018"]:before {background-image:url(../imgs/ico/ci/ci_nh.svg);}                 /* 지역농축협 */
+[data-bankcode="019"]:before {background-image:url(../imgs/ico/ci/ci_kb.svg);}                 /* 국민은행 */
+[data-bankcode="020"]:before {background-image:url(../imgs/ico/ci/ci_woori.svg);}              /* 우리은행 */
+[data-bankcode="021"]:before {background-image:url(../imgs/ico/ci/ci_shinhan.svg);}            /* 신한은행 */
+[data-bankcode="022"]:before {background-image:url(../imgs/ico/ci/ci_woori.svg);}              /* 우리은행 */
+[data-bankcode="023"]:before {background-image:url(../imgs/ico/ci/ci_sc.svg);}                 /* sc제일은행 */
+[data-bankcode="024"]:before {background-image:url(../imgs/ico/ci/ci_woori.svg);}              /* 우리은행 */
+[data-bankcode="025"]:before {background-image:url(../imgs/ico/ci/ci_hana.svg);}               /* 하나은행 */
+[data-bankcode="026"]:before {background-image:url(../imgs/ico/ci/ci_shinhan.svg);}            /* 신한은행 */
+[data-bankcode="027"]:before {background-image:url(../imgs/ico/ci/ci_citi.svg);}               /* 씨티은행 */
+[data-bankcode="028"]:before {background-image:url(../imgs/ico/ci/ci_shinhan.svg);}            /* 신한은행 */
+[data-bankcode="029"]:before {background-image:url(../imgs/ico/ci/ci_kb.svg);}                 /* 국민은행 */
+[data-bankcode="030"]:before {background-image:url(../imgs/ico/ci/ci_suhyup.svg);}             /* 수협중앙회 */
+[data-bankcode="031"]:before {background-image:url(../imgs/ico/ci/ci_dgb.svg);}                /* 대구은행 */
+[data-bankcode="032"]:before {background-image:url(../imgs/ico/ci/ci_bnk.svg);}                /* 부산은행 */
+[data-bankcode="034"]:before {background-image:url(../imgs/ico/ci/ci_jb.svg);}                 /* 광주은행 */
+[data-bankcode="035"]:before {background-image:url(../imgs/ico/ci/ci_shinhan.svg);}            /* 제주은행 */
+[data-bankcode="037"]:before {background-image:url(../imgs/ico/ci/ci_jb.svg);}                 /* 전북은행 */
+[data-bankcode="039"]:before {background-image:url(../imgs/ico/ci/ci_bnk.svg);}                /* 경남은행 */
+[data-bankcode="045"]:before {background-image:url(../imgs/ico/ci/ci_kfcc.svg);}               /* 새마을금고 */
+[data-bankcode="046"]:before {background-image:url(../imgs/ico/ci/ci_kfcc.svg);}               /* 새마을금고 */
+[data-bankcode="047"]:before {background-image:url(../imgs/ico/ci/ci_cu.svg);}                 /* 신협은행 */
+[data-bankcode="048"]:before {background-image:url(../imgs/ico/ci/ci_cu.svg);}                 /* 신협은행 */
+[data-bankcode="049"]:before {background-image:url(../imgs/ico/ci/ci_cu.svg);}                 /* 신협은행 */
+[data-bankcode="050"]:before {background-image:url(../imgs/ico/ci/ci_sb.svg);}                 /* 상호저축은행 */
+[data-bankcode="053"]:before {background-image:url(../imgs/ico/ci/ci_citi.svg);}               /* 씨티은행 */
+[data-bankcode="054"]:before {background-image:url(../imgs/ico/ci/ci_hsbc.svg);}               /* HSBC */
+[data-bankcode="055"]:before {background-image:url(../imgs/ico/ci/ci_doichi.svg);}             /* 도이치은행 */
+[data-bankcode="057"]:before {background-image:url(../imgs/ico/ci/ci_jpmorgan.svg);}           /* JP모건체이스은행 */
+[data-bankcode="060"]:before {background-image:url(../imgs/ico/ci/ci_boa.svg);}                /* 뱅크오브아메리카 */
+[data-bankcode="061"]:before {background-image:url(../imgs/ico/ci/ci_bnp.svg);}                /* BNP파리바 */
+[data-bankcode="062"]:before {background-image:url(../imgs/ico/ci/ci_icbc.svg);}               /* 중국공상은행 */
+[data-bankcode="063"]:before {background-image:url(../imgs/ico/ci/ci_china.svg);}              /* 중국은행 */
+[data-bankcode="064"]:before {background-image:url(../imgs/ico/ci/ci_nfcf.svg);}               /* 산림조합 */
+[data-bankcode="067"]:before {background-image:url(../imgs/ico/ci/ci_ccb.svg);}                /* 중국건설은행 */
+[data-bankcode="081"]:before {background-image:url(../imgs/ico/ci/ci_hana.svg);}               /* 하나은행 */
+[data-bankcode="071"]:before {background-image:url(../imgs/ico/ci/ci_epost.svg);}              /* 우체국 */
+[data-bankcode="072"]:before {background-image:url(../imgs/ico/ci/ci_epost.svg);}              /* 우체국 */
+[data-bankcode="073"]:before {background-image:url(../imgs/ico/ci/ci_epost.svg);}              /* 우체국 */
+[data-bankcode="074"]:before {background-image:url(../imgs/ico/ci/ci_epost.svg);}              /* 우체국 */
+[data-bankcode="075"]:before {background-image:url(../imgs/ico/ci/ci_epost.svg);}              /* 우체국 */
+[data-bankcode="078"]:before {background-image:url(../imgs/ico/ci/ci_kb.svg);}                 /* 국민은행 */
+[data-bankcode="079"]:before {background-image:url(../imgs/ico/ci/ci_kb.svg);}                 /* 국민은행 */
+[data-bankcode="080"]:before {background-image:url(../imgs/ico/ci/ci_hana.svg);}               /* 하나은행 */
+[data-bankcode="082"]:before {background-image:url(../imgs/ico/ci/ci_hana.svg);}               /* 하나은행 */
+[data-bankcode="083"]:before {background-image:url(../imgs/ico/ci/ci_woori.svg);}              /* 우리은행 */
+[data-bankcode="084"]:before {background-image:url(../imgs/ico/ci/ci_woori.svg);}              /* 우리은행 */
+[data-bankcode="085"]:before {background-image:url(../imgs/ico/ci/ci_kfcc.svg);}               /* 새마을금고 */
+[data-bankcode="086"]:before {background-image:url(../imgs/ico/ci/ci_kfcc.svg);}               /* 새마을금고 */
+[data-bankcode="088"]:before {background-image:url(../imgs/ico/ci/ci_shinhan.svg);}            /* 신한은행 */
+[data-bankcode="089"]:before {background-image:url(../imgs/ico/ci/ci_kbank.svg);}              /* 케이뱅크 */
+[data-bankcode="090"]:before {background-image:url(../imgs/ico/ci/ci_kakao.svg);}              /* 카카오뱅크 */
+[data-bankcode="092"]:before {background-image:url(../imgs/ico/ci/ci_toss.svg);}               /* 토스뱅크 */
+
+/* 증권 */
+[data-bankcode="209"]:before {background-image:url(../imgs/ico/ci/ci_myasset.svg);}            /* 유안타증권 */
+[data-bankcode="218"]:before {background-image:url(../imgs/ico/ci/ci_kb.svg);}                 /* KB증권 */
+[data-bankcode="221"]:before {background-image:url(../imgs/ico/ci/ci_sangsangin.svg);}         /* 상상인증권 */
+[data-bankcode="224"]:before {background-image:url(../imgs/ico/ci/ci_bnk.svg);}                /* BNK투자증권 */
+[data-bankcode="225"]:before {background-image:url(../imgs/ico/ci/ci_ibk.svg);}                /* IBK투자증권 */
+[data-bankcode="227"]:before {background-image:url(../imgs/ico/ci/ci_ktb.svg);}                /* 다올투자증권 */
+[data-bankcode="237"]:before {background-image:url(../imgs/ico/ci/ci_mirae.svg);}              /* 미래에셋대우증권 */
+[data-bankcode="238"]:before {background-image:url(../imgs/ico/ci/ci_mirae.svg);}              /* 미래에셋대우증권 */
+[data-bankcode="240"]:before {background-image:url(../imgs/ico/ci/ci_samsung.svg);}            /* 삼성증권 */
+[data-bankcode="243"]:before {background-image:url(../imgs/ico/ci/ci_truefriend.svg);}         /* 한국투자증권 */
+[data-bankcode="247"]:before {background-image:url(../imgs/ico/ci/ci_nh.svg);}                 /* NH투자증권 */
+[data-bankcode="261"]:before {background-image:url(../imgs/ico/ci/ci_kyobo.svg);}              /* 교보증권 */
+[data-bankcode="262"]:before {background-image:url(../imgs/ico/ci/ci_hi.svg);}                 /* 하이투자증권 */
+[data-bankcode="263"]:before {background-image:url(../imgs/ico/ci/ci_hmsec.svg);}              /* 현대차투자증권 */
+[data-bankcode="264"]:before {background-image:url(../imgs/ico/ci/ci_kiwoom.svg);}             /* 키움증권 */
+[data-bankcode="265"]:before {background-image:url(../imgs/ico/ci/ci_ebest.svg);}              /* 이베스트투자증권 */
+[data-bankcode="266"]:before {background-image:url(../imgs/ico/ci/ci_sk.svg);}                 /* SK증권 */
+[data-bankcode="267"]:before {background-image:url(../imgs/ico/ci/ci_daeshin.svg);}            /* 대신증권 */
+[data-bankcode="269"]:before {background-image:url(../imgs/ico/ci/ci_hanhwa.svg);}             /* 한화투자증권 */
+[data-bankcode="270"]:before {background-image:url(../imgs/ico/ci/ci_hana.svg);}               /* 하나증권 */
+[data-bankcode="271"]:before {background-image:url(../imgs/ico/ci/ci_toss.svg);}               /* 토스증권 */
+[data-bankcode="278"]:before {background-image:url(../imgs/ico/ci/ci_shinhan.svg);}            /* 신한금융투자 */
+[data-bankcode="279"]:before {background-image:url(../imgs/ico/ci/ci_db.svg);}                 /* DB금융투자 */
+[data-bankcode="280"]:before {background-image:url(../imgs/ico/ci/ci_eugene.svg);}             /* 유진투자증권 */
+[data-bankcode="287"]:before {background-image:url(../imgs/ico/ci/ci_meritz.svg);}             /* 메리츠증권 */
+[data-bankcode="288"]:before {background-image:url(../imgs/ico/ci/ci_kakaopay.svg);}           /* 카카오페이증권 */
+[data-bankcode="289"]:before {background-image:url(../imgs/ico/ci/ci_nh.svg);}                 /* NH투자증권(농협증권) */
+[data-bankcode="290"]:before {background-image:url(../imgs/ico/ci/ci_bookook.svg);}            /* 부국증권 */
+[data-bankcode="291"]:before {background-image:url(../imgs/ico/ci/ci_shinyoung.svg);}          /* 신영증권 */
+[data-bankcode="292"]:before {background-image:url(../imgs/ico/ci/ci_cape.svg);}               /* 케이프투자증권 */
+[data-bankcode="294"]:before {background-image:url(../imgs/ico/ci/ci_foss.svg);}               /* 한국포스증권 */
+
+/* 카드사 */
+[data-bankcode="041"]:before {background-image:url(../imgs/ico/ci/ci_woori.svg);}              /* 우리카드 */
+[data-bankcode="365"]:before {background-image:url(../imgs/ico/ci/ci_samsungcard.svg);}        /* 삼성카드 */
+[data-bankcode="366"]:before {background-image:url(../imgs/ico/ci/ci_shinhan.svg);}            /* 신한카드 */
+[data-bankcode="367"]:before {background-image:url(../imgs/ico/ci/ci_hyundaicard.svg);}        /* 현대카드 */
+[data-bankcode="368"]:before {background-image:url(../imgs/ico/ci/ci_lottecard.svg);}          /* 롯데카드 */
+[data-bankcode="374"]:before {background-image:url(../imgs/ico/ci/ci_hana.svg);}               /* 하나카드 */
+[data-bankcode="381"]:before {background-image:url(../imgs/ico/ci/ci_kb.svg);}                 /* KB국민카드 */
+
+/* 캐피탈 */
+[data-bankcode="299"]:before {background-image:url(../imgs/ico/ci/ci_woori.svg);}              /* 우리금융캐피탈 */
+[data-bankcode="301"]:before {background-image:url(../imgs/ico/ci/ci_dgb.svg);}                /* DGB캐피탈 */
+[data-bankcode="302"]:before {background-image:url(../imgs/ico/ci/ci_bnk.svg);}                /* BNK캐피탈 */
+[data-bankcode="303"]:before {background-image:url(../imgs/ico/ci/ci_lotte.svg);}              /* 롯데캐피탈 */
+[data-bankcode="304"]:before {background-image:url(../imgs/ico/ci/ci_hyundaicapital.svg);}     /* 현대캐피탈 */
+[data-bankcode="305"]:before {background-image:url(../imgs/ico/ci/ci_jb.svg);}                 /* 우리캐피탈 */
+[data-bankcode="306"]:before {background-image:url(../imgs/ico/ci/ci_nh.svg);}                 /* NH캐피탈 */
+[data-bankcode="308"]:before {background-image:url(../imgs/ico/ci/ci_kb.svg);}                 /* KB캐피탈 */
+[data-bankcode="310"]:before {background-image:url(../imgs/ico/ci/ci_hana.svg);}               /* 하나캐피탈 */
+
+/* 보험 */
+[data-bankcode="401"]:before {background-image:url(../imgs/ico/ci/ci_hana.svg);}               /* 하나생명 */
+[data-bankcode="402"]:before {background-image:url(../imgs/ico/ci/ci_dongyang.svg);}           /* 동양생명 */
+[data-bankcode="403"]:before {background-image:url(../imgs/ico/ci/ci_heungguk.svg);}           /* 흥국화재 */
+[data-bankcode="431"]:before {background-image:url(../imgs/ico/ci/ci_mirae.svg);}              /* 미래에셋생명 */
+[data-bankcode="432"]:before {background-image:url(../imgs/ico/ci/ci_hanhwa.svg);}             /* 한화생명 */
+[data-bankcode="433"]:before {background-image:url(../imgs/ico/ci/ci_kyobo.svg);}              /* 교보라이프플래닛생명보험 */
+[data-bankcode="434"]:before {background-image:url(../imgs/ico/ci/ci_pubon.svg);}              /* 푸본현대생명 */
+[data-bankcode="435"]:before {background-image:url(../imgs/ico/ci/ci_raina.svg);}              /* 라이나생명 */
+[data-bankcode="436"]:before {background-image:url(../imgs/ico/ci/ci_kyobo.svg);}              /* 교보생명 */
+[data-bankcode="437"]:before {background-image:url(../imgs/ico/ci/ci_abl.svg);}                /* ABL생명 */
+[data-bankcode="438"]:before {background-image:url(../imgs/ico/ci/ci_shinhan.svg);}            /* 신한생명 */
+[data-bankcode="439"]:before {background-image:url(../imgs/ico/ci/ci_kb.svg);}                 /* KB생명 */
+[data-bankcode="440"]:before {background-image:url(../imgs/ico/ci/ci_nh.svg);}                 /* NH농협생명 */
+[data-bankcode="441"]:before {background-image:url(../imgs/ico/ci/ci_samsung.svg);}            /* 삼성화재 */
+[data-bankcode="442"]:before {background-image:url(../imgs/ico/ci/ci_hmsec_ins.svg);}          /* 현대해상 */
+[data-bankcode="444"]:before {background-image:url(../imgs/ico/ci/ci_kb.svg);}                 /* KB손해보험 */
+[data-bankcode="445"]:before {background-image:url(../imgs/ico/ci/ci_lotte.svg);}              /* 롯데손해보험 */
+[data-bankcode="448"]:before {background-image:url(../imgs/ico/ci/ci_meritz.svg);}             /* 메리츠화재 */
+[data-bankcode="449"]:before {background-image:url(../imgs/ico/ci/ci_nh.svg);}                 /* 농협손해보험 */
+[data-bankcode="452"]:before {background-image:url(../imgs/ico/ci/ci_samsung.svg);}            /* 삼성생명 */
+[data-bankcode="453"]:before {background-image:url(../imgs/ico/ci/ci_heungguk.svg);}           /* 흥국생명 */
+[data-bankcode="454"]:before {background-image:url(../imgs/ico/ci/ci_hanhwa.svg);}             /* 한화손해보험 */
+[data-bankcode="456"]:before {background-image:url(../imgs/ico/ci/ci_dgb.svg);}                /* DGB생명 */
+[data-bankcode="457"]:before {background-image:url(../imgs/ico/ci/ci_db.svg);}                 /* DB생명 */
+[data-bankcode="458"]:before {background-image:url(../imgs/ico/ci/ci_kdb.svg);}                /* KDB생명 */
+[data-bankcode="___"]:before {background-image:url(../imgs/ico/ci/ci_bnp.svg);}                /* BNP파리바카디프생명 */
+[data-bankcode="___"]:before {background-image:url(../imgs/ico/ci/ci_db.svg);}                 /* DB손해보험 */
+[data-bankcode="___"]:before {background-image:url(../imgs/ico/ci/ci_ibk.svg);}                /* IBK연금보험 */
+/* [data-bankcode="___"]:before {background-image:url(../imgs/ico/ci/ci_met.svg);}                메트라이프생명 */
+
+/* 국기 */
+[data-countrycode]:before {content:""; display:inline-block; width:3.6rem; height:3.6rem; margin-right:.7rem; border-radius:43%; background-repeat:no-repeat; background-size:100%; vertical-align:top;  border: 1px solid var(--line2);}
+[data-countrycode].-xs {display: inline-block; height:2rem; vertical-align: middle;}
+[data-countrycode].-sm {display: inline-block; height:2.4rem; vertical-align: middle;}
+[data-countrycode].-lg {display: inline-block; height:4rem; vertical-align: middle;}
+[data-countrycode].-xl {display: inline-block; height:5.6rem; vertical-align: middle;}
+[data-countrycode].-xs:before {width:2rem; height:2rem; vertical-align: top;}
+[data-countrycode].-sm:before {width:2.4rem; height:2.4rem; vertical-align: top;}
+[data-countrycode].-lg:before {width:4rem; height:4rem; vertical-align: top;}
+[data-countrycode].-xl:before {width:5.6rem; height:5.6rem; vertical-align: top;}
+[data-countrycode].-textless:before {margin-right:0;}
+/* [data-countrycode="000"]:before {background-image:url(../imgs/ico/flag/south-korea-flag.svg);}              KRW(대한민국 원) */
+[data-countrycode="001"]:before {background-image:url(../imgs/ico/flag/united-states-of-america-flag.svg);} /* USD(미국 달러) */
+[data-countrycode="002"]:before {background-image:url(../imgs/ico/flag/japan-flag.svg);}                    /* JPY(일본 엔) */
+[data-countrycode="003"]:before {background-image:url(../imgs/ico/flag/eu.svg);}                            /* EUR(유럽연합 유로) */
+[data-countrycode="004"]:before {background-image:url(../imgs/ico/flag/china-flag.svg);}                    /* CNY(중국 위안) */
+[data-countrycode="005"]:before {background-image:url(../imgs/ico/flag/united-kingdom-flag.svg);}           /* GBP(영국 파운드) */
+[data-countrycode="006"]:before {background-image:url(../imgs/ico/flag/switzerland-flag.svg);}              /* CHF(스위스 프랑) */
+[data-countrycode="007"]:before {background-image:url(../imgs/ico/flag/canada-flag.svg);}                   /* CAD(캐나다 달러) */
+[data-countrycode="008"]:before {background-image:url(../imgs/ico/flag/hongkong-flag.svg);}                 /* HKD(홍콩 달러) */
+[data-countrycode="009"]:before {background-image:url(../imgs/ico/flag/sweden-flag.svg);}                   /* SEK(스웨덴 크로네) */
+[data-countrycode="010"]:before {background-image:url(../imgs/ico/flag/australia-flag.svg);}                /* AUD(호주 달러) */
+[data-countrycode="011"]:before {background-image:url(../imgs/ico/flag/denmark-flag.svg);}                  /* DKK(덴마크 크로네) */
+[data-countrycode="012"]:before {background-image:url(../imgs/ico/flag/norway-flag.svg);}                   /* NOK(노르웨이 크로네) */
+[data-countrycode="013"]:before {background-image:url(../imgs/ico/flag/saudi-arabia-flag.svg);}             /* SAR(사우디아라비아 리얄) */
+[data-countrycode="014"]:before {background-image:url(../imgs/ico/flag/kuwait-flag.svg);}                   /* KWE(쿠웨이트 디나르) */
+[data-countrycode="015"]:before {background-image:url(../imgs/ico/flag/bahrain-flag.svg);}                  /* BHD(바레인 디나리) */
+[data-countrycode="016"]:before {background-image:url(../imgs/ico/flag/united-arab-emirates-flag.svg);}     /* AED(아랍에미리트 디히람) */
+[data-countrycode="017"]:before {background-image:url(../imgs/ico/flag/singapore-flag.svg);}                /* SGD(싱가포르 달러) */
+[data-countrycode="018"]:before {background-image:url(../imgs/ico/flag/malaysia-flag.svg);}                 /* MYR(말레이시아 링기트) */
+[data-countrycode="019"]:before {background-image:url(../imgs/ico/flag/new-zealand-flag.svg);}              /* NZD(뉴질랜드 달러) */
+[data-countrycode="020"]:before {background-image:url(../imgs/ico/flag/thailand-flag.svg);}                 /* THB(태국 바트) */
+[data-countrycode="021"]:before {background-image:url(../imgs/ico/flag/indonesia-flag.svg);}                /* IDR(인도네시아 루피아) */
+[data-countrycode="022"]:before {background-image:url(../imgs/ico/flag/taiwan-flag.svg);}                   /* TWD(대만 달러) */
+[data-countrycode="023"]:before {background-image:url(../imgs/ico/flag/philippines-flag.svg);}              /* PHP(필리핀 페소) */
+[data-countrycode="024"]:before {background-image:url(../imgs/ico/flag/india-flag.svg);}                    /* INR(인도 루피) */
+[data-countrycode="025"]:before {background-image:url(../imgs/ico/flag/russia-flag.svg);}                   /* RUB(러시아 루블) */
+[data-countrycode="026"]:before {background-image:url(../imgs/ico/flag/poland-flag.svg);}                   /* PLN(폴란드 즈워티) */
+[data-countrycode="027"]:before {background-image:url(../imgs/ico/flag/south-africa-flag.svg);}             /* ZAR(남아프리카공화국 랜드) */
+[data-countrycode="028"]:before {background-image:url(../imgs/ico/flag/mexico-flag.svg);}                   /* MXN(멕시코 페소) */
+[data-countrycode="029"]:before {background-image:url(../imgs/ico/flag/vietnam-flag.svg);}                  /* VND(베트남 동) */

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">    
+    <link rel="stylesheet" href="../../assets/css/insurance.css">   
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">보험 설계</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">
+                            펀드를 선택해 주세요
+                        </h2>
+                        <!-- <p class="p">금융소비자보호법 제19조(설명의무) 제1항에서 규정하고 있는 금융상품에 관한 중요한 사항을 안내해 드립니다.</p> [231227] 문구삭제 -->
+                    </div>
+                    <div class="field">
+                        <div class="agree">
+                            <div class="title">
+                                <div class="checkbox -sm">
+                                    <input type="checkbox" id="required-total1">
+                                    <label for="required-total1">[필수] 운용설명서</label>
+                                </div>
+                                <button type="button" class="more"><span class="hide">[필수] 운용설명서</span></button>
+                            </div>
+                        </div>    
+                        <div class="field">
+                            <p class="label">펀드유형</p>
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">펀드 비율 직접 설계</button> <!-- ux 라이팅 수정 -->
+                            </div>
+                        </div>
+                  </div>  
+
+                    <!-- 펀드 유형 옵션 선택별 콘텐츠 내용 -->
+                    <div class="tit-group" style="display: none;">
+                        <h4 class="h6">펀드 포트폴리오</h4>
+                    </div>
+                    <!-- 스마트베타_적극 -->
+                    <div class="line-box category" style="display: none;">
+                        <p class="ftit">국내 주식 위주의 전략적 분산투자 & 적극적인 수익 추구</p>
+                        <dl class="dl">
+                            <div>
+                                <dt>채권ETF재간접형 펀드 최소 비율</dt>
+                                <dd>0%</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <!-- //스마트베타_적극 -->
+
+                    <!-- 스마트베타_균형 -->
+                    <div class="line-box category" style="display: none;">
+                        <p class="ftit">국내 주식 위주의 전략적 분산투자 & 예·적금보다 높은 수익 추구</p> <!-- ux 라이팅 수정 -->
+                        <dl class="dl">
+                            <div>
+                                <dt>채권ETF재간접형 펀드 최소 비율</dt>
+                                <dd>20%</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <!-- //스마트베타_균형 -->
+
+                    <!-- 스마트베타_안정 -->
+                    <div class="line-box category" style="display: none;">
+                        <p class="ftit">국내 주식 위주의 전략적 분산투자 & 투자원금 손실 위험 최소 추구</p>
+                        <dl class="dl">
+                            <div>
+                                <dt>채권ETF재간접형 펀드 최소 비율</dt>
+                                <dd>50%</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <!-- //스마트베타_안정 -->       
+                    
+                    <!-- 글로벌자산배분_적극 -->
+                    <div class="line-box category" style="display: none;">
+                        <p class="ftit">해외 자산 위주의 전략적 분산 투자 & 적극적인 수익 추구</p>
+                        <dl class="dl">
+                            <div>
+                                <dt>채권ETF재간접형 펀드 최소 비율 </dt>
+                                <dd>20%</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <!-- //글로벌자산배분_적극 -->       
+                    
+                    <!-- 글로벌자산배분_균형 -->
+                    <div class="line-box category" style="display: none;">
+                        <p class="ftit">해외 자산 위주의 전략적 분산 투자 & 예·적금보다 높은 수익 추구</p> <!-- ux 라이팅 수정 -->
+                        <dl class="dl">
+                            <div>
+                                <dt>채권ETF재간접형 펀드 최소 비율</dt>
+                                <dd>35%</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <!-- //글로벌자산배분_균형 -->                       
+
+                    <!-- 글로벌자산배분_안정 -->
+                    <div class="line-box category" style="display: none;">
+                        <p class="ftit">해외 자산 위주의 전략적 분산 투자 & 투자원금 손실 위험 최소 추구</p>
+                        <dl class="dl">
+                            <div>
+                                <dt>채권ETF재간접형 펀드 최소 비율</dt>
+                                <dd>50%</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <!-- //글로벌자산배분_안정 -->            
+                    
+                    <!-- 글로벌자산배분 Ⅱ_적극 -->
+                    <div class="line-box category" style="display: none;">
+                        <p class="ftit">해외 상장 ETF 위주의 분산 투자 & 적극적인 수익 추구</p> <!-- [231227] 문구변경 --> 
+                        <dl class="dl">
+                            <div>
+                                <dt>채권ETF재간접형 펀드 최소 비율</dt>
+                                <dd>10%</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <!-- //글로벌자산배분 Ⅱ_적극 -->                      
+
+                    <!-- 글로벌자산배분 Ⅱ_균형 -->
+                    <div class="line-box category" style="display: none;">
+                        <p class="ftit">해외 상장 ETF 위주의 분산 투자 & 예·적금보다 높은 수익 추구</p> <!-- ux 라이팅 수정 -->
+                        <dl class="dl">
+                            <div>
+                                <dt>채권ETF재간접형 펀드 최소 비율</dt>
+                                <dd>35%</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <!-- //글로벌자산배분 Ⅱ_균형 -->  
+
+                    <!-- 글로벌자산배분 Ⅱ_안정 -->
+                    <div class="line-box category" style="display: none;">
+                        <p class="ftit">해외 상장 ETF 위주의 분산 투자 & 투자원금 손실 위험 최소 추구</p>
+                        <dl class="dl">
+                            <div>
+                                <dt>채권ETF재간접형 펀드 최소 비율</dt>
+                                <dd>50%</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <!-- //글로벌자산배분 Ⅱ_안정 -->                      
+
+                    <!-- // 펀드 유형 옵션 선택별 콘텐츠 내용 -->
+
+                    <!-- [CASE] 펀드 선택 총 비율 영역 -->
+                    <!-- <div class="totalrate-wrap">
+                        <p class="p">펀드비율(총 100%)<span class="limit-point">80%</span></p>
+                        <ul class="ul -bullet">
+                            <li>펀드선택 총 비율이 100%가 되도록 구성해 주세요.</li>
+                            <li><span class="type">안정추구형</span>인 경우 <span class="bond">채권형 70%이상</span> 선택해 주세요.</li>
+                        </ul>
+                    </div> -->
+                    <!-- // [CASE] 펀드 선택 총 비율 영역 -->
+
+                    <div class="ratio">
+                        <P class="ratio-text">펀드비율(총 100%)</p>
+                        <p class="ratio-num point">80%</p>
+                    </div>
+
+                    <div class="product-h-group">
+                        <P class="total-text">펀드비율(총 100%)</p>
+                        <p class="total-num point">80%</p>
+                    </div>
+                    <div class="bullet-wrap">
+                        <ul class="ul -bullet">
+                            <li>펀드 선택 총 비율이 100%가 되도록 구성해 주세요.</li> <!-- ux 라이팅 수정 -->
+                            <!-- 2024-05-16 삭제 -->
+                            <!-- <li><span class="type">안정추구형</span>인 경우 <span class="bond">채권형 70% 이상</span> 선택해 주세요.</li> -->
+                            <!-- //2024-05-16 삭제 -->
+                        </ul>
+                    </div>
+                    <div class="title-wrap">
+                        <span class="title">펀드 선택</span> <!-- ux 라이팅 수정 -->
+                        <div class="refresh-group">
+                            <button type="button" class="refresh"><span class="hide">새로고침</span></button>전체 비율 초기화</span>
+                        </div>
+                    </div>   
+                    <div class="selection">
+                        <ul>
+                            <li>
+                                <div class="info -bordered">
+                                    <div class="fsplit">
+                                        <p class="fundtype">
+                                            국내주식형
+                                        </p>
+                                        <div class="select">
+                                            <button type="button" aria-haspopup="true">비율 선택</button> <!-- ux 라이팅 수정 -->
+                                        </div>
+                                    </div>
+                                    <p class="fudninfo">
+                                        운용보수가 저렴한 국내 주식형 상장지수펀드(ETF)에 투자하여 KOSPI200 지수를 추종하는 펀드.
+                                        60~100% 이내로 국내 상장지수펀드에 투자하여 KOSPI200 지수의 수익률을 효율적으로 추종하는 것을 목표로 함.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info -bordered -active">
+                                    <div class="fsplit">
+                                        <p class="fundtype">
+                                            글로벌채권형
+                                        </p>
+                                        <div class="select">
+                                            <button type="button" aria-haspopup="true">70%</button>
+                                        </div>
+                                    </div>
+                                    <p class="fudninfo">
+                                        글로벌자산운용사가 운용하는 상장지수펀드(ETF)에 투자하여 저렴한 비용으로 전세계 다양한 채권에 투자할 수 있는 기회를 제공하는 펀드.
+                                        60~100% 이내로 전세계 채권섹터에 분산투자하여 장기적으로 국내 기준금리 이상의 수익률을 달성을 목표로 함.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info -bordered">
+                                    <div class="fsplit">
+                                        <p class="fundtype">
+                                            국내주식형
+                                        </p>
+                                        <div class="select">
+                                            <button type="button" aria-haspopup="true">비율 선택</button> <!-- ux 라이팅 수정 -->
+                                        </div>
+                                    </div>
+                                    <p class="fudninfo">
+                                        운용보수가 저렴한 국내 주식형 상장지수펀드(ETF)에 투자하여 KOSPI200 지수를 추종하는 펀드.
+                                        60~100% 이내로 국내 상장지수펀드에 투자하여 KOSPI200 지수의 수익률을 효율적으로 추종하는 것을 목표로 함.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info -bordered -active">
+                                    <div class="fsplit">
+                                        <p class="fundtype">
+                                            국내주식형
+                                        </p>
+                                        <div class="select">
+                                            <button type="button" aria-haspopup="true">10%</button>
+                                        </div>
+                                    </div>
+                                    <p class="fudninfo">
+                                        글로벌자산운용사가 운용하는 상장지수펀드(ETF)에 투자하여 저렴한 비용으로 전세계 다양한 채권에 투자할 수 있는 기회를 제공하는 펀드.
+                                        60~100% 이내로 전세계 채권섹터에 분산투자하여 장기적으로 국내 기준금리 이상의 수익률을 달성을 목표로 함.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>                                                                             
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary -disabled">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        var h2Height = document.querySelector('.h2-group').clientHeight;
+        var ratio = document.querySelector('.ratio');
+
+        window.addEventListener('scroll', function(){
+            if(window.scrollY > h2Height + 260) {
+                ratio.classList.add('-active');
+            }else {
+                ratio.classList.remove('-active');
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">청약 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="h2-group">                        
+                        <h2 class="h2"> 
+                            가입 자격을 확인해 주세요   <!-- [240214]텍스트 변경 -->
+                        </h2>
+                    </div>
+
+                    <!-- [240206]문구 변경,영역 추가 -->
+                    <!-- [240104]마크업 수정 -->
+                    <dl class="dl -box">
+                        <div>
+                            <ol class="ol -number">
+                                <li>무주택자</li>
+                                <li>만 19~34세 (병역복무기간 최대 6년 인정)</li>
+                                <li>소득(근로·사업·기타)이  5,000만원 이하
+                                    <div class="text">
+                                        <p class="info">* 소득 : 소득세법상 직전년도 기준 신고소득</p>  <!-- [240214]텍스트 변경 -->
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <p class="p">아래의 경우는 영업점에서 가입할 수 있습니다. 증빙서류를 가지고 방문해 주세요.</p>
+                        <div>  
+                            <ul class="ul -bullet">
+                                <li>병역복무기간(최대 6년) 차감 후 가입대상</li>
+                                <li>비과세 소득만 있는 군인</li>  <!-- [240214]텍스트 변경 -->
+                            </ul>
+                        </div>
+                    </dl>
+                    <!-- //[240104]마크업 수정 -->
+                    <!-- //[240206]문구 변경,영역 추가 -->
+
+                    <!-- [240206]삭제 -->
+                    <!-- <h4 class="h5">무주택 세대주</h4>
+                    <p class="p">신규 신청일 현재기준 3개월 이전부터 연속하여 본인이 주택을 소유하지 않은 세대주</p>
+
+                    <h4 class="h5">무주택 세대주예정자</h4>
+                    <p class="p">신규 신청일 현재기준 본인이 무주택자로 가입 후 3년 이내 3개월 이상 연속 세대주예정자 (현재 3개월 미만인 세대주 포함)로 <span class="point">계좌 해지 전 까지 주민등록등본을 영업점에 제출하여 세대주 충족 여부 입증해야 함</span></p>
+
+                    <h4 class="h5">무주택 세대의 세대원</h4>
+                    <p class="p">주민등록등본에 함께 등재된 본인, 배우자 및 직계존・비속이 모두 무주택인 자로 <span class="point">영업점가입만 가능</span></p> -->
+                    <!-- //[240206]삭제 -->
+
+                    <!-- ui수정 240122 (마크업 변경) --> 
+                    <div class="button-box-wrap">
+                        <button type="button" class="button -lg -arrow" aria-haspopup="true">홈택스 바로가기</button>  
+                        <button type="button" class="button -lg -arrow" aria-haspopup="true">정부24 바로가기</button>  
+                    </div>
+                    <!-- <div class="buttons button-box-wrap">
+                        <button type="button" class="button -lg">홈택스 바로가기</button> 
+                        <button type="button" class="button -lg">정부24 바로가기</button> 
+                    </div> -->
+                    <!-- //ui수정 240122 (마크업 변경) --> 
+                </div>
+
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <!-- [240206]텍스트 변경-->
+                            <ul class="ul -bullet">
+                                <li>소득은 국세청 홈택스, 세대주 여부는 정부24에서 스크래핑으로 자동 확인합니다.</li>
+                                <li>공동인증서를 이용하려면 국세청 홈택스와 정부24에 회원가입 후 공동인증서를 등록해 주세요.</li>   <!-- [240513]텍스트 변경-->
+                            </ul>
+                            <!-- //[240206]텍스트 변경-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

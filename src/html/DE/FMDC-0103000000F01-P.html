@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>상품상세</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+                    <h1 class="title">상품상세</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                        <button type="button" class="func -menu"><span class="hide">전체메뉴</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner center">
+                    <h1 class="title">적금</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="product-detail-wrap">
+                        <!-- 상품 안내 영역 -->
+                        <div class="procuct-summary">
+                            <div class="info-area">
+                                <div class="title-area">
+                                    <h2>NH내가Green초록세상적금</h2>
+                                    <div class="hashtag"><span>#친환경우대</span><span>#월50만원이내</span></div>
+                                </div><!-- //.title-area -->
+                                
+                                <div class="subtitle-area">
+                                    <div class="product-cost-area">
+                                        <div class="inner">
+                                            <dl>
+                                                <dt>최고</dt>
+                                                <dd class="point">4.10%</dd>
+                                            </dl>
+                                            <span class="daesh">~</span>
+                                            <dl>
+                                                <dt>기본</dt>
+                                                <dd>3.10%</dd>
+                                            </dl>
+                                        </div>
+                                        <p class="cost-para">(연/세전)2024.08.31 기준</p>
+                                    </div>
+
+                                    <ul class="product-dl-list">
+                                        <li class="range">
+                                            <dl>
+                                                <dt>가입기간</dt>
+                                                <dd>12개월 이상 36개월 까지</dd>
+                                            </dl>
+                                        </li>
+                                        <li class="cost">
+                                            <dl>
+                                                <dt>가입금액</dt>
+                                                <dd>월 50만원 이내</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div><!-- //.subtitle-area -->
+
+                                <div class="top-join-btn"><button type="button" class="button -lg -primary">가입하기</button></div>
+                            </div><!-- //.info-area -->
+
+                            <div class="loadArea" data-includ="/content/nhbank/html/dt/dt10001112_de.html"></div>
+
+                            <!-- 금리 계산해보기 -->
+                            <div class="interest-calc-wrap">
+                                <div class="accordion -card" data-role="fold">
+                                    <button type="button" class="title -interest" data-role="marker">만기금액 미리 계산해보기</button>   <!-- [240417]텍스트 수정 -->
+                                    <div class="panel" data-role="hidden">
+                                        <div class="interest-calc-cont">
+                                            <!-- 통테 ux-라이팅 반영 -->
+                                            <div class="calc-row">
+                                                <span class="calc-para -front">만기 금액은 실제와 다를 수 있습니다.</span>
+                                            </div>
+                                            <!-- //통테 ux-라이팅 반영 -->
+                                            <div class="calc-row">
+                                                <span class="calc-para -front">매월</span>
+                                                <span class="calc-input">
+                                                    <div class="mix">
+                                                        <div class="text -won" data-clear="false">
+                                                            <input type="tel" id="tt1" class="right num-call" aria-haspopup="true" placeholder="금액을 입력하세요" readonly>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                                <span class="calc-para">원을</span>
+                                            </div>
+                                            <div class="calc-row">
+                                                <span class="calc-input">
+                                                    <div class="mix">
+                                                        <div class="text" data-clear="false">
+                                                            <input type="tel" id="tt2" class="right num-call" aria-haspopup="true" placeholder="개월 입력" readonly>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                                <span class="calc-para">개월 동안 저축한다면?</span>
+                                            </div>
+                                            <div class="calc-btn-wrap"><button type="button" class="button -lg -secondary">계산해보기</button></div>
+                                            <div class="interest-calc-result">
+                                                <dl>
+                                                    <dt>세전</dt>
+                                                    <dd>1,040,500원</dd>
+                                                </dl>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //금리 계산해보기 -->
+                        </div><!-- //.procuct-summary -->
+                        <!-- //상품 안내 영역 -->
+
+                        <!-- 상품 정보 영역 -->
+                        <div class="procuct-info">
+                            <div class="segments -tabstyle">
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div role="tablist" class="list">
+                                            <div class="item -active"><button type="button" role="tab" aria-selected="true" aria-controls="segments-panel01" id="segment01">상품안내</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel02" id="segment02">우대금리</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel03" id="segment03">금리안내</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel04" id="segment04">유의사항</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel05" id="segment05">기타사항</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="segments-panels">
+                                <div role="tabpanel" aria-labelledby="segment01" id="segments-panel01" class="segments-panel -active" tabindex="0">
+                                    <dl class="prodect-info-dl">
+                                        <dt class="h5">상품특징</dt>
+                                        <dd>
+                                            <p class="p">생활 속 친환경 금융거래를 통한 우대혜택 및 친환경 활동을 실천하는 적금</p>
+                                        </dd>
+
+                                        <dt class="h5">가입대상</dt>
+                                        <dd>
+                                            <p class="p">개인(1인1계좌)</p>
+                                        </dd>
+
+                                        <dt class="h5">가입기간</dt>
+                                        <dd>
+                                            <p class="p">1년이상 ~ 3년이하(월단위)</p>
+                                        </dd>
+
+                                        <!-- [240603]텍스트, 마크업 변경 -->
+                                        <dt class="h5">가입금액</dt>
+                                        <dd>
+                                            <!-- <p class="p">매월 1만원 이상 50만원 이내 자유적립(초입금 5만원 이상)<br>단, 만기일 전 3개월 이내에는 이전 적립금 합계액을 초과하여 입금 불가</p> -->
+                                            <div>
+                                                <ul class="ul -bullet">
+                                                    <li>매월 1만원 이상 50만원 이내 자유적립(초입금 5만원 이상)</li>
+                                                    <li>단, 만기일 전 3개월 이내에는 이전 적립금 합계액을 초과하여 입금 불가</li>
+                                                </ul>
+                                            </div>
+                                        </dd>
+
+                                        <dt class="h5">예금종류</dt>
+                                        <dd>
+                                            <p class="p">자유로우대적금</p>
+                                        </dd>
+
+                                        <dt class="h5">적립방법</dt>
+                                        <dd>
+                                            <p class="p">적립식예금</p>
+                                        </dd>
+
+                                        <dt class="h5">세제혜택</dt>
+                                        <dd>
+                                            <p class="p">비과세종합저축 가입가능(전 금융기관 통합한도 범위 내)</p>
+                                        </dd>
+
+                                        <dt class="h5">가입/해지안내</dt>
+                                        <dd>
+                                            <!-- <p class="p">가입<br>
+                                                영업점, 비대면 채널
+                                            </p>
+                                            <p class="p">해지<br>
+                                                영업점, 비대면 채널(자동만기해지 서비스 이용 가능)
+                                            </p> -->
+                                            <div>
+                                                <ul class="ul -bullet">
+                                                    <li>가입 : 영업점, 비대면 채널</li>
+                                                    <li>해지 : 영업점, 비대면 채널(자동만기해지 서비스 이용 가능)</li>
+                                                </ul>
+                                            </div>
+                                        </dd>
+                                        <!-- //[240603]텍스트, 마크업 변경 -->
+                                    </dl>
+
+                                </div>
+
+                                <div role="tabpanel" aria-labelledby="segment02" id="segments-panel02" class="segments-panel" tabindex="0">
+                                    <div class="field">
+                                        <!-- <h3 class="h4">우대금리</h3> -->   <!-- [240315]추가 -->
+                                        <div class="data-box">
+                                            <div class="data-box-title">우대금리</div>
+                                            <div class="data-box-content">최대 연 1.00%p</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="case-wrap -xs">
+                                        <p class="p">아래 우대 조건을 충족하고 만기해지 시 기본이자율에 가산하여 우대 이자율 적용</p>
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">우대금리</span></caption>
+                                                <colgroup>
+                                                    <col style="width:70%">
+                                                    <col style="width:30%">
+                                                </colgroup>
+                                                <!-- [240603]마크업 변경 -->
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">우대조건</th>
+                                                        <th scope="col">금리(%p)</th>
+                                                    </tr>
+                                                </thead>
+                                                <!-- //[240603]마크업 변경 -->
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="left"><strong>친환경 서약</strong> 우대 온실가스 줄이기 실천 서약서 제출 <sup>주1)</sup></td>
+                                                        <td>0.10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="left"><strong>제로페이퍼 1</strong> 통장 미발급 <sup>주2)</sup></td>
+                                                        <td>0.30</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="left"><strong>제로페이퍼 2</strong> 손하나로인증 서비스 등록 <sup>주3)</sup></td>
+                                                        <td>0.20</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="left"><strong>탄소중립</strong> 대중교통 이용실적 <sup>주4)</sup></td>
+                                                        <td>0.20</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="left"><strong>ESG 콜라보</strong> 적금과 예금 동시보유 <sup>주5)</sup></td>   <!-- [240603]마크업 변경 -->
+                                                        <td>0.20</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="notewrap">
+                                            <ul>
+                                                <li>주1) 탄소포인트제 동참 등 친환경 활동 목록이 제시된 서약서에 동의</li>
+                                                <li>주2) 가입시점 통장 미발급 선택 시 우대금리적용 및 만기까지 통장 발급 불가</li>
+                                                <li>주3) 만기전전월말 기준 손하나로인증 서비스가 등록되어 있는 경우</li>
+                                                <li>주4) 농협은행 채움카드(신용, 체크) 후불교통카드로 이 적금의 신규일이 포함된 월의 익월부터 만기전전월말까지 매월 대중교통(버스, 지하철에 한 함) 이용 내역이 1건이상 존재하는 경우(모바일교통카드 실적 제외)</li>
+                                                <li>주5) 이 적금의 만기시점에 “NH내가Green초록세상예금”의 유효계좌를 보유하거나 이 적금의 가입기간 동안 “NH내가Green초록세상예금”의 만기해지 내역이 있는 경우</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div role="tabpanel" aria-labelledby="segment03" id="segments-panel03" class="segments-panel" tabindex="0">
+                                    <!-- <h3 class="h4">금리안내</h3> -->   <!-- [240315]추가 -->
+                                    <!-- <h4 class="h5">금리안내</h4> -->  <!-- [240315]삭제 -->
+                                    <div class="mix datepicker">
+                                        <div class="text" data-clear="false">
+                                            <input type="text" class="left-side" id="gga" value="2023.08.23" title="날짜선택" aria-haspopup="true" readonly>
+                                        </div>
+                                        <div class="space -lined date">
+                                            <button type="button" class="icon-button -calendar" aria-haspopup="true"><span class="hide">달력 보기</span></button>
+                                        </div>
+                                    </div>
+                                    <div class="button-box-wrap12">
+                                        <button type="button" class="button -lg">조회</button>
+                                    </div>
+                                    <div class="case-wrap -xs">
+                                        <h5 class="h6">만기지급금리</h5>
+                                        <p class="p">만기일시지급식</p>
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">기본금리</span></caption>
+                                                <colgroup>
+                                                    <col style="width:70%">
+                                                    <col style="width:30%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">가입기간</th>
+                                                        <th scope="col">기본금리 (연%,세전)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>12개월 이상 ~ 24개월 미만</td>
+                                                        <td>3.10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>24개월 이상 ~ 30개월 미만</td>
+                                                        <td>3.15</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>30개월 이상 ~ 36개월 미만</td>
+                                                        <td>3.15</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>36개월 이상</td>
+                                                        <td>3.40</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <p class="p">이자지급식</p>
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">기본금리</span></caption>
+                                                <colgroup>
+                                                    <col style="width:70%">
+                                                    <col style="width:30%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">가입기간</th>
+                                                        <th scope="col">기본금리 (연%,세전)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>12개월 이상 ~ 24개월 미만</td>
+                                                        <td>3.10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>24개월 이상 ~ 30개월 미만</td>
+                                                        <td>3.15</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>30개월 이상 ~ 36개월 미만</td>
+                                                        <td>3.15</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>36개월 이상</td>
+                                                        <td>3.40</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="notewrap">
+                                            <p class="p">자세한 사항은 상품설명서 및 특약 참조</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div role="tabpanel" aria-labelledby="segment04" id="segments-panel04" class="segments-panel" tabindex="0">
+                                    <!-- <h3 class="h4">유의사항</h3> -->   <!-- [240315]추가 -->
+                                    <p class="p">만기 전 해지할 경우 계약한 이율보다 낮은 중도해지이율이 적용됩니다.<br>
+                                        이 상품은 기본적으로 ‘온실가스 줄이기 실천 서약’에 동의 시 가입이 가능합니다.<br>
+                                        통장미발급으로 가입 시 우대금리가 적용되며 통장발급은 불가합니다.
+                                    </p>
+                                </div>
+                                
+                                <!-- [240603]텍스트, 마크업 변경 -->
+                                <div role="tabpanel" aria-labelledby="segment05" id="segments-panel05" class="segments-panel" tabindex="0">
+                                    <div class="case-wrap -xs">
+                                        <!-- <h3 class="h4">기타사항</h3> -->   <!-- [240315]추가 -->
+                                        <h5 class="h5">중도해지 기준금리</h5>
+                                        <p class="p">자유로우대적금 중도해지이자율 적용</p>
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">자유로우대적금 중도해지이자율 적용</span></caption>
+                                                <colgroup>
+                                                    <col style="width:30%">
+                                                    <col style="width:70%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">경과기간</th>
+                                                        <th scope="col">적용이율</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>3개월 미만</td>
+                                                        <td>0.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6개월 미만</td>
+                                                        <td>중도해지 기준이율 X 50% X 경과월수 ÷ 계약월수</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9개월 미만</td>
+                                                        <td>중도해지 기준이율 X 60% X 경과월수 ÷ 계약월수</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11개월 미만</td>
+                                                        <td>중도해지 기준이율 X 70% X 경과월수 ÷ 계약월수</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11개월 이상</td>
+                                                        <td>중도해지 기준이율 X 80% X 경과월수 ÷ 계약월수</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="p">중도해지 기준이자율 : 예금가입일 당시 고시된 기본 이자율</p>
+
+                                        <h5 class="h5">만기 후 금리</h5>
+                                        <!-- <p class="p">채움적금 만기 후 이자율 적용</p> -->
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">자유로우대적금 만기 후 이자율 적용</span></caption>
+                                                <colgroup>
+                                                    <col style="width:30%">
+                                                    <col style="width:70%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">경과기간</th>
+                                                        <th scope="col">적용이자율</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>만기 후 1년 이내</td>
+                                                        <td>만기시점 계약기간별 기본이율의 1/2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>만기 후 1년 초과</td>
+                                                        <td>만기시점 보통예금 이자율</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- <div class="notewrap">
+                                            <p>만기일부터 지급일 전날까지의 기간에 대해 만기일 당시 농협은행 영업점과 인터넷 홈페이지에 공시한 만기 후 이율로 셈한 이자를 더하여 지급<br>
+                                                (단, 만기일 이후 이율이 변동된 경우 변동일로부터는 변동된 만기 후 이자율 적용)
+                                            </p>
+                                        </div> -->
+                                        <ul class="ul -bullet">
+                                            <li>만기일부터 지급일 전날까지의 기간에 대해 만기일 당시 농협은행 영업점과 인터넷 홈페이지에 공시한 만기 후 이율로 셈한 이자를 더하여 지급<br>
+                                                (단, 만기일 이후 이율이 변동된 경우 변동일로부터는 변동된 만기 후 이자율 적용)
+                                            </li>
+                                        </ul>
+
+                                        <h5 class="h5">만기앞당김해지</h5>
+                                        <p class="p">만기일이 금융휴무일, 일요일, 법정공휴일인 경우 만기앞당김 해지 가능<br>
+                                            (단, 앞당김 일수만큼 이자계산 기간에서 차감하여 약정이율을 적용)
+                                        </p>
+
+                                        <h5 class="h5">무통장 거래</h5>
+                                        <p class="p">가능</p>
+
+                                        <h5 class="h5">추가적립</h5>
+                                        <p class="p">자유적립식 상품으로 가입금액 한도 내 추가입금 가능</p>
+
+                                        <h5 class="h5">자동이체</h5>
+                                        <!-- <p class="p">월 자동이체 가능하며, 다른 금융회사 입출금계좌에서도 등록 가능하나, 자동이체 신청은 해당 금융회사에서 신청해야 함</p> -->
+                                        <div>
+                                            <ul class="ul -bullet">
+                                                <li>자동이체 출금계좌가 타행일 경우 해당 금융회사에서 자동이체 신청해야 하며, 타행자동이체는 신청 은행의 자동이체 정책에 따라 익영업일에 입금 될 수 있습니다. </li>
+                                                <li>이에 따라 매월 말일로 자동이체 설정 시 말일이 휴일인 경우 익영업일에 처리됨에 따라 다음 달 첫 영업일에 입금되어 해당 월 입금이 누락 되는 상황이 발생할 수 있으니 말일 자동이체는 지양해 주시기 바랍니다.</li>
+                                            </ul>
+                                        </div>
+
+                                        <h5 class="h5">재예치</h5>
+                                        <p class="p">불가</p>
+
+                                        <h5 class="h5">분할인출</h5>
+                                        <p class="p">불가</p>
+
+                                        <h5 class="h5">분할해지</h5>
+                                        <p class="p">불가</p>
+
+                                        <h5 class="h5">휴면예금 및 출연</h5>
+                                        <ul class="ul -bullet">
+                                            <li>예금 만기일 또는 이자지급을 포함한 최종거래일 이후 5년 이내 계좌를 해지하지 않을 경우 예금거래기본약관 제9조의2 휴면예금 및 출연에 따라 휴면예금은 “서민금융진흥원(국번없이 1397)”에 출연될 수 있으며, 이 경우 서민금융진흥원을 통해 휴면예금을 찾으실 수 있습니다.</li>
+                                            <li>휴면예금은 휴면예금통합조회서비스(www.sleepmoney.or.kr)를 통해 조회가능합니다.</li>
+                                        </ul>
+
+                                        <h5 class="h5">양도 및 담보제공</h5>
+                                        <!-- <p class="p">양도 가능<br>
+                                            예금담보대출은 예금잔액의 90%범위 내에서 가능
+                                        </p> -->
+                                        <ul class="ul -bullet">
+                                            <li>양도 불가</li>
+                                            <li>예금담보대출은 예금잔액의 90%범위 내에서 가능</li>
+                                        </ul>
+
+                                        <h5 class="h5">기금조성</h5>
+                                        <p class="p">신규 가입 계좌당 2,000원씩 녹생환경기금 적립<br>(NH내가Green초록세상예금, 적금 합산 총 1억원 한도)</p>
+
+                                        <h5 class="h5">원금 또는 이자지급 제한</h5>
+                                        <!-- <p class="p">계좌에 압류, 가압류, 질권설정 등이 등록될 경우 원금 및 이자 지급을 제한합니다.<br>
+                                            민사집행법에 따라 최저생계비 이하 등 압류금지채권에 해당하는 경우에는 법원에 압류금지채권 범위 변경 신청 등을 통해 압류를 취소할 수 있습니다. 예금잔액증명서 발급 당일에는 입금/출금/이체 등 잔액 변동이 불가합니다.
+                                        </p> -->
+                                        <ul class="ul -bullet">
+                                            <li>계좌에 압류, 가압류, 질권설정 등이 등록될 경우 원금 및 이자 지급을 제한합니다.
+                                                <div>
+                                                    <ul class="ul -dash">
+                                                        <li>민사집행법에 따라 최저생계비 이하 등 압류금지채권에 해당하는 경우에는 법원에 압류금지채권 범위 변경 신청 등을 통해 압류를 취소할 수 있습니다.</li>
+                                                    </ul>            
+                                                </div>
+                                            </li>
+                                            <li>예금잔액증명서 발급 당일에는 입금/출금/이체 등 잔액 변동이 불가합니다.</li>
+                                        </ul>
+
+                                        <h5 class="h5">* 금융소비자 보호에 관한 법률 제19조제1항에 따른 설명을 받을 수 있는 권리가 있습니다.</h5>
+
+                                        <h5 class="h5">* 금융상품을 가입하시기 전에 상품설명서 및 약관을 반드시 읽어보시기 바랍니다.</h5>
+                                    </div>
+                                </div>
+                                <!-- //[240603]텍스트, 마크업 변경 -->
+                            </div>
+                        </div>
+                        <!-- //상품 정보 영역 -->
+
+                        <!-- 상품 추가 정보 영역 -->
+                        <div class="product-other">
+                            <!-- 상품설명서 및 약관 -->
+                            <div class="product-agree-area">
+                                <div class="accordion -lg -active" data-role="fold">
+                                    <button type="button" class="title" data-role="marker">상품설명서 및 약관</button>
+                                    <div class="panel" data-role="hidden">
+                                        <div class="shortcut -boxType">
+                                            <ul>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">기본약관</a></li>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">상품설명서</a></li>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">상품특약</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //상품설명서 및 약관 -->
+
+                            <!-- 예금자보호 (관리자) -->
+                            <div class="loadArea" data-includ="/content/nhbank/html/cn/common/protect01.html"></div>
+                            <!-- //예금자보호 (관리자) -->
+
+                            <!-- 준법감시 심의필 (관리자) -->
+                            <div class="product-deliberate">
+                                <p class="p">준법감시심의필 000-0000(심의일:YYYY.MM.DD)<br>유효기간 : YYYYY.MM.DD ~ YYYYY.MM.DD</p>
+                            </div>
+                            <!-- //준법감시 심의필 (관리자) -->
+                            
+                            <!-- 공유 -->
+                            <div class="product-share">
+                                <ul>
+                                    <li><button type="button" class="share" aria-haspopup="true"><span class="hide">공유</span></button></li>   
+                                    <li><button type="button" class="wishlist"><span class="hide">장바구니</span></button></li>                                             
+                                </ul>
+                            </div>
+                            <!-- //공유 -->
+                            
+                            <!-- 추천상품 -->
+                            <div class="product-recommend">
+                                <h4 class="h5"><span>김농협</span>님을 위한 추천 상품</h4>
+                                <div class="product-recommend-list">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">채움적금</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">e금리우대적금</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">청년도약계좌</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //추천상품 -->
+                        </div>
+                        <!-- //상품 추가 정보 영역 -->
+                    </div><!-- //.product-detail-wrap -->
+                </div>
+
+                <div class="fixer -jsProcuctBtn">
+                    <div class="buttons">
+                        <button type="button" class="button -lg">상담</button>
+                        <button type="button" class="button -lg -primary">가입하기</button>
+                    </div>
+                </div>
+
+                <!-- 토스트팝업은 -active 클래스 사용하여 실행합니다 -->
+                <div class="toast" role="alert" aria-live="assertive">
+                    <div class="message" >
+                        <p>장바구니에 담었어요</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+        procuctDatailAct();
+
+        // html 파일 로드 (퍼블확인용)
+        incHtml();
+        function incHtml() {
+            $('[data-includ]').each(function () {
+                $this = $(this);
+                var $url = $this.attr('data-includ')
+                $this.load($url)
+            })
+        }
+    </script>
+</body>
+</html>

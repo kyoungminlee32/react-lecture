@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출신청정보확인</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">대출 신청정보를 확인해 주세요</h2>
+                    </div>
+                    <div class="limit-point-box">
+                        <p class="p">대상기업 <span class="limit-point bk">NH농협사업기구</span></p>   <!-- 240326 재검토 -->
+                        <p class="p">대출신청주수 <span class="limit-point">10,000주</span></p>
+                    </div>
+                    <dl class="dl -box">
+                        <div>
+                            <dt>대출과목</dt>
+                            <dd>일반자금 <div>(행복채움우리사주론)</div></dd>
+                        </div>
+                        <div>
+                            <dt>거래구분</dt>
+                            <dd>개별거래</dd>
+                        </div>
+                        <div>
+                            <dt>담보비율</dt>
+                            <dd>공모가의 100%</dd>
+                        </div>
+                        <div>
+                            <dt>담보</dt>
+                            <dd>신규취득 우리사주</dd>
+                        </div>
+                        <div>
+                            <dt>담보수량</dt>
+                            <dd>(대출신청 주식수)주</dd>
+                        </div>
+                        <div>
+                            <dt>대출금액</dt>
+                            <dd>대출신청 주식수 X 1주당 확정 공모가액 X 담보비율</dd>
+                        </div>
+                        <div>
+                            <dt>대출개시일</dt>
+                            <dd>우리사주조합 청약일</dd>
+                        </div>
+                        <div>
+                            <dt>대출기간 만료일</dt>
+                            <dd>대출개시일로부터 1년 후 응당일</dd>
+                        </div>
+                        <div>
+                            <dt>이자율</dt>
+                            <dd>고정금리 <br> 1년 MOR + 1.17%</dd>
+                        </div>
+                        <div>
+                            <dt>지연배상금률</dt>
+                            <dd>최고 연15% <br> (은행여신거래기본약관(기업용) <br> 제3조제5항적용</dd>
+                        </div>
+                        <div>
+                            <dt>이자 및 지연배상금 계산방법</dt>
+                            <dd>1년을 365일(윤년은 366일)로 보고 1일 단위로 계산</dd>
+                        </div>
+                        <div>
+                            <dt>대출 실행방법</dt>
+                            <dd>여신개시일에 전액 실행</dd>
+                        </div>
+                        <div>
+                            <dt>상환방법</dt>
+                            <dd>대출기간 만료일에 전액 상환</dd>
+                        </div>
+                        <div>
+                            <dt>이자지급 시기 및 방법</dt>
+                            <dd>상환일로부터 소급하여 매1개월마다 정한 납입일에 지급</dd>
+                        </div>
+                        <div>
+                            <dt>중도상환해약금</dt>
+                            <dd>없음</dd>
+                        </div>
+                        <div>
+                            <dt>이자 납입계좌</dt>
+                            <dd>00-0000-0000</dd>
+                        </div>
+                        <div>
+                            <dt>자동이체일</dt>
+                            <dd>1일</dd>
+                        </div>
+                        <div>
+                            <dt>대출안내장 받는곳</dt>
+                            <dd>직장</dd>
+                        </div>
+                        <div>
+                            <dt>알림받는 곳</dt>
+                            <dd>문자메시지</dd>
+                        </div>
+                        <div>
+                            <dt>권유직원</dt>
+                            <dd>김농협</dd>
+                        </div>
+                        <div>
+                            <dt>희망 관리점</dt>
+                            <dd>종로지점(02-0000-0000)</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">대출 신청하기</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

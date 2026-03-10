@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출신청 계좌선택</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출한도 기한연기</h1>
+
+                    <!-- 240425 헤더 수정 -->
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                        <button type="button" class="func -menu"><span class="hide">전체메뉴</span></button>
+                    </div>
+                    <!-- //240425 헤더 수정 -->
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <!-- 240313 ux라이팅 수정 -->
+                        <h2 class="h2">변경 금액을 확인해 주세요</h2>
+                        <!-- //240313 ux라이팅 수정 -->
+                    </div>
+                    <div class="accounts-box mt-32">
+                        <p class="label">대출정보</p>
+                        <div class="accounts">
+                            <div class="account">                    
+                                <div type="button" data-bankcode="011" class="info">
+                                    <span class="name">
+                                        <span>NH직장인월복리적금</span>
+                                    </span>
+                                    <span class="account-number">
+                                        <!-- 240313 은행명 삭제 -->
+                                        <span>111-1234-5678-99</span>
+                                    </span>
+                                </div>
+                                <dl class="dl">
+                                    <div>
+                                        <dt>잔액</dt>
+                                        <dd><span>- 7,500,000원</span></dd>
+                                    </div>
+                                    <div>
+                                        <dt>변경 전 약정금액</dt>
+                                        <dd><span>10,000,000원</span></dd>
+                                    </div>
+                                    <div>
+                                        <dt>감액금액</dt>
+                                        <dd><span>10,000,000원</span></dd>
+                                    </div>
+                                    <div>
+                                        <dt>변경 후 약정금액</dt>
+                                        <dd><span>10,000,000원</span></dd>
+                                    </div>
+                                </dl>
+                            </div>                        
+                        </div>
+                    </div>
+
+                    <!-- 2024-05-03 수정  -->
+                    <div class="accounts-box mt-32">
+                        <p class="label">감액계좌</p>
+                        <div class="accounts">
+                            <div class="account">                    
+                                <div type="button" data-bankcode="011" class="info">
+                                    <span class="name">
+                                        <span>주거래우대통장</span>
+                                    </span>
+                                    <span class="account-number">
+                                        <!-- 240313 은행명 삭제 -->
+                                        <span>111-1234-5678-99</span>
+                                    </span>
+                                </div>
+                                
+                                <div class="amount">
+                                    <div class="key">출금가능금액</div>
+                                    <div class="value">
+                                        <span>
+                                        <button type="button" class="refresh"><span class="hide">새로고침</span></button>
+                                        150,000,000</span>원
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="text">
+                            <!-- 240312 ux라이팅 수정 -->
+                            <p class="info">출금가능금액의 변동이 있을 경우 새로 고침을 해주세요.</p>
+                            <!-- //240312 ux라이팅 수정 -->
+                        </div>
+                    </div>
+                    <!-- //2024-05-03 수정  -->
+
+                    <div class="case-wrap -xs">
+                        <div class="checkboxes -full">
+                            <div class="checkbox -sm">
+                                <input type="checkbox" id="checkbox-mm" checked>
+                            <!-- 240312 ux라이팅 수정 -->
+                                <label for="checkbox-mm">감액과 기한연기는 실행 후 취소할 수 없습니다.</label>
+                            <!-- //240312 ux라이팅 수정 -->
+                            </div>
+                            <div class="checkbox -sm">
+                                <input type="checkbox" id="checkbox-ldrt" >
+                            <!-- 240312 ux라이팅 수정 -->
+                                <label for="checkbox-ldrt">감액 후 자동이체 미처리, 대출 원리금 미납 등에 유의하시기 바랍니다.</label>
+                            <!-- //240312 ux라이팅 수정 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                            <!-- 240312 ux라이팅 수정 -->
+                                <li>
+                                    감액과 기한연기를 실행할 수 없는 경우 대출 관리점에 문의해 주세요.
+                                </li>
+                            <!-- //240312 ux라이팅 수정 -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">신청</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

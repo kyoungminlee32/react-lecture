@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">    
+    <link rel="stylesheet" href="../../assets/css/insurance.css">  
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">적합성 진단 안내</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                        <button type="button" class="func -menu"><span class="hide">전체메뉴</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">                  
+                    <div class="h2-group">                        
+                        <h2 class="h2">
+                            적합성 진단 후 <br> <!-- [240227] br 추가 --> 
+                            변액보험 상품을 확인할 수 있어요 <!-- ux 라이팅 수정 --> 
+                        </h2>
+                    </div>
+                    <div class="box">
+                        <ul class="ul -bullet"> <!-- ux 라이팅 수정 -->
+                            <li>변액보험은 적합성 진단 후 진단 결과가 [적합]해야 가입할 수 있습니다.</li>
+                            <li>진단 결과가 [부적합]이면 다음 날 다시 진행해 주시기 바랍니다.</li>
+                            <li>적합성 진단은 1일 1회 진행할 수 있습니다.</li> <!-- [240214] 문구추가 -->
+                            <li>변액보험은 운용결과에 따라 원금의 일부 또는 전부 손실이 발생할 수 있습니다.</li>
+                            <li>적합성 진단 결과는 12개월 동안 보유합니다.</li> <!-- [240417] 문구추가 -->
+                        </ul> <!-- //ux 라이팅 수정 -->
+                    </div>    
+                    <div class="checkbox -sm">
+                        <input type="checkbox" id="checkbox-sm">
+                        <label for="checkbox-sm">위 내용에 모두 동의합니다.</label> <!-- ux 라이팅 수정 --> <!-- [240417] 문구수정 -->
+                    </div>                                                                  
+                </div>
+                 <!-- [240417] 알아두세요 문구수정 -->
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <li>금융소비자보호에대한법률」제17조(적합성원칙)에 따라 귀하의 연령, 재산상황, 보험가입의 목적 등을 파악하여 보험계약자에게 가장 적합한 보험계약체결을 권유하기 위한 기초자료로 활용됩니다.</li>
+                                <li>허위 또는 불성실한 답변을 하시는 경우 부적합한 보험계약을 권유하게 될수있으며, 이로 인해 발생하는 모든 손해는 보험계약자 본인에게 귀속되오니 유념하여 주시기 바랍니다.</li>
+                                <li>또한 귀하가 기대하는 특별계정(펀드)의 수익률이 높을수록 손실위험도 높아질 수 있으므로 유의하여 주시기 바랍니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- 숫자 키패드 레이어 -->
+    <div class="custom-key-layer" aria-hidden="true">
+        <div class="amount-btn-wrap">
+            <button type="button" value="100000" class="button numBtn -sm -fit">+10만</button>
+            <button type="button" value="500000" class="button numBtn -sm -fit">+50만</button>
+            <button type="button" value="1000000" class="button numBtn -sm -fit">+100만</button>
+            <button type="button" value="10000000" class="button numBtn -sm -fit">+1,000</button>
+        </div>
+        <div class="custom-key-wrap">
+            <button type="button" class="numBtn" value="1" title="숫자 1 입력">1</button>
+            <button type="button" class="numBtn" value="2" title="숫자 2 입력">2</button>
+            <button type="button" class="numBtn" value="3" title="숫자 3 입력">3</button>
+            <button type="button" class="numBtn" value="4" title="숫자 4 입력">4</button>
+            <button type="button" class="numBtn" value="5" title="숫자 5 입력">5</button>
+            <button type="button" class="numBtn" value="6" title="숫자 6 입력">6</button>
+            <button type="button" class="numBtn" value="7" title="숫자 7 입력">7</button>
+            <button type="button" class="numBtn" value="8" title="숫자 8 입력">8</button>
+            <button type="button" class="numBtn" value="9" title="숫자 9 입력">9</button>
+            <button type="button" class="numBtn btn-temp" disabled  aria-hidden="true">NH</button>
+            <button type="button" class="numBtn btn-amount" value="00" title="숫자 00입력" >00</button>
+            <button type="button" class="numBtn" value="0" title="숫자 0 입력">0</button>
+            <button type="button" class="numBtn btn-del" title="마지막 숫자 삭제">←</button>
+        </div>
+        <div class="buttons">
+            <button type="button" class="button -lg -primary" onclick="numKey.keyClose()">확인</button>
+        </div>
+    </div>
+    <!-- 숫자 키패드 레이어 -->
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+       /* 키패드 키입력 예시 */
+       var numKeyEmt = document.querySelectorAll('.custom-key-wrap button');
+        numKeyEmt.forEach(function(numKeyEmt) {
+            numKeyEmt.addEventListener('click',function () {
+                var $targetInput;
+                var $thisValLayer = numKeyEmt.closest('.custom-key-layer.-active');  //dim 없는 레이어 숫자 키패드
+                var $thisValChoose = numKeyEmt.closest('.choose-account-Wrap');  //bottom sheet 숫자 키패드
+                
+                if ($thisValLayer !== null) {
+                    $targetInput = numKey.numInput;
+                } else if($thisValChoose !== null) {
+                    $targetInput = $thisValChoose.querySelector('.choose-account-input input')
+                    $targetInput.closest('.text').classList.remove('-textless');
+                }
+                var $thisval = numKeyEmt.value;
+
+                if (numKeyEmt.classList.contains('btn-del')) {
+                    if ($targetInput.value.length !== 0) {
+                        $targetInput.value = $targetInput.value.slice(0,-1);
+                        if ($targetInput.value.length == 0) {
+                            setTimeout(function() {
+                                $targetInput.closest('.text').classList.add('-textless');
+                            }, 101);
+                        }
+                    }
+                }else{
+                    $targetInput.value = $targetInput.value + $thisval;
+                }
+            })
+        });
+
+
+        //10만, 50만.... 버튼 클릭시
+        var amountBtn = document.querySelectorAll('.amount-btn-wrap button');
+        amountBtn.forEach(function(amountBtn) {
+            amountBtn.addEventListener('click',function () {
+                var $targetInput;
+                var $thisValLayer = amountBtn.closest('.custom-key-layer.-active');  //dim 없는 레이어 숫자 키패드
+                var $thisValChoose = amountBtn.closest('.choose-account-Wrap');  //bottom sheet 숫자 키패드
+                if ($thisValLayer !== null) {
+                    $targetInput = numKey.numInput;
+                } else if($thisValChoose !== null) {
+                    $targetInput = $thisValChoose.querySelector('.choose-account-input input')
+                }
+                var $thisval = amountBtn.value;
+                $targetInput.value = Number($thisval) + Number($targetInput.value);
+            })
+        });
+        /* //키패드 키입력 예시 */      
+    </script>
+</body>
+</html>

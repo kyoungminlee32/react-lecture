@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/fund.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">청년형 장기펀드가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">
+                            투자자권리보호를 위한 <br>
+                            중요사항을 확인해 주세요
+                        </h2>
+                    </div>
+
+                    <div class="field">
+                        <p class="label">현재 고객님께 해당하는 항목을 선택해 주세요.</p>
+                        <div class="box-radios -point">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="period-point-color1-1" checked>
+                                <label for="period-point-color1-1">일반금융소비자</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="period-point-color1-2">
+                                <label for="period-point-color1-2">전문금융소비자</label>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <label for="">전문금융소비자 안내</label>
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">전문금융소비자란?</span>
+                                    <span class="t-content">
+                                        「금융소비자 보호에 관련 법률」<br>
+                                        제2조 제9호에 따라 금융상품에 관한 전문성 또는 소유자산규모 등에 비추어 금융상품 계약에 따른 위험감수 능력이 있는 금융소비자
+                                    </span>
+                                </span>
+                            </span>
+                        </div>                        
+                    </div> 
+                    <div class="field">
+                        <div class="agree">
+                            <div class="title">
+                                <div class="checkbox -sm">
+                                    <input type="checkbox" id="required-total1">
+                                    <label for="required-total1">가입자격 안내</label>
+                                </div>
+                                <button type="button" class="more"><span class="hide">가입자격 안내</span></button>
+                            </div>
+                        </div>    
+                        <div class="agree">
+                            <div class="title">
+                                <div class="checkbox -sm">
+                                    <input type="checkbox" id="required-total2">
+                                    <label for="required-total2">펀드 중요사항 확인</label>
+                                </div>
+                                <button type="button" class="more"><span class="hide">펀드 중요사항 확인</span></button>
+                            </div>
+                        </div>        
+                        <div class="agree">
+                            <div class="title">
+                                <div class="checkbox -sm">
+                                    <input type="checkbox" id="required-total3">
+                                    <label for="required-total3">설명의무 고객 확인 사항</label>
+                                </div>
+                                <button type="button" class="more"><span class="hide">설명의무 고객 확인 사항</span></button>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+
+                <!-- 플로팅 버튼 -->
+                <div class="floating-wrap">
+                    <div class="floating-btn" role="button"> <!-- [240111] role="button" 추가 -->
+                        <p>원금손실<br>가능상품</p>  <!-- ux 라이팅 수정 -->
+                    </div>
+                    <a class="floating_close" title="원금 손실가능 상품 플로팅버튼 닫기"></a>
+                </div>
+                <!-- //플로팅 버튼 -->
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary -disabled">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

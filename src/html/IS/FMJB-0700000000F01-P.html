@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/isa.css">
+</head>
+<body>
+    <div id="layer" class="layer">
+        <div class="container">
+            <div class="header">
+                <div class="inner"></div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <!-- 2024-06-05 수정 -->
+                    <h2 class="h3">계좌이전을 신청해 주셔서 감사합니다.</h2>
+
+                    <div class="case-wrap -sm">
+                        <p class="p">NH농협은행으로 일임형 ISA 계좌이전이 신청되었습니다.</p>
+                        <p class="p">일임형 ISA는 고객님의 의사 확인 후 NH농협은행으로 이전될 예정입니다.<br>
+                            (선택한 계좌이전 의사확인 방법을 확인해 주세요.)</p>
+                        <p class="p">의사 확인 후에는 계좌이전 신청을 취소할 수 없습니다.</p>
+                        <p class="p">자세한 문의사항은 고객행복센터로 문의해 주세요.<br>
+                            <span class="happy-call">고객행복센터 : 1661-3000</span></p>
+                    </div>
+                    <!-- //2024-06-05 수정 -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Layer.open('layer');
+
+        // 레이어 닫기(마지막 인자 기본값: false)
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // });
+
+        // 레이어 닫기 + DOM 삭제
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

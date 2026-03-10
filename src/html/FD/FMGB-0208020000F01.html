@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">예금 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>                      
+                    <div class="h2-group">                        
+                        <h2 class="h2">
+                            목표환율을 설정해 주세요 
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">목표환율 안내</span>
+                                    <span class="t-content">
+                                        <span class="dot">목표환율은 가입 시점에 고객님께서 설정하신 환율로 예금 자동해지의 기준이 되는 환율입니다.</span>
+                                        <span class="dot">매 은행영업일에 농협은행이 고시하는 2회차 송금받으실 때 환율이 목표환율 이상인 경우 자동해지 됩니다. (스프레드 60% 우대 적용)</span>
+                                        <span class="dot">회전주기 종료일에 목표환율에 도달하지 못한 경우 자동 회전됩니다.</span>
+                                        <span class="dot">가입 시점에 적용되는 환율은 송금보내실 때 환율입니다.</span>   <!-- [240607]텍스트 변경 -->
+                                    </span>
+                                </span>
+                            </span>
+                        </h2>
+                    </div>
+                    <div class="case-wrap -sm">
+                        <!-- [240112]위치 이동 -->
+                        <!-- <div class="field"> -->
+                        <div class="field">
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">설정 안함</button>
+                            </div>
+                        </div>
+                        <!-- //[240112]위치 이동 -->
+                        <!-- [240112]삭제 -->
+                        <!-- <div class="text">
+                            <p class="info">목표환율이란
+                                <span class="tooltip">
+                                    <button type="button" class="trigger">
+                                        <span class="hide">툴팁</span>
+                                    </button>
+                                    <span class="panel">
+                                        <span class="title">목표환율 안내</span>
+                                        <span class="t-content">
+                                            <span class="dot">목표환율은 가입 시점에 고객님께서 설정하신 환율로 예금 자동해지의 기준이 되는 환율입니다.</span>
+                                            <span class="dot">매 은행영업일에 농협은행이 고시하는 2회차 송금받으실 때 환율이 목표환율 이상인 경우 자동해지 됩니다. (스프레드 60% 우대 적용)</span>
+                                            <span class="dot">회전주기 종료일에 목표환율에 도달하지 못한 경우 자동 회전됩니다.</span>
+                                            <span class="dot">가입 시점에 적용되는 환율은 송금보내실 때 환율입니다.</span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </p>
+                            <div class="info-wrap">
+                                <p class="info">목표환율을 입력하지 않는 경우 예금 만기일 전까지 회전주기 종료일 마다 환율과 관계없이 자동 회전 됩니다.</p>
+                            </div>
+                        </div> -->
+                        <!-- //[240112]삭제 -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

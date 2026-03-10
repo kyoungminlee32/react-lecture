@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">기타실손보험 특약 다수가입에 대한 가입자 동의서</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <ol class="ol -number">
+                        <li>
+                            실손형 보험 다수가입 시 확인사항<br>
+                            하나의 회사 또는 여러 보험회사에 동일한 위험을 담보하는 실손형 보험을 여러 건 가입하여도 총 보상한도액 내에서 고객님에게 실제 발생한 손해를 계약별로 비례분담하여 보상하기 때문에 실제 발생한 손해를 초과하여 중복으로 보상받을 수 없습니다.<br><br>
+                            예시) A와 B보험회사에 각각 5,000만원 한도의 실손형 보험을 가입하신 경우 , 손해액 500만원의 사고가 발생하면 A보험사가 250만원, B보험사가 250만원을 분담하여 보상하며, 각 500만원씩 1,000만원이 보상되는 것은 아닙니다.      
+                        </li>
+                        <li>본 상품에는 자동차사고 변호사선임비용, 교통사고처리지원금, 벌금을 보상하는 실손형보험이 있으며 중복가입하셨을 경우 보험료를 이중부담하는 결과가 됩니다. </li>
+                        <li>계약자 본인은 실손담보 다수가입시 비례보상, 보험료 이중부담 등 가입시 유의사항 등에 대한 자세한 설명을 듣고 이를 충분히 인지한 후 본인의 의사에 따라 실손담보 가입을 결정하였으며, 중복가입으로 인한 손해 등에 대하여 이의를 제기하지 않겠음을 확인합니다.</li>
+                    </ol>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">예금 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>                      
+                    <div class="h2-group">                        
+                        <h2 class="h2">
+                            통화를 선택해 주세요 
+                        </h2>
+                    </div>
+                    <div class="case-wrap -sm">
+                        <div class="field">
+                            <div class="mix">
+                                <div class="select">
+                                    <button type="button" aria-haspopup="true" title="통화 선택"><span data-countrycode="001" class="-sm"></span>EUR(유럽연합 유로)</button> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field"> <!-- [CASE]클래스 -error 추가 -->
+                            <div class="h2-group">                        
+                                <h2 class="h2">
+                                    가입금액을 입력해 주세요 
+                                </h2>
+                            </div>
+                            <label for="phonen" class="label">가입금액</label>
+                            <div class="mix">
+                                <div class="left-space flex-2">
+                                    <div class="left-side" aria-haspopup="true" title="통화 선택">EUR</div>
+                                </div>
+                
+                                <div class="text flex-8" data-clear="false">
+                                    <input type="tel" class="right-side num-call right" id="phonen" placeholder="93유로 이상" value="" aria-haspopup="true" readonly>
+                                </div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="message">최소 가입금액%JPY 14,892%</p>  <!-- ux 라이팅 수정 -->   <!-- [240325]클래스 point 삭제 -->
+                                <p class="message -error">최소 가입금액 이상 입력해 주세요.</p>  <!-- [240122]추가 -->
+                            </div>
+                        </div>
+
+                        <div class="field mt-24">
+                            <!-- [240426]마크업 수정 -->
+                            <div class="data-box">
+                                <div class="data-box-title">원화 환산금액</div>
+                                <div class="data-box-content">132,697원</div>
+                            </div>
+                            <!-- <dl class="dl -box limit-point-box type02">
+                                <div>
+                                    <dt>원화 환산금액</dt>
+                                    <dd>132,697원</dd>   
+                                </div>
+                            </dl> -->
+                            <!-- //[240426]마크업 수정 -->
+                            <div class="exchange-rate -search">
+                                <p class="message -type02 -left">현재 환율 AUD 1 = 1,124.01원</p>
+                                <div class="fit-buttons -right">           
+                                    <button type="button" class="button -fit -xs">현재환율 조회</button>
+                                </div>
+                            </div>
+                            <!-- ux 라이팅 수정 시작 -->
+                            <div class="text">
+                                <p class="info -bullet">환율 변동으로 가입 시 원화 환산금액이 변경될 수 있습니다.</p>
+                                <p class="info -bullet">현재 환율은 전신환매도율 정보 기준입니다.</p>
+                            </div>
+                            <!-- //ux 라이팅 수정 끝 -->
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg -disabled">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

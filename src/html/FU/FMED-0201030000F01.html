@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/fund.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">포트폴리오 만들기</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <!-- 2024-05-28 progress 추가 -->
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:1; --max:5;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 5단계 중 1번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2024-05-28 progress 추가 -->
+                    <div class="h2-group">
+                        <h2 class="h2">
+                            <!-- 2024-05-09 문구 수정 -->
+                            누구와 함께 하고 싶은 꿈인가요? <!-- [240311] 마침표 삭제 -->
+                        </h2>
+                    </div>
+                    <div class="field">
+                        <dl class="invest-qna">
+                            <dd class="answer-list">
+                                <div class="item">
+                                    <input type="radio" name="radio1" id="radio1-1" checked>
+                                    <label for="radio1-1" class="invest-unit portfolio port-icon9">나를 위한</span></label><!-- 240412 ux 라이팅 수정 --><!-- 240415 텍스트 수정 -->
+                                </div>
+                                <div class="item">
+                                    <input type="radio" name="radio1" id="radio1-2">
+                                    <label for="radio1-2" class="invest-unit portfolio port-icon10">나의 희망</span></label>
+                                </div>
+                                <div class="item">
+                                    <input type="radio" name="radio1" id="radio1-3">
+                                    <label for="radio1-3" class="invest-unit portfolio port-icon11">우리 아이</span></label>
+                                </div>
+                                <div class="item">
+                                    <input type="radio" name="radio1" id="radio1-4">
+                                    <label for="radio1-4" class="invest-unit portfolio port-icon12">우리 부부</span></label><!-- 240412 ux 라이팅 수정 -->
+                                </div>
+                                <div class="item">
+                                    <input type="radio" name="radio1" id="radio1-5">
+                                    <label for="radio1-5" class="invest-unit portfolio port-icon13">가족 사랑</span></label><!-- 240412 ux 라이팅 수정 -->
+                                </div>
+                                <div class="item">
+                                    <input type="radio" name="radio1" id="radio1-6">
+                                    <!-- 2024-05-09 문구 수정 -->
+                                    <label for="radio1-6" class="invest-unit portfolio port-icon14">평생 친구</span></label><!-- 240412 ux 라이팅 수정 -->
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">특정금전신탁</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="trust-info-wrap">
+                        <p class="p">특정금전신탁은 고객(위탁자)이 NH농협은행(수탁자)에게 신탁재산인 금전의 운용대상 및 방법을 지시하면, NH농협은행(수탁자)은 고객(위탁자)의 운용지시에 따라 신탁재산을 운용하고 종료 시 금전 또는 운용 결과대로 고객(수익자)에게 교부하는 금융상품입니다.</p>
+                        <!-- [240430] 이미지 다크모드 대응 관련 img -> background로 변경 -->
+                        <div class="trust-img type00"></div>
+                        <div class="case-wrap -sm">
+                            <h4 class="h5">운용대상</h4>
+                            <p class="posible-trust-text">주식</p>
+                            <p class="p">고객이 지정하는 특정 주식<br>자문형 상품의 경우 자문사 포트폴리오 구성 종목</p>
+                        </div>
+                        <div class="case-wrap -xs">
+                            <p class="posible-trust-text">채권</p>
+                            <p class="p">국채, 지방채, 사채, 금융채, RP(환매조건부채권)등</p>
+                        </div>
+                        <div class="case-wrap -xs">
+                            <p class="posible-trust-text">유동자산</p>
+                            <p class="p">CD,CP,콜론,발행어음,정기예금 등</p>
+                        </div>
+                        <div class="case-wrap -xs">
+                            <p class="posible-trust-text">파생상품</p>
+                            <p class="p">ELS,DLS,ELW, 장내외 파생상품 등</p>
+                        </div>
+                        <div class="case-wrap -xs">
+                            <p class="posible-trust-text">기타</p>
+                            <p class="p">기타 신탁업법 및 동법 관계 법령에서 정한 상품</p>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

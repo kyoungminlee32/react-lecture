@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">ISA 계좌이전</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                        <button type="button" class="func -menu"><span class="hide">전체메뉴</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="product-detail-wrap">
+                        <!-- 상품 안내 영역 -->
+                        <div class="procuct-summary">
+                            <!-- 플로팅 버튼 -->
+                            <div class="floating-wrap">
+                                <div class="floating-btn" role="button">
+                                    <p>
+                                        원금손실<br>
+                                        가능상품
+                                    </p>
+                                </div>
+                                <a class="floating_close" title="원금 손실가능 상품 플로팅버튼 닫기"></a>
+                            </div>
+                            <!-- //플로팅 버튼 -->
+                            <div class="info-area">
+                                <h2>계좌이전 절차 안내</h2>
+                            </div><!-- //.info-area -->
+                        </div><!-- //.procuct-summary -->
+                        <!-- //상품 안내 영역 -->
+
+                        <!-- 상품 정보 영역 -->
+                        <div class="procuct-info">
+                            <ul class="ul -bullet">
+                                <li>다른 금융기관에 ISA 계좌 또는 NH농협은행 신탁형ISA 계좌를 보유하고 계신 고객은 ISA 계약의 해지 없이 계좌를 이전해 NH농협은행의 일임형ISA에 가입하실 수 있습니다. 계좌이전제도에 따라 비과세·손익통산 등의 세제혜택이 유지되며, 기존 계약 체결일을 기준으로 하여 가입기간을 인정받을 수 있습니다.</li> <!-- 240520 문구수정 -->
+                                <li>이전하고자 하는 금융기관에 방문하여 이전신청하고(일임형ISA의 경우 온라인 신청 가능), 기존 금융기관에서 전화 또는 방문을 통해 계좌이전의사를 확인하셔야 계좌이전절차가 진행됩니다.</li>
+                                <li>
+                                    이전이 제한되는 경우
+                                    <div>
+                                        <ul class="ul -dash">
+                                            <li>압류, 가압류, 질권 설정 등의 계좌인 경우</li>
+                                            <li>계좌이전의사 확인이 불가능한 경우</li>
+                                            <li>리밸런싱 기간일 경우</li>
+                                            <li>운용지시(매수/매도) 처리 진행 중인 경우</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //상품 정보 영역 -->
+
+                        <!-- 240520 결함:6998 ui추가 -->
+                        <div class="case-wrap">
+                            <div class="accordion -card -v2" data-role="fold">
+                                <button type="button" class="title" data-role="marker">계좌이전 절차</button>
+                                <div class="panel" data-role="hidden">
+                                    <ol class="ol -badge">
+                                        <li>
+                                            <span class="gadget">1단계</span>
+                                            <div class="title">고객</div>
+                                            고객이 농협은행 일임형ISA 가입을 위해 계좌이전 신청서를 작성하고 임시 신규 계좌 개설
+                                        </li>
+                                        <li>
+                                            <span class="gadget">2단계</span>
+                                            <div class="title">NH농협은행</div>
+                                            NH농협은행은 신청 고객의 ISA계좌가 있는 기존 금융기관에 계좌이전을 요청
+                                        </li>
+                                        <li>
+                                            <span class="gadget">3단계</span>
+                                            <div class="title">기존 금융기관</div>
+                                            <div>
+                                                <ul class="ul -bullet">
+                                                    <li>(전화 신청 고객) 기존 금융기관은 유선을 통해 신청고객에게 계좌이전 의사 확인</li>
+                                                    <li>(방문 신청 고객) 고객이 직접 기존 금융기관 지점을 방문하여 확인</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="gadget">4단계</span>
+                                            <div class="title">기존 금융기관</div>
+                                            기존 금융기관은 NH농협은행에 이전 예정/취소 통보서 발송
+                                        </li>
+                                        <li>
+                                            <span class="gadget">5단계</span>
+                                            <div class="title">NH농협은행</div>
+                                            NH농협은행은 타 금융기관에 접수 통보서 발송
+                                        </li>
+                                        <li>
+                                            <span class="gadget">6단계</span>
+                                            <div class="title">기존 금융기관</div>
+                                            기존 금융기관은 고객자산을 환매하여 NH농협은행 계좌에 송금
+                                        </li>
+                                        <li>
+                                            <span class="gadget">7단계</span>
+                                            <div class="title">NH농협은행</div>
+                                            선택한 모델포트폴리오에 따라 해당 자산을 신규 매수처리
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 240520 결함:6998 ui추가 -->
+
+                        <!-- 2024-06-05 심의필 삭제 -->
+                        <!-- 상품 추가 정보 영역 -->
+                        <!-- <div class="product-other">
+                            <div class="product-deliberate">
+                                <p class="p">준법감시심의필 000-0000(심의일:YYYY.MM.DD)<br>유효기간 : YYYYY.MM.DD ~ YYYYY.MM.DD</p>
+                            </div>
+                        </div> -->
+                        <!-- //상품 추가 정보 영역 -->
+                        <!-- //2024-06-05 심의필 삭제 -->
+                    </div><!-- //.product-detail-wrap -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg">상담</button>
+                        <button type="button" class="button -lg -primary">계좌이전 신청</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        procuctDatailAct();
+
+        // html 파일 로드 (퍼블확인용)
+        incHtml();
+        function incHtml() {
+            $('[data-includ]').each(function () {
+                $this = $(this);
+                var $url = $this.attr('data-includ')
+                $this.load($url)
+            })
+        }
+        
+        
+        //Layer.open('layer');
+
+        // 레이어 닫기(마지막 인자 기본값: false)
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // });
+
+        // 레이어 닫기 + DOM 삭제
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

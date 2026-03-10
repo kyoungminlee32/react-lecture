@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>아파트 검색</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+            <main class="contents">
+                <div class="content"> 
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="mix">
+                            <div class="text">
+                                <input type="text" class="left-side" id="search01" value="" placeholder="예)반포동 주공아파트" title="주소입력">
+                            </div>
+                            <div class="space -lined search">
+                                <button type="button" class="icon-button -search"><span class="hide">조회</span></button>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- [CASE]검색결과 있는 경우 -->
+                     <div class="field">
+                        <p class="total-count">총 <span class="point">25</span>건</p>
+                        <div class="custom-list">
+                            <ul>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p>서울특별시 성북구 길음동 <span class="point">길음뉴타운</span>(2단지)</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p>서울특별시 성북구 길음동 <span class="point">길음뉴타운</span>(2단지)</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p>서울특별시 성북구 길음동 <span class="point">길음뉴타운</span>(2단지)</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p>서울특별시 성북구 길음동 <span class="point">길음뉴타운</span>(2단지)</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p>서울특별시 성북구 길음동 <span class="point">길음뉴타운</span>(2단지)</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p>서울특별시 성북구 길음동 <span class="point">길음뉴타운</span>(2단지)</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p>서울특별시 성북구 길음동 <span class="point">길음뉴타운</span>(2단지)</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p>서울특별시 성북구 길음동 <span class="point">길음뉴타운</span>(2단지)</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="button" class="more-button">더보기(1/50)</button>
+                    </div>
+                    <!-- //[CASE]검색결과 있는 경우 -->
+
+
+                    <div class="result -sm -sub">
+                        <p class="message">검색결과가 없습니다.</p>
+                        <p class="desc">
+                            지역명(동,읍,면) 또는 아파트명으로 재검색 해보세요.<br>
+                            주택 검색 시 찾는 결과가 없다면<br>
+                            AVM(자동가치평가모형) 시세 조회하기 버튼을 선택하여<br>
+                            지역명(동,읍,면) + 번지로 검색해 보세요.
+                        </p>
+                    </div>
+                    <div class="case-wrap">
+                        <button type="button" class="button -lg -secondary">AVM(자동가치평가모형) 시세 조회</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

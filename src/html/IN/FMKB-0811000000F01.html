@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/insurance.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">보험 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">                
+                <div class="content">
+                    <div class="progress-top"> <!-- [231205] 프로그레스바 추가 -->
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                    <h2 class="h2">다음 %질문 수%개 질문에 사실대로 알려주세요</h2>                    
+                    <div class="field -error">
+                        <dl class="invest-qna">
+                            <dt class="question-text">
+                                <span class="number">01.</span>
+                                <span>본인은 골프선수 또는 골프지도자가 맞나요?</span>
+                            </dt>                     
+                            <dd class="answer-list">
+                                <div class="box-radios">
+                                    <div class="box-radio">
+                                        <input type="radio" name="period1" id="box-radio1-2">
+                                        <label for="box-radio1-2">예</label>
+                                    </div>
+                                    <div class="box-radio">
+                                        <input type="radio" name="period1" id="box-radio1-1">
+                                        <label for="box-radio1-1">아니요</label>
+                                    </div>
+                                </div>
+                            </dd>  
+                            <div class="info-wrap">
+                                <p class="message">해당 경우에는 상품을 가입할 수 없습니다.</p>
+                            </div>                               
+                        </dl> 
+                    </div>                    
+                </div>
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <li>
+                                    피보험자가 스크린골프장의 경영자 또는 사용인(임시고용인 포함)인 경우에는 그 피보험자가 경영하고 또는 사용하고 있는 스크린골프장에서 행한 홀인원은 보상하지 않습니다.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE] 모든 문항의 답변 작성 완료 시, 버튼 활성화 -->
+                        <button type="button" class="button -lg -primary" disabled>다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

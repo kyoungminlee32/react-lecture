@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출신청정보확인</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <!-- 231208 h2 문구수정 -->
+                        <!-- 240126 ux라이팅 수정 -->
+                        <h2 class="h2">대출 신청정보를 확인해 주세요</h2>
+                        <!-- //240126 ux라이팅 수정 -->
+                    </div>
+                    <div class="limit-point-box">
+                        <!-- 240412 UX라이팅 수정 -->
+                        <p class="p">신청금액<span class="limit-point bk">5,000만원</span></p>
+                        <p class="p">대출금리<span class="limit-point">4.82%</span></p>
+                    </div>
+                    <div class="dls -box" data-role="fold">
+                        <button type="button" class="more" data-role="marker">
+                            <span>더보기</span>
+                        </button>
+                        <!-- 240412 dt dd 전체 변경 -->
+                        <dl class="dl">
+                            <div>
+                                <dt>상환방법</dt>
+                                <dd>원리금균등분할상환</dd>
+                            </div>
+                            <div>
+                                <dt>대출금 입금계좌 (이자 납입계좌)</dt>
+                                <dd>302-1234-5678-82</dd>
+                            </div>
+                            <div>
+                                <dt>이자 납입일</dt>
+                                <dd>매월 10일</dd>
+                            </div>
+                            <div>
+                                <dt>대출 만기일</dt>
+                                <dd>2024.11.13</dd>
+                            </div>
+                            <div data-role="hidden">
+                                <!-- 240415 문구 수정 -->
+                                <dt>대출과목(대출종류)</dt>
+                                <dd>가계대출</dd>
+                            </div>
+                            <div data-role="hidden">
+                                <dt>거래구분</dt>
+                                <dd>개별거래</dd>
+                            </div>
+                            <!-- 240415 추가 -->
+                            <div data-role="hidden">
+                                <dt>대출신규일</dt>
+                                <dd>23.01.01</dd>
+                            </div>
+                            <div data-role="hidden">
+                                <dt>대출이자</dt>
+                                <dd>5.58%</dd>
+                            </div>
+                            <!-- //240415 추가 -->
+                            <div data-role="hidden">
+                                <dt>지연배상금률</dt>
+                                <dd>최고 연 15%</dd>
+                            </div>
+                            <div data-role="hidden">
+                                <dt>대출실행 방법</dt>
+                                <dd>대출 가입일에 전액 실행합니다.</dd>
+                            </div>
+                            <div data-role="hidden">
+                                <dt>이자지급시기 및 방법</dt>
+                                <dd>1개월마다 정한 납입일에 지급합니다.</dd>
+                            </div>
+                            <div data-role="hidden">
+                                <dt>대출알림</dt>
+                                <dd>문자메시지</dd>
+                            </div>
+                            <div data-role="hidden">
+                                <dt>대출 안내장 받는 곳</dt>
+                                <dd>직장</dd>
+                            </div>
+                        </dl>
+                        <!-- //240412 dt dd 전체 변경 -->
+                    </div>
+                    <div class="agree-box">
+                        <!-- [240308] 전자약정 삭제 -->
+                        <!-- <p class="label">전자약정</p> -->
+                        <div class="agree">
+                            <div class="title">
+                                <!-- 240327 -sub -readonly 추가 -->
+                                <div class="checkbox -sub -readonly">
+                                    <input type="checkbox" id="optional-total02">
+                                    <!-- 240227 ux라이팅 수정 -->
+                                    <label for="optional-total02">대출 약정서</label>
+                                    <!-- //240227 ux라이팅 수정 -->
+
+                                </div>
+                                <button type="button" class="more"><span class="hide">대출 약정서</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <!-- [240313] 라벨 문구수정 -->
+                        <p class="label">계약서류 받는 방법</p>
+                        <div class="box-radios -point" role="tablist">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="tab01" checked>
+                                <label for="tab01">이메일</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="tab02">
+                                <!-- 240119 ux라이팅 수정 -->
+                                <label for="tab02">문자메시지</label>
+                                <!-- //240119 ux라이팅 수정 -->
+                            </div>
+                        </div>
+                        <!-- [CASE] id="tab01"의 콘텐트 -->
+                        <!-- [에러] text -error-->
+                        <div class="text">
+                            <input type="text" id="field1" value="ABC123@gmail.com" title="이메일">
+                            <!-- [CASE] 에러메세지-->
+                            <!-- <p class="message">입력 오류 알림 내용 출력</p> -->
+                            <!-- //[CASE] 에러메세지-->
+                            <!-- 240312 ux라이팅 수정 -->
+                            <!-- [240313] 하단 문구 삭제 -->
+                            <!-- <p class="info">대출 계약서류는 고객님의 이메일로 보내드립니다.</p> -->
+                        </div>
+                        <!-- //[CASE] id="tab01"의 콘텐트 -->
+
+                        <!-- [CASE] id="tab02"의 콘텐트 -->
+                        <div class="mix">
+                            <div class="select flex-3">
+                                <button type="button" class="left-side" aria-haspopup="true"
+                                    title="휴대폰 앞자리 선택">010</button>
+                            </div>
+                            <div class="text flex-7" data-clear="false">
+                                <input type="tel" class="right-side num-call" placeholder="-없이 입력" title="010제외한 휴대전화번호"
+                                    readonly>
+                            </div>
+                            <!-- [CASE] 에러메세지-->
+                            <!-- <p class="message -error">입력 오류 알림 내용 출력</p> -->
+                            <!-- //[CASE] 에러메세지-->
+                            <!-- 240312 ux라이팅 수정 -->
+                            <!-- [240313] 하단 문구 삭제 -->
+                            <!-- <p class="info">대출 계약서류는 고객님의 문자메시지로 보내드립니다.</p> -->
+                        </div>
+                        <!-- //[CASE] id="tab02"의 콘텐트 -->
+                    </div>
+
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- 필수 값 모두 입력 및 선택 시 활성화 처리, 활성화 버튼 선택 시 전자서명  금융상품동의 안내 팝업 호출 -->
+                        <button type="button" class="button -lg -primary" disabled>대출 신청하기</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

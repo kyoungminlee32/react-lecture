@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">    
+    <link rel="stylesheet" href="../../assets/css/insurance.css">  
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">보험 선물하기</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>                      
+                    <div class="h2-group">                        
+                        <h2 class="h2">
+                            출금계좌를 확인해 주세요 <!-- ux 라이팅 수정 -->
+                        </h2>
+                    </div>
+                    <dl class="dl -box">
+                        <div>
+                            <dt>상품명</dt>
+                            <dd>e하나로알찬NH생활보장보험(무배당)</dd>
+                        </div>
+                        <div>
+                            <dt>보험료</dt>
+                            <dd>19,060원 <br><span class="max-amount">(예상 최대 금액)</span></dd>
+                        </div>
+                    </dl>    
+                    <div class="field">
+                        <p class="label">출금계좌 선택</p>
+                        <div class="select">
+                            <div class="button-type -fixed">
+                                <div class="selection">
+                                    <button type="button" aria-haspopup="true" data-bankcode="011" class="info">
+                                        <span class="name">
+                                            <span>주거래우대통장</span>
+                                        </span>
+                                        <span class="account-number">
+                                            <span>NH농협</span>
+                                            <span>111-1234-5678-99</span>
+                                        </span>
+                                    </button>
+                                    <div class="amount">
+                                        <div class="key">출금가능금액</div>
+                                        <div class="value">
+                                            <span>
+                                            <button type="button" class="refresh"><span class="hide">새로고침</span></button>
+                                            150,000,000</span>원
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <p class="info">고객님의 출금 계좌에서 선물 받는 분의 계좌로 보험료를 이체합니다.</p> --> <!-- [240122] 안내문구 삭제 -->
+                        </div>
+                        <div class="checkbox -sm">
+                            <input type="checkbox" id="checkbox-sm-checked02" checked="">
+                            <label for="checkbox-sm-checked02">선물 받는 분의 계좌로 보험료를 이체합니다.</label> <!-- [240122] 문구수정 --> <!-- ux 라이팅 수정 -->
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="title-group">
+                            <div class="inner">
+                                <span class="title">NH포인트 사용 신청</span>
+                            </div>
+                            <span class="switch ml-auto -sm">
+                                <input type="checkbox" id="switch3">
+                                <label for="switch3"><span class="hide">스위치</span></label>
+                            </span>
+                        </div>
+                        <p class="message">
+                            NH포인트를 현금처럼 사용해 보세요. <br> 캐시백을 신청하면 바로 출금계좌로 입금됩니다.  
+                        </p>
+                    </div>                                                                  
+                </div>
+
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <li>선물 받는 분이 보험에 가입하기 전까지 고객님의 출금계좌에 예상 보험료 금액이 있어야 가입이 가능합니다.</li> <!-- ux 라이팅 수정 -->
+                                <li>선물 받는 분이 보험 계약을 체결하면 최종 산출된 보험료(예상 보험료 이내)가 출금 계좌에서 선물 받는 분 계좌로 이체되고, 그 즉시 선물 받는 분 계좌에서 보험사 계좌로 이체됩니다.</li>
+                                <li>선물 받는 분이 5일 이내에 보험을 가입하지 않으면 보험 선물하기가 취소되며, 보험료는 출금되지 않습니다.</li>
+                                <li>보험 계약의 계약자·피보험자·수익자는 선물 받는 분입니다.</li>
+                                <li>선물한 보험이 해지될 경우 보험료는 선물 받으신 분의 계좌로 입금됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- 숫자 키패드 레이어 -->
+    <div class="custom-key-layer" aria-hidden="true">
+        <div class="amount-btn-wrap">
+            <button type="button" value="100000" class="button numBtn -sm -fit">+10만</button>
+            <button type="button" value="500000" class="button numBtn -sm -fit">+50만</button>
+            <button type="button" value="1000000" class="button numBtn -sm -fit">+100만</button>
+            <button type="button" value="10000000" class="button numBtn -sm -fit">+1,000</button>
+        </div>
+        <div class="custom-key-wrap">
+            <button type="button" class="numBtn" value="1" title="숫자 1 입력">1</button>
+            <button type="button" class="numBtn" value="2" title="숫자 2 입력">2</button>
+            <button type="button" class="numBtn" value="3" title="숫자 3 입력">3</button>
+            <button type="button" class="numBtn" value="4" title="숫자 4 입력">4</button>
+            <button type="button" class="numBtn" value="5" title="숫자 5 입력">5</button>
+            <button type="button" class="numBtn" value="6" title="숫자 6 입력">6</button>
+            <button type="button" class="numBtn" value="7" title="숫자 7 입력">7</button>
+            <button type="button" class="numBtn" value="8" title="숫자 8 입력">8</button>
+            <button type="button" class="numBtn" value="9" title="숫자 9 입력">9</button>
+            <button type="button" class="numBtn btn-temp" disabled  aria-hidden="true">NH</button>
+            <button type="button" class="numBtn btn-amount" value="00" title="숫자 00입력" >00</button>
+            <button type="button" class="numBtn" value="0" title="숫자 0 입력">0</button>
+            <button type="button" class="numBtn btn-del" title="마지막 숫자 삭제">←</button>
+        </div>
+        <div class="buttons">
+            <button type="button" class="button -lg -primary" onclick="numKey.keyClose()">확인</button>
+        </div>
+    </div>
+    <!-- 숫자 키패드 레이어 -->
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+       /* 키패드 키입력 예시 */
+       var numKeyEmt = document.querySelectorAll('.custom-key-wrap button');
+        numKeyEmt.forEach(function(numKeyEmt) {
+            numKeyEmt.addEventListener('click',function () {
+                var $targetInput;
+                var $thisValLayer = numKeyEmt.closest('.custom-key-layer.-active');  //dim 없는 레이어 숫자 키패드
+                var $thisValChoose = numKeyEmt.closest('.choose-account-Wrap');  //bottom sheet 숫자 키패드
+                
+                if ($thisValLayer !== null) {
+                    $targetInput = numKey.numInput;
+                } else if($thisValChoose !== null) {
+                    $targetInput = $thisValChoose.querySelector('.choose-account-input input')
+                    $targetInput.closest('.text').classList.remove('-textless');
+                }
+                var $thisval = numKeyEmt.value;
+
+                if (numKeyEmt.classList.contains('btn-del')) {
+                    if ($targetInput.value.length !== 0) {
+                        $targetInput.value = $targetInput.value.slice(0,-1);
+                        if ($targetInput.value.length == 0) {
+                            setTimeout(function() {
+                                $targetInput.closest('.text').classList.add('-textless');
+                            }, 101);
+                        }
+                    }
+                }else{
+                    $targetInput.value = $targetInput.value + $thisval;
+                }
+            })
+        });
+
+
+        //10만, 50만.... 버튼 클릭시
+        var amountBtn = document.querySelectorAll('.amount-btn-wrap button');
+        amountBtn.forEach(function(amountBtn) {
+            amountBtn.addEventListener('click',function () {
+                var $targetInput;
+                var $thisValLayer = amountBtn.closest('.custom-key-layer.-active');  //dim 없는 레이어 숫자 키패드
+                var $thisValChoose = amountBtn.closest('.choose-account-Wrap');  //bottom sheet 숫자 키패드
+                if ($thisValLayer !== null) {
+                    $targetInput = numKey.numInput;
+                } else if($thisValChoose !== null) {
+                    $targetInput = $thisValChoose.querySelector('.choose-account-input input')
+                }
+                var $thisval = amountBtn.value;
+                $targetInput.value = Number($thisval) + Number($targetInput.value);
+            })
+        });
+        /* //키패드 키입력 예시 */      
+    </script>
+</body>
+</html>

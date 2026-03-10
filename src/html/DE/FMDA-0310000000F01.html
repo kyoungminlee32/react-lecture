@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <!-- <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">본인인증</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header> -->
+
+            <main class="contents">
+                <div class="content">
+                    <div class="left">
+                        <img src="/content/assets/imgs/img/utility/ico-resultconfirm.png" style="width:16.8rem" alt="가입 완료 이미지">
+                    </div>                    
+                    <div class="h1-group">
+                        <h2 class="h1"> <!-- [231208]텍스트 수정 -->
+                            &상품명&<br>가입했어요 
+                        </h2>
+                    </div>
+                    
+                    <dl class="dl -box">
+                        <div>
+                            <dt>계좌번호</dt>
+                            <dd>
+                                <button type="button" class="button copy-btn">&계좌번호&
+                                    <span class="hide">계좌번호 복사하기</span>
+                                </button>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>가입일</dt>
+                            <dd>&YYYY.MM.DD&</dd>
+                        </div>
+                    </dl>
+
+                    <!-- ui수정 240122 (영역 삭제 및 추가) -->
+                    <!-- [240627] 버튼 삭제 -->
+                    <!-- <div class="button-box-wrap">
+                        <button type="button" class="button -lg -arrow" aria-haspopup="true">체크카드 신청</button>  
+                        <button type="button" class="button -lg -arrow" aria-haspopup="true">한도제한 해제 신청</button>  
+                    </div> -->
+                    <!-- <div class="buttons button-box-wrap">
+                        <button type="button" class="button -lg">체크카드 신청</button>  -->
+                        <!-- [231211]클래스 추가 -->
+                        <!-- <button type="button" class="button -lg">한도제한 해제 신청</button>  -->
+                        <!-- [231211]클래스 추가 -->
+                    <!-- </div> -->
+                    <!-- //ui수정 240122 (영역 삭제 및 추가) -->
+
+                    <!-- [240605] cms 이벤트 배너 추가, cms 영역 실행함수 : incHtml() -->
+                    <div class="loadArea" data-includ="/content/cms/market/FMDE1001R_ifrme01.html"></div> <!-- Magic(매직트리) 가입완료  -->
+                    <div class="loadArea" data-includ="/content/cms/market/FMDE1002R_ifrme01.html"></div> <!-- NH x 카카오페이통장 가입완료  -->
+                    <div class="loadArea" data-includ="/content/cms/market/FMDE1003R_ifrme01.html"></div> <!-- NH1418우대통장 가입완료  -->
+                    <div class="loadArea" data-includ="/content/cms/market/FMDE1004R_ifrme01.html"></div> <!-- NH1934우대통장 가입완료  -->
+                    <div class="loadArea" data-includ="/content/cms/market/FMDE1005R_ifrme01.html"></div> <!-- NH모여라통장(저축예금) 가입완료  -->
+                    <div class="loadArea" data-includ="/content/cms/market/FMDE1006R_ifrme01.html"></div> <!-- NH올원e통장 가입완료  -->
+                    <div class="loadArea" data-includ="/content/cms/market/FMDE1007R_ifrme01.html"></div> <!-- NH주거래우대통장 가입완료  -->
+                    <div class="loadArea" data-includ="/content/cms/market/FMDE1008R_ifrme01.html"></div> <!-- NH페이모아통장 가입완료  -->
+                    <!-- // [240605] cms 이벤트 배너 추가, cms 영역 실행함수 : incHtml() -->
+                    <!-- [240613] cms 아닌 관리자형식으로 배너 개발시 사용할 마크업 -->
+                    <div class="loadArea" data-includ="/content/cms/market/FMDB1001R_ifrme01.html">
+                        <a href="javascript:void(0)" class="cms-banner -imgType">
+                            <img src="../../assets/imgs/ico/banner/event-bn-img.png">
+                        </a>
+                    </div>
+                    <!-- // [240613] cms 아닌 관리자형식으로 배너 개발시 사용할 마크업 -->
+                </div>
+
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <!-- [240424]마크업 수정, 텍스트 변경 --> 
+                            <!-- ux 라이팅 수정 시작 -->
+                            <ul class="ul -bullet">
+                                <li>금융거래 한도제한계좌로 가입됩니다.<br>  <!-- [240202]텍스트 수정 -->
+                                    <div class="mt-12">
+                                        <div class="table -x">
+                                            <table>
+                                                <caption><span class="hide">출금/이체 한도</span></caption>
+                                                <colgroup>
+                                                    <col style="width:50%">
+                                                    <col style="width:50%">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row" class="left">창구 거래</th> <!-- [231226]class="left" 추가 -->
+                                                        <td class="right">300만원/일</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" class="left">ATM 출금/이체</th> <!-- [231226]class="left" 추가 -->
+                                                        <td class="right">100만원/일</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" class="left">전자금융 이체+기타</th> <!-- [231226]class="left" 추가 -->
+                                                        <td class="right">100만원/일</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="message">기타 : 오픈뱅킹거래, 가상계좌로의 이체거래 등</p>    <!-- [240517]추가 -->
+                                    </div>
+                                </li>
+                                <li>한도제한을 해제하려면 [한도제한 해제 신청]을 선택해 주세요.</li>
+                            </ul>
+                            <!-- //ux 라이팅 수정 끝 -->
+                            <!-- //[240424]마크업 수정, 텍스트 변경 --> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+
+                <!-- 토스트팝업은 -active 클래스 사용하여 실행합니다 -->
+                <div class="toast" role="alert" aria-live="assertive">
+                    <div class="message">
+                        <p>계좌번호가 복사 되었습니다.</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

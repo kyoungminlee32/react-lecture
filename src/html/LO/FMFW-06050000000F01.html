@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <h2 class="h2">신용보증 약정서를 작성해 주세요</h2>
+                    </div>
+
+                    <dl class="dl -box -col">
+                        <div>
+                            <dt>대출 신청금액</dt>
+                            <dd class="point">2천만원</dd>
+                        </div>
+                    </dl>
+
+                    <div class="field">
+                        <label for="tt12" class="label">보증 신청금액</label>
+                        <div class="mix">
+                            <div class="text -won" data-clear="false">
+                                <input type="tel" id="tt12" class="right num-call" value="20,000,000" aria-haspopup="true" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">이천만원</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="text2" class="label">대출기간</label>
+                        <div class="text">
+                            <input type="text" id="text2" readonly value="5년">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="text3" class="label">상환방법</label>
+                        <div class="text">
+                            <input type="text" id="text3" readonly value="1년 거치/4년 원금균등분할">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="text4" class="label">원금/이자 납입주기</label>
+                        <div class="text">
+                            <input type="text" id="text4" readonly value="매월">
+                        </div>
+                    </div>
+
+                    <!-- <div class="field">
+                        <p class="label">상환일
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">보증만기일 지정불가</span>
+                                    <span class="t-content">
+                                        보증만기일은 휴일로 지정될 수 없습니다.
+                                        상환일을 변경해 주세요
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">선택</button>
+                        </div>
+                        <button type="button" class="button -lg">보증료 조회</button>  
+                    </div> -->
+
+                    <!-- ui수정 240122 (마크업 변경)) -->
+                    <div class="field">
+                        <p for="label" class="label">상환일
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="t-content">
+                                        <span class="dot">대출실행일 전 7일 이내로 설정하시기 바랍니다.</span>
+                                        <span class="dot">대출실행일과 다른 날짜를 선택할 경우 대출 만기일이 앞당겨질 수 있습니다.</span>
+                                        <span class="dot">‘NH온택트보증서대출' 만기일은 토.일 및 공휴일로 지정될 수 없습니다</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">선택</button>
+                        </div>
+
+                        <div class="field">
+                            <button type="button" class="button -lg">보증료 조회</button>  
+                        </div>
+
+                        <!-- [CASE] 보증료 조회 버튼 선택 시 노출 -->
+                        <div class="field">
+                            <div class="data-box">
+                                <div class="data-box-title">보증료(고객부담금)</div>
+                                <div class="data-box-content">37,000원</div>
+                            </div>
+                        </div>
+                        <!-- // [CASE] 보증료 조회 버튼 선택 시 노출 -->
+                    </div>
+                    <!-- //ui수정 240122 (마크업 변경)) -->
+
+                    <!-- ui수정 240411 (코드 삭제) -->
+                    <!-- <div class="field">
+                        <p class="label">보증료 출금계좌</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">
+                                <div class="selection">
+                                    <div data-bankcode="011" class="info">
+                                        <span class="name">
+                                            <span>주거래우대통장</span>
+                                        </span>
+                                        <span class="account-number">
+                                            <span>NH농협</span>
+                                            <span>111-1234-5678-99</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div> -->
+                    <!-- [CASE] 초기값 -->
+                    <!-- <div class="field">
+                        <p class="label">보증료 출금계좌</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">계좌선택</button>
+                        </div>
+                    </div> -->
+                    <!-- ui수정 240411 (코드 삭제) -->
+                    <!-- ui수정 240411 (코드 삭제) -->
+                    <!-- <div class="field">
+                        <p class="label">이자 납입계좌</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">
+                                <div class="selection">
+                                    <div data-bankcode="011" class="info">
+                                        <span class="name">
+                                            <span>주거래우대통장</span>
+                                        </span>
+                                        <span class="account-number">
+                                            <span>NH농협</span>
+                                            <span>111-1234-5678-99</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div> -->
+                    <!-- [CASE] 초기값 -->
+                    <!-- <div class="field">
+                        <p class="label">이자 납입계좌</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">계좌선택</button>
+                        </div>
+                    </div> -->
+                    <!-- ui수정 240411 (코드 삭제) -->
+                    <!-- ui수정 240122 (코드 변경) -->
+                    <div class="field">
+                        <!-- 240411 문구 수정 -->
+                        <p class="label">대출금 입금 및 대출 비용 관련 계좌
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="t-content">
+                                        <span>대출 비용은 대출 이자와 보증료 내용입니다.</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <div class="select">
+                            <!-- 240411 readonly 추가 -->
+                            <button type="button" aria-haspopup="true" readonly>
+                                <div class="selection">
+                                    <div data-bankcode="011" class="info">
+                                        <span class="name">
+                                            <span>주거래우대통장</span>
+                                        </span>
+                                        <span class="account-number">
+                                            <span>NH농협</span>
+                                            <span>111-1234-5678-99</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- [CASE] 초기값 -->
+                    <!-- <div class="field">
+                        <p class="label">대출금 입금계좌</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">계좌선택</button>
+                        </div>
+                    </div> -->
+                    <!-- //ui수정 240122 (코드 변경) -->
+
+                    <!-- 240514 신용보증 약정서 추가 -->
+                    <div class="agree-box">
+                        <div class="agree">
+                            <div class="title">
+                                <div class="checkbox -sub -readonly">
+                                    <input type="checkbox" id="optional-total02">
+                                    <label for="optional-total02">신용보증 약정서</label>
+                                </div>
+                                <button type="button" class="more"><span class="hide">신용보증 약정서</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 240514 신용보증 약정서 추가 -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons -half">
+                        <button type="button" class="button -lg -primary">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

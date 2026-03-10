@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>과세유형을 선택</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">서비스 타이틀</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <h2 class="h2">과세유형을 선택해 주세요</h2>
+                        <div class="box-radios -point">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" checked>
+                                <label for="tab01">일반과세</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1">
+                                <label for="tab02">비과세종합저축</label>
+                            </div>
+                        </div>
+                        <p class="info">비과세 종합저축 대상자
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">보험계약 상세조회</span>
+                                    <span class="t-content">
+                                        <span class="dot">우대금리는 대출 만기까지 적용됩니다.</span>
+                                        <span class="dot">우대금리는 대출 만기까지 적용됩니다.</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                    </div>
+                    <!-- [CASE] 신청시 -->
+                    <div class="case-wrap">
+                        <!-- 240118 P문구 수정 -->
+                        <!-- ui수정 240122 나의잔여한도 box 변경 -->
+                        <div class="field">
+                            <div class="data-box">
+                                <div class="data-box-title">나의 잔여한도</div>
+                                <div class="data-box-content">8,400,000P</div>
+                            </div>
+                        </div>
+                        <!-- // ui수정 240122 나의잔여한도 box 변경 -->
+                        <!-- //240118 P문구 수정 -->
+                        <p class="message">
+                            2020년 1월 1일 이후 3개의 과세기간 중 하나 이상의 과세기간이 금융소득 종합과세대상자에 해당될 경우 비과세종합저축 가입대상에서 제외되며, 
+                            이후 관련 법령에서 정하는 절차에 따라 비과세종합저축이 일반과세로 전환됩니다.
+                        </p>
+                        <div class="field"> <!-- 에러일 경우 field에 -error 추가 -->
+                            <label for="text" class="label">납입 한도 설정</label>
+                            <div class="mix">
+                                <div class="text -won" data-clear="false">
+                                    <input type="tel" id="text" class="right num-call" aria-haspopup="true" placeholder="한도 설정 금액을 입력해 주세요" readonly="">
+                                    <div class="won">원</div>
+                                </div>
+                                <div class="info-wrap">
+                                    <p class="message point textright">오십만원</p>
+                                    <!-- <p class="message -error">비과세종합저축 한도를 모두 사용하였습니다.</p> -->
+                                    <!-- [CASE] 에러메세지 -->
+                                    <!-- <p class="message -error">잔여한도 이내로 입력해 주세요.</p> -->
+                                    <!-- //[CASE] 에러메세지 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // [CASE] 신청시 -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

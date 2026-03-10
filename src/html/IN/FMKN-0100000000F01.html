@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">    
+    <link rel="stylesheet" href="../../assets/css/insurance.css">  
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">보험 설계</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>                      
+                    <div class="h2-group">                        
+                        <h2 class="h2">
+                            보험을 설계해 주세요 <!-- ux 라이팅 수정 -->
+                        </h2>
+                    </div>
+                    <div class="field">
+                        <p class="label">보험 종류</p> <!-- ux 라이팅 수정 -->
+                        <h3 class="intype">무배당 IBK e-세액공제연금저축보험 2101</h3>  <!-- [case1] 값이 1개인 경우 텍스트로 제공 -->      
+                        <div class="select"> <!-- [case2] 값이 2개이상인 경우 select로 제공 -->  <!-- [231212] select 추가 -->  
+                            <button type="button" aria-haspopup="true">선택</button>                            
+                        </div>
+                    </div>  
+                    <div class="field">
+                        <p class="label">보험기간
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">보험기간</span>
+                                    <span class="t-content"> <!-- ux 라이팅 수정 -->
+                                        계약내용에 따라 일정기간 동안 보험 사고에 대하여 보장 받을 수 있는 기간을 말합니다.<br>
+                                        (보험기간이 10년일 경우 10년간 보험 사고에 대하여 보장받을 수 있습니다.)
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">선택</button>                            
+                        </div>
+                    </div>  
+                    <div class="field">
+                        <p class="label">납입기간
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">납입기간</span>
+                                    <span class="t-content"> <!-- ux 라이팅 수정 -->
+                                        보험료를 내는 기간을 말합니다.<br>
+                                        (20년납은 가입할 때부터 20년 동안 보험료를 낸다는 뜻입니다. 전기납은 보험기간 동안 보험료를 내는 것을 말하는데, 연금보험의 경우 연금 신청 시점까지 매월 보험료를 납입하는 방식을 말합니다.)
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">선택</button>                            
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">납입방법 <!-- ux 라이팅 수정 -->
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">납입방법</span>
+                                    <span class="t-content"> <!-- ux 라이팅 수정 -->
+                                        보험료를 내는 방법을 말합니다.<br>
+                                        (일시납은 계약할 때 한 번, 월납은 매월 한 번, 연납은 1년에 한 번 납입하는 것을 말합니다.)
+                                    </span>
+                                </span>
+                            </span>
+                        </p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">선택</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">운전 여부</p> <!-- ux 라이팅 수정 -->
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">선택</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="search01" class="label">직업</label>
+                        <div class="mix">
+                            <div class="text">
+                                <input type="text" class="left-side fake-readonly" id="search01" placeholder="검색" aria-haspopup="true" readonly>
+                            </div>
+                            <div class="space -lined search">
+                                <button type="button" class="icon-button -search right-side" aria-haspopup="true"><span class="hide">조회</span></button>
+                            </div>
+                        </div>
+                    </div>                                                                         
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- 숫자 키패드 레이어 -->
+    <div class="custom-key-layer" aria-hidden="true">
+        <div class="amount-btn-wrap">
+            <button type="button" value="100000" class="button numBtn -sm -fit">+10만</button>
+            <button type="button" value="500000" class="button numBtn -sm -fit">+50만</button>
+            <button type="button" value="1000000" class="button numBtn -sm -fit">+100만</button>
+            <button type="button" value="10000000" class="button numBtn -sm -fit">+1,000</button>
+        </div>
+        <div class="custom-key-wrap">
+            <button type="button" class="numBtn" value="1" title="숫자 1 입력">1</button>
+            <button type="button" class="numBtn" value="2" title="숫자 2 입력">2</button>
+            <button type="button" class="numBtn" value="3" title="숫자 3 입력">3</button>
+            <button type="button" class="numBtn" value="4" title="숫자 4 입력">4</button>
+            <button type="button" class="numBtn" value="5" title="숫자 5 입력">5</button>
+            <button type="button" class="numBtn" value="6" title="숫자 6 입력">6</button>
+            <button type="button" class="numBtn" value="7" title="숫자 7 입력">7</button>
+            <button type="button" class="numBtn" value="8" title="숫자 8 입력">8</button>
+            <button type="button" class="numBtn" value="9" title="숫자 9 입력">9</button>
+            <button type="button" class="numBtn btn-temp" disabled  aria-hidden="true">NH</button>
+            <button type="button" class="numBtn btn-amount" value="00" title="숫자 00입력" >00</button>
+            <button type="button" class="numBtn" value="0" title="숫자 0 입력">0</button>
+            <button type="button" class="numBtn btn-del" title="마지막 숫자 삭제">←</button>
+        </div>
+        <div class="buttons">
+            <button type="button" class="button -lg -primary" onclick="numKey.keyClose()">확인</button>
+        </div>
+    </div>
+    <!-- 숫자 키패드 레이어 -->
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+       /* 키패드 키입력 예시 */
+       var numKeyEmt = document.querySelectorAll('.custom-key-wrap button');
+        numKeyEmt.forEach(function(numKeyEmt) {
+            numKeyEmt.addEventListener('click',function () {
+                var $targetInput;
+                var $thisValLayer = numKeyEmt.closest('.custom-key-layer.-active');  //dim 없는 레이어 숫자 키패드
+                var $thisValChoose = numKeyEmt.closest('.choose-account-Wrap');  //bottom sheet 숫자 키패드
+                
+                if ($thisValLayer !== null) {
+                    $targetInput = numKey.numInput;
+                } else if($thisValChoose !== null) {
+                    $targetInput = $thisValChoose.querySelector('.choose-account-input input')
+                    $targetInput.closest('.text').classList.remove('-textless');
+                }
+                var $thisval = numKeyEmt.value;
+
+                if (numKeyEmt.classList.contains('btn-del')) {
+                    if ($targetInput.value.length !== 0) {
+                        $targetInput.value = $targetInput.value.slice(0,-1);
+                        if ($targetInput.value.length == 0) {
+                            setTimeout(function() {
+                                $targetInput.closest('.text').classList.add('-textless');
+                            }, 101);
+                        }
+                    }
+                }else{
+                    $targetInput.value = $targetInput.value + $thisval;
+                }
+            })
+        });
+
+
+        //10만, 50만.... 버튼 클릭시
+        var amountBtn = document.querySelectorAll('.amount-btn-wrap button');
+        amountBtn.forEach(function(amountBtn) {
+            amountBtn.addEventListener('click',function () {
+                var $targetInput;
+                var $thisValLayer = amountBtn.closest('.custom-key-layer.-active');  //dim 없는 레이어 숫자 키패드
+                var $thisValChoose = amountBtn.closest('.choose-account-Wrap');  //bottom sheet 숫자 키패드
+                if ($thisValLayer !== null) {
+                    $targetInput = numKey.numInput;
+                } else if($thisValChoose !== null) {
+                    $targetInput = $thisValChoose.querySelector('.choose-account-input input')
+                }
+                var $thisval = amountBtn.value;
+                $targetInput.value = Number($thisval) + Number($targetInput.value);
+            })
+        });
+        /* //키패드 키입력 예시 */      
+    </script>
+</body>
+</html>

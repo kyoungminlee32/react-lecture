@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/etf.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">투자성향분석 결과</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="h2-group">
+                        <h2 class="h2">
+                            <!-- [CASE] 공격투자형:-grade1, 적극투자형:-grade3, 위험중립형:-grade4, 안정추구형:-grade5, 안정형:-grade6 -->
+                            김농협님의 투자 성향은<br>
+                            <span class="-grade3">적극투자형</span>(분석점수 00점)입니다
+                        </h2>
+                        <!-- 2024-06-10 문구 수정 -->
+                        <p class="p date-result">투자성향 분석일 2023.09.23</p>
+                    </div>
+
+                    <div class="case-wrap">
+                        <h4 class="h5">투자성향에 적합한 상품 위험등급</h4>
+                        <span class="badge -grade3">3등급</span>
+                        <span class="badge -grade4">4등급</span>
+                        <span class="badge -grade5">5등급</span>
+                        <span class="badge -grade6">6등급</span>
+                    </div>
+
+                    <!-- [CASE] 공격투자형:-graph-grade1, 적극투자형:-graph-grade3, 위험중립형:-graph-grade4, 안정추구형:-graph-grade5, 안정형:-graph-grade6 -->
+                    <div class="invest-img -graph-grade3">
+                        <span class="hide">투자성향그래프(적극투자형)</span> <!-- 240422 해당 투자성향에 따라 (~형)텍스트 변경 필요 -->
+                        <!-- [240417] 투자성향그래프 background-image 변경 -->
+                        <!-- <img src="/content/assets/imgs/img/utility/img-grade3-graph.png" style="width:31.2rem; height:14.2rem;" alt="투자성향 그래프"> --> <!-- [231215] 경로 변경 -->
+                    </div>
+
+                    <!-- ui수정 240416 (결과 화면 수정 div.invest-complete추가) -->
+                    <div class="invest-complete">
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">01</span>
+                                    <span>고객님의 수입원을 가장 잘 나타내는 것을 선택해 주세요.</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio1" id="radio1-1" checked disabled>
+                                        <label for="radio1-1" class="invest-unit etf-icon1">현재 수입이 일정하지만, 향후 감소하거나 불안정할 것으로 예상</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">02</span>
+                                    <span>보유한 금융자산(전체 금융기관 내) 중 투자성 상품의 비중에 해당하는 것을 선택해 주세요.</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio2" id="radio2-2" checked disabled>
+                                        <label for="radio2-2" class="invest-unit etf-icon5">20% 이상 ~ 40% 미만</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">03</span>
+                                    <span>금융상품에 대한 지식 수준에 해당하는 것을 선택해 주세요.</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio3" id="radio3-3" checked disabled>
+                                        <label for="radio3-3" class="invest-unit etf-icon9">낮은 수준</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">04</span>
+                                    <span>아래의 설명을 읽고 맞다고 생각하는 답변을 선택해 주세요.</span>
+                                </dt>
+                                <dt class="question-text">
+                                    <span class="number">4-1</span>
+                                    <span>신탁과 펀드 상품은 원금이 보장되는 상품이다.</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio4" id="radio4-1" checked>
+                                                <label for="radio4-1" class="check-ox positive"><span class="hide">O</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">4-2</span>
+                                    <span>신탁과 펀드 상품에서 수익이 발행하면 일부 비과세 대상을 제외하고 세금이 부과된다.</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio5" id="radio5-2" checked>
+                                                <label for="radio5-2" class="check-ox negative"><span class="hide">X</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">4-3</span>
+                                    <span>은행에서 가입한 모든 신탁과 펀드 상품은 예·적금과 동일하게 예금자보호 대상이다.</span>
+                                </dt>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio">
+                                                <input type="radio" name="radio6" id="radio6-2" checked>
+                                                <label for="radio6-2" class="check-ox negative"><span class="hide">X</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">05</span>
+                                    <span>감내할 수 있는 손실 감수 수준에 해당하는 것을 선택해 주세요.</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio7" id="radio7-3" checked disabled>
+                                        <label for="radio7-3" class="invest-unit etf-icon13">10% 미만까지는 손실을 감수할 수 있음</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">06</span>
+                                    <span>투자 상품의 일반적인 투자기간을 선택해 주세요.</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio8" id="radio8-3" checked disabled>
+                                        <label for="radio8-3" class="invest-unit etf-icon17">1년 이상 ~ 2년 미만</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">07</span>
+                                    <span>투자 경험이 있는 금융투자상품 항목을 모두 선택해 주세요.(중복 선택 가능)</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="checkbox" name="radio10" id="radio10" checked disabled>
+                                        <label for="radio10" class="invest-unit etf-icon22">금융채, 신용도가 높은 회사채, 채권형 펀드, 원금보장형ELS(ELF), ELD 등</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="checkbox" name="radio11" id="radio11" checked disabled>
+                                        <label for="radio11" class="invest-unit etf-icon23">신용도 중간 등급의 회사채, 원금의 일부만 보장되는 ELF(ELS), 혼합형펀드 등</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">08</span>
+                                    <span>과거 가입한 투자성 상품을 해지한 목적을 가장 잘 나타낸 것을 선택해 주세요.(중복 선택 가능)</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="checkbox" name="radio14" id="radio14" checked disabled>
+                                        <label for="radio14" class="invest-unit etf-icon26">사전에 설정했던 목표수익률에 도달하여 수익실현을 목적으로 해지하였음</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="checkbox" name="radio15" id="radio15" checked disabled>
+                                        <label for="radio15" class="invest-unit etf-icon27">가입한 투자상품의 수익률이 지속적으로 저조하여 해지하였음</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">09</span>
+                                    <span>파생결합증권 또는 파생상품에 투자한 경험이 있다면, 투자기간은 얼마나 되세요?</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio18" id="radio18-3" checked disabled>
+                                        <label for="radio18-3" class="invest-unit etf-icon32">1년 이상 ~ 3년 미만</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">10</span>
+                                    <span>본인의 투자성향과 맞다고 생각하는 투자성향을 선택해 주세요.</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio19" id="radio19-3" checked disabled>
+                                        <label for="radio19-3" class="invest-unit etf-icon36">위험중립형</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- // ui수정 240416 (결과 화면 수정 div.invest-complete추가) -->
+
+                    <!-- 2024-06-05 문구 수정 -->
+                    <h4 class="h5">투자성향별 적합 상품 분류</h4>
+                    <!-- /2024-06-05 문구 수정 -->
+                    <div class="center">
+                        <!-- 2024 접근성 alt 텍스트 추가 -->
+                        <img src="/content/assets/imgs/img/isa/img-FMJA-0501000000F01-P-1.png" style="width:30.4rem; height:26.4rem;" alt="공격투자형 : 매우높은위험 1등급, 높은위험 2등급, 다소높은 위험 3등급, 보통위험 4등급, 낮은위험 5등급, 매우낮은위험 6등급, 
+                        적극투자형 : 다소높은 위험 3등급, 보통위험 4등급, 낮은위험 5등급, 매우낮은위험 6등급,
+                        위험중립형 : 보통위험 4등급, 낮은위험 5등급, 매우낮은위험 6등급,
+                        안정추구형 : 낮은위험 5등급, 매우낮은위험 6등급,
+                        안정형 : 매우낮은위험 6등급">
+                        <!-- //2024 접근성 alt 텍스트 추가 -->
+                    </div>
+
+                    <div class="case-wrap -sm">
+                        <button type="button" class="button -lg">투자성향분석 결과 다운로드</button>
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="inline-buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

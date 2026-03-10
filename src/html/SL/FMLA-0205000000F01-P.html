@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">골드바 가격 계산 및 수수료율</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <!-- ux 라이팅 수정 시작 -->
+                    <!-- 2024-04-29 수식 수정 -->
+                    <h5 class="h5">고객이 살 때 금액</h5>
+                    <p class="p">1g 당  기준 가격 X 중량 X  (1 + 골드바 종류별 판매수수료율) X (1 + 부가가치세 10%)</p>
+
+                    <h5 class="h5">고객이 팔 때 금액</h5>
+                    <p class="p">기준 가격 X 중량 X (1 - 매입수수료율)</p>
+                    <!-- 2024-04-29 수식 수정 -->
+
+                    <h5 class="h5">1g당 기준 가격</h5>
+                    <p class="p">국제 금 가격을 원달러 환율과 1g 당 원화 가격으로 환산하여 은행이 고시하는 가격</p>
+
+                    <h5 class="h5">판매수수료</h5>
+                    <p class="p">금 실물 구입 비용, 골드바 제조 비용, 보안 물류 비용, 판매업체수수료, 은행수수료 등이 포함</p>
+
+                    <h5 class="h5">살 때 수수료율</h5>
+                    <ul class="ul -bullet">
+                        <li>㈜ 한국금거래소쓰리엠
+                            <div>
+                                <ul class="ul -dash">
+                                    <li>3.75g ( 17%) , 10g(7%), 100g(5%), 1kg(5%)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>삼성금거래소
+                            <div>
+                                <ul class="ul -dash">
+                                    <li>37.5g(5.5%) , 187.5g(4.7%), 375g(4.5%)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>한국조폐공사
+                            <div>
+                                <ul class="ul -dash">
+                                    <li>10g(6%), 18.75g(6%) , 75g(6%), 100g(5%) , 500g(5%) , 1kg(4.9%)</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h5 class="h5">팔 때  수수료율</h5>
+                    <p class="p">5% (3.75g 외 모든 골드바에 동일 적용) , 8%(3.75g)</p>
+                    <!-- //ux 라이팅 수정 끝 -->
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- <button type="button" class="button -lg">취소</button> -->
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

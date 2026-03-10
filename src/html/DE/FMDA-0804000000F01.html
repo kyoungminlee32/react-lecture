@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">법정대리인 인증</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:2; --max:11;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="h2-group">
+                        <h2 class="h2">
+                            법정대리인 자격 조회에 동의해 주세요
+                        </h2>
+                    </div>
+                    <div class="agree">
+                        <div class="title">
+                            <div class="checkbox -sm">
+                                <input type="checkbox" id="required-total">
+                                <label for="required-total">[필수] 전체 동의</label>
+                            </div>
+                            <button type="button" class="more"><span class="hide">필수 전체 동의 약관</span></button>
+                        </div>
+                        <div class="panel">
+                            <div class="checkboxes -full">
+                                <div class="checkbox -sub">
+                                    <input type="checkbox" id="required1">
+                                    <label for="required1">행정기관 개인(신용)정보 수집∙이용 동의서</label>
+                                    <button type="button" class="more"><span class="hide">약관</span></button>
+                                </div>
+                                <div class="checkbox -sub">
+                                    <input type="checkbox" id="required2">
+                                    <label for="required2">행정기관 개인(신용)정보 조회 위임 동의서</label>
+                                    <button type="button" class="more"><span class="hide">약관</span></button>
+                                </div>                               
+                            </div>
+                        </div>
+                    </div>                     
+                </div>
+
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <ul class="ul -bullet">
+                                <li>대법원 전자가족관계등록시스템을 통해 자녀 기준의 기본증명서와 가족관계증명서를 조회하여 자격을 확인합니다.</li>
+                                <li>자녀의 법정대리인 및 친권 확인이 추가로 필요한 경우 비대면에서 가입할 수 없습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary" disabled>다음</button>   <!-- [240329] disabled 추가 -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

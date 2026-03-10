@@ -1,0 +1,478 @@
+@charset "utf-8";
+
+/* VARIABLES */
+
+body {
+    --in                   : 2.4rem;
+    --out                  : calc(var(--in) * -1);
+
+    --indent               : 0.4rem;
+    --outdent              : calc(var(--indent) * -1);
+    
+    --word                 : "Pretendard", "DroidSans", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+
+body {
+    color: var(--color-root);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: var(--word);
+    letter-spacing: -0.025em;
+    word-break:keep-all;
+    overflow-wrap: anywhere;
+    -webkit-text-size-adjust: none;
+}
+
+button,
+input,
+textarea {
+    color:var(--font1);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: var(--word);
+    letter-spacing: -0.04em;
+    /* -webkit-appearance:none; */
+}
+
+/*
+    COLOR PALETTE
+
+    --G : Common Gray --B : Background      --FR : Function Red
+    --F : Font        --P : Primary,sub     --FB : Function Blue
+    --BG : Blue Gray  --S : sub color
+
+    상품용 COLOR PALETTE
+
+    --PD1 : 저축      --PD2 : 대출      --PD3 : 펀드/투자      --PD4 : 외환       --PD5 : 보험      --PD6 : 퇴직연금
+*/
+
+body {
+    --P11:#062512; --S11:#012d40; --S21:#0e0c5a; --S31:#38001b; --S41:#331f00;
+    --P12:#093f1f; --S12:#023e58; --S22:#231d92; --S32:#5a0d32; --S42:#664400;
+    --P13:#0d572b; --S13:#095778; --S23:#362fb6; --S33:#92265a; --S43:#997300;
+    --P14:#12743a; --S14:#187aa4; --S24:#4d44d9; --S34:#af4f7d; --S44:#da6f11;
+    --P15:#19973c; --S15:#1890bf; --S25:#685efd; --S35:#d870a3; --S45:#ffd103;
+    --P16:#3bc774; --S16:#57b6de; --S26:#7167ff; --S36:#e794bd; --S46:#ffe600;
+    --P17:#71e5a1; --S17:#7dcaea; --S27:#8e86fd; --S37:#eeb7d2; --S47:#ffec40;
+    --P18:#abe9c5; --S18:#a8dcf2; --S28:#a59efe; --S38:#f7cce1; --S48:#fff27f;
+    --P19:#d1f3e0; --S19:#d1f1ff; --S29:#c4befe; --S39:#f7deea; --S49:#fff9bf;
+    --P20:#e0f3e8; --S20:#e8f8ff; --S30:#e1defe; --S40:#ffeff7; --S50:#fffce5;
+
+    --G01:#111111; --F01:#121212; --BG01:#212326; --FR1:#400000; --B01:#5fa376; --B11:#e8f2ec; --B21:#d0efda; --B31:#284632;
+    --G02:#333333; --F02:#343434; --BG02:#383b40; --FR2:#800000; --B02:#c27e9f; --B12:#f3edef; --B22:#eccfdd; --B32:#53273c;
+    --G03:#555555; --F03:#505050; --BG03:#4f5359; --FR3:#ec0c0c; --B03:#9a7cbe; --B13:#eee8f3; --B23:#dacde9; --B33:#473263;
+    --G04:#999999; --F04:#767676; --BG04:#656a73; --FR4:#e24949; --B04:#416c94; --B14:#e3eaf1; --B24:#c8dbeb; --B34:#2d4965;
+    --G05:#b3b3b3; --F05:#909090; --BG05:#828894; --FR5:#ffb2b2; --B05:#5c9cb8; --B15:#dfeaef; --B25:#c5e0eb; --B35:#265c72;
+    --G06:#d3d3d3; --F06:#a6a6a6; --BG06:#a2a8b2; --FB1:#002259; --B06:#60a7a1; --B16:#dceeec; --B26:#c2e3e1; --B36:#205853;
+    --G07:#e1e1e1; --F07:#bfbfbf; --BG07:#bcc2cf; --FB2:#003b99; --B07:#be6f95; --B17:#efe3e9; --B27:#ebcbdb; --B37:#682f4b;
+    --G08:#f0f0f0; --F08:#d9d9d9; --BG08:#d9dfeb; --FB3:#2c6dd4; --B08:#7d76c2; --B18:#e4e3ef; --B28:#ccc9ec; --B38:#343065;
+    --G09:#f6f6f6; --F09:#f2f2f2; --BG09:#ebeff6; --FB4:#76a7f5; --B09:#90959e; --B19:#e7ebf1; --B29:#ced6e6; --B39:#585c63;
+    --G10:#ffffff; --F10:#ffffff; --BG10:#f3f5f8; --FB5:#b2d0ff; --B10:#848484; --B20:#eeeeee; --B30:#e1e1e1; --B40:#333333;
+
+    --PD11:#031e33;   --PD21:#031237;   --PD31:#0f0439;   --PD41:#300322;   --PD51:#332503;   --PD61:#022411;
+    --PD12:#052b48;   --PD22:#061b50;   --PD32:#15064e;   --PD42:#4a0635;   --PD52:#4a3606;   --PD62:#064622;
+    --PD13:#0b3d64;   --PD23:#0e2d78;   --PD33:#200c6b;   --PD43:#6e0e50;   --PD53:#684c09;   --PD63:#054622;
+    --PD14:#114e7d;   --PD24:#1a42a1;   --PD34:#2e1788;   --PD44:#8a2069;   --PD54:#a27409;   --PD64:#0a753b;
+    --PD15:#2473af;   --PD25:#2f5aba;   --PD35:#523ab1;   --PD45:#af3c8b;   --PD55:#c88f0b;   --PD65:#199a54;
+    --PD16:#428fc9;   --PD26:#5076cb;   --PD36:#7b65d1;   --PD46:#ce66ad;   --PD56:#eeae1a;   --PD66:#39c479;
+    --PD17:#72b0df;   --PD27:#7896d8;   --PD37:#a392e2;   --PD47:#de8ec5;   --PD57:#e5b851;   --PD67:#66d599;
+    --PD18:#a4cdec;   --PD28:#acc0ec;   --PD38:#bfb4e9;   --PD48:#ebb7db;   --PD58:#ecc98d;   --PD68:#9fe2be;
+    --PD19:#bedaef;   --PD29:#c8d4ef;   --PD39:#d4cdf1;   --PD49:#f2d1e8;   --PD59:#f6e9ce;   --PD69:#c4eed7;
+    --PD20:#daeaf6;   --PD30:#dce4f5;   --PD40:#e7e4f3;   --PD50:#f3e9f0;   --PD60:#f6efe6;   --PD70:#e2efe8;
+}
+
+/* --G : Common Gray Dark  --F : Font Dark   --BG : Blue Gray Dark */ 
+
+.dark-mode {
+    --G01:#ffffff; --F01:#ffffff; --BG01:#f3f5f8; --P11:#e0f3e8;
+    --G02:#e6e6e6; --F02:#f2f2f2; --BG02:#ebeff6; --P12:#abe9c5;
+    --G03:#d0d0d0; --F03:#d9d9d9; --BG03:#d9dfeb; --P13:#71e5a1;
+    --G04:#b0b0b0; --F04:#bfbfbf; --BG04:#bcc2cf; --P14:#3bc774;
+    --G05:#909090; --F05:#a6a6a6; --BG05:#a2a8b2; --P15:#0f8f44;
+    --G06:#707070; --F06:#909090; --BG06:#828894; --P16:#12743a;
+    --G07:#505050; --F07:#767676; --BG07:#656a73; --P17:#0d572b;
+    --G08:#404040; --F08:#505050; --BG08:#4f5359; --P18:#093f1f;
+    --G09:#303030; --F09:#343434; --BG09:#414448; --P19:#0a361c;
+    --G10:#212121; --F10:#121212; --BG10:#35383b; --P20:#062512;
+}
+
+/* COLOR SET */
+
+body {
+    --point-light                      : var(--P19);
+    --point                            : var(--P15);
+    --point-dark                       : var(--P13);
+
+    --sub1-light                       : var(--S19);
+    --sub1                             : var(--S15);
+    --sub1-dark                        : var(--S13);
+
+    --sub2-light                       : var(--S29);
+    --sub2                             : var(--S25);
+    --sub2-dark                        : var(--S23);
+
+    --sub3-light                       : var(--S39);
+    --sub3                             : var(--S35);
+    --sub3-dark                        : var(--S33);
+
+    --sub4-light                       : var(--S49);
+    --sub4                             : var(--S45);
+    --sub4-dark                        : var(--S43);
+
+    --font1                            : var(--F01);
+    --font2                            : var(--F03);
+    --font3                            : var(--F04);
+    --font4                            : var(--F05);
+    --font5                            : var(--F07);
+
+    --red                              : var(--FR4);
+    --blue                             : var(--FB3);
+
+    --line1                            : var(--G07);    
+    --line2                            : var(--G08);
+ 
+    --border1                          : var(--G06);
+    --border2                          : var(--G07);
+
+    --bg1                              : var(--G09);
+
+    --dimmed1                          : rgba(255,255,255,0);
+    --dimmed2                          : rgba(17,17,17,.3);
+    --dimmed3                          : rgba(17,17,17,.7);
+
+    /* --------------------------------------------------------------- */
+
+     --color-root                      : var(--F01);
+        --bg-root                      : var(--G10);
+
+        --bg-highlight                 : var(--P19);
+
+    --border-button                    : var(--G06);
+     --color-button                    : var(--F01);
+
+    --border-button-active             : var(--G05);
+     --color-button-active             : var(--F01);
+        --bg-button-active             : var(--G08);
+
+    --border-button-disabled           : var(--G08);
+     --color-button-disabled           : var(--G05);
+
+    --border-button-primary            : var(--point);
+     --color-button-primary            : var(--F10);
+        --bg-button-primary            : var(--point);
+
+    --border-button-primary-active     : var(--P13);
+     --color-button-primary-active     : var(--F10);
+        --bg-button-primary-active     : var(--P13);
+
+    --border-button-primary-disabled   : var(--G08);
+     --color-button-primary-disabled   : var(--F05);
+        --bg-button-primary-disabled   : var(--G08);
+
+    --border-button-secondary          : var(--point);
+     --color-button-secondary          : var(--point);
+        --bg-button-secondary          : var(--P15);
+
+    --border-button-secondary-active   : var(--P13);
+     --color-button-secondary-active   : var(--P13);
+        --bg-button-secondary-active   : var(--B11);
+
+    --border-button-secondary-disabled : var(--G08);
+     --color-button-secondary-disabled : var(--F06);
+
+    --border-round-button              : var(--G06);
+     --color-round-button              : var(--F01);
+
+    --border-round-button-disabled     : var(--G08);
+     --color-round-button-disabled     : var(--F06);
+
+    --border-checkbox                  : #929292; /* 2024 접근성 수정 */
+     --color-checkbox                  : var(--F01);
+        --bg-checkbox                  : var(--G10);
+
+    --border-checkbox-checked          : var(--point);
+     --color-checkbox-checked          : var(--F01);
+        --bg-checkbox-checked          : var(--point);
+
+    --border-checkbox-disabled         : var(--G07);
+     --color-checkbox-disabled         : var(--F07);
+        --bg-checkbox-disabled         : var(--G09);
+
+    --border-checkbox-checked-disabled : #a1a1a1;
+     --color-checkbox-checked-disabled : var(--F05);
+        --bg-checkbox-checked-disabled : #a1a1a1;
+
+    --border-radio                     : #c3c3c3;
+     --color-radio                     : var(--F01);
+        --bg-radio                     : var(--G10);
+     --inner-radio                     : #c3c3c3;
+
+    --border-radio-checked             : var(--point);
+     --color-radio-checked             : var(--F01);
+        --bg-radio-checked             : var(--G10);
+     --inner-radio-checked             : var(--point);
+
+    --border-radio-disabled            : var(--G07);
+     --color-radio-disabled            : var(--F07);
+        --bg-radio-disabled            : var(--G09);
+     --inner-radio-disabled            : var(--G07);
+
+    --border-radio-checked-disabled    : transparent;
+     --color-radio-checked-disabled    : var(--F01);
+        --bg-radio-checked-disabled    : var(--F06);
+     --inner-radio-checked-disabled    : var(--G10);
+
+    --border-box-radio                 : var(--G06);
+     --color-box-radio                 : var(--F03);
+        --bg-box-radio                 : var(--G10);
+
+    --border-box-radio-disabled        : var(--G06);
+     --color-box-radio-disabled        : var(--F07);
+        --bg-box-radio-disabled        : var(--G10);
+
+    --border-box-radio-checked         : var(--P15);
+     --color-box-radio-checked         : var(--P15);
+        --bg-box-radio-checked         : var(--G10);
+
+    --border-box-radio-checked-disabled: var(--G09);
+     --color-box-radio-checked-disabled: var(--F01);
+        --bg-box-radio-checked-disabled: var(--G09);
+     --inner-box-radio-checked-disabled: var(--G09);
+
+    --border-box-check                 : var(--G06);
+     --color-box-check                 : var(--F03);
+        --bg-box-check                 : var(--G10);
+
+    --border-box-check-disabled        : var(--G06);
+     --color-box-check-disabled        : var(--F07);
+        --bg-box-check-disabled        : var(--G10);
+
+    --border-box-check-checked         : var(--P15);
+     --color-box-check-checked         : var(--P15);
+        --bg-box-check-checked         : var(--G10);
+
+    --border-box-check-checked-disabled: var(--G09);
+     --color-box-check-checked-disabled: var(--F01);
+        --bg-box-check-checked-disabled: var(--G09);
+     --inner-box-check-checked-disabled: var(--G09);
+
+    --border-switch                    : var(--G05);
+     --color-switch                    : var(--F01);
+        --bg-switch                    : var(--F05); /* 2024-08-22 접근성 색상 변경 */
+
+    --border-switch-checked            : var(--point);
+        --bg-switch-checked            : var(--point);
+
+    --border-switch-disabled           : var(--G08);
+        --bg-switch-disabled           : var(--F05); /* 2024-08-22 접근성 색상 변경 */
+
+     --color-subs                      : var(--F10);
+        --bg-subs                      : var(--G01);
+
+    --border-segments                  : var(--BG10);
+     --color-segments                  : var(--F03);
+        --bg-segments                  : var(--BG10);
+
+
+    --border-segments-active           : var(--BG06);
+     --color-segments-active           : var(--F01);
+        --bg-segments-active           : var(--G10);
+
+    --border-bar-segments              : var(--BG10);
+     --color-bar-segments              : var(--F03);
+        --bg-bar-segments              : var(--BG10);
+
+    --border-bar-segments-active       : var(--P15);
+     --color-bar-segments-active       : var(--F01);
+        --bg-bar-segments-active       : var(--G10);
+
+     --value-auth-number               : var(--F06);
+     --placeholder-color               : #929292; /* 2024 접근성 추가 */
+}
+
+.dark-mode {
+    --point-light                      : var(--P19);
+    --point                            : var(--P15);
+    --point-dark                       : var(--P13);
+
+    --sub1-light                       : var(--S19);
+    --sub1                             : var(--S15);
+    --sub1-dark                        : var(--S13);
+
+    --sub2-light                       : var(--S29);
+    --sub2                             : var(--S25);
+    --sub2-dark                        : var(--S23);
+
+    --sub3-light                       : var(--S39);
+    --sub3                             : var(--S35);
+    --sub3-dark                        : var(--S33);
+
+    --sub4-light                       : var(--S49);
+    --sub4                             : var(--S45);
+    --sub4-dark                        : var(--S43);
+
+    --font1                            : var(--F01);
+    --font2                            : var(--F02);
+    --font3                            : var(--F03);
+    --font4                            : var(--F04);
+    --font5                            : var(--F06);
+
+    --red                              : var(--FR4);
+    --blue                             : var(--FB3);
+
+    --line1                            : var(--G07);
+    --line2                            : var(--G08);
+
+    --border1                          : var(--G06);
+    --border2                          : var(--G07);
+
+    --bg1                              : var(--G09);
+
+    --dimmed1                          : rgba(17,17,17,0);
+    --dimmed2                          : rgba(17,17,17,.8);
+    --dimmed3                          : rgba(17,17,17,.85);
+
+
+    /* --------------------------------------------------------------- */
+
+     --color-root                      : var(--F01);
+        --bg-root                      : var(--G10);
+
+        --bg-highlight                 : var(--P14);
+
+    --border-button                    : var(--G06);
+     --color-button                    : var(--F01);
+
+    --border-button-active             : var(--G06);
+     --color-button-active             : var(--F04);
+
+    --border-button-disabled           : var(--G07);
+     --color-button-disabled           : var(--F06);
+
+    --border-button-primary            : var(--point);
+     --color-button-primary            : var(--F01);
+        --bg-button-primary            : var(--point);
+
+    --border-button-primary-active     : var(--P16);
+     --color-button-primary-active     : var(--F01);
+        --bg-button-primary-active     : var(--P16);
+
+    --border-button-primary-disabled   : var(--G09);
+     --color-button-primary-disabled   : var(--F04);
+        --bg-button-primary-disabled   : var(--G09);
+
+    --border-button-secondary          : var(--point);
+     --color-button-secondary          : var(--point);
+        --bg-button-secondary          : var(--P15);
+
+    --border-button-secondary-active   : var(--P16);
+     --color-button-secondary-active   : var(--P16);
+
+    --border-button-secondary-disabled : var(--G07);
+     --color-button-secondary-disabled : var(--F06);
+
+    --border-round-button              : var(--G06);
+     --color-round-button              : var(--F01);
+
+    --border-round-button-disabled     : var(--G07);
+     --color-round-button-disabled     : var(--F06);
+
+    --border-checkbox                  : var(--G05);
+     --color-checkbox                  : var(--F01);
+        --bg-checkbox                  : var(--G10);
+
+    --border-checkbox-checked          : var(--point);
+     --color-checkbox-checked          : var(--F01);
+        --bg-checkbox-checked          : var(--point);
+
+    --border-checkbox-disabled         : var(--G07);
+        --bg-checkbox-disabled         : var(--G09);
+
+
+    --border-checkbox-checked-disabled : var(--G05);
+        --bg-checkbox-checked-disabled : var(--G05);
+
+    --border-radio                     : var(--G06);
+     --color-radio                     : var(--F01);
+        --bg-radio                     : var(--G10);
+
+    --border-radio-checked             : var(--P15);
+     --color-radio-checked             : var(--F01);
+        --bg-radio-checked             : var(--P15);
+
+    --border-radio-disabled            : var(--G06);
+     --color-radio-disabled            : var(--F04);
+        --bg-radio-disabled            : var(--G09);
+
+    --border-radio-checked-disabled    : var(--G09);
+     --color-radio-checked-disabled    : var(--F04);
+        --bg-radio-checked-disabled    : var(--G07);
+
+    --border-box-radio                 : var(--G06);
+     --color-box-radio                 : var(--F04);
+        --bg-box-radio                 : transparent;
+
+    --border-box-radio-checked         : var(--P15);
+     --color-box-radio-checked         : var(--P15);
+        --bg-box-radio-checked         : transparent;
+
+    --border-box-check                 : var(--G06);
+     --color-box-check                 : var(--F04);
+        --bg-box-check                 : var(--G09);
+
+    --border-box-check-checked         : var(--P15);
+     --color-box-check-checked         : var(--P15);
+        --bg-box-check-checked         : transparent;
+
+    --border-switch                    : var(--G05);
+     --color-switch                    : var(--F01);
+        --bg-switch                    : var(--G05);
+
+    --border-switch-checked            : var(--P15);
+        --bg-switch-checked            : var(--P15);
+
+    --border-switch-disabled           : var(--G07);
+        --bg-switch-disabled           : var(--G07);
+
+     --color-subs                      : var(--F10);
+        --bg-subs                      : var(--G01);
+
+    --border-segments                  : var(--G06);
+     --color-segments                  : var(--F04);
+        --bg-segments                  : transparent;
+
+    --border-segments-active           : var(--G01);
+     --color-segments-active           : var(--G01);
+        --bg-segments-active           : var(--G10);
+
+    --border-bar-segments              : var(--BG10);
+     --color-bar-segments              : var(--F03);
+        --bg-bar-segments              : var(--G09);
+        
+    --border-bar-segments-active       : var(--P15);
+     --color-bar-segments-active       : var(--F01);
+        --bg-bar-segments-active       : var(--G10);
+
+     --value-auth-number               : var(--F06);
+}
+
+#colour1 {
+    --point                            : var(--P85);
+    --point-dark                       : var(--P84);
+
+        --bg-highlight                 : var(--P89);
+
+    --border-button-primary-active     : var(--P86);
+        --bg-button-primary-active     : var(--P86);
+
+    --border-button-secondary-active   : var(--P86);
+     --color-button-secondary-active   : var(--P86);
+}
+
+#colour1.dark-mode {
+    --point                            : var(--P15);
+    --point-dark                       : var(--P16);
+
+        --bg-highlight                 : var(--P14);
+}
+

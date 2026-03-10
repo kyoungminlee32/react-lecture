@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출(심사)신청 정보 입력1</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <!-- 240227 ux라이팅 수정 -->
+                        <h2 class="h2">대출 심사를 위한 정보를 입력해 주세요</h2>
+                        <!-- //240227 ux라이팅 수정 -->
+                    </div>
+                    <dl class="dl -box -row">
+                        <div>
+                            <dt>대표자 이름</dt>
+                            <dd>김금상</dd>
+                        </div>
+                        <div>
+                        <!-- ui수정 240122 (dt a삭제 사업자 정보확인 추가) -->
+                            <!-- 240202 ux라이팅 수정 -->
+                            <dt>대표자 주민등록번호</dt>
+                            <!-- //240202 ux라이팅 수정 -->
+                            <dd>123456-*******</dd>
+                        </div>
+                    </dl>
+                    <div class="info-detail">
+                        <!-- 240206 ux라이팅 수정 -->
+                        <a href="javascript:void(0)" class="a -arrow">사업자정보 확인</a>
+                        <!-- //240206 ux라이팅 수정 -->
+                    </div>
+                    <!-- //ui수정 240122 (dt a삭제 사업자 정보확인 추가) -->
+                    <!-- ui수정 240122 (대출과목 삭제) -->
+                    <div class="field">
+                        <!-- 240110 ux라이팅 수정 -->
+                        <label for="text" class="label">대출 신청금액</label>
+                        <!-- //240110 ux라이팅 수정 -->
+                        <div class="mix">
+                            <div class="text -won">
+                                <!-- 231205 value값 수정 -->
+                                <input type="tel" id="text" class="right num-call" value="700,000,000" aria-haspopup="true" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">칠억원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <!-- 240207 ux라이팅 수정 -->
+                        <p class="label">대출 구분</p>
+                        <!-- //240207 ux라이팅 수정 -->
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">개별거래</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">상환방법</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">원리금균등분할상환</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <!-- 240227 ux라이팅 수정 -->
+                        <p class="label">자금 용도</p>
+                        <!-- //240227 ux라이팅 수정 -->
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">기타</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <!-- 240318 ux라이팅 수정 -->
+                        <p class="label">주거 형태</p>
+                        <!-- //240318 ux라이팅 수정 -->
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">전세</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="datedate" class="label">대출기간</label>
+                        <!-- ui수정 240122 (select로 변경) -->
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">2년 6개월</button>
+                        </div>
+                        <!-- ui수정 240122 (select로 변경) -->
+                    </div>
+                    <div class="field">
+                        <!-- 240202 UX라이팅 수정 -->
+                        <label for="datedate" class="label">대출 희망일</label>
+                        <!-- //240202 UX라이팅 수정 -->
+                        <div class="mix datepicker">
+                            <div class="text" data-clear="false">
+                                <input type="text" class="left-side" id="datedate" value="10월20일" title="날짜선택" aria-haspopup="true" readonly>
+                            </div>
+                            <div class="space -lined date">
+                                <button type="button" aria-haspopup="true" class="icon-button -calendar"><span class="hide">달력보기</span></button>
+                            </div>
+                        </div>
+                        <!-- 240207 UX라이팅 수정 -->
+                        <p class="message">영업일 기준 3일 이후로 선택해 주세요. (토요일, 공휴일 제외)</p>
+                        <!-- 240207 UX라이팅 수정 -->
+                    </div>
+                    <div class="field">
+                        <!-- 240202 UX라이팅 수정 -->
+                        <label for="search01" class="label">희망 관리점
+                            <!-- 240207 툴팁 추가 -->
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">희망 관리점</span>
+                                    <span class="t-content">
+                                        출금계좌 희망 관리점으로 자동 등록되며, 변경이 필요한 경우 선택해 주시기 바랍니다.
+                                    </span>
+                                </span>
+                            </span>
+                            <!-- //240207 툴팁 추가 -->
+                        </label>
+                        <!-- //240202 UX라이팅 수정 -->
+                        <div class="mix">
+                            <div class="text">
+                                <input type="text" class="left-side fake-readonly" id="search01" value="농협은행 불광지점" title="희망 관리점" readonly>
+                            </div>
+                            <div class="space -lined search">
+                                <button type="button" class="icon-button -search" aria-haspopup="true"><span class="hide">조회</span></button>
+                            </div>
+                        </div>
+                        <!-- 240207 UX라이팅 수정 -->
+                        <p class="message">방문할 수 있는 영업점을 선택해 주세요. (대기업RM센터 제외)</p>
+                        <!-- //240207 UX라이팅 수정 -->
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE]모든 항목 채워지면 활성화 -->
+                        <button type="button" class="button -lg -primary">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

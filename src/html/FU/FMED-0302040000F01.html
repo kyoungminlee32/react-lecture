@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/fund.css">
+    <!-- 차트 관련css -->
+    <link rel="stylesheet" href="../../assets/libs/Chart/dist/Chart.css">
+    <link rel="stylesheet" href="../../assets/libs/Chart/dist/Chart.min.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">투자성과 모니터링</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                           
+                    <div class="field">
+                        <div class="h2-group">                        
+                            <h2 class="h2">
+                                나에게 주는 3년 여행자금 모으기
+                            </h2>
+                        </div>
+                        <div>
+                            <div class="subs -anchor">
+                                <div>
+                                    <div class="inner">
+                                        <div role="tablist" class="list">
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="subs-panel1" id="sub1">투자현황</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="subs-panel2" id="sub2" class="">수익률</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="true" aria-controls="subs-panel3" id="sub3" class="">펀드목록<span class="hide">선택됨</span></button></div>
+                                            <div class="item -active"><button type="button" role="tab" aria-selected="false" aria-controls="subs-panel4" id="sub4">리밸런싱</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subs-panels">
+                                <div role="tabpanel" aria-labelledby="sub1" id="subs-panel1" class="subs-panel" tabindex="-1">                                    
+                                    <div class="field -sm">
+                                        <div class="tit-wrap">
+                                            <h3 class="h5">포트폴리오 요약</h3>
+                                            <span class="standardtxt">(기준일자 : 2023.10.21)</span>
+                                        </div>
+                                        <dl class="dl -bordered">
+                                            <div>
+                                                <dt>포트폴리오명칭</dt>
+                                                <dd>나에게 주는 선물 3년<br> 여행자금 만들기</dd>
+                                            </div>
+                                            <div>
+                                                <dt>수익률</dt>
+                                                <dd><span class="red">+10.00 %</span></dd>
+                                            </div>
+                                            <div data-role="hidden">
+                                                <dt>투자금액</dt>
+                                                <dd>1,000,000원</dd>
+                                            </div>
+                                            <div data-role="hidden">
+                                                <dt>평가금액</dt>
+                                                <dd>1,200,000원</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+
+                                    <!-- [240306] 마크업 변경 -->
+                                    <div class="case-wrap -xs">
+                                        <div class="chart-area -flex">
+                                            <canvas id="doughnut-chart" width="160" height="160" aria-label=""></canvas>
+                                            <div class="chart-labels -doughnut"> <!-- [240320] 마크업 변경 -->
+                                                <p class="chart-label">국내주식 10%</p>
+                                                <p class="chart-label">국내채권 20%</p>
+                                                <p class="chart-label">국내채권혼합 10%</p>
+                                                <p class="chart-label">해외선진주식 10%</p>
+                                                <p class="chart-label">해외이머징주식 20%</p>
+                                                <p class="chart-label">해외채권 10%</p>
+                                                <p class="chart-label">해외채권혼합 20%</p>
+                                            </div> <!-- //[240320] 마크업 변경 -->
+                                        </div>
+                                    </div>                                     
+                                    <!-- <div class="doughnut-chart">
+                                        <canvas id="doughnut-chart" width="160" height="160" aria-label=""></canvas>
+                                        <div class="doughnut-chart-labels">
+                                            <p class="doughnut-chart-label">국내주식 30%</p>
+                                            <p class="doughnut-chart-label">해외선진주식 25%</p>
+                                            <p class="doughnut-chart-label">해외이머징주식 20%</p>
+                                            <p class="doughnut-chart-label">국내채권 10%</p>
+                                            <p class="doughnut-chart-label">해외채권 15%</p>
+                                        </div>
+                                    </div> -->
+                                    <!-- //[240306] 마크업 변경 -->
+
+                                    <div class="field">
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">포트폴리오 상품 상세</span></caption> <!-- 240503 표제목 수정 -->
+                                                <colgroup>
+                                                    <col style="width:33.3%">
+                                                    <col style="width:33.3%">
+                                                    <col style="width:33.3%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">펀드유형구분</th>
+                                                        <th scope="col">평가금액</th>
+                                                        <th scope="col">투자비중</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">국내주식(혼합)</th>
+                                                        <td>360,000원</td>
+                                                        <td>+30.00 %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">해외선진주식(혼합)</th>
+                                                        <td>360,000원</td>
+                                                        <td>+30.00 %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">해외이머징주식</th>
+                                                        <td>360,000원</td>
+                                                        <td>+20.00 %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">국내채권</th>
+                                                        <td>360,000원</td>
+                                                        <td>+10.00 %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">해외채권</th>
+                                                        <td>360,000원</td>
+                                                        <td>+10.00 %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">합계</th>
+                                                        <td><span class="sum">1,200,000원</span></td>
+                                                        <td><span class="sum">+100.00 %</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div role="tabpanel" aria-labelledby="sub1" id="subs-panel2" class="subs-panel" tabindex="-1">
+                                    <div class="field -sm">
+                                        <div class="tit-wrap">
+                                            <h3 class="h5">운용성과 요약</h3>
+                                            <span class="standardtxt">(기준일자 : 2023.10.21)</span>
+                                        </div>
+                                        <dl class="dl -bordered">
+                                            <div>
+                                                <dt>조회기준일 <br>(최근 1년)</dt>
+                                                <dd>2023.10.21 ~ 2023.10.21</dd>
+                                            </div>
+                                            <div>
+                                                <dt>조회기간 수익률</dt>
+                                                <dd><span class="red">+10.00 %</span></dd>
+                                            </div>
+                                            <div data-role="hidden">
+                                                <dt>수익률</dt>
+                                                <dd><span class="red">+10.00 %</span></dd>
+                                            </div>
+                                            <div data-role="hidden">
+                                                <dt>목표수익률/통보일</dt>
+                                                <dd><span class="red">+30.20 %</span> / 2023.10.21</dd>
+                                            </div>
+                                            <div data-role="hidden">
+                                                <dt>위험수익률/통보일</dt>
+                                                <dd><span class="red">-15.11 %</span> / 2023.10.21</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                    <div class="field">
+                                        <div class="portterm-wrap">
+                                            <ul class="portterm">
+                                                <li><span class="strong">6개월</span></li>
+                                                <li>1년</li>
+                                                <li>3년</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- [240306] 마크업 변경 --> 
+                                    <div class="case-wrap -xs">
+                                        <!-- <h3 class="h5">라인형 차트</h3> -->
+                                        <div class="chart-area">
+                                            <p class="chart-title">(수익률%)</p>
+                                            <canvas id="line-chart1" height="166rem" aria-label=""></canvas> <!-- 임시 높이값 -->
+                                            <div class="chart-labels -line">
+                                                <p class="chart-label -max">포트폴리오</p>
+                                                <!-- <p class="chart-label -average">평균수익률</p> -->
+                                                <p class="chart-label -min">코스피</p>
+                                            </div>
+                                        </div>
+                                    </div>                                     
+                                    <!-- <div class="chart-content">
+                                        <p class="chart-legend -profit">(수익률%)</p>
+                                        <div class="chart">
+                                            <canvas id="line-chart" height="166rem" aria-label=""></canvas>
+                                        </div>
+                                        <div class="profit-labels">
+                                            <p class="profit-label">포트폴리오</p>
+                                            <p class="profit-label">코스피</p>
+                                        </div>
+                                    </div> -->
+                                    <!-- //[240306] 마크업 변경 --> 
+                                    <div class="table-box">
+                                        <div class="table -sm">
+                                            <table>
+                                                <caption><span class="hide">기간별 수익률</span></caption> <!-- 240503 표제목 수정 -->
+                                                <colgroup>
+                                                    <col style="width:20%">
+                                                    <col style="width:16%">
+                                                    <col style="width:16%">
+                                                    <col style="width:16%">
+                                                    <col style="width:16%">
+                                                    <col style="width:16%">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">구분</th>
+                                                        <td>1개월</td>
+                                                        <td>3개월</td>
+                                                        <td>6개월</td>
+                                                        <td>1년</td>
+                                                        <td>3년</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">수익률</th>
+                                                        <td><span class="red">+0.8</span></td>
+                                                        <td><span class="red">+0.24</span></td>
+                                                        <td><span class="blue">-3.54</span></td>
+                                                        <td><span class="blue">-16.2</span></td>
+                                                        <td><span class="red">+6.85</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" aria-labelledby="sub1" id="subs-panel3" class="subs-panel" tabindex="0">
+                                    <div class="field -sm">
+                                        <div class="h4-group">
+                                            <h3 class="h5">포트폴리오 보유 펀드 현황</h3>
+                                        </div>
+                                        <div class="account">
+                                            <div class="badges">
+                                                <!-- [CASE] 매우높은위험:-grade1, 높은위험:-grade2, 다소높은위험:-grade3, 보통위험:-grade4, 낮은위험:-grade5, 매우낮은위험:-grade6 -->
+                                                <span class="badge -grade6">매우낮은위험</span> <span class="badge -disabled">국내주식혼합형</span> 
+                                            </div>
+                                
+                                            <div class="info">
+                                                <span class="name">
+                                                    <span>기쁨가득NH저축보험(무)_1804(적립형)(기본형)</span>
+                                                </span>
+                                                <span class="account-number">
+                                                    <span>028-0612-0912-11</span>
+                                                </span>
+                                            </div>
+                                
+                                            <dl class="dl">
+                                                <div>
+                                                    <dt>평가금액</dt>
+                                                    <dd>200,000원</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>투자금액</dt>
+                                                    <dd>200,000원</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>수익률</dt>
+                                                    <dd><span class="red">+20 %</span></dd>
+                                                </div>
+                                            </dl>                                                                            
+                                        </div>
+                                        <div class="account">
+                                            <div class="badges">
+                                                <!-- [CASE] 매우높은위험:-grade1, 높은위험:-grade2, 다소높은위험:-grade3, 보통위험:-grade4, 낮은위험:-grade5, 매우낮은위험:-grade6 -->
+                                                <span class="badge -grade2">높은위험</span> <span class="badge -disabled">국내주식형</span> 
+                                            </div>
+                                
+                                            <div class="info">
+                                                <span class="name">
+                                                    <span>기쁨가득NH저축보험(무)_1804(적립형)(기본형)</span>
+                                                </span>
+                                                <span class="account-number">
+                                                    <span>028-0612-0912-11</span>
+                                                </span>
+                                            </div>
+                                
+                                            <dl class="dl">
+                                                <div>
+                                                    <dt>평가금액</dt>
+                                                    <dd>200,000원</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>투자금액</dt>
+                                                    <dd>200,000원</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>수익률</dt>
+                                                    <dd><span class="red">+20 %</span></dd>
+                                                </div>
+                                            </dl>                                                                            
+                                        </div>
+                                        <div class="account">
+                                            <div class="badges">
+                                                <!-- [CASE] 매우높은위험:-grade1, 높은위험:-grade2, 다소높은위험:-grade3, 보통위험:-grade4, 낮은위험:-grade5, 매우낮은위험:-grade6 -->
+                                                <span class="badge -grade4">보통위험</span> <span class="badge -disabled">해외주식혼합형</span> 
+                                            </div>
+                                
+                                            <div class="info">
+                                                <span class="name">
+                                                    <span>기쁨가득NH저축보험(무)_1804(적립형)(기본형)</span>
+                                                </span>
+                                                <span class="account-number">
+                                                    <span>028-0612-0912-11</span>
+                                                </span>
+                                            </div>
+                                
+                                            <dl class="dl">
+                                                <div>
+                                                    <dt>평가금액</dt>
+                                                    <dd>200,000원</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>투자금액</dt>
+                                                    <dd>200,000원</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>수익률</dt>
+                                                    <dd><span class="red">+20 %</span></dd>
+                                                </div>
+                                            </dl>                                                                            
+                                        </div>
+                                        <div class="account">
+                                            <div class="badges">
+                                                <!-- [CASE] 매우높은위험:-grade1, 높은위험:-grade2, 다소높은위험:-grade3, 보통위험:-grade4, 낮은위험:-grade5, 매우낮은위험:-grade6 -->
+                                                <span class="badge -grade2">높은위험</span> <span class="badge -disabled">국내주식혼합형</span> 
+                                            </div>
+                                
+                                            <div class="info">
+                                                <span class="name">
+                                                    <span>기쁨가득NH저축보험(무)_1804(적립형)(기본형)</span>
+                                                </span>
+                                                <span class="account-number">
+                                                    <span>028-0612-0912-11</span>
+                                                </span>
+                                            </div>
+                                
+                                            <dl class="dl">
+                                                <div>
+                                                    <dt>평가금액</dt>
+                                                    <dd>200,000원</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>투자금액</dt>
+                                                    <dd>200,000원</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>수익률</dt>
+                                                    <dd><span class="red">+20 %</span></dd>
+                                                </div>
+                                            </dl>                                                                            
+                                        </div>
+                                        <div class="account">
+                                            <div class="badges">
+                                                <!-- [CASE] 매우높은위험:-grade1, 높은위험:-grade2, 다소높은위험:-grade3, 보통위험:-grade4, 낮은위험:-grade5, 매우낮은위험:-grade6 -->
+                                                <span class="badge -grade4">보통위험</span> <span class="badge -disabled">국내주식혼합형</span> 
+                                            </div>
+                                
+                                            <div class="info">
+                                                <span class="name">
+                                                    <span>기쁨가득NH저축보험(무)_1804(적립형)(기본형)</span>
+                                                </span>
+                                                <span class="account-number">
+                                                    <span>028-0612-0912-11</span>
+                                                </span>
+                                            </div>
+                                
+                                            <dl class="dl">
+                                                <div>
+                                                    <dt>평가금액</dt>
+                                                    <dd>200,000원</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>투자금액</dt>
+                                                    <dd>200,000원</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>수익률</dt>
+                                                    <dd><span class="red">+20 %</span></dd>
+                                                </div>
+                                            </dl>                                                                            
+                                        </div>
+                                        <div class="account">
+                                            <div class="badges">
+                                                <!-- [CASE] 매우높은위험:-grade1, 높은위험:-grade2, 다소높은위험:-grade3, 보통위험:-grade4, 낮은위험:-grade5, 매우낮은위험:-grade6 -->
+                                                <span class="badge -grade6">매우낮은위험</span> <span class="badge -disabled">국내주식형</span> 
+                                            </div>
+                                
+                                            <div class="info">
+                                                <span class="name">
+                                                    <span>기쁨가득NH저축보험(무)_1804(적립형)(기본형)</span>
+                                                </span>
+                                                <span class="account-number">
+                                                    <span>028-0612-0912-11</span>
+                                                </span>
+                                            </div>
+                                
+                                            <dl class="dl">
+                                                <div>
+                                                    <dt>평가금액</dt>
+                                                    <dd>200,000원</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>투자금액</dt>
+                                                    <dd>200,000원</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>수익률</dt>
+                                                    <dd><span class="red">+20 %</span></dd>
+                                                </div>
+                                            </dl>                                                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" aria-labelledby="sub1" id="subs-panel4" class="subs-panel -active" tabindex="-1">
+                                    <div class="field -sm">
+                                        <div class="tit-wrap">
+                                            <h3 class="h5">추천 포트폴리오 요약</h3>
+                                            <span class="standardtxt">(기준일자 : 2023.10.21)</span>
+                                        </div>
+                                        <div class="table -x">
+                                            <table>
+                                                <caption><span class="hide">추천 포트폴리오 총 평가금액</span></caption> <!-- 240503 표제목 수정 -->
+                                                <colgroup>
+                                                    <col style="width:40%">
+                                                    <col style="width:60%">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">총 평가금액</th>
+                                                        <td class="right">1,200,000원</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>                                    
+                                    <div class="h4-group">
+                                        <h3 class="h5">자산 유형별 투자비중</h3>
+                                    </div>
+
+                                    <!-- [240306] 마크업 변경 -->
+                                    <div class="case-wrap -xs">                                        
+                                        <div class="chart-both">
+                                            <div class="chart-area">
+                                                <p class="chart-title -type2">보유 포트폴리오</p>
+                                                <canvas id="bar-chart3" width="20" height="136" aria-label=""></canvas> <!-- 임시 높이값 -->
+                                                <div class="chart-labels -stack-bar">
+                                                    <p class="chart-label">해외채권혼합 40%</p>
+                                                    <p class="chart-label">해외채권 10%</p>
+                                                    <p class="chart-label">국내채권 50%</p>
+                                                </div>
+                                            </div>
+                                            <div class="chart-area">
+                                                <p class="chart-title -type2">추천 포트폴리오</p>
+                                                <canvas id="bar-chart4" width="20" height="136" aria-label=""></canvas> <!-- 임시 높이값 -->
+                                                <div class="chart-labels -stack-bar">
+                                                    <p class="chart-label">해외채권 10%</p>
+                                                    <p class="chart-label">해외채권혼합 20%</p>
+                                                    <p class="chart-label">해외채권혼합 20%</p>
+                                                    <p class="chart-label">국내채권 30%</p>
+                                                    <p class="chart-label">국내투자 20%</p>                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                    <!-- <div class="bar-charts">
+                                        <div class="bar-chart">
+                                            <p class="chart-info">보유 포트폴리오</p>
+                                            <canvas id="bar-chart1" width="20" height="136" aria-label=""></canvas>
+                                            <div class="bar-chart-labels">
+                                                <p class="bar-chart-label">유동성 75.01%</p>
+                                                <p class="bar-chart-label">해외채권혼합 10.05%</p>
+                                                <p class="bar-chart-label">해외채권 2.42%</p>
+                                                <p class="bar-chart-label">국내채권 12.52%</p>
+                                            </div>
+                                        </div>
+                                        <div class="bar-chart">
+                                            <p class="chart-info">추천 포트폴리오</p>
+                                            <canvas id="bar-chart2" width="20" height="136" aria-label=""></canvas>
+                                            <div class="bar-chart-labels">
+                                                <p class="bar-chart-label">해외채권혼합 40%</p>
+                                                <p class="bar-chart-label">해외채권 10%</p>
+                                                <p class="bar-chart-label">국내채권 50%</p>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <!-- //[240306] 마크업 변경 -->
+
+                                    <div class="field">
+                                        <div class="table">
+                                            <table>
+                                                <caption><span class="hide">자산 유형별 투자비중</span></caption> <!-- 240503 표제목 수정 -->
+                                                <colgroup>
+                                                    <col style="width:27%">
+                                                    <col style="width:23%">
+                                                    <col style="width:27%">
+                                                    <col style="width:23%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="2" scope="col">변경 전</th>
+                                                        <th colspan="2" scope="col">변경 후</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row" class="left">기대수익률</th>
+                                                        <td>3.87%</td>
+                                                        <th scope="row" class="left">기대수익률</th>
+                                                        <td>4.11%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" class="left">변동성</th>
+                                                        <td>5.85%</td>
+                                                        <th scope="row" class="left">변동성</th>
+                                                        <td>3.27%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>   
+                                    </div>
+                                    <div class="h4-group">
+                                        <h3 class="h5">리밸런싱 결과 비교</h3>
+                                    </div>
+                                    <p class="p">
+                                        투자비중은 보유 비중과 추천 비중을 비교하여 최종 투자될 비중입니다.
+                                    </p>
+                                    <div class="account">
+                                        <div class="badges">
+                                            <!-- [CASE] 매우높은위험:-grade1, 높은위험:-grade2, 다소높은위험:-grade3, 보통위험:-grade4, 낮은위험:-grade5, 매우낮은위험:-grade6 -->
+                                            <span class="badge -grayline">전부매도</span><span class="badge -grade2">높은위험</span> <span class="badge -disabled">국내주식형</span> 
+                                        </div>
+                            
+                                        <div class="info">
+                                            <span class="name">
+                                                <span>한국투자한국의제4차산업혁명 증권자투자신탁1호[주식] Class Ce</span>
+                                            </span>
+                                        </div>
+                                        <dl class="dl -box -reversed">
+                                            <div>
+                                                <dt>현재보유비중(변경전)</dt>
+                                                <!-- 2024-06-11 "+" 삭제 -->
+                                                <dd>18.18 %</dd>
+                                            </div>
+                                            <div>
+                                                <dt><span class="point">추천투자비중(변경후)</span></dt>
+                                                <!-- 2024-06-11 "+" 삭제 -->
+                                                <dd><span class="point">20 %</span></dd>
+                                            </div>
+                                        </dl>
+                                        <dl class="dl">
+                                            <div>
+                                                <dt>평가금액</dt>
+                                                <dd>200,000원</dd>
+                                            </div>
+                                            <div>
+                                                <dt>수익률</dt>
+                                                <dd><span class="red">+10.00 %</span></dd>
+                                            </div>
+                                        </dl>                                                                            
+                                    </div>
+                                    <div class="account">
+                                        <div class="badges">
+                                            <!-- [CASE] 매우높은위험:-grade1, 높은위험:-grade2, 다소높은위험:-grade3, 보통위험:-grade4, 낮은위험:-grade5, 매우낮은위험:-grade6 -->
+                                            <span class="badge -grayline">전부매도</span><span class="badge -grade6">매우낮은위험</span> <span class="badge -disabled">국내주식형</span> 
+                                        </div>
+                            
+                                        <div class="info">
+                                            <span class="name">
+                                                <span>한국투자한국의제4차산업혁명 증권자투자신탁1호[주식] Class Ce</span>
+                                            </span>
+                                        </div>
+                                        <dl class="dl -box -reversed">
+                                            <div>
+                                                <dt>현재보유비중(변경전)</dt>
+                                                <!-- 2024-06-11 "+" 삭제 -->
+                                                <dd>18.18 %</dd>
+                                            </div>
+                                            <div>
+                                                <dt><span class="point">추천투자비중(변경후)</span></dt>
+                                                <!-- 2024-06-11 "+" 삭제 -->
+                                                <dd><span class="point">20 %</span></dd>
+                                            </div>
+                                        </dl>
+                                        <dl class="dl">
+                                            <div>
+                                                <dt>평가금액</dt>
+                                                <dd>200,000원</dd>
+                                            </div>
+                                            <div>
+                                                <dt>수익률</dt>
+                                                <dd><span class="red">+10.00 %</span></dd>
+                                            </div>
+                                        </dl>                                                                            
+                                    </div>
+                                    <div class="account">
+                                        <div class="badges">
+                                            <!-- [CASE] 매우높은위험:-grade1, 높은위험:-grade2, 다소높은위험:-grade3, 보통위험:-grade4, 낮은위험:-grade5, 매우낮은위험:-grade6 -->
+                                            <span class="badge -grayline">전부매도</span><span class="badge -grade4">보통위험</span> <span class="badge -disabled">국내주식형</span> 
+                                        </div>
+                            
+                                        <div class="info">
+                                            <span class="name">
+                                                <span>한국투자한국의제4차산업혁명 증권자투자신탁1호[주식] Class Ce</span>
+                                            </span>
+                                        </div>
+                                        <dl class="dl -box -reversed">
+                                            <div>
+                                                <dt>현재보유비중(변경전)</dt>
+                                                <!-- 2024-06-11 "+" 삭제 -->
+                                                <dd>18.18 %</dd>
+                                            </div>
+                                            <div>
+                                                <dt><span class="point">추천투자비중(변경후)</span></dt>
+                                                <!-- 2024-06-11 "+" 삭제 -->
+                                                <dd><span class="point">20 %</span></dd>
+                                            </div>
+                                        </dl>
+                                        <dl class="dl">
+                                            <div>
+                                                <dt>평가금액</dt>
+                                                <dd>200,000원</dd>
+                                            </div>
+                                            <div>
+                                                <dt>수익률</dt>
+                                                <dd><span class="red">+10.00 %</span></dd>
+                                            </div>
+                                        </dl>                                                                            
+                                    </div>
+                                    <div class="account">
+                                        <div class="badges">
+                                            <!-- [CASE] 매우높은위험:-grade1, 높은위험:-grade2, 다소높은위험:-grade3, 보통위험:-grade4, 낮은위험:-grade5, 매우낮은위험:-grade6 -->
+                                            <span class="badge -grayline">일부매도</span><span class="badge -grade6">매우낮은위험</span> <span class="badge -disabled">국내주식형</span> 
+                                        </div>
+                            
+                                        <div class="info">
+                                            <span class="name">
+                                                <span>한국투자한국의제4차산업혁명 증권자투자신탁1호[주식] Class Ce</span>
+                                            </span>
+                                        </div>
+                                        <dl class="dl -box -reversed">
+                                            <div>
+                                                <dt>현재보유비중(변경전)</dt>
+                                                <!-- 2024-06-11 "+" 삭제 -->
+                                                <dd>18.18 %</dd>
+                                            </div>
+                                            <div>
+                                                <dt><span class="point">추천투자비중(변경후)</span></dt>
+                                                <!-- 2024-06-11 "+" 삭제 -->
+                                                <dd><span class="point">20 %</span></dd>
+                                            </div>
+                                        </dl>
+                                        <dl class="dl">
+                                            <div>
+                                                <dt>평가금액</dt>
+                                                <dd>200,000원</dd>
+                                            </div>
+                                            <div>
+                                                <dt>수익률</dt>
+                                                <dd><span class="red">+10.00 %</span></dd>
+                                            </div>
+                                        </dl>                                                                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                                                                                          
+                </div>   
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">다음</button>
+                    </div>
+                </div>              
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script src="../../assets/libs/Chart/dist/Chart.js"></script>
+    <script src="../../assets/libs/Chart/dist/Chart.min.js"></script>
+    <script>
+        // 240306 스크립트 변경 //240320 스크립트 변경
+        // 도넛형 그래프
+        var doughnutChart = document.getElementById('doughnut-chart');
+        var chart = new Chart(doughnutChart, {
+            type: 'doughnut',
+            data : {
+                labels: ['국내주식', '국내채권', '국내채권혼합', '해외선진주식', '해외이머징주식', '해외채권', '해외채권혼합'], //'유동성'
+                datasets: [{
+                    label: '보유 MP',
+                    data: [10, 30, 20, 20, 20, 10, 20],
+                    borderWidth: 1, // 경계선 제거할시 borderWidth: 0,
+                    hoverBorderWidth: 0,
+                    // 도넛 & 막대 그래프 컬러 순서 : 1.#5a5fd8, 2.#ff8a65, 3.#2bc4c0, 4.#ffcb3e, 5.#218fef, 6.#974bbf, 7.#7fde7b
+                    backgroundColor: ['#b465de', '#5a5fd8', '#39c1be', '#ff8a65', '#ffcf4d', '#974bbf', '#7fde7b'],
+                    hoverBackgroundColor : ['#b465de', '#5a5fd8', '#39c1be', '#ff8a65', '#ffcf4d', '#974bbf', '#7fde7b'],
+                }],
+            },
+            options: {
+                responsive: false,
+                legend: {
+                    display : false
+                },
+                tooltips: {
+                    enabled: false,
+                }
+            }
+        })
+
+        // 라인형 그래프
+        var lineChart1 = document.getElementById('line-chart1');
+        var chart = new Chart(lineChart1, {
+            type: 'line',
+            data : {
+                labels: ['1개월', '3개월', '6개월', '9개월', '12개월'],
+                datasets: [{
+                    label: '포트폴리오',
+                    data: [7, 12, 13, 2, -8, -2, 16],
+                    backgroundColor: '#fb4e4d',
+                    borderColor: '#fb4e4d',
+                    borderWidth: 1,
+                    fill: false,
+                    lineTension: 0,
+                    pointBorderWidth: 1,
+                    pointBackgroundColor: 'rgba(251,78,77,.5)',
+                    pointRadius: 2,
+                }, {
+                //     label: '평균수익률',
+                //     data: [4, 0, 5, -3, -6, -2, 12],
+                //     backgroundColor: '#ffcf4d',
+                //     borderColor: '#ffcf4d',
+                //     borderWidth: 1,
+                //     fill: false,
+                //     lineTension: 0,
+                //     pointBorderWidth: 1,
+                //     pointBackgroundColor: 'rgba(255,207,77,.5)',
+                //     pointRadius: 2,
+                // }, {
+                    label: '코스피',
+                    data: [0, -8, -1, -7, -3, -8, 10],
+                    backgroundColor: '#307aef',
+                    borderColor: '#307aef',
+                    borderWidth: 1,
+                    fill: false,
+                    lineTension: 0,
+                    pointBorderWidth: 1,
+                    pointBackgroundColor: 'rgba(48,122,239,.5)',
+                    pointRadius: 2,
+                },]
+            },
+            options: {
+                responsive: true,
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                legend: {
+                    display : false
+                },
+                scales:{
+                    xAxes:[{
+                        ticks:{
+                            fontColor : '#767676',
+                            fontSize : 8,
+                            fontFamily : 'Pretendard'
+                        },
+                    }],
+                    yAxes:[{
+                        ticks:{
+                            min: -9,
+                            max:18,
+                            stepSize:3,
+                            fontColor : '#767676',
+                            fontSize : 8,
+                            fontFamily : 'Pretendard'
+                        },
+                    }]
+                }           
+            }
+        })
+
+        var barChart3 = document.getElementById('bar-chart3');
+        var chart2 = new Chart(barChart3, {
+            type: 'bar',
+            data : {
+                labels: ['title'],
+                datasets: [{
+                    label: '세번째',
+                    data: [50],
+                    backgroundColor: '#2bc4c0',
+                },{
+                    label: '두번째',
+                    data: [10],
+                    backgroundColor: '#ff8a65',
+                },{
+                    label: '첫번째',
+                    data: [40],
+                    backgroundColor: '#5a5fd8',
+                }]
+            },
+            options: {
+                responsive: false,
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                    enabled: false,
+                },
+                legend: {
+                    display : false
+                },
+                scales:{
+                    xAxes:[{
+                        display: false,
+                        stacked: true,
+                    }],
+                    yAxes:[{
+                        display: false,
+                        stacked: true,
+                    }]
+                },
+            }
+        })   
+
+        var barChart4 = document.getElementById('bar-chart4');
+        var chart1 = new Chart(barChart4, {
+            type: 'bar',
+            data : {
+                labels: ['title'],
+                datasets: [{
+                    label: '다섯번째',
+                    data: [20],
+                    backgroundColor: '#218fef',
+                },{
+                    label: '네번째',
+                    data: [20],
+                    backgroundColor: '#ffcb3e',
+                },{
+                    label: '세번째',
+                    data: [20],
+                    backgroundColor: '#2bc4c0',
+                },{
+                    label: '두번째',
+                    data: [20],
+                    backgroundColor: '#ff8a65',
+                },{
+                    label: '첫번째',
+                    data: [20],
+                    backgroundColor: '#5a5fd8',
+                }]
+            },
+            options: {
+                responsive: false,
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                    enabled: false,
+                },
+                legend: {
+                    display : false
+                },
+                scales:{
+                    xAxes:[{
+                        display: false,
+                        stacked: true,
+                    }],
+                    yAxes:[{
+                        display: false,
+                        stacked: true,
+                    }]
+                },
+            }
+        })                   
+    </script>
+</body>
+</html>

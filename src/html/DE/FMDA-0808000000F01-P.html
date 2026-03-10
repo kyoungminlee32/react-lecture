@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>내 정보 수정</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">자녀 FATCA/CRS 등록</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <h2 class="h5">해외 거주자 및 해외 납세의무자 확인</h2>
+                    <p class="p">상호주의에 따른 정기적인 금융정보 교환을 위한 조세조약 이행과 관련하여 국제조세 조정에 관한 법률에 따라 작성이 요구됩니다.</p>
+                    <p class="p">NH농협은행에서 본인확인서 재작성 또는 증빙자료 제출을 요청 받거나, 기재 내용에 변경이 있다면 60일 이내에 제출해야 합니다.</p>
+                    <p class="p">관련정보를 제공하지 않거나, 허위로 제공하면 거래가 제한되거나 국세청 의무이행방해자로 신고될 수 있습니다.</p>
+
+                    <div class="field">
+                        <div class="h4-group">
+                            <h3 class="h5">조세목적상 어느 거주자에 해당합니까?</h3>
+                        </div>
+                        <div class="answer-list">
+                            <div class="item">
+                                <div class="box-radios">
+                                    <div class="box-radio -left">
+                                        <input type="radio" name="radio4-1" id="radio4-1" checked="">
+                                        <label for="radio4-1" class="check-ox -orign">한국</label>
+                                    </div>
+                                    <div class="box-radio -left">
+                                        <input type="radio" name="radio4-1" id="radio4-2">
+                                        <label for="radio4-2" class="check-ox -orign">한국 이외의 국가</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-wrap -sm">
+                            <div class="field">
+                                <div class="h4-group mt-32">
+                                    <h3 class="h5">아래 추가정보를 입력해 주세요.</h3>
+                                </div>
+                                <label for="text01" class="label">자녀 영문 성명</label>
+                                <div class="text">
+                                    <input type="text" id="text01" value="" placeholder="Last Name 성 (예. HONG)">
+                                </div>
+                                <div class="text">
+                                    <input type="text" id="text02" value="" placeholder="First Name 이름 (예. GILDONG)"
+                                        title="First Name 이름 입력">
+                                    <p class="info -bullet">없을 시 “NFN” 입력(NFN : No First Name)</p>
+                                </div>
+                                <div class="text">
+                                    <input type="text" id="text03" value="" placeholder="Middle Name (선택)" title="Middle Name 이름 입력">
+                                </div>
+                            </div>
+                    
+                            <div class="field">
+                                <hr class="hr -xxl" aria-hidden="true" tabindex="-1">
+                                <div class="h4-group">
+                                    <h3 class="h5">조세목적상 국가 1</h3>
+                                </div>
+                                <p class="label">조세목적상 국가</p>
+                                <div class="select">
+                                    <button type="button" aria-haspopup="true">선택</button>
+                                </div>
+                            </div>
+                    
+                            <div class="field">
+                                <p class="label">거주자 구분</p>
+                                <div class="box-radios">
+                                    <div class="box-radio -left">
+                                        <input type="radio" name="period-point-color2" id="period-point-color22-1" checked="">
+                                        <label for="period-point-color22-1">시민권자(이중국적 포함)</label>
+                                    </div>
+                                </div>
+                                <div class="box-radios">
+                                    <div class="box-radio -left">
+                                        <input type="radio" name="period-point-color2" id="period-point-color22-2">
+                                        <label for="period-point-color22-2">영주권자</label>
+                                    </div>
+                                </div>
+                                <div class="box-radios">
+                                    <div class="box-radio -left">
+                                        <input type="radio" name="period-point-color2" id="period-point-color22-3">
+                                        <label for="period-point-color22-3">세법상 거주자(기타)</label>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="field">
+                                <p class="label">납세자번호(TIN)</p>
+                                <div class="case-wrap -xxs">
+                                    <div class="box-radios">
+                                        <div class="box-radio">
+                                            <input type="radio" name="period-point-color3" id="period-point-color3-1" checked="">
+                                            <label for="period-point-color3-1">제출</label>
+                                        </div>
+                                        <div class="box-radio">
+                                            <input type="radio" name="period-point-color3" id="period-point-color3-2">
+                                            <label for="period-point-color3-2">미제출</label>
+                                        </div>
+                                    </div>
+                                    <div class="text">
+                                        <input type="text" id="text04" value="추후 제출" placeholder="6~18자리 영문 및 숫자 입력" title="납세자번호 입력">
+                                    </div>
+                                    <div class="select">
+                                        <button type="button" aria-haspopup="true">미취득(이유 기재)</button>
+                                    </div>
+                                    <div class="textarea mt-20">
+                                        <textarea id="textarea" placeholder="한글로 30자리 이내 입력" title="미취득 사유기재"></textarea>
+                                        <div class="text-count">
+                                            <span class="count point">0</span>
+                                            <span class="total">30</span>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                    
+                            <div class="field">
+                                <div class="h4-group">
+                                    <h3 class="h5">조세목적상 국가 내 주소지</h3>
+                                </div>
+                                <p class="label">주소지 국가</p>
+                                <div class="select">
+                                    <button type="button" aria-haspopup="true">선택</button>
+                                </div>
+                            </div>
+                    
+                            <div class="field">
+                                <label for="text05" class="label">House, Apt, Suite</label>
+                                <div class="text">
+                                    <input type="text" id="text05" placeholder="영문 입력">
+                                </div>
+                            </div>
+                    
+                            <div class="field">
+                                <label for="text077" class="label">City</label>
+                                <div class="text">
+                                    <input type="text" id="text077" placeholder="영문 입력">
+                                </div>
+                            </div>
+                    
+                            <div class="field">
+                                <label for="text088" class="label">Post Code (선택)</label>
+                                <div class="text">
+                                    <input type="text" id="text088" placeholder="영문 입력">
+                                </div>
+                            </div>
+                    </div>
+                    
+                    <div class="case-wrap -sm">
+                        <div class="field">
+                            <hr class="hr -xxl" aria-hidden="true" tabindex="-1">
+                            <div class="h4-group -secbtn" tabindex="0">
+                                <!-- 국가 추가하기 버튼 클릭시 포커스 이동 -->
+                                <h3 class="h5">조세목적상 국가 2</h3>
+                                <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                            </div>
+                            <p class="label">조세목적상 국가</p>
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">선택</button>
+                            </div>
+                        </div>
+                    
+                        <div class="field">
+                            <p class="label">거주자 구분</p>
+                            <div class="box-radios">
+                                <div class="box-radio -left">
+                                    <input type="radio" name="period-point-color5" id="period-point-color52-1" checked="">
+                                    <label for="period-point-color52-1">시민권자(이중국적 포함)</label>
+                                </div>
+                            </div>
+                            <div class="box-radios">
+                                <div class="box-radio -left">
+                                    <input type="radio" name="period-point-color5" id="period-point-color52-2">
+                                    <label for="period-point-color52-2">영주권자</label>
+                                </div>
+                            </div>
+                            <div class="box-radios">
+                                <div class="box-radio -left">
+                                    <input type="radio" name="period-point-color5" id="period-point-color52-3">
+                                    <label for="period-point-color52-3">세법상 거주자(기타)</label>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="field">
+                            <p class="label">납세자번호(TIN)</p>
+                            <div class="box-radios">
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color4" id="period-point-color4-1" checked="">
+                                    <label for="period-point-color4-1">제출</label>
+                                </div>
+                                <div class="box-radio">
+                                    <input type="radio" name="period-point-color4" id="period-point-color4-2">
+                                    <label for="period-point-color4-2">미제출</label>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <input type="text" id="text0766" value="" placeholder="6~18자리 영문 및 숫자 입력" title="납세자번호 입력">
+                            </div>
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">미취득(이유 기재)</button>
+                            </div>
+                            <div class="textarea mt-20">
+                                <textarea id="textarea" placeholder="한글로 30자리 이내 입력" title="미취득 사유기재"></textarea>
+                                <div class="text-count">
+                                    <span class="count point">0</span>
+                                    <span class="total">30</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="field">
+                            <div class="h4-group">
+                                <h3 class="h5">조세목적상 국가 내 주소지</h3>
+                            </div>
+                            <p class="label">주소지 국가</p>
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">선택</button>
+                            </div>
+                        </div>
+                    
+                        <div class="field">
+                            <label for="text09" class="label">House, Apt, Suite</label>
+                            <div class="text">
+                                <input type="text" id="text09" placeholder="영문 입력">
+                            </div>
+                        </div>
+                    
+                        <div class="field">
+                            <label for="text06" class="label">House, Apt, Suite</label>
+                            <div class="text">
+                                <input type="text" id="text06" placeholder="영문 입력">
+                            </div>
+                        </div>
+                    
+                        <div class="field">
+                            <label for="text07" class="label">City</label>
+                            <div class="text">
+                                <input type="text" id="text07" placeholder="영문 입력">
+                            </div>
+                        </div>
+                    
+                        <div class="field">
+                            <label for="text08" class="label">Post Code (선택)</label>
+                            <div class="text">
+                                <input type="text" id="text08" placeholder="영문 입력">
+                            </div>
+                        </div>
+                    
+                        <div class="button-box-wrap">
+                            <button type="button" class="button -lg">국가 추가하기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- <button type="button" class="button -lg">다시 검색</button> -->
+                        <button type="button" class="button -lg -primary" disabled>확인</button>   <!-- [240329] disabled 추가 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">적금 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [240130]삭제 -->                      
+                    <!-- <div class="h2-group">                        
+                        <h2 class="h2">
+                            가입기간(만기일)
+                        </h2>
+                    </div> -->
+                    <!-- //[240130]삭제 -->  
+                    <!-- [240130]추가 -->  
+                    <div class="h2-group">                        
+                        <h2 class="h2">
+                            가입금액을 입력해 주세요  
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">가입금액</span>
+                                    <span class="t-content">
+                                        <span>장병내일준비적금은 조세특례제한법 제91조의 19장 제1항 및 제2항에서 정하는 과세특례요건을 충족하는 경우 판매 은행별 매월 최대 20만원까지 비과세 적용 가능합니다.</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </h2>
+                    </div>
+                    <!-- [240130]추가 -->
+
+                    <div class="field">
+                        <!-- [240426]마크업 수정 -->
+                        <div class="data-box">
+                            <div class="data-box-title">만기일</div>
+                            <div class="data-box-content">2024.02.10</div>
+                        </div>
+                        <!-- <dl class="dl -box -duedate">
+                            <div>
+                                <dt>만기일</dt>
+                                <dd>2024.02.10</dd>
+                            </div>
+                        </dl> -->
+                        <!-- //[240426]마크업 수정 -->
+                        <p class="message"> 전역예정일(또는 소집해제예정일)로 자동  설정됩니다.</p>
+                    </div>
+
+                    <div class="case-wrap -sm">
+                        <div class="field">     
+                            <div class="mix">
+                                <div class="text -won">
+                                    <input type="tel" id="text1213" class="right num-call" placeholder="10원 ~ 20만원" aria-haspopup="true" readonly> 
+                                    <div class="won">원</div>      
+                                </div>                           
+                                <div class="info-wrap">
+                                    <p class="message">최대 한도 %금액%원</p> 
+                                    <p class="message red">입력 오류 알림 내용 출력</p> 
+                                    <p class="info right point"><span>오십만</span>원</p> 
+                                </div>
+                            </div>  
+                        </div> 
+                    </div>
+                    
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary" disabled>다음</button>   <!-- [240329] disabled 추가 -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

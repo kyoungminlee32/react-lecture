@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">등기필정보 입력 안내</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="serial-box">
+                        <p class="serial-number">일련번호 : WTDI-UPRV-P6H1</p>
+                    </div>
+
+                    <div class="case-wrap -xs">
+                        <div class="password-h">
+                            <h4 class="password-title">비밀번호</h4>
+                            <P class="password-info">(기재순서 : 순번-비밀번호)</p>
+                        </div>
+                    </div>
+
+                    <div class="passwords-info">
+                        <div class="item">
+                            <div class="info -back-color">01-7952</div>
+                            <div class="info">11-7072</div>
+                            <div class="info -back-color">21-2009</div>
+                            <div class="info">31-8842</div>
+                            <div class="info -back-color">41-3168</div>
+                        </div>
+                        <div class="item">
+                            <div class="info -back-color">02-5790</div>
+                            <div class="info">12-7320</div>
+                            <div class="info -back-color">22-5102</div>
+                            <div class="info">32-1924</div>
+                            <div class="info -back-color">42-7064</div>
+                        </div>
+                        <div class="item">
+                            <div class="info -back-color">03-1568</div>
+                            <div class="info">13-9724</div>
+                            <div class="info -back-color">23-1903</div>
+                            <div class="info">33-1690</div>
+                            <div class="info -back-color">43-4443</div>
+                        </div>
+                        <div class="item">
+                            <div class="info -back-color">04-8861</div>
+                            <div class="info">14-8752</div>
+                            <div class="info -back-color">24-5554</div>
+                            <div class="info">34-3155</div>
+                            <div class="info -back-color">44-6994</div>
+                        </div>
+                        <div class="item">
+                            <div class="info -back-color">05-1205</div>
+                            <div class="info">15-8608</div>
+                            <div class="info -back-color">25-7023</div>
+                            <div class="info">35-9695</div>
+                            <div class="info -back-color">45-2263</div>
+                        </div>
+                        <div class="item">
+                            <div class="info -back-color">06-8893</div>
+                            <div class="info">16-5164</div>
+                            <div class="info -back-color">26-3856</div>
+                            <div class="info">36-6031</div>
+                            <div class="info -back-color">46-2140</div>
+                        </div>
+                        <div class="item">
+                            <div class="info -back-color">07-5311</div>
+                            <div class="info">17-1538</div>
+                            <div class="info -back-color">27-2339</div>
+                            <div class="info">37-8569</div>
+                            <div class="info -back-color">47-3151</div>
+                        </div>
+                        <div class="item">
+                            <div class="info -back-color">08-3481</div>
+                            <div class="info">18-3188</div>
+                            <div class="info -back-color">28-8119</div>
+                            <div class="info">38-9800</div>
+                            <div class="info -back-color">48-5318</div>
+                        </div>
+                        <div class="item">
+                            <div class="info -back-color">09-7450</div>
+                            <div class="info">19-7312</div>
+                            <div class="info -back-color">29-1505</div>
+                            <div class="info">39-6977</div>
+                            <div class="info -back-color">49-1314</div>
+                        </div>
+                        <div class="item">
+                            <div class="info -back-color">10-1176</div>
+                            <div class="info">20-1396</div>
+                            <div class="info -back-color">30-3488</div>
+                            <div class="info">40-6557</div>
+                            <div class="info -back-color">50-6459</div>
+                        </div>
+                    </div>
+
+                    <h4 class="h5">일련번호 입력 예시</h4>
+                    <img class="ex-img" src="/content/assets/imgs/img/loan/img-FMFJ-0002120400F01-P-1.png" alt="일련번호 입력 예시">
+
+                    <h4 class="h5">비밀번호 작성 예시</h4>
+                    <img class="ex-img" src="/content/assets/imgs/img/loan/img-FMFJ-0002120400F01-P-2.png" alt="비밀번호 작성 예시">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

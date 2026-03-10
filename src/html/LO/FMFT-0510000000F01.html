@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출신청 정보 입력_바닥 페이지</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">대출 신청정보를 입력해 주세요</h2>
+                    </div>
+                    <!-- 240111 dl 수정 -->
+                    <div class="field">
+                        <div class="data-box">
+                            <div class="data-box-title">대출 가능금액</div>
+                            <div class="data-box-content">1,000만원</div>
+                        </div>
+                    </div>                    
+                    <!-- //240111 dl 수정 -->
+
+                    <!--[CASE] 사업소득자 선택 시  -->
+                    <!-- ui수정 240122 (코드 수정) -->
+
+                    <!-- <dl class="dl -box -row">
+                        <div>
+                            <dt>대표자 이름</dt>
+                            <dd>김금상</dd>
+                        </div>
+                        <div>
+                            <dt>대표자 주민등록번호</dt>
+                            <dd>123456-*******</dd>
+                        </div>
+                    </dl>
+                    <div class="info-detail">
+                        <a href="javascript:void(0)" class="a -arrow">사업자정보 확인</a>
+                    </div>
+ -->
+                    <!-- //ui수정 240122 (코드 수정) -->
+                    <!--//[CASE] 사업소득자 선택 시  -->
+                    
+                    <div class="field">
+                        <!-- 240111 ux라이팅 수정 -->
+                        <!-- 240112 id, for 값 변경 -->
+                        <label for="text01" class="label">차량 잔금금액</label>
+                        <!-- //240111 ux라이팅 수정 -->
+                        <div class="mix">
+                            <div class="text -won">
+                                <input type="tel" id="text01" class="right num-call" value="700,000,000" aria-haspopup="true" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">칠억원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <!-- 240110 ux라이팅 수정 -->
+                        <!-- 240112 id, for 값 변경 -->
+                        <label for="text02" class="label">대출 신청금액</label>
+                        <!-- //240110 ux라이팅 수정 -->
+                        <div class="mix">
+                            <div class="text -won">
+                                <!-- 231205 value값 수정 -->
+                                <input type="tel" id="text02" class="right num-call" value="700,000,000" aria-haspopup="true" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">칠억원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ui수정 240122 (코드 변경) -->
+                    <div class="field">
+                        <!-- 240202 ux라이팅 수정 -->
+                        <p class="label">이자 납입계좌</p>
+                        <!-- //240202 ux라이팅 수정 -->
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">
+                                <div class="selection">
+                                    <div data-bankcode="011" class="info">
+                                        <span class="name">
+                                            <span>주거래우대통장</span>
+                                        </span>
+                                        <span class="account-number">
+                                            <span>NH농협은행</span>   <!-- 240326 재검토 -->
+                                            <span>111-1234-5678-99</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- [CASE] 초기값 -->
+                    <!-- <div class="field">
+                        <p class="label">대출금 입금계좌(이자 납입계좌)</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">계좌선택</button>
+                        </div>
+                    </div> -->
+                    <!-- //ui수정 240122 (코드 변경) -->
+                    <!-- 240116 상환방법, 대출기간 삭제 -->
+                    <div class="field">
+                        <!-- 240111 label 문구 수정 -->
+                        <p class="label">이자 납입일</p>
+                        <div class="select">
+                            <!-- 240202 ux라이팅 수정 -->
+                            <button type="button" aria-haspopup="true">매월 10일</button>
+                            <!-- //240202 ux라이팅 수정 -->
+                        </div>
+                    </div>
+                    <div class="field"> 
+                        <p class="label">결제 방법</p>   <!-- 240326 재검토 -->
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">신용카드</button>
+                        </div>
+                    </div>
+                    <!-- [CASE] 결제방법 – 현금(계좌송금) 선택 시 노출 -->
+                    <div class="field">
+                        <p class="label">입금은행</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">농협은행</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">계좌번호</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">00-0000-00-00</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <!-- 240112 id, for 값 변경 readonly 삭제 -->
+                        <label for="tex01" class="label">예금주</label>
+                        <div class="text">
+                            <input type="text" id="tex01" class="bottomTextField" value="" aria-haspopup="true" placeholder="예금주 성명을 입력해 주세요">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <!-- 240112 label 문구 변경 id, for 값 변경 readonly 삭제-->
+                        <label for="tex02" class="label">위임자(입금인)</label>
+                        <div class="text">
+                            <input type="text" id="tex02" class="bottomTextField" value="" aria-haspopup="true" placeholder="위임자(입금인)가 있을 경우 입력해 주세요">
+                        </div>
+                    </div>
+                    <!-- 240112 입금일 추가 -->
+                    <div class="field">
+                        <label for="datedate01" class="label">입금일(잔금일)</label>
+                        <div class="mix datepicker">
+                            <div class="text" data-clear="false">
+                                <input type="text" class="left-side" id="datedate01" value="10월16일" title="날짜선택" aria-haspopup="true" readonly>
+                            </div>
+                            <div class="space -lined date">
+                                <button type="button" aria-haspopup="true" class="icon-button -calendar"><span class="hide">달력보기</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //240112 입금일 추가 -->
+                    <!-- //[CASE] 결제방법 – 현금(계좌송금) 선택 시 노출 -->
+
+                    <!-- [CASE] 결제방법 – 신용카드/ 사업자 소득, 급여소득자 선택 시 노출 -->
+                    <div class="field">
+                        <p class="label">카드 번호</p>   <!-- 240326 재검토 -->
+                        <!-- 240326 재검토(케이스 삭제) -->
+                        <!--[CASE] 사업소득자 선택 시  -->
+                        <!-- <p class="label">카드번호</p> -->
+                        <!--//[CASE] 사업소득자 선택 시  -->
+                        <!-- //240326 재검토(케이스 삭제) -->
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">1111-1111-1111-1111</button>
+                        </div>
+                    </div>
+                    <!-- //[CASE] 결제방법 – 신용카드 /사업자 소득, 급여소득자 선택 시 노출 -->
+                    <div class="field">
+                        <!-- 240111 ux라이팅 수정 -->
+                        <label for="datedate" class="label">대출 희망일</label>
+                        <!-- //240111 ux라이팅 수정 -->
+                        <div class="mix datepicker">
+                            <div class="text" data-clear="false">
+                                <input type="text" class="left-side" id="datedate" value="10월16일" title="날짜선택" aria-haspopup="true" readonly>
+                            </div>
+                            <div class="space -lined date">
+                                <button type="button" aria-haspopup="true" class="icon-button -calendar"><span class="hide">달력보기</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE]모든 항목 채워지면 활성화 -->
+                        <button type="button" class="button -lg -primary">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

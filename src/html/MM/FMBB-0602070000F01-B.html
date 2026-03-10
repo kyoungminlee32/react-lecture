@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>금융상품몰 서브메인</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body>
+    <!-- (중요) 서브메인 페이지는 page div 에 submain-body 클래스 반드시 필요합니다 -->
+<div class="page submain-body">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+                    <h1 class="title">금융상품몰</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                        <button type="button" class="func -menu"><span class="hide">전체메뉴</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="submain-content">
+                        <nav class="tabs">
+                            <div class="outer -relative">
+                                <div class="inner">
+                                    <ul class="list">
+                                        <li class="item"><a href="javascript:void(0)">저축</a></li>
+                                        <li class="item"><a href="javascript:void(0)">대출</a></li>
+                                        <li class="item -active"><a href="javascript:void(0)">펀드/투자</a></li>
+                                        <li class="item"><a href="javascript:void(0)">외환</a></li>
+                                        <li class="item"><a href="javascript:void(0)">보험</a></li>
+                                        <li class="item"><a href="javascript:void(0)">퇴직연금</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <!-- 탭바 영역 -->
+                        <div class="submain-list">
+                            <div class="submain-anc-tab">
+                                <div class="subs -anchor">
+                                    <div class="inner-wrap">
+                                        <div class="inner">
+                                            <div role="tablist" class="list">
+                                                <div class="item"><button type="button" role="tab" aria-selected="true" aria-controls="subs-panel1" id="sub1">펀드</button></div>
+                                                <div class="item -active"><button type="button" role="tab" aria-selected="false" aria-controls="subs-panel2" id="sub2">신탁</button></div>
+                                                <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="subs-panel3" id="sub3">ISA</button></div>
+                                                <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="subs-panel4" id="sub4">골드/실버바</button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="subs-panels">
+                                    <div role="tabpanel" aria-labelledby="sub1" id="subs-panel1" class="subs-panel" tabindex="0">
+                                        컨텐츠
+                                    </div>
+                                    <div role="tabpanel" aria-labelledby="sub2" id="subs-panel2" class="subs-panel -active" tabindex="0">
+                                        <div class="submain-fund-wrap">
+                                            <!-- [240507] 메인, 서브메인 사업부 수정 요청사항 -->
+                                            <div class="etf-elt-wrap">
+                                                <a class="etf-elt-button -etf" href="javascript:void(0);">
+                                                    <div class="etf-banner">
+                                                        <div class="banner-txt-wrap">
+                                                            <div class="prd-title">ETF 상장지수펀드</div>
+                                                            <div class="prd-sub">주식처럼 편리하게 매매하고 <br> 펀드처럼 분산투자 가능</div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="etf-elt-button -elt" href="javascript:void(0);">
+                                                    <div class="etf-banner">
+                                                        <div class="banner-txt-wrap">
+                                                            <div class="prd-title">ELT 주가연계신탁</div>
+                                                            <div class="prd-sub">기초자산이 주가지수에 연계되어 <br> 조기/만기 상환수익률이 결정</div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- // [240507] 메인, 서브메인 사업부 수정 요청사항 -->
+    
+                                            <!-- 상품유형 알아보기 -->
+                                            <div class="line-box">
+                                                <h4 class="h5">상품유형 알아보기</h4>
+                                                <div class="shortcut">
+                                                    <ul>
+                                                        <li class="-specified"><a href="javascript:void(0)">특정금전신탁</a></li>
+                                                        <li class="-property"><a href="javascript:void(0)">재산신탁</a></li>
+                                                        <li class="-social"><a href="javascript:void(0)">공익신탁</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- // 상품유형 알아보기 -->
+    
+                                            <!-- 신탁상품 가입 유의사항 -->
+                                            <div class="fund-caution">
+                                                <a class="link-button" href="javascript:void(0);" role="button" aria-haspopup="true">
+                                                    <div class="title">가입 전에 안내사항을 확인해 주세요</div>
+                                                    <div class="sub">신탁상품 가입 유의사항</div>
+                                                </a>
+                                            </div>
+                                            <!-- // 신탁상품 가입 유의사항 -->
+    
+                                            <div class="fund-bottom-shortcut">
+                                                <div class="shortcut -boxType">
+                                                    <ul>
+                                                        <li><a href="javascript:void(0)" aria-haspopup="true">계약서류 조회</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" aria-labelledby="sub3" id="subs-panel3" class="subs-panel" tabindex="0">
+                                        컨텐츠
+                                    </div>
+                                    <div role="tabpanel" aria-labelledby="sub4" id="subs-panel4" class="subs-panel" tabindex="0">
+                                        컨텐츠
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <!-- // 탭바 영역 -->
+                        
+                        <!-- 영상통화 예약 진행중인 상품 -->
+                        <div class="reservation">
+                            <div class="rs-container">
+                                <div class="rs-header">
+                                    <div class="rs-inner">
+                                        <h1 class="rs-title">영상통화 예약 진행중인 상품</h1>
+                                        <div class="rs-funcs">
+                                            <button type="button" class="rs-func -close"><span class="hide">닫기</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="rs-contents">
+                                    <div class="rs-content">
+                                        <div class="rs-prd">
+                                            <a class="prd" href="javascript:void(0);">
+                                                <div class="title">ETF특정금전신탁 KODEX 2차전지산업-거취식</div>
+                                                <div class="sub">예약일시: 2024년 2월 23일 15시</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 영상통화 예약 진행중인 상품 -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크롤 이벤트
+        $(document).ready(
+            function(){
+                // page에 submain-body 클래스 반드시 필요
+                $('.page').addClass('submain-body');
+                var tabactive = $('.submain-content .tabs .item.-active a').text();
+                $('.submain-body .header .title').after('<h1 class="sub-title" aria-hidden="true"></h1>');
+                $('.submain-body .header .sub-title').text(tabactive);
+
+                window.addEventListener('scroll',function () {
+                var fixTab = document.querySelector('.submain-list');
+                var fixTabTop = fixTab.getBoundingClientRect().top;
+                var subheader = document.querySelector('.submain-body .header')
+                var maintitle = document.querySelector('.submain-body .header .title')
+                var subtitle = document.querySelector('.submain-body .header .sub-title')
+                if (fixTabTop < 50) {
+                    fixTab.classList.add('-fixed');
+                }else{
+                    fixTab.classList.remove('-fixed');
+                }
+
+                if(window.scrollY > 50 ){ 
+                    subheader.classList.add('-switch');            
+                    maintitle.setAttribute('aria-hidden','true');
+                    subtitle.setAttribute('aria-hidden','false');
+                }else{
+                    subheader.classList.remove('-switch');
+                    maintitle.setAttribute('aria-hidden','false');
+                    subtitle.setAttribute('aria-hidden','true');
+                }   
+                    
+                });
+            }
+        );
+
+        // 영상통화 예약 진행중인 상품
+
+        $(document).ready(
+            function(){
+                $('.reservation').addClass('-active')
+            }
+        );
+
+        
+    </script>
+    
+</body>
+</html>

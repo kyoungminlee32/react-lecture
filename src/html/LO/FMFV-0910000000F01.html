@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출신청 정보 입력_바닥 페이지</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <!-- 240129 ux라이팅 수정 -->
+                        <h2 class="h2">보증 신청정보를 입력해 주세요</h2>
+                        <!-- //240129 ux라이팅 수정 -->
+                    </div>
+                    <dl class="dl -box -row -w50">
+                        <div>
+                            <dt>대출 가능금액</dt>
+                            <dd>1억원</dd>
+                        </div>
+                        <div>
+                            <dt>예상금리
+                                <!-- 2024-05-03 툴팁 삭제 -->
+                                <!-- <span class="tooltip">
+                                    <button type="button" class="trigger">
+                                        <span class="hide">툴팁</span>
+                                    </button>
+                                    <span class="panel">
+                                        <span class="t-content">
+                                            <span>
+                                                보증료는 대출금 입금계좌에서 별도의 지급청구서 작성 없이 무통장 출금처리 됩니다. 대출금 입금계좌는 마이너스통장 계좌는 선택할 수 없습니다.
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>   -->
+                            </dt>
+                            <dd><span class="point">2.52%</span>
+                                <!-- ui수정 240122 (금리 기준일 삭제) -->
+                                <!-- <div class="message">(3개월 MOR+1.60%, 2023.10.31 기준)</div> -->
+                                <!-- //ui수정 240122 (금리 기준일 삭제) -->
+                            </dd>
+                        </div>
+                    </dl>
+                    <div class="field">
+                        <!-- 240129 ux라이팅 수정 -->
+                        <label for="text" class="label">보증 신청금액</label>
+                        <!-- //240129 ux라이팅 수정 -->
+                        <div class="mix">
+                            <div class="text -won">
+                                <!-- 231205 value값 수정 -->
+                                <input type="tel" id="text" class="right" value="18,000,000" aria-haspopup="true" readonly>
+                                <div class="won">원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="text1" class="label">보증비율</label>
+                        <div class="text">
+                            <input type="text" id="text1" readonly value="대출가능 금액의 90%">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="text2" class="label">보증기간</label>
+                        <div class="text">
+                            <input type="text" id="text2" readonly value="OO년">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <!-- 240129 ux라이팅 수정 -->
+                        <label for="text3" class="label">보증 상환조건</label>
+                        <!-- //240129 ux라이팅 수정 -->
+                        <div class="text">
+                            <input type="text" id="text3" readonly value="O년 거치/O년 OO균등분할">
+                        </div>
+                    </div>
+                    <!-- 240129 ui 수정 -->
+                    <div class="field">
+                        <!-- 240417 문구 수정 -->
+                        <p class="label">대출금 입금 및 대출 비용 관련 계좌
+                            <!-- 2024-05-03 툴팁 추가 -->
+                                <span class="tooltip">
+                                    <button type="button" class="trigger">
+                                        <span class="hide">툴팁</span>
+                                    </button>
+                                    <span class="panel">
+                                        <span class="t-content">
+                                            <span>
+                                                보증료는 대출금 입금계좌에서 별도의 지급청구서 작성 없이 무통장 출금처리 됩니다. 대출금 입금계좌는 마이너스통장 계좌는 선택할 수 없습니다.
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>      
+                        </p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">
+                                <div class="selection">
+                                    <div data-bankcode="011" class="info">
+                                        <span class="name">
+                                            <span>주거래우대통장</span>
+                                        </span>
+                                        <span class="account-number">
+                                            <span>NH농협</span>
+                                            <span>111-1234-5678-99</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- //240129 ui 수정 -->
+                    <!-- 240405 구분선 추가 -->
+                    <hr class="hr -xl">
+                    <div class="field">
+                        <label for="search01" class="label">사업장 주소
+                            <!-- 2024-05-13 툴팁 삭제 -->
+                            <!-- <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="t-content">
+                                        <ul class="ul -dash">
+                                            <li>대출금리는 대출실행일로부터 최초 1년간 MOR금리(3개월 변동) – 0.90% 가 적용되며, 2년차부터는 MOR금리(3개월 변동) + 1.70%p가 적용됩니다.</li>
+                                            <li>자세한 사항은 여신약정서 상 특약내용을 확인해 주시기 바랍니다.</li>
+                                        </ul>
+                                    </span>
+                                </span>
+                            </span> -->
+                        </label>
+                        <div class="mix">
+                            <div class="text">
+                                <input type="text" class="left-side fake-readonly" data-id="search01" value="06990(156-772) 서울특별시 중구 통일로 120" title="주소" readonly>
+                            </div>
+                            <div class="space -lined search">
+                                <button type="button" class="icon-button -search" aria-haspopup="true"><span class="hide">조회</span></button>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <input type="text" data-id="search01" value="NH농협은행 신관 14층" title="상세주소">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="tt12" class="label">사업장 면적</label>
+                        <div class="mix">
+                            <div class="text -won -meter" data-clear="false">
+                                <input type="tel" id="tt12" class="right num-call" value="61.39" aria-haspopup="true" readonly>
+                                <div class="won">㎡</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">사업장 위치(층)</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">1층</button>
+                        </div>
+                    </div>
+                    <!-- 240415 코드 변경 -->
+                    <div class="field">
+                        <label for="text01" class="label">종업원 수</label>
+                        <div class="mix">
+                            <div class="text -won" data-clear="false">
+                                <input type="tel" id="text01" class="right num-call" value="10" aria-haspopup="true" readonly>
+                                <div class="won">명</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //240415 코드 변경 -->
+                    <div class="field">
+                        <p class="label">소유구분</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">임차</button>
+                        </div>
+                    </div>
+                    <!-- [CASE] 소유구분에 임차 선택 시 노출 -->
+                    <div class="field">
+                        <label for="text02" class="label">임차 보증금액</label>
+                        <div class="mix">
+                            <div class="text -won">
+                                <!-- 231205 value값 수정 -->
+                                <input type="tel" id="text02" class="right num-call" value="50,000,000" aria-haspopup="true">
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">오천만원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="text03" class="label">월세금액</label>
+                        <div class="mix">
+                            <div class="text -won">
+                                <input type="tel" id="text03" class="right num-call" value="15,000,000" aria-haspopup="true">
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">일백오십만원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="text04" class="label">권리금액</label>
+                        <div class="mix">
+                            <div class="text -won">
+                                <input type="tel" id="text04" class="right num-call" value="15,000,000" aria-haspopup="true">
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">일백오십만원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 240405 구분선 추가 -->
+                    <hr class="hr -xl">
+                    <!-- //[CASE] 소유구분에 임차 선택 시 노출 -->
+                    <div class="field">
+                        <label for="search02" class="label">주민등록등본 주소지</label>
+                        <div class="mix">
+                            <div class="text">
+                                <input type="text" class="left-side fake-readonly" data-id="search02" value="06990(156-772) 서울특별시 중구 통일로 120" title="주소" readonly>
+                            </div>
+                            <div class="space -lined search">
+                                <button type="button" class="icon-button -search" aria-haspopup="true"><span class="hide">조회</span></button>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <input type="text" data-id="search02" value="NH농협은행 신관 14층" title="상세주소">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <p class="label">소유구분</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">임차</button>
+                        </div>
+                    </div>
+                    <!-- [CASE] 소유구분에 임차 선택 시 노출 -->
+                    <div class="field">
+                        <label for="text05" class="label">임차 보증금액</label>
+                        <div class="mix">
+                            <div class="text -won">
+                                <!-- 231205 value값 수정 -->
+                                <input type="tel" id="text05" class="right num-call" value="50,000,000" aria-haspopup="true">
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">오천만원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="text06" class="label">월세금액</label>
+                        <div class="mix">
+                            <div class="text -won">
+                                <input type="tel" id="text06" class="right num-call" value="15,000,000" aria-haspopup="true">
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">일백오십만원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //[CASE] 소유구분에 임차 선택 시 노출 -->
+                    <div class="field">
+                        <p class="label">주민등록등본 주소지와 실거주지 동일여부</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">아니요</button>
+                        </div>
+                    </div>
+                    <!-- [CASE] 주민등록등본 주소지와 실거주지 동일여부 '아니오' 선택시 노출 -->
+                    <!-- 240405 구분선 추가 -->
+                    <hr class="hr -xl"> 
+                    <div class="field">
+                        <!-- 240207 ux라이팅 수정 -->
+                        <label for="search03" class="label">실거주지 주소</label>
+                        <!-- //240207 ux라이팅 수정 -->
+                        <div class="mix">
+                            <div class="text">
+                                <!-- 240207 value => placeholder -->
+                                <input type="text" class="left-side fake-readonly" data-id="search03" placeholder="주소를 입력해 주세요" title="주소" readonly>
+                            </div>
+                            <div class="space -lined search">
+                                <button type="button" class="icon-button -search" aria-haspopup="true"><span class="hide">조회</span></button>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <input type="text" data-id="search03" value="" title="상세주소">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">소유구분</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">임차</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="text07" class="label">임차 보증금액</label>
+                        <div class="mix">
+                            <div class="text -won">
+                                <!-- 231205 value값 수정 -->
+                                <input type="tel" id="text07" class="right num-call" value="50,000,000" aria-haspopup="true">
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">오천만원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="text08" class="label">월세금액</label>
+                        <div class="mix">
+                            <div class="text -won">
+                                <input type="tel" id="text08" class="right num-call" value="15,000,000" aria-haspopup="true">
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">일백오십만원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //[CASE] 주민등록등본 주소지와 실거주지 동일여부 '아니오' 선택시 노출 -->
+                    
+                    <!--//240402 코드 전체 수정 -->
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">보증신청</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/fund.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">기준가조회</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <nav class="tabs">
+                    <div class="outer">
+                        <div class="inner">
+                            <ul class="list">
+                                <li class="item -active"><a href="javascript:void(0)">기준가</a></li>
+                                <li class="item"><a href="javascript:void(0)">수익률</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="content">
+                    <div class="box">
+                        <p class="p">원하는 상품의 기준가격과 변동현황을 확인하실 수 있습니다.</p>
+                    </div>
+
+                    <!-- 검색 조건 -->
+                    <div class="case-wrap -sm">
+                        <div class="field">
+                            <p class="label">운용사</p>
+                            <div class="select">
+                                <button type="button" title="운용사 선택" aria-haspopup="true">운용사 선택</button>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="search" class="label">펀드명</label>
+                            <div class="mix">
+                                <div class="text">
+                                    <!-- 2024-06-12 placeholder, title 수정 -->
+                                    <input type="text" class="left-side" id="search" placeholder="검색어 입력" value="" title="검색어 입력">
+                                    <!-- 2024-06-12 placeholder, title 수정 -->
+                                </div>
+                
+                                <div class="space -lined search">
+                                    <button type="button" class="icon-button -search" aria-haspopup="true" ><span class="hide">펀드명 조회</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="datedate" class="label">조회기간</label>
+                            <div class="mix datepicker">
+                                <div class="text" data-clear="false">
+                                    <input type="text" class="left-side" id="datedate" value="2023.08.23" title="첫번째 날짜선택" aria-haspopup="true" readonly>
+                                </div>
+                                <div class="space -lined date -start">
+                                    <button type="button" class="icon-button -calendar" aria-haspopup="true"><span class="hide">달력 보기</span></button>
+                                </div>
+                                <div class="dash"><span class="부터"></span>~</div>
+                                <div class="text" data-clear="false">
+                                    <input type="text" class="left-side" data-id="datedate" value="2023.08.23" title="두번째 날짜선택" aria-haspopup="true" readonly>
+                                </div>
+                                <div class="space -lined date -end">
+                                    <button type="button" class="icon-button -calendar" aria-haspopup="true"><span class="hide">달력 보기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-box-wrap">
+                            <button type="button" class="button -lg">조회</button>
+                        </div>
+                    </div>
+                    <!-- //검색 조건 -->
+
+                    <!-- 검색 결과 -->
+                    <div class="case-wrap -sm">
+                        <div class="field">
+                            <h3 class="h5">기본정보</h3>
+                            <dl class="dl -bordered">
+                                <div>
+                                    <dt>펀드명</dt>
+                                    <dd>BNK공모주플러스10증권투자신탁1호</dd>
+                                </div>
+                                <div>
+                                    <!-- 2024-05-14 문구 수정 -->
+                                    <dt>기준가<br>(전일대비증감률)</dt>
+                                    <!-- //2024-05-14 문구 수정 -->
+
+                                    <!-- 2024-05-14 괄호 추가 -->
+                                    <dd>1111.95 <span class="blue"> (-5.18%)</span></dd>
+                                    <!-- 기준가 플러스인경우 -->
+                                    <!-- <dd>1111.95 <span class="red"> +5.18%</span></dd> -->
+                                </div>
+                                <div>
+                                    <dt>기준일</dt>
+                                    <dd>2023.10.19 ~ 2023.10.19</dd>
+                                </div>
+                            </dl>
+                        </div>
+
+                        <div class="field">
+                            <div class="title-group">
+                                <h3 class="h5">단순수익률</h3>
+                                <span class="unit">(단위 : %)</span>
+                            </div>
+                            <div class="table">
+                                <table>
+                                    <caption><span class="hide">단순수익률</span></caption>
+                                    <colgroup>
+                                        <col style="width:20%">
+                                        <col style="width:20%">
+                                        <col style="width:20%">
+                                        <col style="width:20%">
+                                        <col style="width:20%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">1주일</th>
+                                            <th scope="col">1개월</th>
+                                            <th scope="col">3개월</th>
+                                            <th scope="col">6개월</th>
+                                            <th scope="col">12개월</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="blue">-88.88</span></td>
+                                            <td><span class="blue">-88.88</span></td>
+                                            <td><span class="blue">-88.88</span></td>
+                                            <td><span class="blue">-88.88</span></td>
+                                            <td><span class="red">+88.88</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <h3 class="h5">판매개시일</h3>
+                            <dl class="dl -half -bordered">
+                                <div>
+                                    <dt>시작일 기준가격</dt>
+                                    <dd>
+                                        <div>1,061.61원</div>
+                                        <div>(2023.10.01)</div>
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt>시작일 과표기준가격</dt>
+                                    <dd>
+                                        <div>1,061.61원</div>
+                                        <div>(2023.10.01)</div>
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt>종료일 기준가격</dt>
+                                    <dd>
+                                        <div>1,061.61원</div>
+                                        <div>(2023.10.01)</div>
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt>종료일 과표기준가격</dt>
+                                    <dd>
+                                        <div>1,061.61원</div>
+                                        <div>(2023.10.01)</div>
+                                    </dd>
+                                </div>
+                                <div>
+                                    <!-- 2024-05-14 띄어쓰기 수정 -->
+                                    <dt>최종 재투자일</dt>
+                                    <!-- //2024-05-14 띄어쓰기 수정 -->
+                                    <dd>
+                                        <div>1,061.61원</div>
+                                        <div>(2023.10.01)</div>
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+
+                        <div class="field">
+                            <h3 class="h5">기준가변동추이그래프</h3>
+                            <div style="background-color:#f0f0f0;height:244px;text-align: center;"> <br><br><br><br>솔루션 API 사용함</div>
+                        </div>
+
+                        <div class="field">
+                            <h3 class="h5">기준가변동추이표</h3>
+                            <div class="table">
+                                <table>
+                                    <caption><span class="hide">기준가변동추이표</span></caption>
+                                    <colgroup>
+                                        <col style="width:33.3%">
+                                        <col style="width:33.3%">
+                                        <col style="width:33.3%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">기준일</th>
+                                            <th scope="col">기준가</th>
+                                            <th scope="col">전일대비증감</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2023.10.20</td>
+                                            <td><strong>1,070.47</strong></td>
+                                            <td><span class="blue">-3.09</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2023.10.19</td>
+                                            <td><strong>1,070.47</strong></td>
+                                            <td><span class="blue">-3.09</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2023.10.18</td>
+                                            <td><strong>1,070.47</strong></td>
+                                            <td><span class="blue">-3.09</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2023.10.17</td>
+                                            <td><strong>1,070.47</strong></td>
+                                            <td><span class="blue">-3.09</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2023.10.16</td>
+                                            <td><strong>1,070.47</strong></td>
+                                            <td><span class="blue">-3.09</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button type="button" class="more-button">더보기(1/50)</button>
+                        </div>
+                    </div>
+                    <!-- //검색 결과 -->
+                </div><!-- //.content -->
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

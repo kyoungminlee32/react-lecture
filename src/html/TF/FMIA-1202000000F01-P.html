@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/etf.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">동의서</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="h2-group">
+                        <h2 class="h2">개인(신용)정보 수집·이용 동의서(비대면 금융거래 상담용)</h2>
+                    </div>
+
+                    <h4 class="h5">NH농협은행 주식회사 귀중</h4>
+                    <p class="p">NH농협은행이 비대면 금융거래 상담을 위하여 본인의 개인(신용)정보를 수집·이용하거나 제3자에게 제공하고자 하는 경우에는 「신용정보의 이용 및 보호에 관한 법률」 제15조 제2항, 제32조 제1항, 제33조 및 제34조, 「개인정보 보호법」 제15조 제1항 제1호, 제24조 제1항 제1호, 제24조의2항에 따라 본인의 동의가 필요합니다.</p>
+
+                    <div class="case-wrap -xs2">
+                        <p class="p">필수사항에 대한 동의만으로 계약 체결이 가능합니다.</p>
+                    </div>
+
+                    <div class="case-wrap">
+                        <p class="p">1. 수집·이용에 관한 사항</p>
+                        <div class="table -x">
+                            <table>
+                                <caption><span class="hide">수집·이용에 관한 사항</span></caption> <!-- 240503 표제목 수정 -->
+                                <colgroup>
+                                    <col style="width:40%">
+                                    <col style="width:60%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th class="left" scope="row">수집·이용 목적</th>
+                                        <td>
+                                            <ul class="ul -bullet">
+                                                <li>전화, 이메일, 채팅, 영상 통화 등 비대면 금융거래 상담</li>
+                                                <li>금융사고 조사, 분쟁해결, 민원처리, 법령상 의무이행</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left" scope="row">수집·이용할 항목</th>
+                                        <td>
+                                            <ul class="ul -bullet">
+                                                <li>
+                                                    이용 상담채널별 수집정보 전화(예약)상담 : 이름, 전화번호, 음성 정보 영상상담 : 개인영상 정보 및 음성 정보<br>
+                                                    이메일상담 : 이름, 이메일주소, 전화번호
+                                                </li>
+                                                <li>상품종류, 거래조건(이자율, 만기 등), 거래일시, 금액 등 거래 설정, 내역 정보 및 (금융)거래의 설정·유지·이행·관리를 위한 상담 등에서 생성되는 정보</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left" scope="row">보유·이용기간</th>
+                                        <td>위 개인(신용)정보는 비대면 금융거래 상담 종료 후 5년동안 보유·이용합니다. 목적 달성 후에는 위에 기재된 이용 목적과 관련된 금융사고조사, 분쟁 해결, 민원처리, 법령상 의무이행을 위하여 필요한 범위 내에서만 보유·이용됩니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left" scope="row">동의를 거부할 권리 및 동의를 거부할 경우의 불이익</th>
+                                        <td>위 개인(신용)정보의 수집·이용에 대한 동의를 거부할 수 있습니다. 다만, 동의하지 않으면비대면 채널을 이용하는 금융거래 상담을 받을 수 없습니다.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">동의</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+</html>

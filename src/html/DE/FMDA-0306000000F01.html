@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">입출금 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:5; --max:8;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">
+                            김농협님의 정보를 입력해 주세요
+                        </h2>
+                    </div>
+
+                    <div class="prod-list-wrap -active"> <!-- [231208]추가 -->
+                        <div class="field">
+                            <label for="text01" class="label">휴대폰번호</label>
+                            <div class="text">
+                                <input type="text" id="text01" value="010-1234-****" readonly="">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="text02" class="label">집 주소</label>
+                            <div class="text">
+                                <input type="text" id="text02" value="(04517) 서울시 중구 동일로 120" readonly="">
+                            </div>
+                            <div class="text">
+                                <input type="text" id="text03" title="상세 주소" value="NH농협은행 12층" readonly="">
+                            </div>
+                            <!-- [240418]추가 -->
+                            <!-- [240416]삭제 -->
+                            <div class="right mt-12">
+                                <a href="javascript:void(0)" class="a -arrow">내 정보 수정</a>
+                            </div>
+                            <!-- //[240416]삭제 -->
+                            <!-- //[240418]추가 -->
+                        </div>
+
+                        <!-- [240418]마크업수정,케이스 추가 -->
+                        <!-- [CASE]기존 CRM 있는 경우(이메일(X)/직업분류/코드X) -->
+                        <!-- [240416]추가: 문동진과장(사업부) 요청 반영-->
+                        <div class="field">
+                            <div class="check -reverse">
+                                <label for="text01" class="label">이메일주소</label>    
+                                <div class="checkbox -sm">
+                                    <input type="checkbox" id="checkbox-smc">
+                                    <label for="checkbox-smc" class="">없음</label>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <input type="text" id="text01" value="" placeholder="이메일 주소 입력">
+                            </div>
+                            <!-- [240418]삭제 -->
+                            <!-- <div class="right mt-12">
+                                <a href="javascript:void(0)" class="a -arrow">내 정보 수정</a>
+                            </div> -->
+                            <!-- [240418]삭제 -->
+                        </div>
+                        <!-- //[240416]추가 -->
+                        <!-- //[CASE]기존 CRM 있는 경우(이메일(X)/직업분류/코드X) -->
+
+                        <!-- [CASE]이메일 주소 없음 체크 시 -->
+                        <div class="field">
+                            <div class="check -reverse">
+                                <label for="text01" class="label">이메일주소</label>    
+                                <div class="checkbox -sm">
+                                    <input type="checkbox" id="checkbox-smc02" checked>
+                                    <label for="checkbox-smc02" class="">없음</label>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <input type="text" id="text01" value="" placeholder="" disabled>
+                            </div>
+                        </div>
+                        <!-- //[CASE]이메일 주소 없음 체크 시 -->
+
+                        <!-- [CASE]기존 CRM 있는 경우(이메일(0)/직업분류/코드X) -->
+                        <div class="field">
+                            <label for="bbss1" class="label">이메일주소</label>
+                            <div class="text">
+                                <input type="text" id="bbss1" readonly value="luckyGuy00@naver.com" placeholder="이메일 주소 입력" title="이메일 주소">
+                            </div>
+                        </div>
+                        <!-- //[CASE]기존 CRM 있는 경우(이메일(0)/직업분류/코드X) -->
+                        <!-- //[240418]마크업수정,케이스 추가 -->
+
+                        <!-- ux 라이팅 수정 시작 -->
+                        <div class="case-wrap">
+                            <hr class="hr -xxl" aria-hidden="true" tabindex="-1">
+                            <div class="field">
+                                <p class="label">직업 분류</p>
+                                <div class="select">
+                                    <button type="button" aria-haspopup="true">대분류 선택</button>
+                                </div>
+                                <div class="select">
+                                    <button type="button" aria-haspopup="true">중분류 선택</button>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <p class="label">직위</p>
+                                <div class="select">
+                                    <button type="button" aria-haspopup="true">선택</button>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <p class="label">거래 목적</p>
+                                <div class="select">
+                                    <button type="button" aria-haspopup="true">선택</button>
+                                </div>
+                                <!-- [CASE]기타항목 선택 시 -->
+                                <div class="text">
+                                    <input type="text" placeholder="직접 입력" title="거래목적 직접입력">
+                                </div>
+                                <!-- //[CASE]기타항목 선택 시 -->
+                            </div>
+
+                            <div class="field">
+                                <p class="label">자금 출처</p>
+                                <div class="select">
+                                    <button type="button" aria-haspopup="true">선택</button>
+                                </div>
+                                <!-- [CASE]기타항목 선택 시 -->
+                                <div class="text">
+                                    <input type="text" placeholder="직접 입력" title="자금의 원천 직접입력">
+                                </div>
+                                <!-- //[CASE]기타항목 선택 시 -->
+                            </div>
+                            <div class="field">
+                                <p class="label">계좌 실소유자</p>
+                                <!-- [231205]마크업 변경 -->
+                                <div class="answer-list">
+                                    <div class="item">
+                                        <div class="box-radios">
+                                            <div class="box-radio -left">
+                                                <input type="radio" name="radio4-1" id="radio4-1" checked="">
+                                                <label for="radio4-1" class="check-ox -orign">네, 맞아요</label>
+                                            </div>
+                                            <div class="box-radio -left">
+                                                <input type="radio" name="radio4-1" id="radio4-2">
+                                                <label for="radio4-2" class="check-ox -orign">아니요</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //[231205]마크업 변경 -->
+                            </div>
+                        </div>
+                        <!-- //ux 라이팅 수정 끝 -->
+                    </div>
+                </div>            
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

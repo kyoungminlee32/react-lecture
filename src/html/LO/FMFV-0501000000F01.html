@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>사업장 소재지 선택</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <h2 class="h2">사업장 소재지 검색 후 보증상품을 선택해 주세요</h2>
+                        <!-- 240318 ux라이팅 수정 -->
+                        <p class="desc">사업자정보에 등록된 사업장 주소(소재지)의 지자체 협약 보증상품만 신청할 수 있어요</p>
+                        <!-- //240318 ux라이팅 수정 -->
+                    </div>
+                    <div class="field">
+                        <!-- 240206 ux라이팅 수정 -->
+                        <p class="label">시·도</p>
+                        <!-- //240206 ux라이팅 수정 -->
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">선택</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <!-- 240318 ux라이팅 수정 -->
+                        <p class="label">시·군</p>
+                        <!-- //240318 ux라이팅 수정 -->
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">선택</button>
+                        </div>
+                    </div>
+                    <div class="case-wrap -sm">
+                        <button type="button" class="button -lg -secondary">조회</button>
+                    </div>
+                    <!-- [CASE] 조회버튼 클릭시 노출 -->
+                    <!-- 240112 코드 변경 -->
+                    <div class="case-wrap -sm">
+                        <div class="selection">
+                            <ul>
+                                <li>
+                                    <!-- [240109] 접근성 처리 a태그 추가 및 선택시 -active 클래스 필요 -->
+                                    <a href="javascript:void(0);" role="radio">
+                                        <div class="info -bordered -portfolio productch -active">
+                                            <span class="name">
+                                                <span>경기도 수원시 특별보증 대출 I</span> 
+                                            </span>
+                                            <dl class="dl">
+                                                <div>
+                                                    <dt>대출금리</dt>
+                                                    <dd>협약금리</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>대출한도</dt>
+                                                    <dd>50,000,000원</dd>
+                                                </div>
+                                            </dl> 
+                                        </div>                               
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- [240109] 접근성 처리 a태그 추가 및 선택시 -active 클래스 필요 -->
+                                    <a href="javascript:void(0);" role="radio">
+                                        <div class="info -bordered -portfolio productch">
+                                            <span class="name">
+                                                <span>경기도 수원시 특별보증 대출 I</span> 
+                                            </span>
+                                            <dl class="dl">
+                                                <div>
+                                                    <dt>대출금리</dt>
+                                                    <dd>협약금리</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>대출한도</dt>
+                                                    <dd>50,000,000원</dd>
+                                                </div>
+                                            </dl> 
+                                        </div>                               
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //[CASE] 조회버튼 클릭시 노출 -->
+
+                    <!-- [CASE]검색결과 없는 경우 -->
+                    <div class="result -sm">
+                        <!-- 240328 문구 수정 -->
+                        <p class="message">조회 결과가 없습니다.</p>
+                    </div>
+                    <!-- //[CASE]검색결과 없는 경우 -->
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE] 협약상품 선택 후 활성화 -->
+                        <button type="button" class="button -lg -primary" disabled>다음</button>
+                        <!-- [CASE] 검색결과가 없는 경우 -->
+                        <!-- <button type="button" class="button -lg -primary">확인</button> -->
+                        <!-- //[CASE] 검색결과가 없는 경우 -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

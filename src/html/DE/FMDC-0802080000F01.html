@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/deposit.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">청약 가입</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:6; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 --> 
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                    <!-- ux 라이팅 수정 시작 -->                   
+                    <div class="h2-group">                        
+                        <h2 class="h2">
+                            추가정보를 선택해 주세요
+                        </h2>
+                    </div>
+                        
+                    <div class="case-wrap">
+                        <div class="field">
+                            <label for="search03" class="label">권유직원
+                                <span class="tooltip">
+                                    <button type="button" class="trigger">
+                                        <span class="hide">툴팁</span>
+                                    </button>
+                                    <!-- [240605]텍스트 변경 -->
+                                    <span class="panel">
+                                        <span class="title">권유직원</span>
+                                        <span class="t-content">
+                                            <span class="dot">상품 가입에 도움을 준 직원명을 검색해 주세요.</span>
+                                        </span>
+                                        <span class="title mt-10">관리점</span>
+                                        <span class="t-content">
+                                            <span class="dot">출금계좌 관리점으로 자동 등록되며. 변경이 필요한 경우 선택해 주세요.</span>
+                                        </span>
+                                    </span>
+                                    <!-- //[240605]텍스트 변경 -->
+                                </span>
+                            </label>
+                            <div class="mix">
+                                <div class="text">
+                                    <!-- 2024-03-29 placeholder 추가 -->
+                                    <input type="text" class="left-side fake-readonly" id="search03" placeholder="직원 찾기" value="" title="직원 찾기" aria-haspopup="true" readonly>
+                                </div>
+                
+                                <div class="space -lined search">
+                                    <button type="button" class="icon-button -search" aria-haspopup="true"><span class="hide">조회</span></button>
+                                </div>
+                            </div>
+                            <div class="mix">
+                                <div class="text flex-8" data-clear="false">
+                                    <input type="tel" data-id="none" class="left-side fake-readonly" placeholder="" title="관리점 변경" value="지점명" aria-haspopup="true" readonly>
+                                </div>
+                                <div class="space -lined right-side">
+                                    <button type="button" class="button -xs -fit" aria-haspopup="true">관리점 변경</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="title-group">
+                                <div class="inner">
+                                    <span class="title">NH포인트 사용 신청</span>
+                                </div>
+                                <span class="switch ml-auto -sm">
+                                    <input type="checkbox" id="switch3" checked="">
+                                    <label for="switch3"><span class="hide">스위치</span></label>
+                                </span>
+                            </div>
+                            <p class="message">
+                                NH포인트를 현금처럼 사용해 보세요. <br> 캐시백을 신청하면 바로 출금계좌로 입금됩니다.  
+                            </p>
+                        </div>
+
+                        <!-- [240214]삭제 -->
+                        <!-- [CASE]NH포인트 사용 신청 시 -->
+                        <!-- [240125]마크업 변경 -->
+                        <!-- <div class="field"> -->
+                            <!-- <div class="title-group">
+                                <div class="inner">
+                                    <span class="title">NH포인트 사용 신청 내역</span>
+                                </div>
+                            </div>
+                            <div class="mix">
+                                <div class="text -poin"> 
+                                    <input type="tel" id="text" class="right" value="90" readonly>
+                                    <div class="poin">p</div>
+                                </div>
+                            </div> -->
+                            <!-- <label for="text03" class="label">NH포인트 사용 내역</label>
+                            <div class="text">
+                                <input type="text" id="text03" class="right" readonly value="90 P">
+                            </div> -->
+                        <!-- </div> -->
+                        <!-- //[240125]마크업 변경 -->
+                        <!-- //[CASE]NH포인트 사용 신청 시 -->
+                        <!-- //[240214]삭제 -->
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -primary -lg">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+</html>

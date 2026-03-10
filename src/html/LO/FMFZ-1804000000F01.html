@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출신청1 정보입력</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출한도 조회</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <h2 class="h2">전세 계약정보를 입력해 주세요</h2>
+                    </div>
+                    <div class="field">
+                        <p class="label">주택 위치</p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="period-point-color1-1" checked>
+                                <!-- 240201 ux라이팅 수정 -->
+                                <label for="period-point-color1-1">수도권</label>
+                                <!-- //240201 ux라이팅 수정 -->
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="period-point-color1-2">
+                                <label for="period-point-color1-2">수도권 외</label>
+                            </div>
+                        </div>
+                        <!-- 240130 ux라이팅 수정 -->
+                        <p class="info">수도권 : 서울, 경기, 인천</p>
+                        <!-- //240130 ux라이팅 수정 -->
+                    </div>
+                    <div class="field">
+                        <p class="label">계약 방법</p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color2" id="period-point-color1-3" checked>
+                                <label for="period-point-color1-3">기존 계약</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color2" id="period-point-color1-4">
+                                <label for="period-point-color1-4">갱신 계약</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [CASE] 기존 계약 -->
+                    <div class="field">
+                        <label for="text" class="label">임차보증금</label>
+                        <div class="mix">
+                            <div class="text -won">
+                                <!-- 240130 ux라이팅 수정 -->
+                                <input type="tel" id="text" class="right num-call" placeholder="금액 입력" aria-haspopup="true" readonly>
+                                <!-- //240130 ux라이팅 수정 -->
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //[CASE] 기존 계약 -->
+                    <!-- [CASE] 갱신계약 -->
+                    <div class="field">
+                        <label for="text" class="label">기존 임차보증금(전액)</label>
+                        <div class="mix">
+                            <div class="text -won">
+                                <!-- 231205 value값 수정 -->
+                                <input type="tel" id="text" class="right num-call" value="20,000" aria-haspopup="true" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">이억원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="text" class="label">변경 임차보증금(전액)</label>
+                        <div class="mix">
+                            <div class="text -won">
+                                <input type="tel" id="text" class="right num-call" value="18,000" aria-haspopup="true" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">일억팔천만원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //[CASE] 갱신계약 -->
+                    <div class="field">
+                        <p class="label">고객 정보</p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color3" id="period-point-color1-5" checked>
+                                <label for="period-point-color1-5">개인</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color3" id="period-point-color1-6">
+                                <label for="period-point-color1-6">사업자</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="label">주택 형태</p>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-12" checked>
+                                <label for="box-radio11-12">아파트</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-22">
+                                <label for="box-radio11-22">주상복합 아파트</label>
+                            </div>
+                        </div>
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-32">
+                                <label for="box-radio11-32">주거용 오피스텔</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period" id="box-radio11-42">
+                                <label for="box-radio11-42">기타 주택</label>
+                            </div>
+                        </div>
+                        <p class="info">KB시세 없는 항목(아파트, 주상복합 아파트, 주거용 오피스텔)은 “기타 주택“으로 선택해 주세요.</p>
+                    </div>
+                    <div class="field">
+                        <label for="datedate" class="label">임대차계약만기일</label>
+                        <div class="mix datepicker">
+                            <div class="text" data-clear="false">
+                                <input type="text" class="left-side" id="datedate" value="2023.08.05" title="날짜선택" aria-haspopup="true" readonly>
+                            </div>
+                            <div class="space -lined date">
+                                <button type="button" aria-haspopup="true" class="icon-button -calendar"><span class="hide">달력보기</span></button>
+                            </div>
+                            <p class="info">임대차계약만기일이 1년 15일 이상 남았을 경우에만 신청할 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="datedate" class="label">대출실행예정일</label>
+                        <div class="mix datepicker">
+                            <div class="text" data-clear="false">
+                                <input type="text" class="left-side" id="datedate" value="2023.08.05" title="날짜선택" aria-haspopup="true" readonly>
+                            </div>
+                            <div class="space -lined date">
+                                <button type="button" aria-haspopup="true" class="icon-button -calendar"><span class="hide">달력보기</span></button>
+                            </div>
+                            <p class="info">대출실행예정일은 신청일 기준으로 10영업일 이후부터 2개월 이내까지 선택할 수 있습니다.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE]필수입력 항목 채워지면 활성화 -->
+                        <button type="button" class="button -lg -primary" disabled>다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

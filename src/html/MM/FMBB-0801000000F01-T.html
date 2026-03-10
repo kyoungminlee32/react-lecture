@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>금융상품몰 서브메인</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body>
+    <!-- 본 페이지는 보험 서브메인에서 이동되는 목록 페이지입니다. (서브메인과는 다름) -->
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+                    <h1 class="title">보험</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                        <button type="button" class="func -menu"><span class="hide">전체메뉴</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <nav class="tabs">
+                    <div class="outer">
+                        <div class="inner">
+                            <ul class="list">
+                                <li class="item -active"><a href="javascript:void(0)">연금보험</a></li>
+                                <li class="item"><a href="javascript:void(0)">저축보험</a></li>
+                                <li class="item"><a href="javascript:void(0)">보장성보험</a></li>
+                                <li class="item"><a href="javascript:void(0)">변액보험</a></li>
+                                <li class="item"><a href="javascript:void(0)">여행자보험</a></li>
+                                <li class="item"><a href="javascript:void(0)">자녀보험</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <nav class="subs">
+                    <div class="outer">
+                        <div class="inner">
+                            <ul class="list">
+                                <li class="item -active"><a href="javascript:void(0)">연금저축</a></li>
+                                <li class="item"><a href="javascript:void(0)" class="">일반연금</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="content">
+                    <div class="submain-content third-depth">
+                        <!-- 보험료 계산해보기 -->
+                        <div class="interest-calc-wrap">
+                            <div class="inner">
+                                <!-- 2024-06-05 문구 수정 -->
+                                <div class="title -interest">연금보험을 한눈에 비교해 보세요.</div>
+                                <!-- //2024-06-05 문구 수정 -->
+                                <div class="interest-calc-cont">
+                                    <div class="calc-row">
+                                        <div class="field">
+                                            <div class="box-radios -sm">
+                                                <div class="box-radio">
+                                                    <input type="radio" name="period" title="성별선택" id="box-radio11-1">
+                                                    <label for="box-radio11-1">남자</label>
+                                                </div>
+                                                <div class="box-radio">
+                                                    <input type="radio" name="period" title="성별선택" id="box-radio11-2">
+                                                    <label for="box-radio11-2">여자</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calc-row">
+                                        <div class="text -won" data-clear="false">
+                                            <input type="tel" id="tt1" class="num-call" aria-haspopup="true" placeholder="생년월일 8자리 입력" readonly>
+                                        </div>
+                                    </div>
+                                    <!-- 2024-06-05 버튼명 수정 -->
+                                    <div class="calc-btn-wrap"><button type="button" class="button -lg -secondary">비교하기</button></div>
+                                    <!-- //2024-06-05 버튼명 수정 -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //보험료 계산해보기 -->
+                        <hr class="hr -xl">
+                        <div class="ins-save-list-wrap">
+                            <!-- 비교설계 결과 리스트 -->
+                            <div class="calc-result-list-wrap">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <div class="calc-result-list">
+                                                <dl class="dl -bordered">
+                                                    <div class="top-area">
+                                                        <span class="bank-name">IBK연금</span>
+                                                    </div>
+                                                    <div class="info-main">
+                                                        무배당 IBK e-세액공제연금저축보험2101
+                                                    </div>
+                                                    <div class="info-bottom">
+                                                        <span class="sm-txt">환급률</span>
+                                                        <span class="number">345.73%</span>
+                                                    </div>
+                                                    <div>
+                                                        <dt>나이</dt>
+                                                        <dd>32세/여자</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>납입기간</dt>
+                                                        <dd>10년</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>연금개시나이</dt>
+                                                        <dd>80세</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>월납</dt>
+                                                        <dd>300,000원</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>예상적립액</dt>
+                                                        <dd>109,037,959원</dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <div class="calc-result-list">
+                                                <dl class="dl -bordered">
+                                                    <div class="top-area">
+                                                        <span class="bank-name">IBK연금</span>
+                                                    </div>
+                                                    <div class="info-main">
+                                                        무배당 IBK e-세액공제연금저축보험2101
+                                                    </div>
+                                                    <div class="info-bottom">
+                                                        <span class="sm-txt">환급률</span>
+                                                        <span class="number">345.73%</span>
+                                                    </div>
+                                                    <div>
+                                                        <dt>나이</dt>
+                                                        <dd>32세/여자</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>납입기간</dt>
+                                                        <dd>10년</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>연금개시나이</dt>
+                                                        <dd>80세</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>월납</dt>
+                                                        <dd>300,000원</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>예상적립액</dt>
+                                                        <dd>109,037,959원</dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- // 비교설계 결과 리스트 -->
+                            <div class="selection">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <div class="info -bordered">
+                                                <div class="top-area">
+                                                    <span class="bank-name">IBK연금</span>
+                                                </div>
+                                                <div class="info-main">
+                                                    무배당 IBK e-세액공제연금저축보험2101
+                                                </div>
+                                                <div class="info-sub">
+                                                    노후준비와 더불어 납입보험료의 600만원까지 세액공제 혜택을 드리는 연금저축보험
+                                                </div>
+                                                <div class="info-hash">
+                                                    <span class="hash-gadget">#직장인</span>
+                                                    <span class="hash-gadget">#노후준비</span>
+                                                </div>
+                                                <div class="info-bottom right">
+                                                    <span class="sm-txt">공시이율</span>
+                                                    <span class="number">20%</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <div class="info -bordered">
+                                                <div class="top-area">
+                                                    <span class="bank-name">하나생명</span>
+                                                </div>
+                                                <div class="info-main">
+                                                    무배당 하나세테크e연금저축보험
+                                                </div>
+                                                <div class="info-sub">
+                                                    암세포만 파괴하는 제3세대 암치료 기술인 표적항암약물허가 치료비 보장!
+                                                </div>
+                                                <div class="info-hash">
+                                                    <span class="hash-gadget">#직장인</span>
+                                                    <span class="hash-gadget">#노후준비</span>
+                                                </div>
+                                                <div class="info-bottom">
+                                                    <span class="sm-txt">공시이율</span>
+                                                    <span class="number">2.73%</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <div class="info -bordered">
+                                                <div class="top-area">
+                                                    <span class="bank-name">IBK연금</span>
+                                                </div>
+                                                <div class="info-main">
+                                                    무배당 IBK e-연금보험2201
+                                                </div>
+                                                <div class="info-sub">
+                                                    시중 실세금리를 반영하여 안정적이고 효과적인 노후준비가 가능한 연금보험
+                                                </div>
+                                                <div class="info-hash">
+                                                    <span class="hash-gadget">#직장인</span>
+                                                    <span class="hash-gadget">#노후준비</span>
+                                                </div>
+                                                <div class="info-bottom right">
+                                                    <span class="sm-txt">공시이율</span>
+                                                    <span class="number">2.47%</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <button type="button" class="more-button">더보기(1/50)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+                
+    </script>
+</body>
+</html>

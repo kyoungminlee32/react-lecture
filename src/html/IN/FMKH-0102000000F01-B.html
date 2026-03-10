@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>(팝업)대출 희망 관리점 선택</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/insurance.css">
+</head>
+<body>
+    <div id="layer" class="layer">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">여행 국가를 입력하고 검색해 주세요</h1> <!-- ux 라이팅 수정 -->
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">                     
+                    <div class="field">
+                        <div class="mix">
+                            <div class="text">
+                                <input type="text" class="left-side" id="search01" value="" >
+                            </div>            
+                            <div class="space -lined search">
+                                <button type="button" class="icon-button -search"><span class="hide">조회</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [CASE]검색결과 있는 경우 --> 
+                    <div class="field">
+                        <p class="total-count">총 <span class="point">10</span>개 나라를 찾았어요.</p>
+                        <!-- <div class="options -lined">
+                            <ul>
+                                <li><button type="button" class="option">선택1</button></li>
+                                <li><button type="button" class="option">선택2</button></li>
+                                <li><button type="button" class="option">선택3</button></li>
+                                <li><button type="button" class="option -active">선택4</button></li>
+                                <li><button type="button" class="option">선택5</button></li>
+                                <li><button type="button" class="option">선택6</button></li>
+                                <li><button type="button" class="option">선택7</button></li>
+                                <li><button type="button" class="option">선택8</button></li>
+                                <li><button type="button" class="option">선택9</button></li>
+                                <li><button type="button" class="option">선택10</button></li>
+                                <li><button type="button" class="option">선택11</button></li>
+                            </ul>
+                        </div> -->
+                        <div class="custom-list">
+                            <ul>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div class="address-txt">
+                                            <p class="jobname">아랍에미리트</p>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p class="jobname -active">아루바</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p class="jobname">아르메니아</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div class="address-txt">
+                                            <p class="jobname">아르헨티나</p>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p class="jobname">아메리칸사모아</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="-sm">
+                                        <div>
+                                            <div class="address-txt">
+                                                <p class="jobname">플아이슬란드</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>                                 
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //[CASE]검색결과 있는 경우 -->
+
+                    <!-- [CASE]검색결과 없는 경우 -->
+                    <div class="result -sm">
+                        <p class="message">
+                            검색 결과가 없습니다. <br> 다시 검색해 주세요. <!-- [231205] 문구 추가 -->
+                        </p>
+                    </div>
+                    <!-- //[CASE]검색결과 없는 경우 -->                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Layer.open('layer');
+    </script>
+</body>
+</html>

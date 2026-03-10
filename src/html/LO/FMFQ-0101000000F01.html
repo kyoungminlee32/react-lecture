@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출 | 상품상세</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+                    <h1 class="title">상품상세</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                        <button type="button" class="func -menu"><span class="hide">전체메뉴</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner center">
+                    <h1 class="title">주택/전세</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="product-detail-wrap">
+                        <!-- 상품 안내 영역 -->
+                        <div class="procuct-summary">
+                            <div class="info-area">
+                                <div class="title-area">
+                                    <h2>NH소상공인 저금리 대환대출</h2>
+                                    <div class="hashtag"><span>#개인사업자</span></div>
+                                </div><!-- //.title-area -->
+
+                                <div class="subtitle-area">
+                                    <!-- 240222 코드 변경 -->
+                                    <div class="product-cost-area">
+                                        <!-- <div class="inner">
+                                            <dl>
+                                                <dt>최대</dt>
+                                                <dd class="point">3천5백만원</dd>
+                                            </dl>
+                                        </div> -->
+                                        <div class="inner -other">
+                                            <dl>
+                                                <dt>최대</dt>
+                                                <dd class="point">1억원</dd>
+                                            </dl>
+                                            <!-- <dl>
+                                                <dt>최저</dt>
+                                                <dd class="point">3.81%</dd>
+                                                <dd class="cost-para">yyyy.mm.dd기준</dd>
+                                            </dl> -->
+                                        </div>
+                                    </div>
+                                    <!-- //240222 코드 변경 -->
+                                    <ul class="product-dl-list">
+                                        <li class="target">
+                                            <dl>
+                                                <dt>대상</dt>
+                                                <dd>대출계좌를 보유한 개인사업자 또는 법인 소기업</dd>
+                                            </dl>
+                                        </li>
+                                        <li class="repay">
+                                            <dl>
+                                                <dt>상환방법</dt>
+                                                <dd>3년거치 7년 원금균등분할상환</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div><!-- //.subtitle-area -->
+                                <div class="top-join-btn"><button type="button" class="button -lg -primary">신청하기</button></div>
+                            </div><!-- //.info-area -->
+
+                            <hr class="hr">
+
+                            <!-- 계산해보기 -->
+                            <div class="interest-calc-wrap">
+                                <div class="inner">
+                                    <div class="title -interest">매월 상환금액을 계산해 보세요.</div>
+                                    <div class="interest-calc-cont">
+                                        <div class="calc-row">
+                                            <span class="calc-input">
+                                                <div class="mix">
+                                                    <div class="text -won" data-clear="false">
+                                                        <input type="tel" id="tt1" class="right num-call"
+                                                            aria-haspopup="true" placeholder="금액을 입력하세요" readonly>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="calc-para">원을</span>
+                                        </div>
+                                        <div class="calc-row">
+                                            <span class="calc-para">대출받는다면 한 달 이자는?</span>
+                                        </div>
+                                        <div class="calc-btn-wrap"><button type="button"
+                                                class="button -lg -secondary">계산해보기</button></div>
+                                        <div class="interest-calc-result">
+                                            <dl>
+                                                <dt>세전금액</dt>
+                                                <dd>1,040,500원</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="under-para">고객님의 실제 대출 적용 금리 및 대출금액 등에 따라 변동될 수 있어요.</p>
+                            </div>
+                            <!-- //계산해보기 -->
+
+                            <!-- 비주얼 영역 html 로드로 변경 -->
+                            <div class="loadArea" data-includ="/content/nhbank/html/ip/el40000888_de.html"></div>
+                            <!-- //비주얼 영역 html 로드로 변경 -->                            
+                        </div><!-- //.procuct-summary -->
+                        <!-- //상품 안내 영역 -->
+
+                        <!-- 상품 정보 영역 -->
+                        <div class="procuct-info">
+                            <div class="segments -tabstyle">
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div role="tablist" class="list">
+                                            <div class="item -active"><button type="button" role="tab" aria-selected="true" aria-controls="segments-panel01" id="segment01">상품안내</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel02" id="segment02">금리안내</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel03" id="segment03">유의사항</button></div>
+                                            <div class="item"><button type="button" role="tab" aria-selected="false" aria-controls="segments-panel04" id="segment04">기타사항</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="segments-panels">
+                                <!-- 240222 문구 전체 수정 -->
+                                <div role="tabpanel" aria-labelledby="segment01" id="segments-panel01"
+                                    class="segments-panel -active" tabindex="0">
+                                    <dl class="prodect-info-dl">
+                                        <dt class="h5">상품 특징</dt>
+                                        <dd>
+                                            <p class="p">
+                                                자영업자 소상공인의 금융부담 완화를 위해 은행 및 비은행권에 보유한 7%이상의 고금리 대출을 저금리로 대환하는 보증대출 상품                                            
+                                            </p>
+                                        </dd>
+
+                                        <dt class="h5">대출 대상</dt>
+                                        <dd>
+                                            <ul class="ul -bullet">
+                                                <li>은행 및 비은행권에 대출금리 7% 이상의 대출 계좌를 보유한 개인사업자 또는 법인 소기업 (단, 22.05.31.까지 취급된 대출에 한함)</li>
+                                                <li>NH소상공인 저금리 대환대출은 반드시 대 상이 되는 대환대상대출이 존재하여야 신청 가능합니다.</li>
+                                            </ul>
+                                        </dd>
+
+                                        <dt class="h5">대출기간</dt>
+                                        <dd>
+                                            <p class="p">10년</p>
+                                        </dd>
+
+                                        <dt class="h5">대출한도</dt>
+                                        <dd>
+                                            <ul class="ul -bullet">
+                                                <li>개인사업자 : 최대 1억원</li>
+                                                <li>법인사업자 : 최대 2억원</li>
+                                            </ul>
+                                        </dd>
+                                        <dt class="h5">상환방법</dt>
+                                        <dd>
+                                            <ul class="ul -bullet">
+                                                <li>원(리)금균등할부상환</li>
+                                            </ul>
+                                        </dd>
+                                        <dt class="h5">원금 또는 이자상환 안내</dt>
+                                        <dd>
+                                            <p class="p">원금균등할부상환 : 대출 원금을 대출 개월 수만큼 균등하게 분할하고 이자를 더하여 매월 상환하는 방식 </p>
+                                        </dd>
+                                        <dt class="h5">연체이자(지연배상금 안내)</dt>
+                                        <dd>
+                                            <ul class="ul -bullet">
+                                                <li>이자, 분할상환금, 분할상환원리금을 기일 내 상환하지 않은 경우 상환하여야 할 금액에 대하여 그 다음 날부터 지연배상금이 부과됩니다.</li>
+                                                <li>대출기간 만료일에 채무를 이행하지 않거나, 은행여신거래기본약관에 의하여 기한의 이익을 상실한 때에는 그 다음 날부터 대출금잔액에 대하여 지연배상금을 지급하여야 합니다.</li>
+                                                <li>지연배상금률은 연체기간에 관계없이 연체일 수 x (채무자 대출금리 + 3%) ÷ 365(윤년은 366) 로 적용하되, 지연배상금률이 연 15%를 초과하는 경우에는 연 15%를 적용합니다.</li>
+                                            </ul>
+                                        </dd>
+
+                                        <dt class="h5">담보 및 보증여부</dt>
+                                        <dd>
+                                            <p class="p">
+                                                서울보증보험 보증서(100%) 담보                                            
+                                            </p>
+                                        </dd>
+                                        <dt class="h5">고객부담비용(수수료)</dt>
+                                        <dd>
+                                            <ul class="ul -bullet">
+                                                <li>기존대출 상환에 필요한 이자비용 및 기타비용은 고객님이 부담합니다.</li>
+                                                <li>신용보증서 보험료
+                                                    <div>
+                                                        <ul class="ul -dash">
+                                                            <li>거치기간(3년) 연0.7%</li>
+                                                            <li>분할상환기간(7년) 연1.0%</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>보증기한(10년) 전체에 대한 보증료 일시 수납 시 보증료 합계액에서 15%할인
+                                                    <div>
+                                                        <h5 class="h6">인지세</h5>
+                                                        <p class="p">인지세법에 의해 대출약정 체결 시 납부하는 세금으로 대출금액에 따라 차등 적용되며, 각50%씩 고객님과 농협은행이 부담합니다.</p>
+                                                        <ul class="ul -bullet">
+                                                            <li>5천만원 이하 : 비과세</li>
+                                                            <li>5천만원 초과 1억원 이하 : 7만원</li>
+                                                            <li>1억원 초과 10억원 이하 : 15만원</li>
+                                                            <li>10억원 초과 : 35만원</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>부동산담보대출 이용 시
+                                                    <div>
+                                                        <ul class="ul -dash">
+                                                            <li>근저당권설정비용 중 국민주택채권매입 관련 할인비용과 추후 근저당권말소(감액)등기 비용은 고객님이 부담합니다.</li>
+                                                            <li>보증료는 고객님이 부담합니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>기업자금대출은 한도거래로 이용 시
+                                                    <div>
+                                                        <ul class="ul -dash">
+                                                            <li>한도약정수수료 또는 한도미사용수수료가 발생할 수 있습니다. (외국환관련여신, 외상매출채권담보대출, 지급보증, 일중당좌대출은 제외)</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        </dd>
+                                        <dt class="h5">이자납입</dt>
+                                        <dd>
+                                            <ul class="ul -bullet">
+                                                <li>대출 신규 시 원하는 날짜로 이체일자를 지정하며, 매월 납입합니다.</li>
+                                                <li>단, 신규일자가 아닌 날로 지정할 경우 돌아오는 해당일에 바로 납입하게 되니 유의하시기 바랍니다.(예시. 신규일자9/10, 이체일자 20일 지정 시, 최초 납입일 9/20)</li>
+                                                <li>직전 이자납입일(또는 신규일) 부터 이자납입일전일까지의 대출잔액에 대출금리를 곱하여 이자를 계산합니다. 자세한 사항은 상품설명서 및 대출거래 약정서를 참고하시기 바랍니다.</li>
+                                                <li>대출이자는 매월 이자납입일(휴일이면 다음 영업일)에 자동이체 계좌에서 자동 출금됩니다.</li>
+                                                <li>지급가능금액이 부족한 경우, 연체 이자가 발생할 수 있으므로 상환자금을 해당일 중 입금하시거나 휴일에도 인터넷/스마트뱅킹에서 직접 상환할 수 있습니다.</li>
+                                            </ul>
+                                        </dd>
+
+                                        <dt class="h5">필요서류</dt>
+                                        <dd>
+                                            <ul class="ul -bullet">
+                                                <li>법인사업자 준비서류
+                                                    <div>
+                                                        <ul class="ul -dash">
+                                                            <li>사업자등록증(또는 사업자등록증명원), 법인등기부등본, 법인인감증명서, 정관 또는 규약, 국세납세증명, 지방세납세증명, 주주현황 자료, 결산 재무제표 및 부속명세서 등</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>개인사업자 준비서류 <br>
+                                                    사업자등록증(또는 사업자등록증명원), 국세납세증명, 지방세납세증명, 매출증빙서류(부가세과세표준증명, 면세사업자수입금액증명 등) 등
+                                                </li>
+                                            </ul>
+                                            <p class="p">
+                                                기타 필요서류를 비롯한 자세한 서류 안내는 영업점 직원에게 문의하시기 바랍니다.
+                                            </p>
+                                        </dd>
+                                        <dt class="h5">중도상환</dt>
+                                        <dd>
+                                            <p class="p">
+                                                중도상환해약금 : 없음
+                                            </p>
+                                        </dd>
+                                        <dt class="h5">계약안내사항</dt>
+                                        <dd>
+                                            <h5 class="h6">대환대상대출</h5>
+                                            <ul class="ul -bullet">
+                                                <li>‘22.05.31 까지 취급된 금리 7% 이상 은행·비은행권 사업자 대출</li>
+                                                <li>사업자 대출이 아닌 가계대출, 보증서담보대출, 이자선취 대출, 한도대출, 부동산대출, 오토론, 단기카드대출, 대부업 대출 등은 대환대출 불가</li>
+                                            </ul>
+                                        </dd>
+                                        <dt class="h5">기한연장안내</dt>
+                                        <dd>
+                                            <h5 class="h6">기한연기 불가</h5>
+                                            <p class="p">
+                                                연체가 계속되는 경우, 연체기간에 따라 “신용정보의 이용 및 보호에 관한 법률 “ 및  “신용정보 관리규약＂에 의거 신용도판단정보 대상자로 등록되어 금융 불이익을 받을 수 있습니다.
+                                            </p>
+                                        </dd>
+                                        <dt class="h5">계약해지안내</dt>
+                                        <dd>
+                                            <p class="p">
+                                                일반금융소비자는 계약 체결일, 대출금 수령일 중 나중에 발생한 날로부터 14일(기간의 말일이 휴일인 경우 다음 영업일)까지 서면, 전화, 컴퓨터 통신으로 철회의사를 표시하고 원금, 이자 및 부대비용을 전액 반환한 경우 대출계약을 철회할 수 있습니다.
+                                            </p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <!-- //240222 문구 전체 수정 -->
+                                <div role="tabpanel" aria-labelledby="segment02" id="segments-panel02" class="segments-panel" tabindex="0">
+                                    <!-- 240228 코드 수정 -->
+                                    <!-- <h3 class="h4">금리안내</h3> -->
+                                    <ul class="ul -bullet">
+                                        <li>1~2년 : MOR금리(2년 변동) + 가산금리(최대5.5%)</li>
+                                        <li>3~10년 : MOR금리(1년 변동) + 2.0%p</li>
+                                        <li>대출금리는 대출취급일 기준 최대5.5%로 적용하되, 대출실행일 3년차부터 MOR(1년 변동)에 2.0%p를 가산한 금리로 적용됩니다.</li>
+                                        <li>실제 적용금리는 기준금리에 고객 신용등급, 대출조건, 거래실적등에 따라 차등 적용되어 최종 결정되오니 금리관련 자세한 사항은 영업점 직원과 상담하시기 바랍니다.</li>
+                                    </ul>
+                                    <h4 class="h5">이자계산방법</h4>
+                                    <h5 class="h6">대출이자 계산방법 및 징수 기준</h5>
+                                    <ul class="ul -bullet">
+                                        <li>대출원금 x 연이자율 x [대출일 수 ÷ 365(윤년은 366)]</li>
+                                        <li>대출일수는 대출취급일로 부터 상환일 전일까지의 일수를 말하며, 대출금이자는 원단위로 계산합니다.(원 단위 미만 절사)</li>
+                                        <li>대출금(이자)을 상환기일(이자납입일)에 납입하지 않은 경우, 상환기일(이자납입일) 당일 까지는 기한내이자율을 적용하고 상환기일(이자납입일) 다음날부터는 연체이자율을 적용합니다.</li>
+                                        <li>이자 입금기일이 휴일인 때에는 그 다음 영업일에 이자의 입금기 일에 납입하여야 할 기한내 이자를 납입합니다.</li>
+                                        <li>이자 계산방법 및 징수 기준은 상품에 따라 달리 정할 수 있습니다.</li>
+                                    </ul>
+                                    <!-- 240228 코드 수정 -->
+                                </div>
+
+                                <div role="tabpanel" aria-labelledby="segment03" id="segments-panel03" class="segments-panel" tabindex="0">
+                                    <!-- <h3 class="h4">유의사항</h3> -->
+                                    <ul class="ul -bullet">
+                                        <li>대출 만기일 경과 후 대출금액을 전액 상환하거나 기한연장을 하지 않은 경우 은행여신거래기본약관에 따라 기한의 이익이 상실됩니다.</li>
+                                        <li>본 대출에 대한 별도의 특약사항이 있을 수 있습니다.</li>
+                                        <li>상환능력에 비해 대출금액이 과도할 경우 개인신용평점이 하락할 수 있으며, 개인신용평점 하락으로 금융거래와 관련된 불이익이 발생할 수 있습니다.</li>
+                                        <li>신용관리대상정보 등록 및 NH농협은행 대출심사절차에 따라 대출이 불가할 수 있습니다.</li>
+                                        <li>일정 기간 납부해야 할 원리금이 연체될 경우 대출 기한이 도래하기 전에 모든 원리금을 변제해야할 의무가 발생할 수 있습니다.</li>
+                                    </ul>
+                                </div>
+
+                                <div role="tabpanel" aria-labelledby="segment04" id="segments-panel04" class="segments-panel" tabindex="0">
+                                    <!-- <h3 class="h4">기타사항</h3> -->
+                                    <h4 class="h5">금리인하요구권</h4>
+                                    <ul class="ul -bullet">
+                                        <li>본 상품은 금리인하요구권 신청이 가능합니다.</li>
+                                        <li>단, 은행의 신용평가 결과에 따라서 금리인하가 되지 않을 수도 있습니다.</li>
+                                    </ul>
+                                    <h4 class="h5">금리인하요구권 신청 사유</h4>
+                                    <ul class="ul -bullet">
+                                        <li>기업대출 : 회사채 신용등급 상승, 재무상태 개선, 특허취득, 담보제공 등</li>
+                                        <li>금융상품을 가입하시기 전에 상품설명서 및 약관을 반드시 읽어 보시기 바랍니다.</li>
+                                        <li>대출상품에 대한 내용은 변경될 수 있으며, 변경된 내용이 NH농협은행 인터넷뱅킹 상에 즉시 반영되지 않을 수 있습니다.</li>
+                                        <li>금융소비자 보호에 관한 법률 제19조제1항에 따른 설명을 받을 수 있는 권리가 있습니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //상품 정보 영역 -->
+
+                        <!-- 상품 추가 정보 영역 -->
+                        <div class="product-other">
+                            <!-- 상품설명서 및 약관 -->
+                            <div class="product-agree-area">
+                                <div class="accordion -lg -active" data-role="fold">
+                                    <button type="button" class="title" data-role="marker">상품설명서 및 약관</button>
+                                    <div class="panel" data-role="hidden">
+                                        <div class="shortcut -boxType">
+                                            <ul>
+                                                <!-- 240221 ux라이팅 수정 -->
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">기본 약관</a></li>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">상품설명서</a></li>
+                                                <li><a href="javascript:void(0)" aria-haspopup="true">이력 보기</a></li>
+                                                <!-- //240221 ux라이팅 수정 -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //상품설명서 및 약관 -->
+
+                            <!-- 준법감시 심의필 (관리자) -->
+                            <div class="product-deliberate">
+                                <p class="p">준법감시심의필 000-0000(심의일:YYYY.MM.DD)<br>유효기간 : YYYYY.MM.DD ~ YYYYY.MM.DD</p>
+                            </div>
+                            <!-- //준법감시 심의필 (관리자) -->
+
+                            <!-- 공유 -->
+                            <div class="product-share">
+                                <ul>
+                                    <li><button type="button" class="share" aria-haspopup="true"><span class="hide">공유</span></button></li>
+                                    <li><button type="button" class="wishlist"><span class="hide">장바구니</span></button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //공유 -->
+
+                            <!-- 추천상품 -->
+                            <div class="product-recommend">
+                                <h4 class="h5"><span>김농협</span>님을 위한 추천 상품</h4>
+                                <div class="product-recommend-list">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">NH고향사랑 기부적금</div>
+                                                <div class="hashtag"><span>#추천상품</span><span>#은퇴준비</span></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">NH고향사랑 기부적금</div>
+                                                <div class="hashtag"><span>#추천상품</span><span>#은퇴준비</span></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" role="button">
+                                                <div class="title">NH고향사랑 기부적금</div>
+                                                <div class="hashtag"><span>#추천상품</span><span>#은퇴준비</span></div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //추천상품 -->
+                        </div>
+                        <!-- //상품 추가 정보 영역 -->
+                    </div><!-- //.product-detail-wrap -->
+                </div>
+
+                <div class="fixer -jsProcuctBtn">
+                    <div class="buttons">
+                        <button type="button" class="button -lg">상담</button>
+                        <button type="button" class="button -lg -primary">신청하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+        procuctDatailAct();
+
+        // html 파일 로드 (퍼블확인용)
+        incHtml();
+        function incHtml() {
+            $('[data-includ]').each(function () {
+                $this = $(this);
+                var $url = $this.attr('data-includ')
+                $this.load($url)
+            })
+        }
+
+
+        //Layer.open('layer');
+
+        // 레이어 닫기(마지막 인자 기본값: false)
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // });
+
+        // 레이어 닫기 + DOM 삭제
+        // Layer.close('layer', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+
+</html>

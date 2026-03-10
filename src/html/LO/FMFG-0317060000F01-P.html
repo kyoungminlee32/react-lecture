@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>보증한도 우대대상</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+</head>
+
+<body>
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <!-- 240201 ux라이팅 수정 -->
+                    <h1 class="title">보증한도 우대 대상</h1>
+                    <!-- //240201 ux라이팅 수정 -->
+
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="content">
+                    <div class="table">
+                        <table>
+                            <caption><span class="hide">보증한도 우대대상</span></caption>
+                            <colgroup>
+                                <col style="width:30%">
+                                <col style="width:60%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" rowspan="2">대상</th>
+                                    <th scope="col">조건</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">필요서류</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">장애인 가구</th>
+                                    <td>장애인증명서 발급 대상자</td>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>주민등록등본, 장애인증명서 또는 장애인등록증(복지카드)</td>
+                                </tr>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">신혼 부부</th>
+                                    <td>혼인기간 7년 이내인 신혼 부부</td>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>혼인관계증명서(3개월 이내 예정자는 청첩장 또는 예식장 계약서), 연소득증빙서류</td>
+                                </tr>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">한부모 가구</th>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                    <td>‘한부모가족지원법’에 의거 지원되는 가족</td>
+                                </tr>
+                                <tr>
+                                    <td>한부모가족증명서</td>
+                                </tr>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">다문화 가구</th>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                    <td>배우자가 외국인이거나 귀화로 인한 국적취득자</td>
+                                </tr>
+                                <tr>
+                                    <td>외국인등록증, 혼인관계증명서 또는 가족관계증명서</td>
+                                </tr>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">국가유공자 가구</th>
+                                    <td>국가유공자 혹은 선순위 유족인 세대 구성 가구</td>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>독립유공자</td>
+                                </tr>
+                                <tr>
+                                    <!-- 240130 ux라이팅 수정 -->
+                                    <th scope="row" rowspan="2">의사상자 가구</th>
+                                    <!-- //240130 ux라이팅 수정 -->
+                                    <td>의상자 본인 또는 의사상자 수권자 확인 가구</td>
+                                </tr>
+                                <tr>
+                                    <td>의사자(유족)증 또는 의사자 증서</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+
+        // 팝업 닫기(마지막 인자 기본값: false)
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // });
+
+        // 팝업 닫기 + DOM 삭제
+        // Popup.close('popup', function() {
+        //     '콜백함수'
+        // }, true);
+    </script>
+</body>
+
+</html>

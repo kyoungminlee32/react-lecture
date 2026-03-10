@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출신청 정보 입력_바닥 페이지</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출한도 조회</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h2-group">
+                        <h2 class="h2">추가정보를 입력해 주세요</h2>
+                    </div>
+                    <div class="field">
+                        <label for="text" class="label">연간 소득
+                            <span class="tooltip">
+                                <button type="button" class="trigger">
+                                    <span class="hide">툴팁</span>
+                                </button>
+                                <span class="panel">
+                                    <span class="title">연간 소득 </span>
+                                    <span class="t-content">
+                                        급여소득자/개인사업자의 연소득 인정 증빙서류는 국세청 소득금액증명원 기준입니다.
+                                    </span>
+                                </span>
+                            </span>
+                        </label>
+                        <div class="mix">
+                            <div class="text -won">
+                                <!-- 231205 value값 수정 -->
+                                <input type="tel" id="text" class="right num-call" value="700,000,000" aria-haspopup="true" readonly>
+                                <div class="won">원</div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="info right point">칠억원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [CASE] 기본정보-사업자- 선택 한 경우 노출 생략 -->
+                    <!-- ui수정 240122 (코드 변경) -->
+                    <!-- 240130 ux라이팅 수정 -->
+                    <div class="field">
+                        <p class="label">재직기간</p>
+                        <div class="select">
+                            <button type="button" aria-haspopup="true">1년 이상</button>
+                        </div>
+                        <div class="text">
+                            <p class="info -bullet">현재 재직 중인 회사 기준으로 선택해 주세요.</p>
+                            <p class="info -bullet">재직기간이 1년 미만이면 대출을 신청할 수 없습니다.</p>
+                        </div>
+                    </div>
+                    <!-- //240130 ux라이팅 수정 -->
+                    <!-- //ui수정 240122 (코드 변경) -->
+                    <!-- //[CASE] 기본정보-사업자- 선택 한 경우 노출 생략 -->
+                    <!-- [CASE] 미혼 -->
+                    <div class="case-wrap">
+                        <div class="field">
+                            <p class="label">결혼 여부</p>
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">미혼</button>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <p class="label">주택 보유 수</p>
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">무주택</button>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <!-- 240130 ux라이팅 수정 -->
+                            <label for="search01" class="label">희망 관리점</label>
+                            <!-- //240130 ux라이팅 수정 -->
+                            <div class="mix">
+                                <div class="text">
+                                    <input type="text" class="left-side fake-readonly" id="search01" placeholder="희망 관리점 찾기" title="희망 관리점" readonly>
+                                </div>
+                                <div class="space -lined search">
+                                    <button type="button" class="icon-button -search" aria-haspopup="true"><span class="hide">조회</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //[CASE] 미혼 -->
+
+                    <!-- [CASE] 기혼 -->
+                    <div class="case-wrap">
+                        <div class="field">
+                            <p class="label">결혼 여부</p>
+                            <div class="select">
+                                <button type="button" aria-haspopup="true">기혼</button>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <p class="label">자녀 수</p>
+                            <div class="select">
+                                <!-- 240130 ux라이팅 수정 -->
+                                <button type="button" aria-haspopup="true">2명</button>
+                                <!-- 240130 ux라이팅 수정 -->
+                            </div>
+                        </div>
+                        <div class="field">
+                            <p class="label">배우자 합산 주택 보유 수</p>
+                            <div class="select">
+                                <!-- 240130 ux라이팅 수정 -->
+                                <button type="button" aria-haspopup="true">%선택값노출%</button>
+                                <!-- 240130 ux라이팅 수정 -->
+                            </div>
+                        </div>
+                        <div class="field">
+                            <!-- 240130 ux라이팅 수정 -->
+                            <label for="search01" class="label">희망 관리점</label>
+                            <div class="mix">
+                                <div class="text">
+                                    <input type="text" class="left-side fake-readonly" id="search01" value="NH농협은행 불광지점" placeholder="희망 관리점 찾기" title="희망 관리점" readonly>
+                                <!-- //240130 ux라이팅 수정 -->
+                                </div>
+                                <div class="space -lined search">
+                                    <button type="button" class="icon-button -search" aria-haspopup="true"><span class="hide">조회</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="text" class="label">배우자 휴대폰번호</label>
+                            <!-- 231229 textfield 및 checkbox 변경 -->
+                            <div class="mix">
+                                <div class="select flex-3">
+                                    <button type="button" class="left-side" aria-haspopup="true" title="휴대폰번호 앞">010</button>
+                                </div>
+                                <div class="text flex-7" data-clear="false">
+                                    <input type="tel" class="right-side num-call" id="phone" placeholder="숫자만 입력하세요." title="휴대폰번호 뒤">
+                                </div>
+                            </div>
+                            <div class="checkbox -sm">
+                                <!-- 240130 ux라이팅 수정 -->
+                                <input type="checkbox" id="checkbox-sm-checked" checked>
+                                <label for="checkbox-sm-checked">배우자의 정보 제공 동의 안내 문자메시지 보내기</label>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="message">기혼인 경우, 배우자의 주택 보유 수와 전월세 대출 이용 여부 확인을 위해 배우자의 정보 제공 동의를 진행합니다.</p>
+                                <!-- //240130 ux라이팅 수정 -->
+                            </div>
+                        </div>   
+                    </div>
+                    <!-- //[CASE] 기혼 -->
+                    
+                    <div class="field">
+                        <div class="title-group">
+                            <div class="inner">
+                                <span class="label">[선택] 대출 희망 상담자</span>
+                            </div>
+                            <span class="switch ml-auto -sm">
+                                <input type="checkbox" id="switch2" checked>
+                                <label for="switch2"><span class="hide">스위치</span></label>
+                            </span>
+                        </div>
+                        <!-- [CASE] 토글 활성화시 노출 -->
+                        <div class="box-radios">
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="period-point-color1-1" checked>
+                                <label for="period-point-color1-1">은행직원</label>
+                            </div>
+                            <div class="box-radio">
+                                <input type="radio" name="period-point-color1" id="period-point-color1-2">
+                                <label for="period-point-color1-2">대출상담사</label>
+                            </div>
+                        </div>
+                        <!-- //[CASE] 토글 활성화시 노출 -->
+                        <!-- [CASE] [은행직원/대출상담사] 탭 버튼 2중 택1시 노출 -->
+                        <div class="mix">
+                            <div class="text">
+                                <input type="text" class="left-side fake-readonly" id="search01" value="김농업" title="희망 관리점" readonly>
+                            </div>
+                            <div class="space -lined search">
+                                <button type="button" class="icon-button -search" aria-haspopup="true"><span class="hide">조회</span></button>
+                            </div>
+                        </div>
+                        <!-- //[CASE] [은행직원/대출상담사] 탭 버튼 2중 택1시 노출 -->
+                    </div>
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE]모든 항목 채워지면 활성화 -->
+                        <button type="button" class="button -lg -primary">다음</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

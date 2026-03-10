@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/insurance.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">적합성 진단</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <h2 class="h2">적합성 진단을 진행해 주세요</h2>
+                    <div class="jsSrveyWrap">
+                        <div class="field jsSrveyCurrent">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">01.</span> <!-- [231227] 점추가 -->
+                                    <span>취약금융소비자 해당 여부</span> <!-- 240327 재검토 : 문구 변경 --> 
+                                </dt>
+                                <div class="box">
+                                    <h3 class="title">취약금융소비자</h3>
+                                    <p class="p">
+                                        고령투자자(만 65세 이상), 미성년자, 정신적 장애로 일상이나 사회생활에 제약을 받는 자 등으로 합리적 판단이 곤란한 자로서 계약자 보호의 필요성이 높은 자를 의미합니다. <!-- ux 라이팅 수정 -->
+                                    </p>
+                                </div>
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio1" id="radio1-1">
+                                        <label for="radio1-1" class="invest-unit in-icon1">미해당</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio1" id="radio1-2" disabled> <!-- [240103] 만 65세 미만인 경우 비활성화 -->
+                                        <label for="radio1-2" class="invest-unit in-icon2">현해당(만 65세 이상)</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio1" id="radio1-3">
+                                        <label for="radio1-3" class="invest-unit in-icon3">해당(정신적 장애로 일상생활이나 사회생활에 제약을 받는자)</label> <!-- [240104] 점삭제 -->
+                                    </div>
+                                </dd>
+                                <div class="invest-notice">
+                                    <div class="inner">
+                                        <!-- [231227] 주의삭제 -->
+                                        <div class="message red">해당 경우에는 변액보험을 가입할 수 없습니다.</div> <!-- [231227] red클래스 추가--> <!-- ux 라이팅 수정 -->
+                                    </div>
+                                </div>
+                            </dl>
+                        </div>
+                    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">02.</span> <!-- [231227] 점추가 -->
+                                    <span>귀하가 가입하고자 하는 금융상품은 어떤 것입니까?</span> <!-- 240327 재검토 : 문구 변경 --> 
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="checkbox" name="radio2" id="radio2-1">
+                                        <label for="radio2-1" class="invest-unit in-icon4">예금, 적금</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="checkbox" name="radio2" id="radio2-2">
+                                        <label for="radio2-2" class="invest-unit in-icon5">주식, 채권 등 금융투자상품</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="checkbox" name="radio2" id="radio2-3">
+                                        <label for="radio2-3" class="invest-unit in-icon6">일반보험</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="checkbox" name="radio2" id="radio2-4">
+                                        <label for="radio2-4" class="invest-unit in-icon7">변액보험</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">03.</span> <!-- [231227] 점추가 -->
+                                    <span>귀하가 변액보험을 가입하는 목적은 무엇입니까?</span> <!-- 240327 재검토 : 문구 변경 --> 
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio3" id="radio3-1">
+                                        <label for="radio3-1" class="invest-unit in-icon8">단기 재산 증식</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio3" id="radio3-2">
+                                        <label for="radio3-2" class="invest-unit in-icon9">장기저축을 통한 목돈 마련</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio3" id="radio3-3">
+                                        <label for="radio3-3" class="invest-unit in-icon10">노후를 위한 연금자산 마련</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio3" id="radio3-4">
+                                        <label for="radio3-4" class="invest-unit in-icon11">위험에 대비한 가족의 보장자산 마련</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">04.</span> <!-- [231227] 점추가 -->
+                                    <span>귀하의 월평균 소득은 어느 정도입니까?</span> <!-- 240327 재검토 : 문구 변경 --> 
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio4" id="radio4-1">
+                                        <label for="radio4-1" class="invest-unit in-icon12">200만원 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio4" id="radio4-2">
+                                        <label for="radio4-2" class="invest-unit in-icon13">500만원 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio4" id="radio4-3">
+                                        <label for="radio4-3" class="invest-unit in-icon14">1,000만원 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio4" id="radio4-4">
+                                        <label for="radio4-4" class="invest-unit in-icon15">1,000만원 이상</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">05.</span> <!-- [231227] 점추가 -->
+                                    <span>귀하의 월평균 소득에서 보험료 지출이 차지하는 비중은 어느 정도입니까?</span> <!-- 240327 재검토 : 문구 변경 --> 
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio5" id="radio5-1">
+                                        <label for="radio5-1" class="invest-unit in-icon16">10% 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio5" id="radio5-2">
+                                        <label for="radio5-2" class="invest-unit in-icon17">20% 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio5" id="radio5-3">
+                                        <label for="radio5-3" class="invest-unit in-icon18">30% 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio5" id="radio5-3">
+                                        <label for="radio5-3" class="invest-unit in-icon19">50% 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio5" id="radio5-4">
+                                        <label for="radio5-4" class="invest-unit in-icon20">50% 이상</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">06.</span> <!-- [231227] 점추가 -->
+                                    <span>귀하가 보험료 재원으로 사용할 수 있는 순자산(자산-부채)은 어느 정도입니까?</span> <!-- 240327 재검토 : 문구 변경 --> 
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio6" id="radio6-1">
+                                        <label for="radio6-1" class="invest-unit in-icon21">1천만원 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio6" id="radio6-2">
+                                        <label for="radio6-2" class="invest-unit in-icon22">5천만원 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio6" id="radio6-3">
+                                        <label for="radio6-3" class="invest-unit in-icon23">1억원 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio6" id="radio6-1">
+                                        <label for="radio6-1" class="invest-unit in-icon24">1억원 이상</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">07.</span> <!-- [231227] 점추가 -->
+                                    <span>귀하의 현재 소득, 순자산 수준에서 보험료(월납 기준)로 추가 납부하실 수 있는 금액은 어느 정도입니까?</span> <!-- 240327 재검토 : 문구 변경 --> 
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio7" id="radio7-1">
+                                        <label for="radio7-1" class="invest-unit in-icon25">10만원 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio7" id="radio7-2">
+                                        <label for="radio7-2" class="invest-unit in-icon26">30만원 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio7" id="radio7-3">
+                                        <label for="radio7-3" class="invest-unit in-icon27">50만원 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio7" id="radio7-2">
+                                        <label for="radio7-2" class="invest-unit in-icon28">100만원 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio7" id="radio7-3">
+                                        <label for="radio7-3" class="invest-unit in-icon29">100만원 이상</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">08.</span> <!-- [231227] 점추가 -->
+                                    <span>퇴직 등 향후 수입원 감소 등을 감안한 보험료 납입 가능기간은 어느 정도인가요?</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio8" id="radio8-1">
+                                        <label for="radio8-1" class="invest-unit in-icon30">3년 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio8" id="radio8-2">
+                                        <label for="radio8-2" class="invest-unit in-icon31">7년 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio8" id="radio8-3">
+                                        <label for="radio8-3" class="invest-unit in-icon32">10년 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio8" id="radio8-4">
+                                        <label for="radio8-4" class="invest-unit in-icon33">20년 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio8" id="radio8-5">
+                                        <label for="radio8-5" class="invest-unit in-icon34">20년 이상</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">09.</span> <!-- [231227] 점추가 -->
+                                    <span>귀하께서 생각하시는 보험계약의 유지기간은 어느 정도 입니까?</span> <!-- 240327 재검토 : 문구 변경 --> 
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio9" id="radio9-1">
+                                        <label for="radio9-1" class="invest-unit in-icon35">7년 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio9" id="radio9-2">
+                                        <label for="radio9-2" class="invest-unit in-icon36">10년 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio9" id="radio9-3">
+                                        <label for="radio9-3" class="invest-unit in-icon37">20년 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio9" id="radio9-4">
+                                        <label for="radio9-4" class="invest-unit in-icon38">30년 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio9" id="radio9-5">
+                                        <label for="radio9-5" class="invest-unit in-icon39">30년 이상</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">10.</span> <!-- [231227] 점추가 -->
+                                    <span>자녀결혼, 주택구입 등 자금수요로 보험계약을 10년 이전에 중도해지할 가능성은 어느 정도라고 예상하시나요?</span>
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio10" id="radio10-1">
+                                        <label for="radio10-1" class="invest-unit in-icon40">30% 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio10" id="radio10-2">
+                                        <label for="radio10-2" class="invest-unit in-icon41">50% 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio10" id="radio10-3">
+                                        <label for="radio10-3" class="invest-unit in-icon42">70% 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio10" id="radio10-4">
+                                        <label for="radio10-4" class="invest-unit in-icon43">90% 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio10" id="radio10-5">
+                                        <label for="radio10-5" class="invest-unit in-icon44">90% 이상</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">11.</span> <!-- [231227] 점추가 -->
+                                    <span>귀하의 펀드, 변액보험 등 금융투자상품 투자경험기간은 어느 정도입니까?</span> <!-- 240327 재검토 : 문구 변경 --> 
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio11" id="radio11-1">
+                                        <label for="radio11-1" class="invest-unit in-icon45">투자경험 없음</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio11" id="radio11-2">
+                                        <label for="radio11-2" class="invest-unit in-icon46">6개월 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio11" id="radio11-3">
+                                        <label for="radio11-3" class="invest-unit in-icon47">1년 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio11" id="radio11-4">
+                                        <label for="radio11-4" class="invest-unit in-icon48">2년 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio11" id="radio11-5">
+                                        <label for="radio11-5" class="invest-unit in-icon49">2년 이상</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">12.</span> <!-- [231227] 점추가 -->
+                                    <span>귀하께서 취득·처분한 경험이 있는 상품을 모두 골라주세요.(복수 선택 가능)</span> <!-- 240327 재검토 : 문구 변경 -->
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item"> <!-- [231228] input type="checkbox"로 변경 -->
+                                        <input type="checkbox" name="radio12" id="radio12-1">
+                                        <label for="radio12-1" class="invest-unit in-icon50">투자경험 없음</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="checkbox" name="radio12" id="radio12-2">
+                                        <label for="radio12-2" class="invest-unit in-icon51">주식(관리종목, 투자위험종목), 주식형 펀드(고수익 추구), 선물옵션, ELW 등</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="checkbox" name="radio12" id="radio12-3">
+                                        <label for="radio12-3" class="invest-unit in-icon52">주식(일반종목), 주식형 펀드(시장수익률 추구), ELS/DLS(원금비보장), 채권(BBB~이하) 등</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="checkbox" name="radio12" id="radio12-4">
+                                        <label for="radio12-4" class="invest-unit in-icon53">혼합형 펀드, CP/전단채(A4~A2), 채권(BBB0~BBB+), ELS(원금일부보장) 등</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="checkbox" name="radio12" id="radio12-5">
+                                        <label for="radio12-5" class="invest-unit in-icon54">채권형 펀드, 금융채, 채권(A-이상), ELB/DLB(원금보장), CP/전단채(A2+이상) 등 </label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="checkbox" name="radio12" id="radio12-6">
+                                        <label for="radio12-6" class="invest-unit in-icon55">변액보험</label>
+                                    </div> <!-- //[231228] input type="checkbox"로 변경 -->
+                                </dd>
+                                <div class="invest-notice">
+                                    <div class="inner">
+                                        <!-- [231227] 주의삭제-->
+                                        <div class="message red">취득∙처분한 경험이 있는 상품을 선택해 주세요.</div> <!-- [231227] red클래스 추가-->
+                                    </div>
+                                </div>
+                            </dl>
+                            <button type="button" class="button -lg">다음 질문 보기</button>
+                        </div>  
+                        
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">13.</span> <!-- [231227] 점추가 -->
+                                    <span>귀하께서는 투자하실 때 원금 보존과 투자수익률 중 어느 쪽을 중요하게 생각하십니까?</span> <!-- 240327 재검토 : 문구 변경 --> 
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio13" id="radio13-1">
+                                        <label for="radio13-1" class="invest-unit in-icon56">원금은 반드시 보존이 되어야 한다.</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio13" id="radio13-2">
+                                        <label for="radio13-2" class="invest-unit in-icon57">원금 보존을 중요하게 생각한다.</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio13" id="radio13-3">
+                                        <label for="radio13-3" class="invest-unit in-icon58">수익률이 어느 정도 되어야 한다.</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio13" id="radio13-4">
+                                        <label for="radio13-4" class="invest-unit in-icon59">수익률을 중요시한다. </label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>       
+                        
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">14.</span> <!-- [231227] 점추가 -->
+                                    <span>귀하께서는 투자 상품을 가입 하실 때 어느 정도의 연간 수익률을 기대하십니까?</span> <!-- 240327 재검토 : 문구 변경 --> 
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio14" id="radio14-1">
+                                        <label for="radio14-1" class="invest-unit in-icon60">3% 이내</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio14" id="radio14-2">
+                                        <label for="radio14-2" class="invest-unit in-icon61">7% 이내</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio14" id="radio14-3">
+                                        <label for="radio14-3" class="invest-unit in-icon62">10% 이내</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio14" id="radio14-4">
+                                        <label for="radio14-4" class="invest-unit in-icon63">15% 이내</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio14" id="radio14-5">
+                                        <label for="radio14-5" class="invest-unit in-icon64">15% 초과</label>
+                                    </div>                                    
+                                </dd>
+                            </dl>
+                        </div>      
+                        
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">15.</span> <!-- [231227] 점추가 -->
+                                    <span>귀하께서는 투자 수익률을 얻기 위해 어느 정도의 손실을 감내할 수 있습니까?</span> <!-- 240327 재검토 : 문구 변경 --> 
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio15" id="radio15-1">
+                                        <label for="radio15-1" class="invest-unit in-icon65">어떠한 경우에도 손실이 나면 안된다.</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio15" id="radio15-2">
+                                        <label for="radio15-2" class="invest-unit in-icon66">원금 기준 10% 이내는 감수할 수 있다.</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio15" id="radio15-3">
+                                        <label for="radio15-3" class="invest-unit in-icon67">원금 기준 20% 이내는 감수할 수 있다.</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio15" id="radio15-4">
+                                        <label for="radio15-4" class="invest-unit in-icon68">원금 기준 30% 이내는 감수할 수 있다.</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio15" id="radio15-5">
+                                        <label for="radio15-5" class="invest-unit in-icon69">원금 기준 40% 이내는 감수할 수 있다.</label>
+                                    </div>    
+                                    <div class="item">
+                                        <input type="radio" name="radio15" id="radio15-6">
+                                        <label for="radio15-6" class="invest-unit in-icon70">원금 기준 50% 이내는 감수할 수 있다.</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio15" id="radio15-7">
+                                        <label for="radio15-7" class="invest-unit in-icon71">원금 기준 100% 이내는 감수할 수 있다.</label>
+                                    </div>                                 
+                                </dd>
+                            </dl>
+                        </div>       
+                        
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">16.</span> <!-- [231227] 점추가 -->
+                                    <span>귀하께서는 특별계정 펀드내 주식이나 주식형 상품의 비중을 어느 정도로 구성하고 싶으십니까?</span> <!-- 240327 재검토 : 문구 변경 --> 
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio16" id="radio16-1">
+                                        <label for="radio16-1" class="invest-unit in-icon72">5% 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio16" id="radio16-2">
+                                        <label for="radio16-2" class="invest-unit in-icon73">10% 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio16" id="radio16-3">
+                                        <label for="radio16-3" class="invest-unit in-icon74">20% 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio16" id="radio16-4">
+                                        <label for="radio16-4" class="invest-unit in-icon75">50% 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio16" id="radio16-5">
+                                        <label for="radio16-5" class="invest-unit in-icon76">50% 이상</label>
+                                    </div>                                    
+                                </dd>
+                            </dl>
+                        </div>         
+                        
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">17.</span> <!-- [231227] 점추가 -->
+                                    <span>귀하께서는 보유하고 계시는 금융상품 중에 변액보험 및 투자상품이 차지하는 비중은 어느 정도 입니까?</span> <!-- 240327 재검토 : 문구 변경 --> 
+                                </dt>
+                    
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio17" id="radio17-1">
+                                        <label for="radio17-1" class="invest-unit in-icon77">없음</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio17" id="radio17-2">
+                                        <label for="radio17-2" class="invest-unit in-icon78">30% 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio17" id="radio17-3">
+                                        <label for="radio17-3" class="invest-unit in-icon79">50% 미만</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio16" id="radio17-4">
+                                        <label for="radio17-4" class="invest-unit in-icon80">50% 이상</label>
+                                    </div>                                  
+                                </dd>
+                            </dl>
+                        </div>    
+                        
+                        <div class="field">
+                            <dl class="invest-qna">
+                                <dt class="question-text">
+                                    <span class="number">18.</span> <!-- [231227] 점추가 -->
+                                    <span>귀하의 변액보험 등 금융상품에 대한 이해 수준은 어느 정도라고 생각하십니까?</span>  <!-- 240327 재검토 : 문구 변경 --> 
+                                </dt>
+                        
+                                <dd class="answer-list">
+                                    <div class="item">
+                                        <input type="radio" name="radio17" id="radio18-1">
+                                        <label for="radio18-1" class="invest-unit in-icon81">이해 수준이 현저히 낮음</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio18" id="radio18-2">
+                                        <label for="radio18-2" class="invest-unit in-icon82">변액보험 등 금융상품의 구조와 위험에 대해 일정부분 이해</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="radio17" id="radio18-3">
+                                        <label for="radio18-3" class="invest-unit in-icon83">변액보험 등 금융상품의 구조와 위험에 대해 전체적으로 잘 이해</label>
+                                    </div>                               
+                                </dd>
+                            </dl>
+                            <!-- 2024-01-04 위치이동 및 마크업변경 -->
+                            <div class="case-wrap -xs">
+                                <div class="checkbox -sm">
+                                    <input type="checkbox" id="checkbox-sm">
+                                    <label for="checkbox-sm">
+                                        고객님이 답변한 정보가 정확한 것임을 확인하고 이를 바탕으로 적합성 진단을 실시하겠습니다. <!-- ux 라이팅 수정 -->
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- 2024-01-04 위치이동 및 마크업변경 -->
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="fixer">
+                    <div class="buttons">
+                        <!-- [CASE] 모든 문항의 답변 작성 완료 시, 버튼 활성화 -->
+                        <button type="button" class="button -lg -primary -disabled">결과보기</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 설문 인터렉션 예시 
+        // 2024-01-04 인터렉션 예시 변경
+        var jsSrveyHandleWrap = document.querySelectorAll('.jsSrveyWrap .field');
+        jsSrveyHandleWrap.forEach(function (element, index) {
+            var jsSrveyHandle = element.querySelectorAll('input');
+            jsSrveyHandle.forEach(element => {
+                element.addEventListener('click',function (e) {
+                    if (index < jsSrveyHandleWrap.length - 1) {
+                        jsSrveyNext(this);    
+                    }
+                })
+            });
+        })
+
+        /* const jsSrveyHandle = document.querySelectorAll('.jsSrveyWrap input');
+        jsSrveyHandle.forEach(element => {
+            element.addEventListener('click',function (e) {
+                jsSrveyNext(this)
+            })
+        }); */
+    </script>
+</body>
+</html>

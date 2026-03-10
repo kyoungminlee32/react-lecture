@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>대출신청정보확인</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+
+                    <h1 class="title">대출신청</h1>
+
+                    <div class="funcs">
+                        <button type="button" class="func -cs"><span class="hide">상담</span></button>
+                        <button type="button" class="func">취소</button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="contents">
+                <div class="content">
+                    <div class="progress-top">
+                        <div class="progress">
+                            <!--
+                                style 속성에서 사용되는 CSS 전용 변수로 게이지 컨트롤
+                                --current : 현재 표시되야 하는 수치
+                                    --max : 최대 수치
+                                게이지가 차오르는 값을 css로 지정 합니다 %, 실수치, 모두 가능 ( ※게이지계산식 : 100% * ( --current / --max ) )
+                                (단, 숫자 정수값만 사용할 것)
+                            -->
+                            <div class="bar" style="--current:3; --max:12;">
+                                <div class="gauge">
+                                    <!-- 접근성 관련 텍스트 동적 변경 필요 -->
+                                    <span class="hide"> 12단계 중 3번째</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h2-group">
+                        <!-- 240126 ux라이팅 수정 -->
+                        <h2 class="h2">대출 신청정보를 확인해 주세요</h2>
+                        <!-- //240126 ux라이팅 수정 -->
+                    </div>
+                    <div class="limit-point-box">
+                        <p class="p">신청금액 <span class="limit-point bk">9,088만원</span></p>
+                        <!-- ui수정 240122 (링크 삭제) -->
+                        <p class="p">예상금리<span class="limit-point detail">4.82%</span></p>
+                        <!-- ui수정 240122 (링크 삭제) -->
+                    </div>
+                    <dl class="dl -box">
+                        <!-- 240326 재검토 -->
+                        <div>
+                            <!-- 240318 ux라이팅 수정 -->
+                            <dt>거래구분</dt>   <!-- 240326 재검토 -->
+                            <!-- //240318 ux라이팅 수정 -->
+                            <dd>일반자금(NH 간편오토론)</dd>
+                        </div>
+                        <div>
+                            <!-- 240202 ux라이팅 수정 -->
+                            <dt>차량 잔금금액</dt>
+                            <!-- //240202 ux라이팅 수정 -->
+                            <dd>10,000,000원</dd>
+                        </div>
+                        <div>
+                            <!-- 240202 ux라이팅 수정 -->
+                            <dt>대출 신청금액</dt>
+                            <!-- //240202 ux라이팅 수정 -->
+                            <dd>10,000,000원</dd>
+                        </div>
+                        <div>
+                            <dt>대출기간</dt>
+                            <dd>2년6개월</dd>
+                        </div>
+                        <div>
+                            <dt>상환방법</dt> 
+                            <dd>원금균등분할상환</dd>
+                        </div>
+                        <div>
+                            <!-- 240202 ux라이팅 수정 -->
+                            <dt>이자 납입계좌</dt>
+                            <!-- //240202 ux라이팅 수정 -->
+                            <dd>111-1111-1111-11</dd>
+                        </div>
+                        <div>
+                            <!-- 240202 ux라이팅 수정 -->
+                            <dt>이자 납입일</dt>
+                            <!-- //240202 ux라이팅 수정 -->
+                            <dd>10일</dd>
+                        </div>
+                        <div>
+                            <!-- 240318 ux라이팅 수정 -->
+                            <dt>결제 방법</dt>
+                            <!-- //240318 ux라이팅 수정 -->
+                            <dd>카드결제</dd>
+                        </div>
+                        <!-- [CASE] 결제방법이 현금(계좌입금)인 경우 노출 -->
+                        <div>
+                            <dt>계좌번호</dt>
+                            <dd>00-0000-00-00</dd>
+                        </div>
+                        <!-- 240112 입금은행 추가 -->
+                        <div>
+                            <dt>입금은행</dt>
+                            <dd>NH농협은행</dd>   <!-- [240617]텍스트 변경 -->
+                        </div>
+                        <!-- //240112 입금은행 추가 -->
+                        <div>
+                            <dt>예금주</dt>
+                            <dd>김농협</dd>
+                        </div>
+                        <div>
+                            <dt>위임자(입금인)</dt>
+                            <dd></dd>
+                        </div>
+                        <div>
+                            <dt>위임자(잔금인)</dt>
+                            <dd></dd>
+                        </div>
+                        <!-- //[CASE] 결제방법이 현금(계좌입금)인 경우 노출 -->
+                        <!-- [CASE] 결제방법이 카드인 경우 노출 -->
+                        <div>
+                            <dt>카드번호</dt>
+                            <dd>1111-1111-1111-1111</dd>
+                        </div>
+                        <!-- [CASE] 결제방법이 카드인 경우 노출 -->
+                        <!-- 240326 재검토(추가) -->
+                        <div>
+                            <dt>잔금일</dt>
+                            <dd>2023.10.31</dd>
+                        </div>
+                        <!-- //240326 재검토(추가) -->
+                        <div>
+                            <!-- 240202 ux라이팅 수정 -->
+                            <dt>대출 희망일</dt>
+                            <!-- //240202 ux라이팅 수정 -->
+                            <dd>2023.10.16</dd>
+                        </div>
+                        <div>
+                            <dt>권유직원</dt>
+                            <dd></dd>
+                        </div>
+                        <div>
+                            <!-- 240318 ux라이팅 수정 -->
+                            <dt>주거 형태</dt>
+                            <!-- //240318 ux라이팅 수정 -->
+                            <dd>단독주택</dd>
+                        </div>
+                        <div>
+                            <!-- 240318 ux라이팅 수정 -->
+                            <dt>고용 형태</dt>
+                            <!-- //240318 ux라이팅 수정 -->
+                            <dd>정규직</dd>
+                        </div>
+                        <div>
+                            <dt>근무기간</dt>
+                            <dd>2년 6개월</dd>
+                        </div>
+                        <!-- //240326 재검토 -->
+                    </dl>
+
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">대출 신청하기</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // 스크립트 작성
+    </script>
+</body>
+
+</html>

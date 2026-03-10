@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>(팝업)예상금리 안내</title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+
+</head>
+
+<body>
+    <!-- 240118 코드 전체변경 -->
+    <div id="popup" class="popup">
+        <div class="container">
+            <div class="header">
+                <div class="inner">
+                    <h1 class="title">원리금 상환 예상액 확인</h1>
+                    <div class="funcs">
+                        <button type="button" class="func -close"><span class="hide">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="content">
+                    <dl class="dl -box tooltipbtn">
+                        <div>
+                            <dt>대출금액</dt>
+                            <dd>35,000,000원</dd>
+                        </div>
+                        <div>
+                            <dt>대출금리</dt>
+                            <dd>4.82%</dd>
+                        </div>
+                        <div>
+                            <dt>대출기간</dt>
+                            <dd>40년 0개월</dd>
+                        </div>
+                        <div>
+                            <dt>거치기간</dt>
+                            <dd>12개월</dd>
+                        </div>
+                        <div>
+                            <dt>이자입금산정기준일</dt>
+                            <dd>15일</dd>
+                        </div>
+
+                    </dl>
+                    <p class="message">대출금리에 따라 월 상환금이 변경될 수 있습니다.</p>
+                    <div class="h4-group">
+                        <h4 class="h5">상환 스케줄 상세</h4>
+                    </div>
+                    <div>
+                        <span class="table-set">(단위 : 원)</span>
+                        <!-- 240304 -pop추가 -->
+                        <div class="table -pop">
+                            <table>
+                                <caption><span class="hide">상환 스케줄 상세</span></caption>
+                                <colgroup>
+                                    <col style="width:16%">
+                                    <col style="width:28%">
+                                    <col style="width:28%">
+                                    <col style="width:28%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">회차</th>
+                                        <th scope="col">원금</th>
+                                        <th scope="col">이자</th>
+                                        <th scope="col">총상환액</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>500,000</td>
+                                        <td>70,000</td>
+                                        <td>570,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>500,000</td>
+                                        <td>70,000</td>
+                                        <td>570,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>500,000</td>
+                                        <td>70,000</td>
+                                        <td>570,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>500,000</td>
+                                        <td>70,000</td>
+                                        <td>570,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>500,000</td>
+                                        <td>70,000</td>
+                                        <td>570,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>합계</td>
+                                        <td>30,000,000</td>
+                                        <td>4,800,000</td>
+                                        <td>34,800,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="message">거치기간 중 대출이자는 1회 차 이자 금액과 유사하고, 이자합계에는 포함되지 않습니다.</p>
+                    </div>
+
+                </div>
+                <div class="fixer">
+                    <div class="buttons">
+                        <button type="button" class="button -lg -primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        Popup.open('popup');
+    </script>
+</body>
+
+</html>

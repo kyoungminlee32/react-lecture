@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../../assets/css/common-ui.css">
+    <link rel="stylesheet" href="../../assets/css/util.css">
+    <link rel="stylesheet" href="../../assets/css/loan.css">
+
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header class="header">
+                <div class="inner">
+                    <div class="funcs">
+                        <button type="button" class="func -back"><span class="hide">뒤로가기</span></button>
+                    </div>
+                    <h1 class="title">대출기한연기</h1>
+                    <!-- 240425 헤더 수정 -->
+                    <div class="funcs">
+                        <button type="button" class="func -home"><span class="hide">홈</span></button>
+                        <button type="button" class="func -menu"><span class="hide">전체메뉴</span></button>
+                    </div>
+                    <!-- //240425 헤더 수정 -->
+                </div>
+            </header>
+            <!-- 240408 코드 변경 -->
+            <main class="contents">
+                <div class="content">
+                    <div class="result">  <!-- [240502]-sm 클래스 삭제 -->
+                        <p class="message fs-16 mt-24">기한연기 대상 대출계좌가 없어요.</p>   <!-- [240502]텍스트 변경, fs-16 mt-24 클래스 추가 -->
+                    </div>
+                </div>
+                <div class="sticker">
+                    <div class="notice -active" data-role="fold">
+                        <button type="button" class="title" data-role="marker">알아두세요</button>
+                        <div class="panel" data-role="hidden">
+                            <!-- 240328 코드 수정 -->
+                            <ul class="ul -bullet">
+                                <li>연장신청 가능일은 만기일 기준 신용대출은 1개월 전부터 전일까지, 주택담보대출/전세대출은 2개월 전부터 14일전까지 입니다.</li>
+                                <li>조회일 기준 주택담보대출/전세대출은 만기 2개월, 신용대출은 만기 1개월 내 대출 계좌만 표시됩니다.</li>
+                                <li>대출 전체계좌 조회는 [전 계좌 조회 > 대출]에서 확인할 수 있습니다.</li>
+                            </ul>
+                            <!-- //240328 코드 수정 -->
+                            <a href="javascript:void(0)" class="a -arrow">대출 전체계좌 조회</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- //240408 코드 변경 -->
+        </div>
+    </div>
+
+    <script src="../../assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/libs/anime/lib/anime.min.js"></script>
+    <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/js/common-ui.js"></script>
+    <script>
+        // Popup.open('popup');
+    </script>
+</body>
+
+</html>
