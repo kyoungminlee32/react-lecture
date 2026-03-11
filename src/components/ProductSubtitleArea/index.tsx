@@ -14,7 +14,7 @@ interface ProductSubtitleAreaProps {
 export type { ProductInfoItem };
 
 export const ProductSubtitleArea = ({
-    maxLabel = '최대',
+    maxLabel = '',
     maxAmount = '',
     baseLabel = '기본',
     baseRate = '',
@@ -22,32 +22,38 @@ export const ProductSubtitleArea = ({
     topRate = '',
     costDescription = '',
     infoItems = [],
-}: ProductSubtitleAreaProps) => (
-    <div className='subtitle-area'>
-        <div className='product-cost-area'>
-            <div className='inner'>
-                <dl>
-                    <dt>{maxLabel}</dt>
-                    <dd className='point'>{maxAmount}</dd>
-                </dl>
-            </div>
+}: ProductSubtitleAreaProps) => {
+    const shouldShowMaxBlock = Boolean(maxLabel.trim());
 
-            <div className='inner'>
-                <dl>
-                    <dt>{baseLabel}</dt>
-                    <dd>{baseRate}</dd>
-                </dl>
-                <span className='daesh'>~</span>
-                <dl>
-                    <dt>{topLabel}</dt>
-                    <dd className='point'>{topRate}</dd>
-                </dl>
-            </div>
+    return (
+        <div className='subtitle-area'>
+            <div className='product-cost-area'>
+                {shouldShowMaxBlock && (
+                    <div className='inner'>
+                        <dl>
+                            <dt>{maxLabel}</dt>
+                            <dd className='point'>{maxAmount}</dd>
+                        </dl>
+                    </div>
+                )}
 
-            <p className='cost-para'>{costDescription}</p>
+                <div className='inner'>
+                    <dl>
+                        <dt>{baseLabel}</dt>
+                        <dd>{baseRate}</dd>
+                    </dl>
+                    <span className='daesh'>~</span>
+                    <dl>
+                        <dt>{topLabel}</dt>
+                        <dd className='point'>{topRate}</dd>
+                    </dl>
+                </div>
+
+                <p className='cost-para'>{costDescription}</p>
+            </div>
+            <ProductInfoDlList items={infoItems} />
         </div>
-        <ProductInfoDlList items={infoItems} />
-    </div>
-);
+    );
+};
 
 export default ProductSubtitleArea;
