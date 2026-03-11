@@ -14,6 +14,9 @@ import { AppTodoList } from './pages/TodoList';
 import { Worklist } from './pages/Worklist';
 import { Layout } from './layouts/Layout';
 import { AType } from './prototype/A-type/html/A-type';
+import { AType2 } from './prototype/A-type/html/A-type-2';
+import { BType } from './prototype/B-type/html/B-type';
+import { FwProductDetail } from './html/_FW/fw_product_detail';
 
 import './assets/css/reset.css';
 import './assets/css/base.css';
@@ -27,6 +30,7 @@ import './assets/css/table.css';
 import './assets/css/button.css';
 import './assets/css/sample.css';
 import './assets/css/util.css';
+import './assets/css/popup.css';
 
 function App() {
   return (
@@ -43,6 +47,9 @@ function App() {
       <Route path="/Photo" element={<Layout><AppPhoto /></Layout>} />
       <Route path="/TodoList" element={<Layout><AppTodoList /></Layout>} />
       <Route path="/prototype/A-type/html/A-type" element={<AType />} />
+      <Route path="/prototype/A-type/html/A-type-2" element={<AType2 />} />
+      <Route path="/prototype/B-type/html/B-type" element={<BType />} />
+      <Route path="/html/_FW/fw_product_detail" element={<FwProductDetail />} />
       <Route 
         path="*"
         element={

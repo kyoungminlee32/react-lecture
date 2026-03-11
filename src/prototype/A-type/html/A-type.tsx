@@ -1,5 +1,20 @@
-import { CSSProperties, KeyboardEvent, useState } from 'react';
+import { KeyboardEvent, useState } from 'react';
+// 1.공통 헤더 컴포넌트
 import { FwHeader } from '../../../components/FwHeader';
+// 2.프로그레스 컴포넌트
+import { FwProgress } from '../../../components/FwProgress';
+// 3.타이틀 그룹 컴포넌트
+import { FwH2Group } from '../../../components/FwH2Group';
+// 4.툴팁 컴포넌트
+import { FwTooltip } from '../../../components/FwTooltip';
+// 5.스위치 컴포넌트
+import { FwSwitch } from '../../../components/FwSwitch';
+// 6.세그먼트(탭형 선택) 컴포넌트
+import { FwSegments } from '../../../components/FwSegments';
+// 7.상품 액션 버튼 컴포넌트
+import { ProductActionButtons } from '../../../components/ProductActionButtons';
+
+
 
 type DocMethod = 'email' | 'sms';
 
@@ -35,31 +50,20 @@ export const AType = () => {
     }
   };
 
-  const progressStyle = {
-    '--current': currentStep,
-    '--max': MAX_STEP,
-  } as CSSProperties;
-
   return (
     <div className="page">
       <div className="container">
-      <FwHeader title="예금가입" showBack rightText="취소" onBack={goBack} onAction={onCancel} />
+        {/* 헤더 영역 */}
+        <FwHeader title="예금가입" showBack rightText="취소" onBack={goBack} onAction={onCancel} />
 
         <main className="contents">
           <div className="content progress-layout">
-            <div className="progress-top" style={progressStyle} aria-label={`진행 ${currentStep}/${MAX_STEP}`}>
-              <div className="progress">
-                <div className="bar">
-                  <div className="gauge" />
-                </div>
-              </div>
-            </div>
+            {/* 프로그레스 */}
+            <FwProgress current={currentStep} max={MAX_STEP} />
 
             <div className="show-wrap">
               <div id="page1" className={stepClassName(1, currentStep)}>
-                <div className="h2-group">
-                  <h2 className="h2">가입기간을 선택해 주세요</h2>
-                </div>
+                <FwH2Group lines={['가입기간을 선택해 주세요']} />
                 <div className="field">
                   <div className="box-radios">
                     <div className="box-radio">
@@ -106,9 +110,7 @@ export const AType = () => {
               </div>
 
               <div id="page2" className={stepClassName(2, currentStep)}>
-                <div className="h2-group">
-                  <h2 className="h2">이자 받는 방법을 선택해 주세요</h2>
-                </div>
+                <FwH2Group lines={['이자 받는 방법을 선택해 주세요']} />
                 <div className="box-radios -half">
                   <div className="box-radio" id="b_page2">
                     <input
@@ -132,9 +134,7 @@ export const AType = () => {
               </div>
 
               <div id="page3" className={stepClassName(3, currentStep)}>
-                <div className="h2-group">
-                  <h2 className="h2">가입금액을 입력하세요</h2>
-                </div>
+                <FwH2Group lines={['가입금액을 입력하세요']} />
                 <div className="field">
                   <div className="mix">
                     <div className="text -won" id="b_page3">
@@ -149,9 +149,7 @@ export const AType = () => {
               </div>
 
               <div id="page4" className={stepClassName(4, currentStep)}>
-                <div className="h2-group">
-                  <h2 className="h2">비과세종합저축을 신청 하시겠습니까?</h2>
-                </div>
+                <FwH2Group lines={['비과세종합저축을 신청 하시겠습니까?']} />
                 <div className="box-radios -half">
                   <div className="box-radio">
                     <input
@@ -176,9 +174,7 @@ export const AType = () => {
               </div>
 
               <div id="page5" className={stepClassName(5, currentStep)}>
-                <div className="h2-group">
-                  <h2 className="h2">출금계좌를 선택하세요</h2>
-                </div>
+                <FwH2Group lines={['출금계좌를 선택하세요']} />
                 <div className="account">
                   <button type="button" data-bankcode="011" className="info" onClick={() => goToStep(7)}>
                     <span className="name">
@@ -204,28 +200,28 @@ export const AType = () => {
               </div>
 
               <div id="page7" className={stepClassName(7, currentStep)}>
-                <div className="h2-group">
-                  <h2 className="h2">만기알림신청 정보를 확인해 주세요</h2>
-                </div>
+                <FwH2Group lines={['만기알림신청 정보를 확인해 주세요']} />
                 <div className="field">
                   <div className="title-group">
                     <div className="inner">
                       <span className="title">만기알림신청이란</span>
-                      <button type="button" aria-label="도움말">
-                        도움말
-                      </button>
-                    </div>
-                    <div className="switch">
-                      <input
-                        id="switch2"
-                        type="checkbox"
-                        checked={switch2On}
-                        onChange={(event) => setSwitch2On(event.target.checked)}
+                      {/* 툴팁 */}
+                      <FwTooltip
+                        triggerText="도움말"
+                        title="만기알림신청이란"
+                        items={['만기알림신청이란', '만기알림신청이란', '만기알림신청이란']}
+                        onOpen={() => console.log('열림')}
+                        onClose={() => console.log('닫힘')}
+                        onPanelClick={() => console.log('패널 클릭')}
                       />
-                      <label htmlFor="switch2">
-                        <span className="hide">만기알림신청</span>
-                      </label>
                     </div>
+                    {/* 스위치 */}
+                    <FwSwitch
+                      id="switch2"
+                      checked={switch2On}
+                      onChange={setSwitch2On}
+                      label="만기알림신청"
+                    />
                   </div>
                 </div>
                 <div className="field">
@@ -245,113 +241,64 @@ export const AType = () => {
               </div>
 
               <div id="page8" className={stepClassName(8, currentStep)}>
-                <div className="h2-group">
-                  <h2 className="h2">계약서류 받는 방법을 선택해 주세요</h2>
-                </div>
+                <FwH2Group lines={['계약서류 받는 방법을 선택해 주세요']} />
                 <div className="field">
                   <label htmlFor="email" className="label">
                     계약서류 받는 방법
                   </label>
-                  <div className="segments">
-                    <div className="outer">
-                      <div className="inner">
-                        <div role="tablist" className="list">
-                          <div className={`item${docMethod === 'email' ? ' -active' : ''}`}>
-                            <button
-                              type="button"
-                              role="tab"
-                              id="segment-email"
-                              aria-controls="segments-panel-email"
-                              aria-selected={docMethod === 'email'}
-                              onClick={() => setDocMethod('email')}
-                            >
-                              이메일
-                              {docMethod === 'email' && <span className="hide">선택됨</span>}
-                            </button>
+                  {/* 탭 */}
+                  <FwSegments
+                    value={docMethod}
+                    onChange={(v) => setDocMethod(v as DocMethod)}
+                    tabs={[
+                      {
+                        key: 'email',
+                        label: '이메일',
+                        panel: (
+                          <div className="field">
+                            <label htmlFor="email" className="label -textless">이메일</label>
+                            <div className="mix">
+                              <div className="text -textless" data-clear="false">
+                                <input type="text" id="email" title="이메일 아이디" />
+                              </div>
+                              <div className="at">@</div>
+                              <div className="select">
+                                <button type="button">gmail.com</button>
+                              </div>
+                            </div>
                           </div>
-                          <div className={`item${docMethod === 'sms' ? ' -active' : ''}`}>
-                            <button
-                              type="button"
-                              role="tab"
-                              id="segment-sms"
-                              aria-controls="segments-panel-sms"
-                              aria-selected={docMethod === 'sms'}
-                              onClick={() => setDocMethod('sms')}
-                            >
-                              문자메시지
-                              {docMethod === 'sms' && <span className="hide">선택됨</span>}
-                            </button>
+                        ),
+                      },
+                      {
+                        key: 'sms',
+                        label: '문자메시지',
+                        panel: (
+                          <div className="field">
+                            <label htmlFor="smsName" className="label">문자메시지</label>
+                            <div className="text -textless">
+                              <input type="text" id="smsName" placeholder="이름을 입력하세요" />
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="segments-panels">
-                    <div
-                      role="tabpanel"
-                      id="segments-panel-email"
-                      aria-labelledby="segment-email"
-                      className={`segments-panel${docMethod === 'email' ? ' -active' : ''}`}
-                      tabIndex={docMethod === 'email' ? 0 : -1}
-                      hidden={docMethod !== 'email'}
-                    >
-                      <div className="field">
-                        <label htmlFor="email" className="label -textless">
-                          이메일
-                        </label>
-                        <div className="mix">
-                          <div className="text -textless" data-clear="false">
-                            <input type="text" id="email" title="이메일 아이디" />
-                          </div>
-                          <div className="at">@</div>
-                          <div className="select">
-                            <button type="button">gmail.com</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div
-                      role="tabpanel"
-                      id="segments-panel-sms"
-                      aria-labelledby="segment-sms"
-                      className={`segments-panel${docMethod === 'sms' ? ' -active' : ''}`}
-                      tabIndex={docMethod === 'sms' ? 0 : -1}
-                      hidden={docMethod !== 'sms'}
-                    >
-                      <div className="field">
-                        <label htmlFor="smsName" className="label">
-                          문자메시지
-                        </label>
-                        <div className="text -textless">
-                          <input type="text" id="smsName" placeholder="이름을 입력하세요" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                        ),
+                      },
+                    ]}
+                  />
                 </div>
               </div>
 
               <div id="page9" className={stepClassName(9, currentStep)}>
-                <div className="h2-group">
-                  <h2 className="h2">기타 선택사항을 확인해 주세요</h2>
-                </div>
+                <FwH2Group lines={['기타 선택사항을 확인해 주세요']} />
                 <div className="title-group">
                   <div className="inner">
                     <span className="title">우대 금리 쿠폰</span>
                   </div>
-                  <div className="switch">
-                    <input
-                      id="switch-coupon"
-                      type="checkbox"
-                      checked={switchCouponOn}
-                      onChange={(event) => setSwitchCouponOn(event.target.checked)}
-                    />
-                    <label htmlFor="switch-coupon">
-                      <span className="hide">우대 금리 쿠폰</span>
-                    </label>
-                  </div>
+                  {/* 스위치 */}
+                  <FwSwitch
+                    id="switch-coupon"
+                    checked={switchCouponOn}
+                    onChange={setSwitchCouponOn}
+                    label="우대 금리 쿠폰"
+                  />
                 </div>
                 <div className="title-group">
                   <div className="inner">
@@ -360,43 +307,39 @@ export const AType = () => {
                       도움말
                     </button>
                   </div>
-                  <div className="switch">
-                    <input
-                      id="switch-nh-point"
-                      type="checkbox"
-                      checked={switchNhPointOn}
-                      onChange={(event) => setSwitchNhPointOn(event.target.checked)}
-                    />
-                    <label htmlFor="switch-nh-point">
-                      <span className="hide">NH포인트 사용</span>
-                    </label>
-                  </div>
+                  {/* 스위치 */}
+                  <FwSwitch
+                    id="switch-nh-point"
+                    checked={switchNhPointOn}
+                    onChange={setSwitchNhPointOn}
+                    label="NH포인트 사용"
+                  />
                 </div>
                 <div className="title-group">
                   <div className="inner">
                     <span className="title">관리점 및 권유직원</span>
                   </div>
-                  <div className="switch">
-                    <input
-                      id="switch-branch-staff"
-                      type="checkbox"
-                      checked={switchBranchStaffOn}
-                      onChange={(event) => setSwitchBranchStaffOn(event.target.checked)}
-                    />
-                    <label htmlFor="switch-branch-staff">
-                      <span className="hide">관리점 및 권유직원</span>
-                    </label>
-                  </div>
+                  {/* 스위치 */}
+                  <FwSwitch
+                    id="switch-branch-staff"
+                    checked={switchBranchStaffOn}
+                    onChange={setSwitchBranchStaffOn}
+                    label="관리점 및 권유직원"
+                  />
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="fixer b_page5">
-            <button type="button" className="button -primary -lg" onClick={nextStep}>
-              다음
-            </button>
-          </div>
+          {/* 하단 다음 버튼 */}
+          <ProductActionButtons
+            rootClass="b_page5"
+            active={true}
+            showConsult={false}
+            showJoin={true}
+            joinLabel="다음"
+            onJoin={nextStep}
+          />
         </main>
       </div>
     </div>

@@ -59,6 +59,22 @@ export const Worklist = () => {
                         <td className={styles.note}></td>
                     </tr>
                     <tr>
+                        <td className="lv2">A타입 인터랙션</td>
+                        <td className="lv3"></td>
+                        <td className="lv4"></td>
+                        <td className="lv5"></td>
+                        <td className="lv6"></td>
+                        <td className="lv7"></td>
+                        <td className={styles.func}>
+                            <input type="radio" className={styles['iframe-select']} name="iframename" />
+                            <Link to="/prototype/A-type/html/A-type-2" className="linked" target="_blank">A타입인터랙션 샘플2</Link>
+                        </td>
+                        <td className={styles.user}>이병철</td>
+                        <td className={styles.date}><span></span></td>
+                        <td className={styles.cf1}></td>
+                        <td className={styles.note}></td>
+                    </tr>
+                    <tr>
                         <td className="lv2">B타입 인터랙션</td>
                         <td className="lv3"></td>
                         <td className="lv4"></td>
@@ -67,7 +83,7 @@ export const Worklist = () => {
                         <td className="lv7"></td>
                         <td className={styles.func}>
                             <input type="radio" className={styles['iframe-select']} name="iframename" />
-                            <Link to="./prototype/B-type/html/B-type" className="linked" target="_blank">B타입인터랙션 샘플</Link>
+                            <Link to="/prototype/B-type/html/B-type" className="linked" target="_blank">B타입인터랙션 샘플</Link>
                         </td>
                         <td className={styles.user}>이병철</td>
                         <td className={styles.date}><span></span></td>
@@ -83,7 +99,7 @@ export const Worklist = () => {
                         <td className="lv7"></td>
                         <td className={styles.func}>
                             <input type="radio" className={styles['iframe-select']} name="iframename" />
-                            <Link to="./html/_FW/fw_product_detail" className="linked" target="_blank">템플릿</Link>
+                            <Link to="/html/_FW/fw_product_detail" className="linked" target="_blank">템플릿</Link>
                         </td>
                         <td className={styles.user}>이원익</td>
                         <td className={styles.date}><span>240112</span></td>
