@@ -1,6 +1,8 @@
 @charset "utf-8";
 
 /* 헤더 버튼 */
+.page {height:100%; color:var(--font1);}
+.page .header {display: block;height:5rem;}
 .page .header .inner {display: flex; align-items: center; position: fixed; top: 0; left: 0; z-index: 200; width: 100%; height: 5rem; padding: .5rem var(--in); background-color: var(--bg-root);}
 .page .header .title {overflow: hidden; white-space: nowrap; text-overflow: ellipsis; position: absolute; top: 50%; left: 50%; max-width: calc(100% - 18rem); color: var(--font1); font-weight: bold; font-size: 1.6rem; line-height: 1.2; text-align: left; transform: translate(-50%, -50%); letter-spacing: -.1rem;}
 .header .func {display:flex; align-items:center; height:2.4rem; background-color:transparent; font-size:1.4rem; white-space:nowrap; color:var(--F02)}
