@@ -115,7 +115,7 @@ export const Worklist = () => {
                         <td className="lv7"></td>
                         <td className={styles.func}>
                             <input type="radio" className={styles['iframe-select']} name="iframename" />
-                            <Link to='./html/_PD/FMDC-temp' className='linked' target='_blank'>FMDC-temp</Link>
+                            <Link to='/html/_PD/FMDC-temp' className='linked' target='_blank'>FMDC-temp</Link>
                         </td>
                         <td className={styles.user}>이원익</td>
                         <td className={styles.date}>240112</td>

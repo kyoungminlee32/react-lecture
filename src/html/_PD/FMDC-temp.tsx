@@ -149,10 +149,10 @@ export const FMDCTemp = () => {
 
                     {/* 상품 서브타이틀 영역 */}
                     <ProductSubtitleArea
-                      baseRate={productCostSummary.baseRate}
-                      topRate={productCostSummary.topRate}
-                      costDescription={productCostSummary.description}
-                      infoItems={productInfoItems}
+                        baseRate={productCostSummary.baseRate}
+                        topRate={productCostSummary.topRate}
+                        costDescription={productCostSummary.description}
+                        infoItems={productInfoItems}
                     />
 
                     {/* 상품 액션 버튼 영역 */}

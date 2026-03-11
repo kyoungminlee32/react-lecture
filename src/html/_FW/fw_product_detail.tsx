@@ -188,6 +188,7 @@ export const FwProductDetail = () => {
                     </div>
                     {/* 상품 서브타이틀 영역 */}
                     <ProductSubtitleArea
+                      maxLabel='최대'
                       maxAmount={productCostSummary.maxAmount}
                       baseRate={productCostSummary.baseRate}
                       topRate={productCostSummary.topRate}
