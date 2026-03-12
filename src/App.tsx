@@ -18,6 +18,7 @@ import { AType2 } from './prototype/A-type/html/A-type-2';
 import { BType } from './prototype/B-type/html/B-type';
 import { FwProductDetail } from './html/_FW/fw_product_detail';
 import { FMDCTemp } from './html/_PD/FMDC-temp';
+import { FMHATemp } from './html/_PD/FMHA-temp';
 
 import './assets/css/reset.css';
 import './assets/css/base.css';
@@ -52,6 +53,7 @@ function App() {
       <Route path="/prototype/B-type/html/B-type" element={<BType />} />
       <Route path="/html/_FW/fw_product_detail" element={<FwProductDetail />} />
       <Route path="/html/_PD/FMDC-temp" element={<FMDCTemp />} />
+      <Route path="/html/_PD/FMHA-temp" element={<FMHATemp />} />
       <Route 
         path="*"
         element={
