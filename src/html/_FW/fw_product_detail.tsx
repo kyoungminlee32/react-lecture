@@ -95,21 +95,21 @@ export const FwProductDetail = () => {
     {
       id: 1,
       className: 'FMDC-0801000000F01_1',
-      title: '내집마련의 첫걸음!',
+      titleHtml: '내집마련의 첫걸음!',
       descriptionHtml:
         '내 집마련의 필수! 국민 주택과 민영주택의<br>청약권이 부여되는 적금이예요!',
     },
     {
       id: 2,
       className: 'FMDC-0801000000F01_2',
-      title: '내집마련의 첫걸음!',
+      titleHtml: '내집마련의 첫걸음!',
       descriptionHtml:
         '내 집마련의 필수! 국민 주택과 민영주택의<br>청약권이 부여되는 적금이예요!',
     },
     {
       id: 3,
       className: 'FMDC-0801000000F01_3',
-      title: '내집마련의 첫걸음!',
+      titleHtml: '내집마련의 첫걸음!',
       descriptionHtml:
         '내 집마련의 필수! 국민 주택과 민영주택의<br>청약권이 부여되는 적금이예요!',
     },

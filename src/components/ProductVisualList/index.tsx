@@ -1,7 +1,7 @@
 export interface VisualItem {
   id: number;
   className: string;
-  title: string;
+  titleHtml: string;
   descriptionHtml: string;
 }
 
@@ -14,7 +14,9 @@ export const ProductVisualList = ({ items }: ProductVisualListProps) => (
     {items.map((item) => (
       <li key={item.id} className={item.className}>
         <div className='inner'>
-          <h3>{item.title}</h3>
+          <h3
+            dangerouslySetInnerHTML={{ __html: item.titleHtml }}
+          />
           <p
             className='visual-para'
             dangerouslySetInnerHTML={{ __html: item.descriptionHtml }}

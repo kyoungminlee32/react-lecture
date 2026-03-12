@@ -122,6 +122,22 @@ export const Worklist = () => {
                         <td className={styles.cf1}></td>
                         <td className={styles.note}></td>
                     </tr>
+                    <tr>
+                        <td className="lv2">상품상세 템플릿</td>
+                        <td className="lv3">퇴직연금</td>
+                        <td className="lv4"></td>
+                        <td className="lv5"></td>
+                        <td className="lv6"></td>
+                        <td className="lv7"></td>
+                        <td className={styles.func}>
+                            <input type="radio" className={styles['iframe-select']} name="iframename" />
+                            <Link to='/html/_PD/FMHA-temp' className='linked' target='_blank'>FMHA-temp</Link>
+                        </td>
+                        <td className={styles.user}>이원익</td>
+                        <td className={styles.date}>240112</td>
+                        <td className={styles.cf1}></td>
+                        <td className={styles.note}></td>
+                    </tr>
                 </tbody>
             </table>
         </main>

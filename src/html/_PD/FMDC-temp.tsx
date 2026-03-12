@@ -53,21 +53,21 @@ export const FMDCTemp = () => {
     {
       id: 1,
       className: 'FMDC-0801000000F01_1',
-      title: '내집마련의 첫걸음!',
+      titleHtml: '내집마련의 첫걸음!',
       descriptionHtml:
         '내 집마련의 필수! 국민 주택과 민영주택의<br>청약권이 부여되는 적금이예요!',
     },
     {
       id: 2,
       className: 'FMDC-0801000000F01_2',
-      title: '국내 거주자는 누구나 가입 가능',
+      titleHtml: '국내 거주자는 누구나 가입 가능',
       descriptionHtml:
         '복잡한 우대조건 없이 시장실세금리를 반영, 가입시점의 약정이율을 만기까지 지급돼요',
     },
     {
       id: 3,
       className: 'FMDC-0801000000F01_3',
-      title: '거래조건 충족 시 청약권 부여',
+      titleHtml: '거래조건 충족 시 청약권 부여',
       descriptionHtml:
         '매월 2~50만원 이하의 금액을 자유롭게 납입하고, 신규 분양주택 청약이 가능',
     },
