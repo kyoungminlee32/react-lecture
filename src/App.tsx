@@ -19,6 +19,10 @@ import { BType } from './prototype/B-type/html/B-type';
 import { FwProductDetail } from './html/_FW/fw_product_detail';
 import { FMDCTemp } from './html/_PD/FMDC-temp';
 import { FMHATemp } from './html/_PD/FMHA-temp';
+import { FMAA0100000000F01B } from './html/UD/FMAA-0100000000F01-B';
+import { FMAA0200000000F01B } from './html/UD/FMAA-0200000000F01-B';
+import { FMAA0300000000F01B } from './html/UD/FMAA-0300000000F01-B';
+import { FMAA0400000000F01B } from './html/UD/FMAA-0400000000F01-B';
 
 import './assets/css/reset.css';
 import './assets/css/base.css';
@@ -54,6 +58,10 @@ function App() {
       <Route path="/html/_FW/fw_product_detail" element={<FwProductDetail />} />
       <Route path="/html/_PD/FMDC-temp" element={<FMDCTemp />} />
       <Route path="/html/_PD/FMHA-temp" element={<FMHATemp />} />
+      <Route path="/html/UD/FMAA-0100000000F01-B" element={<FMAA0100000000F01B />} />
+      <Route path="/html/UD/FMAA-0200000000F01-B" element={<FMAA0200000000F01B />} />
+      <Route path="/html/UD/FMAA-0300000000F01-B" element={<FMAA0300000000F01B />} />
+      <Route path="/html/UD/FMAA-0400000000F01-B" element={<FMAA0400000000F01B />} />
       <Route 
         path="*"
         element={
