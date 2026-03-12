@@ -5,6 +5,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const legacyJQuery = require('./assets/js/jquery-3.6.0.min.js');
+(window as any).$ = (window as any).$ || (window as any).jQuery || legacyJQuery;
+(window as any).jQuery = (window as any).jQuery || (window as any).$ || legacyJQuery;
+require('./assets/js/common-ui.js');
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

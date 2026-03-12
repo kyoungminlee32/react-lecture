@@ -1,3 +1,4 @@
+/* eslint-disable */
 //userAgent 임시값 
 var opa = {
     exeStatus : 0,

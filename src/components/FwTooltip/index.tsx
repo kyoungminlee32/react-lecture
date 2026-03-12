@@ -19,6 +19,7 @@ export const FwTooltip = ({
 }: FwTooltipProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isReversed, setIsReversed] = useState(false);
+  const [panelShiftX, setPanelShiftX] = useState(0);
   const tooltipRef = useRef<HTMLSpanElement>(null);
   const panelRef = useRef<HTMLSpanElement>(null);
   const panelId = useId();
@@ -26,6 +27,7 @@ export const FwTooltip = ({
   useEffect(() => {
     if (!isOpen) {
       setIsReversed(false);
+      setPanelShiftX(0);
       return;
     }
 
@@ -40,8 +42,21 @@ export const FwTooltip = ({
     const panelRect = panelElement.getBoundingClientRect();
     const bottomOverflow = triggerRect.bottom + 16 + panelRect.height > window.innerHeight;
     const topSpace = triggerRect.top;
+    const triggerCenterX = triggerRect.left + triggerRect.width / 2;
+    const centeredLeft = triggerCenterX - panelRect.width / 2;
+    const centeredRight = centeredLeft + panelRect.width;
+    const viewportPadding = 16;
+
+    let nextPanelShiftX = 0;
+
+    if (centeredLeft < viewportPadding) {
+      nextPanelShiftX = viewportPadding - centeredLeft;
+    } else if (centeredRight > window.innerWidth - viewportPadding) {
+      nextPanelShiftX = window.innerWidth - viewportPadding - centeredRight;
+    }
 
     setIsReversed(bottomOverflow && topSpace > panelRect.height);
+    setPanelShiftX(nextPanelShiftX);
   }, [isOpen]);
 
   useEffect(() => {
@@ -111,6 +126,11 @@ export const FwTooltip = ({
         id={panelId}
         className="panel"
         role="tooltip"
+        style={{
+          left: '50%',
+          transform: `translateX(calc(-50% + ${panelShiftX}px))`,
+          minWidth: 'calc(100vw - 3.6rem)',
+        }}
         onClick={handlePanelClick}
       >
         {title ? <strong className="title">{title}</strong> : null}
