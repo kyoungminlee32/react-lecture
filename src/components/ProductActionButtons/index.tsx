@@ -5,6 +5,7 @@ interface ProductActionButtonsProps {
   showJoin?: boolean;
   consultLabel?: string;
   joinLabel?: string;
+  joinButtonClass?: string;
   rootClass?: string;
   onConsult?: () => void;
   onJoin?: () => void;
@@ -17,6 +18,7 @@ export const ProductActionButtons = ({
   showJoin = true,
   consultLabel = '상담',
   joinLabel = '가입하기',
+  joinButtonClass = '-primary',
   rootClass = '',
   onConsult,
   onJoin,
@@ -34,7 +36,7 @@ export const ProductActionButtons = ({
         {showJoin && (
           <button
             type="button"
-            className={`button -lg -primary${active ? '' : ' -disabled'}`}
+            className={`button -lg ${joinButtonClass}${active ? '' : ' -disabled'}`}
             disabled={!active}
             onClick={onJoin}
           >

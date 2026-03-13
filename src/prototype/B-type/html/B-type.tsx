@@ -12,15 +12,12 @@ import { SlidePopup } from '../../../components/SlidePopup';
 import { FwSegments } from '../../../components/FwSegments';
 import { FwH3Group } from '../../../components/FwH3Group';
 
-type DocMethod = 'email' | 'sms';
-
 const MAX_STEP = 12;
 
 export const BType = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [activeLayer, setActiveLayer] = useState<string | null>(null);
-  const [docMethod, setDocMethod] = useState<DocMethod>('email');
   const [samePasswordAsWithdrawAccount, setSamePasswordAsWithdrawAccount] = useState(false);
   const [switchTaxFreeOn, setSwitchTaxFreeOn] = useState(true);
   const [switchMaturityOn, setSwitchMaturityOn] = useState(true);
@@ -60,12 +57,12 @@ export const BType = () => {
                 <FwSelectField
                   label="가입기간"
                   valueText="12개월"
-                  onSelect={() => openLayer('layer')}
+                  onClick={() => openLayer('layer')}
                 />
                 <FwSelectField
                   label="이자 받는 방법"
                   valueText="만기"
-                  onSelect={() => openLayer('layer1')}
+                  onClick={() => openLayer('layer1')}
                 />
 
                 <div className="field">
@@ -146,42 +143,40 @@ export const BType = () => {
 
                 <div className="field">
                   <label className="label">계약서류 받는 방법</label>
-                  <FwSegments
-                    value={docMethod}
-                    onChange={(v) => setDocMethod(v as DocMethod)}
-                    tabs={[
-                      {
-                        key: 'email',
-                        label: '이메일',
-                        panel: (
-                          <div className="field">
-                            <label htmlFor="email" className="label">이메일</label>
-                            <div className="mix">
-                              <div className="text" data-clear="false">
-                                <input type="text" id="email" title="이메일 아이디" />
-                              </div>
-                              <div className="at">@</div>
-                              <div className="select">
-                                <button type="button">gmail.com</button>
-                              </div>
-                            </div>
-                          </div>
-                        ),
-                      },
-                      {
-                        key: 'sms',
-                        label: '문자메시지',
-                        panel: (
-                          <div className="field">
-                            <label htmlFor="sms-name" className="label">문자메시지</label>
-                            <div className="text">
-                              <input type="text" id="sms-name" defaultValue="" placeholder="이름을 입력하세요" />
-                            </div>
-                          </div>
-                        ),
-                      },
-                    ]}
-                  />
+                   <FwSegments
+                      tabs={[
+                          {
+                              value: 'email',
+                              label: '이메일',
+                              panel: (
+                                <div className="field">
+                                    <label htmlFor="email" className="label -textless">이메일</label>
+                                    <div className="mix">
+                                        <div className="text -textless" data-clear="false">
+                                            <input type="text" id="email" title="이메일 아이디" />
+                                        </div>
+                                        <div className="at">@</div>
+                                        <div className="select">
+                                            <button type="button">gmail.com</button>
+                                        </div>
+                                    </div>
+                                </div>
+                              ),
+                          },
+                          {
+                              value: 'sms',
+                              label: '문자메시지',
+                              panel: (
+                                <div className="field">
+                                    <label htmlFor="smsName" className="label">문자메시지</label>
+                                    <div className="text -textless">
+                                        <input type="text" id="smsName" placeholder="이름을 입력하세요" />
+                                    </div>
+                                </div>
+                              ),
+                          },
+                      ]}
+                    />
                 </div>
 
                 <hr className="hr -xl" />

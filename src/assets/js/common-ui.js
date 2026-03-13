@@ -1,7 +1,54 @@
+/* eslint-disable */
 //userAgent 임시값 
 var opa = {
     exeStatus : 0,
 }
+
+var anime = (function() {
+    if (typeof window !== 'undefined' && typeof window.anime === 'function') {
+        return window.anime;
+    }
+
+    var fallbackAnime = function(options) {
+        if (!options) {
+            return {};
+        }
+
+        if (typeof options.begin === 'function') {
+            options.begin();
+        }
+
+        if (options.targets && typeof options.scrollTop === 'number') {
+            try {
+                options.targets.scrollTop = options.scrollTop;
+            } catch (e) {
+                // ignore fallback assignment failures
+            }
+        }
+
+        if (typeof options.complete === 'function') {
+            var duration = typeof options.duration === 'number' ? options.duration : 0;
+            setTimeout(function() {
+                options.complete();
+            }, duration);
+        }
+
+        return {
+            pause: function() {},
+            play: function() {},
+        };
+    };
+
+    fallbackAnime.stagger = function() {
+        return 0;
+    };
+
+    if (typeof window !== 'undefined' && typeof window.anime !== 'function') {
+        window.anime = fallbackAnime;
+    }
+
+    return fallbackAnime;
+}());
 
 // html 파일 로드 (퍼블확인용)
 //2024-06-27 개발요청으로 코드 수정
@@ -321,7 +368,9 @@ var UI = (function() {
             var isOpen = parent.classList.contains('-active');
 
 
-            var root = target.closest('.container').parentNode;
+            var container = target.closest('.container');
+            if (!container || !container.parentNode) return;
+            var root = container.parentNode;
             var rootID = root.id;
 
             var isPage = root.classList.contains('page');
@@ -376,13 +425,13 @@ var UI = (function() {
                         var alertHeightProfit = Math.abs(alertCompareHeight - tooltipTotalHeight);
 
                         function pageBuffer() {
-                            if (tooltipTotalHeight >= comparePageHeight) {
-                                buffer.add(heightProfit);
+                            if (tooltipTotalHeight >= comparePageHeight && window.buffer) {
+                                window.buffer.add(heightProfit);
                             }
                         }
 
                         function popupLayerBuffer() {
-                            if (isPopup && tooltipTotalHeight >= comparePageHeight) {
+                            if (isPopup && tooltipTotalHeight >= comparePageHeight && window[root.id] && window[root.id].buffer) {
                                 window[root.id].buffer.add(heightProfit)
                             }
 
@@ -433,13 +482,13 @@ var UI = (function() {
                 });
 
                 function pageBufferRevert() {
-                    if (buffer.isEdited == true) {
-                        buffer.revert();
+                    if (window.buffer && window.buffer.isEdited == true) {
+                        window.buffer.revert();
                     }
                 }
 
                 function popupLayerBufferRevert() {
-                    if (isPopup && window[root.id].buffer.isEdited == true) {
+                    if (isPopup && window[root.id] && window[root.id].buffer && window[root.id].buffer.isEdited == true) {
                         window[root.id].buffer.revert();
                     }
 
@@ -768,7 +817,9 @@ var UI = (function() {
 
     function textfield() {
         document.addEventListener('input', function(e) {
-            if ((e.target.parentNode.classList.contains('text') || e.target.parentNode.classList.contains('textarea')) === false) return;
+            var parent = e.target && e.target.parentNode;
+            if (!parent || !parent.classList) return;
+            if ((parent.classList.contains('text') || parent.classList.contains('textarea')) === false) return;
 
             var target = e.target;
             var id = target.id || target.dataset.id;
@@ -796,7 +847,9 @@ var UI = (function() {
         });
 
         document.addEventListener('focusin', function(e) {
-            if ((e.target.parentNode.classList.contains('text') || e.target.parentNode.classList.contains('textarea') ) === false) return;
+            var parent = e.target && e.target.parentNode;
+            if (!parent || !parent.classList) return;
+            if ((parent.classList.contains('text') || parent.classList.contains('textarea') ) === false) return;
 
             var target = e.target;
             var id = target.id || target.dataset.id;
@@ -804,9 +857,12 @@ var UI = (function() {
             var isClear = target.parentNode.dataset.clear ? false: true;
             var isReadonly = target.readOnly;
             var numCall = e.target.classList.contains('num-call');
-            var root = target.closest('.container').parentNode;
+            var container = target.closest('.container');
+            if (!container || !container.parentNode) return;
+            var root = container.parentNode;
             var rootID = root.id;
             var contents = root.querySelector('.contents');
+            if (!contents) return;
             var fixer = [].filter.call(contents.children, function(x) { return x.classList.contains('fixer');})[0];
             var isPage = root.classList.contains('page');
             var isPopup = root.classList.contains('popup');
@@ -816,7 +872,9 @@ var UI = (function() {
             if (label) {label.classList.add('-focused');}
 
             target.parentNode.classList.add('-focused');
-            target.parentNode.parentNode.classList.add('-focused');
+            if (target.parentNode.parentNode && target.parentNode.parentNode.classList) {
+                target.parentNode.parentNode.classList.add('-focused');
+            }
             //2025-01-10 input value 선택등으로 입력시 초기화
             if (target.value.length > 0) {
                 target.parentNode.classList.remove('-textless');
@@ -857,7 +915,9 @@ var UI = (function() {
                         setTimeout(function() {
                             // if (root.scrollHeight > root.offsetHeight) {
                                 fixer.classList.add('position-static');
-                                buffer.set(0);
+                                if (window.buffer) {
+                                    window.buffer.set(0);
+                                }
                             /* } 
                             else {
                                 // fixer.classList.add('position-absolute');
@@ -869,7 +929,9 @@ var UI = (function() {
                         setTimeout(function() {
                             if (contents.scrollHeight > contents.offsetHeight) {
                                 fixer.classList.add('position-static');
-                                window[rootID].buffer.set(0);
+                                if (window[rootID] && window[rootID].buffer) {
+                                    window[rootID].buffer.set(0);
+                                }
                             } else {
                                 // fixer.classList.add('position-absolute');
                             }
@@ -878,27 +940,36 @@ var UI = (function() {
 
                     if (isLayer) {
                         fixer.classList.add('position-static');
-                        window[rootID].buffer.set(0);
+                        if (window[rootID] && window[rootID].buffer) {
+                            window[rootID].buffer.set(0);
+                        }
                     }
 
                     if (isAlert) {
                         fixer.classList.add('position-static');
-                        window[rootID].buffer.set(0);
+                        if (window[rootID] && window[rootID].buffer) {
+                            window[rootID].buffer.set(0);
+                        }
                     }
                 }
             }
         });
 
         document.addEventListener('focusout', function(e) {
-            if ((e.target.parentNode.classList.contains('text') || e.target.parentNode.classList.contains('textarea')) === false) return;
+            var parent = e.target && e.target.parentNode;
+            if (!parent || !parent.classList) return;
+            if ((parent.classList.contains('text') || parent.classList.contains('textarea')) === false) return;
 
             var target = e.target;
             var id = target.id || target.dataset.id;
             var label = document.querySelector('[for="'+ id +'"]');
             var isReadonly = target.readOnly;
-            var root = target.closest('.container').parentNode;
+            var container = target.closest('.container');
+            if (!container || !container.parentNode) return;
+            var root = container.parentNode;
             var rootID = root.id;
             var contents = root.querySelector('.contents');
+            if (!contents) return;
             var fixer = [].filter.call(contents.children, function(x) { return x.classList.contains('fixer'); })[0];
             var isPage = root.classList.contains('page');
             var isPopup = root.classList.contains('popup');
@@ -908,14 +979,16 @@ var UI = (function() {
             if (label) {label.classList.remove('-focused');}
 
             target.parentNode.classList.remove('-focused');
-            target.parentNode.parentNode.classList.remove('-focused');
+            if (target.parentNode.parentNode && target.parentNode.parentNode.classList) {
+                target.parentNode.parentNode.classList.remove('-focused');
+            }
             
 
             if (target.parentNode.querySelector('.clear')) {
                 var $focus = target.parentNode.querySelector('.clear').closest('.text')
                 console.log($focus)
                 setTimeout(function() {
-                    if ($focus.classList.contains('-focused')) {
+                    if ($focus && $focus.classList && $focus.classList.contains('-focused')) {
                         target.parentNode.querySelector('.clear').setAttribute('aria-hidden','false');
                     }else{
                         target.parentNode.querySelector('.clear').setAttribute('aria-hidden','true');
@@ -929,7 +1002,9 @@ var UI = (function() {
                         setTimeout(function() {
                             // if (root.scrollHeight > root.offsetHeight) {
                                 fixer.classList.remove('position-static');
-                                buffer.revert();
+                                if (window.buffer) {
+                                    window.buffer.revert();
+                                }
                             /* } else {
                                 // fixer.classList.remove('position-absolute');
                             } */
@@ -940,7 +1015,9 @@ var UI = (function() {
                         setTimeout(function() {
                             if (contents.scrollHeight > contents.offsetHeight) {
                                 fixer.classList.remove('position-static');
-                                window[rootID].buffer.revert();
+                                if (window[rootID] && window[rootID].buffer) {
+                                    window[rootID].buffer.revert();
+                                }
                             } else {
                                 // fixer.classList.remove('position-absolute');
                             }
@@ -949,27 +1026,36 @@ var UI = (function() {
 
                     if (isLayer) {
                         fixer.classList.remove('position-static');
-                        window[rootID].buffer.revert();
+                        if (window[rootID] && window[rootID].buffer) {
+                            window[rootID].buffer.revert();
+                        }
                     }
 
                     if (isAlert) {
                         fixer.classList.remove('position-static');
-                        window[rootID].buffer.revert();
+                        if (window[rootID] && window[rootID].buffer) {
+                            window[rootID].buffer.revert();
+                        }
                     }
                 }
             }
         });
 
         document.addEventListener('click', function(e) {
-            if ((e.target.parentNode.classList.contains('text') || e.target.parentNode.classList.contains('textarea')) === false) return;
+            var parent = e.target && e.target.parentNode;
+            if (!parent || !parent.classList) return;
+            if ((parent.classList.contains('text') || parent.classList.contains('textarea')) === false) return;
             if (e.target.readOnly || e.target.disabled) return;
             if (e.target.parentNode.dataset.scroll === 'false') return;
 
             var target = e.target;
             var targetID = target.id || target.dataset.id;
-            var root = target.closest('.container').parentNode;
+            var container = target.closest('.container');
+            if (!container || !container.parentNode) return;
+            var root = container.parentNode;
             var rootID = root.id;
             var contents = root.querySelector('.contents');
+            if (!contents) return;
             var content = root.querySelector('.content');
             var label = document.querySelector('[for="'+ targetID +'"]');
             var targetOffset = label ? label.getBoundingClientRect().top : target.getBoundingClientRect().top;
@@ -982,10 +1068,10 @@ var UI = (function() {
                 setTimeout( function() {
                     if (root.classList.contains('page'))  {
                         scrollTarget = document.documentElement;
-                        targetScrollTop = scrollTarget.scrollTop + targetOffset - information.upperHeight;
+                        targetScrollTop = scrollTarget.scrollTop + targetOffset - ((window.information && window.information.upperHeight) || 0);
                     } else {
                         scrollTarget = contents;
-                        targetScrollTop = scrollTarget.scrollTop + targetOffset - window[rootID].information.upperHeight;
+                        targetScrollTop = scrollTarget.scrollTop + targetOffset - ((window[rootID] && window[rootID].information && window[rootID].information.upperHeight) || 0);
                     } 
                     anime({
                         targets: scrollTarget,
@@ -1290,17 +1376,21 @@ var UI = (function() {
         return {
             open: function(id, isPLA) {
                 var zIndex = stack.push();
+                var targetElement = document.querySelector(id);
+                if (!targetElement) {
+                    return;
+                }
 
                 dim.dataset.id = id.slice(1);
 
                 if (isPLA) {
-                    document.querySelector(id).insertAdjacentElement('beforebegin', dim);
+                    targetElement.insertAdjacentElement('beforebegin', dim);
                 } else {
                     document.body.append(dim);
                 }
 
                 // 20231206 이원익 추가
-                if (document.querySelector(id).classList.contains('dimWhiteLayer')) {
+                if (targetElement.classList.contains('dimWhiteLayer')) {
                     dim.classList.add('dimWhite');
                 }
                 // 20231206 이원익
@@ -1740,11 +1830,15 @@ function PLA(type) {
         open: function(id, callback) {
             window[id] = new type('#'+ id);
 
-            window[id].open(callback);
+            if (window[id] && typeof window[id].open === 'function') {
+                window[id].open(callback);
+            }
         },
 
         close: function(id, callback, isRemove) {
-            window[id].close(callback, isRemove);
+            if (window[id] && typeof window[id].close === 'function') {
+                window[id].close(callback, isRemove);
+            }
         },
     }
 }
@@ -2217,11 +2311,19 @@ function procuctDatailAct() {
                 $ScTarget = window;
             }
 
+            if (!$ScTarget || typeof $ScTarget.addEventListener !== 'function') {
+                $ScTarget = window;
+            }
+
             $ScTarget.addEventListener('scroll',function () {
                 var fixTab = $productWrap.querySelector('.procuct-info');
                 if (fixTab !== null) {
+                    var productOther = $productWrap.querySelector('.product-other');
+                    if (!productOther) {
+                        return;
+                    }
                     var fixTabTop = fixTab.getBoundingClientRect().top;  
-                    var fixTabNext = $productWrap.querySelector('.product-other').getBoundingClientRect().top - 98;
+                    var fixTabNext = productOther.getBoundingClientRect().top - 98;
                     if (fixTabTop < 50) {
                         fixTab.classList.add('-fixed');
                         //보험 상품상세만 하단 버튼 나오는 시기 분리
@@ -2249,10 +2351,15 @@ function procuctDatailAct() {
 
                 if ($topJoinBtn !== null) {
                     var $topJoinBtnPos = $topJoinBtn.getBoundingClientRect().top - 35 ;
+                    var $productFixer = document.querySelector('.fixer.-jsProcuctBtn');
                     if ($topJoinBtnPos < 0) {
-                        document.querySelector('.fixer.-jsProcuctBtn').classList.add('-active')
+                        if ($productFixer) {
+                            $productFixer.classList.add('-active')
+                        }
                     }else{
-                        document.querySelector('.fixer.-jsProcuctBtn').classList.remove('-active')
+                        if ($productFixer) {
+                            $productFixer.classList.remove('-active')
+                        }
                     }
                 }
     

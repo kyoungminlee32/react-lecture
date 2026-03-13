@@ -179,8 +179,6 @@ export const FMDCTemp = () => {
                 <div className="procuct-info">
                   <FwSegments
                     tabStyle
-                    value={activeTab}
-                    onChange={(v) => setActiveTab(v as TabId)}
                     tabs={[
                       {
                         value: 'segment01',
