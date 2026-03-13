@@ -205,7 +205,7 @@ export const FwProductDetail = () => {
                     />
                   </div>
 
-                  <div className='loadArea' data-includ='ID_vidu.html' />
+                  {/* <div className='loadArea' data-includ='ID_vidu.html' /> */}
                   {/* 상품 비주얼 리스트 영역 */}
                   <ProductVisualList items={productVisualItems} />
                   {/* 금리 계산해보기 */}
@@ -365,7 +365,7 @@ export const FwProductDetail = () => {
                         label: '유의사항',
                         panel: (
                           <>
-                            <div className='loadArea' data-includ='ex3.html' />
+                            {/* <div className='loadArea' data-includ='ex3.html' /> */}
                             <p className='p'>
                               청약 금액의 일부 인출은 불가능하며, 필요 시는 본인
                               명의 대출에 담보 제공가능 합니다.
@@ -378,7 +378,7 @@ export const FwProductDetail = () => {
                         label: '기타사항',
                         panel: (
                           <>
-                            <div className='loadArea' data-includ='ex4.html' />
+                            {/* <div className='loadArea' data-includ='ex4.html' /> */}
                             <p className='p'>
                               실명확인증표 - 주민등록증, 운전면허증,
                               외국인등록증, 외국국적동포국내거소신고증 등
@@ -496,10 +496,10 @@ export const FwProductDetail = () => {
                     links={agreeLinks}
                     onSelect={onSelectAgreeDoc}
                   />
-                  <div
+                  {/* <div
                     className='loadArea'
                     data-includ='/content/nhbank/html/cn/common/protect01.html'
-                  />
+                  /> */}
                   <div className='product-deliberate'>
                     <p className='p'>
                       준법감시심의필 000-0000(심의일:YYYY.MM.DD)
