@@ -54,7 +54,13 @@ export const AType = () => {
     <div className="page">
       <div className="container">
         {/* 헤더 영역 */}
-        <FwHeader title="예금가입" showBack rightText="취소" onBack={goBack} onAction={onCancel} />
+        <FwHeader title="예금가입" showBack={true} showHome={true} rightText="취소" onBack={goBack} onAction={onCancel}
+          leftSlot = { 
+            <button type="button" className="func -home">
+                <span className="hide">홈</span>
+            </button>
+          }
+        />
 
         <main className="contents">
           <div className="content progress-layout">
@@ -248,11 +254,10 @@ export const AType = () => {
                   </label>
                   {/* 탭 */}
                   <FwSegments
-                    value={docMethod}
-                    onChange={(v) => setDocMethod(v as DocMethod)}
+                    tabStyle
                     tabs={[
                       {
-                        key: 'email',
+                        value: 'email',
                         label: '이메일',
                         panel: (
                           <div className="field">
@@ -270,7 +275,7 @@ export const AType = () => {
                         ),
                       },
                       {
-                        key: 'sms',
+                        value: 'sms',
                         label: '문자메시지',
                         panel: (
                           <div className="field">

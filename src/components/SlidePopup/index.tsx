@@ -177,6 +177,7 @@ export const SlidePopup = ({
               rootClass="action-buttons"
               joinLabel="확인"
               showConsult={false}
+              active
               onJoin={() => closePopup('layer2')}
             />
           </div>

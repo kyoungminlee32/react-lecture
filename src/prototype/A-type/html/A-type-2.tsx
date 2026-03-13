@@ -13,22 +13,24 @@ import { FwAccountInfo } from '../../../components/FwAccountInfo';
 import { FwH3Group } from '../../../components/FwH3Group';
 // 7.셀렉트 필드 컴포넌트
 import { FwSelectField } from '../../../components/FwSelectField';
-// 8.상품 액션 버튼 컴포넌트
+// 8.인풋 필드 컴포넌트
+import { FwInputField } from '../../../components/FwInputField';
+// 9.금액인풋 필드 컴포넌트
+import { FwAmountField } from '../../../components/FwAmountField';
+// 10.상품 액션 버튼 컴포넌트
 import { ProductActionButtons } from '../../../components/ProductActionButtons';
-// 9.슬라이드 팝업 컴포넌트
+// 11.슬라이드 팝업 컴포넌트
 import { SlidePopup } from '../../../components/SlidePopup';
 // 탭 컴포넌트
 import { FwSegments } from '../../../components/FwSegments';
 
-type DocMethod = 'email' | 'sms';
-
 export const AType2 = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [activeLayer, setActiveLayer] = useState<string | null>(null);
-  const [docMethod, setDocMethod] = useState<DocMethod>('email');
   const [samePasswordAsWithdrawAccount, setSamePasswordAsWithdrawAccount] = useState(false);
   const [switchTaxFreeOn, setSwitchTaxFreeOn] = useState(true);
   const [switchMaturityOn, setSwitchMaturityOn] = useState(true);
+  const [phone, setPhone] = useState('');
   const [switchCouponOn, setSwitchCouponOn] = useState(true);
   const [switchNhPointOn, setSwitchNhPointOn] = useState(true);
   const [switchBranchStaffOn, setSwitchBranchStaffOn] = useState(true);
@@ -49,7 +51,7 @@ export const AType2 = () => {
     setIsPopupOpen(true);
   };
 
-  const closePopup = (_layerId?: string | null) => {
+  const closePopup = (layerName?: string | null) => {
     setIsPopupOpen(false);
     setActiveLayer(null);
   };
@@ -68,34 +70,23 @@ export const AType2 = () => {
                 <FwSelectField
                     label="가입기간"
                     valueText="12개월"
-                  onSelect={() => openLayer('layer')}
+                    onClick={() => openLayer('layer')}
                 />
 
                 {/* 이자 받는 방법 선택 */}
                 <FwSelectField
                   label="이자 받는 방법"
                   valueText="만기"
-                  onSelect={() => openLayer('layer1')}
+                  onClick={() => openLayer('layer1')}
                 />
 
                 {/* 가입금액 */}
-                <div className="field">
-                  <label htmlFor="joinAmount" className="label -readonly -textless">가입금액</label>
-                  <div className="mix">
-                    <div className="text -won -readonly -unit">
-                      <input
-                        type="tel"
-                        id="joinAmount"
-                        className="right num-call"
-                        defaultValue="700000000"
-                        onClick={() => openLayer('layer2')}
-                        readOnly
-                      />
-                      <div className="won">원</div>
-                    </div>
-                    <p className="info right">칠억원</p>
-                  </div>
-                </div>
+                <FwAmountField
+                  value="700000000"
+                  onClick={() => openLayer('layer2')}
+                  readOnly
+                  infoText="칠억원"
+                />
 
                 {/* 비과세종합저축 스위치 */}
                 <div className="field">
@@ -160,50 +151,43 @@ export const AType2 = () => {
                 </div>
 
                 {/* 휴대폰 번호 */}
-                <div className="field">
-                  <label htmlFor="phone" className="label">휴대폰 번호</label>
-                  <div className="text -textless">
-                    <input type="text" id="phone" defaultValue="" placeholder="010-0000-0000" />
-                  </div>
-                </div>
+                <FwInputField type="tel" id="phone" value={phone} placeholder="010-0000-0000" onClick={() => setPhone(phone)} />
 
                 {/* 계약서류 받는 방법 탭 */}
                 <div className="field">
                   <label htmlFor="segments-panel-email" className="label">계약서류 받는 방법</label>
                   <FwSegments
-                    value={docMethod}
-                    onChange={(v) => setDocMethod(v as DocMethod)}
                     tabs={[
-                      {
-                        key: 'email',
-                        label: '이메일',
-                        panel: (
-                          <div className="field">
-                            <label htmlFor="email" className="label -textless">이메일</label>
-                            <div className="mix">
-                              <div className="text -textless" data-clear="false">
-                                <input type="text" id="email" title="이메일 아이디" />
+                        {
+                            value: 'email',
+                            label: '이메일',
+                            panel: (
+                              <div className="field">
+                                  <label htmlFor="email" className="label -textless">이메일</label>
+                                  <div className="mix">
+                                      <div className="text -textless" data-clear="false">
+                                          <input type="text" id="email" title="이메일 아이디" />
+                                      </div>
+                                      <div className="at">@</div>
+                                      <div className="select">
+                                          <button type="button">gmail.com</button>
+                                      </div>
+                                  </div>
                               </div>
-                              <div className="at">@</div>
-                              <div className="select">
-                                <button type="button">gmail.com</button>
+                            ),
+                        },
+                        {
+                            value: 'sms',
+                            label: '문자메시지',
+                            panel: (
+                              <div className="field">
+                                  <label htmlFor="smsName" className="label">문자메시지</label>
+                                  <div className="text -textless">
+                                      <input type="text" id="smsName" placeholder="이름을 입력하세요" />
+                                  </div>
                               </div>
-                            </div>
-                          </div>
-                        ),
-                      },
-                      {
-                        key: 'sms',
-                        label: '문자메시지',
-                        panel: (
-                          <div className="field">
-                            <label htmlFor="smsName" className="label">문자메시지</label>
-                            <div className="text -textless">
-                              <input type="text" id="smsName" placeholder="이름을 입력하세요" />
-                            </div>
-                          </div>
-                        ),
-                      },
+                            ),
+                        },
                     ]}
                   />
                 </div>

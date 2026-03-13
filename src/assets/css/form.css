@@ -134,7 +134,7 @@ p.label {color:var(--font2);}
 .text input[readonly] {background-color: var(--G09);}
 .text input[readonly]:focus {border-color:var(--line1);}
 .text input.fake-readonly { background-color: var(--G10);}
-.text.-focused:not(.-textless):not([data-clear="false"]):not(.-readonly) input {padding-right:4.4rem;}
+/* .text.-focused:not(.-textless):not([data-clear="false"]):not(.-readonly) input {padding-right:4.4rem;} */
 .text[data-clear="false"] input {padding-right:2rem}
 .text input::placeholder {color:var(--placeholder-color); font-weight:500; font-size: 1.8rem; text-align: left; letter-spacing: -.1rem;} /* 20240822 접근성 폰트색상 변경 */
 .text .text-count {margin-top:1rem; padding:0; color:var(--font3); font-size:1.4rem; text-align:right;}
@@ -247,10 +247,7 @@ p.label {color:var(--font2);}
 .select > .button-type {display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; width:100%; min-height:5.4rem; padding:2.4rem 2rem 2.4rem 2rem; border:1px solid var(--line1); background:transparent url(../imgs/ico/common/ico-select-arr.png) no-repeat right 1.6rem top 50% / 2.4rem ; font-weight:500; font-size:1.8rem; border-radius: 1.2rem; text-align:left; transition:border .3s;}
 .select > .button-type.-fixed {background:transparent url(../imgs/ico/common/ico-select-arr.png) no-repeat right 2rem top 2.4rem / 2.4rem; padding:2.4rem 2rem 2.4rem 2rem; border-radius: 1.6rem;}
 .select > button.-fixed {background:transparent url(../imgs/ico/common/ico-select-arr.png) no-repeat right 2rem top 2.4rem / 2.4rem; padding:2.4rem 2rem 2.4rem 2rem; border-radius: 1.6rem;}
-/* .dark-mode .select > button {display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; width:100%; min-height:5.4rem; padding:1.2rem 4rem 1.2rem 2rem; border:1px solid var(--line1); background:transparent url(../imgs/ico/common/ico-select-arr_dk.png) no-repeat right 1.6rem top 50% / 2.4rem ; font-weight:500; font-size:1.8rem; border-radius: 1.2rem; text-align:left; transition:border .3s;} */
-/* .dark-mode .select > .button-type {display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; width:100%; min-height:5.4rem; padding:2.4rem 2rem 2.4rem 2rem; border:1px solid var(--line1); background:transparent url(../imgs/ico/common/ico-select-arr_dk.png) no-repeat right 1.6rem top 50% / 2.4rem ; font-weight:500; font-size:1.8rem; border-radius: 1.2rem; text-align:left; transition:border .3s;} */
-/* .dark-mode .select > .button-type.-fixed {background:transparent url(../imgs/ico/common/ico-select-arr_dk.png) no-repeat right 2rem top 2.4rem / 2.4rem; padding:2.4rem 2rem 2.4rem 2rem; border-radius: 1.6rem;} */
-/* .dark-mode .select > button.-fixed {background:transparent url(../imgs/ico/common/ico-select-arr_dk.png) no-repeat right 2rem top 2.4rem / 2.4rem; padding:2.4rem 2rem 2.4rem 2rem; border-radius: 1.6rem;} */
+.select > button.-inputed {background:none;padding: 1.2rem 2rem;}
 .select > button[readonly] {background-color:var(--F09);}
 .select > button[readonly]:focus {border-color:var(--line1);}
 .select > button[disabled] {background-color:var(--F09)}
