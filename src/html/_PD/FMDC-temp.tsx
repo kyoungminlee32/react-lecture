@@ -306,7 +306,7 @@ export const FMDCTemp = () => {
                         label: '유의사항',
                         panel: (
                           <>
-                            <div className="loadArea" data-includ="ex3.html"></div>
+                            {/* <div className="loadArea" data-includ="ex3.html"></div> */}
                             <p className="p">
                               청약 금액의 일부 인출은 불가능하며, 필요 시는 본인 명의 대출에 담보
                               제공가능 합니다.
@@ -319,7 +319,7 @@ export const FMDCTemp = () => {
                         label: '기타사항',
                         panel: (
                           <>
-                            <div className="loadArea" data-includ="ex4.html"></div>
+                            {/* <div className="loadArea" data-includ="ex4.html"></div> */}
                             <p className="p">
                               실명확인증표 - 주민등록증, 운전면허증, 외국인등록증,
                               외국국적동포국내거소신고증 등<br />가족이 대리가입 시 가족관계 확인서류
@@ -422,10 +422,10 @@ export const FMDCTemp = () => {
                   />
 
                   {/* 예금자보호 (관리자) */}
-                  <div
+                  {/* <div
                     className="loadArea"
                     data-includ="/content/nhbank/html/cn/common/protect01.html"
-                  ></div>
+                  ></div> */}
 
                   {/* 준법감시 심의필 (관리자) */}
                   <div className="product-deliberate">

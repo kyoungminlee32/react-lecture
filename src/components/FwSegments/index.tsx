@@ -42,7 +42,7 @@ export const FwSegments = ({
                             onClick={() => handleSelect(tab.value)}
                         >
                             {tab.label}
-                            {!tabStyle && isActive && <span className="hide">선택됨</span>}
+                            {isActive && <span className="hide">선택됨</span>}
                         </button>
                     </div>
                 );
@@ -62,7 +62,7 @@ export const FwSegments = ({
                         aria-labelledby={`${uid}-tab-${tab.value}`}
                         className={`segments-panel${isActive ? ' -active' : ''}`}
                         tabIndex={isActive ? 0 : -1}
-                        hidden={!isActive}
+                        // hidden={!isActive}
                     >
                         {tab.panel}
                     </div>
@@ -76,7 +76,7 @@ export const FwSegments = ({
             <div className={`segments${tabStyle ? ' -tabstyle' : ''}`}>
                 {tabStyle ? (
                     <div className="outer">
-                        <div className="inner">{renderTabList()}</div>
+                        {renderTabList()}
                     </div>
                 ) : (
                     renderTabList()
