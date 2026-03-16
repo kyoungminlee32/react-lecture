@@ -1,59 +1,55 @@
-import { MouseEvent } from 'react';
+import DOMPurify from 'dompurify';
 import { ProductActionButtons } from '../ProductActionButtons';
 
 interface CenterPopupProps {
     isPopupOpen: boolean;
     activeLayer?: string | null;
-    popupType?: string;
     popupTitle?: string;
     popupMessageHtml?: string;
     popupMessageHtml2?: string;
     cancelLabel?: string;
     confirmLabel?: string;
-    addButtonClass?: string;
+    confirmButtonClass?: string;
     onClose?: (layerId?: string | null) => void;
     onCancel?: () => void;
     onConfirm?: () => void;
 }
 
 export const CenterPopup = ({
-    isPopupOpen,
+    isPopupOpen = false,
+    activeLayer = null,
     popupTitle = '',
     popupMessageHtml = '',
     popupMessageHtml2 = '',
+    cancelLabel = '',
     confirmLabel = '',
-    addButtonClass = '-primary',
+    confirmButtonClass = '-primary',
     onClose,
+    onCancel,
     onConfirm,
 }: CenterPopupProps) => {
-    const handleClose = (layerId?: string | null) => {
+    const closePopup = (layerId: string) => {
         onClose?.(layerId);
-        console.log(`센터 팝업이 닫혔습니다. layerId: ${layerId}`);
+    };
+
+    const handleCancel = () => {
+        onCancel?.();
+        closePopup('layer');
     };
 
     const handleConfirm = () => {
         onConfirm?.();
-        handleClose('alert');
-        console.log('센터 팝업이 확인되었습니다. layerId: alert');
+        closePopup('layer');
     };
-
-    const closeOnBackdrop =
-        (layerId: string) => (event: MouseEvent<HTMLDivElement>) => {
-            if (event.target === event.currentTarget) {
-                handleClose(layerId);
-            }
-        };
-
-    if (!isPopupOpen) {
-        return <div className="center-popup" />;
-    }
+    const cleanHtml = DOMPurify.sanitize(popupMessageHtml);
+    const cleanHtml2 = DOMPurify.sanitize(popupMessageHtml2);
 
     return (
         <div className="center-popup">
             <div
                 id="layer"
                 className={`alert${isPopupOpen ? ' -active' : ''}`}
-                onClick={closeOnBackdrop('alert')}
+                onClick={() => activeLayer && closePopup(activeLayer)}
             >
                 <div className="container">
                     <div className="header">
@@ -64,25 +60,31 @@ export const CenterPopup = ({
 
                     <div className="contents">
                         <div className="content">
-                            <p className="p" dangerouslySetInnerHTML={{ __html: popupMessageHtml }} />
-                            {popupMessageHtml2 ? (
-                                <p className="p" dangerouslySetInnerHTML={{ __html: popupMessageHtml2 }} />
+                            <p className="p" dangerouslySetInnerHTML={{ __html: cleanHtml }} />
+                            {cleanHtml2 ? (
+                            <p className="p" dangerouslySetInnerHTML={{ __html:cleanHtml2 }} />
                             ) : null}
                         </div>
 
                         <ProductActionButtons
                             rootClass="action-buttons"
-                            showConsult={false}
+                            showCancel={false}
+                            cancelLabel={cancelLabel}
                             active={true}
-                            joinLabel={confirmLabel}
-                            joinButtonClass={addButtonClass}
-                            onJoin={handleConfirm}
+                            confirmLabel={confirmLabel}
+                            confirmButtonClass={confirmButtonClass}
+                            onCancel={handleCancel}
+                            onConfirm={handleConfirm}
                         />
                     </div>
                 </div>
             </div>
-
-            <div className="dim -active" onClick={() => handleClose('alert')} />
+            {isPopupOpen && (
+                <div
+                className={`dim${isPopupOpen ? ' -active' : ''}`}
+                onClick={() => activeLayer && closePopup(activeLayer)}
+                />
+            )}
         </div>
     );
 };

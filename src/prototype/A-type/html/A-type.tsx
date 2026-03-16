@@ -9,41 +9,43 @@ import { FwH2Group } from '../../../components/FwH2Group';
 import { FwTooltip } from '../../../components/FwTooltip';
 // 5.스위치 컴포넌트
 import { FwSwitch } from '../../../components/FwSwitch';
-// 6.세그먼트(탭형 선택) 컴포넌트
-import { FwSegments } from '../../../components/FwSegments';
 // 7.상품 액션 버튼 컴포넌트
 import { ProductActionButtons } from '../../../components/ProductActionButtons';
-
-
-
-type DocMethod = 'email' | 'sms';
-
+// 8.탭 컴포넌트
+import { FwSegments } from '../../../components/FwSegments';
+// 최대 단계 수
 const MAX_STEP = 12;
-
+// 단계별 클래스 이름 생성 함수
 const stepClassName = (step: number, currentStep: number) =>
   `step-area${currentStep === step ? ' -show' : ''}`;
 
 export const AType = () => {
+  // 현재 단계 상태
   const [currentStep, setCurrentStep] = useState(1);
-  const [docMethod, setDocMethod] = useState<DocMethod>('email');
-  const [switch2On, setSwitch2On] = useState(true);
+  // 만기알림 정보 수신 여부 스위치 상태
+  const [switchMaturityOn, setSwitchMaturityOn] = useState(true);
+  // 쿠폰 정보 수신 여부 스위치 상태
   const [switchCouponOn, setSwitchCouponOn] = useState(true);
+  // NH포인트 정보 수신 여부 스위치 상태
   const [switchNhPointOn, setSwitchNhPointOn] = useState(true);
+  // 지점 직원 정보 수신 여부 스위치 상태
   const [switchBranchStaffOn, setSwitchBranchStaffOn] = useState(true);
-
+  // 계약서류 받는 방법 탭 상태
+  const [tabValue, setTabValue] = useState('email');
+  
   const goToStep = (step: number) => {
     const safeStep = Math.min(Math.max(step, 1), MAX_STEP);
     setCurrentStep(safeStep);
   };
-
+  // 다음 단계 버튼 클릭 핸들러
   const nextStep = () => goToStep(currentStep + 1);
-
+  // 뒤로 가기 버튼 클릭 핸들러
   const goBack = () => window.history.back();
-
+  // 취소 버튼 클릭 핸들러
   const onCancel = () => {
     goToStep(1);
   };
-
+  // 인풋입력 다음 단계  핸들러
   const handleEnterGoToStep = (step: number) => (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       goToStep(step);
@@ -69,6 +71,7 @@ export const AType = () => {
 
             <div className="show-wrap">
               <div id="page1" className={stepClassName(1, currentStep)}>
+                {/* 타이틀 */}
                 <FwH2Group lines={['가입기간을 선택해 주세요']} />
                 <div className="field">
                   <div className="box-radios">
@@ -116,6 +119,7 @@ export const AType = () => {
               </div>
 
               <div id="page2" className={stepClassName(2, currentStep)}>
+                {/* 타이틀 */}
                 <FwH2Group lines={['이자 받는 방법을 선택해 주세요']} />
                 <div className="box-radios -half">
                   <div className="box-radio" id="b_page2">
@@ -140,6 +144,7 @@ export const AType = () => {
               </div>
 
               <div id="page3" className={stepClassName(3, currentStep)}>
+                {/* 타이틀 */}
                 <FwH2Group lines={['가입금액을 입력하세요']} />
                 <div className="field">
                   <div className="mix">
@@ -155,6 +160,7 @@ export const AType = () => {
               </div>
 
               <div id="page4" className={stepClassName(4, currentStep)}>
+                {/* 타이틀 */}
                 <FwH2Group lines={['비과세종합저축을 신청 하시겠습니까?']} />
                 <div className="box-radios -half">
                   <div className="box-radio">
@@ -180,6 +186,7 @@ export const AType = () => {
               </div>
 
               <div id="page5" className={stepClassName(5, currentStep)}>
+                {/* 타이틀 */}
                 <FwH2Group lines={['출금계좌를 선택하세요']} />
                 <div className="account">
                   <button type="button" data-bankcode="011" className="info" onClick={() => goToStep(7)}>
@@ -206,6 +213,7 @@ export const AType = () => {
               </div>
 
               <div id="page7" className={stepClassName(7, currentStep)}>
+                {/* 타이틀 */}
                 <FwH2Group lines={['만기알림신청 정보를 확인해 주세요']} />
                 <div className="field">
                   <div className="title-group">
@@ -224,8 +232,8 @@ export const AType = () => {
                     {/* 스위치 */}
                     <FwSwitch
                       id="switch2"
-                      checked={switch2On}
-                      onChange={setSwitch2On}
+                      checked={switchMaturityOn}
+                      onChange={setSwitchMaturityOn}
                       label="만기알림신청"
                     />
                   </div>
@@ -247,6 +255,7 @@ export const AType = () => {
               </div>
 
               <div id="page8" className={stepClassName(8, currentStep)}>
+                {/* 타이틀 */}
                 <FwH2Group lines={['계약서류 받는 방법을 선택해 주세요']} />
                 <div className="field">
                   <label htmlFor="email" className="label">
@@ -254,7 +263,8 @@ export const AType = () => {
                   </label>
                   {/* 탭 */}
                   <FwSegments
-                    tabStyle
+                    value={tabValue}
+                    onChange={setTabValue}
                     tabs={[
                       {
                         value: 'email',
@@ -292,6 +302,7 @@ export const AType = () => {
               </div>
 
               <div id="page9" className={stepClassName(9, currentStep)}>
+                {/* 타이틀 */}
                 <FwH2Group lines={['기타 선택사항을 확인해 주세요']} />
                 <div className="title-group">
                   <div className="inner">
@@ -340,10 +351,10 @@ export const AType = () => {
           <ProductActionButtons
             rootClass="b_page5"
             active={true}
-            showConsult={false}
-            showJoin={true}
-            joinLabel="다음"
-            onJoin={nextStep}
+            showCancel={false}
+            showConfirm={true}
+            confirmLabel="다음"
+            onConfirm={nextStep}
           />
         </main>
       </div>

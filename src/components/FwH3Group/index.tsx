@@ -1,8 +1,8 @@
-interface FwH3GroupProps {
-  title: string;
-}
+// interface FwH3GroupProps {
+//   title: string;
+// }
 
-export const FwH3Group = ({ title }: FwH3GroupProps) => {
+export const FwH3Group = ({ title }: { title: string }) => {
   return (
     <div className="h3-group">
       <h2 className="h3">{title}</h2>

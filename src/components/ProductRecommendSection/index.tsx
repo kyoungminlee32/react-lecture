@@ -1,6 +1,6 @@
 import { ProductHashtagList } from '../ProductHashtagList';
 
-export interface ProductRecommendItem {
+export interface RecommendItem {
     id: number;
     title: string;
     tags: string[];
@@ -8,8 +8,8 @@ export interface ProductRecommendItem {
 
 interface ProductRecommendSectionProps {
     userName?: string;
-    items?: ProductRecommendItem[];
-    onSelect?: (item: ProductRecommendItem) => void;
+    items?: RecommendItem[];
+    onSelect?: (item: RecommendItem) => void;
 }
 
 export const ProductRecommendSection = ({

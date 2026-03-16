@@ -8,12 +8,12 @@ export const FMEC0103030100F01A = () => {
     const popupMessageHtml2 = '(예:현재 만 40세의 경우 15년 입력, 적립기간 종료시 만 55세)';
 
     const onConfirm = () => {
-        console.log('[FMEC-0103030100F01-A] confirm clicked');
+        console.log('확인');
         setIsCenterPopupOpen(false);
     };
 
     const onClose = () => {
-        console.log('[FMEC-0103030100F01-A] popup closed');
+        console.log('취소');
         setIsCenterPopupOpen(false);
     };
 
@@ -34,7 +34,7 @@ export const FMEC0103030100F01A = () => {
                 popupMessageHtml={popupMessageHtml}
                 popupMessageHtml2={popupMessageHtml2}
                 confirmLabel="확인"
-                addButtonClass="-secondary"
+                confirmButtonClass="-secondary"
                 onConfirm={onConfirm}
                 onClose={onClose}
             />

@@ -7,17 +7,17 @@ export const FMAA0400000000F01B = () => {
     const popupMessageHtml = '공동인증을 이용 중입니다. <br>전자서명을 진행하시겠어요?';
 
     const onCancel = () => {
-        console.log('[FMAA-0400000000F01-B] cancel clicked');
+        console.log('취소');
         setIsSlidePopupOpen(false);
     };
 
     const onConfirm = () => {
-        console.log('[FMAA-0400000000F01-B] confirm clicked');
+        console.log('확인');
         setIsSlidePopupOpen(false);
     };
 
     const onClose = () => {
-        console.log('[FMAA-0400000000F01-B] popup closed');
+        console.log('닫기');
         setIsSlidePopupOpen(false);
     };
 
@@ -35,7 +35,7 @@ export const FMAA0400000000F01B = () => {
 
             <SlidePopup
                 isPopupOpen={isSlidePopupOpen}
-                popupType="fingerprint-sign"
+                popupType="one-popup"
                 popupTitle="간편인증 전자서명"
                 popupMessageHtml={popupMessageHtml}
                 cancelLabel="아니요"

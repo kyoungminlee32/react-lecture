@@ -6,18 +6,18 @@ export const FMAA0100000000F01B = () => {
     const [isSlidePopupOpen, setIsSlidePopupOpen] = useState(true);
     const popupMessageHtml = '지문인증을 이용 중입니다. <br>전자서명을 진행하시겠어요?';
 
-    const onCancel = () => {
-        console.log('[FMAA-0100000000F01-B] cancel clicked');
+     const onCancel = () => {
+        console.log('취소');
         setIsSlidePopupOpen(false);
     };
 
     const onConfirm = () => {
-        console.log('[FMAA-0100000000F01-B] confirm clicked');
+        console.log('확인');
         setIsSlidePopupOpen(false);
     };
 
     const onClose = () => {
-        console.log('[FMAA-0100000000F01-B] popup closed');
+        console.log('닫기');
         setIsSlidePopupOpen(false);
     };
 
@@ -35,11 +35,12 @@ export const FMAA0100000000F01B = () => {
 
             <SlidePopup
                 isPopupOpen={isSlidePopupOpen}
-                popupType="fingerprint-sign"
+                popupType="one-popup"
                 popupTitle="지문인증 전자서명"
                 popupMessageHtml={popupMessageHtml}
                 cancelLabel="아니요"
                 confirmLabel="예"
+                confirmButtonClass="-secondary"
                 onCancel={onCancel}
                 onConfirm={onConfirm}
                 onClose={onClose}

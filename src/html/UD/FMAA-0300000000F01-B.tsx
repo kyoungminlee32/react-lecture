@@ -7,17 +7,17 @@ export const FMAA0300000000F01B = () => {
     const popupMessageHtml = 'NH모바일인증을 이용 중입니다. <br>전자서명을 진행하시겠어요?';
 
     const onCancel = () => {
-        console.log('[FMAA-0300000000F01-B] cancel clicked');
+        console.log('취소');
         setIsSlidePopupOpen(false);
     };
 
     const onConfirm = () => {
-        console.log('[FMAA-0300000000F01-B] confirm clicked');
+        console.log('확인');
         setIsSlidePopupOpen(false);
     };
 
     const onClose = () => {
-        console.log('[FMAA-0300000000F01-B] popup closed');
+        console.log('닫기');
         setIsSlidePopupOpen(false);
     };
 
@@ -35,7 +35,7 @@ export const FMAA0300000000F01B = () => {
 
             <SlidePopup
                 isPopupOpen={isSlidePopupOpen}
-                popupType="fingerprint-sign"
+                popupType="one-popup"
                 popupTitle="NH모바일 전자서명"
                 popupMessageHtml={popupMessageHtml}
                 cancelLabel="아니요"

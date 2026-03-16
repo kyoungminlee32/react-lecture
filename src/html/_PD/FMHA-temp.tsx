@@ -94,9 +94,9 @@ export const FMHATemp = () => {
                     <ProductActionButtons
                       inline
                       rootClass="top-join-btn"
-                      showConsult={false}
+                      showCancel={false}
                       active
-                      onJoin={openPopup}
+                      onConfirm={openPopup}
                     />
                   </div>
 
@@ -257,8 +257,8 @@ export const FMHATemp = () => {
 
             <ProductActionButtons
               active
-              onConsult={onConsult}
-              onJoin={openPopup}
+              onCancel={onConsult}
+              onConfirm={openPopup}
             />
           </div>
         </div>
