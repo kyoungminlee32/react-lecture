@@ -1,43 +1,67 @@
 import { MouseEvent, useState } from 'react';
+// 1.공통 헤더 컴포넌트
 import { FwHeader } from '../../../components/FwHeader';
+// 2.진행 단계 표시 컴포넌트
 import { FwProgress } from '../../../components/FwProgress';
-import { FwH2Group } from '../../../components/FwH2Group';
+// 3.툴팁 컴포넌트
 import { FwTooltip } from '../../../components/FwTooltip';
+// 4.스위치 컴포넌트
 import { FwSwitch } from '../../../components/FwSwitch';
+// 5.체크박스 컴포넌트
 import { FwCheckbox } from '../../../components/FwCheckbox';
+// 6.계좌 정보 컴포넌트
 import { FwAccountInfo } from '../../../components/FwAccountInfo';
-import { FwSelectField } from '../../../components/FwSelectField';
-import { ProductActionButtons } from '../../../components/ProductActionButtons';
-import { SlidePopup } from '../../../components/SlidePopup';
-import { FwSegments } from '../../../components/FwSegments';
+// 7.H2 그룹 컴포넌트
+import { FwH2Group } from '../../../components/FwH2Group';
+// 8.H3 그룹 컴포넌트
 import { FwH3Group } from '../../../components/FwH3Group';
+// 9.셀렉트 필드 컴포넌트
+import { FwSelectField } from '../../../components/FwSelectField';
+// 10.상품 액션 버튼 컴포넌트
+import { ProductActionButtons } from '../../../components/ProductActionButtons';
+// 11.슬라이드 팝업 컴포넌트
+import { SlidePopup } from '../../../components/SlidePopup';
+// 12.탭 컴포넌트
+import { FwSegments } from '../../../components/FwSegments';
 
 const MAX_STEP = 12;
 
 export const BType = () => {
-  const [currentStep, setCurrentStep] = useState(1);
+  // 현재 단계
+  const [currentStep] = useState(1);
+  // 팝업 닫힌 상태
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  // 활성화된 레이어
   const [activeLayer, setActiveLayer] = useState<string | null>(null);
-  const [samePasswordAsWithdrawAccount, setSamePasswordAsWithdrawAccount] = useState(false);
+  // 체크박스 상태
+  const [BasicCheckbox, setBasicCheckbox] = useState(false);
+  // 세금우대 정보 수신 여부 스위치 상태
   const [switchTaxFreeOn, setSwitchTaxFreeOn] = useState(true);
+  // 만기알림 정보 수신 여부 스위치 상태
   const [switchMaturityOn, setSwitchMaturityOn] = useState(true);
+  // 쿠폰 정보 수신 여부 스위치 상태
   const [switchCouponOn, setSwitchCouponOn] = useState(true);
+  // 포인트 정보 수신 여부 스위치 상태
   const [switchPointOn, setSwitchPointOn] = useState(true);
+  // 직원 정보 수신 여부 스위치 상태
   const [switchStaffOn, setSwitchStaffOn] = useState(true);
+  // 계약서류 받는 방법 탭 상태
+  const [tabValue, setTabValue] = useState('email');
 
+ // 뒤로 가기 버튼 클릭 핸들러
   const goBack = () => window.history.back();
-
+  // 다음 단계 버튼 클릭 핸들러
   const nextStep = () => {
-    setCurrentStep((prev) => Math.min(prev + 1, MAX_STEP));
+    console.log('다음 단계');
   };
-
+  // 레이어 열기 버튼 클릭 핸들러
   const openLayer = (layerName: string, event?: MouseEvent) => {
     event?.stopPropagation();
     setActiveLayer(layerName);
     setIsPopupOpen(true);
   };
-
-  const closePopup = (_layerId?: string | null) => {
+  // 레이어 닫기 버튼 클릭 핸들러
+  const closePopup = (layerName?: string | null) => {
     setIsPopupOpen(false);
     setActiveLayer(null);
   };
@@ -46,8 +70,8 @@ export const BType = () => {
     <div>
       <div className="page">
         <div className="container">
-            {/* 헤더 영역 */}
-            <FwHeader title="예금가입" showBack showHome showMenu onBack={goBack} />
+          {/* 헤더 영역 */}
+          <FwHeader title="예금가입" showBack showHome showMenu onBack={goBack} />
           <main className="contents">
             <div className="content progress-layout">
               <FwProgress current={currentStep} max={MAX_STEP} />
@@ -111,8 +135,8 @@ export const BType = () => {
                   />
                   <FwCheckbox
                     id="checkbox-smc"
-                    checked={samePasswordAsWithdrawAccount}
-                    onChange={setSamePasswordAsWithdrawAccount}
+                    checked={BasicCheckbox}
+                    onChange={setBasicCheckbox}
                     label="출금계좌와 동일하게 비밀번호 설정"
                     size="sm"
                     customClass="mt-20"
@@ -144,6 +168,8 @@ export const BType = () => {
                 <div className="field">
                   <label className="label">계약서류 받는 방법</label>
                    <FwSegments
+                      value={tabValue}
+                      onChange={setTabValue}
                       tabs={[
                           {
                               value: 'email',
@@ -227,10 +253,10 @@ export const BType = () => {
             <ProductActionButtons
               rootClass=""
               active={true}
-              showConsult={false}
-              showJoin={true}
-              joinLabel="다음"
-              onJoin={nextStep}
+              showCancel={false}
+              showConfirm={true}
+              confirmLabel="다음"
+              onConfirm={nextStep}
             />
             <div className="buffer" style={{ height: 98 }} />
           </main>
@@ -238,6 +264,7 @@ export const BType = () => {
       </div>
 
       <SlidePopup
+        popupType="multi-popup"
         isPopupOpen={isPopupOpen}
         activeLayer={activeLayer}
         onClose={closePopup}

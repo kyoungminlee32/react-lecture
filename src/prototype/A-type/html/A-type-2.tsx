@@ -21,36 +21,47 @@ import { FwAmountField } from '../../../components/FwAmountField';
 import { ProductActionButtons } from '../../../components/ProductActionButtons';
 // 11.슬라이드 팝업 컴포넌트
 import { SlidePopup } from '../../../components/SlidePopup';
-// 탭 컴포넌트
+// 12.탭 컴포넌트
 import { FwSegments } from '../../../components/FwSegments';
 
 export const AType2 = () => {
+  // 팝업 닫힌 상태
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  // 활성화된 레이어
   const [activeLayer, setActiveLayer] = useState<string | null>(null);
-  const [samePasswordAsWithdrawAccount, setSamePasswordAsWithdrawAccount] = useState(false);
-  const [switchTaxFreeOn, setSwitchTaxFreeOn] = useState(true);
-  const [switchMaturityOn, setSwitchMaturityOn] = useState(true);
+  // 체크박스 상태
+  const [BasicCheckbox, setBasicCheckbox] = useState(false);
+  // 휴대폰 번호 상태 
   const [phone, setPhone] = useState('');
+  // 세금우대 정보 수신 여부 스위치 상태
+  const [switchTaxFreeOn, setSwitchTaxFreeOn] = useState(true);
+  // 만기알림 정보 수신 여부 스위치 상태
+  const [switchMaturityOn, setSwitchMaturityOn] = useState(true);
+  // 쿠폰 정보 수신 여부 스위치 상태
   const [switchCouponOn, setSwitchCouponOn] = useState(true);
+  // NH포인트 사용 여부 스위치 상태
   const [switchNhPointOn, setSwitchNhPointOn] = useState(true);
+  // 관리점 및 권유직원 정보 수신 여부 스위치 상태
   const [switchBranchStaffOn, setSwitchBranchStaffOn] = useState(true);
-
+  // 계약서류 받는 방법 탭 상태
+  const [tabValue, setTabValue] = useState('email');
+  // 뒤로 가기 버튼 클릭 핸들러
   const goBack = () => window.history.back();
-
+  // 취소 버튼 클릭 핸들러
   const onCancel = () => {
     goBack();
   };
-
+  // 다음 단계 버튼 클릭 핸들러
   const nextStep = () => {
     console.log('다음 단계');
   };
-
+  // 레이어 열기 버튼 클릭 핸들러
   const openLayer = (layerName: string, event?: MouseEvent) => {
     event?.stopPropagation();
     setActiveLayer(layerName);
     setIsPopupOpen(true);
   };
-
+  // 레이어 닫기 버튼 클릭 핸들러
   const closePopup = (layerName?: string | null) => {
     setIsPopupOpen(false);
     setActiveLayer(null);
@@ -117,8 +128,8 @@ export const AType2 = () => {
                   {/* 체크박스 */}
                   <FwCheckbox
                     id="checkbox-smc"
-                    checked={samePasswordAsWithdrawAccount}
-                    onChange={setSamePasswordAsWithdrawAccount}
+                    checked={BasicCheckbox}
+                    onChange={setBasicCheckbox}
                     label="출금계좌와 동일하게 비밀번호 설정"
                     size="sm"
                     customClass="mt-20"
@@ -157,6 +168,8 @@ export const AType2 = () => {
                 <div className="field">
                   <label htmlFor="segments-panel-email" className="label">계약서류 받는 방법</label>
                   <FwSegments
+                    value={tabValue}
+                    onChange={setTabValue}
                     tabs={[
                         {
                             value: 'email',
@@ -251,10 +264,10 @@ export const AType2 = () => {
             <ProductActionButtons
               rootClass="b_page5"
               active={true}
-              showConsult={false}
-              showJoin={true}
-              joinLabel="다음"
-              onJoin={nextStep}
+              showCancel={false}
+              showConfirm={true}
+              confirmLabel="다음"
+              onConfirm={nextStep}
             />
             <div className="buffer" />
           </main>
@@ -263,6 +276,7 @@ export const AType2 = () => {
 
       {/* 팝업 영역 */}
       <SlidePopup
+        popupType="multi-popup"
         isPopupOpen={isPopupOpen}
         activeLayer={activeLayer}
         onClose={closePopup}

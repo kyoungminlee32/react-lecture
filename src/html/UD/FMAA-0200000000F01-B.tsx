@@ -7,19 +7,20 @@ export const FMAA0200000000F01B = () => {
     const popupMessageHtml = '스크래핑 및 공공마이데이터 본인인증 조회에 동의하고 서류를 제출합니다.';
 
     const onCancel = () => {
-        console.log('[FMAA-0200000000F01-B] cancel clicked');
+        console.log('취소');
         setIsSlidePopupOpen(false);
     };
 
     const onConfirm = () => {
-        console.log('[FMAA-0200000000F01-B] confirm clicked');
+        console.log('확인');
         setIsSlidePopupOpen(false);
     };
 
     const onClose = () => {
-        console.log('[FMAA-0200000000F01-B] popup closed');
+        console.log('닫기');
         setIsSlidePopupOpen(false);
     };
+
 
     return (
         <div className="page-wrapper">
@@ -35,7 +36,7 @@ export const FMAA0200000000F01B = () => {
 
             <SlidePopup
                 isPopupOpen={isSlidePopupOpen}
-                popupType="fingerprint-sign"
+                popupType="one-popup"
                 popupTitle="간편인증 전자서명"
                 popupMessageHtml={popupMessageHtml}
                 cancelLabel="아니요"

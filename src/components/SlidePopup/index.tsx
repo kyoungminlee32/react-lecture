@@ -1,15 +1,17 @@
+import DOMPurify from 'dompurify';
 import ProductActionButtons from '../ProductActionButtons';
 
 interface SlidePopupProps {
   isPopupOpen?: boolean;
   activeLayer?: string | null;
-  popupType?: 'one-popup' | 'default' | 'fingerprint-sign';
+  popupType?: 'one-popup' | 'multi-popup';
   popupTitle?: string;
   popupMessageHtml?: string;
-  showConsult?: boolean;
-  showJoin?: boolean;
+  showCancel?: boolean;
+  showConfirm?: boolean;
   cancelLabel?: string;
   confirmLabel?: string;
+  confirmButtonClass?: string;
   onClose?: (layerId: string) => void;
   onCancel?: () => void;
   onConfirm?: () => void;
@@ -18,13 +20,14 @@ interface SlidePopupProps {
 export const SlidePopup = ({
   isPopupOpen = false,
   activeLayer = null,
-  popupType = 'default',
+  popupType = 'one-popup',
   popupTitle = '',
   popupMessageHtml = '',
-  showConsult = true,
-  showJoin = true,
-  cancelLabel = '상담',
-  confirmLabel = '가입하기',
+  showCancel = true,
+  showConfirm = true,
+  cancelLabel = '',
+  confirmLabel = '',
+  confirmButtonClass = '-primary',
   onClose,
   onCancel,
   onConfirm,
@@ -44,6 +47,7 @@ export const SlidePopup = ({
   };
 
   if (popupType === 'one-popup') {
+    const cleanHtml = DOMPurify.sanitize(popupMessageHtml);
     return (
       <div className="slide-popup">
         <div
@@ -59,16 +63,18 @@ export const SlidePopup = ({
             </div>
             <div className="contents">
               <div className="content">
-                <p className="p" dangerouslySetInnerHTML={{ __html: popupMessageHtml }} />
+                <p className="p" dangerouslySetInnerHTML={{ __html: cleanHtml }} />
               </div>
               <ProductActionButtons
                 rootClass="action-buttons"
-                showConsult={showConsult}
-                showJoin={showJoin}
-                consultLabel={cancelLabel}
-                joinLabel={confirmLabel}
-                onConsult={handleCancel}
-                onJoin={handleConfirm}
+                showCancel={showCancel}
+                showConfirm={showConfirm}
+                active={true}
+                cancelLabel={cancelLabel}
+                confirmLabel={confirmLabel}
+                onCancel={handleCancel}
+                onConfirm={handleConfirm}
+                confirmButtonClass={confirmButtonClass}
               />
             </div>
           </div>
@@ -175,10 +181,10 @@ export const SlidePopup = ({
             </div>
             <ProductActionButtons
               rootClass="action-buttons"
-              joinLabel="확인"
-              showConsult={false}
+              confirmLabel="확인"
+              showCancel={false}
               active
-              onJoin={() => closePopup('layer2')}
+              onConfirm={() => closePopup('layer2')}
             />
           </div>
         </div>

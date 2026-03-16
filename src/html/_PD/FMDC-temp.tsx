@@ -19,8 +19,6 @@ import {
   VisualItem,
 } from '../../components/ProductVisualList';
 
-type TabId = 'segment01' | 'segment02' | 'segment03' | 'segment04';
-
 interface RecommendItem {
   id: number;
   title: string;
@@ -29,7 +27,7 @@ interface RecommendItem {
 
 export const FMDCTemp = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(true);
-  const [activeTab, setActiveTab] = useState<TabId>('segment01');
+  const [tabValue, setTabValue] = useState('segment01');
 
   const productHashtags = ['#소득공제', '#가입추천'];
 
@@ -160,8 +158,10 @@ export const FMDCTemp = () => {
                       inline
                       rootClass="top-join-btn"
                       active={true}
-                      showConsult={false}
-                      onJoin={openPopup}
+                      showCancel={false}
+                      showConfirm={true}
+                      confirmLabel="다음"
+                      onConfirm={openPopup}
                     />
                   </div>
 
@@ -178,7 +178,8 @@ export const FMDCTemp = () => {
                 {/* 상품 정보 영역 */}
                 <div className="procuct-info">
                   <FwSegments
-                    tabStyle
+                    value={tabValue}
+                    onChange={setTabValue}
                     tabs={[
                       {
                         value: 'segment01',
@@ -455,8 +456,11 @@ export const FMDCTemp = () => {
             {/* //상품 상세 영역 */}
             <ProductActionButtons
               active
-              onConsult={onConsult}
-              onJoin={openPopup}
+              showCancel={true}
+              showConfirm={true}
+              confirmLabel="다음"
+              onCancel={onConsult}
+              onConfirm={openPopup}
             />
             <div className="buffer" style={{ height: '98px' }}></div>
           </div>

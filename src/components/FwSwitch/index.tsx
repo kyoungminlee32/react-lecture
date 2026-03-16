@@ -1,21 +1,36 @@
 import { ChangeEvent } from 'react';
 
 interface FwSwitchProps {
-  id: string;
-  checked: boolean;
+  id?: string;
+  type?: string;
+  checked?: boolean;
   onChange: (checked: boolean) => void;
   label?: string;
   disabled?: boolean;
 }
 
-export const FwSwitch = ({ id, checked, onChange, label = '스위치', disabled = false }: FwSwitchProps) => {
+export const FwSwitch = ({
+  id,
+  type = 'checkbox',
+  checked,
+  onChange,
+  label = '',
+  disabled = false
+  }: FwSwitchProps) => {
+
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     onChange(event.target.checked);
-  };
+  };    
 
   return (
     <div className="switch">
-      <input id={id} type="checkbox" checked={checked} onChange={handleChange} disabled={disabled} />
+      <input
+        id={id}
+        type={type}
+        checked={checked}
+        onChange={handleChange}
+        disabled={disabled}
+      />
       <label htmlFor={id}>
         <span className="hide">{label}</span>
       </label>

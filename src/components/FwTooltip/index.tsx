@@ -129,7 +129,7 @@ export const FwTooltip = ({
         style={{
           left: '50%',
           transform: `translateX(calc(-50% + ${panelShiftX}px))`,
-          minWidth: 'calc(100vw - 3.6rem)',
+          minWidth: 'calc(100vw - 5.6rem)',
         }}
         onClick={handlePanelClick}
       >

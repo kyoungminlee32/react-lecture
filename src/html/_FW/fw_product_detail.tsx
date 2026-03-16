@@ -1,74 +1,53 @@
 import { useState } from 'react';
+// 1.공통 헤더 컴포넌트
 import { FwHeader } from '../../components/FwHeader';
+// 2.상품 플래그 컴포넌트
+import { ProductFlag } from '../../components/ProductFlag';
+// 3.불릿리스트 컴포넌트
 import { ProductBulletList } from '../../components/ProductBulletList';
-import { ProductActionButtons } from '../../components/ProductActionButtons';
-import { ProductAgreeArea } from '../../components/ProductAgreeArea';
+// 4.상품 정보 영역의 정보 아이템 리스트 타입 및 컴포넌트
+import {ProductInfoItem, ProductSubtitleArea } from '../../components/ProductSubtitleArea';
+// 5.상품 해시태그 영역
 import { ProductHashtagList } from '../../components/ProductHashtagList';
-import { ProductRecommendSection } from '../../components/ProductRecommendSection';
-import { ProductShareButtons } from '../../components/ProductShareButtons';
+// 6.상품 비주얼 리스트 영역
+import { ProductVisualList, VisualItem } from '../../components/ProductVisualList';
+// 7.상품 금리 계산기 컴포넌트
+import { InterestCalculatedPayload, ProductInterestCalculator } from '../../components/ProductInterestCalculator';
+// 8.탭 컴포넌트
 import { FwSegments } from '../../components/FwSegments';
-import {
-  InterestCalculatedPayload,
-  ProductInterestCalculator,
-} from '../../components/ProductInterestCalculator';
-import {
-  ProductInfoItem,
-  ProductSubtitleArea,
-} from '../../components/ProductSubtitleArea';
-import {
-  ProductVisualList,
-  VisualItem,
-} from '../../components/ProductVisualList';
-
-type TabId = 'segment01' | 'segment02' | 'segment03' | 'segment04';
-
-interface ProductFlag {
-  label: string;
-  badgeClass: string;
-}
-
-interface RecommendItem {
-  id: number;
-  title: string;
-  tags: string[];
-}
-
-const ProductFlagArea = ({ items }: { items: ProductFlag[] }) => (
-  <div className='badges'>
-    {items.map((item, index) => (
-      <span
-        key={`${item.label}-${index}`}
-        className={`badge ${item.badgeClass}`.trim()}
-      >
-        {item.label}
-      </span>
-    ))}
-  </div>
-);
+// 9.상품설명서 및 약관 컴포넌트
+import { ProductAgreeArea } from '../../components/ProductAgreeArea';
+// 10.상품 공유 버튼 컴포넌트
+import { ProductShareButtons } from '../../components/ProductShareButtons';
+// 11.상품 추천 섹션 컴포넌트
+import { ProductRecommendSection, RecommendItem } from '../../components/ProductRecommendSection';
+// 12.상품 액션 버튼 컴포넌트
+import { ProductActionButtons } from '../../components/ProductActionButtons';
 
 export const FwProductDetail = () => {
+  // 팝업 오픈 상태 관리
   const [isPopupOpen, setIsPopupOpen] = useState(true);
-  const [activeTab, setActiveTab] = useState<TabId>('segment01');
-
-  const productFlags: ProductFlag[] = [
+  // 탭 상태 관리
+  const [tabValue, setTabValue] = useState('segment01');
+  // 상품 플래그 정보 리스트
+  const productFlags = [
     { label: '계열사', badgeClass: '-grayline' },
     { label: '고난도', badgeClass: '-grade1' },
   ];
-
+  // 상품 해시태그 리스트
   const productHashtags = ['#추천', '#세금절세', '#은퇴준비'];
   const productSummaryBullets = [
     '수수료선취 - 온라인',
     '운용사 NH-Amundi 자산운용',
   ];
-  const recommendUserName = '김농협';
-
+  // 상품 비용 요약 정보
   const productCostSummary = {
     maxAmount: '3억원',
     baseRate: '3.81%',
     topRate: '4.15%',
     description: '2024.08.31 기준, 세전, 24개월',
   };
-
+  // 상품 정보 영역의 정보 아이템 리스트
   const productInfoItems: ProductInfoItem[] = [
     {
       className: 'range',
@@ -84,13 +63,9 @@ export const FwProductDetail = () => {
     { className: 'target', term: '구매대상', description: '개인' },
     { className: 'date', term: '거래시간', description: '09:00~16:00' },
     { className: 'age', term: '가입나이', description: '만19세 ~ 75세' },
-    {
-      className: 'repay',
-      term: '상환방법',
-      description: '만기일시상환/원금균등상환/원리금 균등상환만기일시상환',
-    },
+    { className: 'repay', term: '상환방법', description: '만기일시상환/원금균등상환/원리금 균등상환만기일시상환'},
   ];
-
+    // 비주얼 상품 리스트
   const productVisualItems: VisualItem[] = [
     {
       id: 1,
@@ -114,33 +89,44 @@ export const FwProductDetail = () => {
         '내 집마련의 필수! 국민 주택과 민영주택의<br>청약권이 부여되는 적금이예요!',
     },
   ];
-
+  // 금리계산 결과 처리
+  const onInterestCalculated = (payload: InterestCalculatedPayload) => {
+    console.log('금리 계산 결과', payload);
+  };
+  // 약관 문서 링크 리스트
   const agreeLinks = [
     { label: '기본약관' },
     { label: '상품설명서' },
     { label: '상품특약' },
   ];
-
+  // 추천 상품 사용자 이름
+  const recommendUserName = '김농협';
+  // 추천 상품 리스트
   const recommendedProducts: RecommendItem[] = [
     { id: 1, title: 'NH고향사랑 기부적금', tags: ['#추천상품', '#은퇴준비'] },
     { id: 2, title: 'NH내집마련 주택청약저축', tags: ['#내집마련', '#절세'] },
     { id: 3, title: 'NH프리미엄 정기예금', tags: ['#안정형', '#목돈마련'] },
   ];
 
-  const onInterestCalculated = (payload: InterestCalculatedPayload) => {
-    console.log('금리 계산 결과', payload);
-  };
+  /////////////////////////////////////////////////////////////////////////////////
 
+  // 공유 버튼 클릭 핸들러
   const onShare = () => console.log('공유 버튼이 클릭되었습니다.');
+  // 장바구니 버튼 클릭 핸들러
   const onWishlist = () => console.log('장바구니 버튼이 클릭되었습니다.');
+  // 추천 상품 선택 핸들러
   const onSelectRecommendedProduct = (item: RecommendItem) =>
     console.log('추천상품 선택', item);
+  // 약관 문서 선택 핸들러
   const onSelectAgreeDoc = (item: { label: string }) =>
     console.log('약관 문서 선택', item);
   const onConsult = () => console.log('상담 버튼 클릭');
-
+  // 팝업 열기 핸들러
   const openPopup = () => setIsPopupOpen(true);
+  // 팝업 닫기 핸들러
   const closePopup = () => setIsPopupOpen(false);
+
+  /////////////////////////////////////////////////////////////////////////////////
 
   return (
     <div className='page-wrapper'>
@@ -172,7 +158,7 @@ export const FwProductDetail = () => {
                   <div className='info-area'>
                     <div className='title-area'>
                       {/* 상품 플래그 영역 */}
-                      <ProductFlagArea items={productFlags} />
+                      <ProductFlag items={productFlags} />
                       <p className='top-para'>
                         롱숏전략을 통해 시장변동성을 방어하는 상품!
                       </p>
@@ -183,7 +169,7 @@ export const FwProductDetail = () => {
                       </p>
                       {/* 상품 해시태그 영역 */}
                       <ProductHashtagList tags={productHashtags} />
-                      {/* 상품 요약 불릿 영역 */}
+                      {/* 불릿리스트 영역 */}
                       <ProductBulletList items={productSummaryBullets} />
                     </div>
                     {/* 상품 서브타이틀 영역 */}
@@ -200,8 +186,10 @@ export const FwProductDetail = () => {
                       inline
                       rootClass='top-join-btn'
                       active={true}
-                      showConsult={false}
-                      onJoin={openPopup}
+                      showCancel={false}
+                      showConfirm={true}
+                      confirmLabel="다음"
+                      onConfirm={openPopup}
                     />
                   </div>
 
@@ -217,9 +205,8 @@ export const FwProductDetail = () => {
                 {/* 상품 정보 영역 */}
                 <div className='procuct-info'>
                   <FwSegments
-                    tabStyle
-                    value={activeTab}
-                    onChange={(v) => setActiveTab(v as TabId)}
+                    value={tabValue}
+                    onChange={setTabValue}
                     tabs={[
                       {
                         value: 'segment01',
@@ -522,8 +509,11 @@ export const FwProductDetail = () => {
 
             <ProductActionButtons
               active={true}
-              onConsult={onConsult}
-              onJoin={openPopup}
+              showCancel={true}
+              showConfirm={true}
+              confirmLabel="다음"
+              onCancel={onConsult}
+              onConfirm={openPopup}
             />
             <div className='buffer' style={{ height: 98 }} />
           </div>

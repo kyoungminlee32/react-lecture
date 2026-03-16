@@ -125,22 +125,22 @@ var UI = (function() {
         }
     }
 
-    function clickable() {
-        document.addEventListener('click', function(e) {
-            var target = e.target;
+    // function clickable() {
+    //     document.addEventListener('click', function(e) {
+    //         var target = e.target;
 
-            if (target.nodeName === 'BUTTON' || target.nodeName === 'A' || target.closest('button') || target.closest('a')) {
-                // 2024-09-13 커스텀 키패드 연속 입력위해 조건 추가
-                if (!target.classList.contains('key-btn') && !target.classList.contains('numBtn')) { 
-                    target.classList.add('clicked');
+    //         if (target.nodeName === 'BUTTON' || target.nodeName === 'A' || target.closest('button') || target.closest('a')) {
+    //             // 2024-09-13 커스텀 키패드 연속 입력위해 조건 추가
+    //             if (!target.classList.contains('key-btn') && !target.classList.contains('numBtn')) { 
+    //                 target.classList.add('clicked');
 
-                    setTimeout(function() {
-                        target.classList.remove('clicked');
-                    }, 500);
-                }
-            }
-        });
-    }
+    //                 setTimeout(function() {
+    //                     target.classList.remove('clicked');
+    //                 }, 500);
+    //             }
+    //         }
+    //     });
+    // }
 
     function tabs() {
         var inner = document.querySelector('nav.tabs .inner');
