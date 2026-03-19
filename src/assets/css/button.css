@@ -142,3 +142,8 @@
 .fixer .gl__preview .buttons:not(.-half) {display:flex; flex-wrap:nowrap;}
 .fixer .gl__preview .buttons:not(.-half) > .button:nth-child(1) {flex-basis:calc(34% - 0.8rem);}
 .fixer .gl__preview .buttons:not(.-half) > .button:nth-child(2) {flex-basis:calc(66% - 0.8rem);}
+
+/* 하단버튼 추가 */
+.submain-content .shortcut.-boxType {
+    margin-top: 4rem
+}

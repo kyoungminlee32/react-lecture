@@ -1,23 +1,24 @@
 import { useState } from 'react';
+// 1.공통 헤더 컴포넌트
 import { FwHeader } from '../../components/FwHeader';
-import { ProductActionButtons } from '../../components/ProductActionButtons';
-import { ProductAgreeArea } from '../../components/ProductAgreeArea';
+// 2.상품 해시태그 리스트 컴포넌트
 import { ProductHashtagList } from '../../components/ProductHashtagList';
-import { ProductRecommendSection } from '../../components/ProductRecommendSection';
-import { ProductShareButtons } from '../../components/ProductShareButtons';
+// 3.상품 서브타이틀 영역 컴포넌트
+import { ProductInfoItem, ProductSubtitleArea } from '../../components/ProductSubtitleArea';
+// 4.상품 액션 버튼 영역 컴포넌트
+import { ProductActionButtons } from '../../components/ProductActionButtons';
+// 5.상품 비주얼 리스트 영역 컴포넌트
+import { ProductVisualList, VisualItem } from '../../components/ProductVisualList';
+// 6.금리 계산해보기 영역 컴포넌트
+import { InterestCalculatedPayload, ProductInterestCalculator } from '../../components/ProductInterestCalculator';
+// 7. 세그먼트(탭형 선택) 컴포넌트
 import { FwSegments } from '../../components/FwSegments';
-import {
-  InterestCalculatedPayload,
-  ProductInterestCalculator,
-} from '../../components/ProductInterestCalculator';
-import {
-  ProductInfoItem,
-  ProductSubtitleArea,
-} from '../../components/ProductSubtitleArea';
-import {
-  ProductVisualList,
-  VisualItem,
-} from '../../components/ProductVisualList';
+// 8.상품설명서 및 약관 영역 컴포넌트
+import { ProductAgreeArea } from '../../components/ProductAgreeArea';
+// 9.공유 버튼 영역 컴포넌트
+import { ProductShareButtons } from '../../components/ProductShareButtons';
+// 10.추천 상품 영역 컴포넌트
+import { ProductRecommendSection } from '../../components/ProductRecommendSection';
 
 interface RecommendItem {
   id: number;
@@ -178,6 +179,7 @@ export const FMDCTemp = () => {
                 {/* 상품 정보 영역 */}
                 <div className="procuct-info">
                   <FwSegments
+                    tabStyle
                     value={tabValue}
                     onChange={setTabValue}
                     tabs={[

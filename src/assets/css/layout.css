@@ -13,3 +13,40 @@
 
 .header .func.-active {position:relative;}
 .header .func.-active:after {content:""; position:absolute; top:0; right:-0.3rem; width:.5rem; height:.5rem; border-radius:50%; background-color:#f00;}
+
+/* 서브메인 header */
+.submain-body .header .title {
+    transition: opacity .1s ease;
+}
+
+.submain-body .header .sub-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: calc(100% - 18rem);
+    color: var(--font1);
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    text-align: left;
+    transform: translate(-50%, -50%);
+    letter-spacing: -.1rem;
+    opacity: 0;
+    transition: opacity .1s ease;
+}
+
+.submain-body .header.-switch .title {
+    opacity: 0;
+}
+
+.submain-body .header.-switch .sub-title {
+    display: block;
+    opacity: 1;
+}
+
+.page.submain-body .content {
+    padding-top: 0;
+}

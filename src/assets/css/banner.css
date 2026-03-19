@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+.submain-content .submain-banner-wrap {
+    overflow: hidden;
+    margin: 2.4rem var(--out);
+    padding: 0 var(--in);
+    min-height: 19rem;
+}
+
+.submain-content .submain-banner-wrap .submain-banner-swiper {
+    position: relative;
+    z-index: 10;
+}
+
+.submain-content .submain-banner-wrap .submain-banner-swiper .swiper-slide {
+    margin-right: 2.4rem;
+}
+
+.submain-content .submain-banner {
+    height: 19rem;
+    background-color: #e1e1e1;
+    border-radius: 1.6rem;
+    padding: 2.2rem 2.4rem;
+}
+
+.submain-content .submain-banner .swiper-slide {
+    border-radius: 1.6rem;
+}
+
+.submain-content .submain-banner-wrap.-deposit .submain-banner.type01, .submain-content .submain-banner-wrap.-deposit .submain-banner.type04 {
+    background-color: var(--DEBN01);
+}
+
+.submain-content .submain-banner-wrap.-deposit .submain-banner.type02, .submain-content .submain-banner-wrap.-deposit .submain-banner.type05 {
+    background-color: var(--DEBN02);
+}
+
+.submain-content .submain-banner-wrap.-deposit .submain-banner.type03, .submain-content .submain-banner-wrap.-deposit .submain-banner.type06 {
+    background-color: var(--DEBN03);
+}
+
+.submain-content .submain-banner-wrap.-deposit .submain-banner::after {
+    content: '';
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    right: 2.4rem;
+    bottom: 2rem;
+}
+
+.submain-content .submain-banner-wrap.-deposit .submain-banner.type01::after {
+    background: url(../imgs/img/main/sub-banner01.png) no-repeat right bottom / 10rem 10rem;
+}
+
+.submain-content .submain-banner-wrap.-deposit .submain-banner.type02::after {
+    background: url(../imgs/img/main/sub-banner02.png) no-repeat right bottom / 10rem 10rem;
+}
+
+.submain-content .submain-banner-wrap.-deposit .submain-banner.type03::after {
+    background: url(../imgs/img/main/sub-banner03.png) no-repeat right bottom / 10rem 10rem;
+}
+
+.submain-content .submain-banner-wrap.-deposit .submain-banner.type04::after {
+    background: url(../imgs/img/main/sub-banner04.png) no-repeat right bottom / 10rem 10rem;
+}
+
+/* .submain-content .submain-banner-wrap.-deposit .submain-banner.type05::after {
+    background: url(../imgs/img/main/sub-banner05.png) no-repeat right bottom / 10rem 10rem;
+} */
+
+.submain-content .submain-banner .banner-txt-wrap .prd-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #121212;
+    line-height: 1.3;
+    letter-spacing: -.02rem;
+    word-break: break-all;
+}
+
+.submain-content .submain-banner .banner-txt-wrap .prd-sub {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #121212;
+    line-height: 1.2;
+    margin-top: 1rem;
+    letter-spacing: -.02rem;
+    padding-right: 9.4rem;
+    word-break: break-all;
+}
+
+.submain-content .submain-banner .hash-tag {
+    font-weight: 400;
+    color: #505050;
+    line-height: 1.2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 4.8rem;
+    font-size: 0;
+    letter-spacing: 0;
+    word-spacing: 0;
+    padding-left: 2.4rem;
+    padding-right: 12.4rem;
+}
+
+.submain-content .submain-banner .hash-tag span {
+    font-size: 1.5rem;
+}
+
+.submain-content .submain-banner .hash-tag span + span {
+    margin-left: .3rem
+}
+
+/* 우리아이 계좌 링크 */
+.submain-link-wrap {
+    margin-top: 1.6rem
+}
+
+.submain-link-wrap .submain-link-button {
+    display: block;
+    border-radius: 1.2rem;
+    padding: 2.2rem 6rem 2.2rem 2.2rem;
+    background: url(../imgs/img/main/ico-submain-child.png) no-repeat right 2rem center / 5.4rem, var(--BG09);
+}
+
+.submain-link-wrap .submain-link-title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    color: var(--font2);
+    margin-top: .4rem;
+}
+
+.submain-link-wrap .submain-link-sub {
+    font-size: 1.7rem;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-weight: 600;
+}
