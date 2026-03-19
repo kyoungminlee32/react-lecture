@@ -476,3 +476,32 @@ body {
         --bg-highlight                 : var(--P14);
 }
 
+/* 메인, 서브메인 배너 컬러 */
+.main-banner-wrap, .submain-banner-wrap {
+    /* 메인 */
+    /* 저축 */
+    /* 대출 */
+    /* 외환 */
+    /* 보험 */
+    /* 퇴직연금 */
+    --MABN01 : #1a42a1;
+    --DEBN01 : #daeaf6;
+    --LOBN01 : #dce4f5;
+    --EXBN01 : #f3e9f0;
+    --INBN01 : #f6ede6;
+    --REBN01 : #e2efe8;
+    --MABN02 : #1a23a1;
+    --DEBN02 : #dae2f6;
+    --LOBN02 : #dcddf5;
+    --EXBN02 : #f3e9ec;
+    --INBN02 : #f5e1e1;
+    --REBN02 : #d8ebe9;
+    --MABN03 : #2b1aa1;
+    --DEBN03 : #dadaf6;
+    --LOBN03 : #e3dcf5;
+    --EXBN03 : #f3ebe9;
+    --INBN03 : #f1e0d7;
+    --REBN03 : #d9ebdc;
+    --MABN04 : #471aa1;
+    --PAG : rgb(0 0 0 / 30%);
+}

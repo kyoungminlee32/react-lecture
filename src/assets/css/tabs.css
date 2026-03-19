@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+/* 1뎁스 탭 */
+.tabs {height:5rem; flex: 0 0 auto; padding:0 var(--in);}
+.tabs .outer {position:fixed; z-index:200; background-color:var(--bg-root); left:var(--in); right:var(--in);}
+.tabs .inner {overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tabs .inner::-webkit-scrollbar {display:none}
+.tabs .inner.-swipe {padding:0 var(--in);}
+.tabs .list {display:flex; width:100%; height:5rem;}
+.tabs .list:after {content:""; position:absolute; bottom:0; left:0; right:0; z-index:1; height:1px; background-color:var(--line1);}
+.tabs .item {display:flex; align-items:stretch; flex:1; position:relative; z-index:2;}
+.tabs.-even .item {flex:1;}
+.tabs .item button,
+.tabs .item a {display:flex; justify-content:center; align-items:center; flex:1; padding:0 1.6rem; background-color:transparent; color:var(--font2); font-size:1.6rem; line-height:1.2; white-space:nowrap; text-align:center;}
+.tabs.-even button,
+.tabs.-even a {padding-right:var(--indent); padding-left:var(--indent);}
+.tabs .item.-active button,
+.tabs .item.-active a {padding-bottom:0; border-bottom:2px solid var(--G01); color:var(--font1); font-weight:600;}
+.tabs .item.-active button::after,
+.tabs .item.-active a::after {content:'선택됨'; font-size: 1rem; opacity: 0; width:0; height:0; position:absolute; overflow: hidden;}
+
+.tabs.-swipe .outer.-tabscroll:before {width: 3.4rem; background:linear-gradient(270deg, rgba(255,255,255,0) 0%, var(--G10) 30%);}
+.tabs.-swipe .outer.-tabscroll:after {width: 3.4rem; background:linear-gradient(90deg, rgba(255,255,255,0) 0%, var(--G10) 30%);}
+.tabs.-swipe .outer.-end:after {width: var(--in); background:linear-gradient(90deg, rgba(255,255,255,0) 0%, var(--G10) 0%);}
+.tabs.-swipe .outer:before {content:""; position:absolute; top:0; left:var(--out); bottom:0; z-index:30; width:var(--in); background:linear-gradient(270deg, rgba(255,255,255,0) 0%, var(--G10) 0%); pointer-events: none;}
+.tabs.-swipe .outer:after {content:""; position:absolute; top:0; right:var(--out); bottom:0; z-index:30; width:3.4rem; background:linear-gradient(90deg, rgba(255,255,255,0) 0%, var(--G10) 30%); pointer-events: none;}
+/* .tabs.-swipe .item:first-child {padding-left:var(--in);}
+.tabs.-swipe .item:last-child {padding-right:var(--in);} */
+
+/* .page .tabs .outer {position:fixed; top:5rem; left: 0; z-index:100;} */
+/* .page .tabs .outer.-relative {position:relative; top:auto; left: auto; z-index:100;} */
+.page .tabs ~ .subs .list {top:8rem;}
+
+.tabs-panels > .tabs-panel {display:none;}
+.tabs-panels > .tabs-panel.-active {display:block;}
+.tabs-panel {padding:2.4rem var(--in) 0;}
+.tabs-panel.-wide {padding:0;}
+
+/* 2뎁스 탭 */
+.subs {position:relative; height:5.6rem; flex: 0 0 auto;}
+.subs .outer {position:relative; width:100%; z-index:200; background-color:var(--bg-root);}
+.subs .outer:before {content:""; position:absolute; top:0; left:0; bottom:.2rem; z-index:30; width:var(--in); background:linear-gradient(270deg, rgba(255,255,255,0) 0%, var(--G10) 30%); pointer-events: none;}
+.subs .outer:after {content:""; position:absolute; top:0; right:0; bottom:.2rem; z-index:30; width:3.2rem; background:linear-gradient(90deg, rgba(255,255,255,0) 0%, var(--G10) 30%); pointer-events: none;}
+.subs .list {display:flex; overflow-x:auto; -webkit-overflow-scrolling:touch; height:5.6rem; padding:1.2rem var(--in);}
+.subs .list::-webkit-scrollbar {display:none;}
+.subs .item {display:flex; position:relative; margin-right:.5rem;}
+.subs .item button,
+.subs .item a {display:flex; justify-content:center; align-items:center; padding:0 1.5rem; border-radius:3.2rem; background-color:var(--subs-default); color:var(--font2); font-weight:normal; font-size:1.4rem; line-height:1.2; white-space:nowrap; text-align:center;}
+.subs .item.-active button,
+.subs .item.-active a {background-color:var(--bg-subs); color:var(--color-subs); font-weight:500;}
+.subs .item.-point.-active button,
+.subs .item.-point.-active a {background-color:var(--point);}
+
+.page .subs .outer {position:fixed; top:5rem; left: 0; z-index:100;}
+.page .tabs ~ .subs .outer,
+.page .tabs-panel .subs .outer {top:10rem;}
+.page .subs + .content {padding-top:1.6rem;}
+
+.subs-panels > .subs-panel {display:none;}
+.subs-panels > .subs-panel.-active {display:block;}
+.subs-panel {padding:2.4rem var(--in) 0;}
+
+.dark-mode .subs .outer:before {background:linear-gradient(270deg, rgba(33,33,33,0) 0%, rgba(33,33,33,1) 100%);}
+.dark-mode .subs .outer:after {background:linear-gradient(90deg, rgba(33,33,33,0) 0%, rgba(33,33,33,1) 100%);}
+
+/* 3뎁스 탭 */
+
+.segments {margin-bottom:1.6rem;}
+.segments .list {display:flex; flex-wrap:wrap; width:100%; background-color:var(--bg-bar-segments); border-radius: 1rem;}
+.segments:not(.-tabstyle){margin-bottom:4rem;}
+.segments .item {display:flex; align-items:stretch; flex:1;}
+.segments.-even .item {flex:1;}
+.segments .item button {display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; width:100%; height:100%; padding:1.45rem .5rem; background-color:var(--bg-segments); color:var(--color-segments);  font-weight:normal; font-size:1.5rem; text-align:center; cursor:pointer; border-radius: 1rem; line-height: 1.4;}
+.segments .item.-active button {background-color:var(--bg-segments-active); color:var(--color-segments-active); font-weight:600; }
+.segments .item button:after {content:""; position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid var(--bg-bar-segments); border-radius:1rem; transition: .2s}
+.segments .item.-active button:after {z-index:30; border-color:var(--border-segments-active); }
+
+
+.segments-panels {margin:0 var(--out);}
+.segments-panels > .segments-panel {display:none;}
+.segments-panels > .segments-panel.-active {display:block;}
+.segments-panel {padding:0 var(--in) 0;}
+
+/* 3뎁스 바탭 */
+
+.segments.-bar {height:4.8rem; margin-bottom:1.6rem;}
+.segments.-bar .list {display:flex; flex-wrap:wrap; min-height:5rem; width:100%; background-color:var(--bg-bar-segments); border-radius: 1.2rem; position:relative}
+.segments.-bar .item {display:flex; align-items:stretch; flex:1;}
+.segments.-bar.-even .item {flex:1;}
+.segments.-bar .item + .item {margin-left:-1px;}
+.segments.-bar .item button {display:block;  flex-direction:column; justify-content:center; align-items:center; position:relative; width:100%; height:4.4rem; padding:1.65rem .5rem; background-color:transparent; color:var(--color-bar-segments);  font-weight:normal; font-size:1.4rem; line-height:1.2; text-align:center; cursor:pointer; margin:0.3rem; z-index: 20; font-size: 1.4rem;}
+/* 2025-01-22 갤럭시 노트8 Aos9 텍스트 정렬 */
+.segments.-bar .list.otherAlign .item button{display: flex;padding-top:0;padding-bottom:0;line-height:1;}
+/* //2025-01-22 갤럭시 노트8 Aos9 텍스트 정렬 */
+.segments.-bar .item:first-child button {border-radius:1rem;}
+.segments.-bar .item:last-child button {border-radius:1rem;}
+.segments.-bar .item:first-child button:after {border-radius:1rem;}
+.segments.-bar .item:last-child button:after {border-radius:1rem;}
+.segments.-bar .item.-active button {font-weight: bold; color:var(--font1)}
+.segments.-bar .item.-active button:after,.segments.-bar .item button:after {display: none;}
+.segments.-bar .list .switcher {display: block; width:calc(100% / 2 - .4rem); position:absolute; left:0; border-radius: 1rem; margin:.3rem;  height:4.4rem; background-color:var(--bg-bar-segments-active); color:var(--color-bar-segments-active); font-weight:bold; box-shadow:0 0 .4rem 0 rgba(0,0,0,.12); transition: .3s cubic-bezier(0.25, 0, 0, 1);}
+.segments.-bar .item.-active + .switcher {left: calc( 50% - .2rem); }
+.segments.-bar.-triple .list .switcher {display: block; width:calc(100% / 3 - .4rem); position:absolute; left:0; border-radius: 1rem; margin:.3rem;  height:4.4rem; background-color:var(--bg-bar-segments-active); color:var(--color-bar-segments-active); font-weight:bold; box-shadow:0 0 .4rem 0 rgba(0,0,0,.12); transition: .3s cubic-bezier(0.25, 0, 0, 1);}
+.segments.-bar.-triple .item:nth-child(1).-active ~ .switcher {left: 0;}
+.segments.-bar.-triple .item:nth-child(2).-active ~ .switcher {left: calc( (100% / 3) * 1 - .2rem);}
+.segments.-bar.-triple .item:nth-child(3).-active ~ .switcher {left: calc( (100% / 3) * 2 - .2rem);}
+
+/* 3뎁스 탭스타일 */
+
+.segments.-tabstyle {height:5rem; margin-bottom:1.6rem; position:relative}
+.segments.-tabstyle .inner {overflow-x:auto; -webkit-overflow-scrolling:touch; overscroll-behavior-x:none;}
+.segments.-tabstyle .list {display:flex; width:100%; height:5rem; flex-wrap: nowrap; background-color: var(--G10);}
+.segments.-tabstyle .item {display:flex; align-items:stretch; flex-grow:1;}
+.segments.-tabstyle.-even .item {flex:1;}
+.segments.-tabstyle .item + .item {margin-left:-1px;}
+.segments.-tabstyle .item button {display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; width:100%; padding:0 1.6rem; background-color:var(--G10); color:var(--F03);  font-weight:normal; font-size:1.6rem; line-height:1.2; text-align:center; cursor:pointer; margin:0; border-radius: 0; border-bottom:2px solid transparent; white-space: nowrap; z-index: 2; background:transparent}
+.segments.-tabstyle .item:first-child button {border-radius:0;}
+.segments.-tabstyle .item:last-child button {border-radius:0;}
+.segments.-tabstyle .item.-active button {color:var(--color-bar-segments-active); font-weight:bold; border-bottom:2px solid var(--G01)}
+.segments.-tabstyle .item:first-child button:after {border-radius:0;}
+.segments.-tabstyle .item:last-child button:after {border-radius:0;}
+.segments.-tabstyle .item button:after {display: none;}
+.segments.-tabstyle .list:after {content: "";position: absolute;bottom: 0;left: 0; right:0; z-index: 1;width: 100%;height: 1px;background-color: var(--line1);}
+.segments.-tabstyle.-swipe .outer.-tabscroll:before {width:.8rem; background:linear-gradient(270deg, rgba(255,255,255,0) 0%, var(--G10) 100%);}
+.segments.-tabstyle.-swipe .outer.-end:after {width:0; background:linear-gradient(90deg, rgba(255,255,255,0) 0%, var(--G10) 0%);}
+.segments.-tabstyle.-swipe .outer:before {content:""; position:absolute; top:0; left:0; bottom:0; z-index:30; width:0; background:linear-gradient(270deg, rgba(255,255,255,0) 0%, var(--G10) 0%); pointer-events: none;}
+.segments.-tabstyle.-swipe .outer:after {content:""; position:absolute; top:0; right:0; bottom:0; z-index:30; width:.8rem; background:linear-gradient(90deg, rgba(255,255,255,0) 0%, var(--G10) 100%); pointer-events: none;}
+.segments.-tabstyle .inner::-webkit-scrollbar {display:none;}
+
+/* 3뎁스 앵커탭 스타일 */
+
+.subs.-anchor {position:relative; height:5.6rem; flex: 0 0 auto;  margin-left:var(--out); margin-right:var(--out);}
+.subs.-anchor .outer {position:relative; width:100%; z-index:200; background-color:var(--bg-root); top:0; left:auto;}
+.subs.-anchor .list {display:flex; height:5.6rem; padding:1.2rem var(--in);}
+.subs.-anchor > div:before {content:""; position:absolute; top:0; left:0; bottom:.2rem; z-index:30; width:2.6rem; background:linear-gradient(270deg, rgba(255,255,255,0) 0%, var(--G10) 17%); pointer-events: none;}
+.subs.-anchor > div:after {content:""; position:absolute; top:0; right:0; bottom:.2rem; z-index:30; width:3.8rem; background:linear-gradient(90deg, rgba(255,255,255,0) 0%, var(--G10) 30%); pointer-events: none;}
+.subs > div.-scrolling:before {content:""; position:absolute; top:0; left:0; bottom:.2rem; z-index:30; width:3rem; background:linear-gradient(270deg, rgba(255,255,255,0) 0%, var(--G10) 30%); pointer-events: none; transition:width .2s ease}
+.subs > div.-scrolling:after {content:""; position:absolute; top:0; right:0; bottom:.2rem; z-index:30; width:3rem; background:linear-gradient(90deg, rgba(255,255,255,0) 0%, var(--G10) 30%); pointer-events: none; transition:width .2s ease}
+.subs.-anchor .inner {overflow-x:auto; -webkit-overflow-scrolling:touch;transform: translate3d(0,0,0);overscroll-behavior-x:none;}
+.subs.-anchor .inner *{transform: translate3d(0,0,0);}
+.subs.-anchor .list::-webkit-scrollbar {display:none;}
+.subs.-anchor .item {display:flex; position:relative; margin-right:.5rem;}
+.subs.-anchor .item:last-child {margin-right:1rem}
+.subs.-anchor .item button {background-color: var(--G09);}
+.subs.-anchor .item a {display:flex; justify-content:center; align-items:center; padding:0 1.5rem; border-radius:3.2rem; background-color:var(--subs-default); color:var(--font2); font-weight:normal; font-size:1.4rem; line-height:1.2; white-space:nowrap; text-align:center;}
+.subs.-anchor .item.-active button,
+.subs.-anchor .item.-active a {background-color:var(--bg-subs); color:var(--color-subs); font-weight:500;}
+.subs.-anchor .item.-point.-active button,
+.subs.-anchor .item.-point.-active a {background-color:var(--point);}
+.subs.-anchor + .subs-panels .subs-panel{padding:0;}
+
+/* 앵커 탭 */
+
+.anchors {flex: 0 0 auto; }
+.anchors .outer {overflow:hidden; position:fixed; top:5rem; left:0; width:100%; background-color: var(--G10); z-index: 17;}
+.anchors .inner {overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch; background-color:var(--bg-root);overscroll-behavior-x:none;}
+.anchors .inner::-webkit-scrollbar {display:none}
+.anchors .list {padding:.8rem 2.4rem 1rem; font-size:0; white-space:nowrap;}
+.anchors.-active .inner {height:auto;}
+.anchors.-active .inner .list {padding-left:1.9rem;;}
+.anchors.-active .list {white-space:normal;}
+.anchors .item {display:inline-block; position:relative; margin:0 .3rem;}
+.anchors .item:first-child {margin-left:0;}
+.anchors .item:last-child {padding-right:5rem;}
+.anchors.-active .item {padding:0 .3rem .8rem 0;}
+.anchors.-active .item:first-child {margin-left:.5rem;}
+.anchors .item a {display:inline-block; padding:.7rem 1.5rem; border-radius:3rem; background-color:var(--G09); font-weight:normal; font-size:1.4rem; line-height:1.2; white-space:nowrap; text-align:center; color:var(--font2)}
+.anchors .item.-active a {background-color:var(--G01); color:var(--G10); font-weight: 500;}
+.anchors .more {position:absolute; top:0; right:0; z-index:1; width:6rem; height:4.7rem; background:linear-gradient(to right, rgba(255,255,255,0), var(--bg-root) 30%);}
+/* .anchors .more:before {content:""; position:absolute; top:50%; right:.8rem; width:3.2rem; height:3.2rem; background:var(--G10) url(../imgs/ico/common/ico-v20-B.png) no-repeat 50% / 1rem; transform:translateY(-50%); border:1px solid var(--line2); border-radius: 50%;} */
+.anchors.-active .more {background:none;}
+.anchors.-active .more:before {transform:translateY(-50%) rotate(180deg);}
+
+.anchors.-hidden {display:none; position:fixed; top:5rem; left:0; width:100%;}
+.anchors.-hidden .outer {position:static;}
+.anchors.-hidden.-show {display:block; position:fixed; top:4.9rem; left:0; z-index:1; width:100%; animation:menuShowing .25s;}
+
+@-webkit-keyframes menuShowing {
+    from {transform:translateY(-5rem);}
+    to {transform:translateY(0);}
+}
+@keyframes menuShowing {
+    from {transform:translateY(-5rem);}
+    to {transform:translateY(0);}
+}
+
+.section-wrap {padding-bottom:calc(100vh - 40rem); margin-top:4rem;}

@@ -108,6 +108,12 @@
 .tel-info {color:var(--font2); font-size:1.4rem;}
 .tel-info a {display:inline-block; position:relative; padding-bottom:.1rem; background-color:transparent; text-decoration: underline; text-underline-offset: .2rem;}
 
+
+
+
+
+
+
 /* ios 대응 */
 .page .header .funcs {display:flex; position:absolute; top:50%;transform:translate3d(0,0,0);margin-top:-1.2rem ;}
 .page .header .funcs *{transform:translate3d(0,0,0)}
@@ -307,7 +313,7 @@
 .tooltip {display:inline-flex; position:relative; width:2.4rem; margin:0; vertical-align:middle;}
 .tooltip > .trigger {position:absolute; top:50%; left:0; width:2.4rem; height:2.4rem; background:url(../imgs/ico/common/ico-tooltip.png) no-repeat 0 / cover; transform:translateY(-50%);}
 /* .dark-mode .tooltip > .trigger {position:absolute; top:50%; left:0; width:2.4rem; height:2.4rem; background:url(../imgs/ico/common/ico-tooltip_dk.png) no-repeat 0 / cover; transform:translateY(-50%);} */
-.tooltip > .panel {display:none; position:absolute; top:1.6rem; left:0; z-index: 10; max-width:calc(100vw - 3.2rem); padding:2.2rem 2rem; border:1px solid var(--line2); border-radius:1.6rem; background-color:var(--bg-root); color:var(--font2); font-style:normal; font-weight:normal; font-size:1.4rem; line-height:1.5; text-decoration:none; text-align:left; box-shadow:0 0.2rem .8rem rgba(0,0,0,.05);}
+.tooltip > .panel {display:none; position:absolute; top:1.6rem; left:0; z-index: 10; padding:2.2rem 2rem; border:1px solid var(--line2); border-radius:1.6rem; background-color:var(--bg-root); color:var(--font2); font-style:normal; font-weight:normal; font-size:1.4rem; line-height:1.5; text-decoration:none; text-align:left; box-shadow:0 0.2rem .8rem rgba(0,0,0,.05);}
 .tooltip.-active > .panel {display:block; z-index:90;}
 .tooltip.-reversed > .panel {top:auto; bottom: 1.7rem;}
 .tooltip > .panel > .title {display:block; margin-bottom:1.2rem; color:var(--font1); font-weight:bold; font-size:1.6rem; padding-right:2.4rem;}
@@ -418,7 +424,7 @@
 .tooltip {display:inline-flex; position:relative; width:2.4rem; margin:0; vertical-align:middle;}
 .tooltip > .trigger {position:absolute; top:50%; left:0; width:2.4rem; height:2.4rem; background:url(../imgs/ico/common/ico-tooltip.png) no-repeat 0 / cover; transform:translateY(-50%);}
 /* .dark-mode .tooltip > .trigger {position:absolute; top:50%; left:0; width:2.4rem; height:2.4rem; background:url(../imgs/ico/common/ico-tooltip_dk.png) no-repeat 0 / cover; transform:translateY(-50%);} */
-.tooltip > .panel {display:none; position:absolute; top:1.6rem; left:0; min-width:calc(100vw - 3.6rem); padding:2.2rem 2rem; border:1px solid var(--line2); border-radius:1.6rem; background-color:var(--bg-root); color:var(--font2); font-style:normal; font-weight:normal; font-size:1.4rem; line-height:1.5; text-decoration:none; text-align:left; box-shadow:0 0.2rem .8rem rgba(0,0,0,.05);}
+.tooltip > .panel {display:none; position:absolute; top:1.6rem; left:0; padding:2.2rem 2rem; border:1px solid var(--line2); border-radius:1.6rem; background-color:var(--bg-root); color:var(--font2); font-style:normal; font-weight:normal; font-size:1.4rem; line-height:1.5; text-decoration:none; text-align:left; box-shadow:0 0.2rem .8rem rgba(0,0,0,.05);}
 .tooltip.-active > .panel {display:block; z-index:90;}
 .tooltip.-reversed > .panel {top:auto; bottom: 1.7rem;}
 /* .tooltip > .panel > .close {position:absolute; top:2rem; right:2rem; width:2.4rem; height:2.4rem; background:url(../imgs/ico/common/ico-tooltip-close.png) no-repeat 0 0 / cover;} */
