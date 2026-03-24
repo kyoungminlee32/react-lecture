@@ -213,7 +213,7 @@
 
 .sub-prod-list-units li .prod-txts .prod-info .max {
     color: var(--point);
-    font-weight: 600;
+    /* font-weight: 600; */
     margin-right: 1.6rem;
 }
 
@@ -244,4 +244,11 @@
 
 .sub-prod-main-list-units .badges {
     display: block;
+}
+
+.sub-prod-list-units li .prod-txts .prod-info .low {
+    color: var(--font2);
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-right: 1.2rem;
 }

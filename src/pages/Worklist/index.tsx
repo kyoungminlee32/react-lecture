@@ -229,8 +229,24 @@ export const Worklist = () => {
                             <input type="radio" className={styles['iframe-select']} name="iframename" />
                             <Link to='/html/MM/FMBB-0400000000F01' className='linked' target='_blank'>FMBB-0400000000F01</Link>
                         </td>
-                        <td className={styles.user}>김종익</td>
-                        <td className={styles.date}>231128</td>
+                        <td className={styles.user}>이병철</td>
+                        <td className={styles.date}>240206</td>
+                        <td className={styles.cf1}></td>
+                        <td className={styles.note}></td>
+                    </tr>
+                    <tr>
+                        <td className="lv2">서브메인</td>
+                        <td className="lv3">대출</td>
+                        <td className="lv4">직작인</td>
+                        <td className="lv5"></td>
+                        <td className="lv6"></td>
+                        <td className="lv7"></td>
+                        <td className={styles.func}>
+                            <input type="radio" className={styles['iframe-select']} name="iframename" />
+                            <Link to='/html/MM/FMBB-0500000000F01' className='linked' target='_blank'>FMBB-0500000000F01</Link>
+                        </td>
+                        <td className={styles.user}>이병철</td>
+                        <td className={styles.date}>240206</td>
                         <td className={styles.cf1}></td>
                         <td className={styles.note}></td>
                     </tr>
