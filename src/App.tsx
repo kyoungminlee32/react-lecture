@@ -25,6 +25,7 @@ import { FMAA0300000000F01B } from './html/UD/FMAA-0300000000F01-B';
 import { FMAA0400000000F01B } from './html/UD/FMAA-0400000000F01-B';
 import { FMEC0103030100F01A } from './html/FU/FMEC-0103030100F01-A';
 import { FMBB0400000000F01 } from './html/MM/FMBB-0400000000F01';
+import { FMBB0500000000F01 } from './html/MM/FMBB-0500000000F01';
 
 import './assets/css/reset.css';
 import './assets/css/base.css';
@@ -69,6 +70,7 @@ function App() {
       <Route path="/html/UD/FMAA-0400000000F01-B" element={<FMAA0400000000F01B />} />
       <Route path="/html/FU/FMEC-0103030100F01-A" element={<FMEC0103030100F01A />} />
       <Route path="/html/MM/FMBB-0400000000F01" element={<FMBB0400000000F01 />} />
+      <Route path="/html/MM/FMBB-0500000000F01" element={<FMBB0500000000F01 />} />
       <Route 
         path="*"
         element={
